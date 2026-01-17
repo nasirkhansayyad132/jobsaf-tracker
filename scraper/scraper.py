@@ -1015,17 +1015,21 @@ def main():
     print(f"    Categories: {categories[:5]}{'...' if len(categories) > 5 else ''}")
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(
+        # Use Firefox instead of Chromium - often works better with Cloudflare
+        browser = p.firefox.launch(
             headless=not args.headful,
             slow_mo=args.slowmo,
-            args=["--disable-blink-features=AutomationControlled"],
         )
         context = browser.new_context(
-            viewport={"width": 1280, "height": 720},
+            viewport={"width": 1366, "height": 768},
             locale="en-US",
-            user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
         )
         page = context.new_page()
+        
+        # Add random delays to appear more human
+        import random
+        page.set_default_timeout(args.timeout_ms)
 
         job_links: Set[str] = set()
 
@@ -1109,28 +1113,34 @@ def main():
             page_url = f"{base_url_no_page}&page={page_num}"
             
             if page_num > 1:
+                # Random delay between pages to appear human (3-6 seconds)
+                import random
+                delay = random.randint(3000, 6000)
+                page.wait_for_timeout(delay)
+                
                 # Use retry logic for pagination
-                goto_with_retry(page, page_url, args.timeout_ms, retries=2)
-                page.wait_for_timeout(1500)
+                goto_with_retry(page, page_url, args.timeout_ms, retries=3)
+                page.wait_for_timeout(2000)
                 try:
-                    page.wait_for_load_state("networkidle", timeout=10000)
+                    page.wait_for_load_state("networkidle", timeout=15000)
                 except Exception:
                     pass
             
-            # Scroll to load all jobs on current page
-            for _ in range(5):
-                page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-                page.wait_for_timeout(400)
+            # Scroll to load all jobs on current page (more human-like)
+            for i in range(6):
+                scroll_y = (i + 1) * 300
+                page.evaluate(f"window.scrollTo(0, {scroll_y})")
+                page.wait_for_timeout(random.randint(300, 600))
             page.evaluate("window.scrollTo(0, 0)")
-            page.wait_for_timeout(300)
+            page.wait_for_timeout(500)
             
             # Collect links from current page
             current_html = page.content()
             
             # Check if we got Cloudflare page
             if 'Verifying you are human' in current_html or 'Just a moment' in current_html:
-                print(f"    Page {page_num}/{max_pages}: Cloudflare blocked, retrying...")
-                page.wait_for_timeout(5000)
+                print(f"    Page {page_num}/{max_pages}: Cloudflare blocked, waiting longer...")
+                page.wait_for_timeout(10000)  # Wait 10 seconds
                 wait_for_cloudflare(page, 30000)
                 current_html = page.content()
             
@@ -1162,8 +1172,14 @@ def main():
 
         records: List[JobRecord] = []
         iterator = tqdm(links_list, desc="Scraping job details") if tqdm else links_list
-        for u in iterator:
+        import random
+        for idx, u in enumerate(iterator):
             try:
+                # Random delay between job details (2-4 seconds) to appear human
+                if idx > 0:
+                    delay = random.randint(2000, 4000)
+                    detail_page.wait_for_timeout(delay)
+                
                 # Use retry logic for job detail pages (Cloudflare protection)
                 goto_with_retry(detail_page, u, args.timeout_ms, retries=3)
                 
@@ -1183,7 +1199,6 @@ def main():
                 records.append(rec)
                 if args.debug_dir:
                     print(f"[i] Scraped: {rec.title[:50] if rec.title else 'No title'} | Closing: {rec.closing_date or rec.closing_date_raw or 'unknown'}")
-                detail_page.wait_for_timeout(500)  # Slightly longer delay between requests
             except Exception as e:
                 if args.debug_dir:
                     print(f"[!] Error scraping {u}: {e}")
