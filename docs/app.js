@@ -423,19 +423,22 @@
         const html = `
             <div class="pat-modal">
                 <h2>🔐 GitHub Token Required</h2>
-                <p>To trigger the scraper, you need a GitHub Personal Access Token with <strong>workflow</strong> scope.</p>
+                <p>To trigger the scraper, create a <strong>Classic</strong> Personal Access Token:</p>
                 <ol>
-                    <li>Go to <a href="https://github.com/settings/tokens/new?scopes=workflow&description=Jobs.af%20Tracker" target="_blank">GitHub Token Settings</a></li>
-                    <li>Generate a token with <strong>workflow</strong> permission</li>
-                    <li>Paste it below:</li>
+                    <li><a href="https://github.com/settings/tokens/new?scopes=repo,workflow&description=Jobs.af%20Tracker" target="_blank" style="color:#007bff;font-weight:bold;">👉 Click here to create token</a></li>
+                    <li>Set expiration (e.g., 90 days)</li>
+                    <li>Check <strong>repo</strong> ✅ and <strong>workflow</strong> ✅</li>
+                    <li>Click "Generate token" and copy it</li>
+                    <li>Paste below:</li>
                 </ol>
-                <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxx" style="width: 100%; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; margin: 12px 0;">
+                <input type="text" id="patInput" placeholder="ghp_xxxxxxxxxxxx" style="width: 100%; padding: 12px; font-size: 14px; border: 2px solid #ddd; border-radius: 8px; margin: 12px 0; font-family: monospace;">
                 <div style="display: flex; gap: 12px; margin-top: 16px;">
                     <button onclick="savePatAndTrigger()" style="flex: 1; padding: 12px; background: #28a745; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Save & Run</button>
                     <button onclick="hideJobDetail()" style="flex: 1; padding: 12px; background: #6c757d; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Cancel</button>
                 </div>
-                <p style="margin-top: 16px; font-size: 12px; color: #666;">
-                    🔒 Token is stored locally on your device only. Never shared.
+                <p style="margin-top: 12px; font-size: 11px; color: #666; background: #f8f9fa; padding: 8px; border-radius: 4px;">
+                    ⚠️ Use <strong>Classic token</strong> (not fine-grained). Must have <strong>repo + workflow</strong> scopes.<br>
+                    🔒 Token stored only on your device.
                 </p>
             </div>
         `;
