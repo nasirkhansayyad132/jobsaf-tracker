@@ -579,6 +579,37 @@ input {
     font-weight: 500;
 }
 
+/* ===== Status Banner ===== */
+.status-banner {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 99;
+    box-shadow: var(--shadow-md);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.status-banner a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+}
+
+.status-banner.hidden {
+    display: none;
+}
+
 /* ===== Responsive ===== */
 @media (min-width: 480px) {
     .job-list {

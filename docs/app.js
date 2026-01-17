@@ -392,7 +392,9 @@
             });
             
             if (res.status === 204) {
-                showToast('✅ Scraper started! Jobs will update in ~2-3 minutes. Use 🔄 to refresh.', 'success');
+                showToast('✅ Scraper started! Polling status...', 'success');
+                // Start polling for workflow completion
+                pollWorkflowStatus(token);
             } else if (res.status === 401) {
                 localStorage.removeItem('github_pat');
                 const err = await res.json().catch(() => ({}));
@@ -416,6 +418,83 @@
             scrapeBtn.classList.remove('spinning');
             scrapeBtn.disabled = false;
         }
+    }
+
+    // Poll workflow status until completion
+    async function pollWorkflowStatus(token) {
+        const statusBanner = document.getElementById('statusBanner');
+        const statusText = document.getElementById('statusText');
+        
+        statusBanner.classList.remove('hidden');
+        statusText.innerHTML = '⏳ Scraper running... <span id="pollTimer">0</span>s';
+        
+        let seconds = 0;
+        const timerInterval = setInterval(() => {
+            seconds++;
+            const timer = document.getElementById('pollTimer');
+            if (timer) timer.textContent = seconds;
+        }, 1000);
+        
+        const runsUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/runs?per_page=1`;
+        
+        let attempts = 0;
+        const maxAttempts = 60; // 5 minutes max
+        
+        const poll = async () => {
+            attempts++;
+            
+            try {
+                const res = await fetch(runsUrl, {
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Authorization': `token ${token}`
+                    }
+                });
+                
+                if (res.ok) {
+                    const data = await res.json();
+                    const run = data.workflow_runs && data.workflow_runs[0];
+                    
+                    if (run) {
+                        const status = run.status;
+                        const conclusion = run.conclusion;
+                        
+                        statusText.innerHTML = `⏳ ${status}... <span id="pollTimer">${seconds}</span>s`;
+                        
+                        if (status === 'completed') {
+                            clearInterval(timerInterval);
+                            
+                            if (conclusion === 'success') {
+                                statusText.innerHTML = '✅ Scraper finished! Loading jobs...';
+                                // Wait for GitHub Pages to update
+                                setTimeout(async () => {
+                                    await loadJobs(true);
+                                    statusBanner.classList.add('hidden');
+                                    showToast(`✅ Done! Found ${allJobs.length} jobs.`, 'success');
+                                }, 5000);
+                            } else {
+                                statusText.innerHTML = `❌ Scraper ${conclusion}. <a href="${run.html_url}" target="_blank">View logs</a>`;
+                                setTimeout(() => statusBanner.classList.add('hidden'), 10000);
+                            }
+                            return;
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error('Poll error:', e);
+            }
+            
+            if (attempts < maxAttempts) {
+                setTimeout(poll, 5000); // Poll every 5 seconds
+            } else {
+                clearInterval(timerInterval);
+                statusText.innerHTML = '⏰ Timeout. <a href="https://github.com/nasirkhansayyad132/jobsaf-tracker/actions" target="_blank">Check Actions</a>';
+                setTimeout(() => statusBanner.classList.add('hidden'), 10000);
+            }
+        };
+        
+        // Wait 3 seconds before first poll (give time for workflow to start)
+        setTimeout(poll, 3000);
     }
 
     // Show modal to enter GitHub PAT
