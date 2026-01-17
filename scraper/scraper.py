@@ -43,63 +43,67 @@ def normalize_url(u: str) -> str:
         return u
     return BASE.rstrip("/") + "/" + u.lstrip("/")
 
-def wait_for_cloudflare(page, timeout_ms: int = 45000):
-    """Wait for Cloudflare challenge to complete."""
+def wait_for_cloudflare(page, timeout_ms: int = 15000):
+    """Wait for Cloudflare challenge to complete - optimized for speed."""
     start = datetime.now()
     max_wait = timedelta(milliseconds=timeout_ms)
     
+    # Quick check first - most pages don't have Cloudflare
+    try:
+        text = page.evaluate("() => document.body?.innerText?.substring(0, 500) || ''")
+        cloudflare_markers = ['Verifying you are human', 'Checking your browser', 
+                              'security of your connection', 'Just a moment']
+        if not any(s in text for s in cloudflare_markers):
+            # No Cloudflare, return immediately
+            return
+    except Exception:
+        pass
+    
+    # Cloudflare detected, wait for it
     while datetime.now() - start < max_wait:
         try:
-            text = page.evaluate("() => document.body?.innerText || ''")
-            # Check if Cloudflare challenge is present
-            if any(s in text for s in ['Verifying you are human', 'Checking your browser', 
-                                        'security of your connection', 'Just a moment']):
-                page.wait_for_timeout(3000)
-                continue
-            else:
-                # Challenge complete or not present
+            page.wait_for_timeout(2000)
+            text = page.evaluate("() => document.body?.innerText?.substring(0, 500) || ''")
+            if not any(s in text for s in cloudflare_markers):
                 break
         except Exception:
             page.wait_for_timeout(1000)
     
-    # Extra wait for page to fully load after challenge
-    page.wait_for_timeout(2000)
-    try:
-        page.wait_for_load_state("networkidle", timeout=10000)
-    except Exception:
-        pass
+    # Brief wait for page stability
+    page.wait_for_timeout(500)
 
-def goto_with_retry(page, url: str, timeout_ms: int, retries: int = 3):
-    """Navigate to URL with retry logic for Cloudflare."""
+def goto_with_retry(page, url: str, timeout_ms: int, retries: int = 2):
+    """Navigate to URL with retry logic for Cloudflare - optimized."""
     for attempt in range(retries):
         try:
             page.set_default_timeout(timeout_ms)
-            page.goto(url, wait_until="domcontentloaded")
-            wait_for_cloudflare(page, timeout_ms)
+            page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+            wait_for_cloudflare(page, 15000)  # Max 15 sec for Cloudflare
             
             # Verify we got actual content, not Cloudflare
-            text = page.evaluate("() => document.body?.innerText || ''")
+            text = page.evaluate("() => document.body?.innerText?.substring(0, 500) || ''")
             if 'Verifying you are human' not in text and 'Just a moment' not in text:
                 return True
             
             if attempt < retries - 1:
-                page.wait_for_timeout(5000)  # Wait before retry
+                print(f"    Cloudflare blocked, retrying...")
+                page.wait_for_timeout(3000)  # Brief wait before retry
         except Exception as e:
             if attempt < retries - 1:
-                page.wait_for_timeout(3000)
+                page.wait_for_timeout(2000)
             else:
                 raise
     return False
 
 def goto(page, url: str, timeout_ms: int):
-    """Navigate to a URL, handling Cloudflare."""
+    """Navigate to a URL, handling Cloudflare - optimized."""
     page.set_default_timeout(timeout_ms)
     try:
-        page.goto(url, wait_until="domcontentloaded")
+        page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
     except PWTimeoutError:
-        page.goto(url, wait_until="load")
-    # Wait for Cloudflare if present
-    wait_for_cloudflare(page, timeout_ms)
+        page.goto(url, wait_until="load", timeout=timeout_ms)
+    # Quick Cloudflare check
+    wait_for_cloudflare(page, 15000)
 
 def force_click(locator, timeout=12000) -> bool:
     try:
