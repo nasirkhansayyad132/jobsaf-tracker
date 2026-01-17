@@ -1112,51 +1112,55 @@ def main():
         for page_num in range(1, max_pages + 1):
             page_url = f"{base_url_no_page}&page={page_num}"
             
-            if page_num > 1:
-                # Random delay between pages to appear human (3-6 seconds)
-                import random
-                delay = random.randint(3000, 6000)
-                page.wait_for_timeout(delay)
+            try:
+                if page_num > 1:
+                    # Random delay between pages to appear human (3-6 seconds)
+                    import random
+                    delay = random.randint(3000, 6000)
+                    page.wait_for_timeout(delay)
+                    
+                    # Use retry logic for pagination - catch errors to continue
+                    success = goto_with_retry(page, page_url, args.timeout_ms, retries=3)
+                    if not success:
+                        print(f"    Page {page_num}/{max_pages}: Skipped (Cloudflare blocked)")
+                        continue
+                    page.wait_for_timeout(2000)
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=15000)
+                    except Exception:
+                        pass
                 
-                # Use retry logic for pagination
-                goto_with_retry(page, page_url, args.timeout_ms, retries=3)
-                page.wait_for_timeout(2000)
-                try:
-                    page.wait_for_load_state("networkidle", timeout=15000)
-                except Exception:
-                    pass
-            
-            # Scroll to load all jobs on current page (more human-like)
-            for i in range(6):
-                scroll_y = (i + 1) * 300
-                page.evaluate(f"window.scrollTo(0, {scroll_y})")
-                page.wait_for_timeout(random.randint(300, 600))
-            page.evaluate("window.scrollTo(0, 0)")
-            page.wait_for_timeout(500)
-            
-            # Collect links from current page
-            current_html = page.content()
-            
-            # Check if we got Cloudflare page
-            if 'Verifying you are human' in current_html or 'Just a moment' in current_html:
-                print(f"    Page {page_num}/{max_pages}: Cloudflare blocked, waiting longer...")
-                page.wait_for_timeout(10000)  # Wait 10 seconds
-                wait_for_cloudflare(page, 30000)
-                current_html = page.content()
-            
-            before_count = len(job_links)
-            job_links |= extract_job_links_from_dom(current_html)
-            new_links = len(job_links) - before_count
-            
-            print(f"    Page {page_num}/{max_pages}: +{new_links} links (total: {len(job_links)})")
-            
-            if page_num <= 3 or page_num == max_pages:
-                screenshot(page, args.debug_dir, f"page_{page_num:02d}.png")
-            
-            # Early stop if no new links on 2 consecutive pages
-            if new_links == 0 and page_num > 1:
-                # Double check by trying next page
+                # Scroll to load all jobs on current page (more human-like)
+                import random
+                for i in range(6):
+                    scroll_y = (i + 1) * 300
+                    page.evaluate(f"window.scrollTo(0, {scroll_y})")
+                    page.wait_for_timeout(random.randint(300, 600))
+                page.evaluate("window.scrollTo(0, 0)")
                 page.wait_for_timeout(500)
+                
+                # Collect links from current page
+                current_html = page.content()
+                
+                # Check if we got Cloudflare page
+                if 'Verifying you are human' in current_html or 'Just a moment' in current_html:
+                    print(f"    Page {page_num}/{max_pages}: Cloudflare blocked, waiting longer...")
+                    page.wait_for_timeout(10000)  # Wait 10 seconds
+                    wait_for_cloudflare(page, 30000)
+                    current_html = page.content()
+                
+                before_count = len(job_links)
+                job_links |= extract_job_links_from_dom(current_html)
+                new_links = len(job_links) - before_count
+                
+                print(f"    Page {page_num}/{max_pages}: +{new_links} links (total: {len(job_links)})")
+                
+                if page_num <= 3 or page_num == max_pages:
+                    screenshot(page, args.debug_dir, f"page_{page_num:02d}.png")
+                
+            except Exception as e:
+                print(f"    Page {page_num}/{max_pages}: Error - {str(e)[:50]}, continuing...")
+                continue
         
         screenshot(page, args.debug_dir, "99_last_page.png")
 
