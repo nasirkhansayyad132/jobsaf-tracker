@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-01-17T15:47:41.344088",
+  "today": "2026-01-17",
+  "total_jobs": 4,
+  "new_count": 4,
+  "expiring_today_count": 1,
+  "expiring_soon_count": 2,
+  "new_jobs": [
+    {
+      "url": "https://jobs.af/jobs/software-engineer-123",
+      "title": "Software Engineer",
+      "company": "Tech Company Ltd",
+      "location": "Kabul",
+      "closing_date": "2026-01-17",
+      "closing_date_raw": "Jan 17, 2026",
+      "apply_url": "https://example.com/apply",
+      "description": "We are looking for a Software Engineer. Please apply by sending your CV to hr@techcompany.af or careers@techcompany.af. Contact: +93 700 123 456",
+      "details": {
+        "Salary Range": "Negotiable",
+        "Experience": "3+ years",
+        "Contract Type": "Full-time"
+      },
+      "scraped_at": "2026-01-17T09:00:00Z",
+      "apply_emails": [
+        "hr@techcompany.af",
+        "careers@techcompany.af"
+      ],
+      "apply_method": "both"
+    },
+    {
+      "url": "https://jobs.af/jobs/data-analyst-456",
+      "title": "Data Analyst",
+      "company": "Analytics Corp",
+      "location": "Herat",
+      "closing_date": "2026-01-18",
+      "closing_date_raw": "Jan 18, 2026",
+      "apply_url": null,
+      "description": "Data Analyst position. Send applications to: jobs@analytics.af",
+      "details": {
+        "Education": "Bachelor's in Computer Science"
+      },
+      "scraped_at": "2026-01-17T09:00:00Z",
+      "apply_emails": [
+        "jobs@analytics.af"
+      ],
+      "apply_method": "email"
+    },
+    {
+      "url": "https://jobs.af/jobs/it-manager-789",
+      "title": "IT Manager",
+      "company": "Enterprise Solutions",
+      "location": "Mazar-i-Sharif",
+      "closing_date": "2026-01-20",
+      "closing_date_raw": "Jan 20, 2026",
+      "apply_url": "https://enterprise.af/careers",
+      "description": "IT Manager needed for our growing team.",
+      "details": {},
+      "scraped_at": "2026-01-17T09:00:00Z",
+      "apply_emails": [],
+      "apply_method": "apply_link"
+    },
+    {
+      "url": "https://jobs.af/jobs/network-admin-101",
+      "title": "Network Administrator",
+      "company": null,
+      "location": "Kabul",
+      "closing_date": "2026-01-25",
+      "closing_date_raw": "Jan 25, 2026",
+      "apply_url": null,
+      "description": "Network admin role available. Email: network-jobs@company.af",
+      "details": {},
+      "scraped_at": "2026-01-17T09:00:00Z",
+      "apply_emails": [
+        "network-jobs@company.af"
+      ],
+      "apply_method": "email"
+    }
+  ],
+  "expiring_today": [
+    {
+      "url": "https://jobs.af/jobs/software-engineer-123",
+      "title": "Software Engineer",
+      "company": "Tech Company Ltd",
+      "location": "Kabul",
+      "closing_date": "2026-01-17",
+      "closing_date_raw": "Jan 17, 2026",
+      "apply_url": "https://example.com/apply",
+      "description": "We are looking for a Software Engineer. Please apply by sending your CV to hr@techcompany.af or careers@techcompany.af. Contact: +93 700 123 456",
+      "details": {
+        "Salary Range": "Negotiable",
+        "Experience": "3+ years",
+        "Contract Type": "Full-time"
+      },
+      "scraped_at": "2026-01-17T09:00:00Z",
+      "apply_emails": [
+        "hr@techcompany.af",
+        "careers@techcompany.af"
+      ],
+      "apply_method": "both"
+    }
+  ],
+  "expiring_soon": [
+    {
+      "url": "https://jobs.af/jobs/data-analyst-456",
+      "title": "Data Analyst",
+      "company": "Analytics Corp",
+      "location": "Herat",
+      "closing_date": "2026-01-18",
+      "closing_date_raw": "Jan 18, 2026",
+      "apply_url": null,
+      "description": "Data Analyst position. Send applications to: jobs@analytics.af",
+      "details": {
+        "Education": "Bachelor's in Computer Science"
+      },
+      "scraped_at": "2026-01-17T09:00:00Z",
+      "apply_emails": [
+        "jobs@analytics.af"
+      ],
+      "apply_method": "email"
+    },
+    {
+      "url": "https://jobs.af/jobs/it-manager-789",
+      "title": "IT Manager",
+      "company": "Enterprise Solutions",
+      "location": "Mazar-i-Sharif",
+      "closing_date": "2026-01-20",
+      "closing_date_raw": "Jan 20, 2026",
+      "apply_url": "https://enterprise.af/careers",
+      "description": "IT Manager needed for our growing team.",
+      "details": {},
+      "scraped_at": "2026-01-17T09:00:00Z",
+      "apply_emails": [],
+      "apply_method": "apply_link"
+    }
+  ]
+}

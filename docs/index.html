@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1e40af">
+    <meta name="description" content="Jobs.af IT/Tech Job Tracker - Find tech jobs in Afghanistan">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Jobs.af">
+    <title>Jobs.af Tracker</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="top-bar-title">
+                <span class="logo">💼</span>
+                <span>Jobs.af</span>
+            </div>
+            <button id="refreshBtn" class="icon-btn" title="Refresh">🔄</button>
+        </header>
+
+        <!-- Filter Tabs -->
+        <nav class="filter-tabs">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="new">New</button>
+            <button class="tab-btn" data-filter="today">Today</button>
+            <button class="tab-btn" data-filter="soon">≤3 Days</button>
+        </nav>
+
+        <!-- Search Box -->
+        <div class="search-container">
+            <input type="search" id="searchBox" placeholder="Search title, company, location..." autocomplete="off">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <span id="statsText">Loading...</span>
+            <span id="lastUpdated"></span>
+        </div>
+
+        <!-- Job List -->
+        <main id="jobList" class="job-list">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading jobs...</p>
+            </div>
+        </main>
+
+        <!-- Job Detail Modal -->
+        <div id="jobModal" class="modal hidden">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <button id="modalBack" class="back-btn">← Back</button>
+                    <span class="modal-title">Job Details</span>
+                </header>
+                <div id="modalBody" class="modal-body">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Offline Banner -->
+        <div id="offlineBanner" class="offline-banner hidden">
+            📴 You're offline. Showing cached data.
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
