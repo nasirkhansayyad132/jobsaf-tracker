@@ -378,34 +378,40 @@
         scrapeBtn.classList.add('spinning');
         scrapeBtn.disabled = true;
         
+        const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`;
+        
         try {
-            const res = await fetch(
-                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/vnd.github.v3+json',
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ ref: 'main' })
-                }
-            );
+            const res = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ ref: 'main' })
+            });
             
             if (res.status === 204) {
                 showToast('✅ Scraper started! Jobs will update in ~2-3 minutes. Use 🔄 to refresh.', 'success');
-            } else if (res.status === 401 || res.status === 403) {
+            } else if (res.status === 401) {
                 localStorage.removeItem('github_pat');
-                showToast('❌ Invalid or expired token. Please enter a new one.', 'error');
+                const err = await res.json().catch(() => ({}));
+                showToast(`❌ Auth failed: ${err.message || 'Bad credentials'}. Check token.`, 'error');
+                showPatModal();
+            } else if (res.status === 403) {
+                localStorage.removeItem('github_pat');
+                const err = await res.json().catch(() => ({}));
+                showToast(`❌ Forbidden: ${err.message || 'Token lacks workflow scope'}`, 'error');
                 showPatModal();
             } else if (res.status === 404) {
-                showToast('❌ Workflow not found. Make sure the workflow exists.', 'error');
+                showToast('❌ Workflow not found. Check repo settings.', 'error');
             } else {
                 const err = await res.json().catch(() => ({}));
-                showToast(`❌ Error: ${err.message || res.status}`, 'error');
+                showToast(`❌ Error ${res.status}: ${err.message || 'Unknown'}`, 'error');
             }
         } catch (e) {
-            showToast('❌ Network error. Check your connection.', 'error');
+            console.error('Trigger error:', e);
+            showToast(`❌ Network error: ${e.message}`, 'error');
         } finally {
             scrapeBtn.classList.remove('spinning');
             scrapeBtn.disabled = false;
@@ -443,8 +449,9 @@
         const input = document.getElementById('patInput');
         const token = input.value.trim();
         
-        if (!token || !token.startsWith('ghp_') && !token.startsWith('github_pat_')) {
-            showToast('❌ Invalid token format. Should start with ghp_ or github_pat_', 'error');
+        // Accept any token that looks reasonable (GitHub tokens vary in format)
+        if (!token || token.length < 20) {
+            showToast('❌ Token too short. Please paste the full token.', 'error');
             return;
         }
         
