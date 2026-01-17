@@ -22,7 +22,10 @@
                 <span class="logo">💼</span>
                 <span>Jobs.af</span>
             </div>
-            <button id="refreshBtn" class="icon-btn" title="Refresh">🔄</button>
+            <div class="top-bar-actions">
+                <button id="scrapeBtn" class="icon-btn" title="Run Scraper">⚡</button>
+                <button id="refreshBtn" class="icon-btn" title="Refresh Data">🔄</button>
+            </div>
         </header>
 
         <!-- Filter Tabs -->
@@ -69,6 +72,29 @@
         <!-- Offline Banner -->
         <div id="offlineBanner" class="offline-banner hidden">
             📴 You're offline. Showing cached data.
+        </div>
+
+        <!-- Status Banner -->
+        <div id="statusBanner" class="status-banner hidden">
+            <span id="statusText"></span>
+        </div>
+
+        <!-- Token Setup Modal -->
+        <div id="tokenModal" class="token-modal hidden">
+            <div class="token-modal-content">
+                <h3>🔐 Setup GitHub Token</h3>
+                <p>To run the scraper from here, you need a GitHub Personal Access Token with <code>workflow</code> scope.</p>
+                <ol>
+                    <li>Go to <a href="https://github.com/settings/tokens/new?scopes=workflow&description=JobsafTracker" target="_blank">GitHub Token Settings</a></li>
+                    <li>Generate token with <b>workflow</b> scope</li>
+                    <li>Paste it below:</li>
+                </ol>
+                <input type="password" id="tokenInput" placeholder="ghp_xxxxxxxxxxxx">
+                <div class="token-modal-actions">
+                    <button id="tokenCancel" class="btn btn-outline">Cancel</button>
+                    <button id="tokenSave" class="btn btn-primary">Save & Run</button>
+                </div>
+            </div>
         </div>
     </div>
 

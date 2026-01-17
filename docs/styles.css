@@ -83,6 +83,11 @@ input {
     box-shadow: var(--shadow-md);
 }
 
+.top-bar-actions {
+    display: flex;
+    gap: 8px;
+}
+
 .top-bar-title {
     display: flex;
     align-items: center;
@@ -543,6 +548,35 @@ input {
 /* ===== Utilities ===== */
 .hidden {
     display: none !important;
+}
+
+/* ===== PAT Modal ===== */
+.pat-modal {
+    text-align: left;
+}
+
+.pat-modal h2 {
+    margin-bottom: 16px;
+    color: var(--gray-800);
+}
+
+.pat-modal p {
+    margin-bottom: 12px;
+    color: var(--gray-600);
+}
+
+.pat-modal ol {
+    margin: 12px 0 12px 20px;
+    color: var(--gray-700);
+}
+
+.pat-modal ol li {
+    margin-bottom: 8px;
+}
+
+.pat-modal a {
+    color: var(--primary);
+    font-weight: 500;
 }
 
 /* ===== Responsive ===== */

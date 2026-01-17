@@ -7,6 +7,9 @@
     const DATA_URL = 'data/jobs.json';
     const SUMMARY_URL = 'data/summary.json';
     const KABUL_TZ = 'Asia/Kabul';
+    const GITHUB_OWNER = 'nasirkhansayyad132';
+    const GITHUB_REPO = 'jobsaf-tracker';
+    const WORKFLOW_FILE = 'daily.yml';
 
     // ===== State =====
     let allJobs = [];
@@ -18,6 +21,7 @@
     const jobList = document.getElementById('jobList');
     const searchBox = document.getElementById('searchBox');
     const refreshBtn = document.getElementById('refreshBtn');
+    const scrapeBtn = document.getElementById('scrapeBtn');
     const statsText = document.getElementById('statsText');
     const lastUpdated = document.getElementById('lastUpdated');
     const jobModal = document.getElementById('jobModal');
@@ -355,6 +359,128 @@
 
     // ===== Event Handlers =====
     refreshBtn.addEventListener('click', () => loadJobs(true));
+
+    // Scrape button - triggers GitHub Actions workflow
+    scrapeBtn.addEventListener('click', async () => {
+        const token = localStorage.getItem('github_pat');
+        
+        if (!token) {
+            // Show modal to enter PAT
+            showPatModal();
+            return;
+        }
+        
+        await triggerScraper(token);
+    });
+
+    // Trigger the GitHub Actions workflow
+    async function triggerScraper(token) {
+        scrapeBtn.classList.add('spinning');
+        scrapeBtn.disabled = true;
+        
+        try {
+            const res = await fetch(
+                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ ref: 'main' })
+                }
+            );
+            
+            if (res.status === 204) {
+                showToast('✅ Scraper started! Jobs will update in ~2-3 minutes. Use 🔄 to refresh.', 'success');
+            } else if (res.status === 401 || res.status === 403) {
+                localStorage.removeItem('github_pat');
+                showToast('❌ Invalid or expired token. Please enter a new one.', 'error');
+                showPatModal();
+            } else if (res.status === 404) {
+                showToast('❌ Workflow not found. Make sure the workflow exists.', 'error');
+            } else {
+                const err = await res.json().catch(() => ({}));
+                showToast(`❌ Error: ${err.message || res.status}`, 'error');
+            }
+        } catch (e) {
+            showToast('❌ Network error. Check your connection.', 'error');
+        } finally {
+            scrapeBtn.classList.remove('spinning');
+            scrapeBtn.disabled = false;
+        }
+    }
+
+    // Show modal to enter GitHub PAT
+    function showPatModal() {
+        const html = `
+            <div class="pat-modal">
+                <h2>🔐 GitHub Token Required</h2>
+                <p>To trigger the scraper, you need a GitHub Personal Access Token with <strong>workflow</strong> scope.</p>
+                <ol>
+                    <li>Go to <a href="https://github.com/settings/tokens/new?scopes=workflow&description=Jobs.af%20Tracker" target="_blank">GitHub Token Settings</a></li>
+                    <li>Generate a token with <strong>workflow</strong> permission</li>
+                    <li>Paste it below:</li>
+                </ol>
+                <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxx" style="width: 100%; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; margin: 12px 0;">
+                <div style="display: flex; gap: 12px; margin-top: 16px;">
+                    <button onclick="savePatAndTrigger()" style="flex: 1; padding: 12px; background: #28a745; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Save & Run</button>
+                    <button onclick="hideJobDetail()" style="flex: 1; padding: 12px; background: #6c757d; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Cancel</button>
+                </div>
+                <p style="margin-top: 16px; font-size: 12px; color: #666;">
+                    🔒 Token is stored locally on your device only. Never shared.
+                </p>
+            </div>
+        `;
+        modalBody.innerHTML = html;
+        jobModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Global function to save PAT and trigger scraper
+    window.savePatAndTrigger = async function() {
+        const input = document.getElementById('patInput');
+        const token = input.value.trim();
+        
+        if (!token || !token.startsWith('ghp_') && !token.startsWith('github_pat_')) {
+            showToast('❌ Invalid token format. Should start with ghp_ or github_pat_', 'error');
+            return;
+        }
+        
+        localStorage.setItem('github_pat', token);
+        hideJobDetail();
+        await triggerScraper(token);
+    };
+
+    // Toast notification
+    function showToast(message, type = 'info') {
+        // Remove existing toast
+        const existing = document.querySelector('.toast');
+        if (existing) existing.remove();
+        
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        toast.textContent = message;
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: ${type === 'success' ? '#28a745' : type === 'error' ? '#dc3545' : '#17a2b8'};
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 10000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            max-width: 90%;
+            text-align: center;
+        `;
+        document.body.appendChild(toast);
+        
+        setTimeout(() => toast.remove(), 5000);
+    }
 
     modalBack.addEventListener('click', hideJobDetail);
 
