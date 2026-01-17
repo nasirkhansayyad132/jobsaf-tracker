@@ -72,8 +72,8 @@ def wait_for_cloudflare(page, timeout_ms: int = 15000):
     # Brief wait for page stability
     page.wait_for_timeout(500)
 
-def goto_with_retry(page, url: str, timeout_ms: int, retries: int = 2):
-    """Navigate to URL with retry logic for Cloudflare - optimized."""
+def goto_with_retry(page, url: str, timeout_ms: int, retries: int = 3):
+    """Navigate to URL with retry logic for Cloudflare - returns False on failure instead of raising."""
     for attempt in range(retries):
         try:
             page.set_default_timeout(timeout_ms)
@@ -90,9 +90,9 @@ def goto_with_retry(page, url: str, timeout_ms: int, retries: int = 2):
                 page.wait_for_timeout(3000)  # Brief wait before retry
         except Exception as e:
             if attempt < retries - 1:
+                print(f"    Timeout/error, retrying... ({str(e)[:30]})")
                 page.wait_for_timeout(2000)
-            else:
-                raise
+            # On last attempt, don't raise - just return False
     return False
 
 def goto(page, url: str, timeout_ms: int):
