@@ -1,0 +1,49 @@
+name: Jobs.af Scraper
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scrape-jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Stealth Dependencies
+        # Installs puppeteer (which downloads Chrome) + stealth plugins
+        run: npm install puppeteer puppeteer-extra puppeteer-extra-plugin-stealth
+
+      - name: Create URL File
+        # Exactly mimicking your setup
+        run: |
+          cat > jobsaf_url.txt <<'EOF'
+          https://jobs.af/jobs?search=&category=IT%20-%20Hardware&category=IT%20-%20Software&category=IT%20Billing&category=Data%20Security%2FProtection&category=Software%20Development%20and%20Data%20Management&category=Software%20developer&category=Software%20engineering&category=software%20development%20&category=software%20development&category=software%20analysis&category=Database%20Developing&category=Data%20Management&category=Data%20Collection%20&category=Data%20Entry&category=Data%20analysis&category=Data%20Science&category=Computer%20Science&category=Computer%20Operator&category=Telecommunication%20&category=Computing&category=Database%20Development&category=Data%20Management,%20IT,%20Administration,%20GIS,%20Warehouse,%20Network&category=Data%20analysis%20
+          EOF
+
+      - name: Run Scraper
+        # Using the exact args you provided (folder paths adjusted for GH environment)
+        run: |
+          mkdir -p jobsaf_node/pages
+          
+          node jobsaf_scrape.js \
+            --raw-url "$(tr -d '\r\n' < jobsaf_url.txt)" \
+            --max-pages 80 \
+            --only-open \
+            --json jobsaf_node/pages/page_1.json \
+            --csv jobsaf_node/pages/page_1.csv
+
+      - name: Upload Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-results
+          path: |
+            jobsaf_node/pages/
+            debug/
