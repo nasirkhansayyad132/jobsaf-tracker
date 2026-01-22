@@ -366,7 +366,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <div className="relative pt-12 pb-6 sm:pt-16 sm:pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <div className="relative pt-24 pb-8 sm:pt-32 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
