@@ -25,13 +25,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: scraper/package-lock.json
 
       - name: Install Scraper dependencies
         run: |
           cd scraper
-          npm install
+          npm install --no-package-lock
           npx puppeteer browsers install chrome
 
       - name: Create data directories
