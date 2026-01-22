@@ -112,6 +112,7 @@ function App() {
   };
 
   const filterJobs = () => {
+    let result = [...jobs];
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
