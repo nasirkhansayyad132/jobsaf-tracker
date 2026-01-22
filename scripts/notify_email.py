@@ -261,8 +261,10 @@ def send_email(subject: str, html_body: str) -> bool:
             print(f"[notify] Logging in as {smtp_user}...")
             server.login(smtp_user, smtp_pass)
             
-            print(f"[notify] Sending email to {email_to}...")
-            server.sendmail(smtp_user, email_to, msg.as_string())
+            # Support multiple recipients
+            recipients = [r.strip() for r in email_to.split(",") if r.strip()]
+            print(f"[notify] Sending email to {', '.join(recipients)}...")
+            server.sendmail(smtp_user, recipients, msg.as_string())
         
         print("[notify] Email sent successfully!")
         return True
