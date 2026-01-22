@@ -40,18 +40,23 @@ function generateSummary() {
 
     jobs.forEach(job => {
         if (!job.closing_date) return;
-        const closing = job.closing_date; // "YYYY-MM-DD"
+        const closing = job.closing_date; // YYYY-MM-DD
+
+        if (closing < today) {
+            // Expired
+            return;
+        }
 
         if (closing === today) {
             expiringToday.push(job);
-        } else if (closing > today) {
-            // Check if it's within next 3 days
+        } else {
+            // Calculate difference for "Expiring Soon"
             const closeDate = new Date(closing);
             const todayDate = new Date(today);
             const diffTime = closeDate - todayDate;
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-            if (diffDays <= 3) {
+            if (diffDays > 0 && diffDays <= 3) {
                 expiringSoon.push(job);
             }
         }

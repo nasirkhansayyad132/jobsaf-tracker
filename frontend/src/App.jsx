@@ -94,12 +94,7 @@ function App() {
         const res = await fetch('data/jobs.json');
         if (!res.ok) throw new Error('Failed to load jobs');
         const data = await res.json();
-
-        // Filter out expired jobs strictly
-        const todayStr = new Date().toISOString().split('T')[0];
-        const activeJobs = data.filter(j => !j.closing_date || j.closing_date >= todayStr);
-
-        const sorted = activeJobs.sort((a, b) => {
+        const sorted = data.sort((a, b) => {
           if (!a.closing_date) return 1;
           if (!b.closing_date) return -1;
           return new Date(a.closing_date) - new Date(b.closing_date);
@@ -117,7 +112,16 @@ function App() {
   };
 
   const filterJobs = () => {
-    let result = [...jobs];
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Strictly remove expired jobs before any other filtering
+    result = result.filter(j => {
+      if (!j.closing_date) return true;
+      const d = new Date(j.closing_date);
+      d.setHours(23, 59, 59, 999);
+      return d >= today;
+    });
 
     // Search
     if (search) {
@@ -129,18 +133,15 @@ function App() {
       );
     }
 
-    // Filter expiring
+    // Filter
     if (filter === 'expiring') {
-      const today = new Date();
-      const todayStr = today.toISOString().split('T')[0];
       const threeDaysFromNow = new Date();
       threeDaysFromNow.setDate(today.getDate() + 3);
-      const threeDaysFromNowStr = threeDaysFromNow.toISOString().split('T')[0];
 
       result = result.filter(j => {
         if (!j.closing_date) return false;
-        // Strict string comparison: today <= closing <= threeDaysFromNow
-        return j.closing_date >= todayStr && j.closing_date <= threeDaysFromNowStr;
+        const d = new Date(j.closing_date);
+        return d >= today && d <= threeDaysFromNow;
       });
     } else if (filter === 'new') {
       // "Recent Jobs" = "Post Date" within last 7 days
@@ -184,25 +185,34 @@ function App() {
   // Calculate statistics
   const getJobStats = () => {
     const today = new Date();
-    const todayStr = today.toISOString().split('T')[0];
+    today.setHours(0, 0, 0, 0);
+
     const threeDaysFromNow = new Date();
     threeDaysFromNow.setDate(today.getDate() + 3);
-    const threeDaysFromNowStr = threeDaysFromNow.toISOString().split('T')[0];
     const limitDate = subDays(new Date(), 7);
 
-    const expiringCount = jobs.filter(j => {
+    // Initial total (only non-expired)
+    const openJobs = jobs.filter(j => {
+      if (!j.closing_date) return true;
+      const d = new Date(j.closing_date);
+      d.setHours(23, 59, 59, 999);
+      return d >= today;
+    });
+
+    const expiringCount = openJobs.filter(j => {
       if (!j.closing_date) return false;
-      return j.closing_date >= todayStr && j.closing_date <= threeDaysFromNowStr;
+      const d = new Date(j.closing_date);
+      return d >= today && d <= threeDaysFromNow;
     }).length;
 
-    const recentCount = jobs.filter(j => {
+    const recentCount = openJobs.filter(j => {
       if (!j.details || !j.details['Post Date']) return false;
       const parsed = parse(j.details['Post Date'], 'MMM d, yyyy', new Date());
       return isValid(parsed) && isAfter(parsed, limitDate);
     }).length;
 
     return {
-      total: jobs.length,
+      total: openJobs.length,
       expiring: expiringCount,
       recent: recentCount
     };
@@ -318,8 +328,7 @@ function App() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-blue-400 flex items-center justify-center shadow-lg shadow-primary/25">
               <span className="font-bold text-white">J</span>
             </div>
-            {/* Hidden text to move focus higher */}
-            <span className="text-lg font-bold bg-gradient-to-r from-white to-slate-400 light:from-slate-900 light:to-slate-600 bg-clip-text text-transparent transition-all duration-300 hidden sm:block">
+            <span className="text-lg font-bold bg-gradient-to-r from-white to-slate-400 light:from-slate-900 light:to-slate-600 bg-clip-text text-transparent transition-all duration-300">
               Jobs.af Tracker
             </span>
           </div>
@@ -356,17 +365,13 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <div className="relative pt-4 pb-2 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <div className="relative pt-12 pb-6 sm:pt-16 sm:pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium mb-6">
-            <Sparkles className="w-3 h-3" />
-            <span>v2.0 Modern UI</span>
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-b from-white via-white to-slate-400 light:from-slate-900 light:via-slate-800 light:to-slate-500 bg-clip-text text-transparent transition-all duration-300">
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4 bg-gradient-to-b from-white via-white to-slate-400 light:from-slate-900 light:via-slate-800 light:to-slate-500 bg-clip-text text-transparent transition-all duration-300">
             Find Your Dream Job <br className="hidden sm:block" /> in Afghanistan
           </h1>
           <p className="text-base sm:text-lg text-slate-400 light:text-slate-600 max-w-2xl mx-auto mb-8 sm:mb-10 px-4 transition-all duration-300">
