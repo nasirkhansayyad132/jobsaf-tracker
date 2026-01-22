@@ -32,6 +32,7 @@ jobs:
         run: |
           cd scraper
           npm install
+          npx puppeteer browsers install chrome
 
       - name: Create data directories
         run: |
