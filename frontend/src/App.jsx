@@ -94,7 +94,12 @@ function App() {
         const res = await fetch('data/jobs.json');
         if (!res.ok) throw new Error('Failed to load jobs');
         const data = await res.json();
-        const sorted = data.sort((a, b) => {
+
+        // Filter out expired jobs strictly
+        const todayStr = new Date().toISOString().split('T')[0];
+        const activeJobs = data.filter(j => !j.closing_date || j.closing_date >= todayStr);
+
+        const sorted = activeJobs.sort((a, b) => {
           if (!a.closing_date) return 1;
           if (!b.closing_date) return -1;
           return new Date(a.closing_date) - new Date(b.closing_date);
@@ -124,16 +129,18 @@ function App() {
       );
     }
 
-    // Filter
+    // Filter expiring
     if (filter === 'expiring') {
       const today = new Date();
+      const todayStr = today.toISOString().split('T')[0];
       const threeDaysFromNow = new Date();
       threeDaysFromNow.setDate(today.getDate() + 3);
+      const threeDaysFromNowStr = threeDaysFromNow.toISOString().split('T')[0];
 
       result = result.filter(j => {
         if (!j.closing_date) return false;
-        const d = new Date(j.closing_date);
-        return d >= today && d <= threeDaysFromNow;
+        // Strict string comparison: today <= closing <= threeDaysFromNow
+        return j.closing_date >= todayStr && j.closing_date <= threeDaysFromNowStr;
       });
     } else if (filter === 'new') {
       // "Recent Jobs" = "Post Date" within last 7 days
@@ -177,14 +184,15 @@ function App() {
   // Calculate statistics
   const getJobStats = () => {
     const today = new Date();
+    const todayStr = today.toISOString().split('T')[0];
     const threeDaysFromNow = new Date();
     threeDaysFromNow.setDate(today.getDate() + 3);
+    const threeDaysFromNowStr = threeDaysFromNow.toISOString().split('T')[0];
     const limitDate = subDays(new Date(), 7);
 
     const expiringCount = jobs.filter(j => {
       if (!j.closing_date) return false;
-      const d = new Date(j.closing_date);
-      return d >= today && d <= threeDaysFromNow;
+      return j.closing_date >= todayStr && j.closing_date <= threeDaysFromNowStr;
     }).length;
 
     const recentCount = jobs.filter(j => {
@@ -310,7 +318,8 @@ function App() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-blue-400 flex items-center justify-center shadow-lg shadow-primary/25">
               <span className="font-bold text-white">J</span>
             </div>
-            <span className="text-lg font-bold bg-gradient-to-r from-white to-slate-400 light:from-slate-900 light:to-slate-600 bg-clip-text text-transparent transition-all duration-300">
+            {/* Hidden text to move focus higher */}
+            <span className="text-lg font-bold bg-gradient-to-r from-white to-slate-400 light:from-slate-900 light:to-slate-600 bg-clip-text text-transparent transition-all duration-300 hidden sm:block">
               Jobs.af Tracker
             </span>
           </div>
@@ -347,7 +356,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <div className="relative pt-24 pb-8 sm:pt-32 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <div className="relative pt-4 pb-2 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
