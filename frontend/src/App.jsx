@@ -91,7 +91,7 @@ function App() {
         }
       } else {
         // Just load from local file (initial load)
-        const res = await fetch('/data/jobs.json');
+        const res = await fetch('data/jobs.json');
         if (!res.ok) throw new Error('Failed to load jobs');
         const data = await res.json();
         const sorted = data.sort((a, b) => {
@@ -103,7 +103,7 @@ function App() {
       }
     } catch (err) {
       console.error(err);
-      if (triggerScrape) {
+      if (triggerScrape && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
         alert('❌ Could not connect to scraper API. Make sure server.js is running!');
       }
     } finally {

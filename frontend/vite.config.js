@@ -13,20 +13,31 @@ export default defineConfig({
       manifest: {
         name: 'Jobs.af Tracker',
         short_name: 'Jobs.af',
-        description: 'Track the latest IT and Tech jobs in Afghanistan',
+        description: 'Track the latest IT and Tech Tech jobs in Afghanistan',
         theme_color: '#0f172a',
         background_color: '#0f172a',
         display: 'standalone',
+        orientation: 'portrait',
+        scope: './',
+        start_url: './',
         icons: [
           {
             src: 'pwa-192x192.png',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any'
+          },
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable'
           },
           {
             src: 'pwa-512x512.png',
             sizes: '512x512',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any'
           }
         ]
       }
