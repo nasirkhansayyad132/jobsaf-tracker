@@ -101,6 +101,20 @@ function parseClosingDate(raw) {
   return null;
 }
 
+// Technical keywords to filter jobs from broad categories (Banking, Finance, etc.)
+const TECHNICAL_KEYWORDS = [
+  "software", "developer", "engineer", "data", "security", "it officer",
+  "compute", "database", "network", "system", "programming", "analyst",
+  "web", "devops", "cloud", "information technology", "programmer", "information security",
+  "technology", "ict", "tech", "digit"
+];
+
+function isTechnical(title) {
+  if (!title) return false;
+  const t = title.toLowerCase();
+  return TECHNICAL_KEYWORDS.some(kw => t.includes(kw));
+}
+
 function todayISO() {
   // Kabul is UTC+4:30
   const d = new Date();
@@ -260,8 +274,9 @@ async function main() {
         ? href
         : ("https://jobs.af" + (href.startsWith("/") ? href : "/" + href));
 
-      // Check if we already know this job
+      // NEW: Check if we already know this job
       if (!existingUrls.has(abs)) {
+        // ALWAYS keep if it's new
         linksToScrape.add(abs);
         newOnPage++;
       }
@@ -481,10 +496,25 @@ async function main() {
         scraped_at: nowISO,
       };
 
-      newRecords.push(rec);
+      // SELECTIVE FILTERING
+      const categories = (rec.details['Functional Area'] || "").toLowerCase();
+      const isRestricted = categories.includes("banking") || categories.includes("finance");
 
-      const shown = rec.title ? rec.title.slice(0, 60) : "No title";
-      console.log(`[job] ${i}/${linksToScrape.size} ${shown} | closing: ${rec.closing_date || rec.closing_date_raw || "?"}`);
+      if (isRestricted) {
+        // Only keep if title is technical 
+        if (isTechnical(rec.title)) {
+          newRecords.push(rec);
+          const shown = rec.title ? rec.title.slice(0, 60) : "No title";
+          console.log(`[job] ${i}/${linksToScrape.size} ${shown} (Technical Banking)`);
+        } else {
+          console.log(`[i] Skipped non-technical banking job: ${rec.title}`);
+        }
+      } else {
+        // Normal IT category - keep everything
+        newRecords.push(rec);
+        const shown = rec.title ? rec.title.slice(0, 60) : "No title";
+        console.log(`[job] ${i}/${linksToScrape.size} ${shown} (IT Category)`);
+      }
 
     } catch (e) {
       console.log(`[!] failed ${url}: ${String(e).slice(0, 120)}`);

@@ -27,12 +27,14 @@ function generateSummary() {
         const lastJobs = JSON.parse(fs.readFileSync(lastJobsFile, 'utf8'));
         const lastUrls = new Set(lastJobs.map(j => j.url));
         newJobs = jobs.filter(j => !lastUrls.has(j.url));
-    } else {
-        // Fallback: jobs scraped "today" (if scrape_date is present)
-        // Or just take top 5 if first run
         const todayStr = new Date().toISOString().split('T')[0];
         newJobs = jobs.filter(j => j.scraped_at && j.scraped_at.startsWith(todayStr));
     }
+
+    const techBankingJobs = jobs.filter(j => {
+        const area = (j.details['Functional Area'] || "").toLowerCase();
+        return area.includes("banking") || area.includes("finance");
+    });
 
     // Logic for Expiring
     const expiringToday = [];
@@ -69,9 +71,11 @@ function generateSummary() {
         new_count: newJobs.length,
         expiring_today_count: expiringToday.length,
         expiring_soon_count: expiringSoon.length,
+        tech_banking_count: techBankingJobs.length,
         new_jobs: newJobs,
         expiring_today: expiringToday,
-        expiring_soon: expiringSoon
+        expiring_soon: expiringSoon,
+        tech_banking_jobs: techBankingJobs
     };
 
     fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));

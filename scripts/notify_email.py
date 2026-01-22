@@ -138,7 +138,7 @@ def build_email_html(summary: Dict[str, Any]) -> str:
             "⚠️ Expiring TODAY",
             "🔴",
             summary["expiring_today"],
-            max_items=15
+            max_items=5
         ))
     
     # Expiring Soon
@@ -147,7 +147,16 @@ def build_email_html(summary: Dict[str, Any]) -> str:
             "Expiring in Next 3 Days",
             "🟡",
             summary["expiring_soon"],
-            max_items=15
+            max_items=5
+        ))
+    
+    # Tech Banking Jobs
+    if summary.get("tech_banking_jobs"):
+        sections.append(build_section(
+            "Banking & Finance IT Jobs",
+            "🏛️",
+            summary["tech_banking_jobs"],
+            max_items=5
         ))
     
     # New Jobs
@@ -156,7 +165,7 @@ def build_email_html(summary: Dict[str, Any]) -> str:
             "New Jobs Since Yesterday",
             "🆕",
             summary["new_jobs"],
-            max_items=15
+            max_items=5
         ))
     
     if not sections:

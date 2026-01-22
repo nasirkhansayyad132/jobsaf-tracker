@@ -19,6 +19,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem('jobaf_auth') === 'true';
   });
+  const [visibleCount, setVisibleCount] = useState(5);
 
   const [inputPassword, setInputPassword] = useState('');
   const [passError, setPassError] = useState(false);
@@ -53,6 +54,7 @@ function App() {
 
   useEffect(() => {
     filterJobs();
+    setVisibleCount(5); // Reset limit when search or filter changes
   }, [jobs, search, filter]);
 
   const fetchJobs = async (triggerScrape = false) => {
@@ -497,7 +499,7 @@ function App() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <AnimatePresence mode='popLayout'>
-              {filteredJobs.map((job, idx) => (
+              {filteredJobs.slice(0, visibleCount).map((job, idx) => (
                 <JobCard
                   key={job.url || idx}
                   job={job}
@@ -507,6 +509,17 @@ function App() {
               ))}
             </AnimatePresence>
           </motion.div>
+        )}
+
+        {filteredJobs.length > visibleCount && !loading && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setVisibleCount(prev => prev + 10)}
+              className="px-8 py-3 bg-primary/10 hover:bg-primary/20 border border-primary/20 text-primary rounded-xl font-medium transition-all hover:scale-105 active:scale-95"
+            >
+              Load More Opportunities
+            </button>
+          </div>
         )}
       </main>
 
