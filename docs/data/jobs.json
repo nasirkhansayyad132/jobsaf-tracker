@@ -1,5 +1,38 @@
 [
   {
+    "url": "https://jobs.af/jobs/senior-frontend-developer-zg6diFEa3",
+    "source": "jobs.af",
+    "title": "Senior Frontend Developer",
+    "company": "PARSA Technologies",
+    "location": "Kabul, Afghanistan",
+    "closing_date_raw": "Feb 05, 2026",
+    "closing_date": "2026-02-05",
+    "apply_url": "mailto:hr@parsa.technology",
+    "apply_emails": [
+      "hr@parsa.technology"
+    ],
+    "apply_phones": [],
+    "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management and dedication made it the partner of choice for many of the Afghan’s most trusted brands.\n\nPARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value added services, HR MIS, Finance Management System, SMS Platform and e-commerce. We are glad to demonstrate through our work, that we have the capabilities, people, processes, technology and the desire to be the strategic technology partner of choice for many Afghan entitles, including government departments, private sector and no-government organizations (NGOs).\n\n\n\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity and courtesy towards our clients, employees, vendors and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\n.\n\nDuties & Responsibilities\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\nDemonstrates openness to change and ability to manage complexity.\nAbility to handle daily tasks mainly in the field.\nAbility to establish good working relations with a range of stakeholders.\nAbility to coach, mentor, and develop people skills.\nAbility to focus on results\nConsistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nRecruitment Qualifications:\n\nBachelor's in Computer Science, Software Engineering or equivalent subject\nAt least 4+ years of experience in the above-mentioned field.\n\n\n\n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar job, as well as the contact details (email and telephone number) of the Candidate to hr@parsa.technology \n\nFunctional Area\nsoftware development\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
+    "details": {
+      "Post Date": "Jan 22, 2026",
+      "Closing Date": "Feb 05, 2026",
+      "Reference": "PT#000265",
+      "Number of Vacancies": "1",
+      "Salary Range": "As per company salary scale",
+      "Years of Experience": "4 years",
+      "Probation Period": "3 month",
+      "Contract Type": "Permanent",
+      "Contract Duration": "12 month",
+      "Contract Extensible": "Yes",
+      "Minimum Education": "Bachelor's Degree",
+      "Gender": "Male",
+      "Functional Area": "software development",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul"
+    },
+    "scraped_at": "2026-01-23T04:58:56Z"
+  },
+  {
     "url": "https://jobs.af/jobs/it-security-analyst-WvX1Bze7x",
     "source": "jobs.af",
     "title": "IT Security Analyst",
