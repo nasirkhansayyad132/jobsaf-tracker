@@ -1,173 +1,30 @@
 {
-  "generated_at": "2026-01-29T05:26:34.491Z",
-  "today": "2026-01-29",
-  "total_jobs": 55,
-  "new_count": 0,
-  "expiring_today_count": 7,
+  "generated_at": "2026-01-30T05:30:31.061Z",
+  "today": "2026-01-30",
+  "total_jobs": 56,
+  "new_count": 1,
+  "expiring_today_count": 0,
   "expiring_soon_count": 2,
   "tech_banking_count": 9,
-  "new_jobs": [],
-  "expiring_today": [
+  "new_jobs": [
     {
-      "url": "https://jobs.af/jobs/d-faybr-aw-antrnty-khdmtwnw-karmnd",
+      "url": "https://jobs.af/jobs/senior-frontend-developer-herat",
       "source": "jobs.af",
-      "title": "د فایبر او انترنتي خدمتونو کارمند",
-      "company": "ATRA",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 29, 2026",
-      "closing_date": "2026-01-29",
-      "apply_url": "mailto:jobs@atra.gov.af",
+      "title": "Senior Frontend Developer (Herat)",
+      "company": "PARSA Technologies",
+      "location": "Herat, Afghanistan",
+      "closing_date_raw": "Feb 12, 2026",
+      "closing_date": "2026-02-12",
+      "apply_url": "mailto:hr@parsa.technology",
       "apply_emails": [
-        "jobs@atra.gov.af"
+        "hr@parsa.technology"
       ],
-      "apply_phones": [
-        "0202100763"
-      ],
-      "description": "About ATRA\n\nد افغانستان د مخابراتي خدمتونو د تنظیم اداره (اټرا) په ۲۰۰۶ میلادي کال په هېواد کې د مخابراتي سکتور د تنظیم او پرمختیا لپاره رامنځ ته شوه. دا اداره هڅه کوي چې د مخابراتو او انټرنټي خدمتونو زیربناوو د ودې او پرمختیا په برخه کې د خصوصي سکتور لپاره د پانګونې پیاوړی او مناسب چاپیریال رامنځته کړي. په هېواد کې د ښه مقرراتي او تنظیماتي چاپیریال رامنځته کولو او تنفیذ له لارې له تبعیض پرته په شفاف ډول د ځواکمن خصوصي سکتور لخوا حمایه شوي مخابراتي سکتور او اړوندو خدمتونو رامینځته کول، د مقرراتو پلي کول، خدمتونو ته سراسری لاسرسی، د مارکیټ تنظیمول، په مخابراتي مارکيټ کې د سیالۍ چټکوالی او نظارت د اټرا ادارې موخې دي. اټرا اداره له اړوندو اړخونو خصوصي سکتور، دولتي ادارو او د مخابراتي خدمتونو مشترکینو سره یو ځای کار کوي، څو د هېواد په مخابراتي او انټرنیټي مارکیټ کې سالمه سیالي پرمختګ وکړي.\n\nد مخابراتو سکتور او صنعت له 2002 میلادي کال را پدېخوا د هېواد 34 ولایتونو او یو شمېر زیاتو ولسوالیو ته د انټرنیټي پوښښ په پراختیا سره ګړندۍ وده کړېده . اټرا ادارې د هېواد مخابراتي بازار د ښه پرمختګ او تنظیم لپاره تل هڅه کړې، چې د نړیوالو کلیدي مخابراتي شریکانو سره ملګرتیا او اړیکې لا پیاوړې کړي ترڅو له نړیوالو تجربو څخه په استفادې ګټورې لارې چارې په ګوته او د هېواد مارکیټ ته وده ورکړي. ظرفیت جوړونه د مخابراتي صنعت لپاره یو بل مهم ټکی دی. دې ته په کتو اټرا ادارې د اړونده سکتور او مخابراتي او انټرنټي شرکتونو په ګډون د ظرفیت لوړولو ته بودجه ځانګړې او د کار ایکوسېستم رامنځته کړی دی، چې دا به په مخابراتي سکتور کې د پانګونې جلب او پېرېدونکو ته د پرمختللو مخابراتي خدمتونو وړاندې کولو لامل شي. همدارنګه، اټرا اداره له نورو اړوندو خواو په ځانګړې توګه څیړنیزو او اکاډمیکو مرکزونو سره په ګډه کار کوي، ترڅو په هېواد کې د مخابراتو کاري ځواک ته پیاوړتیا او وده ورکړي او په مارکیټ کې د ظرفیت جوړونې برنامو ته د (ترننګ) او نورو خدمتونو لپاره لاره برابره کړي.\n\n\n\n\nJob Summary\n\nاجرای پلان های اجرایوی مدیریت مربوطه و نظارت از خدمات فایبر و انترنت\n\nDuties & Responsibilities\n\nمسؤلیت های وظیفوی:\n\nانجام پروسه های نظارتی برای کنترول و نظارت از انکشاف شبکه های فایبر نوری.\nارزیابی کلی کارکرد شبکه های فایبری/انترنتی\nاشنایی با سیستم های چون باندویت منجمنت شرکت های ISP\nنظارت از شبکه های فایبر نوری در روشنایی پالیسی و طرزالعمل مرتبط به شبکه های فایبر نوری\nانجام دادن تست های موجودیت (Availability)، کیفیت (Quality) وپایداری شبکه های فایبری/انترنتی\nجمع آوری، تحلیل، تجزیه و ارزیابی نشانگر های کلیدی کارکرد (KPIs) شبکه های فایبری/انترنتی\nانجام سایر کار های خارج از لایحه وظایف که از سوی آمر مستقیم به تیم لیدر مانیتورینگ طیف سپرده می شود.\nارایه گزارش های دقیق ، منظم و به موقع به آمریت جلوگیری از فعالیت های غیر مجاز مخابراتی.\nاجرای سایر وظایف که از طرف مسئول مربوطه برایش سپرده میشود .\n\n\n\n\nJob Requirements\n\nمواصفات\n\nتحصیلات، تجارب و مهارت های لازم:\n\nدرجه تحصیل :\n\nسند تحصیلی حد اقل لیسانس در یکی از رشته های مخابرات ، الکترونکس ، برق  ویا کمپیوتر ساینس\n\nتجارب لازمه:\n\nبا داشتن حد اقل ۲ سال تجربه کاری دربخش مربوطه،\n\nمهارت های دیگر ( کورس های کوتاه مدت، آموزش های داخل خدمت وغیره(\n\nدارای معلومات و تجارب کافی دربخش شبکه های فایبری، ISP ها وامنیت اطلاعات و انترنت.\n\nقابلیت استفاده از ابزار های مربوطه بخاطر تشخیص نواقص، ضایعات، مشکلات و نارسایی در شبکه های فایبر نوری\n\nمتعهد به حفظ اسرار و محرمیت معلومات اداره باشد.\n\nرعایت دسپلین مالی و اداری\n\nرعایت سلسله مراتب\n\nبرخورد دوستانه با همکاران\n\nارتقاء ظرفیت خودي\n\nتوانایی کافی در کار گروپی\n\nدارای معلومات و تجارب گسترده دربخش امنیت اطلاعات و انترنت.\n\nدارای سوابق جرمی نباشد\n\nتابعیت افغانستان را داشته و در کشور مقیم باشد.\n\nبه لسان های پشتو و دری به خوبی تکلم نموده و به لسان انگلیسی آشنایی داشته باشد \n\n\n\n\nSubmission Guideline\n\n \n\nد محترمو کاندیدانو څخه هیله کیږي چې تر څو د اړونده بست لپاره څانګړې فورمه ډکه او لاندې بريښنالیک ته يې راواستوي او همدارګه کولای شي چې یاده فورمه د کارکوونکو د چارو  د استخدام د آمریت څخه ترلاسه کړي .\n\nپته : د مخابراتو او معلوماتي ټکنالوجۍ وزارت ۱۸ پوړیزه ودانۍ دیارلسم منزل د استخدام آمریت\n\nبریښنالیک jobs@atra.gov.af\n\nد اړیکي شمیره : 0202100763\n\nنوټ : د ټولو محترمو کاندیدانو څخه هیله کیږي چې که چیرې ستاسو تحصیلات او یا هم کاري تجربه د پورته بست سره سمون نه خوري لطفا خپل غوښتنلیک مه را استوئ .\n\nپه درنښت\n\nSubmission Guidelines:\n\nAll applications  Forms ( CV & Cover Letters are not considered )should be submitted via email to: jobs@atra.gov.af\n\nPlease, clearly indicate on the subject line the title of the position. Applications received after the\n\nClosing date will not be considered.\n\n\n\n\nFunctional Area\nComputer Science\nTelecommunication\nElectrical Engineering, telecommunication\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@atra.gov.af\n\nAttachments\n\nApplication_Form ATRA.doc\n\nApply Now",
+      "apply_phones": [],
+      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management, and dedication made it the partner of choice for many of the Afghan’s most trusted brands. PARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value-added services, HR MIS, Finance Management System, SMS Platform, and e-commerce. We are glad to demonstrate through our work that we have the capabilities, people, processes, technology, and the desire to be the strategic technology partner of choice for many Afghan entities, including government departments, the private sector, and non-government organizations (NGOs).\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity, and courtesy towards our clients, employees, vendors, and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\nSenior Frontend Developer will work under the overall guidance of the Chief Executive Officer and under the The direct supervision of the Software Development Team Head. \n\n\n\n\nDuties & Responsibilities\n\nHe/she will work in close collaboration with the Software Development Department and will fulfill the following duties and responsibilities:\n\n·        Designing and Development of web and mobile applications.\n\n·        Conducting feasibility studies for software projects.\n\n·        Completing tasks such as coding, testing, and debugging.\n\n·        Writing advanced programming code.\n\n·        Managing project timelines and tasks.\n\n·        Work in close partnership with operations, business, and management departments\n\n\n\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\nFunctional Competencies\n\n \n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\n·        Ability to coach, mentor, and develop people skills.\n\n·        Ability to focus on results\n\n·        Consistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nBachelor's in Computer Science, Software Engineering, or equivalent subject\nAt least 4+ years of experience in the above-mentioned field.\n\n       \n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar jobs, as well as the contact details (email and telephone number) of the Candidate to hr@parsa.technology \n\nFunctional Area\nComputer Science\nSoftware engineering\nCountries\nAfghanistan\nProvinces\nHerat\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
       "details": {
-        "Post Date": "Jan 14, 2026",
-        "Closing Date": "Jan 29, 2026",
-        "Reference": "003",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "2 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science, Telecommunication, Electrical Engineering, telecommunication",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-18T20:14:48Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/adhw-mslky-prwss-dyta-vpS2Aq1iQ",
-      "source": "jobs.af",
-      "title": "عضو مسلکی پروسس دیتا",
-      "company": "ATRA",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 29, 2026",
-      "closing_date": "2026-01-29",
-      "apply_url": "mailto:jobs@atra.gov.af",
-      "apply_emails": [
-        "jobs@atra.gov.af"
-      ],
-      "apply_phones": [
-        "0202100763"
-      ],
-      "description": "About ATRA\n\nد افغانستان د مخابراتي خدمتونو د تنظیم اداره (اټرا) په ۲۰۰۶ میلادي کال په هېواد کې د مخابراتي سکتور د تنظیم او پرمختیا لپاره رامنځ ته شوه. دا اداره هڅه کوي چې د مخابراتو او انټرنټي خدمتونو زیربناوو د ودې او پرمختیا په برخه کې د خصوصي سکتور لپاره د پانګونې پیاوړی او مناسب چاپیریال رامنځته کړي. په هېواد کې د ښه مقرراتي او تنظیماتي چاپیریال رامنځته کولو او تنفیذ له لارې له تبعیض پرته په شفاف ډول د ځواکمن خصوصي سکتور لخوا حمایه شوي مخابراتي سکتور او اړوندو خدمتونو رامینځته کول، د مقرراتو پلي کول، خدمتونو ته سراسری لاسرسی، د مارکیټ تنظیمول، په مخابراتي مارکيټ کې د سیالۍ چټکوالی او نظارت د اټرا ادارې موخې دي. اټرا اداره له اړوندو اړخونو خصوصي سکتور، دولتي ادارو او د مخابراتي خدمتونو مشترکینو سره یو ځای کار کوي، څو د هېواد په مخابراتي او انټرنیټي مارکیټ کې سالمه سیالي پرمختګ وکړي.\n\nد مخابراتو سکتور او صنعت له 2002 میلادي کال را پدېخوا د هېواد 34 ولایتونو او یو شمېر زیاتو ولسوالیو ته د انټرنیټي پوښښ په پراختیا سره ګړندۍ وده کړېده . اټرا ادارې د هېواد مخابراتي بازار د ښه پرمختګ او تنظیم لپاره تل هڅه کړې، چې د نړیوالو کلیدي مخابراتي شریکانو سره ملګرتیا او اړیکې لا پیاوړې کړي ترڅو له نړیوالو تجربو څخه په استفادې ګټورې لارې چارې په ګوته او د هېواد مارکیټ ته وده ورکړي. ظرفیت جوړونه د مخابراتي صنعت لپاره یو بل مهم ټکی دی. دې ته په کتو اټرا ادارې د اړونده سکتور او مخابراتي او انټرنټي شرکتونو په ګډون د ظرفیت لوړولو ته بودجه ځانګړې او د کار ایکوسېستم رامنځته کړی دی، چې دا به په مخابراتي سکتور کې د پانګونې جلب او پېرېدونکو ته د پرمختللو مخابراتي خدمتونو وړاندې کولو لامل شي. همدارنګه، اټرا اداره له نورو اړوندو خواو په ځانګړې توګه څیړنیزو او اکاډمیکو مرکزونو سره په ګډه کار کوي، ترڅو په هېواد کې د مخابراتو کاري ځواک ته پیاوړتیا او وده ورکړي او په مارکیټ کې د ظرفیت جوړونې برنامو ته د (ترننګ) او نورو خدمتونو لپاره لاره برابره کړي.\n\n\n\n\nJob Summary\n\nعضو مسلکی پروسس دیتا      \n\nDuties & Responsibilities\n\nمسؤلیت های وظیفوی:\n\nتطبیق پلان جهت پروسس نمودن نمونه های کیفیت خدمات مخابراتی از ولایات کشور\nتطبیق طرح و پلان های نظارتی و تفتیش غرض تثبیت و دریافت موارد تخطی اپریتران و عرضه کنندگان خدمات موبایل، خدمات فایبر و DSL از شرایط جواز و احکام قانون تنظیم خدمات مخابراتی\nدریافت وارزیابی موارد تخلف آپریتران خدمات انترنیت مطابق مطابق شرایط پیشبینی شده در جواز.\nتطبیق و مراقبت ازتصامیم اداره و شرایط جوازها و جوازنامه های مربوط به خدمات مخابراتی مطابق به پلان تیم لیدر مربوطه\nتثبیت اشخاص متخلف ازشرایط جوازها یا جواز نامه های مربوط.\nچگونگی تطبیق شرایط جوازها و جوازنامه های خدمات انترنیتی\nتطبیق قوانین، طرزالعمل ها و هدایات مقامات غرض بازدید و ملاحظه اسناد مربوط به آپريتران و عرضه کنندگان خدمات مخابراتی مطابق به پلان\nتطبیق پلان های کاری مشخص و مداوم به بخش مربوطه\n تطبیق، تعقیب و پیگیری موضوعات وظیفوی که با دیگر نهادهای دولتی امنیتی و عدلی قضایی ارتباط پیدا میکند مطابق به پلان تیم لیدر مربوطه\n تطبیق پلان های کاری روزمره\n گزارشدهی دقیق، منظم و لحظه ای مرتبط به وظیفه به مقامات ذیریط .\nاولویت دادن به تکمیل و انجام وظیفه محوله حتی خارج از ساعات و ایام رسمی\nاجرای سایر امور که از طرف مسئول مربوطه برایش سپرده میشود .\n\n\n\n\nJob Requirements\n\nمواصفات\n\nتحصیلات، تجارب و مهارت های لازم:\n\nدرجه تحصیل :\n\nدارای تحصیلات عالی به سویه لیسانس دریکی از بخش های انجنیری برق، کمپیوتر ساینس و مخابرات.\n\n تجارب لازمه:\n\nدارای تجربه حد اقل دو سال خدمت مرتبط و بالفعل در بخش های مخابرات و تکنالوژی معلوماتی.\n\nمهارت های دیگر ( کورس های کوتاه مدت، آموزش های داخل خدمت وغیره(\n\nمعلومات کافی در باره قانون خدمات مخابراتی،\nتوانایی کافی در کار گروپی\nرعایت دسپلین مالی و اداری\nرعایت سلسله مراتب\nبرخورد دوستانه با همکاران\nارتقاء ظرفیت خودي\nمسئولیت پذیر و جرات کاري\nبه پروگرام های کمپیوتر مخصوصا (MS Office) و انترنیت دسترسی آشنایی کامل داشته باشد.\nدارای سوابق جرمی نباشد\nتابعیت افغانستان را داشته و در کشور مقیم باشد\nبه لسان پشتو و دري به خوبی تکلم نموده و به لسان انگلیسی آشنایی داشته باشد.\n\n\n\n\nSubmission Guideline\n\n \n\nد محترمو کاندیدانو څخه هیله کیږي چې تر څو د اړونده بست لپاره څانګړې فورمه ډکه او لاندې بريښنالیک ته يې راواستوي او همدارګه کولای شي چې یاده فورمه د کارکوونکو د چارو  د استخدام د آمریت څخه ترلاسه کړي .\n\nپته : د مخابراتو او معلوماتي ټکنالوجۍ وزارت ۱۸ پوړیزه ودانۍ دیارلسم منزل د استخدام آمریت\n\nبریښنالیک jobs@atra.gov.af\n\nد اړیکي شمیره : 0202100763\n\nنوټ : د ټولو محترمو کاندیدانو څخه هیله کیږي چې که چیرې ستاسو تحصیلات او یا هم کاري تجربه د پورته بست سره سمون نه خوري لطفا خپل غوښتنلیک مه را استوئ .\n\nپه درنښت\n\nSubmission Guidelines:\n\nAll applications  Forms ( CV & Cover Letters are not considered )should be submitted via email to: jobs@atra.gov.af\n\nPlease, clearly indicate on the subject line the title of the position. Applications received after the\n\nClosing date will not be considered.\n\n\n\n\nFunctional Area\nComputer Science\nTelecommunication\nElectrical Engineering, telecommunication\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@atra.gov.af\n\nAttachments\n\nApplication_Form ATRA.doc\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 14, 2026",
-        "Closing Date": "Jan 29, 2026",
-        "Reference": "002",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "2 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science, Telecommunication, Electrical Engineering, telecommunication",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-18T20:14:48Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/d-nn-brw-kastn-mslky-gh-y-cpNpVg7CL",
-      "source": "jobs.af",
-      "title": "د نن بروډ کاستنګ مسلکي غړی",
-      "company": "ATRA",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 29, 2026",
-      "closing_date": "2026-01-29",
-      "apply_url": "mailto:jobs@atra.gov.af",
-      "apply_emails": [
-        "jobs@atra.gov.af"
-      ],
-      "apply_phones": [
-        "0202100763"
-      ],
-      "description": "About ATRA\n\nد افغانستان د مخابراتي خدمتونو د تنظیم اداره (اټرا) په ۲۰۰۶ میلادي کال په هېواد کې د مخابراتي سکتور د تنظیم او پرمختیا لپاره رامنځ ته شوه. دا اداره هڅه کوي چې د مخابراتو او انټرنټي خدمتونو زیربناوو د ودې او پرمختیا په برخه کې د خصوصي سکتور لپاره د پانګونې پیاوړی او مناسب چاپیریال رامنځته کړي. په هېواد کې د ښه مقرراتي او تنظیماتي چاپیریال رامنځته کولو او تنفیذ له لارې له تبعیض پرته په شفاف ډول د ځواکمن خصوصي سکتور لخوا حمایه شوي مخابراتي سکتور او اړوندو خدمتونو رامینځته کول، د مقرراتو پلي کول، خدمتونو ته سراسری لاسرسی، د مارکیټ تنظیمول، په مخابراتي مارکيټ کې د سیالۍ چټکوالی او نظارت د اټرا ادارې موخې دي. اټرا اداره له اړوندو اړخونو خصوصي سکتور، دولتي ادارو او د مخابراتي خدمتونو مشترکینو سره یو ځای کار کوي، څو د هېواد په مخابراتي او انټرنیټي مارکیټ کې سالمه سیالي پرمختګ وکړي.\n\nد مخابراتو سکتور او صنعت له 2002 میلادي کال را پدېخوا د هېواد 34 ولایتونو او یو شمېر زیاتو ولسوالیو ته د انټرنیټي پوښښ په پراختیا سره ګړندۍ وده کړېده . اټرا ادارې د هېواد مخابراتي بازار د ښه پرمختګ او تنظیم لپاره تل هڅه کړې، چې د نړیوالو کلیدي مخابراتي شریکانو سره ملګرتیا او اړیکې لا پیاوړې کړي ترڅو له نړیوالو تجربو څخه په استفادې ګټورې لارې چارې په ګوته او د هېواد مارکیټ ته وده ورکړي. ظرفیت جوړونه د مخابراتي صنعت لپاره یو بل مهم ټکی دی. دې ته په کتو اټرا ادارې د اړونده سکتور او مخابراتي او انټرنټي شرکتونو په ګډون د ظرفیت لوړولو ته بودجه ځانګړې او د کار ایکوسېستم رامنځته کړی دی، چې دا به په مخابراتي سکتور کې د پانګونې جلب او پېرېدونکو ته د پرمختللو مخابراتي خدمتونو وړاندې کولو لامل شي. همدارنګه، اټرا اداره له نورو اړوندو خواو په ځانګړې توګه څیړنیزو او اکاډمیکو مرکزونو سره په ګډه کار کوي، ترڅو په هېواد کې د مخابراتو کاري ځواک ته پیاوړتیا او وده ورکړي او په مارکیټ کې د ظرفیت جوړونې برنامو ته د (ترننګ) او نورو خدمتونو لپاره لاره برابره کړي.\n\n\n\n\nJob Summary\n\nد نن بروډ کاستنګ مسلکي غړی\n\nDuties & Responsibilities\n\nمسؤلیت های وظیفوی:\n\nرهنمایی، توضیح و صدور اسناد و راپور های واصله از اتحادیه بین المللی تیلی کمونیکیشن (ITU)، جمعیت مخابراتی آسیا پاسیفیک (APT)، اتحادیه برودکاستنگ آسیایی (ABU)، شورای ریگولیتر های مخابرات جنوب آسیا (SATRC) و غیره سازمانهای بین المللی و منطقوی مخابراتی به بخش ها و مسولین مربوطه.\nتعین و انتخاب تخصیصات فریکونسی رادیویی برای وسایل و دستگاه های بیسیم به متتقاضایان اعم از موسسات دولتی، غیر دولتی، سفارتخانه ها، شرکت ها، و اشخاص انفرادی طبق مقرره بیسیم و جدول تخصیصات فریکونسی ملی و بین المللی کمونیکیشن.\nهماهنگ ساختن کلیه فریکونسی های رادیویی مجوز از طرف این اداره در سطح ملی، منطقوی و بین المللی طبق (ITU-R).\nثبت، راجستر و اطلاع دهی فریکونسی های توزیع شده با اداره (MIFR) و اتحادیه بین المللی تیلی کمونیکیشن (ITU).\nتحلیل و منسجم سازی موارد اخلال فریکونسی در شبکه ها و خدمات نن برودکاستنگ که از اداره اترا جوازنامه اخذ کرده اند و ارسال آن به ریاست نظارت وکنترول و مراجع ذیربط.\nمحاسبه و سنجش اجرت فریکونسی خدمات نن برودکاستنگ و اجرت حق الثبت استفاده کننده گان دستگاه ها و وسایل مربوطه مطابق به مقررات نافذه.\nطرز استفاده مؤثر و مطلوب از فریکونسی نن برودکاستنگ با در نظر داشت اصل صرفه جویی از طیف فریکونسی رادیویی بحیث یکی از منابع محدود طبیعی کشور.\nاتخاذ تدابیر وقایوی به منظور جلوگیری از سکتگی در امور، و فراهم آوری تسهیلات لازم و ارایه پیشنهادات موثر به منظور بهبود در امور مربوطه.\nبازنگری دقیق سالانه بر جدول ملی تخصیصات فریکونسی افغانستان و اپدیت نگهداشتن بخش های مربوطه آن با در نظرداشت معیارها و اصول ملی و بین المللی.\nمرتب سازی و نگهداری اسناد مربوطه.\nحفظ محرمیت معلومات و اسناد اداره\nتعقیب و پیگیری امور یومیه با شعبات مربوطه و ادارت ذیربط\nارایه معلومات و تهیه گزارش های مربوطه در صورت تقاضای آمر مافوق.\nانجام بقیه مواردی که در محدوده کاری از سوی مسئول مربوطه سپرده میشود.\n\n \n\n\n\n\nJob Requirements\n\nمواصفات\n\nتحصیلات، تجارب و مهارت های لازم:\n\nدرجه تحصیل :\n\nدارای تحصیلات عالی به سویه حداقل لسانس در یکی از بخش های انجنیری مخابرات، برق و الکترونیکس و کمپیوتر ساینس باشد.\n\nتجارب لازمه:\n\nدارای تجربه حد اقل دو سال خدمت بالفعل در بخش فریکونسی منجمنت، فریکونسی پلاننگ یا فریکونسی آپتیمایزیشن باشد.\n\n\n\n\n﻿مهارت های دیگر ( کورس های کوتاه مدت، آموزش های داخل خدمت وغیره(\n\nدارای معلومات و تجارب گسترده در ابعاد مختلف فریکونسی، باند های مختلف فریکونسی و خدماتی که بوسیله فریکونسی ارایه میشود، باشد.\n\nتوانایی کافی در کار گروهی داشته باشد.\n\nتابعیت افغانستان را داشته و در داخل کشور مقیم باشد.\n\nآشنایی با سازمان های منطقوی و بین المللی مخابرات داشته باشد.\n\nدارای سوابق جرمی نباشد.\n\nبه پروگرام های کمپیوتر مخصوصا (MS Office) و انترنت دسترسی و آشنایی کامل داشته باشد.\n\nبه لسان های پښتو و دري به خوبی تکلم نموده و به لسان انگلیسی آشنایی داشته باشد.\n\nسن ان از ۱۸ سال بالاتر باشد\n\n\n\n\nSubmission Guideline\n\n \n\nد محترمو کاندیدانو څخه هیله کیږي چې تر څو د اړونده بست لپاره څانګړې فورمه ډکه او لاندې بريښنالیک ته يې راواستوي او همدارګه کولای شي چې یاده فورمه د کارکوونکو د چارو  د استخدام د آمریت څخه ترلاسه کړي .\n\nپته : د مخابراتو او معلوماتي ټکنالوجۍ وزارت ۱۸ پوړیزه ودانۍ دیارلسم منزل د استخدام آمریت\n\nبریښنالیک jobs@atra.gov.af\n\nد اړیکي شمیره : 0202100763\n\nنوټ : د ټولو محترمو کاندیدانو څخه هیله کیږي چې که چیرې ستاسو تحصیلات او یا هم کاري تجربه د پورته بست سره سمون نه خوري لطفا خپل غوښتنلیک مه را استوئ .\n\nپه درنښت\n\nSubmission Guidelines:\n\nAll applications  Forms ( CV & Cover Letters are not considered )should be submitted via email to: jobs@atra.gov.af\n\nPlease, clearly indicate on the subject line the title of the position. Applications received after the\n\nClosing date will not be considered.\n\n\n\n\nFunctional Area\nComputer Science\nTelecommunication\nElectrical Engineering, telecommunication\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@atra.gov.af\n\nAttachments\n\nApplication_Form ATRA.doc\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 14, 2026",
-        "Closing Date": "Jan 29, 2026",
-        "Reference": "001",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "2 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science, Telecommunication, Electrical Engineering, telecommunication",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-18T20:14:48Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/d-shbk-tkhnykr",
-      "source": "jobs.af",
-      "title": "د شبکې تخنیکر",
-      "company": "ATRA",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 29, 2026",
-      "closing_date": "2026-01-29",
-      "apply_url": "mailto:jobs@atra.gov.af",
-      "apply_emails": [
-        "jobs@atra.gov.af"
-      ],
-      "apply_phones": [
-        "0202100763"
-      ],
-      "description": "About ATRA\n\nد افغانستان د مخابراتي خدمتونو د تنظیم اداره (اټرا) په ۲۰۰۶ میلادي کال په هېواد کې د مخابراتي سکتور د تنظیم او پرمختیا لپاره رامنځ ته شوه. دا اداره هڅه کوي چې د مخابراتو او انټرنټي خدمتونو زیربناوو د ودې او پرمختیا په برخه کې د خصوصي سکتور لپاره د پانګونې پیاوړی او مناسب چاپیریال رامنځته کړي. په هېواد کې د ښه مقرراتي او تنظیماتي چاپیریال رامنځته کولو او تنفیذ له لارې له تبعیض پرته په شفاف ډول د ځواکمن خصوصي سکتور لخوا حمایه شوي مخابراتي سکتور او اړوندو خدمتونو رامینځته کول، د مقرراتو پلي کول، خدمتونو ته سراسری لاسرسی، د مارکیټ تنظیمول، په مخابراتي مارکيټ کې د سیالۍ چټکوالی او نظارت د اټرا ادارې موخې دي. اټرا اداره له اړوندو اړخونو خصوصي سکتور، دولتي ادارو او د مخابراتي خدمتونو مشترکینو سره یو ځای کار کوي، څو د هېواد په مخابراتي او انټرنیټي مارکیټ کې سالمه سیالي پرمختګ وکړي.\n\nد مخابراتو سکتور او صنعت له 2002 میلادي کال را پدېخوا د هېواد 34 ولایتونو او یو شمېر زیاتو ولسوالیو ته د انټرنیټي پوښښ په پراختیا سره ګړندۍ وده کړېده . اټرا ادارې د هېواد مخابراتي بازار د ښه پرمختګ او تنظیم لپاره تل هڅه کړې، چې د نړیوالو کلیدي مخابراتي شریکانو سره ملګرتیا او اړیکې لا پیاوړې کړي ترڅو له نړیوالو تجربو څخه په استفادې ګټورې لارې چارې په ګوته او د هېواد مارکیټ ته وده ورکړي. ظرفیت جوړونه د مخابراتي صنعت لپاره یو بل مهم ټکی دی. دې ته په کتو اټرا ادارې د اړونده سکتور او مخابراتي او انټرنټي شرکتونو په ګډون د ظرفیت لوړولو ته بودجه ځانګړې او د کار ایکوسېستم رامنځته کړی دی، چې دا به په مخابراتي سکتور کې د پانګونې جلب او پېرېدونکو ته د پرمختللو مخابراتي خدمتونو وړاندې کولو لامل شي. همدارنګه، اټرا اداره له نورو اړوندو خواو په ځانګړې توګه څیړنیزو او اکاډمیکو مرکزونو سره په ګډه کار کوي، ترڅو په هېواد کې د مخابراتو کاري ځواک ته پیاوړتیا او وده ورکړي او په مارکیټ کې د ظرفیت جوړونې برنامو ته د (ترننګ) او نورو خدمتونو لپاره لاره برابره کړي.\n\n\n\n\nJob Summary\n\nد شبکې تخنیکر\n\nDuties & Responsibilities\n\n \n\nمسؤلیت های وظیفوی:\n\nدندې او مسؤلیتونه (Duties and Responsibilities):\n\n• د شبکې د هارډویر (Network Hardware) اجزاوو او کېبلونو نصب کول.\n\n• د شبکې د سافټویر (Network Software) تنظیم او کانفیګور کول.\n\n• د شبکې د ستونزو تشخیص (Troubleshooting) او حل کول.\n\n• د دې ډاډ ترلاسه کول چې شبکه په خوندي ډول (Securely) فعالیت کوي.\n\n• د NI (Network Infrastructure) ټیم د نورو غړو او مدیریت سره همکاري کول.\n\n• همکارانو ته تخنیکي ملاتړ (Technical Support) برابرول.\n\n• د اړتیا پر مهال د شبکې په زیربنا (Network Infrastructure) کې لازم اپګرېډونه ترسره کول.\n\n• د ښه فعالیت لرونکو کمپیوټري شبکو، اړیکو (Connections) او کېبلینګ ډیزاین او نصب کول.\n\n• د سیسټم د خرابیو (System Failures) لپاره Troubleshooting کول او د شبکې خنډونه (Bottlenecks) تشخیص کول تر څو د شبکې اوږدمهاله موثریت یقیني شي.\n\n• د LAN زیربنا معاینه کول او کوچنۍ یا لويې ستونزې/بګونه (Problems/Bugs) حل کول.\n\n• د سافټویر ټېسټ او کانفیګور کول او د هارډویر او جانبي وسایلو (Peripheral Devices) ساتنه او ترمیم کول.\n\n• د شبکې د فعالیت ارزونه (Network Performance Evaluation) کول او د ښه‌والي لارې چارې موندل.\n\n• د ادارې د معلوماتو د ساتنې لپاره منظم د ډاټا بیک‌اپونه (Data Backups) اخیستل.\n\n• همکارانو ته د کمپیوټر او شبکې د کارونې په برخه کې تخنیکي لارښوونې ورکول او بشپړ مشورې او هدایات وړاندې کول.\n\n• د RTDMS د شبکې د معیارونو (Network Standards) له مخې د ټولو تجهیزاتو او کېبلونو لیبل او ټګ کول\n\n\n\n\nJob Requirements\n\nمواصفات\n\nتحصیلات، تجارب و مهارت های لازم:\n\nدرجه تحصیل :\n\nحداقل لیسانس په کمپیوټر ساینس او یا مخابرات په برخو کې  \n\nتجارب لازمه:\n\n﻿﻿ د شبکې د تخنیکر (Network Technician) یا ورته اړوند بست کې ۳ کاله ثابته او عملي کاري تجربه ولري .\n\n• قوي تشخیصي (Diagnostic)، د ستونزو حل (Problem-Solving) او تحلیلي (Analytical) مهارتونه.\n\n• د LAN/WAN شبکو، TCP/IP پروتوکولونو او د شبکې ټکنالوژیو په برخه کې ښه پوهه.\n\n• له عامو سافټویرونو او هارډویرونو سره عملي تجربه (Hands-on Experience).\n\n• د دې وړتیا چې د کار د بشپړولو او د الارمونو (Alarm) د ځواب لپاره له کمپیوټر او سمارټ فون څخه استفاده وشي، دفتري سافټویرونوپه ګډون.\n\n• د بېلابېلو خلکو سره د ګډ کار کولو وړتیا، تر څو کاري دندې او پروژې بشپړې شي.\n\n• د دفتري اړتیاوو له مخې د ورځې او شپې کار کولو وړتیا.\n\nد وظیفې شرایط:\n\n۱ – د شبکې تخنیکر به د اړونده آمریت په لارښوونه په ۲۴ ساعته کې حداقل ۸ ساعته کاري شفت ولري چې په نوبتوار شکل سره به ورته تنظیم کیږي البته په عمومي رخصتیو کې به هم ۸ ساعته کاري شفت ولري .\n\n\n\n\nنور مهارتونه :\n\nد کاندید سن باید د ۱۸ کالو څخه لوړ وي\n\nد هویت تذکره ولري او په هیواد کې میشت وي\n\nد همکارانو سره دوستانه اړیکي ولري\n\nپه تخنیکي برخه کې پورته معلومات ولري .\n\nجرمي سابقه ونلري\n\nپه پښتو ، دري او انګلیسي ژبو پوره تسلط ولري  \n\n\n\n\nSubmission Guideline\n\n \n\nد محترمو کاندیدانو څخه هیله کیږي چې تر څو د اړونده بست لپاره څانګړې فورمه ډکه او لاندې بريښنالیک ته يې راواستوي او همدارګه کولای شي چې یاده فورمه د کارکوونکو د چارو  د استخدام د آمریت څخه ترلاسه کړي .\n\nپته : د مخابراتو او معلوماتي ټکنالوجۍ وزارت ۱۸ پوړیزه ودانۍ دیارلسم منزل د استخدام آمریت\n\nبریښنالیک jobs@atra.gov.af\n\nد اړیکي شمیره : 0202100763\n\nنوټ : د ټولو محترمو کاندیدانو څخه هیله کیږي چې که چیرې ستاسو تحصیلات او یا هم کاري تجربه د پورته بست سره سمون نه خوري لطفا خپل غوښتنلیک مه را استوئ .\n\nپه درنښت\n\nSubmission Guidelines:\n\nAll applications  Forms ( CV & Cover Letters are not considered )should be submitted via email to: jobs@atra.gov.af\n\nPlease, clearly indicate on the subject line the title of the position. Applications received after the\n\nClosing date will not be considered.\n\n\n\n\nFunctional Area\nComputer Science\nTelecommunication\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@atra.gov.af\n\nAttachments\n\nApplication_Form ATRA.doc\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 14, 2026",
-        "Closing Date": "Jan 29, 2026",
-        "Reference": "007",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "3 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science, Telecommunication",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-18T20:14:48Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/d-systm-arshd-a-myn",
-      "source": "jobs.af",
-      "title": "د سیستم ارشد اډمین",
-      "company": "ATRA",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 29, 2026",
-      "closing_date": "2026-01-29",
-      "apply_url": "mailto:jobs@atra.gov.af",
-      "apply_emails": [
-        "jobs@atra.gov.af"
-      ],
-      "apply_phones": [
-        "0202100763"
-      ],
-      "description": "About ATRA\n\nد افغانستان د مخابراتي خدمتونو د تنظیم اداره (اټرا) په ۲۰۰۶ میلادي کال په هېواد کې د مخابراتي سکتور د تنظیم او پرمختیا لپاره رامنځ ته شوه. دا اداره هڅه کوي چې د مخابراتو او انټرنټي خدمتونو زیربناوو د ودې او پرمختیا په برخه کې د خصوصي سکتور لپاره د پانګونې پیاوړی او مناسب چاپیریال رامنځته کړي. په هېواد کې د ښه مقرراتي او تنظیماتي چاپیریال رامنځته کولو او تنفیذ له لارې له تبعیض پرته په شفاف ډول د ځواکمن خصوصي سکتور لخوا حمایه شوي مخابراتي سکتور او اړوندو خدمتونو رامینځته کول، د مقرراتو پلي کول، خدمتونو ته سراسری لاسرسی، د مارکیټ تنظیمول، په مخابراتي مارکيټ کې د سیالۍ چټکوالی او نظارت د اټرا ادارې موخې دي. اټرا اداره له اړوندو اړخونو خصوصي سکتور، دولتي ادارو او د مخابراتي خدمتونو مشترکینو سره یو ځای کار کوي، څو د هېواد په مخابراتي او انټرنیټي مارکیټ کې سالمه سیالي پرمختګ وکړي.\n\nد مخابراتو سکتور او صنعت له 2002 میلادي کال را پدېخوا د هېواد 34 ولایتونو او یو شمېر زیاتو ولسوالیو ته د انټرنیټي پوښښ په پراختیا سره ګړندۍ وده کړېده . اټرا ادارې د هېواد مخابراتي بازار د ښه پرمختګ او تنظیم لپاره تل هڅه کړې، چې د نړیوالو کلیدي مخابراتي شریکانو سره ملګرتیا او اړیکې لا پیاوړې کړي ترڅو له نړیوالو تجربو څخه په استفادې ګټورې لارې چارې په ګوته او د هېواد مارکیټ ته وده ورکړي. ظرفیت جوړونه د مخابراتي صنعت لپاره یو بل مهم ټکی دی. دې ته په کتو اټرا ادارې د اړونده سکتور او مخابراتي او انټرنټي شرکتونو په ګډون د ظرفیت لوړولو ته بودجه ځانګړې او د کار ایکوسېستم رامنځته کړی دی، چې دا به په مخابراتي سکتور کې د پانګونې جلب او پېرېدونکو ته د پرمختللو مخابراتي خدمتونو وړاندې کولو لامل شي. همدارنګه، اټرا اداره له نورو اړوندو خواو په ځانګړې توګه څیړنیزو او اکاډمیکو مرکزونو سره په ګډه کار کوي، ترڅو په هېواد کې د مخابراتو کاري ځواک ته پیاوړتیا او وده ورکړي او په مارکیټ کې د ظرفیت جوړونې برنامو ته د (ترننګ) او نورو خدمتونو لپاره لاره برابره کړي.\n\n\n\n\nJob Summary\n\nد سیستم اډمینسټریټر (System Administrator) د ATRA د RTDMS ټیم یو مهم غړی دی چې د سیسټمونو د پراختیا (Development) او ساتنې (Maintenance) ملاتړ به کوي.\n\nد سیستم اډمینسټریټر په توګه، نوماند به د سیسټمونو او معلوماتي ټکنالوجۍ ریاست د ریل ټایم د برخې له نورو غړو سره له نږدې کار کوي، تر څو د اړوندو سیسټمونو اعظمي او غوره فعالیت (Optimum Performance) یقیني شي.\n\n\n\n\nDuties & Responsibilities\n\nلایحه وظایف\n\nدندې او مسؤلیتونه:\n\nد بېلابېلو پروژو او عملي اړتیاوو لپاره د سیستم اډمینسټریشن (Systems Administration) اړوند حل‌لارې طرحه او انجینري کول.\n\n• د معیارونو او د پروژې/عملي اړتیاوو سره سم د نوو سرورونو (Servers) نصب کول، د موجوده سرورونو بیا جوړول، او د هارډویر، (Peripherals)، خدماتو ، تنظیماتو ، (Directories) او (Storage) کانفیګور کول.\n\n• د نصب او کانفیګورېشن کړنلارې (Installation and Configuration Procedures) جوړول او ساتل.\n\n• په عملیاتي او پراختیايي سیسټمونو کې د امنیتي پیچونو (Security Patches) نصب او ساتنه، چې پکې Red Hat Linux، Windows 2012/2019 او VMWare شامل دي خو محدود نه دي.\n\n• د سیسټم ورځنی څار (Daily System Monitoring) ترسره کول، د ټولو هارډویر، (Server Resources)، سیسټمونو او مهمو بهیرونو  (Integrity & Availability) تصدیقول، د سیسټم او اپلېکېشن لاګونه (Logs) کتل، او د مهال‌وېش شوو کارونو لکه  (Backups) د بشپړېدو تایید کول.\n\n• د امنیت منظم څار ترسره کول تر څو هر ډول احتمالي نفوذ (Intrusions) تشخیص شي.\n\n• د ورځنیو بیک‌اپ عملیاتو ترسره کول، دا ډاډ ترلاسه کول چې ټول اړین فایل سیسټمونه او د سیسټم ډاټا په بریالیتوب سره مناسب میډیا ته بیک‌اپ شوي، د بیا رغونې ټېپونه یا ډیسکونه (Recovery Tapes/Disks) جوړ شوي، او میډیا د اړتیا په صورت کې ریسایکل او له سایټ څخه بهر (Off-site) لېږل شوې وي.\n\n• د اړتیا او غوښتنې له مخې د کاروونکو حسابونه (User Accounts) جوړول، بدلول او حذف کول.\n\n• د هارډویر یا سافټویر د خرابیو ترمیم او بیا رغونه (Repair & Recovery) ترسره کول، او له اغېزمنو اړخونو سره همغږي او اړیکه نیول.\n\n• په منظم ډول د عامل سیسټم (OS) پیچونه او اپګرېډونه تطبیق کول، او اداري وسایل او یوټیلیټي‌ګانې (Administrative Tools & Utilities) اپګرېډ کول؛ د اړتیا په صورت کې نوي خدمات (Services) کانفیګور او زیاتول.\n\n• د پروژې یا عملي اړتیاوو له مخې د زیربنایي اپلېکېشنونو یا د شتمنیو د مدیریت (Asset Management) اپلېکېشنونو ملاتړ کوونکی سیسټم سافټویر اپګرېډ او کانفیګور کول.\n\n• د اړتیا پر مهال د فعالیت دوامداره ښه‌والی (Performance Tuning)، د هارډویر اپګرېډونه او د سرچینو اصلاح (Resource Optimization) ترسره کول؛ د CPU، حافظې (Memory) او ډیسک برخې (Disk Partitions) کانفیګور کول.\n\n• د ډیټابېس د مدیریت سیسټم (DBMS) نوې نسخې نصب او ټېسټ کول.\n\n• د Linux له لارې د میاشتني مهال‌وېش له مخې د پیچ مدیریت (Patch Management) ترسره کول.\n\n• هره بله دنده چې د (Line Manager) له‌خوا ورسپارل کېږي.\n\n\n\n\nJob Requirements\n\nمواصفات\n\nتحصیلات، تجارب و مهارت های لازم:\n\nدرجه تحصیل :\n\nحداقل لیسانس د  کمپیوټر ساینس په برخه کې د سافټویر انجنیري څخه فارغ وي .  \n\nتجارب لازمه:\n\n﻿ ۴ کلنه د دندې سره مرتبطه  ثابته او عملي کاري تجربه ولري .\nد Red Hat تصدیق شوی سیسټم اډمینسټریټر (Red Hat Certified System Administrator – RHCSA) لرل غوره ګڼل کېږي.\n\n\n\n\nمهارتونه، وړتیاوې او ځانګړتیاوې (Skills, Qualifications, and Characteristics):\n\nله VMware vCenter 7 یا د هغې له وروستۍ نسخې او/یا Operations Manager سره کاري تجربه.\n\n• د Red Hat Enterprise Linux (RHEL) 7، Kerberos، DELL EMC Unity، SolarWinds او د سکرېپټنګ ژبو (Scripting Languages) په برخه کې پیاوړې کاري پوهه.\n\n• د Linux سرور د ستونزو د تشخیص او حل قوي مهارتونه (Linux Server Troubleshooting).\n\n• له JavaScript او PowerShell سکرېپټنګ ژبو سره عملي تجربه (Hands-on Experience).\n\n• د ځنډ (Latency) او د فعالیت (Performance) د ستونزو د ښه‌والي لپاره د حل‌لارو د ډیزاین تجربه.\n\n• د Multiprocessing، Threading، Concurrency، Distributed Systems، Load Balancing او High Availability په برخه کې کاري پوهه.\n\n• د خپلمنځي اړیکو (Interpersonal) قوي مهارتونه، چې پکې اغېزمنه همکاري، ځان‌پوهاوی (Self-awareness) او غوره لیکلي او شفاهي اړیکې شاملې دي.\n\n• د تحلیلي او منظمې طریقې له لارې د ټولو پېښو (Incidents) د اغېزمن حل وړتیا.\n\n• د نوو محصولاتو او ټکنالوژیو د زده کړې وړتیا.\n\n• د معیاري کاري کړنلارو (Standard Operating Procedures – SOPs) او د پروژې د اسنادو (Project Documentation) د جوړولو وړتیا.\n\n• د بېلابېلو سوداګریزو اړتیاوو او تخنیکي ستونزو لپاره د حل‌لارو د څېړنې وړتیا، چې پکې د بدیلو لارو ارزونه او د سپارښتنو وړاندې کول شامل دي.\n\n• عالي لیکلي او شفاهي د اړیکو مهارتونه ولري.\n\nد کاندید سن باید د ۱۸ کالو څخه لوړ وي\n\nد هویت تذکره ولري او په هیواد کې میشت وي\n\nد همکارانو سره دوستانه اړیکي ولري\n\nپه تخنیکي برخه کې پورته معلومات ولري .\n\nجرمي سابقه ونلري\n\nپه پښتو ، دري او انګلیسي ژبو پوره تسلط ولري  \n\n\n\n\nSubmission Guideline\n\n \n\nد محترمو کاندیدانو څخه هیله کیږي چې تر څو د اړونده بست لپاره څانګړې فورمه ډکه او لاندې بريښنالیک ته يې راواستوي او همدارګه کولای شي چې یاده فورمه د کارکوونکو د چارو  د استخدام د آمریت څخه ترلاسه کړي .\n\nپته : د مخابراتو او معلوماتي ټکنالوجۍ وزارت ۱۸ پوړیزه ودانۍ دیارلسم منزل د استخدام آمریت\n\nبریښنالیک jobs@atra.gov.af\n\nد اړیکي شمیره : 0202100763\n\nنوټ : د ټولو محترمو کاندیدانو څخه هیله کیږي چې که چیرې ستاسو تحصیلات او یا هم کاري تجربه د پورته بست سره سمون نه خوري لطفا خپل غوښتنلیک مه را استوئ .\n\nپه درنښت\n\nSubmission Guidelines:\n\nAll applications  Forms ( CV & Cover Letters are not considered )should be submitted via email to: jobs@atra.gov.af\n\nPlease, clearly indicate on the subject line the title of the position. Applications received after the\n\nClosing date will not be considered.\n\n\n\n\nFunctional Area\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@atra.gov.af\n\nAttachments\n\nApplication_Form ATRA.doc\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 14, 2026",
-        "Closing Date": "Jan 29, 2026",
-        "Reference": "008",
+        "Post Date": "Jan 29, 2026",
+        "Closing Date": "Feb 12, 2026",
+        "Reference": "PT#000265",
         "Number of Vacancies": "1",
         "Salary Range": "As per company salary scale",
         "Years of Experience": "4 years",
@@ -176,84 +33,15 @@
         "Contract Duration": "1 year",
         "Contract Extensible": "Yes",
         "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science",
+        "Gender": "Any",
+        "Functional Area": "Computer Science, Software engineering",
         "Countries": "Afghanistan",
-        "Provinces": "Kabul"
+        "Provinces": "Herat"
       },
-      "scraped_at": "2026-01-18T20:14:48Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/d-spys-mnjmn-aamryt",
-      "source": "jobs.af",
-      "title": "د سپیس منجمنټ آمریت",
-      "company": "ATRA",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 29, 2026",
-      "closing_date": "2026-01-29",
-      "apply_url": "mailto:jobs@atra.gov.af",
-      "apply_emails": [
-        "jobs@atra.gov.af"
-      ],
-      "apply_phones": [
-        "0202100763"
-      ],
-      "description": "About ATRA\n\nد افغانستان د مخابراتي خدمتونو د تنظیم اداره (اټرا) په ۲۰۰۶ میلادي کال په هېواد کې د مخابراتي سکتور د تنظیم او پرمختیا لپاره رامنځ ته شوه. دا اداره هڅه کوي چې د مخابراتو او انټرنټي خدمتونو زیربناوو د ودې او پرمختیا په برخه کې د خصوصي سکتور لپاره د پانګونې پیاوړی او مناسب چاپیریال رامنځته کړي. په هېواد کې د ښه مقرراتي او تنظیماتي چاپیریال رامنځته کولو او تنفیذ له لارې له تبعیض پرته په شفاف ډول د ځواکمن خصوصي سکتور لخوا حمایه شوي مخابراتي سکتور او اړوندو خدمتونو رامینځته کول، د مقرراتو پلي کول، خدمتونو ته سراسری لاسرسی، د مارکیټ تنظیمول، په مخابراتي مارکيټ کې د سیالۍ چټکوالی او نظارت د اټرا ادارې موخې دي. اټرا اداره له اړوندو اړخونو خصوصي سکتور، دولتي ادارو او د مخابراتي خدمتونو مشترکینو سره یو ځای کار کوي، څو د هېواد په مخابراتي او انټرنیټي مارکیټ کې سالمه سیالي پرمختګ وکړي.\n\nد مخابراتو سکتور او صنعت له 2002 میلادي کال را پدېخوا د هېواد 34 ولایتونو او یو شمېر زیاتو ولسوالیو ته د انټرنیټي پوښښ په پراختیا سره ګړندۍ وده کړېده . اټرا ادارې د هېواد مخابراتي بازار د ښه پرمختګ او تنظیم لپاره تل هڅه کړې، چې د نړیوالو کلیدي مخابراتي شریکانو سره ملګرتیا او اړیکې لا پیاوړې کړي ترڅو له نړیوالو تجربو څخه په استفادې ګټورې لارې چارې په ګوته او د هېواد مارکیټ ته وده ورکړي. ظرفیت جوړونه د مخابراتي صنعت لپاره یو بل مهم ټکی دی. دې ته په کتو اټرا ادارې د اړونده سکتور او مخابراتي او انټرنټي شرکتونو په ګډون د ظرفیت لوړولو ته بودجه ځانګړې او د کار ایکوسېستم رامنځته کړی دی، چې دا به په مخابراتي سکتور کې د پانګونې جلب او پېرېدونکو ته د پرمختللو مخابراتي خدمتونو وړاندې کولو لامل شي. همدارنګه، اټرا اداره له نورو اړوندو خواو په ځانګړې توګه څیړنیزو او اکاډمیکو مرکزونو سره په ګډه کار کوي، ترڅو په هېواد کې د مخابراتو کاري ځواک ته پیاوړتیا او وده ورکړي او په مارکیټ کې د ظرفیت جوړونې برنامو ته د (ترننګ) او نورو خدمتونو لپاره لاره برابره کړي.\n\n\n\n\nJob Summary\n\nد سپوږمکۍ مدار او فریکونسو د همغږۍ (Satellite Orbit- Frequency Coordination) آمر د دې مسؤلیت لري چې د ملي مقرراتو  او نړیوالو مقرراتو (ITU Radio Regulations) سره سم د هیواد د د سټلایټ د مدار د موقعیت  او د سټلایټ د  فریکونسيود تخصیص، د اخلال (Interference) څخه د فریکونسیو د ساتنې، پلان جوړونې او د سټلایټونو د مدارونو او فریکونسیو د همغږۍ (Orbit- Frequency Coordination) دندې ترسره کړي.\n\n\n\n\nDuties & Responsibilities\n\nوظیفوي مسئولیتونه :\n\nد نړیوالو مقرراتو (ITU Radio Regulations) سره سم د سټلایټي شبکو د فایلینګ (اسنادو)\n(Advance Publication, Coordination and Notifications ) چمتو کول او د مخابراتو نړیوالې اتحاديې ته يې استول.\nد سټلایټونو په برخه کې د همغږۍ په موخه د تخنیکي مطابقت لپاره د\ntechnical compatibility (interference analysis, link budget calculations, coverage studies)\nمطالعاتو او محاسباتو سره کول.\nد نورو هیوادونو/ اپریټرانو سره د (orbit – Frequency Coordination) په دوه اړخیزو او درې اړخیزو ناستو کې ګډون کول.\nد مضره اخلال (Interference) څخه د افغانستان د سټلایټ د مدار د موقعیت ساتنه.\nد BRIFIC محتویات مطالعه کول او د مخابراتو نړیوالې اتحادیې ته د افغانستان د ځمکنیو مخابراتو (Terrestrial Telecommunication Services) او فضايي خدمتونو (Space Telecommunication Services) ته د اخلال (Interference) پیښیدو په صورت کې د مخابراتو نړیوالې اتحادیې ته خبر ورکول او د هغې مخنیوی کول.\nد سټلایټي خدمتونو د همغږۍ په پروسه کې د سیمې او نړۍ له هیوادونو څه د ترلاسه کیدونکو تخنیکي یادښتونو تحلیلول او په خپل وخت سره ځواب ورکول.\nد سټلایټ د فریکونسیو او د سټلایټ مدارونو اړوند د تخینکي مقرراتو په جوړولو کې د ادارې سره همکاري کول.\nد سټلایټي شبکو د همغږۍ (Satellite Networks Coordination)، د فریکونسیو د توزیع( Frequency Assignment) او د جوازلیکونو د توزیع لپاره د ملي طرزالعمل جوړول.\nد (Satellite Orbit - Frequency Coordination) په برخه کې د مخابراتو نړیوالې اتحاديې د مهال ویشونو او نېټو مراعتول.\nد ITU-R مطالعوي ډلو(Study Groups)، نړیوالو راډیوي کنفرانسونو (WRCs) او سیمه ییزو غونډو کې د هېواد استازولي کول.\nپه نړیوالو بحثونو کې د هیواد د تخینکي دریځ د ملاتړ په موخه د تخنیکي (Input) چمتو کول.\nد سپوږمکۍ جواز غوښتنلیکونو تخنیکي او قانوني ارزونه.\nد ځمکنیو فریکونسي څانګو سره همغږي کول ترڅو د ځمکنیو او فضایي خدماتو ترمنځ د مداخلې مخه ونیول شي.\nد اړتیاپر مهال د فریکونسیو د طیف د منجمنټ ریس لخوا د ورسپارل کیدونکو فعالیتونو اجرا کول.\nد سټلایټ آمریت ټيم ته ددې آمریت د دندو د لایحې مطابق د وړتیا لوړونې د لازمو روزنیزو پروګرامونو برابرول.\nد کاري محدودې مطابق د مافوق آمر لخوا د بلې هرې سپارل شوې دندې سرته رسول.\n\n\n\n\nJob Requirements\n\nمواصفات\n\nتحصیلات، تجارب او لازم مهارتونه :\n\n\n\n\nدرجه تحصیل :\n\nپه مخابراتو، بریښنایي انجنیرۍ یا کمپیوټر ساینس کې لږ تر لږه د لیسانس سند ولري.\n\nتجارب لازمه:\n\n﻿ په (Satellite Orbit – Frequency Coordination) په برخه  یا ورته ساحه کې لږ تر لږه (۴)  کاله کاري تجربه ولري.\nد سټلایټ د فریکونسیو او سټلایټ مدارونو د پیچلو موضوعاتو د تحلیل وړتیا ولري.\nد (Satellite Orbit – Frequency Coordination) په برخه کې د ملي او نړیوالو مقرراتو او معیارونو ژوره پوهه ولري.\nقوي تحلیلي او دستونزې د حل کولو وړتیاوې ولري.\nغوره اړیکې او د خلکو سره د ښه  چلند مهارتونه ولري.\nد (Satellite Orbit – Frequency Coordination) اړوندو سافټویرونو څخه د ګټې اخیستنې مهارت ولري.\nپه ګروپي کار کې کافي توانایي ولري .\nد اړوندو کمپیوټري پروګرامونو، په ځانګړې توګه (MS Office) بشپړ پوهه او مهارت ولري.\nد افغانستان تابعیت ولري او په هېواد کې مېشت وي.\nد جرم سابقه ونه لري.\nپه پښتو او دري ژبو ښه خبرې وکړي او د انګلیسي ژبې سره کامله بلدتیا ولري.\nد بیسیم مخابراتو د فریکونسیو د پیژندنې مهارت ولري، او همدارنګه د مجاز او غیر مجاز فریکونسیو تر منځ توپیر وکولی شي.\nپه مدیریت او رهبرۍ  برخه کې کافي وړتیا ولري.\nد مالي او اداري دسپلین مراعتول.\nد مراتبو د سلسلې مراعتولو ته ژمن وي. \n\n\n\n\nSubmission Guideline\n\n \n\nد محترمو کاندیدانو څخه هیله کیږي چې تر څو د اړونده بست لپاره څانګړې فورمه ډکه او لاندې بريښنالیک ته يې راواستوي او همدارګه کولای شي چې یاده فورمه د کارکوونکو د چارو  د استخدام د آمریت څخه ترلاسه کړي .\n\nپته : د مخابراتو او معلوماتي ټکنالوجۍ وزارت ۱۸ پوړیزه ودانۍ دیارلسم منزل د استخدام آمریت\n\nبریښنالیک jobs@atra.gov.af\n\nد اړیکي شمیره : 0202100763\n\nنوټ : د ټولو محترمو کاندیدانو څخه هیله کیږي چې که چیرې ستاسو تحصیلات او یا هم کاري تجربه د پورته بست سره سمون نه خوري لطفا خپل غوښتنلیک مه را استوئ .\n\nپه درنښت\n\nSubmission Guidelines:\n\nAll applications  Forms ( CV & Cover Letters are not considered )should be submitted via email to: jobs@atra.gov.af\n\nPlease, clearly indicate on the subject line the title of the position. Applications received after the\n\nClosing date will not be considered.\n\n\n\n\nFunctional Area\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@atra.gov.af\n\nAttachments\n\nApplication_Form ATRA.doc\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 14, 2026",
-        "Closing Date": "Jan 29, 2026",
-        "Reference": "005",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "4 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-18T20:14:48Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/adhw-mslky-brwd-kastng",
-      "source": "jobs.af",
-      "title": "عضو مسلکی برود کاستنگ",
-      "company": "ATRA",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 29, 2026",
-      "closing_date": "2026-01-29",
-      "apply_url": "mailto:jobs@atra.gov.af",
-      "apply_emails": [
-        "jobs@atra.gov.af"
-      ],
-      "apply_phones": [
-        "0202100763"
-      ],
-      "description": "About ATRA\n\nد افغانستان د مخابراتي خدمتونو د تنظیم اداره (اټرا) په ۲۰۰۶ میلادي کال په هېواد کې د مخابراتي سکتور د تنظیم او پرمختیا لپاره رامنځ ته شوه. دا اداره هڅه کوي چې د مخابراتو او انټرنټي خدمتونو زیربناوو د ودې او پرمختیا په برخه کې د خصوصي سکتور لپاره د پانګونې پیاوړی او مناسب چاپیریال رامنځته کړي. په هېواد کې د ښه مقرراتي او تنظیماتي چاپیریال رامنځته کولو او تنفیذ له لارې له تبعیض پرته په شفاف ډول د ځواکمن خصوصي سکتور لخوا حمایه شوي مخابراتي سکتور او اړوندو خدمتونو رامینځته کول، د مقرراتو پلي کول، خدمتونو ته سراسری لاسرسی، د مارکیټ تنظیمول، په مخابراتي مارکيټ کې د سیالۍ چټکوالی او نظارت د اټرا ادارې موخې دي. اټرا اداره له اړوندو اړخونو خصوصي سکتور، دولتي ادارو او د مخابراتي خدمتونو مشترکینو سره یو ځای کار کوي، څو د هېواد په مخابراتي او انټرنیټي مارکیټ کې سالمه سیالي پرمختګ وکړي.\n\nد مخابراتو سکتور او صنعت له 2002 میلادي کال را پدېخوا د هېواد 34 ولایتونو او یو شمېر زیاتو ولسوالیو ته د انټرنیټي پوښښ په پراختیا سره ګړندۍ وده کړېده . اټرا ادارې د هېواد مخابراتي بازار د ښه پرمختګ او تنظیم لپاره تل هڅه کړې، چې د نړیوالو کلیدي مخابراتي شریکانو سره ملګرتیا او اړیکې لا پیاوړې کړي ترڅو له نړیوالو تجربو څخه په استفادې ګټورې لارې چارې په ګوته او د هېواد مارکیټ ته وده ورکړي. ظرفیت جوړونه د مخابراتي صنعت لپاره یو بل مهم ټکی دی. دې ته په کتو اټرا ادارې د اړونده سکتور او مخابراتي او انټرنټي شرکتونو په ګډون د ظرفیت لوړولو ته بودجه ځانګړې او د کار ایکوسېستم رامنځته کړی دی، چې دا به په مخابراتي سکتور کې د پانګونې جلب او پېرېدونکو ته د پرمختللو مخابراتي خدمتونو وړاندې کولو لامل شي. همدارنګه، اټرا اداره له نورو اړوندو خواو په ځانګړې توګه څیړنیزو او اکاډمیکو مرکزونو سره په ګډه کار کوي، ترڅو په هېواد کې د مخابراتو کاري ځواک ته پیاوړتیا او وده ورکړي او په مارکیټ کې د ظرفیت جوړونې برنامو ته د (ترننګ) او نورو خدمتونو لپاره لاره برابره کړي.\n\n\n\n\nJob Summary\n\nاجرای پلان های اجرایوی مدیریت مربوطه و نظارت و کنترول از قضایای مربوط به برودکاستنګ\n\nDuties & Responsibilities\n\n\n\n\nلایحه وظایف\n\nمسؤلیت های وظیفوی:\n\nانجام عملیه های نظارتی به منظور بررسی و نظارت از عرضه کنندگان خدمات نشراتی و یا برودکاستنگ در سطح کشور مطابق موارد ذیل\nجواز های صادره از اداره اترا\nفریکوینسیهای مورد استفاده مطابق جواز صادر شده\nشناسایی تداخلات فریکوینسی و رفع آن\nشناسایی منابع تداخل فریکونسی\nبررسی و نظارت از فریکوینسی استیشن های نشراتی (برودکاستنگ) از قبیل (AM, FM, DTV,ATV, IPTV) در مرکز وولایات\nپاسخگویی در مورد چگونگي ایجاد مشکلات مربوط به تداخلات فریکوینسی ستیشن های برودکاستنگ به همکاری تیم تخنیکی آمریت مربوطه\nاجرای پلان نظارتی از نشرات رادیو و تلویزون های دارای مجوز رسمی از اداره اترا در سراسر کشور.\nشناسایی و تثبیت رادیو و تلویزون های که به شکل غیر مجاز فعالیت میکنند.\nاجرای پلان عملیاتی به منظور بررسی و نظارت از طرح و دیزاین شبکه های مخابراتی، موقعیت ستیشن ها، نحوه کارکرد و عمومیات شبکه های مخابراتی بر اساس معلوماتی که شرکتهای مخابراتی در اختیار اداره قرار میدهند.\nنظارت از نشرات و فریکونسی های تحت استفاده DTV.\nمطالعه و تطبیق شرایط جواز DTV.\nنظارت از فعالیت های مرتبط به IPTV.\nارایه گزارش های دقیق ، منظم و آنی به آمریت مانیتورینگ طیف.\nاجرای سایر وظایف که از طرف مسئول مربوطه برایش سپرده میشود .\n\nJob Requirements\n\nمواصفات\n\nتحصیلات، تجارب و مهارت های لازم:\n\nدرجه تحصیل :\n\nسند تحصیلی حد اقل لیسانس در یکی از رشته های مخابرات ، الکترونکس و یا برق  \n\nتجارب لازمه:\n\nبا داشتن حد اقل ۲ سال تجربه کاری دربخش مربوطه،\n\n \n\nمهارت های دیگر ( کورس های کوتاه مدت، آموزش های داخل خدمت وغیره(\n\nدارای معلومات و تجارب در بخش مخابرات و خدمات انترنیتی\n توانایی کافی در کار گروپی\nرعایت دسپلین مالی و اداری\nرعایت سلسله مراتب\nبرخورد دوستانه با همکاران\nارتقاء ظرفیت خودي\nداشتن تصور روشن از وضع شبکه ها\nمتهعد به دین، وطن و وظیفه\nبا تکنالوژی های مخابراتی 2G, 3G, 4G بلدیت تخنیکی داشته باشد.\n دارای سوابق جرمی نباشد\n تابعیت افغانستان را داشته و در کشور مقیم باشد\n به لسان دری و پشتو به خوبی تکلم نموده و به لسان انگلیسی آشنایی داشته باشد.\n\n\n\n\nSubmission Guideline\n\n \n\nد محترمو کاندیدانو څخه هیله کیږي چې تر څو د اړونده بست لپاره څانګړې فورمه ډکه او لاندې بريښنالیک ته يې راواستوي او همدارګه کولای شي چې یاده فورمه د کارکوونکو د چارو  د استخدام د آمریت څخه ترلاسه کړي .\n\nپته : د مخابراتو او معلوماتي ټکنالوجۍ وزارت ۱۸ پوړیزه ودانۍ دیارلسم منزل د استخدام آمریت\n\nبریښنالیک jobs@atra.gov.af\n\nد اړیکي شمیره : 0202100763\n\nنوټ : د ټولو محترمو کاندیدانو څخه هیله کیږي چې که چیرې ستاسو تحصیلات او یا هم کاري تجربه د پورته بست سره سمون نه خوري لطفا خپل غوښتنلیک مه را استوئ .\n\nپه درنښت\n\nSubmission Guidelines:\n\nAll applications  Forms ( CV & Cover Letters are not considered )should be submitted via email to: jobs@atra.gov.af\n\nPlease, clearly indicate on the subject line the title of the position. Applications received after the\n\nClosing date will not be considered.\n\n\n\n\nFunctional Area\nTelecommunication\nElectrical Engineering, telecommunication\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@atra.gov.af\n\nAttachments\n\nApplication_Form ATRA.doc\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 14, 2026",
-        "Closing Date": "Jan 29, 2026",
-        "Reference": "004",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "2 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Telecommunication, Electrical Engineering, telecommunication",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-18T20:14:48Z"
+      "scraped_at": "2026-01-30T05:29:20Z"
     }
   ],
+  "expiring_today": [],
   "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/software-developer-intern-full-stack-mobile",
