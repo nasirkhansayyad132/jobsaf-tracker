@@ -1,48 +1,47 @@
 {
-  "generated_at": "2026-01-30T05:30:31.061Z",
-  "today": "2026-01-30",
-  "total_jobs": 56,
+  "generated_at": "2026-01-31T05:13:18.290Z",
+  "today": "2026-01-31",
+  "total_jobs": 57,
   "new_count": 1,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 2,
+  "expiring_today_count": 2,
+  "expiring_soon_count": 1,
   "tech_banking_count": 9,
   "new_jobs": [
     {
-      "url": "https://jobs.af/jobs/senior-frontend-developer-herat",
+      "url": "https://jobs.af/jobs/it-system-manager",
       "source": "jobs.af",
-      "title": "Senior Frontend Developer (Herat)",
-      "company": "PARSA Technologies",
-      "location": "Herat, Afghanistan",
-      "closing_date_raw": "Feb 12, 2026",
-      "closing_date": "2026-02-12",
-      "apply_url": "mailto:hr@parsa.technology",
+      "title": "IT/ System Manager",
+      "company": "Park View Hotel Service",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Mar 31, 2026",
+      "closing_date": "2026-03-31",
+      "apply_url": "mailto:Hr@parkviewhotel.af",
       "apply_emails": [
-        "hr@parsa.technology"
+        "Hr@parkviewhotel.af"
       ],
       "apply_phones": [],
-      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management, and dedication made it the partner of choice for many of the Afghan’s most trusted brands. PARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value-added services, HR MIS, Finance Management System, SMS Platform, and e-commerce. We are glad to demonstrate through our work that we have the capabilities, people, processes, technology, and the desire to be the strategic technology partner of choice for many Afghan entities, including government departments, the private sector, and non-government organizations (NGOs).\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity, and courtesy towards our clients, employees, vendors, and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\nSenior Frontend Developer will work under the overall guidance of the Chief Executive Officer and under the The direct supervision of the Software Development Team Head. \n\n\n\n\nDuties & Responsibilities\n\nHe/she will work in close collaboration with the Software Development Department and will fulfill the following duties and responsibilities:\n\n·        Designing and Development of web and mobile applications.\n\n·        Conducting feasibility studies for software projects.\n\n·        Completing tasks such as coding, testing, and debugging.\n\n·        Writing advanced programming code.\n\n·        Managing project timelines and tasks.\n\n·        Work in close partnership with operations, business, and management departments\n\n\n\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\nFunctional Competencies\n\n \n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\n·        Ability to coach, mentor, and develop people skills.\n\n·        Ability to focus on results\n\n·        Consistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nBachelor's in Computer Science, Software Engineering, or equivalent subject\nAt least 4+ years of experience in the above-mentioned field.\n\n       \n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar jobs, as well as the contact details (email and telephone number) of the Candidate to hr@parsa.technology \n\nFunctional Area\nComputer Science\nSoftware engineering\nCountries\nAfghanistan\nProvinces\nHerat\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
+      "description": "About Park View Hotel Service\n\nPark View Hotel Services is a professionally managed hospitality organization committed to delivering high-quality accommodation and exceptional guest services. The hotel operates with a strong focus on service excellence, comfort, and operational efficiency. Through well-maintained facilities, qualified staff, and customer-oriented standards, Park View Hotel Services aims to provide a refined and reliable experience for both business and leisure guests.\n\nJob Summary\n\nThe IT / System Manager is responsible for managing, maintaining, and securing all IT systems and technological infrastructure of the hotel. This role ensures the smooth operation of hotel management systems, networks, hardware, and software to support daily operations and enhance guest experience.\n\n\n\n\nDuties & Responsibilities\n\nIT Systems & Infrastructure\n\nManage and maintain hotel IT systems including PMS (Property Management System), POS, and reservation systems\nEnsure smooth operation of computer systems, servers, networks, and internet connectivity\nInstall, configure, and maintain hardware and software\n\n \n\nNetwork & Security\n\nMonitor network performance and ensure data security\nImplement IT security policies, backups, and disaster recovery plans\nProtect hotel systems from cyber threats and unauthorized access\n\nSupport & Troubleshooting\n\nProvide technical support to hotel staff across departments\nTroubleshoot system errors, hardware failures, and software issues\nCoordinate with external IT vendors and service providers\n\n \n\nReporting & Planning\n\nMaintain IT documentation, licenses, and system records\nPrepare IT reports and system performance updates for management\nRecommend system upgrades and technology improvements\n\nJob Requirements\n\nQualifications & Experience\n\nMinimum 3–5 years of experience in IT management or systems administration\nExperience in hotel or hospitality systems is a strong advantage\nKnowledge of PMS software, networking, and database management\n\nSkills & Competencies\n\nStrong problem-solving and troubleshooting skills\nKnowledge of network security, backups, and system administration\nAbility to work independently and handle multiple tasks\nStrong communication and coordination skills\n\n \n\nLanguage Requirements\n\nFluency in Dari or Pashto\nGood command of English (spoken and written)\n\nEducation:\n\nBachelor’s degree in Information Technology, Computer Science, or a related field\n\nSubmission Guideline\n\nInterested candidates are requested to submit their updated CV along with a cover letter. Only shortlisted candidates will be contacted for further steps. Incomplete applications will not be considered.\n\n \n\nSubmission Email:\n\nHr@parkviewhotel.af\n\n\n\n\nFunctional Area\nTechnology\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nHr@parkviewhotel.af\n\nApply Now",
       "details": {
-        "Post Date": "Jan 29, 2026",
-        "Closing Date": "Feb 12, 2026",
-        "Reference": "PT#000265",
+        "Post Date": "Jan 31, 2026",
+        "Closing Date": "Mar 31, 2026",
+        "Reference": "PVHS-ISM-01",
         "Number of Vacancies": "1",
         "Salary Range": "As per company salary scale",
-        "Years of Experience": "4 years",
+        "Years of Experience": "3 - 5 years",
         "Probation Period": "3 month",
-        "Contract Type": "Permanent",
+        "Contract Type": "Fixed-term",
         "Contract Duration": "1 year",
         "Contract Extensible": "Yes",
         "Minimum Education": "Bachelor's Degree",
-        "Gender": "Any",
-        "Functional Area": "Computer Science, Software engineering",
+        "Gender": "Male",
+        "Functional Area": "Technology, Computer Science",
         "Countries": "Afghanistan",
-        "Provinces": "Herat"
+        "Provinces": "Kabul"
       },
-      "scraped_at": "2026-01-30T05:29:20Z"
+      "scraped_at": "2026-01-31T05:12:59Z"
     }
   ],
-  "expiring_today": [],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "url": "https://jobs.af/jobs/software-developer-intern-full-stack-mobile",
       "source": "jobs.af",
@@ -112,6 +111,41 @@
         "Provinces": "Kabul, Nangarhar, Balkh, Herat"
       },
       "scraped_at": "2026-01-18T20:14:48Z"
+    }
+  ],
+  "expiring_soon": [
+    {
+      "url": "https://jobs.af/jobs/software-development-assistant-react-developer",
+      "source": "jobs.af",
+      "title": "Software Development Assistant (React Developer)",
+      "company": "PARSA Technologies",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 03, 2026",
+      "closing_date": "2026-02-03",
+      "apply_url": "mailto:hr@parsa.technology",
+      "apply_emails": [
+        "hr@parsa.technology"
+      ],
+      "apply_phones": [],
+      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management, and dedication made it the partner of choice for many of the Afghan’s most trusted brands. PARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value-added services, HR MIS, Finance Management System, SMS Platform, and e-commerce. We are glad to demonstrate through our work that we have the capabilities, people, processes, technology, and the desire to be the strategic technology partner of choice for many Afghan entities, including government departments, the private sector, and non-government organizations (NGOs).\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity, and courtesy towards our clients, employees, vendors, and society at large. We are committed to our customers & partners and have a passion for technology.\n\nJob Summary\n\nThe Software Development Assistant will work under the overall guidance of the Chief Executive Officer and under the direct supervision of the Software Development Team Head.\n\nDuties & Responsibilities\n\nHe/she will work in close collaboration with the Software Development Department and will fulfill the following duties and responsibilities:\n\nDesigning and Development of web and mobile applications.\nConducting feasibility studies for software projects.\nCompleting tasks such as coding, testing, and debugging.\nWriting advanced programming code.\nManaging project timelines and tasks.\nWork in close partnership with operation, business, and management departments\n\nV. Competencies and Critical Success Factors\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities \nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude; Demonstrates openness to change and ability to manage complexity.\nAbility to handle daily tasks mainly in the field.\nAbility to establish good working relations with a range of stakeholders.\nAbility to coach, mentor, and develop people skills.\nAbility to focus on results\nConsistently approaches work with energy in a positive and constructive attitude.\n\n\n\n\nJob Requirements\n\nBachelor's in Computer Science, Software Engineering, or equivalent subject\nAt least 3+ years of experience in the above-mentioned field\n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar job, as well as the contact details (email and telephone number) of the Candidate to: hr@parsa.technology\n\nNote: applicants are instructed to write the position title in the subject line of their email when submitting their application.\n\nFunctional Area\nComputer Science\nSoftware engineering\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 20, 2026",
+        "Closing Date": "Feb 03, 2026",
+        "Reference": "PT#000265",
+        "Number of Vacancies": "1",
+        "Salary Range": "Salary is negotiable",
+        "Years of Experience": "3 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "1 year",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Computer Science, Software engineering",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-22T06:45:06Z"
     }
   ],
   "tech_banking_jobs": [

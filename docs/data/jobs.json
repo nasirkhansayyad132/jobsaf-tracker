@@ -1,5 +1,38 @@
 [
   {
+    "url": "https://jobs.af/jobs/it-system-manager",
+    "source": "jobs.af",
+    "title": "IT/ System Manager",
+    "company": "Park View Hotel Service",
+    "location": "Kabul, Afghanistan",
+    "closing_date_raw": "Mar 31, 2026",
+    "closing_date": "2026-03-31",
+    "apply_url": "mailto:Hr@parkviewhotel.af",
+    "apply_emails": [
+      "Hr@parkviewhotel.af"
+    ],
+    "apply_phones": [],
+    "description": "About Park View Hotel Service\n\nPark View Hotel Services is a professionally managed hospitality organization committed to delivering high-quality accommodation and exceptional guest services. The hotel operates with a strong focus on service excellence, comfort, and operational efficiency. Through well-maintained facilities, qualified staff, and customer-oriented standards, Park View Hotel Services aims to provide a refined and reliable experience for both business and leisure guests.\n\nJob Summary\n\nThe IT / System Manager is responsible for managing, maintaining, and securing all IT systems and technological infrastructure of the hotel. This role ensures the smooth operation of hotel management systems, networks, hardware, and software to support daily operations and enhance guest experience.\n\n\n\n\nDuties & Responsibilities\n\nIT Systems & Infrastructure\n\nManage and maintain hotel IT systems including PMS (Property Management System), POS, and reservation systems\nEnsure smooth operation of computer systems, servers, networks, and internet connectivity\nInstall, configure, and maintain hardware and software\n\n \n\nNetwork & Security\n\nMonitor network performance and ensure data security\nImplement IT security policies, backups, and disaster recovery plans\nProtect hotel systems from cyber threats and unauthorized access\n\nSupport & Troubleshooting\n\nProvide technical support to hotel staff across departments\nTroubleshoot system errors, hardware failures, and software issues\nCoordinate with external IT vendors and service providers\n\n \n\nReporting & Planning\n\nMaintain IT documentation, licenses, and system records\nPrepare IT reports and system performance updates for management\nRecommend system upgrades and technology improvements\n\nJob Requirements\n\nQualifications & Experience\n\nMinimum 3–5 years of experience in IT management or systems administration\nExperience in hotel or hospitality systems is a strong advantage\nKnowledge of PMS software, networking, and database management\n\nSkills & Competencies\n\nStrong problem-solving and troubleshooting skills\nKnowledge of network security, backups, and system administration\nAbility to work independently and handle multiple tasks\nStrong communication and coordination skills\n\n \n\nLanguage Requirements\n\nFluency in Dari or Pashto\nGood command of English (spoken and written)\n\nEducation:\n\nBachelor’s degree in Information Technology, Computer Science, or a related field\n\nSubmission Guideline\n\nInterested candidates are requested to submit their updated CV along with a cover letter. Only shortlisted candidates will be contacted for further steps. Incomplete applications will not be considered.\n\n \n\nSubmission Email:\n\nHr@parkviewhotel.af\n\n\n\n\nFunctional Area\nTechnology\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nHr@parkviewhotel.af\n\nApply Now",
+    "details": {
+      "Post Date": "Jan 31, 2026",
+      "Closing Date": "Mar 31, 2026",
+      "Reference": "PVHS-ISM-01",
+      "Number of Vacancies": "1",
+      "Salary Range": "As per company salary scale",
+      "Years of Experience": "3 - 5 years",
+      "Probation Period": "3 month",
+      "Contract Type": "Fixed-term",
+      "Contract Duration": "1 year",
+      "Contract Extensible": "Yes",
+      "Minimum Education": "Bachelor's Degree",
+      "Gender": "Male",
+      "Functional Area": "Technology, Computer Science",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul"
+    },
+    "scraped_at": "2026-01-31T05:12:59Z"
+  },
+  {
     "url": "https://jobs.af/jobs/senior-frontend-developer-herat",
     "source": "jobs.af",
     "title": "Senior Frontend Developer (Herat)",
