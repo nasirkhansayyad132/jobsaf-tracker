@@ -1,118 +1,80 @@
 {
-  "generated_at": "2026-01-31T05:13:18.290Z",
-  "today": "2026-01-31",
-  "total_jobs": 57,
-  "new_count": 1,
-  "expiring_today_count": 2,
-  "expiring_soon_count": 1,
-  "tech_banking_count": 9,
+  "generated_at": "2026-02-01T05:42:51.333Z",
+  "today": "2026-02-01",
+  "total_jobs": 59,
+  "new_count": 2,
+  "expiring_today_count": 0,
+  "expiring_soon_count": 4,
+  "tech_banking_count": 10,
   "new_jobs": [
     {
-      "url": "https://jobs.af/jobs/it-system-manager",
+      "url": "https://jobs.af/jobs/network-engineer-Iq2yeQU-W",
       "source": "jobs.af",
-      "title": "IT/ System Manager",
-      "company": "Park View Hotel Service",
+      "title": "Network Engineer",
+      "company": "Yama Ramin Media production & Technology",
       "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Mar 31, 2026",
-      "closing_date": "2026-03-31",
-      "apply_url": "mailto:Hr@parkviewhotel.af",
+      "closing_date_raw": "Mar 01, 2026",
+      "closing_date": "2026-03-01",
+      "apply_url": "mailto:hr@yrmpt.com",
       "apply_emails": [
-        "Hr@parkviewhotel.af"
+        "hr@yrmpt.com"
       ],
       "apply_phones": [],
-      "description": "About Park View Hotel Service\n\nPark View Hotel Services is a professionally managed hospitality organization committed to delivering high-quality accommodation and exceptional guest services. The hotel operates with a strong focus on service excellence, comfort, and operational efficiency. Through well-maintained facilities, qualified staff, and customer-oriented standards, Park View Hotel Services aims to provide a refined and reliable experience for both business and leisure guests.\n\nJob Summary\n\nThe IT / System Manager is responsible for managing, maintaining, and securing all IT systems and technological infrastructure of the hotel. This role ensures the smooth operation of hotel management systems, networks, hardware, and software to support daily operations and enhance guest experience.\n\n\n\n\nDuties & Responsibilities\n\nIT Systems & Infrastructure\n\nManage and maintain hotel IT systems including PMS (Property Management System), POS, and reservation systems\nEnsure smooth operation of computer systems, servers, networks, and internet connectivity\nInstall, configure, and maintain hardware and software\n\n \n\nNetwork & Security\n\nMonitor network performance and ensure data security\nImplement IT security policies, backups, and disaster recovery plans\nProtect hotel systems from cyber threats and unauthorized access\n\nSupport & Troubleshooting\n\nProvide technical support to hotel staff across departments\nTroubleshoot system errors, hardware failures, and software issues\nCoordinate with external IT vendors and service providers\n\n \n\nReporting & Planning\n\nMaintain IT documentation, licenses, and system records\nPrepare IT reports and system performance updates for management\nRecommend system upgrades and technology improvements\n\nJob Requirements\n\nQualifications & Experience\n\nMinimum 3–5 years of experience in IT management or systems administration\nExperience in hotel or hospitality systems is a strong advantage\nKnowledge of PMS software, networking, and database management\n\nSkills & Competencies\n\nStrong problem-solving and troubleshooting skills\nKnowledge of network security, backups, and system administration\nAbility to work independently and handle multiple tasks\nStrong communication and coordination skills\n\n \n\nLanguage Requirements\n\nFluency in Dari or Pashto\nGood command of English (spoken and written)\n\nEducation:\n\nBachelor’s degree in Information Technology, Computer Science, or a related field\n\nSubmission Guideline\n\nInterested candidates are requested to submit their updated CV along with a cover letter. Only shortlisted candidates will be contacted for further steps. Incomplete applications will not be considered.\n\n \n\nSubmission Email:\n\nHr@parkviewhotel.af\n\n\n\n\nFunctional Area\nTechnology\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nHr@parkviewhotel.af\n\nApply Now",
+      "description": "About Yama Ramin Media production & Technology\n\nYama Ramin Media Production and Technology Company (YRMPT) is a well-established media production and technology company, officially registered with the Ministry of Commerce and Industries of Afghanistan. With a strong presence across the country, YRMPT delivers innovative media and technology solutions in collaboration with a diverse range of national and international organizations.\n\nWe work closely with leading telecom operators, as well as international NGOs, development partners, and humanitarian organizations, and various United Nations agencies. Our projects span media production, digital solutions, communication campaigns, and technology-driven services, contributing to impactful and sustainable initiatives nationwide.\n\nAt YRMPT, we value professionalism, creativity, innovation, and teamwork. We provide a dynamic working environment that encourages learning, skill development, and growth, while offering opportunities to work on high-impact projects with reputable local and international partners.\n\nFor more information about our company, services, and portfolio, please visit www.yrmpt.com.\n\n\n\n\nJob Summary\n\nWe are seeking a skilled Network Engineer to design, implement, manage, and maintain our organization’s network infrastructure. The ideal candidate will ensure reliable, secure, and high-performance network connectivity to support business operations.\n\nDuties & Responsibilities\n\nDesign, install, configure, and maintain LAN, WAN, WLAN, and internet connectivity\nMonitor network performance and troubleshoot issues to ensure maximum uptime\nConfigure and manage routers, switches, firewalls, and load balancers\nImplement network security measures, including VPNs, firewalls, and access controls\nPerform network upgrades, patches, and capacity planning\nDiagnose and resolve hardware, software, and connectivity issues\nMaintain network documentation, diagrams, and standard operating procedures\nCollaborate with IT teams, vendors, and service providers\nEnsure compliance with security policies and best practices\n\n\n\n\nJob Requirements\n\nRequired Qualifications\n\nBachelor’s degree in Computer Science, Information Technology, or a related field\nProven experience 2-3 years as a Network Engineer or similar role\nStrong knowledge of TCP/IP, routing, switching, DNS, DHCP, and VLANs\nHands-on experience with Cisco, MikroTik, or similar networking equipment\nFamiliarity with network monitoring and troubleshooting tools\nUnderstanding of network security principles and protocols\nKnowledge of wireless technologies and network cabling\n\nPreferred Skills & Certifications\n\nCCNA / CCNP or equivalent certifications is a plus\nKnowledge of server side administration and deployment (Windows Server, Linux)\nExperience with cloud networking (AWS, Azure, or Google Cloud)\nStrong analytical and problem-solving skills\n\nSoft Skills\n\nExcellent communication and documentation skills\nAbility to work independently and as part of a team\nStrong time-management and multitasking abilities\nWillingness to work on-call or outside normal business hours if required.\n\n\n\n\nSubmission Guideline\n\nInterested Afghan candidates with the required qualification and experience should submit their applications electronically through hr@yrmpt.com email. To avoid confusions, disagreement and conflicts during recruitment process all applicants are required to clearly mention position title (Network Engineer) and vacancy announcement number (YRMPT-HR-069) in the subject lines of their emails. otherwise, their CV's will not be considered for this post.\n\nplease do not submit any other supporting documentation or educational certificates with your application. If you are short listed you will be asked to submit electronic copies of your educational certificates or in case, you are invited to written test you will be required to present the original certificate.\n\n\n\n\nFunctional Area\nIT - Software\nInformation Technology\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@yrmpt.com\n\nApply Now",
       "details": {
         "Post Date": "Jan 31, 2026",
-        "Closing Date": "Mar 31, 2026",
-        "Reference": "PVHS-ISM-01",
+        "Closing Date": "Mar 01, 2026",
+        "Reference": "YRMPT-HR-069",
         "Number of Vacancies": "1",
         "Salary Range": "As per company salary scale",
-        "Years of Experience": "3 - 5 years",
+        "Years of Experience": "2 - 3 years",
         "Probation Period": "3 month",
-        "Contract Type": "Fixed-term",
+        "Contract Type": "Permanent",
         "Contract Duration": "1 year",
         "Contract Extensible": "Yes",
         "Minimum Education": "Bachelor's Degree",
         "Gender": "Male",
-        "Functional Area": "Technology, Computer Science",
+        "Functional Area": "IT - Software, Information Technology",
         "Countries": "Afghanistan",
         "Provinces": "Kabul"
       },
-      "scraped_at": "2026-01-31T05:12:59Z"
-    }
-  ],
-  "expiring_today": [
-    {
-      "url": "https://jobs.af/jobs/software-developer-intern-full-stack-mobile",
-      "source": "jobs.af",
-      "title": "Software Developer Intern (Full Stack/Mobile)",
-      "company": "Quick Prime",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Jan 31, 2026",
-      "closing_date": "2026-01-31",
-      "apply_url": "mailto:safaryar.technologies@gmail.com",
-      "apply_emails": [
-        "safaryar.technologies@gmail.com",
-        "jawad.safaryar@gmail.com"
-      ],
-      "apply_phones": [],
-      "description": "About Quick Prime\n\nQuick Prime Logistics is a trusted service provider in Afghanistan, delivering reliable logistics solutions for businesses and individuals. Alongside our core logistics services, we offer complete technology solutions—including web development, mobile app development, and custom software—to help organizations modernize operations, improve efficiency, and grow with confidence. From planning and design to development, deployment, and support, Quick Prime combines practical industry experience with modern technology to deliver secure, scalable, and user-friendly systems.\n\nJob Summary\n\nQuick Prime Logistics is hiring Intern Developers to join our team in Afghanistan. This internship is designed for students, recent graduates, and self-learners who want practical, real-project experience with guidance from experienced developers.\n\nNo previous professional experience is required. If you have foundational knowledge and a strong willingness to learn, you are encouraged to apply.\n\n\n\n\nAs an Intern Developer, you will contribute to real software products and internal tools. You may work in one or more areas such as web development, mobile development, or general software engineering, depending on your interests and team needs.\n\nDuties & Responsibilities\n\n\n\nContribute to building and improving software features under mentorship\nWrite clean, readable, and maintainable code\nAssist with debugging, testing, and performance improvements\nParticipate in code reviews and learn development best practices\nWork with the team to understand requirements and deliver tasks on time\nMaintain documentation for features, fixes, and technical notes\nCollaborate with designers, developers, and product stakeholders\n\n\n\nJob Requirements\n\nSkills and Qualifications (Preferred)\nProgramming & Computer Science\nUnderstanding of programming concepts such as OOP, data structures, and algorithms\nStrong problem-solving and logical thinking\nFamiliarity with software development lifecycle and coding standards\nWeb Development (if applying for web/full-stack track)\nHTML, CSS, JavaScript\nFamiliarity with modern front-end development practices (component-based UI, responsive design)\nExperience or exposure to frameworks such as React\nUnderstanding of back-end development concepts (APIs, authentication, server-side logic)\nExposure to Node.js, Django, Laravel, or similar frameworks\nMobile Development (if applying for mobile track)\nUnderstanding of mobile app development workflows\nExposure to Flutter, React Native, or native Android/iOS development\nFamiliarity with app navigation, UI layouts, and integrating APIs\nDatabases & Data Handling\nUnderstanding of relational databases and querying\nExperience or exposure to SQL, MySQL, or PostgreSQL\nFamiliarity with data modeling concepts and validation\nTools & Professional Practices\nVersion control using Git and GitHub\nFamiliarity with issue tracking and task management tools (Jira, Trello, GitHub Issues, etc.)\nAbility to read documentation and learn new technologies independently\nClear communication, teamwork, and time management\nQuality & Delivery\nUnderstanding of testing concepts (unit testing, integration testing)\nAttention to detail and ability to follow requirements\nInterest in writing secure, reliable, and scalable code\n\n\n\n\n\n\n\n\n\n\nNote\n\nIf you don’t meet every preferred skill listed above, we still encourage you to apply. We value motivation, learning ability, and a strong work ethic.\n\n\n\n\n\n\n\n\n\n\nWhat You Will Gain\nHands-on experience with real projects and professional workflows\nMentorship and technical growth through reviews and collaboration\nStronger portfolio and CV through practical contributions\nExperience working in a team environment with modern tools and processes\n\n\n\n\nSubmission Guideline\n\nInterested applicants are requested to send their CV to safaryar.technologies@gmail.com\n\nand include jawad.safaryar@gmail.com\n\nin CC.\n\nPlease mention the position you are applying for in the email subject line.\n\nFunctional Area\nIT - Software\nTechnical\nInformation Management\nsoftware development\nWeb Development\nWeb Application Development\nsoftware development\nDatabase Development\nProgramming\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nsafaryar.technologies@gmail.com\n\nApply Now",
-      "details": {
-        "Post Date": "Dec 31, 2025",
-        "Closing Date": "Jan 31, 2026",
-        "Reference": "QP-ST",
-        "Number of Vacancies": "3",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "Fresh",
-        "Probation Period": "3 month",
-        "Contract Type": "Internship",
-        "Contract Duration": "3 month",
-        "Contract Extensible": "Maybe",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Any",
-        "Functional Area": "IT - Software, Technical, Information Management, software development, Web Development, Web Application Development, software development, Database Development, Programming",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-18T20:14:48Z"
+      "scraped_at": "2026-02-01T05:41:41Z"
     },
     {
-      "url": "https://jobs.af/jobs/karshnas-thbt-w-mdyryt-amlak-dr-wb-sayt-aaryazmyn",
+      "url": "https://jobs.af/jobs/digital-financial-services-dfs-trainer",
       "source": "jobs.af",
-      "title": "کارشناس ثبت و مدیریت املاک در وب‌سایت آریازمین",
-      "company": "Marketplace",
-      "location": "Multi Location",
-      "closing_date_raw": "Jan 31, 2026",
-      "closing_date": "2026-01-31",
-      "apply_url": "mailto:info.aryazamin@gmail.com",
+      "title": "Digital Financial Services (DFS) Trainer",
+      "company": "Behtar LTD (Behtar Group)",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 28, 2026",
+      "closing_date": "2026-02-28",
+      "apply_url": "mailto:kbl.hr@behtar.com.af",
       "apply_emails": [
-        "info.aryazamin@gmail.com"
+        "kbl.hr@behtar.com.af"
       ],
-      "apply_phones": [
-        "61581846081977",
-        "+1 840 265 6048"
-      ],
-      "description": "About Marketplace\n\nدرباره آریازمین (Aryazamin) www. AryaZamin.com\n\nآریازمین، پلی میان مشتری و رهنمای معاملات املاک در داخل افغانستان و افغان‌های تمام جهان است.\n\nآریازمین یک پلتفرم مدرن و آنلاین در افغانستان است که با هدف ساده‌سازی جستجو، خرید، فروش و کرایهٔ املاک راه‌اندازی شده است. این وب‌سایت به کاربران امکان می‌دهد بدون نیاز به جستجوی حضوری در دفاتر معاملات املاک یا رفتن از کوچه به کوچه، ملک مورد نظر خود را تنها با چند کلیک جستجو و انتخاب کنند.\n\n\n\n\nهدف اصلی آریازمین ایجاد یک تحول مثبت در بازار املاک افغانستان است. ما می‌خواهیم با فراهم کردن بستری کاملاً آنلاین، دسترسی سریع، آسان و همراه با معلومات دقیق ملکی را برای همه فراهم کنیم. آریازمین نه‌تنها برای افراد ساکن افغانستان طراحی شده، بلکه خدمات خود را به افغان‌های مقیم خارج نیز ارائه می‌دهد؛ کسانی که قصد بازگشت دارند و می‌خواهند پیش از سفر، ملک دلخواه خود را انتخاب و برنامه‌ریزی کنند. همچنین برای افغان‌هایی که به معاملات تجاری املاک علاقه‌مندند، زمینهٔ دسترسی آسان به معلومات لازم را فراهم می‌سازد.\n\n\n\n\nارزش‌های متمایز آریازمین:\n\n\n\nشفافیت: تنها رهنماهای دارای جواز رسمی اجازهٔ لیست کردن املاک را دارند. همهٔ لیست‌ها پس از بررسی منتشر می‌شوند و کاربران می‌توانند اطلاعات نادرست را گزارش دهند.\n\n\nسهولت: تمام فرآیندها آنلاین است تا کاربران بتوانند به راحتی ملک مورد نظرشان را پیدا یا ثبت کنند.\n\n\nمشتری‌محوری: رضایت کاربران اولویت ماست. پشتیبانی از طریق واتساپ، ایمیل و پیام در فیس‌بوک همیشه در دسترس است.\n\n\nنوآوری: ما همواره فناوری‌های جدید را برای بهبود تجربه کاربران به پلتفرم اضافه می‌کنیم.\n\n\nبدون پرداخت آنلاین: خرید و فروش مستقیماً میان مشتری و رهنمای معاملات انجام می‌شود. آریازمین صرفاً در قسمت اعلان و لیست کردن املاک سهولت ایجاد کرده تا مشتریان بتوانند املاک مورد نظر خود را به‌آسانی جستجو کنند.\n\n\n\nJob Summary\n\nموقعیت کار از خانه در ولایات:\n\n\n\n\nکابل\n\nهرات\n\nننگرهار\n\nمزارشریف\n\n\n\n\nتعداد پست ها: 4\n\n\n\n\nکارشناس ثبت املاک مسئول جستجوی املاک فروشی و کرایی از طریق شبکه‌های اجتماعی در کابل، مزارشریف، ننگرهار و سایر ولایات همجوار می‌باشد. این فرد مکلف است برای رهنماهای معاملات ملکی حساب ایجاد کرده و معلومات کامل آن‌ها را در وب‌سایت آریازمین ثبت نماید.\n\nوظایف مشخص:\n\nجستجوی املاک فروشی و کرایی از صفحات اجتماعی\nساخت حساب برای رهنماها و تکمیل تمام معلومات لازم\nثبت عکس‌ها، قیمت، موقعیت، توضیحات و معلومات تماس هر ملک\nثبت ملک روی نقشه\nتماس واتساپی با رهنماها، معرفی آریازمین و ارسال ویدیوهای آموزشی\nآموزش شیوهٔ مدیریت صفحه و لیست املاک برای رهنما\nرعایت سرعت و دقت در ثبت املاک طبق استاندارد آریازمین\n\nنکته مهم:\n\n✔ برای انجام این وظیفه داشتن کمپیوتر و اینترنت با سرعت مناسب کاملاً ضروری است تا ثبت املاک با سرعت و کیفیت بالا انجام شود.\n\nتعریف رهنمای فعال:\n\n✔ هر رهنمایی که در طول همان ماه حداقل ۲ ملک را در سایت آریازمین ثبت کند، در همان ماه رهنمای فعال حساب می‌شود.\n\n\n\n\nدرین وظیفه خانم ها ترجیح داده میشوند.\n\nاز هر ولایت که هستید میتوانید به این وظیفه درخواست بدهید چون در هرولایت که باشید اگر شرایط آنرا داشته باشید میتوانید استخدام شوید.\n\nما گرچه چند ولایت مشخص را نام گرفتیم ولی کارمند های ما تمام ولایات را پوشش میدهند و میتواند از هرولایت باشد.\n\n\n\n\nنوعیت کار:\n\nکار از خانه انجام می‌شود (با موبایل یا کمپیوتر و انترنت)\n\n\n\n\n\n\n\nسیستم پرداخت شامل معاش ثابت + مزد ثابت ثبت رهنما + کمیشن رهنماهای فعال می‌باشد.\n\n\n\n\n\n\n\nDuties & Responsibilities\n\nشرایط لازم:\n\n\n\n\n* آشنایی با کمپیوتر، شبکه‌های اجتماعی و انترنت\n\n* سرعت خوب در تایپ و وارد کردن معلومات (Data Entry)\n\n* آشنایی ابتدایی با نقشه و آدرس‌های شهر ها\n\n* داشتن تجربه در بازاریابی و فروش یک امتیاز مثبت است چون میتواند این وظیفه به وظیفه فروشات تبدیل شود.\n\nتجربه و تحصیلات عالی جز از ضروریات نمیباشد تا جایکه وظیفه را پیش برده بتوانید.\n\nاگر تعلیمات تان نیز تا صنف ۱۲ نیست میتوانید درخواست بدهید.\n\n\n\n\nبه فارغین کمپیوترساینس و مارکیتینگ ترجیح داده میشود\n\n\n\n\nJob Requirements\n\nجستجوی املاک فروشی یا کرایی بصورت آنلاین در کابل ، مزارشریف هرات و ولایات همجوار\nایجاد حساب برای رهنماها و ثبت مشخصات آن‌ها در وب‌سایت\nثبت املاک همراه با عکس‌ها، قیمت، موقعیت، توضیحات و جزئیات تماس در سیستمَ و نقشه\n\n\n\n\n\n\n\nSubmission Guideline\n\nراهنمای ارسال معلومات برای درخواست کار\n\nشما می‌توانید معلومات کامل خود را، شامل تحصیلات، تجربیات کاری و مهارت‌ها، از هر طریقه‌ای که برایتان آسان‌تر است، برای ما ارسال کنید. در صورت داشتن رزومه یا «سی‌وی»، لطفاً آن را نیز بفرستید تا بررسی دقیق‌تری صورت گیرد.\n\nبرای ارسال معلومات، می‌توانید از یکی از راه‌های تماس زیر استفاده نمایید:\n\n\n\n\n📘 صفحه فیس‌بوک:\n\n\n\n\nhttps://www.facebook.com/profile.php?id=61581846081977&mibextid=ZbWKwL\n\n\n\n\n💼 صفحه لینکدین:\n\n\n\n\n\n\n\nhttps://www.linkedin.com/company/%D8%A2%D8%B1%DB%8C%D8%A7-%D8%B2%D9%85%DB%8C%D9%86/\n\n\n\n\n📧 ایمیل:\n\ninfo.aryazamin@gmail.com\n\n\n\n\n📱 شماره واتساپ:\n\n\n\n\nWhatsApp Number: +1 840 265 6048\n\n\n\n\n🌐 وب‌سایت:\n\nwww.aryazamin.com\n\n\n\n\nتیم آریازمین پس از دریافت معلومات شما با شما در تماس خواهد شد تا مراحل بعدی را هماهنگ نماید.\n\nFunctional Area\nSales/Marketing\nMedia\nComputer Science\nData Entry\nTeaching\nCountries\nAfghanistan\nProvinces\nKabul\nNangarhar\nBalkh\nHerat\nApply Now",
+      "apply_phones": [],
+      "description": "About Behtar LTD (Behtar Group)\n\nBehtar is a group of companies that has been at the forefront of the telecommunications, mobile money, and e-commerce sectors for 20 years. The company was founded with the vision of connecting people and businesses, and facilitating commerce in an increasingly connected world. Through the years, Behtar has grown to become a leading provider of telecommunications, mobile money, and e-commerce services in Afghanistan, with a strong reputation for innovation and customer service. Started as a small telecom service provider and quickly recognized the potential for growth and expansion in the financial services sector. we worked hard to provide innovative and cutting-edge solutions that could improve the lives of our customers. We were the first to offer high-speed internet and mobile banking services in our country, and as a result, we rapidly grew our customer base. With the passage of time, we continued to adapt and evolve to meet the changing needs of our customers, always looking for ways to push the boundaries of what was possible.\n\nToday, the Behtar group of companies is a well-established and respected player in both the telecom and financial services sectors, known for our commitment to excellence and our ability to deliver results. We are excited to continue growing and serving our customers for many years to come.\n\nJob Summary\n\nThe Digital Financial Services (DFS) Trainer will be responsible for designing and delivering structured capacity-building programs across Behtar Group’s operational footprint. The role focuses on strengthening agent, merchant, and customer onboarding; improving field performance; and ensuring strict compliance with EMI, telecom, and partner regulatory frameworks. The DFS Trainer will also lead market activation initiatives through workshops and seminars targeting local traders and SMEs to drive adoption and usage of Behtar Group’s digital financial services. \n\nDuties & Responsibilities\n\nDesign, develop, and implement DFS training curricula covering:\n\nAgent and merchant onboarding processes\nCustomer acquisition and lifecycle management\nFloat management, transaction workflows, and reconciliation\nPerformance management and KPI tracking\n\nDeliver classroom, workshop, and field-based trainings for:\n\nInternal staff\nAgents and sub-agents\nMerchants, shopkeepers, and local traders\n\nConduct capacity-building sessions at Behtar Group facilities and regional locations through structured workshops and seminars.\n\nEnsure all trainings align with:\n\nEMI operational policies\nTelecom and mobile money regulations\nPartner banks, MNOs, and third-party compliance requirements\n\nTrain field teams and customers on:\n\nKYC, AML/CFT, consumer protection, and fraud prevention\nData security, transaction integrity, and operational risk controls\n\nSupport agent and merchant performance optimization through refresher trainings and coaching programs.\n\nCoordinate with Operations, Compliance, Risk, and Business Development teams to ensure consistent messaging and operational adherence.\n\nPrepare training materials, SOPs, user guides, and assessment tools using industry best practices.\n\nMonitor training effectiveness and provide reports with recommendations for continuous improvement.\n\nJob Requirements\n\nBachelor’s degree in Business Administration, Finance, ICT, Telecommunications, or a related field.\n\nMinimum 3–5 years of experience in:\n\nDigital Financial Services\nEMI, mobile money, or telecom value-added services\nTraining, capacity building, or field operations\n\nStrong understanding of:\n\nAgent and merchant network management\nMobile money ecosystems and DFS products\nRegulatory compliance within EMI and telecom environments\n\nProven experience delivering training to diverse audiences, including low-literacy market segments.\n\nExcellent communication, facilitation, and stakeholder engagement skills.\n\nWillingness to travel extensively to regional and provincial locations.\n\n\n\n\nPreferred Competencies\n\nExperience working with banks, MNOs, and international development or financial inclusion programs\nStrong presentation and instructional design skills\nFluency in local languages and English (written and spoken)\n\nSubmission Guideline\n\nInterested national candidates are kindly requested to submit their application (Cover letter & updated CV) no later than 28 Feb 2026 to the below email:\n\nkbl.hr@behtar.com.af\n\nNote that the applicant must be based in Kabul.\n\nFunctional Area\nBusiness Administration\nFinance\nICT\nTelecommunication\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nkbl.hr@behtar.com.af\n\nApply Now",
       "details": {
-        "Post Date": "Oct 21, 2025",
-        "Closing Date": "Jan 31, 2026",
-        "Reference": "AZ105",
-        "Number of Vacancies": "4",
-        "Salary Range": "؋14000 - ؋21000 monthly",
-        "Years of Experience": "Fresh",
-        "Probation Period": "Not Specified",
+        "Post Date": "Jan 31, 2026",
+        "Closing Date": "Feb 28, 2026",
+        "Reference": "019",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "3 - 5 years",
+        "Probation Period": "3 month",
         "Contract Type": "Permanent",
-        "Contract Duration": "Not specified",
+        "Contract Duration": "1 year",
         "Contract Extensible": "Yes",
-        "Minimum Education": "Secondary School",
-        "Gender": "Female",
-        "Functional Area": "Sales/Marketing, Media, Computer Science, Data Entry, Teaching",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Business Administration, Finance, ICT, Telecommunication",
         "Countries": "Afghanistan",
-        "Provinces": "Kabul, Nangarhar, Balkh, Herat"
+        "Provinces": "Kabul"
       },
-      "scraped_at": "2026-01-18T20:14:48Z"
+      "scraped_at": "2026-02-01T05:41:41Z"
     }
   ],
+  "expiring_today": [],
   "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/software-development-assistant-react-developer",
@@ -146,9 +108,145 @@
         "Provinces": "Kabul"
       },
       "scraped_at": "2026-01-22T06:45:06Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/senior-software-development-officer-6-Du94VTa",
+      "source": "jobs.af",
+      "title": "Senior Software Development Officer",
+      "company": "PARSA Technologies",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 04, 2026",
+      "closing_date": "2026-02-04",
+      "apply_url": "mailto:hr@parsatechnologies.com",
+      "apply_emails": [
+        "hr@parsatechnologies.com"
+      ],
+      "apply_phones": [],
+      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management and dedication made it the partner of choice for many of the Afghan’s most trusted brands.\n\nPARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value added services, HR MIS, Finance Management System, SMS Platform and e-commerce. We are glad to demonstrate through our work, that we have the capabilities, people, processes, technology and the desire to be the strategic technology partner of choice for many Afghan entitles, including government departments, private sector and no-government organizations (NGOs).\n\n\n\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity and courtesy towards our clients, employees, vendors and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\nSenior Software Development Officer will work under the overall guidance of the Chief Executive Officer and under direct supervision of the Software Development Manager.\n\n\n\n\n\n\n\nDuties & Responsibilities\n\nDUTIES AND RESPONSIBILITIES:\n\nHe/she will work in close collaboration with the Software Development Department and will fulfill the following duties and responsibilities:\nDesigning and Development of new software projects, websites, and mobile applications.\nConducting feasibility studies for software projects.\nAssigning tasks to junior developers such as coding, testing, and debugging.\nWriting advanced programming code.\nManaging project timelines and tasks.\nWork in close partnership with operation, business, IT and management departments\n\n\n\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React JS library\nProficiency in Spring Boot, Spring MVC, Hibernate or one of programming languages\nGood knowledge of version control system like git\nGood knowledge of databases like MySQL, PostgreSQL, MangoDB\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\nDemonstrates openness to change and ability to manage complexity.\nAbility to handle daily tasks mainly in the field.\nAbility to establish good working relations with a range of stakeholders.\nAbility to coach, mentor, and develop people skills.\nAbility to focus on results\nConsistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nRecruitment Qualifications:\n\nBachelors in Computer Science, Software Engineering or equivalent subject\nAt least 3 years of experience in above mentioned field.\n\n\n\n\nSubmission Guideline\n\nInterested individual submit their Personal CV indicating all past experience from similar job, as well as the contact details (email and telephone number) of the Candidate to hr@parsatechnologies.com\n\nPlease ensure that applicants are instructed to write the position title in the subject line of their email when submitting their application.\n\nFunctional Area\nsoftware development\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@parsatechnologies.com\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 19, 2026",
+        "Closing Date": "Feb 04, 2026",
+        "Reference": "PT#000256",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "3 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "1 year",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Any",
+        "Functional Area": "software development",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-20T09:03:46Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/backend-developer-php-node-js",
+      "source": "jobs.af",
+      "title": "Backend Developer (PHP / Node.js)",
+      "company": "TecTors Technology and Software Hous Co",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 04, 2026",
+      "closing_date": "2026-02-04",
+      "apply_url": null,
+      "apply_emails": [
+        "info@tectors.com"
+      ],
+      "apply_phones": [
+        "+93 70 449 5743 (11"
+      ],
+      "description": "About TecTors Technology and Software Hous Co\n\nTecTors Technology and Software House is a professional technology company based in Kabul, Afghanistan, providing complete digital and software solutions for businesses.\n\nOur services include:\n\nDevelopment of business databases and commercial websites\nDomain registration and web hosting\ncPanel training and setup\nCreation of official business emails\nUI/UX design and digital branding\n\nAt TecTors, we empower businesses to grow through modern, secure, and reliable technology solutions.\n\nJob Summary\n\nTecTors Technology and Software House is looking for a skilled and motivated Backend Developer (PHP / Node.js) to join our growing technology team.\n\nThe ideal candidate will be responsible for developing, maintaining, and optimizing backend systems, building APIs, and integrating databases for modern web applications.\n\nThis is a long-term position based in Kabul, offering the opportunity to work on innovative digital solutions for businesses.\n\nDuties & Responsibilities\n\nDevelop, test, and maintain backend applications using PHP (Laravel) or Node.js (Express.js / Nest.js)\nBuild and integrate APIs with frontend and third-party systems\nDesign and optimize databases for business applications\nEnsure code quality, security, and performance\nCollaborate closely with UI/UX designers and frontend developers\nTroubleshoot and resolve backend issues\n\nJob Requirements\n\nProven experience in PHP (Laravel) or Node.js development\nFamiliarity with MySQL, MongoDB, or other databases\nKnowledge of RESTful API design and integration\nUnderstanding of frontend-backend collaboration\nProblem-solving skills and attention to detail\nMinimum 1–2 years of professional experience\nStrong communication skills in English\n\nSubmission Guideline\n\nInterested candidates should submit their CV and portfolio to info@tectors.com with the subject line: Backend Developer – TecTors.\n\nApplications will be reviewed on a rolling basis. Only shortlisted candidates will be contacted.\n\nFor any questions regarding the position, contact via WhatsApp: +93 70 449 5743 (11:00 – 15:00 Kabul time)\n\n\n\n\nFunctional Area\nInformation Technology\nIT - Software\nWeb Developer\nSoftware Development and Data Management\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
+      "details": {
+        "Post Date": "Nov 04, 2025",
+        "Closing Date": "Feb 04, 2026",
+        "Reference": "TT-BE-01",
+        "Number of Vacancies": "1",
+        "Salary Range": "Salary is negotiable",
+        "Years of Experience": "1 - 3 years",
+        "Probation Period": "1 month",
+        "Contract Type": "Long-term",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Information Technology, IT - Software, Web Developer, Software Development and Data Management",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-18T20:14:48Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/ui-ux-designer-m0U7LzCtL",
+      "source": "jobs.af",
+      "title": "UI/UX Designer",
+      "company": "TecTors Technology and Software Hous Co",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 04, 2026",
+      "closing_date": "2026-02-04",
+      "apply_url": null,
+      "apply_emails": [
+        "info@tectors.com"
+      ],
+      "apply_phones": [
+        "+93 70 449 5743 (11"
+      ],
+      "description": "About TecTors Technology and Software Hous Co\n\nTecTors Technology and Software House is a Kabul-based technology company specializing in creating innovative digital solutions for businesses.\n\nOur services include:\n\nDeveloping commercial websites\nCreating and managing business databases\nDomain registration and web hosting\nSetting up official company emails\nTraining on cPanel and server management\n\nAt TecTors, we focus on delivering high-quality, user-friendly, and transformative solutions to help our clients grow their digital presence.\n\nJob Summary\n\nTecTors Technology and Software House is seeking a creative UI/UX & Graphic Designer to join our team in Kabul.\n\nThe ideal candidate will design user-friendly interfaces, engaging visuals, and compelling graphics for websites and applications.\n\nThis is a long-term position offering opportunities to work on innovative digital projects and grow professionally in a dynamic technology environment.\n\nDuties & Responsibilities\n\nDesign and optimize user interfaces (UI) and user experiences (UX) for web applications, commercial websites, and database management systems.\nCreate wireframes, prototypes, mockups, and interactive designs for digital products.\nCollaborate with Backend and Frontend developers to ensure seamless integration of design and functionality.\nConduct user research, usability testing, and feedback analysis to improve design decisions.\nDevelop responsive, accessible, and visually appealing interfaces across devices.\nEnsure consistency with design systems, brand guidelines, and UI standards.\nStay updated on latest UI/UX trends, tools, and best practices, especially for web and database applications.\nAssist in designing dashboards, forms, and data visualization components for internal and client systems.\nOptimize user workflows and navigation for efficiency and clarity.\n\n\n\n\nJob Requirements\n\nBachelor’s degree in Graphic Design, UI/UX Design, Multimedia, Computer Science, or related field.\nMinimum 1–3 years of professional experience in UI/UX design for web applications, commercial websites, or database systems.\nStrong portfolio demonstrating UI/UX projects, interactive designs, and visual graphics.\nProficiency in design tools: Figma, Adobe XD, Sketch, Photoshop, Illustrator.\nExperience with wireframing, prototyping, mockups, and user flows.\nUnderstanding of user-centered design principles, usability, and accessibility standards.\nAbility to collaborate with developers and translate requirements into functional design.\nKnowledge of responsive design and cross-browser/device compatibility.\nStrong visual design, typography, and color theory skills.\nExcellent communication, problem-solving, and creative thinking skills.\n\n\n\n\nSubmission Guideline\n\nInterested candidates should submit their CV and portfolio to info@tectors.com For any questions regarding this position, candidates can also contact us via WhatsApp: +93 70 449 5743 (11:00 – 15:00 Kabul time).\n\nwith the subject line: UI/UX & Graphic Designer – TecTors\n\nApplications will be reviewed on a rolling basis, and only shortlisted candidates will be contacted.\n\nNote: Portfolio should include UI/UX projects, website designs, and graphic design work to demonstrate relevant skills.\n\nFunctional Area\nIT - Software\nComputer Science\nGraphic Designer\nGraphics\nPhotography\nWeb Designing\nWeb Development\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
+      "details": {
+        "Post Date": "Nov 04, 2025",
+        "Closing Date": "Feb 04, 2026",
+        "Reference": "TT-UI-02",
+        "Number of Vacancies": "1",
+        "Salary Range": "Salary is negotiable",
+        "Years of Experience": "1 - 3 years",
+        "Probation Period": "1 month",
+        "Contract Type": "Long-term",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "IT - Software, Computer Science, Graphic Designer, Graphics, Photography, Web Designing, Web Development",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-18T20:14:48Z"
     }
   ],
   "tech_banking_jobs": [
+    {
+      "url": "https://jobs.af/jobs/digital-financial-services-dfs-trainer",
+      "source": "jobs.af",
+      "title": "Digital Financial Services (DFS) Trainer",
+      "company": "Behtar LTD (Behtar Group)",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 28, 2026",
+      "closing_date": "2026-02-28",
+      "apply_url": "mailto:kbl.hr@behtar.com.af",
+      "apply_emails": [
+        "kbl.hr@behtar.com.af"
+      ],
+      "apply_phones": [],
+      "description": "About Behtar LTD (Behtar Group)\n\nBehtar is a group of companies that has been at the forefront of the telecommunications, mobile money, and e-commerce sectors for 20 years. The company was founded with the vision of connecting people and businesses, and facilitating commerce in an increasingly connected world. Through the years, Behtar has grown to become a leading provider of telecommunications, mobile money, and e-commerce services in Afghanistan, with a strong reputation for innovation and customer service. Started as a small telecom service provider and quickly recognized the potential for growth and expansion in the financial services sector. we worked hard to provide innovative and cutting-edge solutions that could improve the lives of our customers. We were the first to offer high-speed internet and mobile banking services in our country, and as a result, we rapidly grew our customer base. With the passage of time, we continued to adapt and evolve to meet the changing needs of our customers, always looking for ways to push the boundaries of what was possible.\n\nToday, the Behtar group of companies is a well-established and respected player in both the telecom and financial services sectors, known for our commitment to excellence and our ability to deliver results. We are excited to continue growing and serving our customers for many years to come.\n\nJob Summary\n\nThe Digital Financial Services (DFS) Trainer will be responsible for designing and delivering structured capacity-building programs across Behtar Group’s operational footprint. The role focuses on strengthening agent, merchant, and customer onboarding; improving field performance; and ensuring strict compliance with EMI, telecom, and partner regulatory frameworks. The DFS Trainer will also lead market activation initiatives through workshops and seminars targeting local traders and SMEs to drive adoption and usage of Behtar Group’s digital financial services. \n\nDuties & Responsibilities\n\nDesign, develop, and implement DFS training curricula covering:\n\nAgent and merchant onboarding processes\nCustomer acquisition and lifecycle management\nFloat management, transaction workflows, and reconciliation\nPerformance management and KPI tracking\n\nDeliver classroom, workshop, and field-based trainings for:\n\nInternal staff\nAgents and sub-agents\nMerchants, shopkeepers, and local traders\n\nConduct capacity-building sessions at Behtar Group facilities and regional locations through structured workshops and seminars.\n\nEnsure all trainings align with:\n\nEMI operational policies\nTelecom and mobile money regulations\nPartner banks, MNOs, and third-party compliance requirements\n\nTrain field teams and customers on:\n\nKYC, AML/CFT, consumer protection, and fraud prevention\nData security, transaction integrity, and operational risk controls\n\nSupport agent and merchant performance optimization through refresher trainings and coaching programs.\n\nCoordinate with Operations, Compliance, Risk, and Business Development teams to ensure consistent messaging and operational adherence.\n\nPrepare training materials, SOPs, user guides, and assessment tools using industry best practices.\n\nMonitor training effectiveness and provide reports with recommendations for continuous improvement.\n\nJob Requirements\n\nBachelor’s degree in Business Administration, Finance, ICT, Telecommunications, or a related field.\n\nMinimum 3–5 years of experience in:\n\nDigital Financial Services\nEMI, mobile money, or telecom value-added services\nTraining, capacity building, or field operations\n\nStrong understanding of:\n\nAgent and merchant network management\nMobile money ecosystems and DFS products\nRegulatory compliance within EMI and telecom environments\n\nProven experience delivering training to diverse audiences, including low-literacy market segments.\n\nExcellent communication, facilitation, and stakeholder engagement skills.\n\nWillingness to travel extensively to regional and provincial locations.\n\n\n\n\nPreferred Competencies\n\nExperience working with banks, MNOs, and international development or financial inclusion programs\nStrong presentation and instructional design skills\nFluency in local languages and English (written and spoken)\n\nSubmission Guideline\n\nInterested national candidates are kindly requested to submit their application (Cover letter & updated CV) no later than 28 Feb 2026 to the below email:\n\nkbl.hr@behtar.com.af\n\nNote that the applicant must be based in Kabul.\n\nFunctional Area\nBusiness Administration\nFinance\nICT\nTelecommunication\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nkbl.hr@behtar.com.af\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 31, 2026",
+        "Closing Date": "Feb 28, 2026",
+        "Reference": "019",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "3 - 5 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "1 year",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Business Administration, Finance, ICT, Telecommunication",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-02-01T05:41:41Z"
+    },
     {
       "url": "https://jobs.af/jobs/it-security-analyst-WvX1Bze7x",
       "source": "jobs.af",
