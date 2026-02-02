@@ -1,5 +1,71 @@
 [
   {
+    "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
+    "source": "jobs.af",
+    "title": "Senior Full Stack Developer (Reannounced)",
+    "company": "Aurum Afghanistan Financial Company",
+    "location": "Kabul, Afghanistan",
+    "closing_date_raw": "Mar 02, 2026",
+    "closing_date": "2026-03-02",
+    "apply_url": "mailto:jobs@aurumaf.com",
+    "apply_emails": [
+      "jobs@aurumaf.com"
+    ],
+    "apply_phones": [],
+    "description": "About Aurum Afghanistan Financial Company\n\nAurum Afghanistan Financial Company is a full-fledged electronic money institution regulated by the central bank of Afghanistan operating under the license No. EMI101006. In addition to our regulatory license, we are also equipped with license No. 78895 from the Ministry of industry and commerce of Afghanistan. We possess advanced technology infrastructure which enables our clients to access financial services through their mobile phones securely, quickly and conveniently. Our services are available to everyone, particularly individuals who may not have access to traditional banking services. We offer significant opportunities for improving the efficiency of digital financial services by expanding access and lowering transaction costs. We provide a customized electronic payment solution. Aurum Afghanistan facilitates digital financial transactions, which includes services such as mobile wallet to mobile wallet, bank 02 to mobile wallet, mobile wallet to bank, electricity and other utilities bill payments, merchant’s payments, AfPay card services, payments through PoS machines and other prospective electronic payments services.\n\nJob Summary\n\nThe Senior Full Stack Developer at AURUM is responsible for designing, building, and launching software, FinTech solutions, and API integrations. This person leads the Innovation and Development Unit and works to connect AURUM’s systems with third-party services like mobile operators, e-money providers and digital wallets. The role focuses on creating secure, scalable, and easy-to-use digital services that support AURUM’s digital goals and customer needs.\n\nDuties & Responsibilities\n\n1. Digital Innovation & Product Development\n\nManage internal FinTech projects like mobile apps, websites, digital wallets, and automation tools.\nSuggest and test new features to improve service quality and user experience.\n\n2. Software Development & Quality Control\n\nOversee the complete software development process using tools:\nFrontend: Angular, or React.\nBackend: Java, Spring Boot and relevant libraries\nEnsure all software meets high standards for security, performance, and compliance.\nSupervise testing (UAT), system launches, and update schedules.\n\n·      Design and optimize databases (Oracle) to support applications and ensure data integrity.\n\n·      Write efficient queries and manage database migrations.\n\n·      Ensure the ongoing development and enhancement of the existing AurumPay Mobile Money system.\n\n3. API Development & Third-Party Integration\n\nLead the creation of APIs (REST and SOAP) for both internal and external use.\nManage connections with mobile operators, digital wallets, EMIs, and external service providers.\nMaintain proper documentation and manage the full API lifecycle.\n\n4. System Design & Infrastructure Planning\n\nDesign technical systems and integration plans based on business needs.\nWork with teams across the organization to build scalable, efficient solutions.\nEnsure all systems connect properly with payment switches and gateways.\n\n5. Team Leadership & Technical Support\n\nUnderstand the needs of different departments and offer secure, reliable solutions.\nProvide training and guidance to technical team members.\nPromote and enforce agile development methods across the team.\n\n\n\n\nJob Requirements\n\nStrong knowledge of programming languages: Java, Spring Boot and relevant framework and libraries.\nExperience designing system architecture and working with APIs (REST/SOAP) and third-party services.\nFamiliar with microservices and the full software development lifecycle (SDLC).\nHands-on experience integrating with wallets, telecom operators, EMIs, and financial switches.\nComfortable working with Oracle databases.\nResponsible for deploying applications on Oracle WebLogic Server\nSkilled in using version control tools such as GitHub and GitLab.\nGood documentation and presentation skills.\nAble to manage multiple projects and adapt to changing priorities.\nAt least 2 years of experience in FinTech, software development, or technical integration.\nBachelor’s degree in Computer Science, IT, Software Engineering, or a related field.\nFamiliarity with mobile app development using Flutter or React Native is a plus\n\nSubmission Guideline\n\nHow to Apply: Interested candidates are invited to submit their resume and cover letter to jobs@aurumaf.com please indicate the job title and vacancy number\n\nFunctional Area\nIT - Software\nProgramme\nInformation Technology\nComputer Science\nNetworking\nTechnical\nData Security/Protection\nSoftware Development and Data Management\nFinancial and banking\nFinance and Banking\nAccounting/Finance and E Banking\nsoftware development\nsoftware analysis\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@aurumaf.com\n\nApply Now",
+    "details": {
+      "Post Date": "Feb 02, 2026",
+      "Closing Date": "Mar 02, 2026",
+      "Reference": "Aurum 038",
+      "Number of Vacancies": "1",
+      "Salary Range": "Salary is negotiable",
+      "Years of Experience": "2 years",
+      "Probation Period": "3 month",
+      "Contract Type": "Long-term",
+      "Contract Duration": "Not specified",
+      "Contract Extensible": "Yes",
+      "Minimum Education": "Bachelor's Degree",
+      "Gender": "Any",
+      "Functional Area": "IT - Software, Programme, Information Technology, Computer Science, Networking, Technical, Data Security/Protection, Software Development and Data Management, Financial and banking, Finance and Banking, Accounting/Finance and E Banking, software development, software analysis",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul"
+    },
+    "scraped_at": "2026-02-02T05:45:15Z"
+  },
+  {
+    "url": "https://jobs.af/jobs/web-application-developer-agP79T6H1",
+    "source": "jobs.af",
+    "title": "Web Application Developer",
+    "company": "Afghanistan International Bank",
+    "location": "Kabul, Afghanistan",
+    "closing_date_raw": "Feb 08, 2026",
+    "closing_date": "2026-02-08",
+    "apply_url": null,
+    "apply_emails": [],
+    "apply_phones": [
+      "584743000007112168"
+    ],
+    "description": "About Afghanistan International Bank\n\nFrom its inception in 2004, AIB’s mission has been to foster economic development in the country, be a catalyst for growth, and ultimately contribute to the prosperity of Afghanistan and its people. Afghanistan International Bank is the country’s leading bank, and one of the most trusted and respected institutions in Afghanistan. Our success has been enabled by our unwavering focus on international best practices in corporate governance, financial, and risk management - including anti-money laundering and ‘know your customer’ procedures. This is overlaid by industry-leading customer service, operations, information technology, and internal controls. Despite the challenging backdrop over the last decade, we have successfully become a positive emblem for achievement, governance, and transformation. Now in our second decade of operation, we remain committed to enabling a better future for Afghanistan and we are proud to play a role in shaping the opportunities that lie ahead. AIB believes in developing its people through continuous investment in training and giving larger opportunities to those who grow with the bank. With professional management team, ensuring high standards of corporate governance and a professional work environment where every manager is committed to train and develop his people is what makes AIB an employer of choice.\n\nJob Summary\n\nA Web Application Officer is responsible for developing, maintaining, securing, and optimizing web-based applications and websites to ensure high performance, functionality, and user engagement. They bridge the gap between technical requirements and user needs, implementing server-side logic, managing databases, and ensuring seamless cross-platform compatibility. \n\nDuties & Responsibilities\n\nDevelop internal applications and system enhancements\nBuild APIs, web systems, and database structures\nParticipate in testing, deployment, and documentation\nDevelop AI/ML models, dashboards, and prediction tools\nIntegrate AI modules with banking applications and data pipelines.\nCreate automation bots (RPA), scripts, and workflows\nAnalyze business processes for automation opportunities\nMaintain AI model lifecycle and monitoring\nEnsure scalability, performance, and security of developed applications.\nCollaborate with business units to gather requirements and deliver solutions.\nArchitect, design, and implement scalable AI/ML computing infrastructures and application stacks\nCollaborate with business team to design and deploy AI solutions.\nDevelop and demonstrate AI use-cases, conducting workshops and training sessions to foster AI adoption.\nEvaluate and implement best practices in AI/ML, data mining, and analytics.\nDocument architecture roadmaps, reference architectures, and standard operating procedures for AI solutions.\nProvide expert consultation on AI-related standards and best practices.\nStay updated with emerging technologies in AI and ML to enhance institutional capabilities.\n Develop and implement AI models. Design machine learning models and algorithms to solve problems and enhance functionality.\nCollaborate with cross-functional teams. Work with data scientists, stakeholders, and product managers to build and deploy AI solutions.\nConduct data analysis. Analyze large data sets to identify patterns and insights that inform AI development.\nPrototyping and testing. Create prototypes to test AI applications and refine machine learning techniques.\nMaintain AI pipelines. Develop and maintain pipelines for deploying AI models into production environments.\nStay updated on advancements. Research and implement the latest advancements in AI and machine learning frameworks.\nIntegrate AI solutions. Implement AI into existing software systems to enhance functionality and user experience.\nAny other assignment as given by the line manager. \n\nJob Requirements\n\nEDUCATIONAL QUALIFICATIONS:\n\n\n\n\nMinimum Bachelor Degree in the Computer Science or related field, priority will be given for master degree holder.\nIT related certificates.\n\n\n\n\nRELEVANT EXPERIENCE:\nAt least two years related experience or three years IT experience in banking.\nFamiliar with banking software\nFamiliar with Artificial Intelligence (AI).\nSoftware Development.\n\n\n\n\nSKILLS & COMPETENCIES: \n         \nExcellent Written and Verbal Communication\nInterpersonal Communication\nFamiliar with API concepts (Restful) and system integration\nGood concepts of SDLC lifecycle process\nFamiliarity with AI models is must\nCapacity of adopting AI models into business processes specially banking applications (like mobile applications, wallet, ...)\nConsider scalability, performance, and security in application developing process.\nUnderstand Principals of Network concepts\nDeep understanding of web application technologies.\nGood understanding of database systems (SQL server and Oracle)\nGood understanding of IT security principals\nFamiliar with .NET core is advantage\nProblem solving, Team Culture.\n\nSubmission Guideline\n\nAIB is committed to a diverse workforce and encourage all eligible local applicants, irrespective of gender, disability, culture, religious and ethnic backgrounds to apply.\n\n \n\nInterested individuals can apply using the below link:\n\n \n\nhttps://aib.zohorecruit.com/jobs/Careers/584743000007112168/Web-Application-Developer?source=CareerSite\n\n \n\nShort-listed candidates whose applications respond to the above criteria will be contacted for written test and interview. If you did not receive a response within two-four weeks after closing date, it means you are not shortlisted \n\n \n\nWe are highly encouraging qualified and eligible disable candidates to apply.\n\nFunctional Area\nBanking\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
+    "details": {
+      "Post Date": "Feb 01, 2026",
+      "Closing Date": "Feb 08, 2026",
+      "Reference": "2026-11-AIB",
+      "Number of Vacancies": "1",
+      "Salary Range": "As per company salary scale",
+      "Years of Experience": "2 years",
+      "Probation Period": "3 month",
+      "Contract Type": "Permanent",
+      "Contract Duration": "Not specified",
+      "Contract Extensible": "No",
+      "Minimum Education": "Bachelor's Degree",
+      "Gender": "Any",
+      "Functional Area": "Banking",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul"
+    },
+    "scraped_at": "2026-02-02T05:45:15Z"
+  },
+  {
     "url": "https://jobs.af/jobs/network-engineer-Iq2yeQU-W",
     "source": "jobs.af",
     "title": "Network Engineer",
