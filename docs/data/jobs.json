@@ -1,5 +1,36 @@
 [
   {
+    "url": "https://jobs.af/jobs/senior-full-stack-developer-re-announced-sUfhHafRd",
+    "source": "jobs.af",
+    "title": "Senior Full Stack Developer (Re - Announced)",
+    "company": "Afghan Wireless Communication Company",
+    "location": "Kabul, Afghanistan",
+    "closing_date_raw": "Feb 23, 2026",
+    "closing_date": "2026-02-23",
+    "apply_url": null,
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "About Afghan Wireless Communication Company\n\nAfghan Wireless is Afghanistan’s first wireless communications company. When we began operations in 2002, we founded Afghanistan’s mobile communications industry by being the first enterprise to offer cell phone service to Afghan consumers and businesses. For well over a decade, Afghan Wireless has driven the rapid growth of our nation’s communications market, through its innovative development and deployment of global-class High-Definition (HD) Voice Communications, Internet, Data and Mobile Payments Services. More than 6,000 people work for Afghan Wireless, and our Company is directly responsible for the creation of 100,000 jobs throughout Afghanistan.\n\nJob Summary\n\nWe are seeking a Senior Full-Stack Developer with deep expertise in PHP/Laravel, Node.js, and Python to design, develop, and maintain large-scale telecom applications and subscriber-facing platforms. This role involves building high-performance backend systems, customer portals, internal operational tools, and integrating with a wide range of telecom network elements. The ideal candidate has experience working in a Mobile Network Operator (MNO) or large ISP environment, where reliability, security, scalability, and low latency are critical. \n\nDuties & Responsibilities\n\nDesign and develop systems such as SIM activation platforms, recharge/payment systems, VAS platforms, subscriber management tools, and operational dashboards.\nBuild APIs and services that integrate with core telecom systems such as HLR/HSS, OCS/IN, SMSC, PCRF, and provisioning systems. \nBuild scalable backend applications using Laravel, Node.js, and Python.\nDevelop high-performance REST/GraphQL APIs and background workers.\nImplement queue-based processing using RabbitMQ/Kafka/SQS.\nDesign database schemas optimized for telecom workloads.\nBuild dashboards, admin portals, and subscriber interfaces using React, Vue.js, or Next.js.\nImplement real-time data interfaces using WebSockets/SSE. \nIntegrate with telecom systems using REST, SOAP, SMPP, Diameter, and secured API gateways.\nWork with both legacy and modern architecture.\nContribute to microservices design and high-availability distributed architectures.\nImplement caching, sharding, throttling, and performance techniques.\nContainerize and deploy applications using Docker and CI/CD pipelines.\nImplement structured logging, tracing (OpenTelemetry), and metrics (Prometheus). \nEnforce secure coding practices (OWASP/CIS).\nEnsure regulator-compliant audit trails and access control policies.\nMentor team members and perform code reviews.\nWork closely with core network, BSS/OSS, NOC/SOC, and cybersecurity teams.\n\nJob Requirements\n\nBachelor’s degree in Computer Science, Software Engineering, Telecom Engineering, or equivalent experience. (Master's degree will be preferred)\nMust have 3 to 4 years relevant work experience (2 years’ experience for a master's degree).\nFluent in one of the local languages (Dari, Pashto) and English (written and spoken).\nStrong expertise in PHP/Laravel, Node.js, and Python frameworks.\nFrontend experience with React/Vue.js/Next.js.\nStrong SQL (MySQL/PostgreSQL) and Redis experience.\nExperience building high-throughput, telecom-grade applications.\nKnowledge of microservices, Docker, CI/CD, and secure API design. \nExperience with Kafka/RabbitMQ, SMPP, or CDR/billing systems.\nCloud experience (AWS/Azure/GCP).\nFamiliarity with TM Forum Open APIs. \nStrong work ethic, dependability, and the ability to manage multiple priorities and meet deadlines.\nDemonstrated ability to lead and inspire a team to achieve goals and deliver high-quality results.\nAbility to adapt to changing circumstances and lead the team through transitions and challenges effectively.\nUnderstand the tools, equipment, and procedures specific to the job role.\nAbility to work under pressure.\nGood communication and interpersonal skills.\nAble to travel to other provinces and work extra hours.\nStrong analytical and critical thinking skills to address and resolve complex issues.\nFollow the company's rules and policies.\n\nSubmission Guideline\n\nInterested candidates should fill out and submit the APPLICATION FORM with complete and correct information. To have access to the APPLICATION FORM, please copy and paste the link into your Web Browser.\n\n\n\n\nhttps://forms.gle/G8Rv7Lvrr7Es9ctJ9\n\nFunctional Area\nInformation Technology\nTechnical\nsoftware development\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
+    "details": {
+      "Post Date": "Feb 02, 2026",
+      "Closing Date": "Feb 23, 2026",
+      "Reference": "AWCC/HR/26/VA/009",
+      "Number of Vacancies": "1",
+      "Salary Range": "As per company salary scale",
+      "Years of Experience": "3 - 4 years",
+      "Probation Period": "3 month",
+      "Contract Type": "Permanent",
+      "Contract Duration": "1 year",
+      "Contract Extensible": "Yes",
+      "Minimum Education": "Bachelor's Degree",
+      "Gender": "Any",
+      "Functional Area": "Information Technology, Technical, software development",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul"
+    },
+    "scraped_at": "2026-02-03T05:32:39Z"
+  },
+  {
     "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
     "source": "jobs.af",
     "title": "Senior Full Stack Developer (Reannounced)",
