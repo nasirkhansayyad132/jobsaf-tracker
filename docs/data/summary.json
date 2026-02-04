@@ -1,147 +1,13 @@
 {
-  "generated_at": "2026-02-03T05:33:45.977Z",
-  "today": "2026-02-03",
+  "generated_at": "2026-02-04T05:28:38.997Z",
+  "today": "2026-02-04",
   "total_jobs": 62,
-  "new_count": 1,
-  "expiring_today_count": 1,
-  "expiring_soon_count": 5,
+  "new_count": 0,
+  "expiring_today_count": 3,
+  "expiring_soon_count": 3,
   "tech_banking_count": 12,
-  "new_jobs": [
-    {
-      "url": "https://jobs.af/jobs/senior-full-stack-developer-re-announced-sUfhHafRd",
-      "source": "jobs.af",
-      "title": "Senior Full Stack Developer (Re - Announced)",
-      "company": "Afghan Wireless Communication Company",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 23, 2026",
-      "closing_date": "2026-02-23",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "About Afghan Wireless Communication Company\n\nAfghan Wireless is Afghanistan’s first wireless communications company. When we began operations in 2002, we founded Afghanistan’s mobile communications industry by being the first enterprise to offer cell phone service to Afghan consumers and businesses. For well over a decade, Afghan Wireless has driven the rapid growth of our nation’s communications market, through its innovative development and deployment of global-class High-Definition (HD) Voice Communications, Internet, Data and Mobile Payments Services. More than 6,000 people work for Afghan Wireless, and our Company is directly responsible for the creation of 100,000 jobs throughout Afghanistan.\n\nJob Summary\n\nWe are seeking a Senior Full-Stack Developer with deep expertise in PHP/Laravel, Node.js, and Python to design, develop, and maintain large-scale telecom applications and subscriber-facing platforms. This role involves building high-performance backend systems, customer portals, internal operational tools, and integrating with a wide range of telecom network elements. The ideal candidate has experience working in a Mobile Network Operator (MNO) or large ISP environment, where reliability, security, scalability, and low latency are critical. \n\nDuties & Responsibilities\n\nDesign and develop systems such as SIM activation platforms, recharge/payment systems, VAS platforms, subscriber management tools, and operational dashboards.\nBuild APIs and services that integrate with core telecom systems such as HLR/HSS, OCS/IN, SMSC, PCRF, and provisioning systems. \nBuild scalable backend applications using Laravel, Node.js, and Python.\nDevelop high-performance REST/GraphQL APIs and background workers.\nImplement queue-based processing using RabbitMQ/Kafka/SQS.\nDesign database schemas optimized for telecom workloads.\nBuild dashboards, admin portals, and subscriber interfaces using React, Vue.js, or Next.js.\nImplement real-time data interfaces using WebSockets/SSE. \nIntegrate with telecom systems using REST, SOAP, SMPP, Diameter, and secured API gateways.\nWork with both legacy and modern architecture.\nContribute to microservices design and high-availability distributed architectures.\nImplement caching, sharding, throttling, and performance techniques.\nContainerize and deploy applications using Docker and CI/CD pipelines.\nImplement structured logging, tracing (OpenTelemetry), and metrics (Prometheus). \nEnforce secure coding practices (OWASP/CIS).\nEnsure regulator-compliant audit trails and access control policies.\nMentor team members and perform code reviews.\nWork closely with core network, BSS/OSS, NOC/SOC, and cybersecurity teams.\n\nJob Requirements\n\nBachelor’s degree in Computer Science, Software Engineering, Telecom Engineering, or equivalent experience. (Master's degree will be preferred)\nMust have 3 to 4 years relevant work experience (2 years’ experience for a master's degree).\nFluent in one of the local languages (Dari, Pashto) and English (written and spoken).\nStrong expertise in PHP/Laravel, Node.js, and Python frameworks.\nFrontend experience with React/Vue.js/Next.js.\nStrong SQL (MySQL/PostgreSQL) and Redis experience.\nExperience building high-throughput, telecom-grade applications.\nKnowledge of microservices, Docker, CI/CD, and secure API design. \nExperience with Kafka/RabbitMQ, SMPP, or CDR/billing systems.\nCloud experience (AWS/Azure/GCP).\nFamiliarity with TM Forum Open APIs. \nStrong work ethic, dependability, and the ability to manage multiple priorities and meet deadlines.\nDemonstrated ability to lead and inspire a team to achieve goals and deliver high-quality results.\nAbility to adapt to changing circumstances and lead the team through transitions and challenges effectively.\nUnderstand the tools, equipment, and procedures specific to the job role.\nAbility to work under pressure.\nGood communication and interpersonal skills.\nAble to travel to other provinces and work extra hours.\nStrong analytical and critical thinking skills to address and resolve complex issues.\nFollow the company's rules and policies.\n\nSubmission Guideline\n\nInterested candidates should fill out and submit the APPLICATION FORM with complete and correct information. To have access to the APPLICATION FORM, please copy and paste the link into your Web Browser.\n\n\n\n\nhttps://forms.gle/G8Rv7Lvrr7Es9ctJ9\n\nFunctional Area\nInformation Technology\nTechnical\nsoftware development\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
-      "details": {
-        "Post Date": "Feb 02, 2026",
-        "Closing Date": "Feb 23, 2026",
-        "Reference": "AWCC/HR/26/VA/009",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "3 - 4 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Any",
-        "Functional Area": "Information Technology, Technical, software development",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-02-03T05:32:39Z"
-    }
-  ],
+  "new_jobs": [],
   "expiring_today": [
-    {
-      "url": "https://jobs.af/jobs/software-development-assistant-react-developer",
-      "source": "jobs.af",
-      "title": "Software Development Assistant (React Developer)",
-      "company": "PARSA Technologies",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 03, 2026",
-      "closing_date": "2026-02-03",
-      "apply_url": "mailto:hr@parsa.technology",
-      "apply_emails": [
-        "hr@parsa.technology"
-      ],
-      "apply_phones": [],
-      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management, and dedication made it the partner of choice for many of the Afghan’s most trusted brands. PARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value-added services, HR MIS, Finance Management System, SMS Platform, and e-commerce. We are glad to demonstrate through our work that we have the capabilities, people, processes, technology, and the desire to be the strategic technology partner of choice for many Afghan entities, including government departments, the private sector, and non-government organizations (NGOs).\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity, and courtesy towards our clients, employees, vendors, and society at large. We are committed to our customers & partners and have a passion for technology.\n\nJob Summary\n\nThe Software Development Assistant will work under the overall guidance of the Chief Executive Officer and under the direct supervision of the Software Development Team Head.\n\nDuties & Responsibilities\n\nHe/she will work in close collaboration with the Software Development Department and will fulfill the following duties and responsibilities:\n\nDesigning and Development of web and mobile applications.\nConducting feasibility studies for software projects.\nCompleting tasks such as coding, testing, and debugging.\nWriting advanced programming code.\nManaging project timelines and tasks.\nWork in close partnership with operation, business, and management departments\n\nV. Competencies and Critical Success Factors\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities \nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude; Demonstrates openness to change and ability to manage complexity.\nAbility to handle daily tasks mainly in the field.\nAbility to establish good working relations with a range of stakeholders.\nAbility to coach, mentor, and develop people skills.\nAbility to focus on results\nConsistently approaches work with energy in a positive and constructive attitude.\n\n\n\n\nJob Requirements\n\nBachelor's in Computer Science, Software Engineering, or equivalent subject\nAt least 3+ years of experience in the above-mentioned field\n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar job, as well as the contact details (email and telephone number) of the Candidate to: hr@parsa.technology\n\nNote: applicants are instructed to write the position title in the subject line of their email when submitting their application.\n\nFunctional Area\nComputer Science\nSoftware engineering\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 20, 2026",
-        "Closing Date": "Feb 03, 2026",
-        "Reference": "PT#000265",
-        "Number of Vacancies": "1",
-        "Salary Range": "Salary is negotiable",
-        "Years of Experience": "3 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science, Software engineering",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-22T06:45:06Z"
-    }
-  ],
-  "expiring_soon": [
-    {
-      "url": "https://jobs.af/jobs/senior-frontend-developer-zg6diFEa3",
-      "source": "jobs.af",
-      "title": "Senior Frontend Developer",
-      "company": "PARSA Technologies",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 05, 2026",
-      "closing_date": "2026-02-05",
-      "apply_url": "mailto:hr@parsa.technology",
-      "apply_emails": [
-        "hr@parsa.technology"
-      ],
-      "apply_phones": [],
-      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management and dedication made it the partner of choice for many of the Afghan’s most trusted brands.\n\nPARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value added services, HR MIS, Finance Management System, SMS Platform and e-commerce. We are glad to demonstrate through our work, that we have the capabilities, people, processes, technology and the desire to be the strategic technology partner of choice for many Afghan entitles, including government departments, private sector and no-government organizations (NGOs).\n\n\n\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity and courtesy towards our clients, employees, vendors and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\n.\n\nDuties & Responsibilities\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\nDemonstrates openness to change and ability to manage complexity.\nAbility to handle daily tasks mainly in the field.\nAbility to establish good working relations with a range of stakeholders.\nAbility to coach, mentor, and develop people skills.\nAbility to focus on results\nConsistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nRecruitment Qualifications:\n\nBachelor's in Computer Science, Software Engineering or equivalent subject\nAt least 4+ years of experience in the above-mentioned field.\n\n\n\n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar job, as well as the contact details (email and telephone number) of the Candidate to hr@parsa.technology \n\nFunctional Area\nsoftware development\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 22, 2026",
-        "Closing Date": "Feb 05, 2026",
-        "Reference": "PT#000265",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "4 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "12 month",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "software development",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-23T04:58:56Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/organization-development-officer-La2ULZSsR",
-      "source": "jobs.af",
-      "title": "Organization Development Officer",
-      "company": "DABS",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 05, 2026",
-      "closing_date": "2026-02-05",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [
-        "6594-6070-4387",
-        "0202513694"
-      ],
-      "description": "About DABS\n\nد افغانستان برشنا شرکت یک شرکت خود کفا و مستقل است که طبق قانون شرکت های سهامی و محدود المسولیت امارت اسلامی افغانستان ایجاد گردیده است. د افغانستان برشنا شرکت با تمام اسهام سرمایه خود یک شرکت محدود المسئولیت بوده که به دولت افغانستان تعلق دارد. شرکت مذکور به تاریخ 15 ثور 1387 مطابق 4 می 2008 به د افغانستان برشنا شرکت تغییر شخصیت نمود و بحیث یک شرکت ملی برق جایگزین د افغانستان برشنا موسسه گردید. د افغانستان برشنا شرکت تولید، تورید، انتقال و توزیع برق را بگونه تجارتی در سراسر افغانستان تنظیم و اداره می نماید.\n\nJob Summary\n\nThe Organization Development Officer responsible for organizational effectiveness and growth through the delivery of comprehensive and professional organizational development services reflective of vision and values of DABS.  Also responsible for designing, formatting, and enhancing various official documents, policies, reports, organizational charts, and Employee Affairs forms. The incumbent will support the Employee Affairs Directorate, particularly the Organizational Development Management, in visually presenting documents in a professional and standardized manner that aligns with DABS’s corporate identity\n\nDuties & Responsibilities\n\nDesign and format official policies, reports, and presentations using professional templates\nDevelop visually appealing and standardized Employee Affairs forms, ensuring consistency in design and usability\nCreate and update organizational charts with accurate structure and branding\nEnsure that all designed materials adhere to DABS’s branding guidelines\nMaintain uniformity and clarity in all Employee Affairs -related documents\nAssist in developing and implementing organization–wide strategies to enhance employee engagement, retention and satisfaction\nAssist in reviewing and bringing due changes in Employee Affairs policies, practices, procedures, frameworks and other Employee Affairs related issues\nProviding support in conducting and analyzing various surveys and recommending strategies for management intervention\nAssist in conducting organization assessment to identify areas for improvement and developing action plans to address them\nTranslating Employee Affairs related documents from English to Dari & Pashto and vice versa\nCarry out any other additional responsibilities as requested by Employee Affairs Director\n\nJob Requirements\n\nBachelor’s or Master’s degree in (Graphic Design, Computer Science)\nAt least 4 years of experience in related field\nExperience in applying research methodologies will be given preference\n\nSubmission Guideline\n\nDear Applicant,\n\nThank you for your interest in applying for the job, The qualified and interested applicants can fill the online application form through the following link:\n\nLink for online Apply\n\nOnlineApplicationForm\n\nLink for online Apply\n\nhttp://hris.dabs.af/Recruit/Applicant/ApplicantApply/775A6594-6070-4387-AF3D-D44C96C3F8A4\n\nTo ensure that your application is considered, please follow these submission guidelines:\n\n1. Submit your application by the deadline specified as late applications will not be considered.\n\n2. Fill out the application form completely and accordingly as incomplete form will not be considered. Make sure to provide all the necessary information, including your personal details, work experience, education and skills.\n\n3. Provide accurate contact information as this will be used for all communications regarding your application.\n\n4. Double-check your applications before submitting it to ensure that these are no errors or omissions.\n\n5. Shortlisted candidates will be directly contacted for a written test or interview. If you’re not contacted within two or four weeks after the closing date, please know that your application has not been considered for the post.\n\n\n\n\nNote: The internal employees of DABS are required to get the approval of their respective head of division and submit it along with application form, otherwise the application will be rejected.\n\nWe appreciate your interest in DABS and look forward to reviewing your application, if you have any questions contact us on this phone number:\n\nContact Number: 0202513694\n\nFunctional Area\nComputer Science\nGraphic Designer\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
-      "details": {
-        "Post Date": "Jan 22, 2026",
-        "Closing Date": "Feb 05, 2026",
-        "Reference": "VA-DABS-HQs/1404-205",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "4 - 5 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "Not specified",
-        "Contract Extensible": "No",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science, Graphic Designer",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-22T07:43:34Z"
-    },
     {
       "url": "https://jobs.af/jobs/senior-software-development-officer-6-Du94VTa",
       "source": "jobs.af",
@@ -240,6 +106,108 @@
         "Minimum Education": "Bachelor's Degree",
         "Gender": "Male",
         "Functional Area": "IT - Software, Computer Science, Graphic Designer, Graphics, Photography, Web Designing, Web Development",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-18T20:14:48Z"
+    }
+  ],
+  "expiring_soon": [
+    {
+      "url": "https://jobs.af/jobs/senior-frontend-developer-zg6diFEa3",
+      "source": "jobs.af",
+      "title": "Senior Frontend Developer",
+      "company": "PARSA Technologies",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 05, 2026",
+      "closing_date": "2026-02-05",
+      "apply_url": "mailto:hr@parsa.technology",
+      "apply_emails": [
+        "hr@parsa.technology"
+      ],
+      "apply_phones": [],
+      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management and dedication made it the partner of choice for many of the Afghan’s most trusted brands.\n\nPARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value added services, HR MIS, Finance Management System, SMS Platform and e-commerce. We are glad to demonstrate through our work, that we have the capabilities, people, processes, technology and the desire to be the strategic technology partner of choice for many Afghan entitles, including government departments, private sector and no-government organizations (NGOs).\n\n\n\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity and courtesy towards our clients, employees, vendors and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\n.\n\nDuties & Responsibilities\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\nDemonstrates openness to change and ability to manage complexity.\nAbility to handle daily tasks mainly in the field.\nAbility to establish good working relations with a range of stakeholders.\nAbility to coach, mentor, and develop people skills.\nAbility to focus on results\nConsistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nRecruitment Qualifications:\n\nBachelor's in Computer Science, Software Engineering or equivalent subject\nAt least 4+ years of experience in the above-mentioned field.\n\n\n\n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar job, as well as the contact details (email and telephone number) of the Candidate to hr@parsa.technology \n\nFunctional Area\nsoftware development\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 22, 2026",
+        "Closing Date": "Feb 05, 2026",
+        "Reference": "PT#000265",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "4 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "12 month",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "software development",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-23T04:58:56Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/organization-development-officer-La2ULZSsR",
+      "source": "jobs.af",
+      "title": "Organization Development Officer",
+      "company": "DABS",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 05, 2026",
+      "closing_date": "2026-02-05",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [
+        "6594-6070-4387",
+        "0202513694"
+      ],
+      "description": "About DABS\n\nد افغانستان برشنا شرکت یک شرکت خود کفا و مستقل است که طبق قانون شرکت های سهامی و محدود المسولیت امارت اسلامی افغانستان ایجاد گردیده است. د افغانستان برشنا شرکت با تمام اسهام سرمایه خود یک شرکت محدود المسئولیت بوده که به دولت افغانستان تعلق دارد. شرکت مذکور به تاریخ 15 ثور 1387 مطابق 4 می 2008 به د افغانستان برشنا شرکت تغییر شخصیت نمود و بحیث یک شرکت ملی برق جایگزین د افغانستان برشنا موسسه گردید. د افغانستان برشنا شرکت تولید، تورید، انتقال و توزیع برق را بگونه تجارتی در سراسر افغانستان تنظیم و اداره می نماید.\n\nJob Summary\n\nThe Organization Development Officer responsible for organizational effectiveness and growth through the delivery of comprehensive and professional organizational development services reflective of vision and values of DABS.  Also responsible for designing, formatting, and enhancing various official documents, policies, reports, organizational charts, and Employee Affairs forms. The incumbent will support the Employee Affairs Directorate, particularly the Organizational Development Management, in visually presenting documents in a professional and standardized manner that aligns with DABS’s corporate identity\n\nDuties & Responsibilities\n\nDesign and format official policies, reports, and presentations using professional templates\nDevelop visually appealing and standardized Employee Affairs forms, ensuring consistency in design and usability\nCreate and update organizational charts with accurate structure and branding\nEnsure that all designed materials adhere to DABS’s branding guidelines\nMaintain uniformity and clarity in all Employee Affairs -related documents\nAssist in developing and implementing organization–wide strategies to enhance employee engagement, retention and satisfaction\nAssist in reviewing and bringing due changes in Employee Affairs policies, practices, procedures, frameworks and other Employee Affairs related issues\nProviding support in conducting and analyzing various surveys and recommending strategies for management intervention\nAssist in conducting organization assessment to identify areas for improvement and developing action plans to address them\nTranslating Employee Affairs related documents from English to Dari & Pashto and vice versa\nCarry out any other additional responsibilities as requested by Employee Affairs Director\n\nJob Requirements\n\nBachelor’s or Master’s degree in (Graphic Design, Computer Science)\nAt least 4 years of experience in related field\nExperience in applying research methodologies will be given preference\n\nSubmission Guideline\n\nDear Applicant,\n\nThank you for your interest in applying for the job, The qualified and interested applicants can fill the online application form through the following link:\n\nLink for online Apply\n\nOnlineApplicationForm\n\nLink for online Apply\n\nhttp://hris.dabs.af/Recruit/Applicant/ApplicantApply/775A6594-6070-4387-AF3D-D44C96C3F8A4\n\nTo ensure that your application is considered, please follow these submission guidelines:\n\n1. Submit your application by the deadline specified as late applications will not be considered.\n\n2. Fill out the application form completely and accordingly as incomplete form will not be considered. Make sure to provide all the necessary information, including your personal details, work experience, education and skills.\n\n3. Provide accurate contact information as this will be used for all communications regarding your application.\n\n4. Double-check your applications before submitting it to ensure that these are no errors or omissions.\n\n5. Shortlisted candidates will be directly contacted for a written test or interview. If you’re not contacted within two or four weeks after the closing date, please know that your application has not been considered for the post.\n\n\n\n\nNote: The internal employees of DABS are required to get the approval of their respective head of division and submit it along with application form, otherwise the application will be rejected.\n\nWe appreciate your interest in DABS and look forward to reviewing your application, if you have any questions contact us on this phone number:\n\nContact Number: 0202513694\n\nFunctional Area\nComputer Science\nGraphic Designer\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
+      "details": {
+        "Post Date": "Jan 22, 2026",
+        "Closing Date": "Feb 05, 2026",
+        "Reference": "VA-DABS-HQs/1404-205",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "4 - 5 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "No",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Computer Science, Graphic Designer",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-22T07:43:34Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/it-and-designing-2GqAIcpZT",
+      "source": "jobs.af",
+      "title": "IT & Designing",
+      "company": "Inam Bahar Dairy and Beverages Production Company",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 07, 2026",
+      "closing_date": "2026-02-07",
+      "apply_url": "mailto:Azizi@inambahar.com",
+      "apply_emails": [
+        "Azizi@inambahar.com"
+      ],
+      "apply_phones": [],
+      "description": "About Inam Bahar Dairy and Beverages Production Company\n\nWe take pride in ourselves on using only the best quality ingredients in our products. Our team of professional employees and food nutritionists ensure that only the best products are delivered to your table. All Inam bahar products are produced in accordance with the internationally recognized HACCP and ISO 9001 standards. Inam Bahar Dairy and Beverages Production Company is one of the leading manufacturers and distributors of dairy products, long life UHT milk, juices & Cream.\n\nJob Summary\n\nWe are seeking a versatile and skilled professional to fill the dual role of Designer and IT Technician. This unique position combines creative design expertise with technical IT support to ensure seamless operations across both creative and technical domains. The ideal candidate will be responsible for creating visually appealing designs while also maintaining and troubleshooting IT systems to support the organization’s goals.\n\nDuties & Responsibilities\n\nDevelop creative designs for digital and print media, including graphics, layouts, logos, and marketing materials.\nCollaborate with teams to conceptualize and execute design projects that align with brand guidelines.\nUse design software (e.g., Adobe Creative Suite, Canva, Figma) to produce high-quality visuals\nDevelop creative designs for digital and print media, including graphics, layouts, logos, and marketing materials.\nCollaborate with teams to conceptualize and execute design projects that align with brand guidelines.\nUse design software (e.g., Adobe Creative Suite, Canva, Figma) to produce high-quality visuals\nProvide technical support for hardware, software, and network systems.\nTroubleshoot and resolve IT issues, including system errors, network connectivity, and software malfunctions.\nInstall, configure, and maintain computer systems, servers, and other IT equipment.\nMonitor and maintain IT infrastructure to ensure optimal performance and security.\nAssist in the implementation of IT policies, procedures, and best practices.\nSet up and manage user accounts, permissions, and access controls.\nConduct regular system updates, backups, and data recovery processes.\nProvide training and support to staff on IT systems and tools\n\nJob Requirements\n\nProven experience in graphic design, multimedia design, or a related field.\nProficiency in design software such as Adobe Creative Suite (Photoshop, Illustrator, InDesign), Canva, or Figma.\nStrong portfolio showcasing creative design work.\nSolid understanding of IT systems, including hardware, software, and networking.\nExperience in troubleshooting and resolving technical issues.\nKnowledge of operating systems (Windows, macOS, Linux) and office productivity tools (Microsoft Office, Google Workspace).\nFamiliarity with cybersecurity principles and best practices.\nExcellent problem-solving skills and attention to detail.\nStrong communication and interpersonal skills to collaborate with diverse teams.\nAbility to manage time effectively and prioritize tasks in a fast-paced environment.\nA degree or certification in Graphic Design, IT, Computer Science, or a related field is preferred.\n\nSubmission Guideline\n\nInterested candidates are requested to submit their CVs and a two-page cover letter to Azizi@inambahar.com, clearly mentioning in the subject line the VA number for which they have applied. Alternatively, applications could be dropped at our office at Inam Bahar Dairy & Beverages Production Company, Pul-e-Charkhi Industrial Park, Kabul, Afghanistan.\n\nFunctional Area\nIT - Hardware\nIT - Software\nGraphic Designer\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nAzizi@inambahar.com\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 07, 2026",
+        "Closing Date": "Feb 07, 2026",
+        "Reference": "005",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "2 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "1 year",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "IT - Hardware, IT - Software, Graphic Designer",
         "Countries": "Afghanistan",
         "Provinces": "Kabul"
       },
