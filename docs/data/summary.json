@@ -1,79 +1,13 @@
 {
-  "generated_at": "2026-02-09T05:51:44.439Z",
-  "today": "2026-02-09",
+  "generated_at": "2026-02-10T05:55:49.546Z",
+  "today": "2026-02-10",
   "total_jobs": 67,
-  "new_count": 1,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 2,
+  "new_count": 0,
+  "expiring_today_count": 1,
+  "expiring_soon_count": 1,
   "tech_banking_count": 12,
-  "new_jobs": [
-    {
-      "url": "https://jobs.af/jobs/sales-and-marketing-intern",
-      "source": "jobs.af",
-      "title": "Sales & Marketing Intern",
-      "company": "AL HAWA GROUP OF COMPANIES",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 28, 2026",
-      "closing_date": "2026-02-28",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "About AL HAWA GROUP OF COMPANIES\n\nAbout Al Hawa Information Technology Services Company\n\nAl Hawa Technologies is a dynamic and forward-thinking information technology company providing a comprehensive range of professional services, including custom software development, database design and implementation, IT consulting, and technical training.\n\nWe are committed to empowering organizations of all sizes and industries by leveraging modern technologies to help them achieve their strategic and operational goals. Our team of skilled software engineers, database specialists, and technology consultants works closely with clients to understand their unique requirements and deliver high-quality, tailored solutions that exceed expectations.\n\nAt Al Hawa Technologies, we believe technology is most effective when aligned with business strategy. Therefore, in addition to development services, we offer expert consulting to optimize processes and improve efficiency. Our long-term client relationships are built on trust, transparency, and a shared commitment to success.\n\nJob Summary\n\nAlhawa Group Company is seeking motivated and proactive interns to join the Sales & Marketing team. The intern will assist in executing sales and marketing activities, engaging with clients, supporting content creation, and gaining hands-on experience in practical sales and marketing operations. This internship offers a dynamic learning environment and the opportunity to develop professional skills for a potential future career in sales and marketing.\n\nDuties & Responsibilities\n\n\n\n\nAssist in implementing and executing sales and marketing strategies.\nSupport the promotion and presentation of company products and services.\nCommunicate with clients and follow up on sales inquiries.\nParticipate in creating and publishing marketing content on various platforms.\nConduct basic market research and assist in analyzing market trends.\nCollaborate effectively with the Sales & Marketing team and other departments.\nLearn practical skills in sales, marketing, and customer relationship management.\n\nJob Requirements\n\n\n\n\nAssist in implementing and executing sales and marketing strategies.\nSupport the promotion and presentation of company products and services.\nCommunicate with clients and follow up on sales inquiries.\nParticipate in creating and publishing marketing content on various platforms.\nConduct basic market research and assist in analyzing market trends.\nCollaborate effectively with the Sales & Marketing team and other departments.\nLearn practical skills in sales, marketing, and customer relationship management.\n\nSubmission Guideline\n\nPlease submit your application by [deadline date] through the link below:\n\n🔗 https://alhawa.alhawaims.com/public-position-view/MTY=\n\nFunctional Area\nAdministrative\nManagement\nSales/Marketing\nCommunication\nBusiness Administration\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
-      "details": {
-        "Post Date": "Feb 08, 2026",
-        "Closing Date": "Feb 28, 2026",
-        "Reference": "S-M-I-01",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "1 year",
-        "Probation Period": "3 month",
-        "Contract Type": "Internship",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "No",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Administrative, Management, Sales/Marketing, Communication, Business Administration, Computer Science",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-02-09T05:50:49Z"
-    }
-  ],
-  "expiring_today": [],
-  "expiring_soon": [
-    {
-      "url": "https://jobs.af/jobs/senior-frontend-developer-herat",
-      "source": "jobs.af",
-      "title": "Senior Frontend Developer (Herat)",
-      "company": "PARSA Technologies",
-      "location": "Herat, Afghanistan",
-      "closing_date_raw": "Feb 12, 2026",
-      "closing_date": "2026-02-12",
-      "apply_url": "mailto:hr@parsa.technology",
-      "apply_emails": [
-        "hr@parsa.technology"
-      ],
-      "apply_phones": [],
-      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management, and dedication made it the partner of choice for many of the Afghan’s most trusted brands. PARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value-added services, HR MIS, Finance Management System, SMS Platform, and e-commerce. We are glad to demonstrate through our work that we have the capabilities, people, processes, technology, and the desire to be the strategic technology partner of choice for many Afghan entities, including government departments, the private sector, and non-government organizations (NGOs).\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity, and courtesy towards our clients, employees, vendors, and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\nSenior Frontend Developer will work under the overall guidance of the Chief Executive Officer and under the The direct supervision of the Software Development Team Head. \n\n\n\n\nDuties & Responsibilities\n\nHe/she will work in close collaboration with the Software Development Department and will fulfill the following duties and responsibilities:\n\n·        Designing and Development of web and mobile applications.\n\n·        Conducting feasibility studies for software projects.\n\n·        Completing tasks such as coding, testing, and debugging.\n\n·        Writing advanced programming code.\n\n·        Managing project timelines and tasks.\n\n·        Work in close partnership with operations, business, and management departments\n\n\n\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\nFunctional Competencies\n\n \n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\n·        Ability to coach, mentor, and develop people skills.\n\n·        Ability to focus on results\n\n·        Consistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nBachelor's in Computer Science, Software Engineering, or equivalent subject\nAt least 4+ years of experience in the above-mentioned field.\n\n       \n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar jobs, as well as the contact details (email and telephone number) of the Candidate to hr@parsa.technology \n\nFunctional Area\nComputer Science\nSoftware engineering\nCountries\nAfghanistan\nProvinces\nHerat\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 29, 2026",
-        "Closing Date": "Feb 12, 2026",
-        "Reference": "PT#000265",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "4 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Any",
-        "Functional Area": "Computer Science, Software engineering",
-        "Countries": "Afghanistan",
-        "Provinces": "Herat"
-      },
-      "scraped_at": "2026-01-30T05:29:20Z"
-    },
+  "new_jobs": [],
+  "expiring_today": [
     {
       "url": "https://jobs.af/jobs/cs-lecturer-full-time-lMx5D1twQ",
       "source": "jobs.af",
@@ -109,6 +43,41 @@
         "Provinces": "Kabul"
       },
       "scraped_at": "2026-01-26T05:07:45Z"
+    }
+  ],
+  "expiring_soon": [
+    {
+      "url": "https://jobs.af/jobs/senior-frontend-developer-herat",
+      "source": "jobs.af",
+      "title": "Senior Frontend Developer (Herat)",
+      "company": "PARSA Technologies",
+      "location": "Herat, Afghanistan",
+      "closing_date_raw": "Feb 12, 2026",
+      "closing_date": "2026-02-12",
+      "apply_url": "mailto:hr@parsa.technology",
+      "apply_emails": [
+        "hr@parsa.technology"
+      ],
+      "apply_phones": [],
+      "description": "About PARSA Technologies\n\nFor almost a decade, PARSA relentless innovation, quality of products, responsible management, and dedication made it the partner of choice for many of the Afghan’s most trusted brands. PARSA in the local Afghanistan Market is one of the trusted partners in domains of web application development, mobile application development, value-added services, HR MIS, Finance Management System, SMS Platform, and e-commerce. We are glad to demonstrate through our work that we have the capabilities, people, processes, technology, and the desire to be the strategic technology partner of choice for many Afghan entities, including government departments, the private sector, and non-government organizations (NGOs).\n\nPARSA’s primary objective is to develop an environment of fairness, honesty, integrity, and courtesy towards our clients, employees, vendors, and society at large. We are committed to our customers & partners and have a passion for technology. \n\nJob Summary\n\nSenior Frontend Developer will work under the overall guidance of the Chief Executive Officer and under the The direct supervision of the Software Development Team Head. \n\n\n\n\nDuties & Responsibilities\n\nHe/she will work in close collaboration with the Software Development Department and will fulfill the following duties and responsibilities:\n\n·        Designing and Development of web and mobile applications.\n\n·        Conducting feasibility studies for software projects.\n\n·        Completing tasks such as coding, testing, and debugging.\n\n·        Writing advanced programming code.\n\n·        Managing project timelines and tasks.\n\n·        Work in close partnership with operations, business, and management departments\n\n\n\n\nFunctional Competencies\n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\nFunctional Competencies\n\n \n\nKnowledge Management and Learning\n\nShares knowledge and experience;\nActively works towards continuing personal learning and development and applies newly acquired skills.\n\n\n\n\nDevelopment and Operational Effectiveness.\n\nProficiency with React\nProficiency in HTML, CSS, Bootstrap, Javascript + ES6, Sass, Tailwind CSS\nExcellent understanding of React-redux, Webpack, REST API\nGood knowledge of version control system like git\nGood knowledge of UI and UX and Proficiency with Figma\nAbility to perform a broad range of parallel specialized activities\nExcellent analytical and problem-solving skills.\nExcellent organization and time management skills.\nExcellent written and verbal communication skills.\nDemonstrated ability to lead others.\n\n\n\n\nLeadership and Self-Management\n\nFocuses on result for the client and responds positively to feedback;\nAbility to team work.\nConsistently approaches work with energy and a positive, constructive attitude;\n\nDemonstrates openness to change and ability to manage complexity.\n\n·        Ability to handle daily tasks mainly in the field.\n\n·        Ability to establish good working relations with a range of stakeholders.\n\n·        Ability to coach, mentor, and develop people skills.\n\n·        Ability to focus on results\n\n·        Consistently approaches work with energy in a positive and constructive attitude.\n\nJob Requirements\n\nBachelor's in Computer Science, Software Engineering, or equivalent subject\nAt least 4+ years of experience in the above-mentioned field.\n\n       \n\nSubmission Guideline\n\nInterested individual submits their Personal CV indicating all past experience from similar jobs, as well as the contact details (email and telephone number) of the Candidate to hr@parsa.technology \n\nFunctional Area\nComputer Science\nSoftware engineering\nCountries\nAfghanistan\nProvinces\nHerat\nSubmission Email\n\nhr@parsa.technology\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 29, 2026",
+        "Closing Date": "Feb 12, 2026",
+        "Reference": "PT#000265",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "4 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "1 year",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Any",
+        "Functional Area": "Computer Science, Software engineering",
+        "Countries": "Afghanistan",
+        "Provinces": "Herat"
+      },
+      "scraped_at": "2026-01-30T05:29:20Z"
     }
   ],
   "tech_banking_jobs": [
