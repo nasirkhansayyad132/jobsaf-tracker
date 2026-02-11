@@ -1,5 +1,36 @@
 [
   {
+    "url": "https://jobs.af/jobs/ipo-senior-engineer-g4Z-qwOwL",
+    "source": "jobs.af",
+    "title": "IPO Senior Engineer",
+    "company": "Afghan Wireless Communication Company",
+    "location": "Kabul, Afghanistan",
+    "closing_date_raw": "Feb 22, 2026",
+    "closing_date": "2026-02-22",
+    "apply_url": null,
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "About Afghan Wireless Communication Company\n\nAfghan Wireless is Afghanistan’s first wireless communications company. When it began operations in 2002, we founded Afghanistan’s mobile communications industry by being the first enterprise to offer cell phone service to Afghan consumers and businesses. For well over a decade, Afghan Wireless has driven the rapid growth of our nation’s communications market, through its innovative development and deployment of global-class High-Definition (HD) Voice Communications, Internet, Data, and Mobile Payments Services. More than 6,000 people work for Afghan Wireless, and our Company is directly responsible for the creation of 100,000 jobs throughout Afghanistan.\n\nJob Summary\n\nThe applicant must have a working knowledge of Network and Security appliances. He/she should be familiar with core telecommunications and IP networks and have an advanced understanding of networking and security. \n\nDuties & Responsibilities\n\nTasks may involve some or all of the following:\n\nTroubleshoot daily activities and issues of the core network.\nAlarm setup/processes/review/resolution.\nDevice hardware/software maintenance and upgrades.\nFamiliar with BGP / ISIS / RIP and OSPF networking protocols.\nManage and supervise the BGP routing table and BGP peering with upstream, rout leaking.\nDaily health check-up of IPO nodes.\nFamiliarity with Juniper, Huawei, and Mikrotiks platforms.\nMust have hands-on experience with network protocols and security protocols.\nShould know networking architect and provide solutions on required bases.\nInstall and upgrade concept, process, and management of Network devices.\nAble to maintain monitoring systems (LibreNMS, CACTI, Solarwinds, and others).\nShould be familiar with RFC and Standard ISO standards.\nDevelop, manage, and test backup and recovery plans and work on Inventory DB.\nEnsure that storage and archiving procedures are functioning correctly.\nCapacity planning, basic knowledge of Mobility call flow i.e 2G/3G/LTE.\nWork closely with IP Wireless Engineers and IP Network Engineers.\nCommunicate regularly with technical, applications, and operational staff to ensure network migration, integrity, and security.\nGood communication behavior skills and work ethics.\n\nJob Requirements\n\nA bachelor's degree in computer science or IT.\nCCNP/JNCIP, JNCIA, or CCNA is a must.\nMinimum 3 years experience in a similar field.\nMust have knowledge and hands-on experience on MPLS, L2VPN, L3VPN, QoS, Traffic engineering, MPBGP, etc.\n\n\n\n\nSubmission Guideline\n\nThe interested candidates should fill out and submit the APPLICATION FORM with complete and correct information. To have access to the APPLICATION FORM, please copy and paste the link into your Web Browser.\n\n\n\n\nhttps://forms.gle/MReTZzaLkHeHUF1u9\n\n\n\n\nFunctional Area\nEngineering\nTelecommunication\nTelecome Engineering\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
+    "details": {
+      "Post Date": "Feb 10, 2026",
+      "Closing Date": "Feb 22, 2026",
+      "Reference": "AWCC/HR/26/VA/012",
+      "Number of Vacancies": "2",
+      "Salary Range": "As per company salary scale",
+      "Years of Experience": "3 - 4 years",
+      "Probation Period": "3 month",
+      "Contract Type": "Permanent",
+      "Contract Duration": "1 year",
+      "Contract Extensible": "Yes",
+      "Minimum Education": "Bachelor's Degree",
+      "Gender": "Any",
+      "Functional Area": "Engineering, Telecommunication, Telecome Engineering, Computer Science",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul"
+    },
+    "scraped_at": "2026-02-11T05:51:03Z"
+  },
+  {
     "url": "https://jobs.af/jobs/sales-and-marketing-intern",
     "source": "jobs.af",
     "title": "Sales & Marketing Intern",

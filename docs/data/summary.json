@@ -1,50 +1,45 @@
 {
-  "generated_at": "2026-02-10T05:55:49.546Z",
-  "today": "2026-02-10",
-  "total_jobs": 67,
-  "new_count": 0,
-  "expiring_today_count": 1,
-  "expiring_soon_count": 1,
+  "generated_at": "2026-02-11T05:52:02.701Z",
+  "today": "2026-02-11",
+  "total_jobs": 68,
+  "new_count": 1,
+  "expiring_today_count": 0,
+  "expiring_soon_count": 2,
   "tech_banking_count": 12,
-  "new_jobs": [],
-  "expiring_today": [
+  "new_jobs": [
     {
-      "url": "https://jobs.af/jobs/cs-lecturer-full-time-lMx5D1twQ",
+      "url": "https://jobs.af/jobs/ipo-senior-engineer-g4Z-qwOwL",
       "source": "jobs.af",
-      "title": "CS Lecturer Full -Time",
-      "company": "Salam University",
+      "title": "IPO Senior Engineer",
+      "company": "Afghan Wireless Communication Company",
       "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 10, 2026",
-      "closing_date": "2026-02-10",
-      "apply_url": "mailto:hr@salam.edu.af",
-      "apply_emails": [
-        "hr@salam.edu.af",
-        "cs.dean@salam.edu.af"
-      ],
-      "apply_phones": [
-        "+93(0)772403011"
-      ],
-      "description": "About Salam University\n\nSalam University is one of the leading private universities in Afghanistan. Salam was established in 2008 in Kabul, founded by a group of intellectuals and experienced professors. It generates and preserves knowledge, understanding, and creativity by instigating enquiry, conducting high-quality research, and promoting scholarship that benefits students, scholars, and communities across the country with lots of high standards.\n\nJob Summary\n\nTo design and develop teaching material and deliver it either across a range of modules or within a subject area. Lecturers will ensure effective delivery of teaching programs in accordance with the Institution’s strategy, policy, and procedures, and should also undertake research activity.\n\nLecturers are supposed to provide management education and professional development training in a broad variety field of Computer Science.\n\n\n\n\nSoftware Development\n\nOpen Source (PHP, JAVA, MySQL), Python programming\n\n Microsoft Technologies (C#, ASP.NET, SQL Server) and Oracle\n\n \n\nMobile App Development\n\niOS - Objective C & Swift\n\nAndroid - Xmarin & Android Studio\n\nDuties & Responsibilities\n\nUndertake classes given by the department (Morning & Evening)\nShould do research in his/her domain, one research paper must be published in a year.\nProvide support to the Academic council and should be a member of different committees within the faculty.\nDevelop course outlines and prepare in-class presentations for teaching topics.\nUpdate teaching materials and provide comprehensive and updates reference to students.\nEngage students in a constructive manner and utilize modern teaching methodologies for providing Power Point presentation and other teaching techniques.\nEncourage students to conduct extracurricular activities and guide students regarding the monograph.\nSupport the department in the development process of curriculum development.\nPrepare form, documents, and other necessary materials for the relevant department and examination.\nCheck and prepare accurate results for students.\nNeeds to give assignments to the students and provide them with their feedback.\nMarking and providing appropriate feedback on oral and written work.\nInvigilate in the examination hall to monitor the proper conduct of exams.\n\nJob Requirements\n\nLanguages Skills\n\n Fluent oral, written, and comprehensive skills in English, Dari & Pashto would be an asset.\n\nEducation:\n\nMaster's Degree required in Computer Science with a specialization in any of the mentioned fields\nMinimum of 2 years of professional university-level teaching experience.\n Bachelor's degree in Computer Science or in any related field\nMinimum of 4 years of professional university-level teaching experience.\n\nSubmission Guideline\n\nYou are kindly requested to submit your CV and attested Educational documents, mentioning the position title (CS Lecturer Full -Time) in the subject line to the following email address.\n\nNote: Only short-listed candidates will be contacted for a written test. Those candidates who successfully pass the written test should give a demo class, and finally interview will be conducted.\n\nSubmission Email:\n\nhr@salam.edu.af\n\nand CC to\n\ncs.dean@salam.edu.af\n\nMob: +93(0)772403011\n\nWebsite: WWW.SALAM.EDU.AF\n\nFunctional Area\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@salam.edu.af\n\nApply Now",
+      "closing_date_raw": "Feb 22, 2026",
+      "closing_date": "2026-02-22",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "About Afghan Wireless Communication Company\n\nAfghan Wireless is Afghanistan’s first wireless communications company. When it began operations in 2002, we founded Afghanistan’s mobile communications industry by being the first enterprise to offer cell phone service to Afghan consumers and businesses. For well over a decade, Afghan Wireless has driven the rapid growth of our nation’s communications market, through its innovative development and deployment of global-class High-Definition (HD) Voice Communications, Internet, Data, and Mobile Payments Services. More than 6,000 people work for Afghan Wireless, and our Company is directly responsible for the creation of 100,000 jobs throughout Afghanistan.\n\nJob Summary\n\nThe applicant must have a working knowledge of Network and Security appliances. He/she should be familiar with core telecommunications and IP networks and have an advanced understanding of networking and security. \n\nDuties & Responsibilities\n\nTasks may involve some or all of the following:\n\nTroubleshoot daily activities and issues of the core network.\nAlarm setup/processes/review/resolution.\nDevice hardware/software maintenance and upgrades.\nFamiliar with BGP / ISIS / RIP and OSPF networking protocols.\nManage and supervise the BGP routing table and BGP peering with upstream, rout leaking.\nDaily health check-up of IPO nodes.\nFamiliarity with Juniper, Huawei, and Mikrotiks platforms.\nMust have hands-on experience with network protocols and security protocols.\nShould know networking architect and provide solutions on required bases.\nInstall and upgrade concept, process, and management of Network devices.\nAble to maintain monitoring systems (LibreNMS, CACTI, Solarwinds, and others).\nShould be familiar with RFC and Standard ISO standards.\nDevelop, manage, and test backup and recovery plans and work on Inventory DB.\nEnsure that storage and archiving procedures are functioning correctly.\nCapacity planning, basic knowledge of Mobility call flow i.e 2G/3G/LTE.\nWork closely with IP Wireless Engineers and IP Network Engineers.\nCommunicate regularly with technical, applications, and operational staff to ensure network migration, integrity, and security.\nGood communication behavior skills and work ethics.\n\nJob Requirements\n\nA bachelor's degree in computer science or IT.\nCCNP/JNCIP, JNCIA, or CCNA is a must.\nMinimum 3 years experience in a similar field.\nMust have knowledge and hands-on experience on MPLS, L2VPN, L3VPN, QoS, Traffic engineering, MPBGP, etc.\n\n\n\n\nSubmission Guideline\n\nThe interested candidates should fill out and submit the APPLICATION FORM with complete and correct information. To have access to the APPLICATION FORM, please copy and paste the link into your Web Browser.\n\n\n\n\nhttps://forms.gle/MReTZzaLkHeHUF1u9\n\n\n\n\nFunctional Area\nEngineering\nTelecommunication\nTelecome Engineering\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
       "details": {
-        "Post Date": "Jan 26, 2026",
-        "Closing Date": "Feb 10, 2026",
-        "Reference": "001",
+        "Post Date": "Feb 10, 2026",
+        "Closing Date": "Feb 22, 2026",
+        "Reference": "AWCC/HR/26/VA/012",
         "Number of Vacancies": "2",
         "Salary Range": "As per company salary scale",
-        "Years of Experience": "2 - 4 years",
-        "Probation Period": "4 month",
+        "Years of Experience": "3 - 4 years",
+        "Probation Period": "3 month",
         "Contract Type": "Permanent",
         "Contract Duration": "1 year",
         "Contract Extensible": "Yes",
         "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Computer Science",
+        "Gender": "Any",
+        "Functional Area": "Engineering, Telecommunication, Telecome Engineering, Computer Science",
         "Countries": "Afghanistan",
         "Provinces": "Kabul"
       },
-      "scraped_at": "2026-01-26T05:07:45Z"
+      "scraped_at": "2026-02-11T05:51:03Z"
     }
   ],
+  "expiring_today": [],
   "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/senior-frontend-developer-herat",
@@ -78,6 +73,37 @@
         "Provinces": "Herat"
       },
       "scraped_at": "2026-01-30T05:29:20Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/operation-manager-mRC71Yj8-",
+      "source": "jobs.af",
+      "title": "Operation Specialist",
+      "company": "COMSIS SOLUTIONS LLC",
+      "location": "Multi Location",
+      "closing_date_raw": "Feb 14, 2026",
+      "closing_date": "2026-02-14",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "About COMSIS SOLUTIONS LLC\n\nAbout Us\n\n\n\n\nCOMSIS Solutions is a U.S.-based company located in Alexandria, Virginia. Since 2014, we have been providing advanced technology, cybersecurity, artificial intelligence, and logistics solutions. We work closely with U.S. Government agencies and ensure all our projects comply fully with FAR/DFARS regulations.\n\n\n\n\nOur focus is on quality, compliance, on-time delivery, and transparency. COMSIS offers a professional and collaborative work environment that values integrity, teamwork, and growth. We provide excellent opportunities for learning, career development, and innovation.\n\nJob Summary\n\nWe are seeking a highly organized and proactive Operation Manager to oversee and coordinate the daily operations of the company. The ideal candidate will ensure efficiency across all departments, maintain smooth workflows, and support the company’s strategic goals.\n\n\n\n\nThis role requires strong leadership, decision-making, and communication skills. The Operation Specialist will work closely with department head (Operations & Finance Manager) to identify challenges, implement solutions, and improve overall performance.The position is remote, with occasional coordination with the U.S. office and field teams.\n\nDuties & Responsibilities\n\nOversee and manage the company’s day-to-day operational activities.\n\nCoordinate between different departments to ensure smooth workflow and communication.\n\nDevelop and implement operational policies and procedures to improve efficiency.\n\nSupervise project progress and ensure tasks are completed on time and within scope.\n\nSupport procurement, logistics, and administrative functions when required.\n\nPrepare regular reports on performance, risks, and improvement areas.\n\nEnsure compliance with internal company standards and U.S. Government requirements.\n\nCollaborate with management to align operations with the company’s strategic objectives.\n\nLead, motivate, and support team members to achieve individual and collective goals.\n\nJob Requirements\n\nBachelor’s degree in IT or Business Administration, Management, or a related field.\n\nMinimum 3–5 years of experience in operations, management, or customer support.\n\nStrong leadership, communication, and organizational skills.\n\nExcellent command of the English language (both written and spoken).\n\nProven ability to manage teams and multiple projects simultaneously.\n\nHigh problem-solving ability and attention to detail.\n\nProficiency in Microsoft Office and familiarity with business productivity tools.\n\nStrong sense of responsibility, punctuality, and commitment to quality.\n\nAbility to work independently with minimal supervision\n\nSubmission Guideline\n\nFunctional Area\nData Management, IT, Administration, GIS, Warehouse, Network\nAdministration, leadership, legal, procurement and financial\nCountries\nAfghanistan\nProvinces\nKabul\nKapisa\nParwan\nWardak\nLogar\nNangarhar\nLaghman\nPanjshir\nBaghlan\nBamyan\nGhazni\nPaktika\nPaktya\nKhost\nKonar\nNooristan\nBadakhshan\nTakhar\nKunduz\nSamangan\nBalkh\nSar-e-Pul\nGhor\nDaykundi\nUrozgan\nZabul\nKandahar\nJawzjan\nFaryab\nHelmand\nBadghis\nHerat\nFarah\nNimroz\nNorth Zone\nEast Zone\nWest Zone\nSouth Zone\nApply Now",
+      "details": {
+        "Post Date": "Nov 14, 2025",
+        "Closing Date": "Feb 14, 2026",
+        "Reference": "06374519",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "3 years",
+        "Probation Period": "Not Specified",
+        "Contract Type": "Permanent",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "No",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Any",
+        "Functional Area": "Data Management, IT, Administration, GIS, Warehouse, Network, Administration, leadership, legal, procurement and financial",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul, Kapisa, Parwan, Wardak, Logar, Nangarhar, Laghman, Panjshir, Baghlan, Bamyan, Ghazni, Paktika, Paktya, Khost, Konar, Nooristan, Badakhshan, Takhar, Kunduz, Samangan, Balkh, Sar-e-Pul, Ghor, Daykundi, Urozgan, Zabul, Kandahar, Jawzjan, Faryab, Helmand, Badghis, Herat, Farah, Nimroz, North Zone, East Zone, West Zone, South Zone"
+      },
+      "scraped_at": "2026-01-18T20:14:48Z"
     }
   ],
   "tech_banking_jobs": [
