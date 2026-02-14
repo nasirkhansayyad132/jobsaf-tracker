@@ -1,46 +1,13 @@
 {
-  "generated_at": "2026-02-13T05:41:57.391Z",
-  "today": "2026-02-13",
+  "generated_at": "2026-02-14T05:27:09.724Z",
+  "today": "2026-02-14",
   "total_jobs": 69,
-  "new_count": 1,
-  "expiring_today_count": 0,
+  "new_count": 0,
+  "expiring_today_count": 1,
   "expiring_soon_count": 1,
   "tech_banking_count": 12,
-  "new_jobs": [
-    {
-      "url": "https://jobs.af/jobs/it-officer-PIwKIuIr3",
-      "source": "jobs.af",
-      "title": "IT Officer",
-      "company": "AL HAWA GROUP OF COMPANIES",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 28, 2026",
-      "closing_date": "2026-02-28",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "About AL HAWA GROUP OF COMPANIES\n\nAbout Al Hawa Information Technology Services Company\n\nAl Hawa Technologies is a dynamic and forward-thinking information technology company providing a comprehensive range of professional services, including custom software development, database design and implementation, IT consulting, and technical training.\n\nWe are committed to empowering organizations of all sizes and industries by leveraging modern technologies to help them achieve their strategic and operational goals. Our team of skilled software engineers, database specialists, and technology consultants works closely with clients to understand their unique requirements and deliver high-quality, tailored solutions that exceed expectations.\n\nAt Al Hawa Technologies, we believe technology is most effective when aligned with business strategy. Therefore, in addition to development services, we offer expert consulting to optimize processes and improve efficiency. Our long-term client relationships are built on trust, transparency, and a shared commitment to success.\n\n\n\n\nJob Summary\n\nThe IT Officer is responsible for managing, maintaining, and supporting the company’s IT infrastructure. The role ensures smooth operation of computer systems, networks, and digital platforms, while providing timely technical support and maintaining data security.\n\nDuties & Responsibilities\n\nInstall, configure, and maintain computer hardware, software, and network systems\n\nMonitor and manage LAN, internet connectivity, and related IT infrastructure\n\nTroubleshoot hardware, software, and network issues in a timely manner\n\nEnsure data security, system backups, and protection against cyber threats\n\nMaintain servers, email systems, and company databases\n\nProvide technical support and guidance to staff\n\nMaintain proper documentation of IT systems and procedures\n\nCoordinate with vendors and service providers when necessary\n\nRecommend system improvements and technology upgrades\n\nJob Requirements\n\nBachelor’s degree in Information Technology, Computer Science, or a related field\n\nMinimum of 2–3 years of relevant work experience (preferred)\n\nStrong knowledge of networking, operating systems, and IT support\n\nFamiliarity with cybersecurity principles and data protection practices\n\nProficiency in Dari and Pashto; good command of English (technical)\n\nStrong problem-solving and organizational skills\n\nSubmission Guideline\n\nQualified candidates may apply for this position by submitting their CV through the designated link below.\n\nNote: Only shortlisted candidates will be contacted.\n\n\n\n\nFunctional Area\nIT - Hardware\nIT - Software\nInformation Technology\nTechnical\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
-      "details": {
-        "Post Date": "Feb 12, 2026",
-        "Closing Date": "Feb 28, 2026",
-        "Reference": "IT-001",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "1 - 3 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Long-term",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "IT - Hardware, IT - Software, Information Technology, Technical",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-02-13T05:41:41Z"
-    }
-  ],
-  "expiring_today": [],
-  "expiring_soon": [
+  "new_jobs": [],
+  "expiring_today": [
     {
       "url": "https://jobs.af/jobs/operation-manager-mRC71Yj8-",
       "source": "jobs.af",
@@ -71,6 +38,41 @@
         "Provinces": "Kabul, Kapisa, Parwan, Wardak, Logar, Nangarhar, Laghman, Panjshir, Baghlan, Bamyan, Ghazni, Paktika, Paktya, Khost, Konar, Nooristan, Badakhshan, Takhar, Kunduz, Samangan, Balkh, Sar-e-Pul, Ghor, Daykundi, Urozgan, Zabul, Kandahar, Jawzjan, Faryab, Helmand, Badghis, Herat, Farah, Nimroz, North Zone, East Zone, West Zone, South Zone"
       },
       "scraped_at": "2026-01-18T20:14:48Z"
+    }
+  ],
+  "expiring_soon": [
+    {
+      "url": "https://jobs.af/jobs/sharia-audit-officer",
+      "source": "jobs.af",
+      "title": "Sharia Audit Officer",
+      "company": "Ghazanfar Bank",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 17, 2026",
+      "closing_date": "2026-02-17",
+      "apply_url": "mailto:sr.recruitment-officer@ghazanfarbank.com",
+      "apply_emails": [
+        "sr.recruitment-officer@ghazanfarbank.com"
+      ],
+      "apply_phones": [],
+      "description": "About Ghazanfar Bank\n\nGhazanfar Bank, a full-fledged licensed commercial Bank, commenced its operations in March 2009. The Share Holders of the Bank belongs to one of the leading business groups of Afghanistan. As a leading business house Ghazanfar Group is involved in various key businesses sectors as a front runner such as import and distribution of Petroleum/Gas and other various important industrial sectors. Ghazanfar Bank started its operation in Kabul, Afghanistan, and is offering key financial services both under conventional and Islamic Banking. The Bank has since opened up its Branches at various key locations such as Mazar Sharif, Hairatan, Nayeb Abad Branch, Kunduz, Takhar, Pule- Khumri, Jalalabad, Herat, Kandahar, Faryab besides opening another Nine branches at Kabul in Sarai Shahzada, Shar-e-Naw, Karte Naw, Kote Sangi, Lase Maryam, Karte Char, Kabul Airport Branch and Wazir Akbar Khan. In due course of time, the Bank intends to expand its Branch Network in Kabul as well as at other key locations of the Country.\n\n \n\nJob Summary\n\nThe Sharia Audit Officer is responsible for conducting periodic Sharia audits across the bank to ensure all products, services, contracts, transactions, and operational processes fully comply with Islamic Sharia principles and the rulings of the Sharia Supervisory Board. The role helps preserve the bank’s Islamic integrity and strengthens governance.\n\nDuties & Responsibilities\n\n1. Sharia Audit Planning & Execution\n\nParticipate in preparing the annual Sharia Audit Plan based on risk assessment.\nConduct field audits in branches and departments to verify adherence to Sharia guidelines.\nExamine financing files, contracts, documentation, and transaction flows for Sharia compliance.\nTest samples of Murabaha, Ijara, Musharaka, Mudaraba, and deposit transactions against Sharia standards.\n\n2. Review of Contracts, Policies & Procedures\n\nAudit the implementation of Sharia-approved product structures and documentation.\nEnsure operational procedures match the product manuals approved by the Sharia Supervisory Board (SSB).\nCheck whether staff are following required Sharia workflows (e.g., asset ownership, agency structures, disclosures, penalties handling).\n\n3. Identification of Sharia Non-Compliance\n\nIdentify Sharia violations, deviations, or gaps during audits.\nDiscuss findings with relevant departments and agree on corrective actions.\nEnsure non-compliance events are recorded, reported, and resolved within the required timeframe.\n\n4. Reporting & Documentation\n\nPrepare clear Sharia audit reports with observations, recommendations, and compliance ratings.\nSubmit audit results to the Head of Sharia Audit and contribute to reports for the Sharia Supervisory Board.\nMaintain proper documentation of all audit working papers and evidence.\n\n5. Follow-Up & Corrective Actions\n\nFollow up on previously reported Sharia findings to verify whether corrective actions were implemented.\nWork with business units, risk management, operations, and compliance teams to close audit issues.\n\n6. Coordination & Support\n\nCoordinate with Internal Audit and Compliance Department for combined risk reviews.\nProvide Sharia guidance to departments during audits to improve their understanding and performance.\n\n7. Capacity Building & Awareness\n\nSupport the development of Sharia audit tools, checklists, and audit methodologies.\nAssist in internal awareness sessions on Sharia compliance requirements for staff.\n\n8. Continuous Improvement\n\nStay updated on AAOIFI Sharia standards, new fatwas, and industry best practices.\n\n. Recommend improvements to Sharia audit processes and internal controls\n\nJob Requirements\n\nQualifications & Experience\n\nBachelor’s degree in Islamic Studies, Sharia, Islamic Finance, Accounting, or Business Administration.\nProfessional certification in Islamic finance or Sharia audit (preferred).\n1–3 years of experience in Islamic banking, Sharia audit, internal audit, or compliance roles.\nFamiliarity with AAOIFI standards and Islamic banking products.\n\nSkills & Competencies\n\nStrong understanding of Islamic banking and Sharia principles.\nAbility to analyze financial transactions and documentation.\nGood report writing skills with clarity and accuracy.\nStrong attention to detail and analytical mindset.\nExcellent communication and coordination abilities.\nHigh integrity, objectivity, and professionalism.\n\n\n\n\nSubmission Guideline\n\nApplicants who meet the above requirements should submit their updated Curriculum vitae (CV)/Resume to (sr.recruitment-officer@ghazanfarbank.com)\n\nPlease Mention specific Job Title in subject of your E-mail otherwise your Email will not be considered.\n\nNote only shortlisted candidates will be contacted for further recruitment process.\n\nSubmission E-mail\n\n(sr.recruitment-officer@ghazanfarbank.com)\n\nFunctional Area\nBanking\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nsr.recruitment-officer@ghazanfarbank.com\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 17, 2026",
+        "Closing Date": "Feb 17, 2026",
+        "Reference": "GB/EAD/09",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "1 - 3 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Banking",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-22T15:27:00Z"
     }
   ],
   "tech_banking_jobs": [
