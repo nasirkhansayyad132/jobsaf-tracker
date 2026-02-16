@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-15T05:37:26.529Z",
-  "today": "2026-02-15",
+  "generated_at": "2026-02-16T05:48:21.558Z",
+  "today": "2026-02-16",
   "total_jobs": 69,
   "new_count": 0,
   "expiring_today_count": 0,
-  "expiring_soon_count": 2,
+  "expiring_soon_count": 4,
   "tech_banking_count": 12,
   "new_jobs": [],
   "expiring_today": [],
@@ -44,6 +44,39 @@
       "scraped_at": "2026-02-05T05:35:16Z"
     },
     {
+      "url": "https://jobs.af/jobs/chief-technology-officer-tkyB2YCvy",
+      "source": "jobs.af",
+      "title": "Chief Technology Officer",
+      "company": "Ghazanfar Pay",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 19, 2026",
+      "closing_date": "2026-02-19",
+      "apply_url": "mailto:sr.recruitment-officer@ghazanfarbank.com",
+      "apply_emails": [
+        "recruitment-officer@ghazanfarbank.com"
+      ],
+      "apply_phones": [],
+      "description": "About Ghazanfar Pay\n\nGhazanfar Pay is establish as a newly Electronic Money Institution (EMI) and a proud subsidiary of Ghazanfar Bank, one of Afghanistan’s leading and most trusted financial institutions, built on a vision to revolutionize the way people transfer and manage money, Ghazanfar Pay aims to become the leading digital financial services provider in Afghanistan and the region. The company is committed to financial inclusion, bringing secure, affordable, and innovative electronic payment solutions to individuals, businesses, and communities. As a forward-looking financial technology company, Ghazanfar Pay will play a vital role in driving digital transformation in Afghanistan’s financial sector, promoting trust, transparency, and accessibility for all.\n\nJob Summary\n\nThe CTO is responsible for defining and executing Ghazanfar Pay’s overall technology vision and architecture. This includes oversight of the EMI platform, mobile applications, switching and integration layers, cybersecurity frameworks, data management, and technology operations. The CTO will ensure that Ghazanfar Pay’s technology infrastructure is secure, scalable, interoperable, and compliant with EMI regulations and industry best practices. The role is critical in enabling product innovation, transaction reliability, operational resilience, and business continuity in a fragile and high-risk operating environment.\n\nDuties & Responsibilities\n\nTechnology Strategy & Architecture\n\nDevelop and execute the overall technology strategy aligned with Ghazanfar Pay’s business objectives and regulatory requirements.\nDesign and maintain enterprise architecture covering Ghazanfar pay platforms, mobile applications, middleware, switching, APIs, and data layers.\nEnsure scalability, modularity, and high availability of all technology systems.\nLead technology roadmaps for new product enablement, system upgrades, and digital transformation initiatives.\nEnsure interoperability with national payment systems, APS, switches, telecom partners, and banking platforms.\nEstablish technology governance frameworks, standards, and documentation.\n\nCore Platforms & Application Management\n\nOversee implementation, configuration, and lifecycle management of Ghazanfar pay systems, wallet platforms, and transaction engines.\nEnsure stability, performance, and resilience of mobile apps, portals, and backend services.\nLead integration of merchant systems, agent platforms, billers, and third-party fintech solutions.\nManage change management, version upgrades, and release cycles.\nEnsure strong QA, UAT, and production deployment processes.\nSupport rapid and secure rollout of new digital products and features.\n\nCybersecurity, Infrastructure & Data Protection\n\nEstablish and enforce comprehensive cybersecurity frameworks aligned with regulatory and international standards.\nOversee security architecture, access controls, encryption, network protection, and endpoint security.\nLead implementation of SOC monitoring, vulnerability management, and incident response mechanisms.\nEnsure compliance with data protection, privacy, and consumer information security requirements.\nConduct regular penetration testing, system audits, and disaster recovery drills.\nDevelop and maintain business continuity and disaster recovery systems.\n\nSystems Operations & Reliability\n\nEnsure 24/7 system availability, monitoring, and performance optimization.\nOversee transaction processing efficiency, uptime management, and system health dashboards.\nEstablish SLAs and performance frameworks for internal systems and third-party vendors.\nImplement automated monitoring, alerting, and failover mechanisms.\nLead root cause analysis and continuous system improvement initiatives.\nEnsure operational readiness for high transaction volumes and national-scale services.\n\nVendor, Integration & Innovation Management\n\nLead technology vendor selection, contracting, performance monitoring, and risk assessments.\nManage system integrators, cloud/service providers, telecom partners, and fintech collaborators.\nOversee API ecosystems and secure partner connectivity frameworks.\nIdentify emerging technologies to enhance efficiency, security, and service delivery.\nPromote innovation in payments, AI-enabled operations, digital identity, and analytics.\nEnsure cost-effective, future-proof technology investments.\n\nRegulatory, Risk & Compliance Enablement\n\nWork closely with Compliance, Risk, and Internal Audit to embed regulatory controls into system design.\nEnsure platforms support AML/CFT monitoring, transaction surveillance, and regulatory reporting.\nFacilitate system readiness for Central Bank inspections and audits.\nMaintain documentation of system controls, data flows, and security governance.\nEnsure traceability, audit logs, and regulatory reporting capabilities are fully embedded.\n\nData, Analytics & Digital Enablement\n\nLead data architecture, warehousing, and analytics platforms.\nEnable real-time dashboards for management, operations, compliance, and risk monitoring.\nPromote data-driven decision-making and customer insight capabilities.\nOversee AI, automation, and digital optimization initiatives.\nEnsure data quality, availability, and integrity across systems.\n\nPeople, Capability & Performance Management\n\nBuild, lead, and mentor a high-performing technology and digital team.\nEstablish continuous learning and certification programs.\nDefine clear KPIs, performance dashboards, and service accountability frameworks.\nPromote a culture of innovation, resilience, cybersecurity awareness, and operational discipline.\nEnsure succession planning and local capacity development.\nEnforce ethical, professional, and secure technology practices.\n\nJob Requirements\n\nEducation\n\nBachelor’s degree in Computer Science, Information Systems, or related field (Master’s preferred).\nProfessional certifications such as CISSP, CISM, TOGAF, ITIL, or cloud/security certifications highly desirable.\n\nExperience\n\nMinimum 8–10 years of experience in technology leadership roles within EMI, fintech, telecom, banking, or payment services.\nAt least 3–5 years in a senior management or CTO/Head of Technology role.\nProven experience implementing large-scale digital payment platforms and high-availability systems.\nStrong expertise in cybersecurity, systems integration, APIs, and payment switching.\nDemonstrated experience working with regulators, audits, and compliance-driven environments.\nStrong understanding of mobile money ecosystems, EMI platforms, and digital financial infrastructure.\nExperience in emerging markets or fragile operating environments preferred.\nFluency in English required; local languages an asset.\nExperience supporting humanitarian or large-scale digital payment programs is a strong advantage.\n\nKey Competencies\n\nStrategic technology leadership and execution capability.\nStrong systems architecture and cybersecurity expertise.\nOperational resilience and crisis management skills.\nInnovation mindset with strong delivery discipline.\nVendor and stakeholder management capability.\nHigh integrity, accountability, and regulatory awareness.\nStrong problem-solving and analytical thinking.\nAbility to operate in high-risk, fast-changing environments.\nExpertise in interoperability and national payment infrastructure.\nCommitment to building sustainable local technology capacity.\n\nSubmission Guideline\n\nApplicants who meet the above requirements are invited to submit their updated Curriculum Vitae (CV) or Resume to recruitment-officer@ghazanfarbank.com. Please ensure that you include the position title and vacancy announcement number in the email subject line (Chief Technology Officer GP/EAD/13). Applications that do not follow this format will not be considered.\n\n\n\n\nNote: Shortlisted candidates will be contacted for further recruitment processes.\n\n\n\n\nFunctional Area\nBanking\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nrecruitment-officer@ghazanfarbank.com\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 19, 2026",
+        "Closing Date": "Feb 19, 2026",
+        "Reference": "GP/EAD/13",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "8 - 10 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Banking",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-22T15:27:00Z"
+    },
+    {
       "url": "https://jobs.af/jobs/sharia-audit-officer",
       "source": "jobs.af",
       "title": "Sharia Audit Officer",
@@ -75,6 +108,39 @@
         "Provinces": "Kabul"
       },
       "scraped_at": "2026-01-22T15:27:00Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/system-administrator-8kwvk2qFY",
+      "source": "jobs.af",
+      "title": "System Administrator",
+      "company": "Aurum Afghanistan Financial Company",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Feb 19, 2026",
+      "closing_date": "2026-02-19",
+      "apply_url": "mailto:jobs@aurumaf.com",
+      "apply_emails": [
+        "jobs@aurumaf.com"
+      ],
+      "apply_phones": [],
+      "description": "About Aurum Afghanistan Financial Company\n\nAurum Afghanistan Financial Company is a full-fledged electronic money institution regulated by the central bank of Afghanistan operating under the license No. EMI101006. In addition to our regulatory license, we are also equipped with license No. 78895 from the Ministry of industry and commerce of Afghanistan. We possess advanced technology infrastructure which enables our clients to access financial services through their mobile phones securely, quickly and conveniently. Our services are available to everyone, particularly individuals who may not have access to traditional banking services. We offer significant opportunities for improving the efficiency of digital financial services by expanding access and lowering transaction costs. We provide a customized electronic payment solution. Aurum Afghanistan facilitates digital financial transactions, which includes services such as mobile wallet to mobile wallet, bank 02 to mobile wallet, mobile wallet to bank, electricity and other utilities bill payments, merchant’s payments, AfPay card services, payments through PoS machines and other prospective electronic payments services. AurumPay is a leading electronic money platform in Afghanistan, operating under the supervision of the Central Bank of Afghanistan. We empower individuals, merchants, and corporations with secure, convenient, and innovative financial solutions. Join our mission to bring digital payments to every corner of Afghanistan!\n\nJob Summary\n\nJob Summary\n\nAurumPay EMI is seeking an experienced System Administrator to manage, configure, and maintain our IT infrastructure. The ideal candidate will be responsible for Oracle servers, network security using Sophos firewalls, backup management, and data center setup and operations.\n\nDuties & Responsibilities\n\nKey Responsibilities\n\nConfigure, install, and maintain Oracle servers and Oracle databases\nManage, configure, and monitor Sophos Firewalls\nPerform regular backups of:\nServers\nOracle databases\nFirewalls\nEnsure backup integrity, restoration testing, and disaster recovery readiness\nPlan, set up, and manage data center infrastructure\nMonitor system performance, security, and availability\nTroubleshoot system, network, and database-related issues\nMaintain system documentation and operational procedures\nEnsure compliance with security and operational best practices\n\n\n\n\nJob Requirements\n\nRequired Skills & Experience\n\nProven experience as a System Administrator\nStrong hands-on experience with Oracle Servers and Oracle Databases\nExperience configuring and managing Sophos Firewalls\nSolid knowledge of backup and recovery strategies\nExperience with data center setup and operations\nUnderstanding of network security, system monitoring, and disaster recovery\nStrong problem-solving and documentation skills\n\nPreferred Qualifications\n\nCertifications related to Oracle, Linux/Windows Server\nExperience in financial services or EMI environments\nKnowledge of compliance and security standards\n\n\n\n\n\n\n\nSubmission Guideline\n\nInterested male and female candidates are encouraged to submit their CV to:\n\n📧 jobs@aurumaf.com.     \n\n📝 Subject line: System Administrator – AurumPay\n\nOnly shortlisted candidates will be contacted.\n\nFunctional Area\nSystem Integration\nSystem admin\ndatabase administration\nData Management, IT, Administration, GIS, Warehouse, Network\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@aurumaf.com\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 19, 2026",
+        "Closing Date": "Feb 19, 2026",
+        "Reference": "Aurum 057",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "3 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Permanent",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Any",
+        "Functional Area": "System Integration, System admin, database administration, Data Management, IT, Administration, GIS, Warehouse, Network",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-20T09:03:46Z"
     }
   ],
   "tech_banking_jobs": [
