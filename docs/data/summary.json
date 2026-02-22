@@ -1,79 +1,13 @@
 {
-  "generated_at": "2026-02-21T05:15:34.333Z",
-  "today": "2026-02-21",
+  "generated_at": "2026-02-22T05:32:49.371Z",
+  "today": "2026-02-22",
   "total_jobs": 69,
   "new_count": 0,
   "expiring_today_count": 2,
-  "expiring_soon_count": 4,
+  "expiring_soon_count": 3,
   "tech_banking_count": 12,
   "new_jobs": [],
   "expiring_today": [
-    {
-      "url": "https://jobs.af/jobs/it-security-analyst-WvX1Bze7x",
-      "source": "jobs.af",
-      "title": "IT Security Analyst",
-      "company": "Ghazanfar Bank",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 21, 2026",
-      "closing_date": "2026-02-21",
-      "apply_url": "mailto:sr.recruitment-officer@ghazanfarbank.com",
-      "apply_emails": [
-        "sr.recruitment-officer@ghazanfarbank.com"
-      ],
-      "apply_phones": [],
-      "description": "About Ghazanfar Bank\n\nGhazanfar Bank, a full-fledged licensed commercial Bank, commenced its operations in March 2009. The Share Holders of the Bank belongs to one of the leading business groups of Afghanistan. As a leading business house Ghazanfar Group is involved in various key businesses sectors as a front runner such as import and distribution of Petroleum/Gas and other various important industrial sectors. Ghazanfar Bank started its operation in Kabul, Afghanistan, and is offering key financial services both under conventional and Islamic Banking. The Bank has since opened up its Branches at various key locations such as Mazar Sharif, Hairatan, Nayeb Abad Branch Kunduz, Takhar, Pule- Khumri, Jalalabad, Herat & Kandahar besides opening another eight branches at Kabul in Sarai Shahzada, Shar-e-Naw, Karte Naw, Kote Sangi, Lase Maryam, Karte Char, Kabul Airport Branch and Wazir Akbar Khan. In due course of time, the Bank intends to expand its Branch Network in Kabul as well as at other key locations of the Country.\n\nJob Summary\n\nThe IT Security Analyst is responsible for protecting the Bank’s information assets, systems, and infrastructure by implementing, monitoring, and enhancing information security controls. The role ensures that cybersecurity risks are effectively identified, managed, and escalated in line with Basel principles, regulatory requirements, and the Bank’s risk appetite.\n\nThe position supports operational IT security under the Dy-CIO while ensuring indepndent risk oversight and incident escalation to the CRO\n\nDuties & Responsibilities\n\nA. Information Security Operations\n\nMonitor IT systems, networks, and applications for security threats and vulnerabilities.\nImplement and maintain security controls, tools, and configurations.\nSupport secure system configurations across CBS, applications, servers, and networks.\nEnsure compliance with approved IT security standards and policies.\n\n\n\n\nB. Cyber Risk & Incident Management\n\nDetect, analyze, and respond to information security incidents and cyber threats.\nEscalate material security incidents, cyber risks, and control weaknesses to the CRO in a timely manner.\nSupport incident investigation, root-cause analysis, and remediation actions.\nMaintain incident logs and prepare incident reports.\n\n\n\n\nC. Governance, Risk & Compliance Support\n\nSupport the implementation of the Bank’s Information Security Policy, IT governance framework, and risk controls.\nCoordinate with Risk Management to:\nIdentify IT and cyber risks\nSupport risk assessments and KRIs\nAlign controls with the Bank’s risk appetite\nSupport Compliance requirements related to data protection, access controls, and regulatory expectations.\n\n\n\n\nD. Access Control & Security Monitoring\n\nMonitor and review user access rights to critical systems (including CBS).\nSupport periodic access reviews and segregation of duties controls.\nEnsure timely removal or modification of access for staff movements and terminations.\n\n\n\n\nE. Vulnerability Management & Security Testing\n\nConduct or coordinate vulnerability assessments and security testing.\nTrack remediation of identified vulnerabilities.\nSupport implementation of security patches and system hardening.\n\n\n\n\nF. Audit & Regulatory Support\n\nAct as a focal point for IT security matters during:\nInternal Audit\nExternal Audit\nRegulatory examinations\nSupport closure of IT security-related audit findings and regulatory observations.\n\n\n\n\nG. Awareness & Capacity Building\n\nSupport IT security awareness initiatives and training programs for staff.\nPromote a strong security culture and compliance with security policies.\n\n\n\n\n7. Authority & Escalation\n\nRecommend security improvements and corrective actions.\nEscalate high-risk security incidents and systemic weaknesses to Dy-CIO and CRO.\nNo authority to override business or system decisions without approval.\n\n\n\n\nJob Requirements\n\nEducation\n\nBachelor’s degree in Information Technology, Computer Science, Cybersecurity, or a related field.\n\nProfessional Certifications (Preferred)\n\nCISSP, CISM, CISA, CEH, ISO 27001, or equivalent information security certifications.\n\nExperience\n\nMinimum 3–5 years of experience in IT security, cybersecurity, or information risk management.\nExperience in banking, financial services, or regulated environments is a strong advantage.\n\n\n\n\nSubmission Guideline\n\nSubmission guidelines\n\nApplicants who meet the above requirements should submit their updated Curriculum vitae (CV)/Resume to (sr.recruitment-officer@ghazanfarbank.com)\n\nPlease Mention specific Job Title in subject of your E-mail otherwise your Email will not be considered.\n\nNote only shortlisted candidates will be contacted for further recruitment process.\n\nSubmission E-mail\n\n(sr.recruitment-officer@ghazanfarbank.com)\n\nFunctional Area\nBanking\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nsr.recruitment-officer@ghazanfarbank.com\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 21, 2026",
-        "Closing Date": "Feb 21, 2026",
-        "Reference": "GB/EAD/20",
-        "Number of Vacancies": "2",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "3 - 5 years",
-        "Probation Period": "Not Specified",
-        "Contract Type": "Permanent",
-        "Contract Duration": "5 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "Banking",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-22T15:27:00Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/software-developer-intern-RNQ7LwqSB",
-      "source": "jobs.af",
-      "title": "Software Developer Intern",
-      "company": "AL HAWA GROUP OF COMPANIES",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 21, 2026",
-      "closing_date": "2026-02-21",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "About AL HAWA GROUP OF COMPANIES\n\nAbout Al Hawa Information Technology Services Company\n\nAl Hawa Technologies is a dynamic and forward-thinking information technology company providing a comprehensive range of professional services, including custom software development, database design and implementation, IT consulting, and technical training.\n\nWe are committed to empowering organizations of all sizes and industries by leveraging modern technologies to help them achieve their strategic and operational goals. Our team of skilled software engineers, database specialists, and technology consultants works closely with clients to understand their unique requirements and deliver high-quality, tailored solutions that exceed expectations.\n\nAt Al Hawa Technologies, we believe technology is most effective when aligned with business strategy. Therefore, in addition to development services, we offer expert consulting to optimize processes and improve efficiency. Our long-term client relationships are built on trust, transparency, and a shared commitment to success.\n\n\n\n\nJob Summary\n\nWe are seeking motivated Software Developer Interns / Junior Full-Stack Developers, including final-year university students and recent graduates, to join our growing development team.\n\nThe selected candidate will participate in the design, development, testing, and maintenance of web-based applications while gaining hands-on experience in a professional, fast-paced environment.\n\n\n\n\nDuties & Responsibilities\n\nAssist in the design, development, and maintenance of web applications\nDevelop front-end components using HTML, CSS, and JavaScript\nSupport back-end development using PHP frameworks such as Laravel or CodeIgniter\nParticipate in database design, implementation, and optimization\nCollaborate with senior developers, designers, and project managers\nWrite clean, well-documented, and maintainable code\nDebug, test, and improve application performance and reliability\nFollow software development life cycle (SDLC) best practices\nContinuously learn new technologies and development tools\n\nJob Requirements\n\nFinal-year university student or Bachelor’s degree in Computer Science, Software Engineering, or a related field\n\n\nSolid understanding of full-stack development concepts and SDLC\n\n\nProficiency in front-end technologies: HTML, CSS, JavaScript\n\n\nFamiliarity with PHP back-end frameworks such as Laravel or CodeIgniter\n\n\nStrong problem-solving and analytical skills\n\n\nGood communication and teamwork abilities\n\n\nAbility to work effectively in a fast-paced environment and meet deadlines\n\nSubmission Guideline\n\nInterested candidates are required to apply through the link below.\n\nPlease note that applications submitted via email will not be considered.\n\n\n\n\nhttps://alhawa.alhawaims.com/public-position-view/MTM=\n\nFunctional Area\nIT - Hardware\nIT - Software\nInformation Technology\nComputer Science\nNetworking\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
-      "details": {
-        "Post Date": "Jan 21, 2026",
-        "Closing Date": "Feb 21, 2026",
-        "Reference": "S-D-I-001",
-        "Number of Vacancies": "1",
-        "Salary Range": "Salary is negotiable",
-        "Years of Experience": "1 year",
-        "Probation Period": "3 month",
-        "Contract Type": "Internship",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "IT - Hardware, IT - Software, Information Technology, Computer Science, Networking",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-01-22T06:45:06Z"
-    }
-  ],
-  "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/ipo-senior-engineer-g4Z-qwOwL",
       "source": "jobs.af",
@@ -105,6 +39,39 @@
       },
       "scraped_at": "2026-02-11T05:51:03Z"
     },
+    {
+      "url": "https://jobs.af/jobs/information-comm-technology-associate-gs6-fixed-term-kandahar-19484-and-herat-19391",
+      "source": "jobs.af",
+      "title": "Information Comm. Technology Associate, GS6, Fixed Term, Kandahar (#19484) & Herat (#19391)",
+      "company": "UNICEF Afghanistan",
+      "location": "Multi Location",
+      "closing_date_raw": "Feb 22, 2026",
+      "closing_date": "2026-02-22",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "About UNICEF Afghanistan\n\nUNICEF works in some of the world’s toughest places, to reach the world’s most disadvantaged children. To save their lives. To defend their rights. To help them fulfill their potential. Across 190 countries and territories, we work for every child, everywhere, every day, to build a better world for everyone. And we never give up. For every child, Passion!\n\nJob Summary\n\nHow can you make a difference? \n\n\n\n\nPurpose for the job: ICT/T4D Associates will assist programme teams in the identification, assessment and integration of ICT and digital innovation into UNICEF programming; strengthening internal capacity to support T4D related initiatives; identifying and engaging with key partners; building and maintaining business relationships; applying reusable and replicable technical buildings blocks; and maximizing the potential for the scale-up and sustainability of technology and digital innovation for UNICEF programming.\n\n\n\n\n\n\n\nDuties & Responsibilities\n\nSummary of Key function, accountabilities and related duties/tasks\n\n﻿\n\nGeneral ICT/T4D Office Support:\nT4D Portfolio Coordination\nMinimal ICT Administration\n\nIf you would like to know more about this position, please review the complete Job Description here: JD/TOR- ICT Associate G-6\n\n\n\n\nJob Requirements\n\nTo qualify as an advocate for every child you will have…\n\n\n\n\nMinimum requirements:\n\nEducation:\n\nCompletion of Secondary education is required, supplemented with formal training in Computer Science, Information Systems, Telecommunications, Engineering.\n\nWork Experience:\n\nA minimum of six years of practical work experience in information technology, requiring systematic methods of troubleshooting and problem solving is required.\nA bachelor’s degree from a recognized academic institution in a relevant field may replace three years of related work experience. A master’s degree may replace an additional two years.\nITIL Foundation Certificate or equivalent customer support certification is an asset. \nExperience in providing assistance to users with IT products and services, and use of applications and diagnostic tools is required.\nPractical experience in providing technical and business Customer Support and Services is required.\nPractical experience and working knowledge of various computer platforms and applications are required.\n\nLanguage Requirements: \n\nFluency in English is required. Knowledge of another official UN language (Arabic, Chinese, French, Russian or Spanish) or a local language is an asset.\n\nDesirables:\n\nRelevant experience at country level, particularly in development, fragile settings and humanitarian contexts.\n\n\n\n\nSubmission Guideline\n\nRemarks:\n\n\n\n\nAs per Article 101, paragraph 3, of the Charter of the United Nations, the paramount consideration in the employment of the staff is the necessity of securing the highest standards of efficiency, competence, and integrity.\n\nUNICEF is committed to fostering an inclusive, representative, and welcoming workforce. For this position, eligible and suitable Female candidates are encouraged to apply.\n\nVacancy announcement is open to internal and external candidates. Priority will be given to staff in abolished posts and internal staff members.\n\nGovernment employees who are considered for employment with UNICEF are normally required to resign from their government positions before taking up an assignment with UNICEF. UNICEF reserves the right to withdraw an offer of appointment, without compensation, if a visa or medical clearance is not obtained, or necessary inoculation requirements are not met, within a reasonable period for any reason. \n\nUNICEF does not charge a processing fee at any stage of its recruitment, selection, and hiring processes (i.e., application stage, interview stage, validation stage, or appointment and training). UNICEF will not ask for applicants’ bank account information.\n\nHumanitarian action is a cross-cutting priority within UNICEF’s Strategic Plan. UNICEF is committed to stay and deliver in humanitarian contexts. Therefore, all staff, at all levels across all functional areas, can be called upon to be deployed to support humanitarian response, contributing to both strengthening resilience of communities and capacity of national authorities.\n\nAll UNICEF positions are advertised, and only shortlisted candidates will be contacted and advance to the next stage of the selection process. An internal candidate performing at the level of the post in the relevant functional area, or an internal/external candidate in the corresponding Talent Group, may be selected, if suitable for the post, without assessment of other candidates.\n\nCandidates who have applied previously do not need to reapply.\n\n\n\n\nAdditional information about working for UNICEF can be found here.\n\n\n\n\nApplicants are requested to apply through the provided link; Vacancies | UNICEF Careers\n\n\n\n\nApplications received via JOBS.AF online portal will not be given consideration.\n\n\n\n\nFunctional Area\nit\nIT - Hardware\nIT - Software\nCountries\nAfghanistan\nProvinces\nHerat\nKandahar\nApply Now",
+      "details": {
+        "Post Date": "Jan 18, 2026",
+        "Closing Date": "Feb 22, 2026",
+        "Reference": "589363",
+        "Number of Vacancies": "2",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "6 years",
+        "Probation Period": "Not Specified",
+        "Contract Type": "Fixed-term",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Secondary School",
+        "Gender": "Any",
+        "Functional Area": "it, IT - Hardware, IT - Software",
+        "Countries": "Afghanistan",
+        "Provinces": "Herat, Kandahar"
+      },
+      "scraped_at": "2026-01-18T21:34:16Z"
+    }
+  ],
+  "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-re-announced-sUfhHafRd",
       "source": "jobs.af",
@@ -170,35 +137,41 @@
       "scraped_at": "2026-01-25T05:04:07Z"
     },
     {
-      "url": "https://jobs.af/jobs/information-comm-technology-associate-gs6-fixed-term-kandahar-19484-and-herat-19391",
+      "url": "https://jobs.af/jobs/senior-full-stack-developer-permanent-position",
       "source": "jobs.af",
-      "title": "Information Comm. Technology Associate, GS6, Fixed Term, Kandahar (#19484) & Herat (#19391)",
-      "company": "UNICEF Afghanistan",
+      "title": "Senior Full-Stack Developer (Permanent Position)",
+      "company": "Peshtaz Academy",
       "location": "Multi Location",
-      "closing_date_raw": "Feb 22, 2026",
-      "closing_date": "2026-02-22",
+      "closing_date_raw": "Feb 25, 2026",
+      "closing_date": "2026-02-25",
       "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "About UNICEF Afghanistan\n\nUNICEF works in some of the world’s toughest places, to reach the world’s most disadvantaged children. To save their lives. To defend their rights. To help them fulfill their potential. Across 190 countries and territories, we work for every child, everywhere, every day, to build a better world for everyone. And we never give up. For every child, Passion!\n\nJob Summary\n\nHow can you make a difference? \n\n\n\n\nPurpose for the job: ICT/T4D Associates will assist programme teams in the identification, assessment and integration of ICT and digital innovation into UNICEF programming; strengthening internal capacity to support T4D related initiatives; identifying and engaging with key partners; building and maintaining business relationships; applying reusable and replicable technical buildings blocks; and maximizing the potential for the scale-up and sustainability of technology and digital innovation for UNICEF programming.\n\n\n\n\n\n\n\nDuties & Responsibilities\n\nSummary of Key function, accountabilities and related duties/tasks\n\n﻿\n\nGeneral ICT/T4D Office Support:\nT4D Portfolio Coordination\nMinimal ICT Administration\n\nIf you would like to know more about this position, please review the complete Job Description here: JD/TOR- ICT Associate G-6\n\n\n\n\nJob Requirements\n\nTo qualify as an advocate for every child you will have…\n\n\n\n\nMinimum requirements:\n\nEducation:\n\nCompletion of Secondary education is required, supplemented with formal training in Computer Science, Information Systems, Telecommunications, Engineering.\n\nWork Experience:\n\nA minimum of six years of practical work experience in information technology, requiring systematic methods of troubleshooting and problem solving is required.\nA bachelor’s degree from a recognized academic institution in a relevant field may replace three years of related work experience. A master’s degree may replace an additional two years.\nITIL Foundation Certificate or equivalent customer support certification is an asset. \nExperience in providing assistance to users with IT products and services, and use of applications and diagnostic tools is required.\nPractical experience in providing technical and business Customer Support and Services is required.\nPractical experience and working knowledge of various computer platforms and applications are required.\n\nLanguage Requirements: \n\nFluency in English is required. Knowledge of another official UN language (Arabic, Chinese, French, Russian or Spanish) or a local language is an asset.\n\nDesirables:\n\nRelevant experience at country level, particularly in development, fragile settings and humanitarian contexts.\n\n\n\n\nSubmission Guideline\n\nRemarks:\n\n\n\n\nAs per Article 101, paragraph 3, of the Charter of the United Nations, the paramount consideration in the employment of the staff is the necessity of securing the highest standards of efficiency, competence, and integrity.\n\nUNICEF is committed to fostering an inclusive, representative, and welcoming workforce. For this position, eligible and suitable Female candidates are encouraged to apply.\n\nVacancy announcement is open to internal and external candidates. Priority will be given to staff in abolished posts and internal staff members.\n\nGovernment employees who are considered for employment with UNICEF are normally required to resign from their government positions before taking up an assignment with UNICEF. UNICEF reserves the right to withdraw an offer of appointment, without compensation, if a visa or medical clearance is not obtained, or necessary inoculation requirements are not met, within a reasonable period for any reason. \n\nUNICEF does not charge a processing fee at any stage of its recruitment, selection, and hiring processes (i.e., application stage, interview stage, validation stage, or appointment and training). UNICEF will not ask for applicants’ bank account information.\n\nHumanitarian action is a cross-cutting priority within UNICEF’s Strategic Plan. UNICEF is committed to stay and deliver in humanitarian contexts. Therefore, all staff, at all levels across all functional areas, can be called upon to be deployed to support humanitarian response, contributing to both strengthening resilience of communities and capacity of national authorities.\n\nAll UNICEF positions are advertised, and only shortlisted candidates will be contacted and advance to the next stage of the selection process. An internal candidate performing at the level of the post in the relevant functional area, or an internal/external candidate in the corresponding Talent Group, may be selected, if suitable for the post, without assessment of other candidates.\n\nCandidates who have applied previously do not need to reapply.\n\n\n\n\nAdditional information about working for UNICEF can be found here.\n\n\n\n\nApplicants are requested to apply through the provided link; Vacancies | UNICEF Careers\n\n\n\n\nApplications received via JOBS.AF online portal will not be given consideration.\n\n\n\n\nFunctional Area\nit\nIT - Hardware\nIT - Software\nCountries\nAfghanistan\nProvinces\nHerat\nKandahar\nApply Now",
+      "apply_emails": [
+        "info@golinkshops.com",
+        "info@peshtazacademy.com"
+      ],
+      "apply_phones": [
+        "+93788124805",
+        "+19799432798"
+      ],
+      "description": "About Peshtaz Academy\n\nLinkshops is a fast-growing multi-vendor marketplace platform delivering modern solutions across e-commerce, delivery, and on-demand services. Our products include high-performance Android, iOS, and web applications, built to scale and serve thousands of users. We are expanding our technical team and are looking for a highly skilled Full-Stack Developer who is passionate about building reliable, scalable, and user-focused digital products.\n\nJob Summary\n\nWe are seeking a Professional Full-Stack Developer to join our core development team on a permanent basis. You will play a critical role in designing, developing, maintaining, and optimizing our Linkshops applications across web and mobile platforms. This role is ideal for someone who thrives in a fast-paced environment and takes ownership of products from concept to deployment.\n\nDuties & Responsibilities\n\nKey Responsibilities\nDesign, develop, and maintain scalable full-stack applications for web and mobile\nWork with React and Flutter to build modern, high-performance user interfaces\nDevelop and maintain backend services using Laravel\nManage databases using MySQL and Firebase\nIntegrate RESTful APIs, third-party services, and internal systems\nImplement and maintain payment gateway integrations\nWork with Google Maps APIs for location-based services\nBuild, test, and deploy applications for Android and iOS\nEnsure application security, performance optimization, and code quality\nCollaborate closely with product managers, designers, and QA teams\nParticipate in architecture decisions and technical planning\n\n\n\n\nJob Requirements\n\nRequired Skills & Qualifications\nProven experience as a Full-Stack Developer\nStrong expertise in:\nReact\nFlutter\nLaravel\nFirebase\nMySQL\nExperience with Android and iOS app development\nSolid knowledge of Google APIs, especially Google Maps\nHands-on experience integrating payment gateways\nStrong understanding of APIs, authentication, and data security\nClean coding practices and experience with version control (Git)\nAbility to work independently and as part of a team\nStrong problem-solving and communication skills\nNice to Have\nExperience with large-scale marketplace or delivery platforms\nDevOps or cloud deployment experience\nPerformance optimization and scalability experience\nPrior work on multi-vendor or fintech applications\nWhat We Offer\nPermanent, long-term position\nCompetitive salary based on experience\nOpportunity to work on a large, real-world production platform\nFlexible working environment (remote/hybrid)\nProfessional growth and leadership opportunities\nA collaborative, innovative, and respectful team culture\nWhy Join Linkshops?\n\nAt Linkshops, you won’t just write code — you’ll help shape a platform used by real businesses and customers every day. If you are a motivated, skilled developer looking for stability, impact, and long-term growth, we would love to hear from you.\n\n\n\n\nSubmission Guideline\n\nInterested candidates are encouraged to submit their applications as soon as possible. Applications will be reviewed on a rolling basis until the position is filled. Early submission is highly recommended.\n\ninfo@golinkshops.com\n\ninfo@peshtazacademy.com\n\n+93788124805\n\n+19799432798\n\nFunctional Area\nIT - Hardware\nIT - Software\nProgramme\nSoftware engineering\nsoftware development\nWeb Designing\nWeb Development\nDatabase Development\nsoftware analysis\nsoftware development\nProgramming\nWebsite Designing\nWeb Developer\nWeb Designer\nCountries\nAfghanistan\nProvinces\nKabul\nKapisa\nParwan\nWardak\nLogar\nNangarhar\nLaghman\nPanjshir\nBaghlan\nBamyan\nGhazni\nPaktika\nPaktya\nKhost\nKonar\nNooristan\nBadakhshan\nTakhar\nKunduz\nSamangan\nBalkh\nSar-e-Pul\nGhor\nDaykundi\nUrozgan\nZabul\nKandahar\nJawzjan\nFaryab\nHelmand\nBadghis\nHerat\nFarah\nNimroz\nNorth Zone\nEast Zone\nWest Zone\nSouth Zone\nApply Now",
       "details": {
-        "Post Date": "Jan 18, 2026",
-        "Closing Date": "Feb 22, 2026",
-        "Reference": "589363",
-        "Number of Vacancies": "2",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "6 years",
+        "Post Date": "Dec 25, 2025",
+        "Closing Date": "Feb 25, 2026",
+        "Reference": "LinksGRP2026",
+        "Number of Vacancies": "4",
+        "Salary Range": "Salary is negotiable",
+        "Years of Experience": "2 - 5 years",
         "Probation Period": "Not Specified",
-        "Contract Type": "Fixed-term",
+        "Contract Type": "Permanent",
         "Contract Duration": "Not specified",
         "Contract Extensible": "Yes",
-        "Minimum Education": "Secondary School",
+        "Minimum Education": "Bachelor's Degree",
         "Gender": "Any",
-        "Functional Area": "it, IT - Hardware, IT - Software",
+        "Functional Area": "IT - Hardware, IT - Software, Programme, Software engineering, software development, Web Designing, Web Development, Database Development, software analysis, software development, Programming, Website Designing, Web Developer, Web Designer",
         "Countries": "Afghanistan",
-        "Provinces": "Herat, Kandahar"
+        "Provinces": "Kabul, Kapisa, Parwan, Wardak, Logar, Nangarhar, Laghman, Panjshir, Baghlan, Bamyan, Ghazni, Paktika, Paktya, Khost, Konar, Nooristan, Badakhshan, Takhar, Kunduz, Samangan, Balkh, Sar-e-Pul, Ghor, Daykundi, Urozgan, Zabul, Kandahar, Jawzjan, Faryab, Helmand, Badghis, Herat, Farah, Nimroz, North Zone, East Zone, West Zone, South Zone"
       },
-      "scraped_at": "2026-01-18T21:34:16Z"
+      "scraped_at": "2026-01-18T20:14:48Z"
     }
   ],
   "tech_banking_jobs": [
