@@ -1,77 +1,13 @@
 {
-  "generated_at": "2026-02-22T05:32:49.371Z",
-  "today": "2026-02-22",
+  "generated_at": "2026-02-23T05:46:27.710Z",
+  "today": "2026-02-23",
   "total_jobs": 69,
   "new_count": 0,
-  "expiring_today_count": 2,
-  "expiring_soon_count": 3,
+  "expiring_today_count": 1,
+  "expiring_soon_count": 2,
   "tech_banking_count": 12,
   "new_jobs": [],
   "expiring_today": [
-    {
-      "url": "https://jobs.af/jobs/ipo-senior-engineer-g4Z-qwOwL",
-      "source": "jobs.af",
-      "title": "IPO Senior Engineer",
-      "company": "Afghan Wireless Communication Company",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Feb 22, 2026",
-      "closing_date": "2026-02-22",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "About Afghan Wireless Communication Company\n\nAfghan Wireless is Afghanistan’s first wireless communications company. When it began operations in 2002, we founded Afghanistan’s mobile communications industry by being the first enterprise to offer cell phone service to Afghan consumers and businesses. For well over a decade, Afghan Wireless has driven the rapid growth of our nation’s communications market, through its innovative development and deployment of global-class High-Definition (HD) Voice Communications, Internet, Data, and Mobile Payments Services. More than 6,000 people work for Afghan Wireless, and our Company is directly responsible for the creation of 100,000 jobs throughout Afghanistan.\n\nJob Summary\n\nThe applicant must have a working knowledge of Network and Security appliances. He/she should be familiar with core telecommunications and IP networks and have an advanced understanding of networking and security. \n\nDuties & Responsibilities\n\nTasks may involve some or all of the following:\n\nTroubleshoot daily activities and issues of the core network.\nAlarm setup/processes/review/resolution.\nDevice hardware/software maintenance and upgrades.\nFamiliar with BGP / ISIS / RIP and OSPF networking protocols.\nManage and supervise the BGP routing table and BGP peering with upstream, rout leaking.\nDaily health check-up of IPO nodes.\nFamiliarity with Juniper, Huawei, and Mikrotiks platforms.\nMust have hands-on experience with network protocols and security protocols.\nShould know networking architect and provide solutions on required bases.\nInstall and upgrade concept, process, and management of Network devices.\nAble to maintain monitoring systems (LibreNMS, CACTI, Solarwinds, and others).\nShould be familiar with RFC and Standard ISO standards.\nDevelop, manage, and test backup and recovery plans and work on Inventory DB.\nEnsure that storage and archiving procedures are functioning correctly.\nCapacity planning, basic knowledge of Mobility call flow i.e 2G/3G/LTE.\nWork closely with IP Wireless Engineers and IP Network Engineers.\nCommunicate regularly with technical, applications, and operational staff to ensure network migration, integrity, and security.\nGood communication behavior skills and work ethics.\n\nJob Requirements\n\nA bachelor's degree in computer science or IT.\nCCNP/JNCIP, JNCIA, or CCNA is a must.\nMinimum 3 years experience in a similar field.\nMust have knowledge and hands-on experience on MPLS, L2VPN, L3VPN, QoS, Traffic engineering, MPBGP, etc.\n\n\n\n\nSubmission Guideline\n\nThe interested candidates should fill out and submit the APPLICATION FORM with complete and correct information. To have access to the APPLICATION FORM, please copy and paste the link into your Web Browser.\n\n\n\n\nhttps://forms.gle/MReTZzaLkHeHUF1u9\n\n\n\n\nFunctional Area\nEngineering\nTelecommunication\nTelecome Engineering\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nApply Now",
-      "details": {
-        "Post Date": "Feb 10, 2026",
-        "Closing Date": "Feb 22, 2026",
-        "Reference": "AWCC/HR/26/VA/012",
-        "Number of Vacancies": "2",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "3 - 4 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Any",
-        "Functional Area": "Engineering, Telecommunication, Telecome Engineering, Computer Science",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-02-11T05:51:03Z"
-    },
-    {
-      "url": "https://jobs.af/jobs/information-comm-technology-associate-gs6-fixed-term-kandahar-19484-and-herat-19391",
-      "source": "jobs.af",
-      "title": "Information Comm. Technology Associate, GS6, Fixed Term, Kandahar (#19484) & Herat (#19391)",
-      "company": "UNICEF Afghanistan",
-      "location": "Multi Location",
-      "closing_date_raw": "Feb 22, 2026",
-      "closing_date": "2026-02-22",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "About UNICEF Afghanistan\n\nUNICEF works in some of the world’s toughest places, to reach the world’s most disadvantaged children. To save their lives. To defend their rights. To help them fulfill their potential. Across 190 countries and territories, we work for every child, everywhere, every day, to build a better world for everyone. And we never give up. For every child, Passion!\n\nJob Summary\n\nHow can you make a difference? \n\n\n\n\nPurpose for the job: ICT/T4D Associates will assist programme teams in the identification, assessment and integration of ICT and digital innovation into UNICEF programming; strengthening internal capacity to support T4D related initiatives; identifying and engaging with key partners; building and maintaining business relationships; applying reusable and replicable technical buildings blocks; and maximizing the potential for the scale-up and sustainability of technology and digital innovation for UNICEF programming.\n\n\n\n\n\n\n\nDuties & Responsibilities\n\nSummary of Key function, accountabilities and related duties/tasks\n\n﻿\n\nGeneral ICT/T4D Office Support:\nT4D Portfolio Coordination\nMinimal ICT Administration\n\nIf you would like to know more about this position, please review the complete Job Description here: JD/TOR- ICT Associate G-6\n\n\n\n\nJob Requirements\n\nTo qualify as an advocate for every child you will have…\n\n\n\n\nMinimum requirements:\n\nEducation:\n\nCompletion of Secondary education is required, supplemented with formal training in Computer Science, Information Systems, Telecommunications, Engineering.\n\nWork Experience:\n\nA minimum of six years of practical work experience in information technology, requiring systematic methods of troubleshooting and problem solving is required.\nA bachelor’s degree from a recognized academic institution in a relevant field may replace three years of related work experience. A master’s degree may replace an additional two years.\nITIL Foundation Certificate or equivalent customer support certification is an asset. \nExperience in providing assistance to users with IT products and services, and use of applications and diagnostic tools is required.\nPractical experience in providing technical and business Customer Support and Services is required.\nPractical experience and working knowledge of various computer platforms and applications are required.\n\nLanguage Requirements: \n\nFluency in English is required. Knowledge of another official UN language (Arabic, Chinese, French, Russian or Spanish) or a local language is an asset.\n\nDesirables:\n\nRelevant experience at country level, particularly in development, fragile settings and humanitarian contexts.\n\n\n\n\nSubmission Guideline\n\nRemarks:\n\n\n\n\nAs per Article 101, paragraph 3, of the Charter of the United Nations, the paramount consideration in the employment of the staff is the necessity of securing the highest standards of efficiency, competence, and integrity.\n\nUNICEF is committed to fostering an inclusive, representative, and welcoming workforce. For this position, eligible and suitable Female candidates are encouraged to apply.\n\nVacancy announcement is open to internal and external candidates. Priority will be given to staff in abolished posts and internal staff members.\n\nGovernment employees who are considered for employment with UNICEF are normally required to resign from their government positions before taking up an assignment with UNICEF. UNICEF reserves the right to withdraw an offer of appointment, without compensation, if a visa or medical clearance is not obtained, or necessary inoculation requirements are not met, within a reasonable period for any reason. \n\nUNICEF does not charge a processing fee at any stage of its recruitment, selection, and hiring processes (i.e., application stage, interview stage, validation stage, or appointment and training). UNICEF will not ask for applicants’ bank account information.\n\nHumanitarian action is a cross-cutting priority within UNICEF’s Strategic Plan. UNICEF is committed to stay and deliver in humanitarian contexts. Therefore, all staff, at all levels across all functional areas, can be called upon to be deployed to support humanitarian response, contributing to both strengthening resilience of communities and capacity of national authorities.\n\nAll UNICEF positions are advertised, and only shortlisted candidates will be contacted and advance to the next stage of the selection process. An internal candidate performing at the level of the post in the relevant functional area, or an internal/external candidate in the corresponding Talent Group, may be selected, if suitable for the post, without assessment of other candidates.\n\nCandidates who have applied previously do not need to reapply.\n\n\n\n\nAdditional information about working for UNICEF can be found here.\n\n\n\n\nApplicants are requested to apply through the provided link; Vacancies | UNICEF Careers\n\n\n\n\nApplications received via JOBS.AF online portal will not be given consideration.\n\n\n\n\nFunctional Area\nit\nIT - Hardware\nIT - Software\nCountries\nAfghanistan\nProvinces\nHerat\nKandahar\nApply Now",
-      "details": {
-        "Post Date": "Jan 18, 2026",
-        "Closing Date": "Feb 22, 2026",
-        "Reference": "589363",
-        "Number of Vacancies": "2",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "6 years",
-        "Probation Period": "Not Specified",
-        "Contract Type": "Fixed-term",
-        "Contract Duration": "Not specified",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Secondary School",
-        "Gender": "Any",
-        "Functional Area": "it, IT - Hardware, IT - Software",
-        "Countries": "Afghanistan",
-        "Provinces": "Herat, Kandahar"
-      },
-      "scraped_at": "2026-01-18T21:34:16Z"
-    }
-  ],
-  "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-re-announced-sUfhHafRd",
       "source": "jobs.af",
@@ -102,7 +38,9 @@
         "Provinces": "Kabul"
       },
       "scraped_at": "2026-02-03T05:32:39Z"
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/procurement-and-project-solutions-specialist-coo-support-or-remote-or-high-responsiveness-on-call",
       "source": "jobs.af",
