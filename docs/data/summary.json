@@ -1,48 +1,13 @@
 {
-  "generated_at": "2026-03-01T05:34:04.116Z",
-  "today": "2026-03-01",
+  "generated_at": "2026-03-02T05:32:38.901Z",
+  "today": "2026-03-02",
   "total_jobs": 69,
   "new_count": 0,
   "expiring_today_count": 1,
-  "expiring_soon_count": 1,
+  "expiring_soon_count": 0,
   "tech_banking_count": 12,
   "new_jobs": [],
   "expiring_today": [
-    {
-      "url": "https://jobs.af/jobs/network-engineer-Iq2yeQU-W",
-      "source": "jobs.af",
-      "title": "Network Engineer",
-      "company": "Yama Ramin Media production & Technology",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Mar 01, 2026",
-      "closing_date": "2026-03-01",
-      "apply_url": "mailto:hr@yrmpt.com",
-      "apply_emails": [
-        "hr@yrmpt.com"
-      ],
-      "apply_phones": [],
-      "description": "About Yama Ramin Media production & Technology\n\nYama Ramin Media Production and Technology Company (YRMPT) is a well-established media production and technology company, officially registered with the Ministry of Commerce and Industries of Afghanistan. With a strong presence across the country, YRMPT delivers innovative media and technology solutions in collaboration with a diverse range of national and international organizations.\n\nWe work closely with leading telecom operators, as well as international NGOs, development partners, and humanitarian organizations, and various United Nations agencies. Our projects span media production, digital solutions, communication campaigns, and technology-driven services, contributing to impactful and sustainable initiatives nationwide.\n\nAt YRMPT, we value professionalism, creativity, innovation, and teamwork. We provide a dynamic working environment that encourages learning, skill development, and growth, while offering opportunities to work on high-impact projects with reputable local and international partners.\n\nFor more information about our company, services, and portfolio, please visit www.yrmpt.com.\n\n\n\n\nJob Summary\n\nWe are seeking a skilled Network Engineer to design, implement, manage, and maintain our organization’s network infrastructure. The ideal candidate will ensure reliable, secure, and high-performance network connectivity to support business operations.\n\nDuties & Responsibilities\n\nDesign, install, configure, and maintain LAN, WAN, WLAN, and internet connectivity\nMonitor network performance and troubleshoot issues to ensure maximum uptime\nConfigure and manage routers, switches, firewalls, and load balancers\nImplement network security measures, including VPNs, firewalls, and access controls\nPerform network upgrades, patches, and capacity planning\nDiagnose and resolve hardware, software, and connectivity issues\nMaintain network documentation, diagrams, and standard operating procedures\nCollaborate with IT teams, vendors, and service providers\nEnsure compliance with security policies and best practices\n\n\n\n\nJob Requirements\n\nRequired Qualifications\n\nBachelor’s degree in Computer Science, Information Technology, or a related field\nProven experience 2-3 years as a Network Engineer or similar role\nStrong knowledge of TCP/IP, routing, switching, DNS, DHCP, and VLANs\nHands-on experience with Cisco, MikroTik, or similar networking equipment\nFamiliarity with network monitoring and troubleshooting tools\nUnderstanding of network security principles and protocols\nKnowledge of wireless technologies and network cabling\n\nPreferred Skills & Certifications\n\nCCNA / CCNP or equivalent certifications is a plus\nKnowledge of server side administration and deployment (Windows Server, Linux)\nExperience with cloud networking (AWS, Azure, or Google Cloud)\nStrong analytical and problem-solving skills\n\nSoft Skills\n\nExcellent communication and documentation skills\nAbility to work independently and as part of a team\nStrong time-management and multitasking abilities\nWillingness to work on-call or outside normal business hours if required.\n\n\n\n\nSubmission Guideline\n\nInterested Afghan candidates with the required qualification and experience should submit their applications electronically through hr@yrmpt.com email. To avoid confusions, disagreement and conflicts during recruitment process all applicants are required to clearly mention position title (Network Engineer) and vacancy announcement number (YRMPT-HR-069) in the subject lines of their emails. otherwise, their CV's will not be considered for this post.\n\nplease do not submit any other supporting documentation or educational certificates with your application. If you are short listed you will be asked to submit electronic copies of your educational certificates or in case, you are invited to written test you will be required to present the original certificate.\n\n\n\n\nFunctional Area\nIT - Software\nInformation Technology\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nhr@yrmpt.com\n\nApply Now",
-      "details": {
-        "Post Date": "Jan 31, 2026",
-        "Closing Date": "Mar 01, 2026",
-        "Reference": "YRMPT-HR-069",
-        "Number of Vacancies": "1",
-        "Salary Range": "As per company salary scale",
-        "Years of Experience": "2 - 3 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Permanent",
-        "Contract Duration": "1 year",
-        "Contract Extensible": "Yes",
-        "Minimum Education": "Bachelor's Degree",
-        "Gender": "Male",
-        "Functional Area": "IT - Software, Information Technology",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul"
-      },
-      "scraped_at": "2026-02-01T05:41:41Z"
-    }
-  ],
-  "expiring_soon": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
       "source": "jobs.af",
@@ -77,6 +42,7 @@
       "scraped_at": "2026-02-02T05:45:15Z"
     }
   ],
+  "expiring_soon": [],
   "tech_banking_jobs": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
