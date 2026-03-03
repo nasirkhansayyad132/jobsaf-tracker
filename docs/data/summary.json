@@ -1,48 +1,46 @@
 {
-  "generated_at": "2026-03-02T05:32:38.901Z",
-  "today": "2026-03-02",
+  "generated_at": "2026-03-03T05:30:14.948Z",
+  "today": "2026-03-03",
   "total_jobs": 69,
   "new_count": 0,
-  "expiring_today_count": 1,
-  "expiring_soon_count": 0,
+  "expiring_today_count": 0,
+  "expiring_soon_count": 1,
   "tech_banking_count": 12,
   "new_jobs": [],
-  "expiring_today": [
+  "expiring_today": [],
+  "expiring_soon": [
     {
-      "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
+      "url": "https://jobs.af/jobs/procurement-and-operations-specialist-remote-suEhktHso",
       "source": "jobs.af",
-      "title": "Senior Full Stack Developer (Reannounced)",
-      "company": "Aurum Afghanistan Financial Company",
-      "location": "Kabul, Afghanistan",
-      "closing_date_raw": "Mar 02, 2026",
-      "closing_date": "2026-03-02",
-      "apply_url": "mailto:jobs@aurumaf.com",
-      "apply_emails": [
-        "jobs@aurumaf.com"
-      ],
+      "title": "Procurement & Operations Specialist (Remote)",
+      "company": "COMSIS SOLUTIONS LLC",
+      "location": "Multi Location",
+      "closing_date_raw": "Mar 06, 2026",
+      "closing_date": "2026-03-06",
+      "apply_url": null,
+      "apply_emails": [],
       "apply_phones": [],
-      "description": "About Aurum Afghanistan Financial Company\n\nAurum Afghanistan Financial Company is a full-fledged electronic money institution regulated by the central bank of Afghanistan operating under the license No. EMI101006. In addition to our regulatory license, we are also equipped with license No. 78895 from the Ministry of industry and commerce of Afghanistan. We possess advanced technology infrastructure which enables our clients to access financial services through their mobile phones securely, quickly and conveniently. Our services are available to everyone, particularly individuals who may not have access to traditional banking services. We offer significant opportunities for improving the efficiency of digital financial services by expanding access and lowering transaction costs. We provide a customized electronic payment solution. Aurum Afghanistan facilitates digital financial transactions, which includes services such as mobile wallet to mobile wallet, bank 02 to mobile wallet, mobile wallet to bank, electricity and other utilities bill payments, merchant’s payments, AfPay card services, payments through PoS machines and other prospective electronic payments services.\n\nJob Summary\n\nThe Senior Full Stack Developer at AURUM is responsible for designing, building, and launching software, FinTech solutions, and API integrations. This person leads the Innovation and Development Unit and works to connect AURUM’s systems with third-party services like mobile operators, e-money providers and digital wallets. The role focuses on creating secure, scalable, and easy-to-use digital services that support AURUM’s digital goals and customer needs.\n\nDuties & Responsibilities\n\n1. Digital Innovation & Product Development\n\nManage internal FinTech projects like mobile apps, websites, digital wallets, and automation tools.\nSuggest and test new features to improve service quality and user experience.\n\n2. Software Development & Quality Control\n\nOversee the complete software development process using tools:\nFrontend: Angular, or React.\nBackend: Java, Spring Boot and relevant libraries\nEnsure all software meets high standards for security, performance, and compliance.\nSupervise testing (UAT), system launches, and update schedules.\n\n·      Design and optimize databases (Oracle) to support applications and ensure data integrity.\n\n·      Write efficient queries and manage database migrations.\n\n·      Ensure the ongoing development and enhancement of the existing AurumPay Mobile Money system.\n\n3. API Development & Third-Party Integration\n\nLead the creation of APIs (REST and SOAP) for both internal and external use.\nManage connections with mobile operators, digital wallets, EMIs, and external service providers.\nMaintain proper documentation and manage the full API lifecycle.\n\n4. System Design & Infrastructure Planning\n\nDesign technical systems and integration plans based on business needs.\nWork with teams across the organization to build scalable, efficient solutions.\nEnsure all systems connect properly with payment switches and gateways.\n\n5. Team Leadership & Technical Support\n\nUnderstand the needs of different departments and offer secure, reliable solutions.\nProvide training and guidance to technical team members.\nPromote and enforce agile development methods across the team.\n\n\n\n\nJob Requirements\n\nStrong knowledge of programming languages: Java, Spring Boot and relevant framework and libraries.\nExperience designing system architecture and working with APIs (REST/SOAP) and third-party services.\nFamiliar with microservices and the full software development lifecycle (SDLC).\nHands-on experience integrating with wallets, telecom operators, EMIs, and financial switches.\nComfortable working with Oracle databases.\nResponsible for deploying applications on Oracle WebLogic Server\nSkilled in using version control tools such as GitHub and GitLab.\nGood documentation and presentation skills.\nAble to manage multiple projects and adapt to changing priorities.\nAt least 2 years of experience in FinTech, software development, or technical integration.\nBachelor’s degree in Computer Science, IT, Software Engineering, or a related field.\nFamiliarity with mobile app development using Flutter or React Native is a plus\n\nSubmission Guideline\n\nHow to Apply: Interested candidates are invited to submit their resume and cover letter to jobs@aurumaf.com please indicate the job title and vacancy number\n\nFunctional Area\nIT - Software\nProgramme\nInformation Technology\nComputer Science\nNetworking\nTechnical\nData Security/Protection\nSoftware Development and Data Management\nFinancial and banking\nFinance and Banking\nAccounting/Finance and E Banking\nsoftware development\nsoftware analysis\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\njobs@aurumaf.com\n\nApply Now",
+      "description": "About COMSIS SOLUTIONS LLC\n\nAbout Us\n\n\n\n\nCOMSIS Solutions is a U.S.-based company located in Alexandria, Virginia. Since 2014, we have been providing advanced technology, cybersecurity, artificial intelligence, and logistics solutions. We work with U.S. Government agencies and deliver all our projects in full compliance with FAR/DFARS regulations. Our focus is on quality, compliance, on-time delivery, and transparency. COMSIS offers a professional and collaborative work environment with strong opportunities for growth and learning.\n\nJob Summary\n\nWe are seeking a highly motivated and independent Procurement & Operations Specialist to manage th e end-to-end procurement process for cur company. This role involves sourcing, negotiating, purchasing. vendor management, and resolving issues as they arise. You will work remotely and independently, often on-demand, to support different contracts and global supply chain need.\n\nDuties & Responsibilities\n\nHandle the complete procurement lifecycle from sourcing to purchasing.\n\nNegotiate pricing, terms, and lead times with vendors and supplier.\n\nRequest and collect quotations from vendors via phone and email.\n\nPlace purchase orders and track deliveries.\n\nPrepare and manage invoices, documentation, and compliance paperwork.\n\nResolve issues with vendors, logistics, or product availability.\n\nEnsure timely procurement based on project deadlines.\n\nPerform multitasking and versatile duties to support operations as needed.\n\nCommunicate directly with the management team regarding procurement status.\n\nMaintain organized records of purchases, contracts, and supplier communications.\n\nJob Requirements\n\nProven experience in procurement, purchasing, or vendor management.\n\nStrong communication skills, both written and verbal.\n\nAbility to negotiate effectively and close deals.\n\nMust be highly independent, proactive, and able to work without supervision.\n\nFlexible availability (not fixed to standard 9-5 hours).\n\nReliable laptop/computer and stable high-speed internet connection.\n\nStrong attention to detail and organizational skills.\n\nFast learner with a problem-solving mindset.\n\nComfortable with remote work and taking full responsibility for tasks.\n\nFluent in English.\n\nKnowledge and skills in IT to work with digital systems and toolsz\n\nSubmission Guideline\n\nFunctional Area\nIT - Software\nCountries\nAfghanistan\nProvinces\nKabul\nKapisa\nParwan\nWardak\nLogar\nNangarhar\nLaghman\nPanjshir\nBaghlan\nBamyan\nGhazni\nPaktika\nPaktya\nKhost\nKonar\nNooristan\nBadakhshan\nTakhar\nKunduz\nSamangan\nBalkh\nSar-e-Pul\nGhor\nDaykundi\nUrozgan\nZabul\nKandahar\nJawzjan\nFaryab\nHelmand\nBadghis\nHerat\nFarah\nNimroz\nNorth Zone\nEast Zone\nWest Zone\nSouth Zone\nApply Now",
       "details": {
-        "Post Date": "Feb 02, 2026",
-        "Closing Date": "Mar 02, 2026",
-        "Reference": "Aurum 038",
-        "Number of Vacancies": "1",
-        "Salary Range": "Salary is negotiable",
-        "Years of Experience": "2 years",
-        "Probation Period": "3 month",
-        "Contract Type": "Long-term",
+        "Post Date": "Nov 06, 2025",
+        "Closing Date": "Mar 06, 2026",
+        "Reference": "06564380",
+        "Number of Vacancies": "3",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "1 year",
+        "Probation Period": "Not Specified",
+        "Contract Type": "Permanent",
         "Contract Duration": "Not specified",
-        "Contract Extensible": "Yes",
+        "Contract Extensible": "No",
         "Minimum Education": "Bachelor's Degree",
         "Gender": "Any",
-        "Functional Area": "IT - Software, Programme, Information Technology, Computer Science, Networking, Technical, Data Security/Protection, Software Development and Data Management, Financial and banking, Finance and Banking, Accounting/Finance and E Banking, software development, software analysis",
+        "Functional Area": "IT - Software",
         "Countries": "Afghanistan",
-        "Provinces": "Kabul"
+        "Provinces": "Kabul, Kapisa, Parwan, Wardak, Logar, Nangarhar, Laghman, Panjshir, Baghlan, Bamyan, Ghazni, Paktika, Paktya, Khost, Konar, Nooristan, Badakhshan, Takhar, Kunduz, Samangan, Balkh, Sar-e-Pul, Ghor, Daykundi, Urozgan, Zabul, Kandahar, Jawzjan, Faryab, Helmand, Badghis, Herat, Farah, Nimroz, North Zone, East Zone, West Zone, South Zone"
       },
-      "scraped_at": "2026-02-02T05:45:15Z"
+      "scraped_at": "2026-01-18T20:14:48Z"
     }
   ],
-  "expiring_soon": [],
   "tech_banking_jobs": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
