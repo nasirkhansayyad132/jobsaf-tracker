@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-03-05T05:29:08.149Z",
-  "today": "2026-03-05",
+  "generated_at": "2026-03-06T05:28:11.294Z",
+  "today": "2026-03-06",
   "total_jobs": 69,
   "new_count": 0,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 1,
+  "expiring_today_count": 1,
+  "expiring_soon_count": 0,
   "tech_banking_count": 12,
   "new_jobs": [],
-  "expiring_today": [],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "url": "https://jobs.af/jobs/procurement-and-operations-specialist-remote-suEhktHso",
       "source": "jobs.af",
@@ -41,6 +40,7 @@
       "scraped_at": "2026-01-18T20:14:48Z"
     }
   ],
+  "expiring_soon": [],
   "tech_banking_jobs": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
