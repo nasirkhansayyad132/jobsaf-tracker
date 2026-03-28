@@ -1,14 +1,81 @@
 {
-  "generated_at": "2026-03-27T05:54:23.193Z",
-  "today": "2026-03-27",
+  "generated_at": "2026-03-28T05:04:51.731Z",
+  "today": "2026-03-28",
   "total_jobs": 69,
   "new_count": 0,
   "expiring_today_count": 0,
-  "expiring_soon_count": 0,
+  "expiring_soon_count": 2,
   "tech_banking_count": 12,
   "new_jobs": [],
   "expiring_today": [],
-  "expiring_soon": [],
+  "expiring_soon": [
+    {
+      "url": "https://jobs.af/jobs/it-system-manager",
+      "source": "jobs.af",
+      "title": "IT/ System Manager",
+      "company": "Park View Hotel Service",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "Mar 31, 2026",
+      "closing_date": "2026-03-31",
+      "apply_url": "mailto:Hr@parkviewhotel.af",
+      "apply_emails": [
+        "Hr@parkviewhotel.af"
+      ],
+      "apply_phones": [],
+      "description": "About Park View Hotel Service\n\nPark View Hotel Services is a professionally managed hospitality organization committed to delivering high-quality accommodation and exceptional guest services. The hotel operates with a strong focus on service excellence, comfort, and operational efficiency. Through well-maintained facilities, qualified staff, and customer-oriented standards, Park View Hotel Services aims to provide a refined and reliable experience for both business and leisure guests.\n\nJob Summary\n\nThe IT / System Manager is responsible for managing, maintaining, and securing all IT systems and technological infrastructure of the hotel. This role ensures the smooth operation of hotel management systems, networks, hardware, and software to support daily operations and enhance guest experience.\n\n\n\n\nDuties & Responsibilities\n\nIT Systems & Infrastructure\n\nManage and maintain hotel IT systems including PMS (Property Management System), POS, and reservation systems\nEnsure smooth operation of computer systems, servers, networks, and internet connectivity\nInstall, configure, and maintain hardware and software\n\n \n\nNetwork & Security\n\nMonitor network performance and ensure data security\nImplement IT security policies, backups, and disaster recovery plans\nProtect hotel systems from cyber threats and unauthorized access\n\nSupport & Troubleshooting\n\nProvide technical support to hotel staff across departments\nTroubleshoot system errors, hardware failures, and software issues\nCoordinate with external IT vendors and service providers\n\n \n\nReporting & Planning\n\nMaintain IT documentation, licenses, and system records\nPrepare IT reports and system performance updates for management\nRecommend system upgrades and technology improvements\n\nJob Requirements\n\nQualifications & Experience\n\nMinimum 3–5 years of experience in IT management or systems administration\nExperience in hotel or hospitality systems is a strong advantage\nKnowledge of PMS software, networking, and database management\n\nSkills & Competencies\n\nStrong problem-solving and troubleshooting skills\nKnowledge of network security, backups, and system administration\nAbility to work independently and handle multiple tasks\nStrong communication and coordination skills\n\n \n\nLanguage Requirements\n\nFluency in Dari or Pashto\nGood command of English (spoken and written)\n\nEducation:\n\nBachelor’s degree in Information Technology, Computer Science, or a related field\n\nSubmission Guideline\n\nInterested candidates are requested to submit their updated CV along with a cover letter. Only shortlisted candidates will be contacted for further steps. Incomplete applications will not be considered.\n\n \n\nSubmission Email:\n\nHr@parkviewhotel.af\n\n\n\n\nFunctional Area\nTechnology\nComputer Science\nCountries\nAfghanistan\nProvinces\nKabul\nSubmission Email\n\nHr@parkviewhotel.af\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 31, 2026",
+        "Closing Date": "Mar 31, 2026",
+        "Reference": "PVHS-ISM-01",
+        "Number of Vacancies": "1",
+        "Salary Range": "As per company salary scale",
+        "Years of Experience": "3 - 5 years",
+        "Probation Period": "3 month",
+        "Contract Type": "Fixed-term",
+        "Contract Duration": "1 year",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Male",
+        "Functional Area": "Technology, Computer Science",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul"
+      },
+      "scraped_at": "2026-01-31T05:12:59Z"
+    },
+    {
+      "url": "https://jobs.af/jobs/lead-software-engineer",
+      "source": "jobs.af",
+      "title": "Lead Software Engineer",
+      "company": "EnvoRail",
+      "location": "Multi Location",
+      "closing_date_raw": "Mar 31, 2026",
+      "closing_date": "2026-03-31",
+      "apply_url": "mailto:recruitment@envorail.com",
+      "apply_emails": [
+        "recruitment@envorail.com"
+      ],
+      "apply_phones": [],
+      "description": "About EnvoRail\n\nEnvoRail is a Canada based software engineering company in the early stages of building internal platforms and applications. We work across backend systems, web technologies, and mobile apps, with a focus on clean architecture and practical engineering decisions.\n\n\n\n\nWe are currently assembling our core technical team.\n\nJob Summary\n\nWe are seeking an experienced and highly motivated Lead Software Engineer to design, develop, and maintain secure, scalable web applications. The ideal candidate has a strong background in cloud infrastructure, modern development workflows, and backend development using Python. This role involves close collaboration with cross-functional teams to deliver high-quality solutions, implement robust authentication and authorization systems, and continuously improve application performance and reliability. Experience with mobile technologies is considered an asset.\n\nDuties & Responsibilities\n\nDesign, develop, test, and maintain scalable web applications and backend services\n\n\n\n\nBuild and manage cloud-based infrastructure using AWS and containerized environments with Docker\n\n\n\n\nImplement and maintain CI/CD pipelines to support automated testing, deployment, and delivery\n\n\n\n\nDevelop and maintain secure APIs and services using Python\n\n\n\n\nDesign and enforce authentication and authorization mechanisms to ensure application security and data protection\n\n\n\n\nCollaborate closely with product managers, designers, and other engineers to deliver high-quality solutions\n\n\n\n\nMonitor system performance, troubleshoot issues, and optimize applications for reliability and scalability\n\n\n\n\nParticipate in code reviews, ensuring adherence to best practices, security standards, and performance guidelines\n\n\n\n\nMaintain clear technical documentation for systems, processes, and workflows\n\n\n\n\nStay up to date with emerging technologies and contribute to continuous improvement initiatives\n\n\n\n\n(Optional/Asset) Contribute to mobile application development efforts using Swift, Kotlin, Xcode, or Android Studio\n\nJob Requirements\n\nRequired Qualifications:\n\nMinimum 5 years of professional experience in web development, working across both frontend and backend systems\n\n\n\n\nStrong experience with AWS, Docker, GitHub, and CI/CD pipelines\n\n\n\n\nProficiency in Python for backend development, scripting, and automation\n\n\n\n\nSolid understanding of authentication and authorization concepts, including secure identity management and access control (e.g., OAuth, JWT, RBAC)\n\n\n\n\nExperience building, deploying, and maintaining scalable, secure, and high-performance web applications\n\n\n\n\nFamiliarity with modern frontend and backend architectures, APIs, and best development practices\n\n\n\n\nStrong collaboration skills and experience working in team-based development environments\n\n\n\n\nPreferred Qualifications (Assets):\n\nExperience with Swift and Kotlin\n\n\n\n\nHands-on experience using Xcode and Android Studio\n\n﻿﻿\n\nExposure to iOS and Android mobile application development\n\n\n\n\nSubmission Guideline\n\nInterested candidates may submit their resume, cover letter and salary expectations to\n\n﻿recruitment@envorail.com\n\nFunctional Area\nIT - Software\nProgramme\nInformation Technology\nComputer Science\nGraphic Designer\nDatabase Developing\nEngineering\nData Management\nRailway Engineering\nCountries\nAfghanistan\nProvinces\nKabul\nKapisa\nParwan\nWardak\nLogar\nNangarhar\nLaghman\nPanjshir\nBaghlan\nBamyan\nGhazni\nPaktika\nPaktya\nKhost\nKonar\nNooristan\nBadakhshan\nTakhar\nKunduz\nSamangan\nBalkh\nSar-e-Pul\nGhor\nDaykundi\nUrozgan\nZabul\nKandahar\nJawzjan\nFaryab\nHelmand\nBadghis\nHerat\nFarah\nNimroz\nNorth Zone\nEast Zone\nWest Zone\nSouth Zone\nSubmission Email\n\nrecruitment@envorail.com\n\nApply Now",
+      "details": {
+        "Post Date": "Jan 27, 2026",
+        "Closing Date": "Mar 31, 2026",
+        "Reference": "EMP0002P1",
+        "Number of Vacancies": "1",
+        "Salary Range": "Salary is negotiable",
+        "Years of Experience": "5 - 10 years",
+        "Probation Period": "Not Specified",
+        "Contract Type": "Long-term",
+        "Contract Duration": "Not specified",
+        "Contract Extensible": "Yes",
+        "Minimum Education": "Bachelor's Degree",
+        "Gender": "Any",
+        "Functional Area": "IT - Software, Programme, Information Technology, Computer Science, Graphic Designer, Database Developing, Engineering, Data Management, Railway Engineering",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul, Kapisa, Parwan, Wardak, Logar, Nangarhar, Laghman, Panjshir, Baghlan, Bamyan, Ghazni, Paktika, Paktya, Khost, Konar, Nooristan, Badakhshan, Takhar, Kunduz, Samangan, Balkh, Sar-e-Pul, Ghor, Daykundi, Urozgan, Zabul, Kandahar, Jawzjan, Faryab, Helmand, Badghis, Herat, Farah, Nimroz, North Zone, East Zone, West Zone, South Zone"
+      },
+      "scraped_at": "2026-01-28T04:59:42Z"
+    }
+  ],
   "tech_banking_jobs": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
