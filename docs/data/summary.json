@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-03-30T05:16:05.807Z",
-  "today": "2026-03-30",
+  "generated_at": "2026-03-31T05:13:33.023Z",
+  "today": "2026-03-31",
   "total_jobs": 69,
   "new_count": 0,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 2,
+  "expiring_today_count": 2,
+  "expiring_soon_count": 0,
   "tech_banking_count": 12,
   "new_jobs": [],
-  "expiring_today": [],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "url": "https://jobs.af/jobs/it-system-manager",
       "source": "jobs.af",
@@ -76,6 +75,7 @@
       "scraped_at": "2026-01-28T04:59:42Z"
     }
   ],
+  "expiring_soon": [],
   "tech_banking_jobs": [
     {
       "url": "https://jobs.af/jobs/senior-full-stack-developer-reannounced-ZOIbrdyce",
