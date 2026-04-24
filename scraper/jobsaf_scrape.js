@@ -240,7 +240,9 @@ const TECHNICAL_KEYWORDS = [
   "software", "developer", "engineer", "data", "security", "it officer",
   "compute", "database", "network", "system", "programming", "analyst",
   "web", "devops", "cloud", "information technology", "programmer",
-  "information security", "technology", "ict", "tech", "digit", "help desk"
+  "information security", "technology", "ict", "tech", "digit", "help desk",
+  "motion", "graphic", "graphics", "production", "producer", "media",
+  "animation", "موشن", "گرافیک", "پرودکشن", "تولید", "انیمیشن"
 ];
 
 function isTechnical(job) {
@@ -387,7 +389,7 @@ async function main() {
       const detail = await fetchJson(`jobs/${encodeURIComponent(slug)}`);
       const job = detail.data || detail;
       if (!shouldKeep(job)) {
-        console.log(`[i] Skipped non-technical finance/banking job: ${job.title || slug}`);
+        console.log(`[i] Skipped non-target finance/banking job: ${job.title || slug}`);
         continue;
       }
       const record = buildRecord(job, nowISO);

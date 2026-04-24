@@ -1,12 +1,43 @@
 {
-  "generated_at": "2026-04-24T09:15:00.828Z",
+  "generated_at": "2026-04-24T09:27:29.689Z",
   "today": "2026-04-24",
-  "total_jobs": 21,
-  "new_count": 0,
+  "total_jobs": 22,
+  "new_count": 1,
   "expiring_today_count": 1,
-  "expiring_soon_count": 3,
-  "tech_banking_count": 3,
-  "new_jobs": [],
+  "expiring_soon_count": 4,
+  "tech_banking_count": 4,
+  "new_jobs": [
+    {
+      "url": "https://jobs.af/jobs/msul-mwshn-grafyk-w-prwdkshn-31",
+      "source": "jobs.af",
+      "title": "مسؤل موشن گرافیک و پرودکشن",
+      "company": "Bank-e-Millie Afghan",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "2026-04-27 00:00:00+00",
+      "closing_date": "2026-04-27",
+      "apply_url": "https://jobs.bma.com.af",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nمسئولیت های وظیفوی:\nتنظیم، کنترول و نظارت از تمام بخش های پرودکشن، ویدیوگرافی، طراحی برندینگ و ترتیب اعلانات تجارتی برای محصولات وخدمات بانک.\n\nDuties and Responsibilities\nشرح وظایف:\nطرح و ترتیب پلان کاری ماهوار، ربعوار و سالانه در مطابقت با برنامه های بانک ملی افغان جهت نیل به اهداف تعیین شده.\nطراحی و دیزاین متفاوت و خلاقانه اعلانات ویدیویی برای صفحات اجتماعی\nثبت صدا و تصویر (ویدیو) برداری برای اعلانات و بازاریابی\nطراحی دیزاین و ساخت انیمیشن ها\nنوشتن سکریپت برای محصولات و خدمات بانکی\nطراحی و دیزاین انفوگرافیک ها برای بخش های تبلیغاتی\nطراحی و ساخت ویدیوهای کوتاه برای محصولات و خدمات بانکی\nتامین ارتباط و همآهنگی با سایر بخش های مرتبط جهت پیشبرد امور محوله\nانتقال مهارت های مسلکی به شیوه تدویر ورکشاپ ها، سیمینار ها و آموزش های جریان کار به کارکنان مربوطه\nکنترول و نظارت از تمام بخش های پرودکشن\nتنظیم و کنترول سوند سیستم پرودکشن و برنامه ها بصورت دوامدار\nیکسان سازی دیزاین از محصولات وخدمات بانک طبق روش های جدید گرافیکی\nعکس برداری، ثبت ویدیو از رویدادهای مختلف بانک\nانجام سایر وظایف که از طرف مدیریت ومعاونیت محول میگردد\n\nJob Requirements\nتحصیلات، تجارت ومهارت های لازم:\nدرجه تحصیلی : دارای سند تحصیلی حد اقل لیسانس با داشتن سند های مختلف مانند بخش گرافیک انمیشن و غیره.\nتجارب لازم : حد اقل 5 سال تجربه کاری مرتبط به وظیفه\nمهارت های دیگر :\nA. کمپیوتر : پروگرام های افیس، آشنائی باسیستم های مورد استفاده بانک وسیستم های گرافیکی و مهارت های کمپیوتری در برنامه های ،Photoshop , Corel draw - Adobe Premiere pro, Illustrator, In Design,، Cinema 4D، Adobe After Effects، Adobe Audition و سایر برنامه های مرتبط\nB. لسان: زبان های رسمی کشور (دری، پشتو) و انگلیسی\nC. مراسلات اداری : مهارت کافی در مراسلات اداری داشته باشد\n\nSubmission Guidelines\nQualified and interested applicants are encouraged to apply online through the BMA Job Portal at https://jobs.bma.com.af before the closing date.\nOnly shortlisted candidates will be contacted for further process.",
+      "details": {
+        "Reference": "BMA//2026//12",
+        "Post Date": "2026-04-19 11:00:14.862+00",
+        "Closing Date": "2026-04-27 00:00:00+00",
+        "Functional Area": "Banking",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "contractor",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "5",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "link"
+      },
+      "scraped_at": "2026-04-24T09:25:30Z"
+    }
+  ],
   "expiring_today": [
     {
       "url": "https://jobs.af/jobs/senior-backend-developer-16",
@@ -42,6 +73,36 @@
     }
   ],
   "expiring_soon": [
+    {
+      "url": "https://jobs.af/jobs/msul-mwshn-grafyk-w-prwdkshn-31",
+      "source": "jobs.af",
+      "title": "مسؤل موشن گرافیک و پرودکشن",
+      "company": "Bank-e-Millie Afghan",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "2026-04-27 00:00:00+00",
+      "closing_date": "2026-04-27",
+      "apply_url": "https://jobs.bma.com.af",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nمسئولیت های وظیفوی:\nتنظیم، کنترول و نظارت از تمام بخش های پرودکشن، ویدیوگرافی، طراحی برندینگ و ترتیب اعلانات تجارتی برای محصولات وخدمات بانک.\n\nDuties and Responsibilities\nشرح وظایف:\nطرح و ترتیب پلان کاری ماهوار، ربعوار و سالانه در مطابقت با برنامه های بانک ملی افغان جهت نیل به اهداف تعیین شده.\nطراحی و دیزاین متفاوت و خلاقانه اعلانات ویدیویی برای صفحات اجتماعی\nثبت صدا و تصویر (ویدیو) برداری برای اعلانات و بازاریابی\nطراحی دیزاین و ساخت انیمیشن ها\nنوشتن سکریپت برای محصولات و خدمات بانکی\nطراحی و دیزاین انفوگرافیک ها برای بخش های تبلیغاتی\nطراحی و ساخت ویدیوهای کوتاه برای محصولات و خدمات بانکی\nتامین ارتباط و همآهنگی با سایر بخش های مرتبط جهت پیشبرد امور محوله\nانتقال مهارت های مسلکی به شیوه تدویر ورکشاپ ها، سیمینار ها و آموزش های جریان کار به کارکنان مربوطه\nکنترول و نظارت از تمام بخش های پرودکشن\nتنظیم و کنترول سوند سیستم پرودکشن و برنامه ها بصورت دوامدار\nیکسان سازی دیزاین از محصولات وخدمات بانک طبق روش های جدید گرافیکی\nعکس برداری، ثبت ویدیو از رویدادهای مختلف بانک\nانجام سایر وظایف که از طرف مدیریت ومعاونیت محول میگردد\n\nJob Requirements\nتحصیلات، تجارت ومهارت های لازم:\nدرجه تحصیلی : دارای سند تحصیلی حد اقل لیسانس با داشتن سند های مختلف مانند بخش گرافیک انمیشن و غیره.\nتجارب لازم : حد اقل 5 سال تجربه کاری مرتبط به وظیفه\nمهارت های دیگر :\nA. کمپیوتر : پروگرام های افیس، آشنائی باسیستم های مورد استفاده بانک وسیستم های گرافیکی و مهارت های کمپیوتری در برنامه های ،Photoshop , Corel draw - Adobe Premiere pro, Illustrator, In Design,، Cinema 4D، Adobe After Effects، Adobe Audition و سایر برنامه های مرتبط\nB. لسان: زبان های رسمی کشور (دری، پشتو) و انگلیسی\nC. مراسلات اداری : مهارت کافی در مراسلات اداری داشته باشد\n\nSubmission Guidelines\nQualified and interested applicants are encouraged to apply online through the BMA Job Portal at https://jobs.bma.com.af before the closing date.\nOnly shortlisted candidates will be contacted for further process.",
+      "details": {
+        "Reference": "BMA//2026//12",
+        "Post Date": "2026-04-19 11:00:14.862+00",
+        "Closing Date": "2026-04-27 00:00:00+00",
+        "Functional Area": "Banking",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "contractor",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "5",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "link"
+      },
+      "scraped_at": "2026-04-24T09:25:30Z"
+    },
     {
       "url": "https://jobs.af/jobs/finance-assistant-295",
       "source": "jobs.af",
@@ -141,6 +202,36 @@
     }
   ],
   "tech_banking_jobs": [
+    {
+      "url": "https://jobs.af/jobs/msul-mwshn-grafyk-w-prwdkshn-31",
+      "source": "jobs.af",
+      "title": "مسؤل موشن گرافیک و پرودکشن",
+      "company": "Bank-e-Millie Afghan",
+      "location": "Kabul, Afghanistan",
+      "closing_date_raw": "2026-04-27 00:00:00+00",
+      "closing_date": "2026-04-27",
+      "apply_url": "https://jobs.bma.com.af",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nمسئولیت های وظیفوی:\nتنظیم، کنترول و نظارت از تمام بخش های پرودکشن، ویدیوگرافی، طراحی برندینگ و ترتیب اعلانات تجارتی برای محصولات وخدمات بانک.\n\nDuties and Responsibilities\nشرح وظایف:\nطرح و ترتیب پلان کاری ماهوار، ربعوار و سالانه در مطابقت با برنامه های بانک ملی افغان جهت نیل به اهداف تعیین شده.\nطراحی و دیزاین متفاوت و خلاقانه اعلانات ویدیویی برای صفحات اجتماعی\nثبت صدا و تصویر (ویدیو) برداری برای اعلانات و بازاریابی\nطراحی دیزاین و ساخت انیمیشن ها\nنوشتن سکریپت برای محصولات و خدمات بانکی\nطراحی و دیزاین انفوگرافیک ها برای بخش های تبلیغاتی\nطراحی و ساخت ویدیوهای کوتاه برای محصولات و خدمات بانکی\nتامین ارتباط و همآهنگی با سایر بخش های مرتبط جهت پیشبرد امور محوله\nانتقال مهارت های مسلکی به شیوه تدویر ورکشاپ ها، سیمینار ها و آموزش های جریان کار به کارکنان مربوطه\nکنترول و نظارت از تمام بخش های پرودکشن\nتنظیم و کنترول سوند سیستم پرودکشن و برنامه ها بصورت دوامدار\nیکسان سازی دیزاین از محصولات وخدمات بانک طبق روش های جدید گرافیکی\nعکس برداری، ثبت ویدیو از رویدادهای مختلف بانک\nانجام سایر وظایف که از طرف مدیریت ومعاونیت محول میگردد\n\nJob Requirements\nتحصیلات، تجارت ومهارت های لازم:\nدرجه تحصیلی : دارای سند تحصیلی حد اقل لیسانس با داشتن سند های مختلف مانند بخش گرافیک انمیشن و غیره.\nتجارب لازم : حد اقل 5 سال تجربه کاری مرتبط به وظیفه\nمهارت های دیگر :\nA. کمپیوتر : پروگرام های افیس، آشنائی باسیستم های مورد استفاده بانک وسیستم های گرافیکی و مهارت های کمپیوتری در برنامه های ،Photoshop , Corel draw - Adobe Premiere pro, Illustrator, In Design,، Cinema 4D، Adobe After Effects، Adobe Audition و سایر برنامه های مرتبط\nB. لسان: زبان های رسمی کشور (دری، پشتو) و انگلیسی\nC. مراسلات اداری : مهارت کافی در مراسلات اداری داشته باشد\n\nSubmission Guidelines\nQualified and interested applicants are encouraged to apply online through the BMA Job Portal at https://jobs.bma.com.af before the closing date.\nOnly shortlisted candidates will be contacted for further process.",
+      "details": {
+        "Reference": "BMA//2026//12",
+        "Post Date": "2026-04-19 11:00:14.862+00",
+        "Closing Date": "2026-04-27 00:00:00+00",
+        "Functional Area": "Banking",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "contractor",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "5",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "link"
+      },
+      "scraped_at": "2026-04-24T09:25:30Z"
+    },
     {
       "url": "https://jobs.af/jobs/finance-assistant-295",
       "source": "jobs.af",
