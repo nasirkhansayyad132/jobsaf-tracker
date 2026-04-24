@@ -35,7 +35,7 @@ jobs:
           PUPPETEER_SKIP_DOWNLOAD: 'true'
         run: |
           cd scraper
-          npm install
+          npm ci
 
       - name: Create data directories
         run: |
