@@ -10,10 +10,12 @@
 
 const fs = require("fs");
 const path = require("path");
+const { normalizeJob } = require("./lib/normalize");
 
 const API_BASE = "https://api.jobs.af/public";
 const SITE_BASE = "https://jobs.af";
 const ITEMS_PER_PAGE = 10;
+const DEFAULT_RAW_URL = "https://jobs.af/jobs?search&category=IT%20-%20Hardware&category=IT%20-%20Software&category=IT%20Billing&category=Data%20Security%2FProtection&category=Software%20Development%20and%20Data%20Management&category=Software%20developer&category=Software%20engineering&category=software%20development%20&category=software%20development&category=software%20analysis&category=Database%20Developing&category=Data%20Management&category=Data%20Collection%20&category=Data%20Entry&category=Data%20analysis&category=Data%20Science&category=Computer%20Science&category=Computer%20Operator&category=Telecommunication%20&category=Computing&category=Database%20Development&category=Data%20Management,%20IT,%20Administration,%20GIS,%20Warehouse,%20Network&category=Data%20analysis%20&category=Banking&category=Finance%20and%20Banking";
 
 function arg(name, def = null) {
   const idx = process.argv.indexOf(name);
@@ -276,14 +278,20 @@ function buildRecord(job, nowISO) {
     ...extractEmails(description),
   ]).slice(0, 10);
 
-  return {
+  return normalizeJob({
     url: `${SITE_BASE}/jobs/${job.slug}`,
+    source_url: `${SITE_BASE}/jobs/${job.slug}`,
     source: "jobs.af",
     title: job.title || null,
     company: job.company?.name || null,
     location: formatLocation(job) || null,
     closing_date_raw: job.expiryDate || null,
     closing_date: closingDate,
+    category: areaNames(job).join(", ") || null,
+    job_type: job.workType || null,
+    gender: job.gender || null,
+    vacancies: job.numberOfVacancies || null,
+    salary: salaryText(job),
     apply_url: job.submissionLink || (job.submissionEmail ? `mailto:${job.submissionEmail}` : null),
     apply_emails: emails,
     apply_phones: extractPhones(description),
@@ -305,7 +313,7 @@ function buildRecord(job, nowISO) {
       "Submission Through": job.submissionThroughout || null,
     },
     scraped_at: nowISO,
-  };
+  });
 }
 
 async function collectJobSummaries(areaIds, maxPages) {
@@ -329,6 +337,53 @@ async function collectJobSummaries(areaIds, maxPages) {
   }
 
   return summaries;
+}
+
+async function scrapeJobsAf(options = {}) {
+  const rawUrl = options.rawUrl || DEFAULT_RAW_URL;
+  const maxPages = parseInt(options.maxPages || "80", 10);
+  const skipExistingUrls = options.skipExistingUrls || new Set();
+
+  const requestedCategories = parseCategories(rawUrl);
+  console.log("[i] Source: Jobs.af public API");
+  console.log("[i] Categories requested:", requestedCategories.length || "none");
+
+  const functionalAreas = await loadFunctionalAreas();
+  const areaIds = areaIdsForCategories(requestedCategories, functionalAreas);
+  console.log("[i] Matched functional areas:", areaIds.length || "none; scanning all active jobs");
+
+  const summaries = await collectJobSummaries(areaIds, maxPages);
+  const uniqueSummaries = Array.from(new Map(summaries.map(job => [job.slug || job.id, job])).values());
+  console.log("[i] Candidate jobs:", uniqueSummaries.length);
+
+  const nowISO = new Date().toISOString().replace(/\.\d+Z$/, "Z");
+  const records = [];
+
+  let i = 0;
+  for (const summary of uniqueSummaries) {
+    const slug = summary.slug;
+    if (!slug) continue;
+
+    const url = `${SITE_BASE}/jobs/${slug}`;
+    if (skipExistingUrls.has(url)) continue;
+
+    i++;
+    try {
+      const detail = await fetchJson(`jobs/${encodeURIComponent(slug)}`);
+      const job = detail.data || detail;
+      if (!shouldKeep(job)) {
+        console.log(`[i] Skipped non-target finance/banking job: ${job.title || slug}`);
+        continue;
+      }
+      const record = buildRecord(job, nowISO);
+      records.push(record);
+      console.log(`[job] ${i}/${uniqueSummaries.length} ${record.title || slug}`);
+    } catch (e) {
+      console.log(`[!] failed ${url}: ${String(e).slice(0, 160)}`);
+    }
+  }
+
+  return records;
 }
 
 async function main() {
@@ -361,44 +416,11 @@ async function main() {
     }
   }
 
-  const requestedCategories = parseCategories(rawUrl);
-  console.log("[i] Source: Jobs.af public API");
-  console.log("[i] Categories requested:", requestedCategories.length || "none");
-
-  const functionalAreas = await loadFunctionalAreas();
-  const areaIds = areaIdsForCategories(requestedCategories, functionalAreas);
-  console.log("[i] Matched functional areas:", areaIds.length || "none; scanning all active jobs");
-
-  const summaries = await collectJobSummaries(areaIds, maxPages);
-  const uniqueSummaries = Array.from(new Map(summaries.map(job => [job.slug || job.id, job])).values());
-  console.log("[i] Candidate jobs:", uniqueSummaries.length);
-
-  const nowISO = new Date().toISOString().replace(/\.\d+Z$/, "Z");
-  const newRecords = [];
-
-  let i = 0;
-  for (const summary of uniqueSummaries) {
-    const slug = summary.slug;
-    if (!slug) continue;
-
-    const url = `${SITE_BASE}/jobs/${slug}`;
-    if (existingUrls.has(url)) continue;
-
-    i++;
-    try {
-      const detail = await fetchJson(`jobs/${encodeURIComponent(slug)}`);
-      const job = detail.data || detail;
-      if (!shouldKeep(job)) {
-        console.log(`[i] Skipped non-target finance/banking job: ${job.title || slug}`);
-        continue;
-      }
-      const record = buildRecord(job, nowISO);
-      newRecords.push(record);
-      console.log(`[job] ${i}/${uniqueSummaries.length} ${record.title || slug}`);
-    } catch (e) {
-      console.log(`[!] failed ${url}: ${String(e).slice(0, 160)}`);
-    }
-  }
+  const newRecords = await scrapeJobsAf({
+    rawUrl,
+    maxPages,
+    skipExistingUrls: existingUrls,
+  });
 
   const dedupMap = new Map();
   [...existingJobs, ...newRecords].forEach(record => {
@@ -434,7 +456,14 @@ async function main() {
   console.log("CSV :", outCsv);
 }
 
-main().catch(e => {
-  console.error("[FATAL]", e);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(e => {
+    console.error("[FATAL]", e);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  DEFAULT_RAW_URL,
+  scrapeJobsAf,
+};

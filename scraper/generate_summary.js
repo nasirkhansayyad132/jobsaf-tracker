@@ -30,7 +30,7 @@ function generateSummary() {
     }
 
     const techBankingJobs = jobs.filter(j => {
-        const area = (j.details['Functional Area'] || "").toLowerCase();
+        const area = (j.details?.['Functional Area'] || "").toLowerCase();
         return area.includes("banking") || area.includes("finance");
     });
 

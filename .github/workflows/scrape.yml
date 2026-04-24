@@ -1,4 +1,4 @@
-name: Jobs.af Scraper
+name: Multi-Site Jobs Scraper
 
 on:
   workflow_dispatch:
@@ -17,8 +17,14 @@ jobs:
           node-version: '24'
           package-manager-cache: false
 
+      - name: Install Scraper dependencies
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: |
+          cd scraper
+          npm install
+
       - name: Create URL File
-        # Exactly mimicking your setup
         run: |
           cat > jobsaf_url.txt <<'EOF'
           https://jobs.af/jobs?search=&category=IT%20-%20Hardware&category=IT%20-%20Software&category=IT%20Billing&category=Data%20Security%2FProtection&category=Software%20Development%20and%20Data%20Management&category=Software%20developer&category=Software%20engineering&category=software%20development%20&category=software%20development&category=software%20analysis&category=Database%20Developing&category=Data%20Management&category=Data%20Collection%20&category=Data%20Entry&category=Data%20analysis&category=Data%20Science&category=Computer%20Science&category=Computer%20Operator&category=Telecommunication%20&category=Computing&category=Database%20Development&category=Data%20Management,%20IT,%20Administration,%20GIS,%20Warehouse,%20Network&category=Data%20analysis%20
@@ -28,10 +34,9 @@ jobs:
         run: |
           mkdir -p jobsaf_node/pages
           cd scraper
-          node jobsaf_scrape.js \
+          node scrape_all.js \
             --raw-url "$(tr -d '\r\n' < ../jobsaf_url.txt)" \
-            --max-pages 80 \
-            --only-open \
+            --max-pages 10 \
             --json ../jobsaf_node/pages/page_1.json \
             --csv ../jobsaf_node/pages/page_1.csv
 
