@@ -8,6 +8,18 @@ function emptyToNull(value) {
   const text = normSpace(value);
   return text ? text : null;
 }
+function cleanDescription(value) {
+  const text = String(value || "")
+    .replace(/\r/g, "")
+    .replace(/\u00a0/g, " ")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n[ \t]+/g, "\n")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
+  return text ? text : null;
+}
 
 function unique(values) {
   return Array.from(new Set((values || []).map(v => normSpace(v)).filter(Boolean)));
@@ -112,7 +124,7 @@ function normalizeJob(input) {
   const sourceUrl = emptyToNull(input.source_url) || emptyToNull(input.url);
   const url = emptyToNull(input.url) || sourceUrl;
   const details = normalizeDetails(input.details);
-  const description = emptyToNull(input.description);
+  const description = cleanDescription(input.description);  
   const textForContacts = [
     description,
     ...Object.values(details).map(v => String(v || "")),
@@ -160,6 +172,7 @@ function todayKabulISO() {
 }
 
 module.exports = {
+  cleanDescription,
   emptyToNull,
   extractEmails,
   extractPhones,
