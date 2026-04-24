@@ -1,57 +1,12 @@
 {
-  "generated_at": "2026-04-24T10:38:41.631Z",
+  "generated_at": "2026-04-24T11:55:17.971Z",
   "today": "2026-04-24",
   "total_jobs": 30,
-  "new_count": 1,
+  "new_count": 0,
   "expiring_today_count": 2,
   "expiring_soon_count": 7,
   "tech_banking_count": 5,
-  "new_jobs": [
-    {
-      "id": "6ad5b8723716a94a",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/15360/position-title-ai-instructor",
-      "url": "https://www.kaarobar.net/jobs/15360/position-title-ai-instructor",
-      "title": "AI Instructor",
-      "company": "Ansar Learning Academy",
-      "location": "Nangarhar",
-      "closing_date": "2026-05-31",
-      "closing_date_raw": "2026-05-31",
-      "category": "Education",
-      "job_type": "Full Time",
-      "gender": "Male",
-      "vacancies": "1",
-      "salary": "Good Salary Based on Experience and Education",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/15360/position-title-ai-instructor",
-      "apply_emails": [
-        "info@ansarrelief.org"
-      ],
-      "apply_phones": [],
-      "description": "About Ansar Learning Academy Ansar AI Vision Academy is a practical skills focused training institute aimed at preparing students for modern digital opportunities using AI English and computer skills. Ansar AI Vision Academy is a skills based learning center focused on preparing students for the future of work. The academy aims to provide practical education that helps students learn create and earn using modern technology and digital tools. Our Mission To equip students with practical skills in AI English and computer education so they can access global opportunities and build sustainable careers. Our Vision To become one of the leading practical technology and AI training centers in Afghanistan and help Afghan youth prepare for the digital future. Target Students Students Graduates Job seekers Professionals Anyone interested in learning AI and digital skills Job Descriptions We are looking for instructors who can teach practical skills and prepare students for real opportunities including freelancing and online work. Responsibilities AI Fundamentals Understanding AI basics How AI works in simple terms AI tools overview Prompt Engineering How to write effective prompts Business prompts Content creation prompts Automation prompts AI Tools for Work Using ChatGPT for business writing Using Canva AI design tools Using Midjourney for image creation Using CapCut AI video editing Using Notion AI for productivity AI for Freelancing AI content writing AI social media management AI logo design AI marketing content AI research and reports AI for Real Industries AI for business AI for agriculture AI for education AI for healthcare basics English Skills to Teach Focus on practical English not academic grammar heavy Speaking Skills Daily conversation Professional communication Interview preparation Client communication Freelancing English How to talk to clients Writing proposals Negotiation skills Professional messaging Business English Email writing Presentation skills Online meeting communication Customer support English Platform English Writing profiles on Upwork Writing gigs on Fiverr Communicating with international clients Computer Skills to Teach Start basic then move to practical Basic Computer Skills Typing skills File management Internet usage Email creation and use Office Skills Microsoft Word Microsoft Excel Microsoft PowerPoint Internet Skills Online research Cloud storage Google tools Online collaboration Freelancing Skills Creating Upwork profile Creating Fiverr profile Portfolio creation Online communication Project delivery Digital Skills Basic graphic design Video editing Social media management Online marketing basics Job Requirements Strong knowledge in AI English or Computer Ability to teach practical skills and real world applications Basic understanding of freelancing platforms like Upwork and Fiverr Good communication and teaching skills Responsible professional and motivated Ability to prepare lesson materials and guide students Submission Guidelines Updated CV/Resume (in English) Please send your resume by email and include in subject \"AI Instructor\" Only shortlisted candidates will be contacted for an interview. Applications without the required experience will not be considered. Please submit CV only. Submission Email info@ansarrelief.org Apply",
-      "details": {
-        "Job Location": "Nangarhar",
-        "Nationality": "National",
-        "Category": "Education",
-        "Employment Type": "Full Time",
-        "Salary": "Good Salary Based on Experience and Education",
-        "Vacancy Number": "1",
-        "No. Of Jobs": "1",
-        "City": "jalalabad",
-        "Organization": "Ansar Learning Academy",
-        "Years of Experience": "5",
-        "Contract Duration": "No Contract Required",
-        "Gender": "Male",
-        "Education": "BS & Higher",
-        "Close date": "2026-05-31",
-        "Closing Date": "2026-05-31",
-        "Functional Area": "Education",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar"
-      },
-      "scraped_at": "2026-04-24T10:38:31Z",
-      "also_found_on": []
-    }
-  ],
+  "new_jobs": [],
   "expiring_today": [
     {
       "id": "298b322ad5257457",
