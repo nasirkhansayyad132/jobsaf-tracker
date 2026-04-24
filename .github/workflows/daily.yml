@@ -5,15 +5,18 @@ on:
     # Run daily at 9:00 AM Kabul time (4:30 AM UTC)
     - cron: '30 4 * * *'
   workflow_dispatch:
-    # Allow manual trigger from GitHub UI
 
 permissions:
   contents: write
 
+concurrency:
+  group: daily-jobs-scrape
+  cancel-in-progress: false
+
 jobs:
   scrape-and-notify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -36,27 +39,30 @@ jobs:
 
       - name: Create data directories
         run: |
-          mkdir -p data docs/data
+          mkdir -p data docs/data scraper/debug
 
-      - name: Backup previous jobs for comparison (for 'New' jobs detection)
+      - name: Backup previous jobs for comparison
         run: |
           if [ -f docs/data/jobs.json ]; then
             cp docs/data/jobs.json data/last_jobs.json
-            echo "Backed up previous jobs.json to last_jobs.json"
+            echo "Backed up previous jobs.json to data/last_jobs.json"
           else
             echo "No previous jobs.json found"
+            echo "[]" > data/last_jobs.json
           fi
 
       - name: Run scraper
         run: |
           cd scraper
-          node scrape_all.js --json ../docs/data/jobs.json --csv ../data/jobs.csv --max-pages 10
-        continue-on-error: false
+          node scrape_all.js \
+            --json ../docs/data/jobs.json \
+            --csv ../data/jobs.csv \
+            --max-pages 10 \
+            --debug-dir debug
 
       - name: Generate Summary
         run: |
           cd scraper
-          # usage: node generate_summary.js <jobs_path> <summary_path> <last_jobs_path>
           node generate_summary.js ../docs/data/jobs.json ../docs/data/summary.json ../data/last_jobs.json
 
       - name: Set up Python for Email
@@ -72,24 +78,53 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: |
-          # The script expects summary.json as input
           python scripts/notify_email.py docs/data/summary.json
         continue-on-error: true
-      
+
+      - name: Upload scraper debug files
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: scraper-debug
+          path: |
+            scraper/debug/
+            docs/data/summary.json
+            data/jobs.csv
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Add data files
+
           git add docs/data/jobs.json docs/data/summary.json data/jobs.csv || true
-          
-          # Check if there are changes
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-            git commit -m "📊 Update jobs data: ${TIMESTAMP}"
-            git push
-            echo "Changes committed and pushed"
+            exit 0
           fi
+
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git commit -m "📊 Update jobs data: ${TIMESTAMP}"
+
+          echo "Fetching latest main before push..."
+          git fetch origin main
+
+          echo "Rebasing workflow commit on latest main..."
+          if ! git rebase origin/main; then
+            echo "Rebase conflict detected. Keeping generated data from this workflow."
+
+            git checkout --theirs docs/data/jobs.json || true
+            git checkout --theirs docs/data/summary.json || true
+            git checkout --theirs data/jobs.csv || true
+
+            git add docs/data/jobs.json docs/data/summary.json data/jobs.csv || true
+
+            GIT_EDITOR=true git rebase --continue || {
+              echo "Automatic rebase failed."
+              git rebase --abort || true
+              exit 1
+            }
+          fi
+
+          git push origin HEAD:main
+          echo "Changes committed and pushed"
