@@ -1,22 +1,19 @@
 #!/usr/bin/env node
 
-// compat helper: Puppeteer removed page.waitForTimeout in newer versions
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-
-
 /**
- * Jobs.af scraper for Termux using puppeteer-core + system chromium.
- * STEALTH MODE ADDED
+ * Jobs.af scraper.
+ *
+ * The Jobs.af web UI is now a client-rendered Next.js app. The old Puppeteer
+ * selector approach looked for /jobs/ anchors in the rendered page, but the
+ * page now loads job data from the public API instead. Use that API directly.
  */
 
 const fs = require("fs");
 const path = require("path");
 
-// --- MODIFIED: Imports for Stealth ---
-const puppeteer = require("puppeteer-extra");
-const StealthPlugin = require("puppeteer-extra-plugin-stealth");
-puppeteer.use(StealthPlugin());
-// -------------------------------------
+const API_BASE = "https://api.jobs.af/public";
+const SITE_BASE = "https://jobs.af";
+const ITEMS_PER_PAGE = 10;
 
 function arg(name, def = null) {
   const idx = process.argv.indexOf(name);
@@ -25,6 +22,7 @@ function arg(name, def = null) {
   if (!val || val.startsWith("--")) return def;
   return val;
 }
+
 function hasFlag(name) {
   return process.argv.includes(name);
 }
@@ -34,47 +32,43 @@ function ensureDir(p) {
   fs.mkdirSync(p, { recursive: true });
 }
 
-function stripPageParam(url) {
-  // patched: DO NOT remove page= (we control pagination externally)
-  return url;
-}
-
-function withPage(urlNoPage, pageNum) {
-  const u = new URL(urlNoPage);
-  u.searchParams.set("page", String(pageNum));
-  return u.toString();
-}
-
 function normSpace(s) {
   return (s || "").replace(/\s+/g, " ").trim();
 }
 
-function extractEmails(text) {
-  const t = text || "";
-  const re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
-  return Array.from(new Set(t.match(re) || [])).slice(0, 10);
+function normalizeLabel(s) {
+  return normSpace(s)
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[\/_-]+/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
-function extractPhones(text) {
-  const t = text || "";
-  // loose phone matcher: +93..., 07..., (0)7..., etc.
-  const re = /(\+?\d[\d\s().-]{7,}\d)/g;
-  const found = (t.match(re) || [])
-    .map(x => normSpace(x))
-    .filter(x => x.length >= 9 && x.length <= 25);
-  return Array.from(new Set(found)).slice(0, 10);
+function unique(values) {
+  return Array.from(new Set(values.filter(Boolean)));
+}
+
+function parseCategories(rawUrl) {
+  try {
+    const u = new URL(rawUrl);
+    return u.searchParams
+      .getAll("category")
+      .flatMap(value => value.split(","))
+      .map(value => normSpace(value))
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
 }
 
 function parseClosingDate(raw) {
-  // Try to pull YYYY-MM-DD from common formats; fallback null
   const r = (raw || "").trim();
   if (!r) return null;
 
-  // If already ISO-like:
   const iso = r.match(/\b(20\d{2})-(\d{2})-(\d{2})\b/);
   if (iso) return iso[0];
 
-  // Match: "Jan 24, 2026" / "January 24, 2026"
   const m = r.match(/\b([A-Za-z]{3,})\s+(\d{1,2}),?\s*(20\d{2})\b/);
   if (m) {
     const monthName = m[1].toLowerCase();
@@ -101,25 +95,40 @@ function parseClosingDate(raw) {
   return null;
 }
 
-// Technical keywords to filter jobs from broad categories (Banking, Finance, etc.)
-const TECHNICAL_KEYWORDS = [
-  "software", "developer", "engineer", "data", "security", "it officer",
-  "compute", "database", "network", "system", "programming", "analyst",
-  "web", "devops", "cloud", "information technology", "programmer", "information security",
-  "technology", "ict", "tech", "digit"
-];
-
-function isTechnical(title) {
-  if (!title) return false;
-  const t = title.toLowerCase();
-  return TECHNICAL_KEYWORDS.some(kw => t.includes(kw));
-}
-
 function todayISO() {
-  // Kabul is UTC+4:30
   const d = new Date();
   d.setMinutes(d.getMinutes() + 270);
-  return d.toISOString().split('T')[0];
+  return d.toISOString().split("T")[0];
+}
+
+function htmlToText(html) {
+  if (!html) return "";
+  return String(html)
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/(p|li|h[1-6]|div|ul|ol)>/gi, "\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#39;/g, "'")
+    .split("\n")
+    .map(normSpace)
+    .filter(Boolean)
+    .join("\n");
+}
+
+function extractEmails(text) {
+  const re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
+  return unique(text.match(re) || []).slice(0, 10);
+}
+
+function extractPhones(text) {
+  const re = /(\+?\d[\d\s().-]{7,}\d)/g;
+  return unique((text.match(re) || []).map(normSpace))
+    .filter(x => x.length >= 9 && x.length <= 25)
+    .slice(0, 10);
 }
 
 function toCSV(rows, fields) {
@@ -134,9 +143,195 @@ function toCSV(rows, fields) {
   ].join("\n");
 }
 
+async function fetchJson(endpoint, params = {}) {
+  const url = new URL(`${API_BASE}/${endpoint.replace(/^\/+/, "")}`);
+  for (const [key, value] of Object.entries(params)) {
+    if (value !== undefined && value !== null && value !== "") {
+      url.searchParams.set(key, String(value));
+    }
+  }
+
+  const res = await fetch(url, {
+    headers: {
+      "Accept": "application/json",
+      "User-Agent": "jobsaf-tracker/1.0 (+https://github.com/nasirkhansayyad132/jobsaf-tracker)",
+    },
+  });
+
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    throw new Error(`${res.status} ${res.statusText} for ${url}: ${body.slice(0, 200)}`);
+  }
+
+  return res.json();
+}
+
+async function loadFunctionalAreas() {
+  const res = await fetchJson("functional-areas");
+  return Array.isArray(res) ? res : (res.data || []);
+}
+
+function areaIdsForCategories(categories, functionalAreas) {
+  const byName = new Map();
+  for (const area of functionalAreas) {
+    byName.set(normalizeLabel(area.name), area.id);
+  }
+
+  const aliases = {
+    "software developer": ["software development", "it software"],
+    "software development and data management": ["software development", "data management"],
+    "database development": ["database developing", "database administration"],
+    "data management it administration gis warehouse network": [
+      "data management",
+      "information technology",
+      "database administration",
+      "gis geographic information system",
+      "networking",
+    ],
+    "computing": ["information technology", "computer science"],
+  };
+
+  const ids = [];
+  for (const category of categories) {
+    const normalized = normalizeLabel(category);
+    const candidates = [normalized, ...(aliases[normalized] || [])];
+
+    for (const candidate of candidates) {
+      const id = byName.get(candidate);
+      if (id) ids.push(id);
+    }
+  }
+
+  return unique(ids);
+}
+
+function areaNames(job) {
+  return unique((job.functionalAreas || [])
+    .map(item => item.area?.name || item.name)
+    .filter(Boolean));
+}
+
+function provinceNames(job) {
+  const provinces = (job.provinces || [])
+    .map(item => item.province?.name || item.name)
+    .filter(Boolean);
+  if (provinces.length > 1) return ["Multi Location"];
+  return provinces;
+}
+
+function formatLocation(job) {
+  const provinces = provinceNames(job);
+  const country = job.country?.name || job.country || "";
+  if (provinces.length) return country ? `${provinces.join(", ")}, ${country}` : provinces.join(", ");
+  return country || "";
+}
+
+function salaryText(job) {
+  if (job.salaryType === "fixed" && job.fixedSalary) return `${job.fixedSalary} ${job.currency || ""}`.trim();
+  if (job.salaryType === "range" && job.minimumSalary && job.maximumSalary) {
+    return `${job.minimumSalary} - ${job.maximumSalary} ${job.currency || ""}`.trim();
+  }
+  if (job.salaryType === "negotiable") return "Negotiable";
+  if (job.salaryType === "as_per_company_scale") return "Company salary scale";
+  return job.salaryType || null;
+}
+
+const TECHNICAL_KEYWORDS = [
+  "software", "developer", "engineer", "data", "security", "it officer",
+  "compute", "database", "network", "system", "programming", "analyst",
+  "web", "devops", "cloud", "information technology", "programmer",
+  "information security", "technology", "ict", "tech", "digit", "help desk"
+];
+
+function isTechnical(job) {
+  const haystack = [
+    job.title,
+    ...(areaNames(job)),
+  ].join(" ").toLowerCase();
+  return TECHNICAL_KEYWORDS.some(kw => haystack.includes(kw));
+}
+
+function shouldKeep(job) {
+  const areas = areaNames(job).join(" ").toLowerCase();
+  const restricted = areas.includes("banking") || areas.includes("finance");
+  return !restricted || isTechnical(job);
+}
+
+function buildDescription(job) {
+  return [
+    job.roleSummary && `Role Summary\n${htmlToText(job.roleSummary)}`,
+    job.dutiesAndResponsibilities && `Duties and Responsibilities\n${htmlToText(job.dutiesAndResponsibilities)}`,
+    job.jobRequirements && `Job Requirements\n${htmlToText(job.jobRequirements)}`,
+    job.submissionGuidelines && `Submission Guidelines\n${htmlToText(job.submissionGuidelines)}`,
+  ].filter(Boolean).join("\n\n");
+}
+
+function buildRecord(job, nowISO) {
+  const closingDate = parseClosingDate(job.expiryDate);
+  const description = buildDescription(job);
+  const emails = unique([
+    job.submissionEmail,
+    ...extractEmails(description),
+  ]).slice(0, 10);
+
+  return {
+    url: `${SITE_BASE}/jobs/${job.slug}`,
+    source: "jobs.af",
+    title: job.title || null,
+    company: job.company?.name || null,
+    location: formatLocation(job) || null,
+    closing_date_raw: job.expiryDate || null,
+    closing_date: closingDate,
+    apply_url: job.submissionLink || (job.submissionEmail ? `mailto:${job.submissionEmail}` : null),
+    apply_emails: emails,
+    apply_phones: extractPhones(description),
+    description: description || null,
+    details: {
+      Reference: job.reference || null,
+      "Post Date": job.publishDate || null,
+      "Closing Date": job.expiryDate || null,
+      "Functional Area": areaNames(job).join(", ") || null,
+      Countries: job.country?.name || null,
+      Provinces: provinceNames(job).join(", ") || null,
+      "Job Type": job.workType || null,
+      "Contract Type": job.contractType || null,
+      Gender: job.gender || null,
+      Education: job.educationLevel || null,
+      Experience: [job.minimumExperience, job.maximumExperience].filter(v => v !== null && v !== undefined).join(" - ") || null,
+      Salary: salaryText(job),
+      Vacancies: job.numberOfVacancies || null,
+      "Submission Through": job.submissionThroughout || null,
+    },
+    scraped_at: nowISO,
+  };
+}
+
+async function collectJobSummaries(areaIds, maxPages) {
+  const summaries = [];
+  let totalPages = 1;
+
+  for (let page = 1; page <= Math.min(maxPages, totalPages); page++) {
+    const params = {
+      itemsPerPage: ITEMS_PER_PAGE,
+      page,
+    };
+    if (areaIds.length) {
+      params["filter[functionalAreas.area.id]"] = `$in:${areaIds.join(",")}`;
+    }
+
+    const res = await fetchJson("jobs", params);
+    const jobs = res.data || [];
+    totalPages = res.meta?.totalPages || totalPages;
+    summaries.push(...jobs);
+    console.log(`    Page ${page}: Found ${jobs.length} jobs.`);
+  }
+
+  return summaries;
+}
+
 async function main() {
-  const RAW_URL = arg("--raw-url");
-  if (!RAW_URL) {
+  const rawUrl = arg("--raw-url");
+  if (!rawUrl) {
     console.log("Usage:");
     console.log("  node jobsaf_scrape.js --raw-url \"https://jobs.af/jobs?...\" --max-pages 80 --only-open --json out.json --csv out.csv");
     process.exit(1);
@@ -147,442 +342,94 @@ async function main() {
   const outJson = arg("--json", path.join(process.cwd(), "jobs.json"));
   const outCsv = arg("--csv", path.join(process.cwd(), "jobs.csv"));
   const debugDir = arg("--debug-dir", path.join(process.cwd(), "debug"));
-  const headful = hasFlag("--headful");
 
   ensureDir(path.dirname(outJson));
   ensureDir(path.dirname(outCsv));
   ensureDir(debugDir);
 
-  // --- MODIFIED: Logic to detect Termux vs GitHub Actions ---
-  // If we are on GitHub Actions, this path won't exist, so we switch to 'undefined' 
-  // (which tells Puppeteer to use the bundled Chrome it downloads)
-  let CHROME = process.env.CHROME_PATH || "/data/data/com.termux/files/usr/bin/chromium";
-
-  if (!fs.existsSync(CHROME) && !process.env.CHROME_PATH) {
-    // Fallback for GitHub Actions (Use Puppeteer Bundled Chrome)
-    CHROME = undefined;
-  }
-  // ----------------------------------------------------------
-
-  const urlNoPage = stripPageParam(RAW_URL);
-
-  console.log("[i] Chrome:", CHROME || "Puppeteer Bundled");
-  console.log("[i] Base URL:", urlNoPage);
-
-  const browser = await puppeteer.launch({
-    executablePath: CHROME,
-    headless: headful ? false : "new",
-    args: [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-      "--disable-gpu",
-      "--no-first-run",
-      "--no-default-browser-check",
-      "--disable-blink-features=AutomationControlled", // ADDED: Critical for Stealth
-    ],
-  });
-
-  const page = await browser.newPage();
-
-  // ADDED: Randomize viewport slightly for stealth
-  await page.setViewport({ width: 1920, height: 1080 });
-
-  await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-  );
-
-  async function goto(url) {
-    try {
-      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-    } catch {
-      await page.goto(url, { waitUntil: "load", timeout: 60000 });
-    }
-    await sleep(1200);
-  }
-
-  // --- MODIFIED: Load existing jobs for incremental check ---
   let existingJobs = [];
   const existingUrls = new Set();
   if (fs.existsSync(outJson)) {
     try {
-      existingJobs = JSON.parse(fs.readFileSync(outJson, 'utf-8'));
-      existingJobs.forEach(j => existingUrls.add(j.url));
+      existingJobs = JSON.parse(fs.readFileSync(outJson, "utf-8"));
+      existingJobs.forEach(job => existingUrls.add(job.url));
       console.log(`[i] Loaded ${existingJobs.length} existing jobs.`);
     } catch (e) {
       console.log(`[!] Failed to load existing jobs: ${e.message}`);
     }
   }
-  // ----------------------------------------------------------
 
-  // Page 1: detect total jobs and max pages
-  console.log("[1] Loading page 1...");
-  await goto(withPage(urlNoPage, 1));
-  await page.screenshot({ path: path.join(debugDir, "01_page1.png"), fullPage: true });
+  const requestedCategories = parseCategories(rawUrl);
+  console.log("[i] Source: Jobs.af public API");
+  console.log("[i] Categories requested:", requestedCategories.length || "none");
 
-  const totalJobs = await page.evaluate(() => {
-    const text = document.body ? document.body.innerText : "";
-    const m1 = text.match(/(\d+)\s+Available\s+Jobs?\b/i);
-    if (m1) return parseInt(m1[1], 10);
-    const m2 = text.match(/Available\s+Jobs?\s*[:(]?\s*(\d+)/i);
-    if (m2) return parseInt(m2[1], 10);
-    return null;
-  });
+  const functionalAreas = await loadFunctionalAreas();
+  const areaIds = areaIdsForCategories(requestedCategories, functionalAreas);
+  console.log("[i] Matched functional areas:", areaIds.length || "none; scanning all active jobs");
 
-  console.log("[i] Total:", (typeof totalJobs === "number" && totalJobs > 0) ? totalJobs : "(not detected)");
+  const summaries = await collectJobSummaries(areaIds, maxPages);
+  const uniqueSummaries = Array.from(new Map(summaries.map(job => [job.slug || job.id, job])).values());
+  console.log("[i] Candidate jobs:", uniqueSummaries.length);
 
-  let pages = Math.max(1, Math.ceil((totalJobs || 0) / 10));
-  pages = Math.min(pages, maxPages);
-  if (pages === 0) pages = 1;
-
-  console.log("[i] Pages to scan:", pages);
-
-  // Collect job links
-  const linksToScrape = new Set();
-  let stopEarly = false;
-
-  for (let p = 1; p <= pages; p++) {
-    if (stopEarly) break;
-
-    // Skip navigating to page 1 again if we are already there
-    if (p > 1) {
-      console.log(`[list] page ${p}/${pages}`);
-      const url = withPage(urlNoPage, p);
-      await goto(url);
-    }
-
-    // Scroll a bit
-    for (let i = 0; i < 3; i++) {
-      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-      await sleep(250);
-    }
-    await page.evaluate(() => window.scrollTo(0, 0));
-    await sleep(200);
-
-    const pageLinks = await page.evaluate(() => {
-      const out = [];
-      for (const a of document.querySelectorAll("a[href]")) {
-        const href = a.getAttribute("href") || "";
-        if (href.includes("/jobs/") && !href.includes("/jobs?")) out.push(href);
-      }
-      return out;
-    });
-
-    let newOnPage = 0;
-    for (const href of pageLinks) {
-      const abs = href.startsWith("http")
-        ? href
-        : ("https://jobs.af" + (href.startsWith("/") ? href : "/" + href));
-
-      // NEW: Check if we already know this job
-      if (!existingUrls.has(abs)) {
-        // ALWAYS keep if it's new
-        linksToScrape.add(abs);
-        newOnPage++;
-      }
-    }
-
-    console.log(`    Page ${p}: Found ${pageLinks.length} links. (${newOnPage} new)`);
-
-    // INCERENTAL LOGIC: If we found links on this page, but NONE are new,
-    // we assume we have reached the "known" territory and can stop.
-    if (pageLinks.length > 0 && newOnPage === 0) {
-      console.log(`[i] Increment Stop: All jobs on page ${p} are already known.`);
-      stopEarly = true;
-    }
-  }
-
-  console.log("[i] New links to scrape:", linksToScrape.size);
-
-  // Scrape job details for NEW links only
-  const jobPage = await browser.newPage();
-  await jobPage.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-  );
-
-  async function gotoJob(url) {
-    try {
-      await jobPage.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-    } catch {
-      await jobPage.goto(url, { waitUntil: "load", timeout: 60000 });
-    }
-    await sleep(900);
-  }
-
-  const newRecords = [];
   const nowISO = new Date().toISOString().replace(/\.\d+Z$/, "Z");
+  const newRecords = [];
 
   let i = 0;
-  for (const url of Array.from(linksToScrape)) {
+  for (const summary of uniqueSummaries) {
+    const slug = summary.slug;
+    if (!slug) continue;
+
+    const url = `${SITE_BASE}/jobs/${slug}`;
+    if (existingUrls.has(url)) continue;
+
     i++;
     try {
-      await gotoJob(url);
-
-      const data = await jobPage.evaluate(() => {
-        const text = (el) => {
-          if (!el || !el.innerText) return null;
-          const t = el.innerText.trim();
-          return t || null;
-        };
-
-        const root =
-          document.querySelector("div.md\\:grid.grid-cols-12.px-4.md\\:px-0") ||
-          document.querySelector("div.md\\:grid.grid-cols-12") ||
-          null;
-
-        const rootText = root ? root.innerText : "";
-
-        const header = root ? root.querySelector(".header") : null;
-        const title =
-          text(header && header.querySelector("h1")) ||
-          text(root && root.querySelector("h1")) ||
-          text(root && root.querySelector("h2")) ||
-          null;
-
-        const headerMeta = text(header && header.querySelector("p"));
-        let company = null;
-        let location = null;
-        if (headerMeta) {
-          const parts = headerMeta.split(",").map(s => s.trim()).filter(Boolean);
-          if (parts.length) {
-            company = parts[0];
-            if (parts.length > 1) location = parts.slice(1).join(", ");
-          }
-        }
-
-        if (!company && root) {
-          const about = Array.from(root.querySelectorAll("h3")).find(h => {
-            const t = text(h);
-            return t && t.toLowerCase().startsWith("about ");
-          });
-          if (about) {
-            const t = text(about);
-            if (t) company = t.replace(/^about\\s+/i, "").trim() || null;
-          }
-        }
-
-        if (!location && root) {
-          const jobTopItems = Array.from(
-            root.querySelectorAll(".job-top .text-sm.text-gray-400")
-          ).map(text).filter(Boolean);
-          for (const item of jobTopItems) {
-            if (/afghanistan/i.test(item)) {
-              location = item;
-              break;
-            }
-          }
-          if (!location) {
-            const loc = jobTopItems.find(
-              item => /[A-Za-z]/.test(item) && /,/.test(item) && !/^\\d+$/.test(item)
-            );
-            if (loc) location = loc;
-          }
-        }
-
-        const kv = {};
-        let closingRaw = null;
-        if (root) {
-          const right = root.querySelector(".right-section");
-          if (right) {
-            const rows = Array.from(right.querySelectorAll("div.flex.justify-between"));
-            for (const row of rows) {
-              const parts = Array.from(row.querySelectorAll("p")).map(text).filter(Boolean);
-              if (parts.length >= 2) {
-                const key = parts[0];
-                const value = parts.slice(1).join(" ").trim();
-                if (key && value) {
-                  kv[key] = value;
-                  if (!closingRaw && key.toLowerCase() === "closing date") closingRaw = value;
-                }
-              }
-            }
-          }
-        }
-        if (!closingRaw && rootText) {
-          const lines = rootText.split("\n").map(s => s.trim()).filter(Boolean);
-          for (let k = 0; k < lines.length; k++) {
-            const t = lines[k].toLowerCase();
-            if (t === "closing date" && lines[k + 1]) {
-              closingRaw = lines[k + 1];
-              break;
-            }
-          }
-          if (!closingRaw) {
-            const m = rootText.match(/Closing\\s+Date[:\\s]+([A-Za-z]{3,}\\s+\\d{1,2},?\\s*20\\d{2})/i);
-            if (m) closingRaw = m[1];
-          }
-        }
-
-        const pickPills = (label) => {
-          if (!root) return [];
-          const heads = Array.from(root.querySelectorAll("h3"));
-          const head = heads.find(h => {
-            const t = text(h);
-            return t && t.toLowerCase() === label.toLowerCase();
-          });
-          if (!head || !head.nextElementSibling) return [];
-          return Array.from(head.nextElementSibling.querySelectorAll(".text-xs"))
-            .map(text)
-            .filter(Boolean);
-        };
-
-        const functional = pickPills("Functional Area");
-        if (functional.length) kv["Functional Area"] = functional.join(", ");
-        const countries = pickPills("Countries");
-        if (countries.length) kv["Countries"] = countries.join(", ");
-        const provinces = pickPills("Provinces");
-        if (provinces.length) kv["Provinces"] = provinces.join(", ");
-
-        let applyUrl = null;
-        if (root) {
-          const mailto = root.querySelector('a[href^="mailto:"]');
-          if (mailto) applyUrl = mailto.href;
-          if (!applyUrl) {
-            const applyA = Array.from(root.querySelectorAll("a[href]")).find(a => {
-              const t = (a.innerText || "").toLowerCase();
-              return t.includes("apply");
-            });
-            if (applyA) applyUrl = applyA.href;
-          }
-        }
-
-        let desc = null;
-        let descEl = null;
-        if (root) {
-          const grid = root.querySelector(".grid.grid-cols-1.md\\:grid-cols-10");
-          if (grid) {
-            descEl = grid.querySelector(".col-span-5.md\\:col-span-7") || grid.querySelector("div");
-          }
-        }
-        if (!descEl && root) descEl = root;
-        if (descEl) {
-          const txt = (descEl.innerText || "").trim();
-          if (txt) desc = txt;
-        }
-
-        const fullText = rootText;
-
-        return {
-          title,
-          company,
-          location,
-          closingRaw,
-          applyUrl,
-          kv,
-          desc,
-          fullText,
-        };
-      });
-
-      const fullText = data.fullText || "";
-      const emails = extractEmails(fullText);
-      const phones = extractPhones(fullText);
-
-      const closingDate = parseClosingDate(data.closingRaw);
-
-      const rec = {
-        url,
-        source: "jobs.af",
-        title: data.title || null,
-        company: data.company || data.kv.Company || data.kv.company || null,
-        location: data.location || data.kv.Location || data.kv.location || data.kv.Provinces || null,
-        closing_date_raw: data.closingRaw || data.kv["Closing Date"] || data.kv["closing date"] || null,
-        closing_date: closingDate,
-        apply_url: data.applyUrl || null,
-        apply_emails: emails,
-        apply_phones: phones,
-        description: data.desc || null,
-        details: data.kv || {},
-        scraped_at: nowISO,
-      };
-
-      // SELECTIVE FILTERING
-      const categories = (rec.details['Functional Area'] || "").toLowerCase();
-      const isRestricted = categories.includes("banking") || categories.includes("finance");
-
-      if (isRestricted) {
-        // Only keep if title is technical 
-        if (isTechnical(rec.title)) {
-          newRecords.push(rec);
-          const shown = rec.title ? rec.title.slice(0, 60) : "No title";
-          console.log(`[job] ${i}/${linksToScrape.size} ${shown} (Technical Banking)`);
-        } else {
-          console.log(`[i] Skipped non-technical banking job: ${rec.title}`);
-        }
-      } else {
-        // Normal IT category - keep everything
-        newRecords.push(rec);
-        const shown = rec.title ? rec.title.slice(0, 60) : "No title";
-        console.log(`[job] ${i}/${linksToScrape.size} ${shown} (IT Category)`);
+      const detail = await fetchJson(`jobs/${encodeURIComponent(slug)}`);
+      const job = detail.data || detail;
+      if (!shouldKeep(job)) {
+        console.log(`[i] Skipped non-technical finance/banking job: ${job.title || slug}`);
+        continue;
       }
-
+      const record = buildRecord(job, nowISO);
+      newRecords.push(record);
+      console.log(`[job] ${i}/${uniqueSummaries.length} ${record.title || slug}`);
     } catch (e) {
-      console.log(`[!] failed ${url}: ${String(e).slice(0, 120)}`);
+      console.log(`[!] failed ${url}: ${String(e).slice(0, 160)}`);
     }
   }
 
-  // MERGE: New + Existing
-  let merged = [...newRecords, ...existingJobs];
-
-  // Filter only-open logic (applied to EVERYTHING now)
-  let out = merged;
-  if (onlyOpen) {
-    const today = todayISO();
-    out = merged.filter(r => {
-      // Keep if no date, or date is in future
-      if (!r.closing_date) return true;
-      return r.closing_date >= today;
-    });
-    console.log(`[i] only-open: kept ${out.length}/${merged.length} (removed expired)`);
-  }
-
-  // Deduplicate just in case (prefer new)
   const dedupMap = new Map();
-  // Reverse: data at end overwrites data at start. 
-  // We want NEW to overwrite OLD. 
-  // 'existingJobs' is OLD. 'newRecords' is NEW.
-  // merged = new + old. 
-  // Wait, if I do `new + old`, and map iterates:
-  // 1. new (written to map)
-  // 2. old (if dup, overwrites new?? NO. We want NEW to stay.)
-  // Better: `[...existingJobs, ...newRecords]` -> Old then New.
-  // Last write wins.
+  [...existingJobs, ...newRecords].forEach(record => {
+    if (record && record.url) dedupMap.set(record.url, record);
+  });
 
-  const finalSequence = [...existingJobs, ...newRecords];
-  finalSequence.forEach(r => dedupMap.set(r.url, r));
-  out = Array.from(dedupMap.values());
-
-  // Re-apply filter if needed on the set? No, verify correctness.
+  let out = Array.from(dedupMap.values());
   if (onlyOpen) {
     const today = todayISO();
-    out = out.filter(r => !r.closing_date || r.closing_date >= today);
+    const before = out.length;
+    out = out.filter(record => !record.closing_date || record.closing_date >= today);
+    console.log(`[i] only-open: kept ${out.length}/${before} (removed expired)`);
   }
 
-  // Sort by scrape date descending (newest first)
   out.sort((a, b) => (b.scraped_at || "").localeCompare(a.scraped_at || ""));
 
-  // Save JSON
   fs.writeFileSync(outJson, JSON.stringify(out, null, 2), "utf-8");
 
-  // Save CSV
   const fields = [
-    "title", "company", "location", "closing_date", "apply_url", "url", "source", "scraped_at",
-    "closing_date_raw", "apply_emails", "apply_phones"
+    "title", "company", "location", "closing_date", "apply_url", "url", "source",
+    "scraped_at", "closing_date_raw", "apply_emails", "apply_phones"
   ];
-  const rows = out.map(r => ({
-    ...r,
-    apply_emails: (r.apply_emails || []).join(" | "),
-    apply_phones: (r.apply_phones || []).join(" | "),
+  const rows = out.map(record => ({
+    ...record,
+    apply_emails: (record.apply_emails || []).join(" | "),
+    apply_phones: (record.apply_phones || []).join(" | "),
   }));
   fs.writeFileSync(outCsv, toCSV(rows, fields), "utf-8");
-
-  await browser.close();
 
   console.log("\nDone.");
   console.log(`Scraped New: ${newRecords.length}, Total Saved: ${out.length}`);
   console.log("JSON:", outJson);
   console.log("CSV :", outCsv);
-  console.log("Debug:", debugDir);
 }
 
 main().catch(e => {

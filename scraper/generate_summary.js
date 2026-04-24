@@ -27,8 +27,6 @@ function generateSummary() {
         const lastJobs = JSON.parse(fs.readFileSync(lastJobsFile, 'utf8'));
         const lastUrls = new Set(lastJobs.map(j => j.url));
         newJobs = jobs.filter(j => !lastUrls.has(j.url));
-        const todayStr = new Date().toISOString().split('T')[0];
-        newJobs = jobs.filter(j => j.scraped_at && j.scraped_at.startsWith(todayStr));
     }
 
     const techBankingJobs = jobs.filter(j => {
