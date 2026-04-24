@@ -2,3 +2,4 @@ scraper/debug/*.html
 scraper/debug/*.txt
 scraper/debug/*.json
 scraper/node_modules/
+scraper/node_modules/
