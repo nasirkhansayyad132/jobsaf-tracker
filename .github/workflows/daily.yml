@@ -96,6 +96,25 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          echo "Saving generated files outside repo..."
+          mkdir -p /tmp/job-data
+          cp docs/data/jobs.json /tmp/job-data/jobs.json || true
+          cp docs/data/summary.json /tmp/job-data/summary.json || true
+          cp data/jobs.csv /tmp/job-data/jobs.csv || true
+
+          echo "Fetching latest main..."
+          git fetch origin main
+
+          echo "Resetting local checkout to latest origin/main..."
+          git reset --hard origin/main
+          git clean -fd
+
+          echo "Restoring generated files..."
+          mkdir -p docs/data data
+          cp /tmp/job-data/jobs.json docs/data/jobs.json || true
+          cp /tmp/job-data/summary.json docs/data/summary.json || true
+          cp /tmp/job-data/jobs.csv data/jobs.csv || true
+
           git add docs/data/jobs.json docs/data/summary.json data/jobs.csv || true
 
           if git diff --staged --quiet; then
@@ -105,26 +124,6 @@ jobs:
 
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
           git commit -m "📊 Update jobs data: ${TIMESTAMP}"
-
-          echo "Fetching latest main before push..."
-          git fetch origin main
-
-          echo "Rebasing workflow commit on latest main..."
-          if ! git rebase origin/main; then
-            echo "Rebase conflict detected. Keeping generated data from this workflow."
-
-            git checkout --theirs docs/data/jobs.json || true
-            git checkout --theirs docs/data/summary.json || true
-            git checkout --theirs data/jobs.csv || true
-
-            git add docs/data/jobs.json docs/data/summary.json data/jobs.csv || true
-
-            GIT_EDITOR=true git rebase --continue || {
-              echo "Automatic rebase failed."
-              git rebase --abort || true
-              exit 1
-            }
-          fi
 
           git push origin HEAD:main
           echo "Changes committed and pushed"
