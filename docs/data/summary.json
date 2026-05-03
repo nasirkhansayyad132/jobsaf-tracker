@@ -1,59 +1,145 @@
 {
-  "generated_at": "2026-05-02T05:24:28.039Z",
-  "today": "2026-05-02",
-  "total_jobs": 28,
-  "new_count": 1,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 6,
+  "generated_at": "2026-05-03T05:38:42.459Z",
+  "today": "2026-05-03",
+  "total_jobs": 31,
+  "new_count": 3,
+  "expiring_today_count": 1,
+  "expiring_soon_count": 8,
   "tech_banking_count": 1,
   "new_jobs": [
     {
-      "id": "460ae7e5ff9477fc",
-      "source": "wazifaha",
-      "source_url": "https://wazifaha.org/jobs/27127/position-title-business-opportunity-developer-entrepreneur-in-residence",
-      "url": "https://wazifaha.org/jobs/27127/position-title-business-opportunity-developer-entrepreneur-in-residence",
-      "title": "Business Opportunity Developer / Entrepreneur in Residence",
-      "company": "Omar Kheyaam Sina Group – Logistics (OKS)",
-      "location": "Kabul",
-      "closing_date": "2026-05-04",
-      "closing_date_raw": "2026-05-04",
-      "category": "Business Development Strategy-Planning",
+      "id": "6fd1bae627eed8c7",
+      "source": "acbar",
+      "source_url": "https://www.acbar.org/jobs/142241/business-developer-market-linkage-officer.jsp",
+      "url": "https://www.acbar.org/jobs/142241/business-developer-market-linkage-officer.jsp",
+      "title": "Business Developer & Market Linkage Officer",
+      "company": "(CHA), Coordination of Humanitarian Assistance موسسه همکاری",
+      "location": "Helmand Kandahar Nimruz Oruzgan Zabul",
+      "closing_date": "2026-05-05",
+      "closing_date_raw": "2026-05-05",
+      "category": "Other",
       "job_type": "Full Time",
       "gender": "Male",
       "vacancies": "1",
-      "salary": "Result Base (with negotiation)",
-      "apply_url": "https://wazifaha.org/jobs/apply/27127/position-title-business-opportunity-developer-entrepreneur-in-residence",
+      "salary": "CHA, Salary Scale",
+      "apply_url": "https://www.acbar.org/jobs/142241/business-developer-market-linkage-officer.jsp",
+      "apply_emails": [],
+      "apply_phones": [
+        "0729128571"
+      ],
+      "description": "About (CHA), Coordination of Humanitarian Assistance موسسه همکاری\nCoordination of Humanitarian Assistance (CHA) is a non-governmental, non-profitable, and non-political Afghan NGO, working since 1987 mainly in agriculture, health, education, and infrastructure sectors in more vulnerable areas of the country. CHA is working through the implementation of Emergency, rehabilitation, and development projects for emergency aid for war, famine, and natural disaster-affected families in the field, to assist with the rehabilitation of rural and urban life, and to work with communities for sustainable development in Afghanistan.\nCore Commitments and Expectations from Candidates:\nCHA is dedicated to creating an environment where all staff members are committed to our core values and principles. We believe that our employees play a crucial role in maintaining the integrity and excellence of our organization. Therefore, we have outlined the following core commitments and expectations that all candidates must adhere to:\nAdherence to CHA's Policies and Procedures: All candidates must adhere to CHA's policies and procedures, these guidelines are designed to ensure a safe, fair, and efficient working environment. Compliance with these policies is fundamental to maintaining the standards and quality of our operation\nProtection from Sexual Exploitation and Abuse (PSEA): CHA has zero tolerance for sexual exploitation, sexual harassment and abuse. All candidates, employees, associates, and partners must comply with the PSEA policy.\nEthical Conduct and Integrity: Candidates are expected to maintain high standards of ethical conduct and integrity in all their professional dealings. This includes avoiding conflicts of interest, maintaining confidentiality, and adhering to anti-fraud and anti-corruption guidelines​​.\nCommitment to Non-Discrimination and Diversity: CHA is committed to fostering a diverse and inclusive work environment. Candidates must respect and promote diversity and non-discrimination based on race, gender, age, or any other protected characteristic​​.\nChild Protection: Candidates must adhere to the Child Protection Policy, ensuring the safety and well-being of children in all CHA activities.\nEnvironmental and Social Safeguards: Candidate must follow CHA's Environmental and Social Safeguard Policy to minimize environmental impact and ensure sustainable practices in all projects and operations​​.\nConfidentiality and Data Protection: Candidates are required to maintain the confidentiality of all CHA data and information.\nAll selected candidates will be expected to adhere to these standards and principles. To ensure compliance, candidates will undergo rigorous reference and background checks. These checks will include the verification of academic credentials and employment history. Selected candidates may also be required to provide additional information to facilitate these checks.\nBy joining CHA, candidates commit to these core values and contribute to our mission of providing humanitarian assistance with the highest level of integrity and professionalism. We look forward to welcoming dedicated individuals who share our commitment to making a positive impact.\n\nJob Description\n• Develop and regularly update work plans and implementation schedules for all livelihood-related projects.\n• Lead and oversee the execution of MSME development, carpet weaving, value chain strengthening, teacher training, computer learning, and cash-for-work initiatives.\n• Provide technical expertise, guidance, and mentoring to project teams, trainers, and implementing partners.\n• Coordinate closely with provincial teams, government departments, local authorities, and community leaders, while maintaining strong collaboration with UNHCR focal points on planning, reporting, and monitoring.\n• Monitor project activities to ensure quality, effectiveness, sustainability, and timely delivery.\n• Collect, analyze, and document data, success stories, and beneficiary feedback for inclusion in reports.\n• Prepare and submit high-quality progress reports (weekly, monthly, and quarterly) in line with project manager and donor (UNHCR) requirements.\n• Strengthen the capacity of field staff through technical support and ongoing mentoring.\n• Conduct other relevant tasks and duties\n\nJob Requirements\n• Bachelor’s degree in Agriculture, and business administration(Master’s degree strongly preferred).\n• Minimum of 5 years of proven experience in implementing livelihood programs, particularly MSME and agriculture-focused initiatives.\n• Preference will be given to candidates from the relevant provinces.\n• Demonstrated experience working with returnees, IDPs, and vulnerable groups in complex and challenging contexts.\n• Strong technical knowledge of MSME development, carpet weaving, value chain strengthening, teacher training, computer literacy, and cash-for-work programming.\n• Prior experience with UNHCR-funded projects or other international donor-funded programs is highly desirable.\n• Proficiency in English, Dari, and Pashto.\n• Excellent communication, coordination, and report-writing skills.\n• Strong organizational, analytical, and problem-solving abilities.\n• Willingness and ability to travel regularly to field sites across the northern provinces.\n\nSubmission Guideline\nInterested and qualified candidates should send us their information using the link below.\nhttps://manage.cha-net.org/jobs/69f1f0d807ef81075da21324\nfor more information please contact to this number: 0729128571\n\nSubmission Email\nPlease use the above link in the Submission Guideline section",
+      "details": {
+        "Location": "Helmand, Kandahar, Nimruz, Oruzgan, Zabul",
+        "Nationality": "Afghan",
+        "Category": "Other",
+        "Employment Type": "Full Time",
+        "Salary": "CHA, Salary Scale",
+        "Vacancy Number": "HRM-503",
+        "No. of Jobs": "1",
+        "City": "Kandahar",
+        "Organization": "(CHA), Coordination of Humanitarian Assistance موسسه همکاری",
+        "Experience": "5 Years",
+        "Contract Duration": "2 Months With possible extension",
+        "Gender": "Male",
+        "Education": "Bachelor",
+        "Closing Date": "2026-05-05",
+        "Post Date": "2026-05-03",
+        "Functional Area": "Other",
+        "Job Type": "Full Time",
+        "Source": "ACBAR",
+        "Job Location": "Helmand Kandahar Nimruz Oruzgan Zabul",
+        "No. Of Jobs": "1",
+        "Years of Experience": "5 Years",
+        "Close date": "2026-05-05"
+      },
+      "scraped_at": "2026-05-03T05:38:24Z",
+      "also_found_on": [
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/28270/position-title-business-developer-market-linkage-officer"
+        }
+      ]
+    },
+    {
+      "id": "7de5d2a856f54209",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/it-services-management-assistant-16",
+      "url": "https://jobs.af/jobs/it-services-management-assistant-16",
+      "title": "IT Services Management Assistant",
+      "company": "The First MicroFinanceBank - Afghanistan",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-05-05",
+      "closing_date_raw": "2026-05-05 00:00:00+00",
+      "category": "Information Technology",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "mailto:vacancies@fmfb.com.af",
       "apply_emails": [
-        "hrdept.oks@gmail.com"
+        "vacancies@fmfb.com.af"
       ],
       "apply_phones": [],
-      "description": "About Omar Kheyaam Sina Group – Logistics (OKS)\nOKS Group Logistics is a fully Afghan-owned and registered private company established in 2007 in Kabul, Afghanistan. With over 17 years of experience in logistics, supply chain management, procurement, transportation, and automotive spare parts distribution, the company has built a strong operational presence across Kabul and multiple provinces.\nServing private enterprises and institutional clients, OKS delivers reliable, timely, and cost-effective solutions through structured operational systems, established procurement networks, and professional management practices.\nAs part of its strategic growth and expansion into new local and international business sectors, OKS Group Logistics is strengthening its strategic planning and venture development capacity. The company is committed to identifying sustainable investment opportunities, developing scalable business models, and expanding into high-potential markets beyond its current core operations.\n\nJob Description\nThe Mission:\nWe are looking for an entrepreneurial-minded professional who can identify and develop new business opportunities in the local market and scale them toward international markets.\nThis role is not about writing business plans. Instead, we seek someone who can think strategically, recognize market gaps, and develop profitable business ideas that can grow locally and eventually expand beyond Afghanistan.\nThe selected candidate will work closely with company leadership to propose new ventures, evaluate their potential, and help launch viable businesses. The company is willing to invest directly in strong and scalable business ideas.\n\nJob Requirements\nKey Deliverables:\n- Identify new business opportunities and market gaps in the local market\n- Develop innovative business ideas with strong growth potential\n- Analyze feasibility, market demand, and competition\n- Design strategies to expand successful businesses into regional and international markets\n- Present new venture concepts to company leadership\n- Support the development and launch of approved ventures\n- Monitor market trends and identify long-term growth opportunities\nWe Require Proof of Success (Not Just Experience)\n• Strong portfolio with at least 3 business plans personally developed that resulted in:\n– A funded startup or business venture, OR\n– Successful internal approval and implementation, OR\n– Securing a loan, investor, or financial support\n• Strong financial capability in forecasting, budgeting, and building solid financial models in Excel\n• Clear understanding of viable sectors in Afghanistan such as logistics, trade, agriculture, manufacturing, services, and emerging markets\n• Minimum Bachelor’s degree in Business Administration, Finance, Economics, or related field (MBA is an advantage)\n• Good English communication skills for preparing professional business documents and presentations\n• Strong analytical mindset with the ability to evaluate ideas realistically and focus on high-return opportunities\nWhat We Offer\n• Result Base (negotiable based on proven ability)\n• Performance-based incentives for each approved and implemented business plan\n• Direct company investment in selected and approved business ideas\n• A central strategic role with direct contribution to company growth and expansion\n• Opportunity to turn ideas into real, operating businesses with measurable results and international growth potential\n\nSubmission Guidelines\nTo Apply – Demonstrate Your Skill\nSend the following to [Your Email Address] with the subject line:\n“OKS-BPA-2026-02 [Your Name]”\n1) Your updated CV\n2) A 1–2 page sample executive summary for a realistic business opportunity in Afghanistan (Important)\n3) A short list describing 3 business plans you have developed and their outcomes (e.g., investment secured, business launched, project implemented) (Important)\nOnly complete applications will be reviewed. We are looking for a results-driven professional who can transform ideas into practical, profitable ventures.",
+      "description": "Role Summary\nThe facility of technical support to Branches and HO users by performing remote through Telephone, Ticketing system, and Onsite support.\n\nDuties and Responsibilities\nProviding first-level support contact and conveying IT solutions to the branches and HO department’s inquiries and issues.\nProperly escalate unresolved queries to the next level of IT support/Unit.\nTrack, Route, and redirect problems to correct IT resources.\nEnsure to Keep updating users/requesters’ Tickets on the Ticketing system.\nWalk users through problem-solving processes.\nFollow up with users/requesters to provide feedback and see problems through a proper resolution.\nUtilize better user service skills and exceed customer’s/requester’s expectations.\nEnsure proper recording, documentation, and closures of the reports are in place.\nAny other identical tasks assigned by the respective supervisor/s.\n\nJob Requirements\nA university degree in IT field or Computer Sciences fields.\nA minimum of 2 years’ experience in IT troubleshooting or functional role.\nAbility to communicate, written and orally, in English and Dari/Pashto.\nAbility to work in a systematic and well-organized manner, with technical skills.\nAbility to have IT Troubleshooting, Computer Configurations, and Hardware repair skills.\nAbility to Travel in Fields/Provinces where FMFB operates.\n\nSubmission Guidelines\nIf you meet the above requirements, we are encouraging you to apply for this position. Please send us your CV along with a cover letter via email at ( vacancies@fmfb.com.af ).\nPlease make sure that your email includes the vacancy ID as the subject line.\nNote that, only the candidates who are meeting the requirements of the position will be shortlisted.\nFor more information, Please visit our website: https://www.fmfb.com.af/jobs/it-services-management-assistant/",
       "details": {
-        "Location": "Kabul",
-        "Nationality": "Afghan",
-        "Category": "Business Development Strategy-Planning",
-        "Employment Type": "Full Time",
-        "Salary": "Result Base (with negotiation)",
-        "Vacancy Number": "OKS-BPA-2026-02",
-        "No. of Jobs": "1",
-        "City": "Kabul",
-        "Organization": "Omar Kheyaam Sina Group – Logistics (OKS)",
-        "Experience": "5-8 Years of direct experience",
-        "Contract Duration": "1 Year (Extendable)",
-        "Gender": "Male",
-        "Education": "Minimum Bachelor’s degree in Business Administration, Finance, Economics, or related field (MBA is an advantage)",
-        "Closing Date": "2026-05-04",
-        "Post Date": "2026-03-09",
-        "Functional Area": "Business Development Strategy-Planning",
-        "Job Type": "Full Time",
-        "Source": "Wazifaha"
+        "Reference": "FMFB-SA-0041-2026",
+        "Post Date": "2026-05-03 03:59:42.164+00",
+        "Closing Date": "2026-05-05 00:00:00+00",
+        "Functional Area": "Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "2 - 3",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "email"
       },
-      "scraped_at": "2026-05-02T05:24:26Z",
+      "scraped_at": "2026-05-03T05:38:15Z",
+      "also_found_on": []
+    },
+    {
+      "id": "86267e10a07881ef",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/uiux-designer-16",
+      "url": "https://jobs.af/jobs/uiux-designer-16",
+      "title": "UI/UX Designer",
+      "company": "Arfoon",
+      "location": "Kunduz, Afghanistan",
+      "closing_date": "2026-08-02",
+      "closing_date_raw": "2026-08-02 00:00:00+00",
+      "category": "Graphic Design, Project Design, Software Development",
+      "job_type": "full_time",
+      "gender": "any",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "https://forms.gle/WUm4QD7TasNMwLqw7",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nArfoon.com is looking for a strategic and user-focused UI/UX Designer to join our product team. As a growing software company building solutions in accounting, health, and enterprise systems, we need a designer who thinks beyond visuals—someone who understands users, simplifies complexity, and drives product usability.\n\nDuties and Responsibilities\nDesign intuitive and scalable user experiences for web and mobile applications\nCreate wireframes, user flows, and interactive prototypes\nTranslate business requirements into clean, user-centered designs\nCollaborate closely with developers and product stakeholders\nImprove usability and consistency across all Arfoon products\nConduct basic user research and iterate based on feedback\nMaintain and evolve design systems and UI standards\n\nJob Requirements\nStrong proficiency in English communication and online research\nExpertise in UI/UX tools such as Figma (preferred), Adobe XD, or Sketch\nDeep understanding of UX principles, usability, and interaction design\nAbility to create wireframes, prototypes, and user journeys\nStrong attention to detail and structured design thinking\nExperience working with developers and handing off designs effectively\nFamiliarity with design systems and component-based design\nBasic understanding of HTML/CSS (bonus, not required)\n\nSubmission Guidelines\nGo to the following link:\nhttps://forms.gle/WUm4QD7TasNMwLqw7\nAnd fill the form",
+      "details": {
+        "Reference": "UI/UX2",
+        "Post Date": "2026-05-02 08:30:17.89+00",
+        "Closing Date": "2026-08-02 00:00:00+00",
+        "Functional Area": "Graphic Design, Project Design, Software Development",
+        "Countries": "Afghanistan",
+        "Provinces": "Kunduz",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "any",
+        "Education": "bachelor",
+        "Experience": "1",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "link"
+      },
+      "scraped_at": "2026-05-03T05:38:15Z",
       "also_found_on": []
     }
   ],
-  "expiring_today": [],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "id": "e9a2a351f754a768",
       "source": "jobs.af",
@@ -121,7 +207,9 @@
           "url": "https://www.kaarobar.net/jobs/15236/position-title-country-it-business-solutions-officer"
         }
       ]
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "460ae7e5ff9477fc",
       "source": "wazifaha",
@@ -273,6 +361,63 @@
         {
           "source": "wazifaha",
           "url": "https://wazifaha.org/jobs/27691/position-title-full-stack-developer-re-announced"
+        },
+        {
+          "source": "kaarobar",
+          "url": "https://www.kaarobar.net/jobs/14943/position-title-full-stack-developer-re-announced"
+        }
+      ]
+    },
+    {
+      "id": "6fd1bae627eed8c7",
+      "source": "acbar",
+      "source_url": "https://www.acbar.org/jobs/142241/business-developer-market-linkage-officer.jsp",
+      "url": "https://www.acbar.org/jobs/142241/business-developer-market-linkage-officer.jsp",
+      "title": "Business Developer & Market Linkage Officer",
+      "company": "(CHA), Coordination of Humanitarian Assistance موسسه همکاری",
+      "location": "Helmand Kandahar Nimruz Oruzgan Zabul",
+      "closing_date": "2026-05-05",
+      "closing_date_raw": "2026-05-05",
+      "category": "Other",
+      "job_type": "Full Time",
+      "gender": "Male",
+      "vacancies": "1",
+      "salary": "CHA, Salary Scale",
+      "apply_url": "https://www.acbar.org/jobs/142241/business-developer-market-linkage-officer.jsp",
+      "apply_emails": [],
+      "apply_phones": [
+        "0729128571"
+      ],
+      "description": "About (CHA), Coordination of Humanitarian Assistance موسسه همکاری\nCoordination of Humanitarian Assistance (CHA) is a non-governmental, non-profitable, and non-political Afghan NGO, working since 1987 mainly in agriculture, health, education, and infrastructure sectors in more vulnerable areas of the country. CHA is working through the implementation of Emergency, rehabilitation, and development projects for emergency aid for war, famine, and natural disaster-affected families in the field, to assist with the rehabilitation of rural and urban life, and to work with communities for sustainable development in Afghanistan.\nCore Commitments and Expectations from Candidates:\nCHA is dedicated to creating an environment where all staff members are committed to our core values and principles. We believe that our employees play a crucial role in maintaining the integrity and excellence of our organization. Therefore, we have outlined the following core commitments and expectations that all candidates must adhere to:\nAdherence to CHA's Policies and Procedures: All candidates must adhere to CHA's policies and procedures, these guidelines are designed to ensure a safe, fair, and efficient working environment. Compliance with these policies is fundamental to maintaining the standards and quality of our operation\nProtection from Sexual Exploitation and Abuse (PSEA): CHA has zero tolerance for sexual exploitation, sexual harassment and abuse. All candidates, employees, associates, and partners must comply with the PSEA policy.\nEthical Conduct and Integrity: Candidates are expected to maintain high standards of ethical conduct and integrity in all their professional dealings. This includes avoiding conflicts of interest, maintaining confidentiality, and adhering to anti-fraud and anti-corruption guidelines​​.\nCommitment to Non-Discrimination and Diversity: CHA is committed to fostering a diverse and inclusive work environment. Candidates must respect and promote diversity and non-discrimination based on race, gender, age, or any other protected characteristic​​.\nChild Protection: Candidates must adhere to the Child Protection Policy, ensuring the safety and well-being of children in all CHA activities.\nEnvironmental and Social Safeguards: Candidate must follow CHA's Environmental and Social Safeguard Policy to minimize environmental impact and ensure sustainable practices in all projects and operations​​.\nConfidentiality and Data Protection: Candidates are required to maintain the confidentiality of all CHA data and information.\nAll selected candidates will be expected to adhere to these standards and principles. To ensure compliance, candidates will undergo rigorous reference and background checks. These checks will include the verification of academic credentials and employment history. Selected candidates may also be required to provide additional information to facilitate these checks.\nBy joining CHA, candidates commit to these core values and contribute to our mission of providing humanitarian assistance with the highest level of integrity and professionalism. We look forward to welcoming dedicated individuals who share our commitment to making a positive impact.\n\nJob Description\n• Develop and regularly update work plans and implementation schedules for all livelihood-related projects.\n• Lead and oversee the execution of MSME development, carpet weaving, value chain strengthening, teacher training, computer learning, and cash-for-work initiatives.\n• Provide technical expertise, guidance, and mentoring to project teams, trainers, and implementing partners.\n• Coordinate closely with provincial teams, government departments, local authorities, and community leaders, while maintaining strong collaboration with UNHCR focal points on planning, reporting, and monitoring.\n• Monitor project activities to ensure quality, effectiveness, sustainability, and timely delivery.\n• Collect, analyze, and document data, success stories, and beneficiary feedback for inclusion in reports.\n• Prepare and submit high-quality progress reports (weekly, monthly, and quarterly) in line with project manager and donor (UNHCR) requirements.\n• Strengthen the capacity of field staff through technical support and ongoing mentoring.\n• Conduct other relevant tasks and duties\n\nJob Requirements\n• Bachelor’s degree in Agriculture, and business administration(Master’s degree strongly preferred).\n• Minimum of 5 years of proven experience in implementing livelihood programs, particularly MSME and agriculture-focused initiatives.\n• Preference will be given to candidates from the relevant provinces.\n• Demonstrated experience working with returnees, IDPs, and vulnerable groups in complex and challenging contexts.\n• Strong technical knowledge of MSME development, carpet weaving, value chain strengthening, teacher training, computer literacy, and cash-for-work programming.\n• Prior experience with UNHCR-funded projects or other international donor-funded programs is highly desirable.\n• Proficiency in English, Dari, and Pashto.\n• Excellent communication, coordination, and report-writing skills.\n• Strong organizational, analytical, and problem-solving abilities.\n• Willingness and ability to travel regularly to field sites across the northern provinces.\n\nSubmission Guideline\nInterested and qualified candidates should send us their information using the link below.\nhttps://manage.cha-net.org/jobs/69f1f0d807ef81075da21324\nfor more information please contact to this number: 0729128571\n\nSubmission Email\nPlease use the above link in the Submission Guideline section",
+      "details": {
+        "Location": "Helmand, Kandahar, Nimruz, Oruzgan, Zabul",
+        "Nationality": "Afghan",
+        "Category": "Other",
+        "Employment Type": "Full Time",
+        "Salary": "CHA, Salary Scale",
+        "Vacancy Number": "HRM-503",
+        "No. of Jobs": "1",
+        "City": "Kandahar",
+        "Organization": "(CHA), Coordination of Humanitarian Assistance موسسه همکاری",
+        "Experience": "5 Years",
+        "Contract Duration": "2 Months With possible extension",
+        "Gender": "Male",
+        "Education": "Bachelor",
+        "Closing Date": "2026-05-05",
+        "Post Date": "2026-05-03",
+        "Functional Area": "Other",
+        "Job Type": "Full Time",
+        "Source": "ACBAR",
+        "Job Location": "Helmand Kandahar Nimruz Oruzgan Zabul",
+        "No. Of Jobs": "1",
+        "Years of Experience": "5 Years",
+        "Close date": "2026-05-05"
+      },
+      "scraped_at": "2026-05-03T05:38:24Z",
+      "also_found_on": [
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/28270/position-title-business-developer-market-linkage-officer"
         }
       ]
     },
@@ -312,6 +457,46 @@
         "Submission Through": "link"
       },
       "scraped_at": "2026-04-24T09:10:05Z",
+      "also_found_on": []
+    },
+    {
+      "id": "7de5d2a856f54209",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/it-services-management-assistant-16",
+      "url": "https://jobs.af/jobs/it-services-management-assistant-16",
+      "title": "IT Services Management Assistant",
+      "company": "The First MicroFinanceBank - Afghanistan",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-05-05",
+      "closing_date_raw": "2026-05-05 00:00:00+00",
+      "category": "Information Technology",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "mailto:vacancies@fmfb.com.af",
+      "apply_emails": [
+        "vacancies@fmfb.com.af"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary\nThe facility of technical support to Branches and HO users by performing remote through Telephone, Ticketing system, and Onsite support.\n\nDuties and Responsibilities\nProviding first-level support contact and conveying IT solutions to the branches and HO department’s inquiries and issues.\nProperly escalate unresolved queries to the next level of IT support/Unit.\nTrack, Route, and redirect problems to correct IT resources.\nEnsure to Keep updating users/requesters’ Tickets on the Ticketing system.\nWalk users through problem-solving processes.\nFollow up with users/requesters to provide feedback and see problems through a proper resolution.\nUtilize better user service skills and exceed customer’s/requester’s expectations.\nEnsure proper recording, documentation, and closures of the reports are in place.\nAny other identical tasks assigned by the respective supervisor/s.\n\nJob Requirements\nA university degree in IT field or Computer Sciences fields.\nA minimum of 2 years’ experience in IT troubleshooting or functional role.\nAbility to communicate, written and orally, in English and Dari/Pashto.\nAbility to work in a systematic and well-organized manner, with technical skills.\nAbility to have IT Troubleshooting, Computer Configurations, and Hardware repair skills.\nAbility to Travel in Fields/Provinces where FMFB operates.\n\nSubmission Guidelines\nIf you meet the above requirements, we are encouraging you to apply for this position. Please send us your CV along with a cover letter via email at ( vacancies@fmfb.com.af ).\nPlease make sure that your email includes the vacancy ID as the subject line.\nNote that, only the candidates who are meeting the requirements of the position will be shortlisted.\nFor more information, Please visit our website: https://www.fmfb.com.af/jobs/it-services-management-assistant/",
+      "details": {
+        "Reference": "FMFB-SA-0041-2026",
+        "Post Date": "2026-05-03 03:59:42.164+00",
+        "Closing Date": "2026-05-05 00:00:00+00",
+        "Functional Area": "Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "2 - 3",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "email"
+      },
+      "scraped_at": "2026-05-03T05:38:15Z",
       "also_found_on": []
     },
     {
@@ -378,6 +563,61 @@
         {
           "source": "wazifaha",
           "url": "https://wazifaha.org/jobs/28066/position-title-specialist-it-security"
+        }
+      ]
+    },
+    {
+      "id": "99d4d9b59d112915",
+      "source": "acbar",
+      "source_url": "https://www.acbar.org/jobs/142218/msupplydata-entry-assistant.jsp",
+      "url": "https://www.acbar.org/jobs/142218/msupplydata-entry-assistant.jsp",
+      "title": "MSupply/Data entry assistant",
+      "company": "MHCO",
+      "location": "Nangarhar",
+      "closing_date": "2026-05-06",
+      "closing_date_raw": "2026-05-06",
+      "category": "Health Care",
+      "job_type": "Full Time",
+      "gender": "Male/Female",
+      "vacancies": "1",
+      "salary": "As Per MHCO Salary Scale",
+      "apply_url": "https://www.acbar.org/jobs/142218/msupplydata-entry-assistant.jsp",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "About MHCO\nMaihan Humanitarian Convergence Organization (MHCO) is a national non-government, non-political, and non-profit organization registered with the Ministry of Economy, committed to delivering humanitarian services across Afghanistan. MHCO focuses on various sectors including Health, Education, Protection, Nutrition, Livelihoods, Food Security, and Organizational Development.\n\nJob Description\nhe MSupply/Data Entry Assistant supports the pharmacy department by ensuring accurate and timely entry of stock data into the mSupply system, maintaining proper inventory records, and assisting with reporting, stock monitoring, and documentation. The role contributes to efficient pharmaceutical supply management and ensures compliance with organizational procedures.\nDuties and Responsibilities:\nAccurately enter and update pharmaceutical data in the mSupply system , including stock receipts, issues, adjustments, and transfers.\nMaintain up-to-date records of medicines and medical supplies in both physical and electronic systems.\nVerify and cross-check data with stock cards, bin cards, and delivery notes to ensure accuracy.\nMonitor stock levels and report low stock, expiries, and discrepancies to the supervisor.\nAssist in preparing stock reports, consumption reports, and inventory summaries on a regular basis.\nEnsure proper documentation and filing of all pharmacy records, including invoices, waybills, and stock reports.\nSupport the pharmacy team during stock counts, physical inventory, and audits.\nMaintain confidentiality and integrity of all data entered into the system.\nCoordinate with warehouse and pharmacy staff to ensure timely data entry of all transactions.\nIdentify and report any inconsistencies or errors in the system promptly.\nAssist in ensuring compliance with organizational policies and donor requirements related to pharmacy and inventory management.\nPerform any other related tasks assigned by the supervisor.\n\nJob Requirements\nBachelor’s degree in Pharmacy, Health Sciences, Computer Science , Business Administration, or a related field.\nAt least 2 –3 years of relevant experience in data entry, pharmacy, or supply chain/warehouse management.\nFamiliarity with mSupply system or other inventory management software is preferred.\nGood knowledge of pharmaceutical products and stock management practices.\nStrong data entry skills with high attention to accuracy and detail.\nProficiency in MS Office (Excel, Word) .\nAbility to maintain organized records and documentation.\nGood communication and coordination skills.\nAbility to work under pressure and meet deadlines.\nUnderstanding of basic reporting and documentation procedures.\nKnowledge of English and local languages (Dari/Pashto) is required.\nStrong sense of integrity, confidentiality, and accountability.\nSafeguarding and Recruitment Statement – MHCO\nAt MHCO, we are firmly committed to maintaining a safe, respectful, and inclusive working environment. We do not tolerate any form of inappropriate behaviour, including sexual harassment, exploitation, abuse, or financial misconduct. The safety and well-being of children, young people, adults, and all beneficiaries we engage with are of paramount importance.\nAll MHCO staff are expected to uphold these principles in accordance with our Code of Conduct and safeguarding policies. We place strong emphasis on recruiting individuals who demonstrate integrity and align with our organizational values.\nThe selected candidate for this role will receive comprehensive safeguarding training and will be responsible for understanding and adhering to MHCO’s safeguarding standards. Employment offers are subject to satisfactory references and relevant screening checks, which may include criminal background verification and terrorism finance assessments.\nwe will request information from previous employers regarding any substantiated findings of sexual exploitation, abuse, or harassment, as well as any ongoing investigations at the time of the candidate’s departure.\nBy submitting an application, candidates confirm their understanding and acceptance of these recruitment procedures .\n\nSubmission Guideline\nThe interested candidate should submit their complete application (CV/Cover letter) through the link provided below.\nNote: Only short-listed candidates will be contacted for written Test/Interview\nhttps://forms.gle/LAH3auLQapGN9BuW8\n\nSubmission Email\nhttps://forms.gle/LAH3auLQapGN9BuW8",
+      "details": {
+        "Location": "Nangarhar",
+        "Nationality": "National",
+        "Category": "Health Care",
+        "Employment Type": "Full Time",
+        "Salary": "As Per MHCO Salary Scale",
+        "Vacancy Number": "1053/MHCO/2026",
+        "No. of Jobs": "1",
+        "City": "Jalalabad",
+        "Organization": "MHCO",
+        "Experience": "At least 2–3 years of relevant experience in data entry, pharmacy, or supply chain/warehouse management.",
+        "Contract Duration": "One Year",
+        "Gender": "Male/Female",
+        "Education": "Bachelor’s degree in Pharmacy, Health Sciences, Computer Science, Business Administration, or a related field.",
+        "Closing Date": "2026-05-06",
+        "Post Date": "2026-04-29",
+        "Functional Area": "Health Care",
+        "Job Type": "Full Time",
+        "Source": "ACBAR",
+        "Job Location": "Nangarhar",
+        "No. Of Jobs": "1",
+        "Years of Experience": "At least 2–3 years of relevant experience in data entry, pharmacy, or supply chain/warehouse management.",
+        "Close date": "2026-05-06"
+      },
+      "scraped_at": "2026-04-29T05:35:26Z",
+      "also_found_on": [
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/28251/position-title-msupplydata-entry-assistant"
+        },
+        {
+          "source": "kaarobar",
+          "url": "https://www.kaarobar.net/jobs/15496/position-title-msupplydata-entry-assistant"
         }
       ]
     }
