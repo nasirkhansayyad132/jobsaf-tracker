@@ -379,6 +379,61 @@
     "also_found_on": []
   },
   {
+    "id": "d8ea8b92f745292c",
+    "source": "acbar",
+    "source_url": "https://www.acbar.org/jobs/142407/data-management-reporting-officer.jsp",
+    "url": "https://www.acbar.org/jobs/142407/data-management-reporting-officer.jsp",
+    "title": "Data Management & Reporting Officer",
+    "company": "OPHCD",
+    "location": "Kabul",
+    "closing_date": "2026-05-12",
+    "closing_date_raw": "2026-05-12",
+    "category": "Management",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "Based on OPHCD Salary Scale",
+    "apply_url": "https://www.acbar.org/jobs/142407/data-management-reporting-officer.jsp",
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "About OPHCD\nOPHCD as an NGO is committed to providing quality services to the communities with an equitable manner. For this purpose, the organization has dedicated and expert staff in public health, Water Sanitation and Hygiene, education, community development, and volunteers who have been working in technical and managerial positions with national and international NGOs since more than one and half decade. OPHCD Management team (Technical and Operation Staffs) have both, in-depth theoretical knowledge and extensive experience in their fields.\n\nJob Description\nJob Summary\nThe organization implements multiple projects across different provinces of Afghanistan. Managing data effectively across these projects is necessary to ensure accountability, transparency, and strong program performance. According to this needs, the Data Management and Reporting Officer plays a key role in bringing together information from all project locations, ensuring that data is accurate, managed well, and translated into meaningful reports. The position also supports compliance with donor requirements and national regulations, including coordination with the Ministry of Finance.\nDuties & Responsibilities\nInformation management\nLead and maintain data management systems across all projects.\nDevelop and improve tools, databases, and dashboards for tracking progress.\nEnsure proper data storage, documentation, and protection in line with organizational and donor standards.\nData Collection and Quality Assurance\nCoordinate with provincial teams and partners for timely data collection.\nReview, validate, and clean incoming data.\nIdentify inconsistencies and follow up for corrections.\nConduct routine data quality checks and support improvements.\nData Analysis\nConsolidate and analyze data from multiple projects.\nIdentify trends, gaps, and achievements.\nDevelop summaries, dashboards, and analytical reports for decision-making.\nDonor Reporting\nPrepare monthly, quarterly, and annual donor reports.\nEnsure compliance with donor requirements and deadlines.\nMaintain reporting calendar and respond to donor feedback.\nPartner Coordination and Capacity Building\nCoordinate with implementing partners for consistent reporting.\nProvide guidance, mentoring, and training on data management practices.\nCompliance and Accountability\nEnsure confidentiality and integrity of data.\nFollow donor and organizational data protection policies.\nIntegrate feedback and complaints data into reporting.\nBi-annual reporting to Ministry of Economy\nSupport provincial project team to build their capacity for preparation of bi-annual technical and financial report submitted to the DoPH and DoEc at the province.\nFollow up of these reports with the provincial project teams.\nUploading the approved reports along with all attachments in online reporting portal of the Ministry of Economy.\nPreparation and submission of required documents.\nFollow up on clearance processes and respond to queries.\nMaintain organized records of submissions and approvals.\n\nJob Requirements\nRequired qualification: Thos not meeting required qualification are not encouraged to apply\nMaster’s degree in Information Management, Statistics, Public Health, or related field\n3–5 years of relevant experience in data management, reporting, or MEAL.\nHigh level Knowledge of and evidence-based Experience of using SPSS, Power BI, DHIS2, Kobo Toolbox or ODK\nPrefer qualification\nStrong skills in MS Excel and data analysis tools is preferable\nExperience with multi-province projects and donor-funded programs in Afghanistan preferred.\nFluency in English; proficiency in Dari and Pashto required.\nCore Competencies\nStrong analytical and problem-solving skills\nHigh attention to detail\nEffective communication and coordination skills\nAbility to manage multiple priorities and meet deadlines\nProfessionalism and ability to work under pressure\nHigh level of integrity and confidentiality\nKey Performance Indicators (KPIs)\nTimely submission of high-quality donor reports\nAccuracy and completeness of data from provinces\nUp-to-date dashboards and reporting systems\nTimely Ministry of Finance clearance processes\nPositive feedback from teams and partners\n\nSubmission Guideline\n1.Interested candidates apply through the link Provided in Submission Email and Copy the Link and Pasted in the Browser.\n2.OPHCD has zero tolerance policy on sexual exploitation, sexual harassment, and abuse (SEA).\n3.By applying to this position, you agree to all OPHCD policies regarding Data Protection and Sharing and also PSEAH\n\nSubmission Email\nhttps://docs.google.com/forms/d/e/1FAIpQLSf9Kx88pdKaq7osOsTdhPfzPPxpRZj2FeWKdbLPwV2MvYRzBQ/viewform?usp=header",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "National",
+      "Category": "Management",
+      "Employment Type": "Full Time",
+      "Salary": "Based on OPHCD Salary Scale",
+      "Vacancy Number": "OPHCD-HR-083",
+      "No. of Jobs": "1",
+      "City": "Kabul with regular travel to provinces",
+      "Organization": "OPHCD",
+      "Experience": "• 3–5 years of relevant experience in data management, reporting, or MEAL. • High level Knowledge of and evidence-based Experience of using SPSS, Power BI, DHIS2, Kobo Toolbox or ODK",
+      "Contract Duration": "One year (extendable)",
+      "Gender": "Male",
+      "Education": "• Master’s degree in Information Management, Statistics, Public Health, or related field",
+      "Closing Date": "2026-05-12",
+      "Post Date": "2026-05-07",
+      "Functional Area": "Management",
+      "Job Type": "Full Time",
+      "Source": "ACBAR",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "• 3–5 years of relevant experience in data management, reporting, or MEAL. • High level Knowledge of and evidence-based Experience of using SPSS, Power BI, DHIS2, Kobo Toolbox or ODK",
+      "Close date": "2026-05-12"
+    },
+    "scraped_at": "2026-05-08T05:18:27Z",
+    "also_found_on": [
+      {
+        "source": "kaarobar",
+        "url": "https://www.kaarobar.net/jobs/15652/position-title-data-management-reporting-officer"
+      },
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/28424/position-title-data-management-reporting-officer"
+      }
+    ]
+  },
+  {
     "id": "1350665fd1f8e58c",
     "source": "acbar",
     "source_url": "https://www.acbar.org/jobs/142271/digital-sales-officer.jsp",
@@ -1005,6 +1060,46 @@
       "Source": "ACBAR"
     },
     "scraped_at": "2026-04-24T09:55:33Z",
+    "also_found_on": []
+  },
+  {
+    "id": "9fef1cb8f2348c8d",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/senior-php-laravel-developer-high-level-product-and-system-builder",
+    "url": "https://jobs.af/jobs/senior-php-laravel-developer-high-level-product-and-system-builder",
+    "title": "Senior PHP / Laravel Developer (High-Level – Product & System Builder)",
+    "company": "AFG Tech",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-05-21",
+    "closing_date_raw": "2026-05-21 00:00:00+00",
+    "category": "Software Engineering",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "mailto:careers@afgtech.com",
+    "apply_emails": [
+      "careers@afgtech.com"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nRole Overview\nWe are looking for a highly experienced Senior PHP/Laravel Developer who has built complete real-world systems, not just features. You will work on complex business applications and improve architecture, performance, and scalability.\nWhat We Expect\nExperience building complete applications end-to-end\nWork on production systems with real users\nStrong understanding of business logic and API integrations\nAbility to analyze, refactor, and optimize existing systems\n\nDuties and Responsibilities\nCore Responsibilities\nTake ownership of backend development using Laravel\nClean and refactor existing codebase\nDesign and build REST APIs\nImplement complex workflows (CRM, invoicing, etc.)\nDatabase design, normalization and development\nOptimize database queries and performance\nIntegrate third-party APIs and services\nWrite production-grade, maintainable code\nSome other tasks will be assigned by supervisor.\nApplication layers knowledge and design application with representation, logic and API independently\n\nJob Requirements\nRequired Experience\n6–10+ years PHP development experience\nExpert in Laravel\nExperience building CRM / ERP / SaaS systems\nStrong MySQL and API architecture knowledge\nStrong system design and backend structuring skills\nRequired Tools & Practices.\nGitHub\nDevOps\nAgile methodology\nMust-Have Skills\nAbility to design systems, not just code features\nMicroservice application development.\nStrong debugging and problem-solving skills\nExperience with large codebases\nClean code practices (SOLID, modular architecture)\nPreferred\nPayment integrations (Stripe, PayPal)\nAI or automation experience\nSaaS or multi-tenant systems\nExperience as lead developer or architect\n\nSubmission Guidelines\nInterested candidates should submit their CV/Resume to: careers@afgtech.com\nThe email subject line must be: Senior PHP / Laravel Developer\nPlease ensure your application clearly highlights your relevant experience and qualifications.\n⚠️ Note: This position requires the qualifications listed above. If you do not meet the essential requirements, we kindly ask that you do not apply .",
+    "details": {
+      "Reference": "afg-2026",
+      "Post Date": "2026-05-06 00:00:00+00",
+      "Closing Date": "2026-05-21 00:00:00+00",
+      "Functional Area": "Software Engineering",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "any",
+      "Education": "bachelor",
+      "Experience": "6 - 10",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-05-08T05:18:18Z",
     "also_found_on": []
   },
   {
