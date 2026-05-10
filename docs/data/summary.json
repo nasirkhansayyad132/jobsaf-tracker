@@ -1,14 +1,94 @@
 {
-  "generated_at": "2026-05-09T05:31:55.056Z",
-  "today": "2026-05-09",
-  "total_jobs": 38,
-  "new_count": 0,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 12,
+  "generated_at": "2026-05-10T05:43:11.100Z",
+  "today": "2026-05-10",
+  "total_jobs": 40,
+  "new_count": 2,
+  "expiring_today_count": 4,
+  "expiring_soon_count": 10,
   "tech_banking_count": 1,
-  "new_jobs": [],
-  "expiring_today": [],
-  "expiring_soon": [
+  "new_jobs": [
+    {
+      "id": "487cd13ab0e466a5",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/network-specialist-31",
+      "url": "https://jobs.af/jobs/network-specialist-31",
+      "title": "Network Specialist",
+      "company": "Afghan Pay Services Company",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-05-20",
+      "closing_date_raw": "2026-05-20 00:00:00+00",
+      "category": "Computer Science, Information Technology",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "mailto:hr@afghan-pay.com",
+      "apply_emails": [
+        "hr@afghan-pay.com"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary\nA Network Specialist is responsible for designing, implementing, maintaining, and securing the organization’s network infrastructure. This role ensures high availability, optimal performance, and robust protection against evolving security threats.\n\nDuties and Responsibilities\n· Design, install, configure, and maintain network hardware (routers, switches, firewalls, servers).\n· Monitor and optimize network performance; proactively troubleshoot to minimize downtime.\n· Manage and support LAN, WAN, and FTTH network environments.\n· Implement and enforce network security best practices and protection measures.\n· Diagnose and resolve connectivity issues for end users.\n· Perform system updates, backups, and preventive maintenance.\n· Document network configurations, changes, and operational procedures.\n· Collaborate with IT and cross-functional teams to enhance reliability and scalability.\n\nJob Requirements\n· Strong knowledge of networking protocols (TCP/IP, DNS, DHCP).\n· Hands-on experience with Huawei routers and FTTH network devices.\n· Proficiency with switches, servers, and firewalls.\n· Solid understanding of network security principles and practices.\n· Advanced troubleshooting and problem-solving capabilities.\n· Familiarity with Windows and Linux operating systems.\n· Effective communication and teamwork skills\nQualifications:\n· Bachelor’s degree in Information Technology, Computer Science, or related field.\n· Industry-recognized certifications highly preferred:\n· Cisco CCNA / CCNP\n· CompTIA Network+\n· CompTIA Security+\nNote : candidates with knowledge of operating QuickBooks will be preferred.\nEducation:\n· Bachelor’s degree in Information Technology, Computer Science, or related field.\nWork Environment\n· FTTH network operations and field deployments.\n· Data center environments.\n· Remote support and on-site technical assignments.\n\nSubmission Guidelines\nAfghanPAY services company adapts quality circles of youngsters who have expertise & potential in the area of interest within the domain of business lines adapted by AfghanPAY. We require our potential candidates to submit their cover letter + CVs to hr@afghan-pay.com . Please write your vacancy number (AFP-TOPUP2026-007 & field of expertise) in the subject line of your E-mail. We are thinking about our nation’s future & fostering a culture of excellence & welcoming those who share our vision.\nPlease note: only short-listed candidates are contacted.",
+      "details": {
+        "Reference": "AFP-TOPUP2026-007",
+        "Post Date": "2026-05-10 05:35:34.372+00",
+        "Closing Date": "2026-05-20 00:00:00+00",
+        "Functional Area": "Computer Science, Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "3",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "email"
+      },
+      "scraped_at": "2026-05-10T05:42:42Z",
+      "also_found_on": []
+    },
+    {
+      "id": "551bedb505bc41aa",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/mobile-app-qa-tester-android-and-iphone-31",
+      "url": "https://jobs.af/jobs/mobile-app-qa-tester-android-and-iphone-31",
+      "title": "Mobile App QA Tester (Android & iPhone)",
+      "company": "Rana ISP",
+      "location": "Multi Location, Afghanistan",
+      "closing_date": "2026-07-30",
+      "closing_date_raw": "2026-07-30 00:00:00+00",
+      "category": "General, Quality Control (QC), PRODUCTION, Report writing, Computer Science, Customer Service, Data Collection, Information Technology, IT - Software, Monitoring & Reporting, Quality Management, Research/Survey, IT Support, MEAL (Monitoring, Evaluation, Accountability and Learning), Programming, Quality Assurance, Quality Control, Report Writing, Software Analysis, Software Development, Software Engineering, Web Application Development, Web Development, Support Staff",
+      "job_type": "full_time",
+      "gender": "any",
+      "vacancies": 1,
+      "salary": "10000 AFN",
+      "apply_url": "mailto:tester@mozayel.com",
+      "apply_emails": [
+        "tester@mozayel.com"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary\nAFM is looking for a Mobile App QA Tester to help test our React Native mobile application on Android and iPhone devices.\nThe QA Tester will test app features, identify bugs, report issues clearly, and help improve the quality and stability of the application before production release.\nThe ideal candidate should be detail-oriented, organized, and experienced with mobile application testing.\n\nDuties and Responsibilities\nTest the AFM mobile app on different Android and iPhone devices\nIdentify bugs, crashes, UI issues, and performance problems\nTest login, transactions, chat, records, PDF generation, notifications, and settings\nVerify app behavior in both English and RTL languages (Dari/Pashto)\nRecord screenshots and videos of issues\nCreate detailed bug reports with steps to reproduce problems\nRetest issues after developers fix them\nCheck app responsiveness on different screen sizes\nTest internet interruption and edge-case scenarios\nReport usability and user experience issues\nHelp ensure the app is ready for App Store and Google Play release\n\nJob Requirements\nExperience testing mobile applications\nFamiliar with Android and iPhone devices\nBasic understanding of QA and bug reporting\nAbility to clearly explain technical issues\nGood attention to detail\nAble to work independently\nExperience using TestFlight or Android beta testing is a plus\nBasic English communication skills\nMust have access to at least one Android or iPhone device\n\nSubmission Guidelines\nPlease email your resume to tester@mozayel.com . Include the reference AFM-QA-001 in the subject of the email.",
+      "details": {
+        "Reference": "AFM-QA-001",
+        "Post Date": "2026-05-10 05:10:51.827+00",
+        "Closing Date": "2026-07-30 00:00:00+00",
+        "Functional Area": "General, Quality Control (QC), PRODUCTION, Report writing, Computer Science, Customer Service, Data Collection, Information Technology, IT - Software, Monitoring & Reporting, Quality Management, Research/Survey, IT Support, MEAL (Monitoring, Evaluation, Accountability and Learning), Programming, Quality Assurance, Quality Control, Report Writing, Software Analysis, Software Development, Software Engineering, Web Application Development, Web Development, Support Staff",
+        "Countries": "Afghanistan",
+        "Provinces": "Multi Location",
+        "Job Type": "full_time",
+        "Contract Type": "long_term",
+        "Gender": "any",
+        "Education": "no_education",
+        "Experience": "0",
+        "Salary": "10000 AFN",
+        "Vacancies": 1,
+        "Submission Through": "email"
+      },
+      "scraped_at": "2026-05-10T05:42:42Z",
+      "also_found_on": []
+    }
+  ],
+  "expiring_today": [
     {
       "id": "ab39b5d6c4722809",
       "source": "jobs.af",
@@ -188,7 +268,9 @@
       },
       "scraped_at": "2026-04-27T05:34:27Z",
       "also_found_on": []
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "6705499a56c3e1b4",
       "source": "acbar",
@@ -587,6 +669,84 @@
           "url": "https://www.acbar.org/jobs/142203/thlylgr-hfatht-maalomat-penetration-tester.jsp"
         }
       ]
+    },
+    {
+      "id": "3bcc3fd468dcf74a",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/ip-network-engineer-31",
+      "url": "https://jobs.af/jobs/ip-network-engineer-31",
+      "title": "IP Network Engineer",
+      "company": "افغان تیلی کام",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-05-13",
+      "closing_date_raw": "2026-05-13 00:00:00+00",
+      "category": "Computer Science, Electrical Engineering, Information Technology",
+      "job_type": "full_time",
+      "gender": "any",
+      "vacancies": 2,
+      "salary": "Company salary scale",
+      "apply_url": "mailto:hr@afghantelecom.af",
+      "apply_emails": [
+        "hr@afghantelecom.af"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary\nانجام امور تخنیکی ترانسمیشن نظربه لزوم دید و ضروریات اداره\n\nDuties and Responsibilities\n· تهیه و ترتیب گزارشات منظم و پربودیک در مورد عملکرد شبکه ترانسمیشن.\n· نظارت و کنترول تخنیکی از شبکه ترانسمیشن (مایکروویف)\n· کنفگربشن در انواع مختلف تجهیزات ترانسمیشن (مایکروویف)\n· نصب و مونتاژ لینک های مایکرویف و سایر تجهیزات ترانسمیشن\n· نظارت و هماهنگی در تهیه انواع عملکردها / اطلاعات مربوط به بهره برداری و نگهداری از شبکه ترانسمیشن\n· اطمینان از مناسب وصحت بودن گزارشات و حفظ و کنترول آن مطابق با قوانین و مقررات تخنیکی مخابراتی\n· همکاری با دیپارتمنت های ذیدخل در حل مشکلات پیش آمده و فعال نمودن سایت های جدید\n· اجرای امور تخنیکی پروژه های ترانسمیشن با مسئولیت کامل جهت به اکمال تمام اهداف معینه\n· سایر وظایف را که از طرف مدیر دیپارتمنت برایش هدایت داده میشود.\n\nJob Requirements\nتحصیلات : حداقل داشتن سند تحصیلی در یکی از رشته­های انجنیری مخابرات وتکنالوجی معلوماتی،انجنیری الکترونیکی.\nتجارب : داشتن حداقل 7 سال تجربه کاری در بخش ترانسمیشن\nمهارت های دیگر:\n1. تسلط به زبان­های(پشتو،دری وانگلیسی) و آشنایی تحریر و تکلم با زبان های متذکره.\n2. مهارت­های کمپیوتری مانند( word, Excel, Access )و سایر سافت ویر های تخنیکی مرتبط به یرنامه های ترانسمیشن و مخابراتی.\n3. آشنای کامل باطرح ودیزاین َو چگونگی کارکردگی شبکه های GSM و Transmission .\n4. مهارتهای عالی در کار تیمی و همکاری های همه جانبه باهمکاران.\n5. آشنایی کامل با سافتویر (نرم افزار) های لنک های مایکروویف و سیستم NMS آنها.\n\nSubmission Guidelines\nمتقاضیان میتوانند cv یا خلص صوانح شانرا به ایمیل آدرس های hr@afghantelecom.af با ذکر نمبر بست (IP Network Eng-002) و عنوان بست درموضوع ایمیل ارسال نمایند. متقاضیانیکه درخواستی خویش را بعد از تاریخ اعلان بست ارسال مینمایند و یا هم شرایط مندرج این بست را تکمیل ننمایند شامل پروسه امتحان تحریری و مصاحبه نمیگردند.",
+      "details": {
+        "Reference": "IP Network-Eng-002",
+        "Post Date": "2026-05-04 05:52:20.692+00",
+        "Closing Date": "2026-05-13 00:00:00+00",
+        "Functional Area": "Computer Science, Electrical Engineering, Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "any",
+        "Education": "bachelor",
+        "Experience": "2 - 6",
+        "Salary": "Company salary scale",
+        "Vacancies": 2,
+        "Submission Through": "email"
+      },
+      "scraped_at": "2026-05-05T05:27:49Z",
+      "also_found_on": []
+    },
+    {
+      "id": "d6f1e015ea6d7ecb",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/market-data-analyst-16",
+      "url": "https://jobs.af/jobs/market-data-analyst-16",
+      "title": "Market Data Analyst",
+      "company": "Gulbahar General Trading (Milano)",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-05-13",
+      "closing_date_raw": "2026-05-13 00:00:00+00",
+      "category": "Business Administration, Sales/Marketing, Statistics, Data Science, Economist",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "https://forms.gle/kguZeeNzh9oWGRPZA",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nTo collect, analyze, and interpret market data to support strategic decision‑making and business growth. The role provides insights on customer behavior, market trends, competitor activities, and sales performance, enabling data‑driven marketing and operational planning.\n\nDuties and Responsibilities\nCollect and analyze market data from internal and external sources.\nMonitor market trends, customer preferences, and competitor activities.\nPrepare reports on sales performance, customer behavior, and market opportunities.\nSupport marketing and sales teams with data‑driven insights.\nConduct market research and customer surveys.\nIdentify business growth opportunities through data analysis.\nTrack campaign performance and customer response rates.\nMaintain accurate databases and dashboards for reporting.\nPresent findings and recommendations to management.\nAssist in forecasting sales and market demand.\nEnsure data accuracy and confidentiality.\n\nJob Requirements\nBachelor’s degree in marketing, Statistics, Economics, Business Administration, Data Science, or\nrelated field\n1–5 years of experience in market analysis, business intelligence, or data reporting\nExperience with SQL, Power BI, Tableau, or advanced Excel is an added advantage\nStrong analytical and problem-solving skills\nExcellent attention to detail\nProficiency in Microsoft Excel, Power BI, or data analysis tools\nKnowledge of CRM systems and reporting software\nGood communication and presentation skills\nAbility to interpret complex data into simple business insights\nTime management and organizational skills\nBasic understanding of marketing and business strategy\n\nSubmission Guidelines\nInterested candidates should click the link below and complete the application form.\nhttps://forms.gle/kguZeeNzh9oWGRPZA",
+      "details": {
+        "Reference": "#VA-GGT-2026-008",
+        "Post Date": "2026-04-29 07:10:35.123+00",
+        "Closing Date": "2026-05-13 00:00:00+00",
+        "Functional Area": "Business Administration, Sales/Marketing, Statistics, Data Science, Economist",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "1 - 5",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "link"
+      },
+      "scraped_at": "2026-04-30T05:38:25Z",
+      "also_found_on": []
     }
   ],
   "tech_banking_jobs": [

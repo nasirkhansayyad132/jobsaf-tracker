@@ -977,6 +977,46 @@
     "also_found_on": []
   },
   {
+    "id": "487cd13ab0e466a5",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/network-specialist-31",
+    "url": "https://jobs.af/jobs/network-specialist-31",
+    "title": "Network Specialist",
+    "company": "Afghan Pay Services Company",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-05-20",
+    "closing_date_raw": "2026-05-20 00:00:00+00",
+    "category": "Computer Science, Information Technology",
+    "job_type": "full_time",
+    "gender": "male",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "mailto:hr@afghan-pay.com",
+    "apply_emails": [
+      "hr@afghan-pay.com"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nA Network Specialist is responsible for designing, implementing, maintaining, and securing the organization’s network infrastructure. This role ensures high availability, optimal performance, and robust protection against evolving security threats.\n\nDuties and Responsibilities\n· Design, install, configure, and maintain network hardware (routers, switches, firewalls, servers).\n· Monitor and optimize network performance; proactively troubleshoot to minimize downtime.\n· Manage and support LAN, WAN, and FTTH network environments.\n· Implement and enforce network security best practices and protection measures.\n· Diagnose and resolve connectivity issues for end users.\n· Perform system updates, backups, and preventive maintenance.\n· Document network configurations, changes, and operational procedures.\n· Collaborate with IT and cross-functional teams to enhance reliability and scalability.\n\nJob Requirements\n· Strong knowledge of networking protocols (TCP/IP, DNS, DHCP).\n· Hands-on experience with Huawei routers and FTTH network devices.\n· Proficiency with switches, servers, and firewalls.\n· Solid understanding of network security principles and practices.\n· Advanced troubleshooting and problem-solving capabilities.\n· Familiarity with Windows and Linux operating systems.\n· Effective communication and teamwork skills\nQualifications:\n· Bachelor’s degree in Information Technology, Computer Science, or related field.\n· Industry-recognized certifications highly preferred:\n· Cisco CCNA / CCNP\n· CompTIA Network+\n· CompTIA Security+\nNote : candidates with knowledge of operating QuickBooks will be preferred.\nEducation:\n· Bachelor’s degree in Information Technology, Computer Science, or related field.\nWork Environment\n· FTTH network operations and field deployments.\n· Data center environments.\n· Remote support and on-site technical assignments.\n\nSubmission Guidelines\nAfghanPAY services company adapts quality circles of youngsters who have expertise & potential in the area of interest within the domain of business lines adapted by AfghanPAY. We require our potential candidates to submit their cover letter + CVs to hr@afghan-pay.com . Please write your vacancy number (AFP-TOPUP2026-007 & field of expertise) in the subject line of your E-mail. We are thinking about our nation’s future & fostering a culture of excellence & welcoming those who share our vision.\nPlease note: only short-listed candidates are contacted.",
+    "details": {
+      "Reference": "AFP-TOPUP2026-007",
+      "Post Date": "2026-05-10 05:35:34.372+00",
+      "Closing Date": "2026-05-20 00:00:00+00",
+      "Functional Area": "Computer Science, Information Technology",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "male",
+      "Education": "bachelor",
+      "Experience": "3",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-05-10T05:42:42Z",
+    "also_found_on": []
+  },
+  {
     "id": "dbe8c24727c79c15",
     "source": "acbar",
     "source_url": "https://www.acbar.org/jobs/141974/grafyk-dyzaynr.jsp",
@@ -1684,6 +1724,46 @@
         "url": "https://www.kaarobar.net/jobs/14761/position-title-mobile-app-developer-flutter"
       }
     ]
+  },
+  {
+    "id": "551bedb505bc41aa",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/mobile-app-qa-tester-android-and-iphone-31",
+    "url": "https://jobs.af/jobs/mobile-app-qa-tester-android-and-iphone-31",
+    "title": "Mobile App QA Tester (Android & iPhone)",
+    "company": "Rana ISP",
+    "location": "Multi Location, Afghanistan",
+    "closing_date": "2026-07-30",
+    "closing_date_raw": "2026-07-30 00:00:00+00",
+    "category": "General, Quality Control (QC), PRODUCTION, Report writing, Computer Science, Customer Service, Data Collection, Information Technology, IT - Software, Monitoring & Reporting, Quality Management, Research/Survey, IT Support, MEAL (Monitoring, Evaluation, Accountability and Learning), Programming, Quality Assurance, Quality Control, Report Writing, Software Analysis, Software Development, Software Engineering, Web Application Development, Web Development, Support Staff",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 1,
+    "salary": "10000 AFN",
+    "apply_url": "mailto:tester@mozayel.com",
+    "apply_emails": [
+      "tester@mozayel.com"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nAFM is looking for a Mobile App QA Tester to help test our React Native mobile application on Android and iPhone devices.\nThe QA Tester will test app features, identify bugs, report issues clearly, and help improve the quality and stability of the application before production release.\nThe ideal candidate should be detail-oriented, organized, and experienced with mobile application testing.\n\nDuties and Responsibilities\nTest the AFM mobile app on different Android and iPhone devices\nIdentify bugs, crashes, UI issues, and performance problems\nTest login, transactions, chat, records, PDF generation, notifications, and settings\nVerify app behavior in both English and RTL languages (Dari/Pashto)\nRecord screenshots and videos of issues\nCreate detailed bug reports with steps to reproduce problems\nRetest issues after developers fix them\nCheck app responsiveness on different screen sizes\nTest internet interruption and edge-case scenarios\nReport usability and user experience issues\nHelp ensure the app is ready for App Store and Google Play release\n\nJob Requirements\nExperience testing mobile applications\nFamiliar with Android and iPhone devices\nBasic understanding of QA and bug reporting\nAbility to clearly explain technical issues\nGood attention to detail\nAble to work independently\nExperience using TestFlight or Android beta testing is a plus\nBasic English communication skills\nMust have access to at least one Android or iPhone device\n\nSubmission Guidelines\nPlease email your resume to tester@mozayel.com . Include the reference AFM-QA-001 in the subject of the email.",
+    "details": {
+      "Reference": "AFM-QA-001",
+      "Post Date": "2026-05-10 05:10:51.827+00",
+      "Closing Date": "2026-07-30 00:00:00+00",
+      "Functional Area": "General, Quality Control (QC), PRODUCTION, Report writing, Computer Science, Customer Service, Data Collection, Information Technology, IT - Software, Monitoring & Reporting, Quality Management, Research/Survey, IT Support, MEAL (Monitoring, Evaluation, Accountability and Learning), Programming, Quality Assurance, Quality Control, Report Writing, Software Analysis, Software Development, Software Engineering, Web Application Development, Web Development, Support Staff",
+      "Countries": "Afghanistan",
+      "Provinces": "Multi Location",
+      "Job Type": "full_time",
+      "Contract Type": "long_term",
+      "Gender": "any",
+      "Education": "no_education",
+      "Experience": "0",
+      "Salary": "10000 AFN",
+      "Vacancies": 1,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-05-10T05:42:42Z",
+    "also_found_on": []
   },
   {
     "id": "86267e10a07881ef",
