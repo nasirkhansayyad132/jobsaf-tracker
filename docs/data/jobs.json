@@ -1,5 +1,45 @@
 [
   {
+    "id": "3bcc3fd468dcf74a",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/ip-network-engineer-31",
+    "url": "https://jobs.af/jobs/ip-network-engineer-31",
+    "title": "IP Network Engineer",
+    "company": "افغان تیلی کام",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-05-16",
+    "closing_date_raw": "2026-05-16 00:00:00+00",
+    "category": "Computer Science, Electrical Engineering, Information Technology",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 2,
+    "salary": "Company salary scale",
+    "apply_url": "mailto:hr@afghantelecom.af",
+    "apply_emails": [
+      "hr@afghantelecom.af"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nانجام امور تخنیکی ترانسمیشن نظربه لزوم دید و ضروریات اداره\n\nDuties and Responsibilities\n· تهیه و ترتیب گزارشات منظم و پربودیک در مورد عملکرد شبکه ترانسمیشن.\n· نظارت و کنترول تخنیکی از شبکه ترانسمیشن (مایکروویف)\n· کنفگربشن در انواع مختلف تجهیزات ترانسمیشن (مایکروویف)\n· نصب و مونتاژ لینک های مایکرویف و سایر تجهیزات ترانسمیشن\n· نظارت و هماهنگی در تهیه انواع عملکردها / اطلاعات مربوط به بهره برداری و نگهداری از شبکه ترانسمیشن\n· اطمینان از مناسب وصحت بودن گزارشات و حفظ و کنترول آن مطابق با قوانین و مقررات تخنیکی مخابراتی\n· همکاری با دیپارتمنت های ذیدخل در حل مشکلات پیش آمده و فعال نمودن سایت های جدید\n· اجرای امور تخنیکی پروژه های ترانسمیشن با مسئولیت کامل جهت به اکمال تمام اهداف معینه\n· سایر وظایف را که از طرف مدیر دیپارتمنت برایش هدایت داده میشود.\n\nJob Requirements\nتحصیلات : حداقل داشتن سند تحصیلی در یکی از رشته­های انجنیری مخابرات وتکنالوجی معلوماتی،انجنیری الکترونیکی.\nتجارب : داشتن حداقل 7 سال تجربه کاری در بخش ترانسمیشن\nمهارت های دیگر:\n1. تسلط به زبان­های(پشتو،دری وانگلیسی) و آشنایی تحریر و تکلم با زبان های متذکره.\n2. مهارت­های کمپیوتری مانند( word, Excel, Access )و سایر سافت ویر های تخنیکی مرتبط به یرنامه های ترانسمیشن و مخابراتی.\n3. آشنای کامل باطرح ودیزاین َو چگونگی کارکردگی شبکه های GSM و Transmission .\n4. مهارتهای عالی در کار تیمی و همکاری های همه جانبه باهمکاران.\n5. آشنایی کامل با سافتویر (نرم افزار) های لنک های مایکروویف و سیستم NMS آنها.\n\nSubmission Guidelines\nمتقاضیان میتوانند cv یا خلص صوانح شانرا به ایمیل آدرس های hr@afghantelecom.af با ذکر نمبر بست (IP Network Eng-002) و عنوان بست درموضوع ایمیل ارسال نمایند. متقاضیانیکه درخواستی خویش را بعد از تاریخ اعلان بست ارسال مینمایند و یا هم شرایط مندرج این بست را تکمیل ننمایند شامل پروسه امتحان تحریری و مصاحبه نمیگردند.",
+    "details": {
+      "Reference": "IP Network-Eng-002",
+      "Post Date": "2026-05-04 05:52:20.692+00",
+      "Closing Date": "2026-05-16 00:00:00+00",
+      "Functional Area": "Computer Science, Electrical Engineering, Information Technology",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "any",
+      "Education": "bachelor",
+      "Experience": "2 - 6",
+      "Salary": "Company salary scale",
+      "Vacancies": 2,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-05-15T05:45:55Z",
+    "also_found_on": []
+  },
+  {
     "id": "62813004685d35bd",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/it-contractual-employee-16",
@@ -835,6 +875,61 @@
     ]
   },
   {
+    "id": "bcbd67ab8afd7f18",
+    "source": "acbar",
+    "source_url": "https://www.acbar.org/jobs/142554/it-digital-communications-officer-re-announced.jsp",
+    "url": "https://www.acbar.org/jobs/142554/it-digital-communications-officer-re-announced.jsp",
+    "title": "IT & Digital Communications Officer (Re Announced)",
+    "company": "MSI Afghanistan Reproductive Choices",
+    "location": "Kabul",
+    "closing_date": "2026-05-23",
+    "closing_date_raw": "2026-05-23",
+    "category": "Information Technology",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "As per Organization Salary Scale",
+    "apply_url": "https://www.acbar.org/jobs/142554/it-digital-communications-officer-re-announced.jsp",
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "About MSI Afghanistan Reproductive Choices\nAbout MSI Afghanistan Reproductive Choices:\nMSI Reproductive Choices Afghanistan (MSIA) is a branch of MSI, a global, non-profit, and non-governmental organization headquartered in London, UK, and was established in August 2002 after registration with the Government of Afghanistan. MSIA follows the local mission statement of MSI: Improve Afghan women’s health and well-being so that they can, in turn, build strong, healthy families. Our vision is to be the organization that Afghan women seek out for high-quality, client-centered health care provided by women, for women.\nWe focus on reducing maternal mortality by providing quality and sustainable maternal-child health (MCH) and reproductive health (RH) services and information in 19 provinces of Afghanistan, namely Kabul, Balkh, Herat, Jawzjan Faryab, Nangarhar, Helmand, Kandahar, Baghlan, Kunduz, Badakhshan, Takhar, Samangan, Kapisa, Khost, Paktia, Ghor, Farah and Bamyan in coordination with the Ministry of Public Health (MoPH) of Afghanistan.\nMSIA strives to enhance women's health outcomes in the aforementioned provinces by delivering vital reproductive and maternal-child health services through multiple channels such as centers, outreaches, the private sector, and MS Ladies (Family Health Houses).\n\nJob Description\nPURPOSE\nThe IT & Digital Communications Officer is a member of the Security, IT and Transport team and reports to the team lead. This team combines a number of functions in supporting the success of the whole programme, namely: IT systems; collection, analysis and dissemination of service data essential for programme analysis and response; marketing; policy development; and the leadership of the MSIA contact centre. In addition, the IT & Digital Communications Officer is responsible for ensuring smooth IT operations, managing the organization’s digital presence, and producing high-quality visual content. The role supports internal staff with technical assistance, maintains systems and equipment, enhances online visibility, and develops creative materials aligned with the organization’s branding and communication strategies.\nInformation Technology (IT) Responsibilities:\nEnsure that MSIA is served with the most cost-effective IT hardware and software to maintain its programme activities safely and efficiently. Specifically\nProvide daily technical support to staff, including troubleshooting hardware, software, and network issues.\nEnsure proper maintenance of computers, printers, internet connectivity, and backup systems.\nInstall, configure, and update software and hardware as needed.\nMaintain IT inventory records, including equipment issuance, condition, and replacements.\nMonitor system security, antivirus updates, and data protection measures.\nCoordinate with external service providers when required.\nSupport staff with email setup, cloud storage access, and system accounts.\nDatabase development and maintenance.\nB. Social Media Management\nDevelop and implement social media plans aligned with organizational goals.\nManage social media pages (MSIA website, Facebook, Twitter/X, Instagram, LinkedIn, YouTube, etc.).\nCreate engaging content, including posts, captions, short videos, and social media campaigns.\nMonitor online engagement, respond to comments/messages when relevant, and escalate issues when needed.\nAnalyse social media insights and prepare monthly performance reports.\nEnsure all online communication reflects the organization’s values and brand guidelines.\nC. Graphic Design & Creative Production\nDesign high-quality communication materials, including brochures, posters, banners, reports, infographics, annual reports, and presentations.\nProduce multimedia content such as photos, videos, animations, and social media graphics.\nWork closely with communications and operations teams to meet their design needs.\nEnsure all designs follow organizational branding guidelines.\nEdit and finalize materials for printing or digital dissemination.\nMaintain an organized digital library of photos, videos, and design assets.\nTECHNICAL SUPPORT\nProvide first- and second-line technical support for MSIA staff, directly and through a helpdesk. Specifically,\nSupport new user set up, creating new user accounts, including user folders and shares, emails and mailboxes.\nAddress technical issues and ensuring smooth operation of IT systems.\nDiagnose user faults such as log in issues, profile faults, and permission errors.\nAssist in diagnosing and resolving software faults and providing support for installed applications.\nRaise tickets with global IT helpdesk when necessary\nHARDWARE, SOFTWARE AND NETWORK CONFIGURATION\nEnsure that MSIA hardware, software and networks are routinely upgraded to maintain its programme activities safely and efficiently. Specifically,\nConfigure and install new or replacement PCs, servers, and peripheral hardware including printers, projectors, and scanners.\nInstall and support new networking hardware such as switches and wireless access points.\nDiagnose and resolve network issues\nPerform patch/upgrade testing as part of the patch management processes and ensure the security of the IT infrastructure through maintenance and monitoring of antivirus, patching, and network monitoring.\nUndertake proactive research into system upgrades\nAUDIO/VISUAL AND SECURITY SYSTEMS SUPPORT\nProvide specific technical support for systems related to programme work and security. Specifically\nSpecial events : Provide Audio/Visual equipment support for MSIA events, both internal and external.\nOffice Security : Ensure all CCTV equipment operates correctly\nOffice Access : Set up and update the door access control system as requested.\nCommunications : Manage and configure MSIA telephone extension systems.\n\nJob Requirements\nKNOWLEDGE/QUALIFICATIONS\nBachelor’s degree in information technology, Computer Science, designer, Multimedia, Communications, or related field.\nStrong knowledge of cyber security and the emergent risks of data use and management, graphic designing and social media management\nSKILLS/PROVEN EXPERIENCE\nMinimum 2–3 years of experience in IT support, social media management, and graphic design.\nStrong knowledge of Adobe Creative Suite (Photoshop, Illustrator, InDesign) or similar design software.\nExperience with social media platforms and content creation tools.\nStrong troubleshooting and problem-solving skills.\nPhotography and videography skills are an asset.\nStrong communication skills and the ability to work under pressure.\nCompetencies\nExcellent time management and multitasking abilities\nCreativity and attention to detail\nStrong teamwork and collaboration\nProfessional ethics and commitment to confidentiality\nAdaptability and willingness to learn\nWork Conditions\nStandard office environment\nOccasional travel for field visits, events, and media coverage\nAvailability outside working hours during emergencies or major events\nATTITUDES\nFully committed to MSIA mission, vision, objective, goal\nService oriented\nSelf-motivated and able to remain results focused in working alone\nPersuasive in the face of end-user resistance\nHonest, reliable and maintains confidentiality\nSafeguarding:\nMSI Reproductive Choices places human dignity at the center of its relief and development work. At the heart of MSI Afghanistan's efforts to address health, medical needs, and social justice is its engagement with marginalized communities, vulnerable adults, children, and maternal health.\nMSI Afghanistan values maternal health and child protection, emphasizing that these groups are particularly at risk of sexual exploitation and abuse. MSI Reproductive Choices is committed to protecting vulnerable adults and children from sexual harassment, exploitation, and abuse, involving MSI Afghanistan employees and related personnel.\nMSI Afghanistan has a zero-tolerance policy toward sexual exploitation, abuse, and child abuse. We take all concerns and complaints regarding sexual exploitation, harassment, abuse, and child abuse involving MSI employees and related personnel very seriously.\nAll MSI Afghanistan offers of employment are subject to satisfactory references and appropriate screening checks. By applying, the applicant confirms understanding of these recruitment procedures.\n\nSubmission Guideline\nSubmission Guideline:\nInterested and qualified candidates are requested to fill out the MSI-A application form by clicking the link below and send a copy of their updated CV (no educational or job certifications) by the closing date.\nPlease note that MSI-A does not charge applicants any recruitment fees. MSI-A is an equal-opportunity employer with a strong commitment to diversity at all levels. MSI-A has a strict non-discriminatory policy in its hiring and selection processes. All applicants will receive equal consideration, and applicants from all ethnic, racial, and economic backgrounds are encouraged to apply.\nPlease be aware that only those candidates who have been shortlisted will be contacted.\n\nSubmission Email\nhttps://docs.google.com/forms/d/e/1FAIpQLSdBTW7sEt0E8g9DCa6mDcrsHq8jIiaVOtJda2cVCTy1HMMNOQ/viewform?usp=publish-editor",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "National",
+      "Category": "Information Technology",
+      "Employment Type": "Full Time",
+      "Salary": "As per Organization Salary Scale",
+      "Vacancy Number": "MSIA-379-2025",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "MSI Afghanistan Reproductive Choices",
+      "Experience": "• Minimum 2–3 years of experience in IT support, social media management, and graphic design.",
+      "Contract Duration": "Fixed term",
+      "Gender": "Male",
+      "Education": "Bachelor’s degree in information technology, Computer Science, designer, Multimedia, Communications, or related field.",
+      "Closing Date": "2026-05-23",
+      "Post Date": "2026-05-14",
+      "Functional Area": "Information Technology",
+      "Job Type": "Full Time",
+      "Source": "ACBAR",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "• Minimum 2–3 years of experience in IT support, social media management, and graphic design.",
+      "Close date": "2026-05-23"
+    },
+    "scraped_at": "2026-05-15T05:46:09Z",
+    "also_found_on": [
+      {
+        "source": "kaarobar",
+        "url": "https://www.kaarobar.net/jobs/15767/position-title-it-digital-communications-officer-re-announced"
+      },
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/28536/position-title-it-digital-communications-officer-re-announced"
+      }
+    ]
+  },
+  {
     "id": "6d95ca5875fa5f0d",
     "source": "acbar",
     "source_url": "https://www.acbar.org/jobs/142084/video-editor.jsp",
@@ -1092,6 +1187,53 @@
       "Submission Through": "link"
     },
     "scraped_at": "2026-04-24T09:10:05Z",
+    "also_found_on": []
+  },
+  {
+    "id": "d4271109a0ec7a63",
+    "source": "acbar",
+    "source_url": "https://www.acbar.org/jobs/142561/amryt-bkhsh-tknalozhy-maalomaty-it.jsp",
+    "url": "https://www.acbar.org/jobs/142561/amryt-bkhsh-tknalozhy-maalomaty-it.jsp",
+    "title": "آمریت بخش تکنالوژی معلوماتی (IT)",
+    "company": "Rokhan Group",
+    "location": "Kabul",
+    "closing_date": "2026-05-30",
+    "closing_date_raw": "2026-05-30",
+    "category": "Admin-Clerical",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "As per policy",
+    "apply_url": "mailto:rafiuddinshahid@outlook.com",
+    "apply_emails": [
+      "rafiuddinshahid@outlook.com"
+    ],
+    "apply_phones": [
+      "026-054 1"
+    ],
+    "description": "About Rokhan Group\nRokhan Group is a leading group in Medical Sector Including Medical Universities, Hospitals, Schools and Construction Companies in different cities of Afghanistan.\n\nJob Description\nوظايف ومسؤليت هاى سپرده شده:\nمدیریت و نظارت از تمام سیستم‌ها، شبکه‌ها و تجهیزات تکنالوژی معلوماتی پوهنتون.\nهمکاری با ریاست پوهنتون در بخش‌های تخنیکی، معلوماتی و دیجیتلی.\nارایه مشوره‌های لازم به ریاست پوهنتون در زمینه تکنالوژی معلوماتی، سیستم‌های نرم‌افزاری و امنیت معلومات.\nنصب، تنظیم و مراقبت از شبکه‌های انترنتی، سرورها، سیستم‌های کامپیوتری و تجهیزات IT پوهنتون.\nنظارت از سیستم ثبت و مدیریت معلومات مریضان (HIS) و اطمینان از فعالیت درست آن.\nحفظ و مراقبت از دیتابیس‌ها، اسناد دیجیتلی و معلومات محرمانه پوهنتون.\nاتخاذ تدابیر لازم جهت تامین امنیت سایبری، جلوگیری از ضایع شدن معلومات و حفاظت از سیستم‌ها در برابر تهدیدات تخنیکی.\nفراهم‌سازی خدمات تخنیکی و حل مشکلات نرم‌افزاری و سخت‌افزاری کارمندان و بخش‌های مختلف پوهنتون.\nمدیریت و نظارت از سیستم‌های کمره‌های امنیتی، بایومتریک، مخابرات داخلی و سایر تجهیزات الکترونیکی.\nتهیه پلان‌ها و برنامه‌های انکشافی در بخش تکنالوژی معلوماتی مطابق نیازمندی‌های پوهنتون.\nنظارت از نصب و استفاده درست نرم‌افزارهای اداری، مالی، طبی و سیستم‌های اتومات پوهنتون.\nتهیه و تنظیم راپورهای ماهوار و سالانه فعالیت‌های آمریت تکنالوژی معلوماتی و ارایه آن به مقام ریاست پوهنتون.\nهماهنگی با شرکت‌های تخنیکی و خدماتی در بخش خریداری، ترمیم و نگهداری تجهیزات IT.\nآموزش و ارتقای ظرفیت کارمندان در استفاده از سیستم‌های تکنالوژی معلوماتی و نرم‌افزارهای مورد استفاده.\nنظارت از فعالیت ویب‌سایت، صفحات اجتماعی و سیستم‌های آنلاین پوهنتون.\nتهیه و ترتیب نیازمندی‌های تخنیکی و تجهیزات IT جهت بهبود خدمات پوهنتون.\nرسیدگی به موقع به ترمیمات و مراقبت از تجهیزات تخنیکی و سیستم‌های الکترونیکی پوهنتون.\nتنظیم و نگهداری آرشیف دیجیتلی و اسناد الکترونیکی مربوط به پوهنتون.\nفراهم‌آوری تسهیلات تخنیکی لازم برای کنفرانس‌ها، جلسات، سیمینارها و برنامه‌های آنلاین پوهنتون.\nنظارت از استفاده معیاری و مصئون تجهیزات تکنالوژی معلوماتی توسط کارمندان.\nارزیابی و پیشنهاد سیستم‌ها و تکنالوژی‌های جدید جهت بهبود خدمات صحی و اداری پوهنتون.\nهماهنگی با سایر آمریت‌ها و بخش‌ها جهت دیجیتلی‌سازی امور اداری و خدماتی.\nحفظ محرميت معلومات و اسناد دیجیتلی مطابق قوانین و مقررات اداره.\nاجرای سایر وظایف که از طرف مقامات ذیصلاح مطابق قوانین، مقررات و اهداف اداره سپرده می‌شود.\n\nJob Requirements\nJob Requirements:\nBachelor’s degree in Information Technology, Computer Science, Software Engineering, or a related field.\nProven experience as an IT Officer, IT Administrator, or in a similar technical role.\nStrong understanding of computer systems, networking, database management, cybersecurity, and IT support services.\nHigh proficiency in operating systems, MS Office applications, networking tools, and troubleshooting hardware and software issues.\nExperience in managing servers, internet networks, CCTV systems, and hospital information systems (HIS).\nAbility to diagnose and resolve technical problems effectively under pressure and within limited timeframes.\nStrong communication, problem-solving, and interpersonal skills.\n\nSubmission Guideline\nInterested candidates should submit their CVs to rafiuddinshahid@outlook.com please specify the vacancy number in the email subject line; otherwise, and your application will not be considered.\n\nSubmission Email\nrafiuddinshahid@outlook.com",
+    "details": {
+      "Job Location": "Kabul",
+      "Nationality": "National",
+      "Category": "Admin-Clerical",
+      "Employment Type": "Full Time",
+      "Salary": "As per policy",
+      "Vacancy Number": "RG-026-054",
+      "No. Of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "Rokhan Group",
+      "Years of Experience": "3 Years",
+      "Contract Duration": "یک سال Extendable",
+      "Gender": "Male",
+      "Education": "لسانس",
+      "Close date": "2026-05-30",
+      "Post Date": "2026-05-14",
+      "Closing Date": "2026-05-30",
+      "Functional Area": "Admin-Clerical",
+      "Job Type": "Full Time",
+      "Source": "ACBAR"
+    },
+    "scraped_at": "2026-05-15T05:46:09Z",
     "also_found_on": []
   },
   {
@@ -1477,6 +1619,46 @@
         "url": "https://wazifaha.org/jobs/28527/position-title-digital-content-creator"
       }
     ]
+  },
+  {
+    "id": "672f0cc18ea73e06",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/system-customer-support-officer-31",
+    "url": "https://jobs.af/jobs/system-customer-support-officer-31",
+    "title": "System Administrator",
+    "company": "UA Telecom",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-06-10",
+    "closing_date_raw": "2026-06-10 00:00:00+00",
+    "category": "Customer Service, Information Technology",
+    "job_type": "full_time",
+    "gender": "male",
+    "vacancies": 1,
+    "salary": "Negotiable",
+    "apply_url": "mailto:vacancies@uatelecom.af",
+    "apply_emails": [
+      "vacancies@uatelecom.af"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nThe System Administrator is responsible for the end-to-end management and security of the ISP’s core network infrastructures, including firewalls, routers, switches, and servers across multiple sites. This role supports customers by ensuring stable internet connectivity and reliable service through precise configuration, continuous monitoring, and rapid incident resolution. It also ensures maximum network uptime and peak performance across the infrastructure. Key responsibilities include managing link provisioning, bandwidth allocation, IP address management, and collaboration with upstream providers.\n\nDuties and Responsibilities\nNetwork Infrastructure & Security\n· Install, configure, and maintain core routers, switches, and firewalls, ensuring scalability and adaptability to future growth.\n· Oversee the operation and firmware updates of primary and secondary firewalls across Main Office and Provincial sites, ensuring optimal performance and security.\n· Monitor spanning tree protocols on switches, ensuring data flows through primary point-to-point links and addressing any issues.\n· Protect CPE and PTP devices from external network attacks by blocking unauthorized ports and ensuring secure network access.\n· Identify customer bandwidth over-usage through weekly monitoring via Cacti servers, apply traffic shaping on CPE devices if limiters fail, and ensure no customer exceeds their contracted bandwidth.\n2. Link & Bandwidth Management\n· Process link activations, upgrades, downgrades, and suspensions through CRM and coordination with the collections department, ensuring seamless integration with core firewall systems.\n· Administer the firewall system dedicated to hotspot users, generating new accounts and allocating bandwidth based on user requirements.\n· Record customers’ day and night bandwidth usage and update the records daily; monitor to prevent overload during peak hours, and request bandwidth upgrades for the main office and branches as needed.\n· Manage firewall time schedulers for day and night bandwidth allocations, optimizing network usage.\n· Oversee demo internet link connections, ensuring customer satisfaction during trial periods.\n· Administer customer requests for temporary bandwidth upgrades, ensuring seamless service delivery.\n3. Server & System Maintenance\n· Conduct monthly HDD diagnostics on the primary server, ensuring data security and system health.\n· Maintain and update the Primary and Secondary Cacti servers to ensure better functionality and apply available updates.\n· Monitor UCRM server health and apply updates as they become available.\n· Monitor NTP server health, specifically for PTP, CPE, and the bandwidth scheduler.\n· Maintain EMCO server IP addresses and register new PTP and PTMP links for the alerting system in case of downtime.\n4. IP & Device Management\n· Update IP allocation sheets for Main office and provincial branches, including devices license keys.\n· Monitor the locations of high-capacity devices and their connected base stations.\n· Maintain records of customers and sites’ equipment serial numbers for asset record.\n5. Monitoring & Troubleshooting\n· Identify and resolve WAN, LAN, and WLAN issues promptly to maintain network stability.\n· Utilize Intermapper to assess microwave device capacities, ensuring no device is overloaded.\n· Update and monitor the WLAN virtualized Layer 2 map for new sector and switch installations, ensuring all PTP devices operate above 10 Mbps LAN speed by actively monitoring the alerting system.\n· Oversee the number of tickets created and closed by System/Helpdesk officers, ensuring timely and satisfactory resolution of technical issues.\n6. Customer Support & Collaboration\n· Collaborate quarterly with the collections department to reconcile active customer bandwidth allocations, including day and night usage.\n· Provide online support to team members and customers for any technical-related issues, ensuring prompt resolution.\n· Upstream Coordination: Serve as the primary liaison with upstream providers to diagnose and resolve link issues promptly, staying engaged until full resolution to ensure uninterrupted service.\n7. Compliance & Web Filtering\n· Continuously monitor web filter subnets and liaise with upstream providers to block URLs flagged by ATRA, ensuring permanent enforcement in full compliance with its official directives.\n8. Additional Duties\n· Perform any other tasks as assigned by management to support network operations and service delivery.\n\nJob Requirements\nRequired: Bachelor’s degree in Computer Science, Network Engineering, or a related field. Preference will be given to candidates with a Master’s degree in a related major field.\nWith a Bachelor’s degree: minimum of 5 years’ experience in system or network administration; with a Master’s degree: minimum of 3 years, preferably within an ISP environment.\nCCNA and CCNP certifications are highly preferred.\nStrong hands-on experience with Cisco, MikroTik, and Ubiquiti (UBQT) devices.\nAdvanced knowledge of network protocols, including TCP/IP, BGP, OSPF, VLANs, and PPPoE.\nDeep understanding of network security best practices and compliance with regulatory directives (e.g., ATRA).\nAbility to analyze and resolve complex technical issues efficiently under pressure.\nExcellent communication and reporting skills in Dari, Pashto, and English.\n\nSubmission Guidelines\nInterested candidates are encouraged to submit their applications by Jun 10, 2026 . To apply, please send your updated CV to vacancies@uatelecom.af\nIn the subject line of your email, please ensure to include the Vacancy Number and Desired Province. e.g: (UAT-VA-SA-2152-J - Kabul) .\nOnly shortlisted candidates will be contacted for the written test or interview process.",
+    "details": {
+      "Reference": "UAT-VA-SA-#2152-J",
+      "Post Date": "2026-05-14 09:37:51.07+00",
+      "Closing Date": "2026-06-10 00:00:00+00",
+      "Functional Area": "Customer Service, Information Technology",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "male",
+      "Education": "bachelor",
+      "Experience": "5 - 10",
+      "Salary": "Negotiable",
+      "Vacancies": 1,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-05-15T05:45:55Z",
+    "also_found_on": []
   },
   {
     "id": "426700fe2aa81725",
