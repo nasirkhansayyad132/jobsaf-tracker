@@ -1,62 +1,5 @@
 [
   {
-    "id": "501751f80d9785b1",
-    "source": "acbar",
-    "source_url": "https://www.acbar.org/jobs/142335/database-developer-national-consultant.jsp",
-    "url": "https://www.acbar.org/jobs/142335/database-developer-national-consultant.jsp",
-    "title": "Database Developer National Consultant",
-    "company": "CTG",
-    "location": "Kabul",
-    "closing_date": "2026-05-17",
-    "closing_date_raw": "2026-05-17",
-    "category": "Information Technology",
-    "job_type": "Full Time",
-    "gender": "Male/Female",
-    "vacancies": "3",
-    "salary": "According to WHO salary scale",
-    "apply_url": "mailto:investigations@who.int",
-    "apply_emails": [
-      "investigations@who.int"
-    ],
-    "apply_phones": [],
-    "description": "About CTG\nCTG was established in 2006, almost 20 years ago, in Afghanistan. We currently operate in 35 countries and have approximately 11,500 staff members committed to good!\nBut do you know who we are? And what do we do?\nWe provide tailored Human Resources and Staffing Solutions that support critical global initiatives across Humanitarian and Development sectors, and are now strategically foraying into new industries, including Construction, Energy, and IT, with a focus on high-risk regions.\nHere’s a list of services we offer:\n•Staffing solutions and HR management services\n•Monitoring and evaluation\n•Fleet management and logistics\n•Facilities management\n•Sustainability and Communications Advisory\n•Election monitoring and observation\n•IT professional services\n•Medical assistance\nVisit www.ctg.org to find out more.\n\nJob Description\nBackground : The Afghanistan Food and Drug Authority (AFDA), as the national regulatory authority, is responsible for ensuring the quality, safety, and efficacy of medicines, medical devices, healthcare products, and food. Despite important progress, Afghanistan’s regulatory system continues to face challenges, including limited technical capacity, high dependence on imported products, inconsistent adherence to quality standards, and evolving systems for product registration, inspections, licensing, and market surveillance. Strengthening AFDA’s regulatory functions in alignment with WHO norms and standards is essential to protect public health, prevent substandard and falsified products, and support the country’s broader goals for health system resilience and universal health coverage.\nTo advance these priorities, AFDA is implementing regulatory reforms guided by the WHO Global Benchmarking Tool (GBT), which provides a structured framework for assessing regulatory maturity and developing Institutional Development Plans (IDPs). To accelerate progress, specialized technical support is required to strengthen GBT implementation, enhance capacity in GMP, regulatory workflows, medicines registration, regulatory information systems, and AMR-related oversight. The engagement of an international consultant will provide targeted expertise, hands-on mentoring, and capacity-building to AFDA staff, supporting the development of sustainable, evidence-based, and internationally aligned regulatory systems that effectively safeguard public health in Afghanistan.\n\nJob Requirements\n1. Purpose of the Consultancy:\nThe purpose of this post is to design, develop, and maintain high-quality databases to meet AFDA requirements. The incumbent ensures seamless integration between backend and frontend systems, delivers secure and maintainable code, and contributes to the overall efficiency and scalability of AFDA’s digital services.\n2. Output:\nThe outputs of this post include scalable and secure web applications that provide reliable backend services and responsive frontend interfaces. The role ensures enhanced user experience, efficient database integration, and high application performance. By maintaining best practices and documentation, it supports future scalability, sustainable software maintenance, and the successful delivery of digital services.\n3. Tasks:\n· Design, develop, and maintain scalable web applications using Django (backend) and React + TypeScript (frontend).\n· Build and optimize RESTful APIs and integrate with PostgreSQL databases.\n· Implement clean, maintainable, and secure code following best practices.\n· Collaborate with designers, product managers, and other developers to deliver high-quality features.\n· Troubleshoot, debug, and optimize application performance and write and maintain technical documentation\nDeliverables:\nDeliverable 1: Fully functional databases and Clean, maintainable, and secure code adhering to best practices.\nDeliverable 2: Technical documentation covering system architecture, workflows, and APIs.\nDeliverable 3: Optimized application performance, troubleshooting, and debugging reports.\nQualifications and experience:\nEducation :\nEssential: Bachelor’s degree in computer science, Information Technology, Software Engineering, or a related field. A Master’s degree is preferred and may be considered an asset.\nExperience :\nEssential: A minimum of 2 years of progressively responsible experience in database development, design, and Django, react.nexjs at a specialist level.\nSkills / Technical skills and knowledge:\n• Excellent interpersonal and communication skills.\n• High sense of responsibility and strong organizational skills with ability to work under pressure.\n• Advanced computer literacy (Word, Excel, PowerPoint, etc.)\nLanguages :\n• Excellent knowledge of English\n• Good Local Languages (Pashto and Dari)\nAdditional Information\nWHO has zero tolerance for sexual misconduct, inaction against it and any form of retaliation against victims/survivors or bystanders who disclose, report, or participate in an investigation. Parallel to technical competence, recruitment, selection and hiring decisions will give due emphasis to assessing candidates value congruence, thorough background checks and reference check processes. This will ensure children and vulnerable adults are safeguarded from abusers and that abusers are prevented from joining WHO Afghanistan office. Please report any concerning information regarding sexual exploitation and abuse by WHO workforce and partners to WHO office of Internal Oversight services at investigations@who.int\nWHO is a smoke free environment.\n\nSubmission Guideline\nClick on the link below and then click on ‘Register and Apply’ if you are not already registered with CTG.\nFollow the steps to provide your details and register;\nProvide the information marked in red.\nSave your profile and upload copies of your qualification and CV.\nOnce your profile is created and saved go to Vacancies tab on the right corner.\nClick on the vacancy that you want to apply for.\nProvide your current employment details, date that you are available from and salary expectations.\nTick the boxes and click submit.\nYou will see your application under the Application tab\nTayo (tayohr.io)\n\nSubmission Email\nhttps://app.tayohr.io/jobs/detail/vac-54752-database-developer-national-consultant-53471",
-    "details": {
-      "Location": "Kabul",
-      "Nationality": "Afghan",
-      "Category": "Information Technology",
-      "Employment Type": "Full Time",
-      "Salary": "According to WHO salary scale",
-      "Vacancy Number": "VAC-54752",
-      "No. of Jobs": "3",
-      "City": "Kabul",
-      "Organization": "CTG",
-      "Experience": "A minimum of 2 years of progressively responsible experience in database development, design, and Django, react.nexjs at a specialist level.",
-      "Contract Duration": "3 months, renewable subject to the requirements of the position, availability of funds, and satisfactory performance of the individual",
-      "Gender": "Male/Female",
-      "Education": "Bachelor’s degree in computer science, Information Technology, Software Engineering, or a related field. A Master’s degree is preferred and may be considered an asset.",
-      "Closing Date": "2026-05-17",
-      "Post Date": "2026-05-05",
-      "Functional Area": "Information Technology",
-      "Job Type": "Full Time",
-      "Source": "ACBAR",
-      "Job Location": "Kabul",
-      "No. Of Jobs": "3",
-      "Years of Experience": "A minimum of 2 years of progressively responsible experience in database development, design, and Django, react.nexjs at a specialist level.",
-      "Close date": "2026-05-17"
-    },
-    "scraped_at": "2026-05-06T05:37:44Z",
-    "also_found_on": [
-      {
-        "source": "kaarobar",
-        "url": "https://www.kaarobar.net/jobs/15598/position-title-database-developer-national-consultant"
-      },
-      {
-        "source": "wazifaha",
-        "url": "https://wazifaha.org/jobs/28380/position-title-database-developer-national-consultant"
-      }
-    ]
-  },
-  {
     "id": "5781de01664b9092",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/business-development-officer-62",
@@ -874,6 +817,44 @@
     ]
   },
   {
+    "id": "f9de0cc65ea0a4ae",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/isp-technician-31",
+    "url": "https://jobs.af/jobs/isp-technician-31",
+    "title": "ISP Technician",
+    "company": "AfghaNet (Internet Service Provider)",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-05-24",
+    "closing_date_raw": "2026-05-24 00:00:00+00",
+    "category": "Computer Science, IT - Software, IT Support",
+    "job_type": "full_time",
+    "gender": "male",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "https://careers.ahg.af//Home/view_job/02slViyGA-WLc-ChQ7WQy8skV3Y4m-dGh4fyptxTjto",
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "Role Summary\nISP Technician\nJob Requirements :\nAbout AfghaNet :\nAfghaNet is an internet service provider that delivers high speed, reliable internet service across all 34 provinces of Afghanistan. AfghaNet owns and operates a state-of-the-art data center with a direct fiber-optic connection on Afghanistan 's internet ring backbone. AfghaNet always strives to provide 100% uptime and no downtime by utilizing multiple redundant internet links, automated load balancing, and 24-hour monitoring. AfghaNet 's dedicated customer service center assigns a qualified account manager as a singular point of contact for you.\nAll AfghaNet equipment is delivered, installed and set up at no charge under our standard plans. All you pay is a flat fixed fee for unlimited usage. For offices, AfghaNet provides dedicated (1:1) internet connections. For residential hotspots, AfghaNet manages bandwidth to maximize speed and minimize latency. Our vision is to provide a consistently reliable internet connection across Afghanistan with unparalleled customer service while being socially responsible.\nJob Summary :\n\nDuties and Responsibilities\nISP Technician\nJob Requirements :\nDuties and Responsibilities:\nWeekly visiting the clients for maintenance\nVisiting Tower for maintenance issues\nSite installation (Able to find the open channel-frequencies according to the locations)\nCreating local-IPs on CCR\nSubnets live-IPs.\nShould be able to setup Point to Point and Point to Multipoint (able to install different PtP devices)\nProvide full support to the clients.\nAnalyze and isolate network issues.\nDetermine network system and requirements to provide the best recommendations.\nOn-call/email support to clients\nnight shift duties as needed.\nPublic IP implementation\nParticipate in brainstorming sessions and contribute innovative and original ideas to technology, algorithms, and products.\nDive into difficult problems and successfully deliver results.\nPROFESSIONAL CONDUCT:\nComply with personal legal liabilities and fiduciary requirements of diligence and care in carrying out the duties of AfghaNet.\nAct honestly in all the affairs of AfghaNet and avoid conflict of interest and, should this arise, it must be declared.\nEducation: Bachelor's in computer science (Network).\n\nJob Requirements\nEducation: Bachelor's in computer science (Network).\nExperience:\nAt least 1-2 year of professional experience in ISP network platform\nEnough knowledge of Mikrotik CCR configurations\nProfessional knowledge of Cacti / MRTG graph implementation\nEnough knowledge of Point to point devices, Ubiquiti /LAG/ InfiNet etc\nEnsure network connectivity throughout a company's LAN/WAN infrastructure.\nEnough knowledge of Routers, Switches, Wireless AP, Enough knowledge of routing protocols.\nEnough Knowledge of Cisco Switching technologies.\nResults oriented, team player, able to work in a fast-paced environment and handle numerous incidents and clients.\nEnough knowledge of frequencies Familiarity with continuous integration\n\nSubmission Guidelines\nHow to Apply:\nQualified candidates are encouraged to submit the following online using jobs.af :\nCover letter indicating suitability for the position\nUpdated CV (maximum two pages; CVs exceeding two pages will not be considered and will be disqualified)\nCopies of relevant academic and professional qualifications\nOnly shortlisted candidates will be contacted\nhttps://careers.ahg.af//Home/view_job/02slViyGA-WLc-ChQ7WQy8skV3Y4m-dGh4fyptxTjto",
+    "details": {
+      "Reference": "0797",
+      "Post Date": "2026-05-17 09:20:56.636+00",
+      "Closing Date": "2026-05-24 00:00:00+00",
+      "Functional Area": "Computer Science, IT - Software, IT Support",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "male",
+      "Education": "bachelor",
+      "Experience": "1 - 2",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "link"
+    },
+    "scraped_at": "2026-05-18T05:53:40Z",
+    "also_found_on": []
+  },
+  {
     "id": "f9d7ef29fefd5585",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/aazmaysh-knndh-nrm-afzar-16",
@@ -1397,6 +1378,61 @@
     },
     "scraped_at": "2026-05-12T05:43:07Z",
     "also_found_on": []
+  },
+  {
+    "id": "3bb514fdcce2ee88",
+    "source": "acbar",
+    "source_url": "https://www.acbar.org/jobs/142584/motion-graphic-designer.jsp",
+    "url": "https://www.acbar.org/jobs/142584/motion-graphic-designer.jsp",
+    "title": "Motion Graphic Designer",
+    "company": "Qamar Foundation",
+    "location": "Kabul",
+    "closing_date": "2026-05-31",
+    "closing_date_raw": "2026-05-31",
+    "category": "Design Media-Journalism",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "As per Organization Scale",
+    "apply_url": "https://www.acbar.org/jobs/142584/motion-graphic-designer.jsp",
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "About Qamar Foundation\nQamar Foundation is a registered non-profit organization in Afghanistan (Reg No. 7) and the UK (Reg No. 1150141).\nWe are dedicated to providing essential humanitarian assistance to those who are most in need.\nOur team is driven by a deep commitment to equality and justice, fueled by a strong desire to save lives.\n\nJob Description\nPosition Summary:\nThe Motion Graphic Designer is responsible for developing creative visual and multimedia content to support the organization’s communication, branding, fundraising, awareness, and digital engagement objectives.\nThe role focuses on motion graphics, animation, video production, graphic design, and multimedia storytelling for organizational campaigns, humanitarian projects, donor visibility, and social media platforms.\nThe position also requires field travel to project locations for visual documentation and content development.\nReports to : Media Manager\nKey Responsibilities:\nDevelop high-quality motion graphics, animations, and visual effects for campaigns, awareness materials, social media content, for organizational communications.\nProduce and edit professional multimedia content including promotional videos, documentaries, short-form videos and campaign materials in line with organizational branding and donor requirements.\nDesign creative visual materials including social media posts, banners, brochures, infographics, reports, certificates, presentations, and other communication assets.\nCapture professional photos and video footage of organizational activities, project operations, events, and beneficiary stories for multimedia production and documentation purposes.\nTravel to provincial project sites to document humanitarian activities, field operations, and project impact through visual storytelling.\nCreate engaging digital content and support the planning, scheduling, and publishing of multimedia materials across organizational social media platforms.\nCollaborate with program, communication, and field teams to identify content opportunities and ensure timely production of multimedia materials.\nEnsure consistency of organizational branding, visual identity, and donor visibility requirements across all digital and print outputs.\nOrganize, maintain, and archive multimedia files, project footage, graphic assets, and design resources in an efficient manner.\nProvide innovative and creative input to strengthen the organization’s visibility, outreach, and digital presence.\nPerform any other multimedia, design, or communication-related tasks assigned by the supervisor or management.\n\nJob Requirements\nHigh School plus certificate in Media Studies, Graphic Design, Fine Arts, or a related field.\nMinimum 3 years of relevant professional experience in media production, and digital content management, preferably in NGOs/INGOs.\nStrong experience in videography, photography, and field media documentation.\nProven expertise in Adobe Suite such as Adobe Premiere Pro, After effects, or similar.\nStrong understanding of social media strategy, content planning, and platform management.\nAbility to travel frequently to provinces and remote project locations.\nStrong written and verbal communication skills in English, Dari, and Pashto preferred.\nAbility to work under pressure and meet tight deadlines\n\nSubmission Guideline\nAll interested and qualified candidates should fill out the application ( https://forms.gle/BVGTLBPzUJVTGaAA7 ) no later than May 31, 2026 .\nKindly rename your CV with your full name before submitting it.\nNote:\nApplicants who do not complete the online application form will not be considered.\nOnly short-listed candidates will be called for a written test and subsequent interview.\nTests and Interview will be conducted on a rolling basis.\n\nSubmission Email\nhttps://forms.gle/BVGTLBPzUJVTGaAA7",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "National",
+      "Category": "Design Media-Journalism",
+      "Employment Type": "Full Time",
+      "Salary": "As per Organization Scale",
+      "Vacancy Number": "Q/MGD01/26",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "Qamar Foundation",
+      "Experience": "3 - 5 Years",
+      "Contract Duration": "Long-Term",
+      "Gender": "Male",
+      "Education": "High School Diploma",
+      "Closing Date": "2026-05-31",
+      "Post Date": "2026-05-17",
+      "Functional Area": "Design Media-Journalism",
+      "Job Type": "Full Time",
+      "Source": "ACBAR",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "3 - 5 Years",
+      "Close date": "2026-05-31"
+    },
+    "scraped_at": "2026-05-18T05:53:50Z",
+    "also_found_on": [
+      {
+        "source": "kaarobar",
+        "url": "https://www.kaarobar.net/jobs/15790/position-title-motion-graphic-designer"
+      },
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/28577/position-title-motion-graphic-designer"
+      }
+    ]
   },
   {
     "id": "b31162a0f4e5e6eb",
