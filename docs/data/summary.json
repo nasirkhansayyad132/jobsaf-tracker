@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-05-29T05:55:29.693Z",
-  "today": "2026-05-29",
+  "generated_at": "2026-05-30T05:44:58.480Z",
+  "today": "2026-05-30",
   "total_jobs": 40,
   "new_count": 1,
-  "expiring_today_count": 1,
-  "expiring_soon_count": 14,
+  "expiring_today_count": 2,
+  "expiring_soon_count": 13,
   "tech_banking_count": 4,
   "new_jobs": [
     {
-      "id": "91d9098c79efe679",
-      "source": "acbar",
-      "source_url": "https://www.acbar.org/jobs/131005/software-developer.jsp",
-      "url": "https://www.acbar.org/jobs/131005/software-developer.jsp",
+      "id": "d0d1528078cf06ed",
+      "source": "kaarobar",
+      "source_url": "https://www.kaarobar.net/jobs/5662/position-title-software-developer",
+      "url": "https://www.kaarobar.net/jobs/5662/position-title-software-developer",
       "title": "Software Developer",
       "company": "Hushmand Shahar Information Technology",
-      "location": "Balkh Herat Kabul Kandahar",
-      "closing_date": "2027-01-31",
-      "closing_date_raw": "2027-01-31",
+      "location": "Balkh, Herat, Kabul, Kandahar",
+      "closing_date": "2026-12-31",
+      "closing_date_raw": "2026-12-31",
       "category": "IT",
       "job_type": "Full Time",
       "gender": "Male/Female",
       "vacancies": "1",
       "salary": null,
-      "apply_url": "mailto:hushmandshahar@gmail.com",
+      "apply_url": "https://www.kaarobar.net/jobs/apply/5662/position-title-software-developer",
       "apply_emails": [
         "hushmandshahar@gmail.com"
       ],
       "apply_phones": [],
-      "description": "About Hushmand Shahar Information Technology\nAbout Hushmand Shahar Information Technology Service Company\nHushmand Shahar Information Technology Service Company is a trusted provider of IT solutions, software development, and digital transformation services in Afghanistan. Our mission is to empower businesses with innovative technology solutions that enhance efficiency, security, and scalability.\nWith a team of experienced professionals, we specialize in custom software development, enterprise solutions, cloud computing, and IT infrastructure services . We are committed to delivering cutting-edge solutions that help organizations stay competitive in the digital world.\nOur Services\nSoftware Development: Custom web and mobile applications using Laravel, React, Next.js, and more.\nEnterprise IT Solutions: ERP, MIS, CRM, and custom business software.\nIT Consultancy: Digital strategy, system integration, and cybersecurity.\nCloud Solutions: AWS, DigitalOcean, Laravel Forge, and cloud-based deployments.\nE-Commerce Development: Scalable online store solutions with secure payment gateways.\nWhy Choose Us?\nExpert Team: Skilled professionals with expertise in software engineering and IT solutions.\nQuality & Security: Industry-standard practices ensuring high-performance and secure applications.\nClient-Focused Approach: Tailored solutions that align with business needs.\nReliable Support: Ongoing maintenance and technical support for seamless operations.\nOur Vision\nTo be a leading technology service provider in Afghanistan, driving digital innovation and business growth.\nOur Mission\nTo develop reliable, scalable, and high-performance technology solutions that help businesses streamline their operations and achieve success.\nJob Summary\n\nJob Description\nWe are seeking a highly skilled Laravel Developer to join our dynamic team at Hushmand Shahar Information Technology Service Company . The ideal candidate will have strong expertise in Laravel, PHP, and modern web development technologies and will be responsible for designing, developing, and maintaining robust, scalable, and high-performance web applications.\nThis role requires a deep understanding of MVC architecture, database management, and front-end technologies . As a Laravel Developer, you will collaborate with cross-functional teams to build secure applications, integrate APIs, optimize performance , and troubleshoot technical challenges.\n\nJob Requirements\nProven experience (2+ years) as a Laravel Developer or in a similar role.\nProficiency in PHP, Laravel, MySQL, and object-oriented programming (OOP) .\nStrong knowledge of MVC architecture and best coding practices.\nExperience in front-end technologies (HTML5, CSS3, JavaScript, Vue.js, React, or Alpine.js).\nFamiliarity with Laravel Blade templating and Livewire (preferred but not mandatory).\nHands-on experience with RESTful API development and third-party API integration .\nUnderstanding of security best practices , including data encryption and secure authentication.\nExperience with queues, cron jobs, and background task processing in Laravel .\nKnowledge of Git, GitHub, Bitbucket, or GitLab for version control .\nStrong debugging and troubleshooting skills.\nFamiliarity with Agile development methodologies (Scrum, Kanban) .\nExcellent problem-solving skills and ability to work independently or within a team.\n\nSubmission Guideline\nVacancy Number: Please mention the vacancy number in the email subject line .\nCV & Previous Projects: Applicants must attach their CV and a list with links of previous projects they have worked on.\nEmail Submission: Send your application to hushmandshahar@gmail.com before the deadline.\n\nSubmission Email\nhushmandshahar@gmail.com",
+      "description": "About Hushmand Shahar Information Technology\nAbout Hushmand Shahar Information Technology Service Company\nHushmand Shahar Information Technology Service Company is a trusted provider of IT solutions, software development, and digital transformation services in Afghanistan. Our mission is to empower businesses with innovative technology solutions that enhance efficiency, security, and scalability.\nWith a team of experienced professionals, we specialize in custom software development, enterprise solutions, cloud computing, and IT infrastructure services . We are committed to delivering cutting-edge solutions that help organizations stay competitive in the digital world.\nOur Services\nSoftware Development: Custom web and mobile applications using Laravel, React, Next.js, and more.\nEnterprise IT Solutions: ERP, MIS, CRM, and custom business software.\nIT Consultancy: Digital strategy, system integration, and cybersecurity.\nCloud Solutions: AWS, DigitalOcean, Laravel Forge, and cloud-based deployments.\nE-Commerce Development: Scalable online store solutions with secure payment gateways.\nWhy Choose Us?\nExpert Team: Skilled professionals with expertise in software engineering and IT solutions.\nQuality & Security: Industry-standard practices ensuring high-performance and secure applications.\nClient-Focused Approach: Tailored solutions that align with business needs.\nReliable Support: Ongoing maintenance and technical support for seamless operations.\nOur Vision\nTo be a leading technology service provider in Afghanistan, driving digital innovation and business growth.\nOur Mission\nTo develop reliable, scalable, and high-performance technology solutions that help businesses streamline their operations and achieve success.\nJob Summary\n\nJob Descriptions\nWe are seeking a highly skilled Laravel Developer to join our dynamic team at Hushmand Shahar Information Technology Service Company . The ideal candidate will have strong expertise in Laravel, PHP, and modern web development technologies and will be responsible for designing, developing, and maintaining robust, scalable, and high-performance web applications.\nThis role requires a deep understanding of MVC architecture, database management, and front-end technologies . As a Laravel Developer, you will collaborate with cross-functional teams to build secure applications, integrate APIs, optimize performance , and troubleshoot technical challenges.\n\nJob Requirements\nProven experience (2+ years) as a Laravel Developer or in a similar role.\nProficiency in PHP, Laravel, MySQL, and object-oriented programming (OOP) .\nStrong knowledge of MVC architecture and best coding practices.\nExperience in front-end technologies (HTML5, CSS3, JavaScript, Vue.js, React, or Alpine.js).\nFamiliarity with Laravel Blade templating and Livewire (preferred but not mandatory).\nHands-on experience with RESTful API development and third-party API integration .\nUnderstanding of security best practices , including data encryption and secure authentication.\nExperience with queues, cron jobs, and background task processing in Laravel .\nKnowledge of Git, GitHub, Bitbucket, or GitLab for version control .\nStrong debugging and troubleshooting skills.\nFamiliarity with Agile development methodologies (Scrum, Kanban) .\nExcellent problem-solving skills and ability to work independently or within a team.\n\nSubmission Guidelines\nVacancy Number: Please mention the vacancy number in the email subject line .\nCV & Previous Projects: Applicants must attach their CV and a list with links of previous projects they have worked on.\nEmail Submission: Send your application to hushmandshahar@gmail.com before the deadline.\n\nSubmission Email\nhushmandshahar@gmail.com\nApply",
       "details": {
-        "Job Location": "Balkh Herat Kabul Kandahar",
+        "Job Location": "Balkh, Herat, Kabul, Kandahar",
         "Nationality": "Afghan",
         "Category": "IT",
         "Employment Type": "Full Time",
@@ -41,60 +41,17 @@
         "Contract Duration": "1 Year",
         "Gender": "Male/Female",
         "Education": "Computer Science",
-        "Close date": "2027-01-31",
-        "Post Date": "2025-02-27",
-        "Closing Date": "2027-01-31",
+        "Close date": "2026-12-31",
+        "Closing Date": "2026-12-31",
         "Functional Area": "IT",
         "Job Type": "Full Time",
-        "Source": "ACBAR"
+        "Source": "Kaarobar"
       },
-      "scraped_at": "2026-05-29T05:55:10Z",
+      "scraped_at": "2026-05-30T05:44:49Z",
       "also_found_on": []
     }
   ],
   "expiring_today": [
-    {
-      "id": "11b37869ece72134",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/mdyryt-ahsaeyh-16",
-      "url": "https://jobs.af/jobs/mdyryt-ahsaeyh-16",
-      "title": "مدیریت احصائیه",
-      "company": "Afghanistan Oil and Gas Company (AOGC)",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-05-29",
-      "closing_date_raw": "2026-05-29 00:00:00+00",
-      "category": "Computer Science",
-      "job_type": "full_time",
-      "gender": "male",
-      "vacancies": 1,
-      "salary": "Company salary scale",
-      "apply_url": "http://178.18.249.112:8080/Recruit/Applicant/ApplicantApply/146D1A38-474F-475A-9533-5BCE7C2813C0",
-      "apply_emails": [],
-      "apply_phones": [
-        "178.18.249.112"
-      ],
-      "description": "Role Summary\nمدیریت، طرح و توحید احصائیه‌های اقتصادی و معلومات عرصه‌های فنی، تجارتی و عملیاتی مرکز و ولایات، و درج آن در دیتابیس در مطابقت با پالیسی‌ها، مقررات و طرزالعمل‌های نافذۀ در شرکت.\n\nDuties and Responsibilities\n· ترتیب و تنظیم پلان‌های کاری ماهوار، ربعوار و سالانۀ بخش احصائیه و دیتابیس در مطابقت با اهداف تعیین شدۀ اداره؛\n· ایجاد، مدیریت، توسعه و به‌روزرسانی دیتابیس مرکزی جهت ثبت، ذخیره، نگهداری و بازیابی مؤثر معلومات و ارقام اداره؛\n· حصول اطمینان از دقت، صحت، تکمیل بودن و مصئونیت معلومات و ارقام درج‌شده در سیستم‌های معلوماتی و دیتابیس‌ها؛\n· استفاده از نرم‌افزارها و ابزارهای تحلیلی و احصائیوی جهت تحلیل ارقام، تهیه راپورها و ارزیابی فعالیت‌های اداره؛\n· اتخاذ تدابیر لازم جهت حفاظت و حفظ محرمیت دیتابیس‌ها و جلوگیری از دسترسی غیرمجاز به معلومات و اسناد دیجیتلی؛\n· برنامه‌ریزی و تنظیم روند جمع‌آوری ارقام و معلومات اقتصادی و احصائیوی جهت استفاده در پلان‌گذاری و تصمیم‌گیری‌های اداره؛\n· ایجاد و تنظیم سیستم سافت‌کاپی جهت ثبت، نگهداری و آرشیف منظم معلومات، راپورها و اسناد احصائیوی؛\n· جمع‌آوری، توحید، تصنیف و تحلیل اعداد و ارقام از بخش‌های مرکزی و ولایتی جهت ارائه به مراجع ذیربط؛\n· تحلیل ارقام و معلومات احصائیوی جهت تشخیص مشکلات، ارزیابی وضعیت کاری و ارائه پیشنهادات اصلاحی؛\n· تهیه گزارش‌های تحلیلی از وضعیت بازار، فروشات، عواید و فعالیت‌های اقتصادی اداره بر اساس ارقام و معلومات موجود؛\n· ارائه معلومات و ارقام احصائیوی به بخش‌های مربوط جهت استفاده در ترتیب پلان‌ها، گزارش‌ها و برنامه‌های انکشافی؛\n· رهنمایی و ارائه مشوره‌های تخنیکی به کارکنان تحت اثر در زمینۀ جمع‌آوری، تحلیل و مدیریت معلومات و ارقام احصائیوی؛\n· مدیریت و نظارت از اجراآت کارکنان تحت اثر جهت بهبود کیفیت کاری و استفاده مؤثر از نرم‌افزارها و سیستم‌های معلوماتی؛\n· هماهنگی دوامدار با ادارات مربوط جهت تبادل معلومات و تهیه راپورهای دقیق و معیاری؛\n· حفظ، تنظیم و آرشیف اسناد، راپورها و جداول احصائیوی مطابق اصول اداره اسناد و حفظ محرمیت معلومات؛\n· اجرای سایر وظایف محوله از سوی آمر مربوطه مطابق قوانین، مقررات و اهداف اداره.\n\nJob Requirements\n· داشتن سند تحصیلی حداقل لیسانس در یکی از رشته های های کمپیوترساینس، تکنالوژی و معلوماتی یا سایر رشته های مرتبط به وظیفه.\n· داشتن تجربه کاری حداقل ۱ سال مرتبط به وظیفه - حایز سند ماستر و دوکتورا از این حکم مستثنی می باشد\n\nSubmission Guidelines\nرهنمایی ثبت نام متقاضیان\nمتقاضیان محترم برای ثبت نام روی لینک زیر کلیک نموده معلومات خویش را ارسال بدارند\nhttp://178.18.249.112:8080/Recruit/Applicant/ApplicantApply/146D1A38-474F-475A-9533-5BCE7C2813C0\nدرجریان ثبت نام موارد ذیل را در نظر داشته باشند\n. تمام معلومات خویش را دقیق برویت اسناد درج نمایند در صورت نادرست بودن معلومات درج شده متقاضی از پروسه\nحذف میگردد\n. یک فرد صرف یکبار ثبت نام کرده میتواند\n. در قسمت درج عنوان بست و کود بست دقت لازم نمائید\nآدرس: ریاست عمومی شرکت امارتی نفت و گاز افغانستان واقع کوتل خیرخانه جوار ناحیه هفدهم، کابل- افغانستان\nدرصورت ضرورت به شماره ذیل تماس گرفته میتوانید: ۰۷۴۷۷۷۷۵۷۰\nنوت: تنها برای کاندیدانی تماس گرفته میشود که در بست متذکره شارت لست گردند\nامتحان بست متذکره دفتر مرکزی ریاست عمومی شرکت امارتی نفت و گاز افغانستان اخذ میگردد",
-      "details": {
-        "Reference": "069",
-        "Post Date": "2026-05-19 05:21:16.696+00",
-        "Closing Date": "2026-05-29 00:00:00+00",
-        "Functional Area": "Computer Science",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "male",
-        "Education": "bachelor",
-        "Experience": "1",
-        "Salary": "Company salary scale",
-        "Vacancies": 1,
-        "Submission Through": "link"
-      },
-      "scraped_at": "2026-05-19T05:50:56Z",
-      "also_found_on": []
-    }
-  ],
-  "expiring_soon": [
     {
       "id": "5b64a558b13075df",
       "source": "jobs.af",
@@ -179,7 +136,9 @@
       },
       "scraped_at": "2026-05-15T05:46:09Z",
       "also_found_on": []
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "6ad5b8723716a94a",
       "source": "kaarobar",
@@ -728,6 +687,44 @@
         "Submission Through": "email"
       },
       "scraped_at": "2026-05-12T05:43:07Z",
+      "also_found_on": []
+    },
+    {
+      "id": "8d27205931f72c94",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/radio-operator-47",
+      "url": "https://jobs.af/jobs/radio-operator-47",
+      "title": "Radio Operator",
+      "company": "United Nations World Food Programme",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-06-02",
+      "closing_date_raw": "2026-06-02 00:00:00+00",
+      "category": "Telecommunication",
+      "job_type": "full_time",
+      "gender": "any",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "https://wd3.myworkdaysite.com/recruiting/wfp/job_openings/job/Kabul-AfghanistanThe-Islamic-Re/Radio-Operator-SC-G_JR123208",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nThese jobs are found in country Offices. Jobholders are based in Radio Rooms and typically report to an Information Technology Officer, Security Officer, or the designate. At this level, jobholders work in a team under minimal supervision, and they are expected to produce organized and accurate reports and technical work. As required, they may work with UNDSS Radio Room, especially in case of security incidents. These jobs may require working different shifts and reporting for duty on short notice. The purpose of this job is to support telecommunications services in order to facilitate the efficient implementation of security processes and procedures.\n\nDuties and Responsibilities\nKey Duty & Responsibilities:\nCoordinate with WFP Security staff and/or UNDSS Radio Room to facilitate accurate and efficient security-related information flow following established standard operating procedures.\nResponsible for monitoring and channelling all radio communications, including tracking of WFP vehicle and staff movement to ensure efficient 24-hour coverage of telecommunications Services.\nEnsure optimal radio network operations through the implementation of standard operating procedures and the provision of guidelines and training to local radio operators in the region of Assignment.\nProduce regular and ad hoc reports, including daily radio checks, staff movement reports and assist in preparing and dispatching the summary of security incidents and other information to staff to facilitate accurate, efficient and concise communication and information flow.\nProvide efficient support and training to users on telecommunications equipment and Procedures including Minimum Operating Security Standards (MOSS) requirements to ensure effective use of telecommunications equipment.\nMaintain inventory and provide recommendations for potential improvements to support Efficient planning and keeping WFP telecommunications equipment operational.\nCreate and maintain databases (e.g. lists of call signs, addresses, telephone numbers, wardens, etc.), to ensure accurate information is always available.\nFollow established emergency response processes and procedures to ensure prompt assistance in case of emergencies.\nTrack mission vehicles and movement and provide a report to the head of security.\nEquipped new arrival with telecom equipment with basic training and keep log incidents and office daily call office keys.\nMonitor UHF repeaters, network and vehicle tracking application, programme telecom equipment and assign call signs to new arrival staff.\nDesired Experience and Entry into the Role:\nOfficial training and/or experience using MS Word, MS Excel, MS PowerPoint, and other WFP software is an advantage. Good knowledge of WFP administrative policies, procedures, a corporate application such as WINGS and good command of English and local language/s\nModerate level of knowledge of telecommunication operations, procedures, and high standards. Also have computer literacy, good communication skills with clarity and concisely.\nAbility to multi-task and respond simultaneously and in a timely fashion to demanding job requirements.\nAbility to prioritize a heavy workload and demonstrate judgment, initiative, alertness, and emotional stability, especially in emergency situations.\nFunctional capabilities & Competencies:\nKeep operationalizing WFP Radio Network 24/7.\nTrack movement of staff 24/7 and arrange basic Radio training on a timely basis.\nTrack WFP vehicles and monitor VHF/UHF repeaters 24/7.\nHeadcount for international staff on the specified timetable with reporting to security unit.\nKeep update incident logbook with reporting to security unit if needed with less than 5 minutes delay.\nProvide ICT support and equipment delivery to the new arrival and ensure that no security alert is missed.\nAchieve 100% security alert sharing with security warden and improve user’s satisfaction ratings by 20% from a security perspective.\n\nJob Requirements\nQualification:\nEducation:\nCompletion of secondary school education. Technical training in communication equipment or other work-related areas.\nExperience:\nFour or more years of progressively responsible work experience in telecommunications/radio operations, information technology, or other relevant fields of work.\nLanguages:\nFluency (level C) in the UN language in use at the duty station and in the duty station’s language, if different.\n\nSubmission Guidelines\nThis vacancy announcement is for Afghan nationals only and WFP encourages especially Afghan females and Afghans with disabilities to apply.\nPlease copy and paste the following link into the web browser in order to apply for this position:\nhttps://wd3.myworkdaysite.com/recruiting/wfp/job_openings/job/Kabul-AfghanistanThe-Islamic-Re/Radio-Operator-SC-G_JR123208",
+      "details": {
+        "Reference": "JR123208",
+        "Post Date": "2026-05-19 09:41:54.367+00",
+        "Closing Date": "2026-06-02 00:00:00+00",
+        "Functional Area": "Telecommunication",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "service_contract",
+        "Gender": "any",
+        "Education": "high_school",
+        "Experience": "4",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "link"
+      },
+      "scraped_at": "2026-05-20T05:51:24Z",
       "also_found_on": []
     }
   ],
