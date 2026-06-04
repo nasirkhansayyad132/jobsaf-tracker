@@ -1,60 +1,45 @@
 [
   {
-    "id": "fbb2f98b03aa8b24",
-    "source": "acbar",
-    "source_url": "https://www.acbar.org/jobs/142260/digital-marketing-assistant.jsp",
-    "url": "https://www.acbar.org/jobs/142260/digital-marketing-assistant.jsp",
-    "title": "Digital Marketing Assistant",
-    "company": "Zaiflow International LLC",
-    "location": "Kabul",
-    "closing_date": "2026-06-03",
-    "closing_date_raw": "2026-06-03",
-    "category": "Marketing",
-    "job_type": "Full Time",
-    "gender": "Male",
-    "vacancies": "1",
-    "salary": "Based on Organization Salary Scale",
-    "apply_url": "mailto:info@zaiflowintl.com",
+    "id": "4c5a41810fbe0959",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/internship-opportunities-kabul-innovation-center",
+    "url": "https://jobs.af/jobs/internship-opportunities-kabul-innovation-center",
+    "title": "Internship Opportunities – Kabul Innovation Center",
+    "company": "Kabul Innovation Center",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-06-04",
+    "closing_date_raw": "2026-06-04 00:00:00+00",
+    "category": "Graphic Design, Web Design, Media, Software Development, Database Developing, Management Information System",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 10,
+    "salary": "5000 AFN",
+    "apply_url": "mailto:ceo@kic.af",
     "apply_emails": [
-      "info@zaiflowintl.com"
+      "ceo@kic.af",
+      "jobs@kic.af",
+      "coo@Kic.af"
     ],
     "apply_phones": [],
-    "description": "About Zaiflow International LLC\nWho We Are: An early-stage firm offering premium bookkeeping services provided by experienced Chartered Accountants.\nOur Market: We exclusively target U.S.-based small businesses.\nOur Mission: Helping small business owners understand profitability, avoid costly mistakes, and save time.\n\nJob Description\nWe are looking for a creative and execution-focused Digital Marketing & Creative Assistant who can support our marketing team in content creation, videography, photography, and basic SEO activities.\nThis role is ideal for someone who is not only technical but also creative , and can turn ideas into high-quality visual and digital content.\n\nJob Requirements\nBasic to intermediate knowledge of Digital Marketing\nFamiliarity with social media platforms and content trends\nBasic understanding of SEO (Search Engine Optimization)\nSkills in videography and photography (shooting + basic editing)\nExperience with design tools (Canva, Photoshop, or similar)\nAbility to:\nThink creatively\nExecute ideas practically\nWork with scripts and turn them into visual content\nStrong work ethic, willingness to learn, and attention to detail\n\nSubmission Guideline\nSubmission Email\nPlease Send your CV/Cover letter to:\ninfo@zaiflowintl.com\nOnly shortlisted candidates will be contacted.\n\nSubmission Email\ninfo@zaiflowintl.com",
+    "description": "Role Summary\nKabul Innovation Center is offering internship opportunities for fresh graduates with strong practical skills to work on real-world projects.\n🔹 Open Positions:\nFull Stack Developer Intern\nMobile App Developer Intern\nUI/UX Design Intern\nGraphic Design Intern\nMotion Design Intern\n\nDuties and Responsibilities\nWork on real client and internal projects\nCollaborate with development and design teams\nDesign, develop, and optimize digital products\nFollow modern tools, technologies, and creative practices\n\nJob Requirements\nGraduate in a relevant field (CS, IT, Design, Multimedia)\nStrong practical skills in your area:\nFull Stack: Laravel, PHP, JavaScript, MySQL\nMobile: Flutter, APIs\nUI/UX: Figma, user experience principles\nGraphic Design: Adobe Photoshop, Illustrator\nMotion Design: After Effects, animation basics\nAbility to work on real projects\nCreative, motivated, and team-oriented\n\nSubmission Guidelines\nApply now by sending your CV & portfolio.\nceo@kic.af\njobs@kic.af\ncoo@Kic.af",
     "details": {
-      "Job Location": "Kabul",
-      "Nationality": "Afghan",
-      "Category": "Marketing",
-      "Employment Type": "Full Time",
-      "Salary": "Based on Organization Salary Scale",
-      "Vacancy Number": "ZAIFLOW-HRM-035",
-      "No. Of Jobs": "1",
-      "City": "Kabul City",
-      "Organization": "Zaiflow International LLC",
-      "Years of Experience": "1–2 Years (Fresh but skilled candidates can also apply)",
-      "Contract Duration": "Permanent",
-      "Gender": "Male",
-      "Education": "Practical digital marketing skills matter most; a relevant degree or Diploma in English adds value.",
-      "Close date": "2026-06-03",
-      "Closing Date": "2026-06-03",
-      "Functional Area": "Marketing",
-      "Job Type": "Full Time",
-      "Source": "ACBAR",
-      "Location": "Kabul",
-      "No. of Jobs": "1",
-      "Experience": "1–2 Years (Fresh but skilled candidates can also apply)",
-      "Post Date": "2026-05-03"
+      "Reference": "KIC/HR/26/001",
+      "Post Date": "2026-04-26 12:08:46+00",
+      "Closing Date": "2026-06-04 00:00:00+00",
+      "Functional Area": "Graphic Design, Web Design, Media, Software Development, Database Developing, Management Information System",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "internship",
+      "Gender": "any",
+      "Education": "bachelor",
+      "Experience": "0",
+      "Salary": "5000 AFN",
+      "Vacancies": 10,
+      "Submission Through": "email"
     },
-    "scraped_at": "2026-05-04T05:42:02Z",
-    "also_found_on": [
-      {
-        "source": "kaarobar",
-        "url": "https://www.kaarobar.net/jobs/15525/position-title-digital-marketing-assistant"
-      },
-      {
-        "source": "wazifaha",
-        "url": "https://wazifaha.org/jobs/28283/position-title-digital-marketing-assistant"
-      }
-    ]
+    "scraped_at": "2026-06-04T06:07:11Z",
+    "also_found_on": []
   },
   {
     "id": "11f00bd11e1f74b8",
@@ -752,6 +737,57 @@
     ]
   },
   {
+    "id": "d84040dd3320d194",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16055/it-officer",
+    "url": "https://www.kaarobar.net/jobs/16055/it-officer",
+    "title": "IT Officer",
+    "company": "ACBAR",
+    "location": "Kabul",
+    "closing_date": "2026-06-16",
+    "closing_date_raw": "2026-06-16",
+    "category": "Information Technology",
+    "job_type": "Full Time",
+    "gender": "Male/Female",
+    "vacancies": "1",
+    "salary": "Salary and conditions are according to ACBAR’s salary scale.",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16055/it-officer",
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "About ACBAR\nThe Agency Coordinating Body for Afghan Relief and Development, ACBAR, is an independent forum founded in 1988 in response to the demand from NGOs working with Afghan refugees in Pakistan and across the border in Afghanistan to more efficiently coordinate assistance and delivery of services. With its main office in Kabul since 2002, ACBAR brings together 230 National and International NGOs working in in all sectors of humanitarian assistance and development in Afghanistan. Its activities focus heavily on information to its members and the aid community in general, coordination of activities at the national and regional levels, and advocacy on issues affecting the work of its members in Afghanistan. ACBAR has a mission to provide an efficient platform for members to carry out effective humanitarian, development, and peace building activities in Afghanistan. The members are the drive behind ACBAR, and their active participation is essential to ACBAR’s continued dynamism.\nThe Agency Coordinating Body for Afghan Relief and Development, ACBAR, is an independent forum founded in 1988 in response to the demand from NGOs working with Afghan refugees in Pakistan and across the border in Afghanistan to more efficiently coordinate assistance and delivery of services. With its main office in Kabul since 2002, ACBAR brings together 230 National and International NGOs working in in all sectors of humanitarian assistance and development in Afghanistan. Its activities focus heavily on information to its members and the aid community in general, coordination of activities at the national and regional levels, and advocacy on issues affecting the work of its members in Afghanistan. ACBAR has a mission\nto provide an efficient platform for members to carry out effective humanitarian, development, and peace building activities in Afghanistan.\nto provide an efficient platform for members to carry out effective humanitarian, development, and peace building activities in Afghanistan.\nThe members are the drive behind ACBAR, and their active participation is essential to ACBAR’s continued dynamism.\n\nJob Descriptions\nThe IT Communication Officer is responsible for managing and delivering clear, effective communication between the IT department and internal/external stakeholders while supporting the organization’s IT systems. The role ensures efficient operation of hardware, software, and networks, translates technical information into user-friendly content, and supports users while safeguarding data and maintaining system reliability.\nThe IT Communication Officer is responsible for managing and delivering clear, effective communication between the IT department and internal/external stakeholders while supporting the organization’s IT systems. The role ensures efficient operation of hardware, software, and networks, translates technical information into user-friendly content, and supports users while safeguarding data and maintaining system reliability.\nESSENTIAL TASKS\nESSENTIAL TASKS\nESSENTIAL TASKS\nEssential tasks include the following:\nEssential tasks include the following:\nEssential tasks include the following:\nIT responsibilities:\nIT responsibilities:\nIT responsibilities:\nResponsible for all ACBAR IT management and requirements.\nNegotiate contracts and liaise with internet providers and web hosting companies\nTo set up and maintain the network, email, and server configuration.\nEnsure that all the IT equipment in ACBAR offices is maintained and functioning properly (hardware and software).\nEnsure that all computers are backed up to the cloud server.\nSupport all necessary security and virus protection aspects for standalone and network IT equipment.\nKeep a record of all IT Equipment and update the inventory list with the IT Manager.\nProvide technical training (IT) support to staff with the IT Manager\nProvide advice for purchasing new IT equipment.\nKeeping up to date with the latest technologies.\nSupport IT problems for ACBAR members if asked\nTo carry out any other related tasks requested by management\nProvide Technical support for AID (ACBAR Information database).\nProvide support to database users, troubleshoot, and prepare manuals and guidelines\nResponsible for all ACBAR IT management and requirements.\nResponsible for all ACBAR IT management and requirements.\nNegotiate contracts and liaise with internet providers and web hosting companies\nNegotiate contracts and liaise with internet providers and web hosting companies\nTo set up and maintain the network, email, and server configuration.\nTo set up and maintain the network, email, and server configuration.\nEnsure that all the IT equipment in ACBAR offices is maintained and functioning properly (hardware and software).\nEnsure that all the IT equipment in ACBAR offices is maintained and functioning properly (hardware and software).\nEnsure that all computers are backed up to the cloud server.\nEnsure that all computers are backed up to the cloud server.\nSupport all necessary security and virus protection aspects for standalone and network IT equipment.\nSupport all necessary security and virus protection aspects for standalone and network IT equipment.\nKeep a record of all IT Equipment and update the inventory list with the IT Manager.\nKeep a record of all IT Equipment and update the inventory list with the IT Manager.\nProvide technical training (IT) support to staff with the IT Manager\nProvide technical training (IT) support to staff with the IT Manager\nProvide advice for purchasing new IT equipment.\nProvide advice for purchasing new IT equipment.\nKeeping up to date with the latest technologies.\nKeeping up to date with the latest technologies.\nSupport IT problems for ACBAR members if asked\nSupport IT problems for ACBAR members if asked\nTo carry out any other related tasks requested by management\nTo carry out any other related tasks requested by management\nProvide Technical support for AID (ACBAR Information database).\nProvide Technical support for AID (ACBAR Information database).\nProvide support to database users, troubleshoot, and prepare manuals and guidelines\nProvide support to database users, troubleshoot, and prepare manuals and guidelines\nWebsite responsibilities:\nWebsite responsibilities:\nWebsite responsibilities:\nTo upload and update the ACBAR Website contents daily.\nTo approve job announcements, resumes & organizations\nTo update online News text\nTo post RFPs/ RFQs and EOIs in the website.\nTo post notices on the website.\nUploading necessary files on website.\nTo identify and promote the site to others on the web (search engines and Afghan and international institutions)\nTo archive outdated contents.\nCreating new queries & new users for the database (directory of addresses)\nUpdating printable directory\nProviding support to website users via email/phone\nSolve the problem of all employers and jobseeker\nTo upload and update the ACBAR Website contents daily.\nTo upload and update the ACBAR Website contents daily.\nTo approve job announcements, resumes & organizations\nTo approve job announcements, resumes & organizations\nTo update online News text\nTo update online News text\nTo post RFPs/ RFQs and EOIs in the website.\nTo post RFPs/ RFQs and EOIs in the website.\nTo post notices on the website.\nTo post notices on the website.\nUploading necessary files on website.\nUploading necessary files on website.\nTo identify and promote the site to others on the web (search engines and Afghan and international institutions)\nTo identify and promote the site to others on the web (search engines and Afghan and international institutions)\nTo archive outdated contents.\nTo archive outdated contents.\nCreating new queries & new users for the database (directory of addresses)\nCreating new queries & new users for the database (directory of addresses)\nUpdating printable directory\nUpdating printable directory\nProviding support to website users via email/phone\nProviding support to website users via email/phone\nSolve the problem of all employers and jobseeker\nSolve the problem of all employers and jobseeker\n\nJob Requirements\nThe requirements listed below are representative of the knowledge, skill, and/or attribute required.\nThe requirements listed below are representative of the knowledge, skill, and/or attribute required.\nBachelor’s degree in Information Technology, Communications, or Computer Science\nFamiliarity with Windows, macOS, Android, and iOS operating systems\nKnowledge of virtualization, cloud services, and enterprise applications\nUnderstanding of TCP/IP and networking implementation\nExperience in designing, maintaining, and troubleshooting networks\nProficient in establishing LAN and WAN environments\nCertifications such as CCNA, MCSA, or ITIL are an advantage\nBachelor’s degree in Information Technology, Communications, or Computer Science\nBachelor’s degree in Information Technology, Communications, or Computer Science\nFamiliarity with Windows, macOS, Android, and iOS operating systems\nFamiliarity with Windows, macOS, Android, and iOS operating systems\nKnowledge of virtualization, cloud services, and enterprise applications\nKnowledge of virtualization, cloud services, and enterprise applications\nUnderstanding of TCP/IP and networking implementation\nUnderstanding of TCP/IP and networking implementation\nExperience in designing, maintaining, and troubleshooting networks\nExperience in designing, maintaining, and troubleshooting networks\nProficient in establishing LAN and WAN environments\nProficient in establishing LAN and WAN environments\nCertifications such as CCNA, MCSA, or ITIL are an advantage\nCertifications such as CCNA, MCSA, or ITIL are an advantage\nProfessional Experience\nProfessional Experience\nProfessional Experience\n3–5 years of experience in IT communication and IT support with National NGOs and International NGOs\nExperience working with both technical teams and end-users\n3–5 years of experience in IT communication and IT support with National NGOs and International NGOs\n3–5 years of experience in IT communication and IT support with National NGOs and International NGOs\nExperience working with both technical teams and end-users\nExperience working with both technical teams and end-users\nCore Skills\nCore Skills\nCore Skills\nStrong communication skills in Dari, Pashto, and English\nAbility to simplify complex technical concepts for non-technical users\nKnowledge of IT systems, infrastructure, and digital tools. Officer JD.docOfficer JD\nBasic understanding of IT service management (ITSM) frameworks (e.g., ITIL)\nStrong organizational, analytical, and problem-solving abilities\nStrong communication skills in Dari, Pashto, and English\nStrong communication skills in Dari, Pashto, and English\nAbility to simplify complex technical concepts for non-technical users\nAbility to simplify complex technical concepts for non-technical users\nKnowledge of IT systems, infrastructure, and digital tools. Officer JD.docOfficer JD\nKnowledge of IT systems, infrastructure, and digital tools. Officer JD.docOfficer JD\nBasic understanding of IT service management (ITSM) frameworks (e.g., ITIL)\nBasic understanding of IT service management (ITSM) frameworks (e.g., ITIL)\nStrong organizational, analytical, and problem-solving abilities\nStrong organizational, analytical, and problem-solving abilities\nTechnical Competencies\nTechnical Competencies\nTechnical Competencies\nProficiency in Microsoft Office and Microsoft 365 tools\nBasic graphic design skills\nExperience with communication platforms and helpdesk systems\nFundamental knowledge of cybersecurity principles\nProficiency in Microsoft Office and Microsoft 365 tools\nProficiency in Microsoft Office and Microsoft 365 tools\nBasic graphic design skills\nBasic graphic design skills\nExperience with communication platforms and helpdesk systems\nExperience with communication platforms and helpdesk systems\nFundamental knowledge of cybersecurity principles\nFundamental knowledge of cybersecurity principles\nPersonal Attributes\nPersonal Attributes\nPersonal Attributes\nStrong interpersonal and stakeholder management skills\nable to work under pressure\nProactive and self-motivated\nTeam-oriented mindset\nStrong interpersonal and stakeholder management skills\nStrong interpersonal and stakeholder management skills\nable to work under pressure\nable to work under pressure\nProactive and self-motivated\nProactive and self-motivated\nTeam-oriented mindset\nTeam-oriented mindset\n\nSubmission Guidelines\nIf you meet the required qualifications and experience, please complete the application form using the link below. The deadline for submission is 16 June, 2026. Before applying, ensure that your CV and cover letter are combined into a single file, as you will be required to upload them during the application process.\nIf you meet the required qualifications and experience, please complete the application form using the link below. The deadline for submission is 16 June, 2026. Before applying, ensure that your CV and cover letter are combined into a single file, as you will be required to upload them during the application process.\nONLY INTERNATIONALS ARE ELIGIBLE FOR THIS POSITION\nONLY INTERNATIONALS ARE ELIGIBLE FOR THIS POSITION\nONLY INTERNATIONALS ARE ELIGIBLE FOR THIS POSITION\nJob application form link: https://form.acbar.org/app/form?id=x0.JYA\nJob application form link:\nhttps://form.acbar.org/app/form?id=x0.JYA\nhttps://form.acbar.org/app/form?id=x0.JYA\n\nSubmission Email\nN/A\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "National",
+      "Category": "Information Technology",
+      "Employment Type": "Full Time",
+      "Salary": "Salary and conditions are according to ACBAR’s salary scale.",
+      "Vacancy Number": "IT-2026",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "ACBAR",
+      "Experience": "3–5 years of experience in IT communication and IT support with National NGOs and International NGOs",
+      "Contract Duration": "-",
+      "Gender": "Male/Female",
+      "Education": "Not specified | Refer to Job Requirements",
+      "Closing Date": "2026-06-16",
+      "Post Date": "2026-06-03",
+      "Functional Area": "Information Technology",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "3–5 years of experience in IT communication and IT support with National NGOs and International NGOs",
+      "Close date": "2026-06-16"
+    },
+    "scraped_at": "2026-06-04T06:07:25Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/28899/it-officer"
+      }
+    ]
+  },
+  {
     "id": "79b6aab519c8a122",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/sharia-audit-officer-31",
@@ -791,16 +827,16 @@
       "Functional Area": "Banking",
       "Job Type": "full_time",
       "Source": "ACBAR",
-      "Job Location": "Kabul",
-      "No. Of Jobs": "1",
-      "Years of Experience": "1 - 3 years",
-      "Close date": "2026-06-16",
       "Reference": "GB/EAD/42",
       "Countries": "Afghanistan",
       "Provinces": "Kabul",
       "Contract Type": "permanent",
       "Vacancies": 1,
-      "Submission Through": "email"
+      "Submission Through": "email",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "1 - 3 years",
+      "Close date": "2026-06-16"
     },
     "scraped_at": "2026-05-17T05:44:46Z",
     "also_found_on": [
@@ -821,6 +857,46 @@
         "url": "https://wazifaha.org/jobs/28855/sharia-audit-officer-re-announced"
       }
     ]
+  },
+  {
+    "id": "0f5f146496c5c9a1",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/manager-bi-and-analytics-16",
+    "url": "https://jobs.af/jobs/manager-bi-and-analytics-16",
+    "title": "Manager - BI & Analytics",
+    "company": "ATOMA",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-06-18",
+    "closing_date_raw": "2026-06-18 00:00:00+00",
+    "category": "Data Analysis",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "mailto:careers@atoma.com.af",
+    "apply_emails": [
+      "careers@atoma.com.af"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nThe Manager – BI & Analytics leads BI, reporting, and analytics for the marketing division, enabling data-driven decisions across revenue and customer initiatives.\nThe role focuses on developing BI strategies, creating dashboards and automated reports, and delivering insights through advanced analytics such as customer segmentation, churn analysis, and campaign evaluation.\nIt also ensures data accuracy, governance, and continuous improvement of BI tools, while collaborating with cross-functional teams and building a strong analytics team.\n\nDuties and Responsibilities\nThe Manager – BI & Analytics role will be accountable to achieve the following objectives:\n• Lead the Business Intelligence, reporting, and advanced analytics function for the marketing division, establishing standards, methodologies, and best practices for all BI activities.\n• Develop and execute BI strategies aligned with commercial, customer, and revenue growth objectives, ensuring analytics initiatives directly support business priorities.\n• Oversee daily, weekly, and monthly reporting on revenue, recharge, subscriber behavior, product performance, and market trends, ensuring timely and accurate delivery to stakeholders.\n• Design and manage executive dashboards, automated reporting systems, and performance scorecards that provide actionable insights to senior leadership.\n• Drive customer segmentation, customer lifetime value (CLV) analysis, churn analysis, and campaign effectiveness measurement to optimize marketing ROI and customer retention.\n• Provide strategic insights to support product development, pricing strategies, and customer acquisition initiatives.\n• Lead predictive analytics initiatives for forecasting revenue, customer trends, and market opportunities, enabling proactive business planning.\n• Ensure data governance, reporting accuracy, and integrity across all BI systems, establishing quality controls and validation processes.\n• Collaborate with Marketing, Sales, Finance, IT, and Networks teams for integrated decision support, breaking down silos and enabling cross-functional analytics.\n• Manage and mentor BI analysts, reporting specialists, and data teams, fostering professional development and building analytical capabilities.\n• Support senior leadership with strategic recommendations based on data-driven insights, translating complex data into clear business narratives.\n• Monitor competitor performance, market intelligence, and regulatory reporting requirements, ensuring compliance and competitive awareness.\n• Continuously improve BI tools, automation capabilities, and analytical methodologies, driving efficiency and innovation in reporting and analytics.\nKey Deliverables:\n• Executive Dashboards and Performance Scorecards\n• Revenue and Customer Analytics Reports\n• Predictive Analytics Models and Forecasts\n• Campaign Effectiveness and ROI Analysis\n• Data Governance Framework and Quality Standards\n• Strategic Recommendations to Senior Leadership\n• Automated Reporting Systems and BI Tool Enhancements\n\nJob Requirements\nEducation:\n• Bachelor’s degree in data science, Business Analytics, Statistics, Computer Science, Information Systems, or related quantitative field.\n• Professional certification in Business Intelligence (e.g., Microsoft Certified: Data Analyst Associate, Tableau Desktop Specialist) is advantageous.\nExperience :\n• Minimum of 5 years' experience in business intelligence, data analytics, or related field, with at least 2 years in a managerial or team lead capacity.\n• Experience working in the telecommunications, fintech, or financial services industry\n• Proven experience working with senior management and executive stakeholders\n• Experience using advanced SQL, BI tools, and data analytics platforms\n• Track record of leading predictive analytics, customer analytics, and revenue optimization initiatives\nSkills / physical competencies:\n• Strategic Thinker, Problem Solver, Improvement Driver\n• Results Achiever, Operationally Astute, Data-Driven Decision Maker\n• Strong analytical and statistical skills\n• Advanced SQL and database management\n• Power BI, Tableau, or similar dashboarding platforms (would be a plus)\n• Advanced Excel and data modeling\n• Process automation and reporting optimization\n• Telecom commercial performance analysis\n• Project management and agile delivery\n• Executive reporting and presentation skills\n• Ability to communicate complex data insights at all levels\n• Report writing and data storytelling\n• Team management and people development\n• Cross-functional stakeholder management\n• Change management and continuous improvement\n• Customer focused and commercially aware\n• Attention to detail and quality orientation\n• Stable work history and professional maturity\n\nSubmission Guidelines\nInterested Afghan Nationals can send their applications and resumes (with three valid references) by June 18, 2026.\nPlease mention the name of the position you are applying for in your email subject line.\nApplications received after the deadline and those that do not meet the requirements mentioned above will not be considered.\nOnly shortlisted candidates will be contacted for the interview(s).",
+    "details": {
+      "Reference": "MKT-June-26",
+      "Post Date": "2026-06-04 05:08:30.761+00",
+      "Closing Date": "2026-06-18 00:00:00+00",
+      "Functional Area": "Data Analysis",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "any",
+      "Education": "bachelor",
+      "Experience": "5",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-06-04T06:07:11Z",
+    "also_found_on": []
   },
   {
     "id": "30e49337a6300fa2",
@@ -945,6 +1021,59 @@
     },
     "scraped_at": "2026-04-24T09:10:05Z",
     "also_found_on": []
+  },
+  {
+    "id": "82cc3e7114b4acf2",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16047/full-stack-web-developer",
+    "url": "https://www.kaarobar.net/jobs/16047/full-stack-web-developer",
+    "title": "Full Stack Web Developer",
+    "company": "Brain Wave Technology Services",
+    "location": "Kabul",
+    "closing_date": "2026-06-25",
+    "closing_date_raw": "2026-06-25",
+    "category": "Education, IT",
+    "job_type": "Part Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "Negotiable (Based on qualifications, experience, and teaching capacity)",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16047/full-stack-web-developer",
+    "apply_emails": [
+      "brainwavetechnologyservices@gmail.com"
+    ],
+    "apply_phones": [],
+    "description": "About Brain Wave Technology Services\nBrain Wave Technology Services is an IT training and technology solutions center dedicated to providing high-quality education and professional services. We offer practical training programs, modern laboratories, international exam preparation, and career-focused learning opportunities in various IT fields.\nBrain Wave Technology Services is an IT training and technology solutions center dedicated to providing high-quality education and professional services. We offer practical training programs, modern laboratories, international exam preparation, and career-focused learning opportunities in various IT fields.\n\nJob Descriptions\nBrain Wave Technology Services is looking for an experienced and motivated Web Development Instructor to train students in modern web technologies. The instructor will be responsible for delivering practical and up-to-date training, guiding students through real-world projects, and helping them build job-ready skills in web development.\nBrain Wave Technology Services is looking for an experienced and motivated Web Development Instructor to train students in modern web technologies. The instructor will be responsible for delivering practical and up-to-date training, guiding students through real-world projects, and helping them build job-ready skills in web development.\n\nJob Requirements\n- Strong knowledge of HTML, CSS, JavaScript, and Responsive Design\n- Experience with modern frameworks such as React.js\n- Familiarity with Node.js and backend development concepts\n- Ability to teach both theoretical and practical lessons\n- Strong communication and presentation skills\n- Experience in training, mentoring, or teaching is preferred\n- Ability to prepare course materials, assignments, and practical labs\n- Commitment to supporting students throughout the learning process\n- Strong knowledge of HTML, CSS, JavaScript, and Responsive Design\n- Experience with modern frameworks such as React.js\n- Familiarity with Node.js and backend development concepts\n- Ability to teach both theoretical and practical lessons\n- Strong communication and presentation skills\n- Experience in training, mentoring, or teaching is preferred\n- Ability to prepare course materials, assignments, and practical labs\n- Commitment to supporting students throughout the learning process\n\nSubmission Guidelines\nInterested candidates are requested to submit the following:\n- Updated CV/Resume\n- Relevant professional certifications\n- Portfolio or examples of previous projects (if available)\nApplications can be submitted before the closing date through the designated application channel.\nInterested candidates are requested to submit the following:\n- Updated CV/Resume\n- Relevant professional certifications\n- Portfolio or examples of previous projects (if available)\nApplications can be submitted before the closing date through the designated application channel.\n\nSubmission Email\nbrainwavetechnologyservices@gmail.com\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "Afghan",
+      "Category": "Education, IT",
+      "Employment Type": "Part Time",
+      "Salary": "Negotiable (Based on qualifications, experience, and teaching capacity)",
+      "Vacancy Number": "1",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "Brain Wave Technology Services",
+      "Experience": "2 - 4 Years",
+      "Contract Duration": "1 Year",
+      "Gender": "Male",
+      "Education": "Not specified | Refer to Job Requirements",
+      "Closing Date": "2026-06-25",
+      "Post Date": "2026-06-03",
+      "Functional Area": "Education, IT",
+      "Job Type": "Part Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "2 - 4 Years",
+      "Close date": "2026-06-25"
+    },
+    "scraped_at": "2026-06-04T06:07:25Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/28897/full-stack-web-developer"
+      }
+    ]
   },
   {
     "id": "04bb43a0c6da4c97",
