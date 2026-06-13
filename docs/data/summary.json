@@ -1,308 +1,13 @@
 {
-  "generated_at": "2026-06-12T06:02:41.815Z",
-  "today": "2026-06-12",
-  "total_jobs": 44,
-  "new_count": 4,
-  "expiring_today_count": 2,
-  "expiring_soon_count": 6,
+  "generated_at": "2026-06-13T05:58:35.866Z",
+  "today": "2026-06-13",
+  "total_jobs": 42,
+  "new_count": 0,
+  "expiring_today_count": 5,
+  "expiring_soon_count": 5,
   "tech_banking_count": 4,
-  "new_jobs": [
-    {
-      "id": "9705ecf36f3f6a66",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/it-solaris-system-administrator",
-      "url": "https://jobs.af/jobs/it-solaris-system-administrator",
-      "title": "IT Solaris System Administrator",
-      "company": "The First MicroFinanceBank - Afghanistan",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-06-20",
-      "closing_date_raw": "2026-06-20 00:00:00+00",
-      "category": "IT - Software, Computer Science",
-      "job_type": "full_time",
-      "gender": "any",
-      "vacancies": 1,
-      "salary": "Company salary scale",
-      "apply_url": "mailto:vacancies@fmfb.com.af",
-      "apply_emails": [
-        "vacancies@fmfb.com.af"
-      ],
-      "apply_phones": [],
-      "description": "Role Summary\nThe Oracle Solaris System Administrator will be responsible for setting up servers, installing servers, creating and implementing Linux configurations, networking servers, and troubleshooting.\nThe Oracle Solaris System Administrator looks after design, installation, maintenance, and retirement of the systems, application server, WebLogic Server, data, security of the systems that are at the core of the organization, This role is responsible for the Technical and server Administration for infrastructure: Designing, building and implementing IT infrastructure; Proving timely and high-quality completion of projects (Tasks and request and ensuring the IT infrastructure environment is up to data through proactive auditing and Patch management.\n\nDuties and Responsibilities\nInstall, configure, upgrade, maintain, and troubleshoot Solaris, Linux, and Windows servers, operating systems, applications, and related infrastructure.\nManage Production (PR) and Disaster Recovery (DR) environments, including load balancing, server migration, resource sharing, high availability, redundancy, backups, and business continuity solutions.\nAdminister user accounts, Active Directory, storage systems (SAN, NAS, Oracle ZFS), virtual machines, and data center infrastructure.\nMonitor system performance, availability, security, backups, patches, upgrades, and disaster recovery readiness to ensure maximum uptime and operational efficiency.\nProvide technical support, automate routine administration tasks, maintain documentation, and manage incident and outage reporting.\nAdminister Oracle FCCM, Oracle OBDX, Oracle WebLogic Servers, Smart Banking systems, and other enterprise applications.\nCollaborate with IT Security, Network, and vendor teams to maintain infrastructure integrity, security, compliance, and performance.\nMonitor data center operations, maintain standards and procedures, and recommend infrastructure improvements and technology upgrades.\nData Center Responsibilities:\nOversee daily health monitoring and reporting of core data center infrastructure.\nMaintain documentation and event logs for processes and activities.\nProvide recommendations for procuring new data center equipment as needed.\nKeeping track of developing trends in data center technologies.\nCollaborating with IT Security and network teams on cybersecurity and network efficiency.\nMake sure the Data Center standard procedure followed by the team, units and vendor\nefficiently.\n\nJob Requirements\nBachelor’s degree in Computer Science, Information Technology, or a related field.\nMinimum 5 years of experience in Solaris, Linux, Unix, and Windows system administration within enterprise or data center environments.\nStrong knowledge of Active Directory, PowerShell scripting, virtualization, storage technologies, server hardware, operating systems, networking, security, and disaster recovery.\nExcellent communication, documentation, reporting, and problem-solving skills.\n\nSubmission Guidelines\nIf you meet the above requirements, we are encouraging you to apply for this position. Please send us your CV along with a cover letter via email ( vacancies@fmfb.com.af ).\nPlease make sure that your email includes the vacancy ID as the subject line.\nNote that, only the candidates who meet the requirements of the position will be shortlisted.\nFor more information, please visit the FMFB-A website: https://www.fmfb.com.af/jobs/it-solaris-system-administrator/ .",
-      "details": {
-        "Reference": "FMFB-SA-0055-2026",
-        "Post Date": "2026-06-11 07:11:16.218+00",
-        "Closing Date": "2026-06-20 00:00:00+00",
-        "Functional Area": "IT - Software, Computer Science",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "any",
-        "Education": "bachelor",
-        "Experience": "5 - 7",
-        "Salary": "Company salary scale",
-        "Vacancies": 1,
-        "Submission Through": "email"
-      },
-      "scraped_at": "2026-06-12T06:02:03Z",
-      "also_found_on": []
-    },
-    {
-      "id": "12e17cb8b170f9f8",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16293/it-solaris-system-administrator",
-      "url": "https://www.kaarobar.net/jobs/16293/it-solaris-system-administrator",
-      "title": "IT Solaris System Administrator",
-      "company": "FMFB-A",
-      "location": "Kabul",
-      "closing_date": "2026-06-20",
-      "closing_date_raw": "2026-06-20",
-      "category": "Banking",
-      "job_type": "Full Time",
-      "gender": "Male/Female",
-      "vacancies": "1",
-      "salary": "As per the Bank Salary Scale",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16293/it-solaris-system-administrator",
-      "apply_emails": [
-        "vacancies@fmfb.com.af"
-      ],
-      "apply_phones": [],
-      "description": "About FMFB-A\nAbout FMFB-A:\nAs a background, FMFB-A started its operation in 2004, and is part of the Aga Khan Agency for Microfinance (AKAM), which has financial institutions operating in different countries throughout the world. It is affiliated with the Aga Khan Development Network (AKDN), a group of development agencies working in health, education, culture and rural economic development. For more information, please visit our website: www.fmfb.com.af .\n\nJob Descriptions\nJob Summary:\nThe Oracle Solaris System Administrator will be responsible for setting up servers, installing servers, creating and implementing Linux configurations, networking servers, and troubleshooting.\nThe Oracle Solaris System Administrator looks after design, installation, maintenance, and retirement of the systems, application server, WebLogic Server, data, security of the systems that are at the core of the organization, This role is responsible for the Technical and server Administration for infrastructure: Designing, building and implementing IT infrastructure; Proving timely and high-quality completion of projects (Tasks and request and ensuring the IT infrastructure environment is up to data through proactive auditing and Patch management.\nPosition Duties and Responsibilities:\nInstall, configure, upgrade, maintain, and troubleshoot Solaris, Linux, and Windows servers, operating systems, applications, and related infrastructure.\nManage Production (PR) and Disaster Recovery (DR) environments, including load balancing, server migration, resource sharing, high availability, redundancy, backups, and business continuity solutions.\nAdminister user accounts, Active Directory, storage systems (SAN, NAS, Oracle ZFS), virtual machines, and data center infrastructure.\nMonitor system performance, availability, security, backups, patches, upgrades, and disaster recovery readiness to ensure maximum uptime and operational efficiency.\nProvide technical support, automate routine administration tasks, maintain documentation, and manage incident and outage reporting.\nAdminister Oracle FCCM, Oracle OBDX, Oracle WebLogic Servers, Smart Banking systems, and other enterprise applications.\nCollaborate with IT Security, Network, and vendor teams to maintain infrastructure integrity, security, compliance, and performance.\nMonitor data center operations, maintain standards and procedures, and recommend infrastructure improvements and technology upgrades.\nData Center Responsibilities:\nOversee daily health monitoring and reporting of core data center infrastructure.\nMaintain documentation and event logs for processes and activities.\nProvide recommendations for procuring new data center equipment as needed.\nKeeping track of developing trends in data center technologies.\nCollaborating with IT Security and network teams on cybersecurity and network efficiency.\nMake sure the Data Center standard procedure followed by the team, units and vendor\nefficiently.\n\nJob Requirements\nBachelor’s degree in Computer Science, Information Technology, or a related field.\nMinimum 5 years of experience in Solaris, Linux, Unix, and Windows system administration within enterprise or data center environments.\nStrong knowledge of Active Directory, PowerShell scripting, virtualization, storage technologies, server hardware, operating systems, networking, security, and disaster recovery.\nExcellent communication, documentation, reporting, and problem-solving skills.\n\nSubmission Guidelines\nIf you meet the above requirements, we are encouraging you to apply for this position. Please send us your CV along with a cover letter via email at ( vacancies@fmfb.com.af ).\nPlease make sure that your email includes the vacancy ID as the subject line.\nNote that, only the candidates who are meeting the requirements of the position will be shortlisted.\nForm more information, please vist the FMFB-A's website: Website\n\nSubmission Email\nvacancies@fmfb.com.af\nApply",
-      "details": {
-        "Location": "Kabul",
-        "Nationality": "National",
-        "Category": "Banking",
-        "Employment Type": "Full Time",
-        "Salary": "As per the Bank Salary Scale",
-        "Vacancy Number": "FMFB-SA-0055-2026",
-        "No. of Jobs": "1",
-        "City": "Kabul",
-        "Organization": "FMFB-A",
-        "Experience": "Minimum 5 years of experience in Solaris, Linux, Unix, and Windows system administration within enterprise or data center environments.",
-        "Contract Duration": "Permanent",
-        "Gender": "Male/Female",
-        "Education": "Bachelor’s degree in Computer Science, Information Technology, or a related field.",
-        "Closing Date": "2026-06-20",
-        "Post Date": "2026-06-11",
-        "Functional Area": "Banking",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Kabul",
-        "No. Of Jobs": "1",
-        "Years of Experience": "Minimum 5 years of experience in Solaris, Linux, Unix, and Windows system administration within enterprise or data center environments.",
-        "Close date": "2026-06-20"
-      },
-      "scraped_at": "2026-06-12T06:02:26Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29148/it-solaris-system-administrator"
-        }
-      ]
-    },
-    {
-      "id": "872bf6d6e9cac748",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16285/it-officer",
-      "url": "https://www.kaarobar.net/jobs/16285/it-officer",
-      "title": "IT Officer",
-      "company": "Balkh Steel Mill Company",
-      "location": "Balkh",
-      "closing_date": "2026-06-30",
-      "closing_date_raw": "2026-06-30",
-      "category": "IT",
-      "job_type": "Full Time",
-      "gender": "Male",
-      "vacancies": "1",
-      "salary": "Not disclosed",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16285/it-officer",
-      "apply_emails": [
-        "info@balkhsteel.com"
-      ],
-      "apply_phones": [],
-      "description": "About Balkh Steel Mill Company\nBalkh Steel Mill Company is officially one of the leading Iron smelting and round bar production factories in Afghanistan. It was established with a mission to strengthen the self-reliance of steel production and build a strong team of professionals, and engineers equipped with modern machinery to prosper the economy of Afghanistan.\n\nJob Descriptions\nPosition Summary\nThe IT Officer is responsible for managing and maintaining the organization's information technology systems, networks, hardware, and software. The role ensures smooth IT operations, provides technical support to staff, and safeguards data security.\nKey Responsibilities\n· Install, configure, and maintain computer hardware, software, printers, and network systems.\n· Provide technical support and troubleshooting assistance to employees.\n· Monitor and maintain LAN, WAN, internet connectivity, and network security.\n· Manage user accounts, email systems, and access permissions.\n· Perform regular system backups and data recovery procedures.\n· Install security updates, antivirus software, and firewall protection.\n· Maintain IT inventory and records of hardware and software assets.\n· Coordinate with external vendors and service providers for IT-related services.\n· Ensure compliance with organizational IT policies and procedures.\n· Prepare technical reports and documentation.\n· Support meetings, presentations, and video conferencing systems.\n· Monitor system performance and recommend improvements.\nRequired Qualifications\nBachelor’s degree in information technology, Computer Science, or a related field.\nMinimum 3 years of relevant IT experience.\nKnowledge of Windows operating systems, networking, and hardware maintenance.\nFamiliarity with Microsoft Office 365, email systems, and cloud services.\nUnderstanding of cybersecurity principles and data protection practices.\nStrong problem-solving and communication skills.\nKey Skills\nNetwork Administration\nHardware & Software Troubleshooting\nCybersecurity Awareness\nSystem Administration\nData Backup & Recovery\nTechnical Support\nIT Asset Management\nMicrosoft Office 365\nCommunication & Teamwork\nReporting To\nAdministration Manager / Operations Manager / IT Manager\n\nJob Requirements\nBachelor’s degree in information technology, Computer Science, or a related field.\nMinimum 3 years of relevant IT experience.\nKnowledge of Windows operating systems, networking, and hardware maintenance.\nFamiliarity with Microsoft Office 365, email systems, and cloud services.\nUnderstanding of cybersecurity principles and data protection practices.\nStrong problem-solving and communication skills.\n\nSubmission Guidelines\nvia email\n\nSubmission Email\ninfo@balkhsteel.com\nApply",
-      "details": {
-        "Location": "Balkh",
-        "Nationality": "Afghan",
-        "Category": "IT",
-        "Employment Type": "Full Time",
-        "Salary": "Not disclosed",
-        "Vacancy Number": "—",
-        "No. of Jobs": "1",
-        "City": "Mazar-I-Sharif",
-        "Organization": "Balkh Steel Mill Company",
-        "Experience": "3-5 Years",
-        "Contract Duration": "Permanent",
-        "Gender": "Male",
-        "Education": "Bachelor’s degree in information technology",
-        "Closing Date": "2026-06-30",
-        "Post Date": "2026-06-11",
-        "Functional Area": "IT",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Balkh",
-        "No. Of Jobs": "1",
-        "Years of Experience": "3-5 Years",
-        "Close date": "2026-06-30"
-      },
-      "scraped_at": "2026-06-12T06:02:26Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29157/it-officer"
-        }
-      ]
-    },
-    {
-      "id": "26b71d693dbed35e",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/sales-officer-isp-solutions",
-      "url": "https://jobs.af/jobs/sales-officer-isp-solutions",
-      "title": "IT Technician",
-      "company": "UA Telecom",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-06-30",
-      "closing_date_raw": "2026-06-30 00:00:00+00",
-      "category": "Information Technology, Networking",
-      "job_type": "full_time",
-      "gender": "male",
-      "vacancies": 3,
-      "salary": "Negotiable",
-      "apply_url": "mailto:vacancies@uatelecom.af",
-      "apply_emails": [
-        "vacancies@uatelecom.af"
-      ],
-      "apply_phones": [],
-      "description": "Role Summary\nThe IT Technician is responsible for managing the installation and troubleshooting of Wireless, Microwave, and VSAT links. The role includes resolving issues related to LAN network devices and addressing computer-related problems for customers through in-person support, phone consultations, or remote assistance. Additionally, the IT Technician provides technical support regarding computer operating systems, software applications, email configuration, installation processes, printing solutions, and the maintenance of customer LAN networks.\n\nDuties and Responsibilities\nPerform installation, activation, and troubleshooting of wireless links in accordance with company guidelines.\nExecute the installation, activation, and troubleshooting of microwave links following established protocols.\nConduct installation, activation, and troubleshooting of VSAT links while adhering to company policies.\nInstall and configure LAN network devices to meet customer requirements effectively.\nTroubleshoot LAN network devices and provide the best solution in case of second option availability.\nConduct surveys for network projects, arrange requirements, and implement solutions as needed.\nDVR camera wiring, installation, and configuring based on the requirement.\nUAT wireless base stations maintenance and resolving 1st level base station issues (in cooperation with Head Office)\nInstalling Wire and Wireless equipment at UA wireless base stations and ensuring 100% functionality upon completion.\nIntegrating technical solutions successfully done on-site and sharing it with other team members for future use.\nDetailed daily and weekly reports to under-assigned manager.\n\nJob Requirements\nBachelor’s degree/Diploma in Computer Science and/ or relevant field.\nA minimum of 3 years of experience in network installation and troubleshooting or a relevant field.\nRelevant certifications (e.g., Cisco CCNA, MCITP, or equivalent) will be considered an advantage.\nStrong problem-solving skills and the ability to communicate technical information effectively.\nFull understanding and speaking of Dari, Pashto, and English.\nAbility to ride a motorcycle and be comfortable using it when required for work-related tasks\nCompetencies (in order of importance)\nDependability — The job requires being reliable, responsible, dependable, and fulfilling obligations.\nAttention to Detail — The job requires being careful about detail and thorough in completing work tasks.\nCooperation — The job requires being pleasant with others on the job and displaying a good-natured, cooperative attitude.\nAnalytical Thinking — The job requires analyzing information and using logic to address work-related issues and problems.\nIntegrity — The job requires being honest and ethical.\n\nSubmission Guidelines\nInterested candidates are encouraged to submit their applications by June 30, 2026 . To apply, please send your cover letter along with an updated CV to vacancies@uatelecom.af . Please ensure the position title and vacancy number are included in the subject line of your email.\nPosition Title: IT Technician\nVacancy Number: UAT-VA-IT#2150-J",
-      "details": {
-        "Reference": "UAT-VA-IT-2150-J",
-        "Post Date": "2026-02-12 10:31:33.775+00",
-        "Closing Date": "2026-06-30 00:00:00+00",
-        "Functional Area": "Information Technology, Networking",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "male",
-        "Education": "bachelor",
-        "Experience": "2 - 5",
-        "Salary": "Negotiable",
-        "Vacancies": 3,
-        "Submission Through": "email"
-      },
-      "scraped_at": "2026-06-12T06:02:03Z",
-      "also_found_on": []
-    }
-  ],
+  "new_jobs": [],
   "expiring_today": [
-    {
-      "id": "ef9d88b0532a165c",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16089/lead-trainer-digital-marketing-and-content-creation",
-      "url": "https://www.kaarobar.net/jobs/16089/lead-trainer-digital-marketing-and-content-creation",
-      "title": "Lead Trainer – Digital Marketing and Content Creation",
-      "company": "Horizon Bridge Consulting",
-      "location": "Herat, Kabul",
-      "closing_date": "2026-06-12",
-      "closing_date_raw": "2026-06-12",
-      "category": "Information Technology, Marketing, Capacity Building",
-      "job_type": "Full Time",
-      "gender": "Female",
-      "vacancies": "3",
-      "salary": "Competitive, based on qualifications and experience (market rate)",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16089/lead-trainer-digital-marketing-and-content-creation",
-      "apply_emails": [
-        "careers@hbcxconsulting.com"
-      ],
-      "apply_phones": [],
-      "description": "About Horizon Bridge Consulting\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\n\nJob Descriptions\nAbout the Programme\nAbout the Programme\nAbout the Programme\nAbout the Programme\nHorizon Bridge Consulting (HBC), in partnership with is implementing an international donor-funded digital skills training programme for Afghan youth in Kabul and Herat. The programme trains young people in market-relevant digital skills across six specialisation pathways and links graduates to employment through internships, freelancing, and entrepreneurship support. Training runs from July to October 2026, with employment facilitation through November 2026.\nHorizon Bridge Consulting (HBC), in partnership with is implementing an international donor-funded digital skills training programme for Afghan youth in Kabul and Herat. The programme trains young people in market-relevant digital skills across six specialisation pathways and links graduates to employment through internships, freelancing, and entrepreneurship support. Training runs from July to October 2026, with employment facilitation through November 2026.\nHorizon Bridge Consulting (HBC), in partnership with is implementing an international donor-funded digital skills training programme for Afghan youth in Kabul and Herat. The programme trains young people in market-relevant digital skills across six specialisation pathways and links graduates to employment through internships, freelancing, and entrepreneurship support. Training runs from July to October 2026, with employment facilitation through November 2026.\nPosition Overview\nPosition Overview\nPosition Overview\nPosition Overview\nYou will lead 5 cohorts of 25 students through a 4-month programme covering social media management, paid advertising, graphic design, short-form video production, and content strategy. Graduates should be able to manage social media accounts for clients, run Facebook/Google ad campaigns, create visual content, and produce short videos. AI tools for content creation are used throughout. This pathway has the highest female enrollment and the fastest path to freelance income.\nYou will lead 5 cohorts of 25 students through a 4-month programme covering social media management, paid advertising, graphic design, short-form video production, and content strategy. Graduates should be able to manage social media accounts for clients, run Facebook/Google ad campaigns, create visual content, and produce short videos. AI tools for content creation are used throughout. This pathway has the highest female enrollment and the fastest path to freelance income.\nYou will lead 5 cohorts of 25 students through a 4-month programme covering social media management, paid advertising, graphic design, short-form video production, and content strategy. Graduates should be able to manage social media accounts for clients, run Facebook/Google ad campaigns, create visual content, and produce short videos. AI tools for content creation are used throughout. This pathway has the highest female enrollment and the fastest path to freelance income.\n\nJob Requirements\nKey Responsibilities\nKey Responsibilities\nKey Responsibilities\nKey Responsibilities\n• Deliver 4 live training sessions per week covering SEO/SEM, social media strategy, Google Ads, Meta Ads, content creation, and CRM\n•\n•\nDeliver 4 live training sessions per week covering SEO/SEM, social media strategy, Google Ads, Meta Ads, content creation, and CRM\nDeliver 4 live training sessions per week covering SEO/SEM, social media strategy, Google Ads, Meta Ads, content creation, and CRM\n• Teach graphic design using Canva and Adobe Express (logo design, social media templates, brand identity)\n•\n•\nTeach graphic design using Canva and Adobe Express (logo design, social media templates, brand identity)\nTeach graphic design using Canva and Adobe Express (logo design, social media templates, brand identity)\n• Teach short-form video production (Reels, TikTok, YouTube Shorts) including scripting, filming with phone, and editing (CapCut, InShot)\n•\n•\nTeach short-form video production (Reels, TikTok, YouTube Shorts) including scripting, filming with phone, and editing (CapCut, InShot)\nTeach short-form video production (Reels, TikTok, YouTube Shorts) including scripting, filming with phone, and editing (CapCut, InShot)\n• Integrate AI tools for content generation, caption writing, hashtag research, and ad copy creation\n•\n•\nIntegrate AI tools for content generation, caption writing, hashtag research, and ad copy creation\nIntegrate AI tools for content generation, caption writing, hashtag research, and ad copy creation\n• Guide students through creating a complete marketing campaign for a real or simulated client\n•\n•\nGuide students through creating a complete marketing campaign for a real or simulated client\nGuide students through creating a complete marketing campaign for a real or simulated client\n• Prepare students for HubSpot Digital Marketing, Meta Social Media Marketing, and Google Ads certifications\n•\n•\nPrepare students for HubSpot Digital Marketing, Meta Social Media Marketing, and Google Ads certifications\nPrepare students for HubSpot Digital Marketing, Meta Social Media Marketing, and Google Ads certifications\n• Teach client relationship management and freelance pricing for marketing services\n•\n•\nTeach client relationship management and freelance pricing for marketing services\nTeach client relationship management and freelance pricing for marketing services\n• Conduct weekly assessments and portfolio reviews\n•\n•\nConduct weekly assessments and portfolio reviews\nConduct weekly assessments and portfolio reviews\n• Support students in building a marketing portfolio showcasing campaigns, designs, and analytics reports\n•\n•\nSupport students in building a marketing portfolio showcasing campaigns, designs, and analytics reports\nSupport students in building a marketing portfolio showcasing campaigns, designs, and analytics reports\nRequired Qualifications\nRequired Qualifications\nRequired Qualifications\nRequired Qualifications\n• Minimum 3 years managing social media accounts or digital marketing campaigns professionally\n•\n•\nMinimum 3 years managing social media accounts or digital marketing campaigns professionally\nMinimum 3 years managing social media accounts or digital marketing campaigns professionally\n• Hands-on experience with Facebook/Meta Ads Manager and/or Google Ads\n•\n•\nHands-on experience with Facebook/Meta Ads Manager and/or Google Ads\nHands-on experience with Facebook/Meta Ads Manager and/or Google Ads\n• Proficiency in at least one design tool (Canva, Adobe Express, Photoshop, or Illustrator)\n•\n•\nProficiency in at least one design tool (Canva, Adobe Express, Photoshop, or Illustrator)\nProficiency in at least one design tool (Canva, Adobe Express, Photoshop, or Illustrator)\n• Experience teaching or training others in a structured setting\n•\n•\nExperience teaching or training others in a structured setting\nExperience teaching or training others in a structured setting\n• Fluency in Dari or Pashto; working English proficiency\n•\n•\nFluency in Dari or Pashto; working English proficiency\nFluency in Dari or Pashto; working English proficiency\nPreferred Qualifications\nPreferred Qualifications\nPreferred Qualifications\nPreferred Qualifications\n• HubSpot, Google Ads, or Meta certification\n•\n•\nHubSpot, Google Ads, or Meta certification\nHubSpot, Google Ads, or Meta certification\n• Experience creating short-form video content (Reels, TikTok, Shorts)\n•\n•\nExperience creating short-form video content (Reels, TikTok, Shorts)\nExperience creating short-form video content (Reels, TikTok, Shorts)\n• Experience managing marketing for Afghan businesses or in the Afghan market\n•\n•\nExperience managing marketing for Afghan businesses or in the Afghan market\nExperience managing marketing for Afghan businesses or in the Afghan market\n• Experience with e-commerce marketing (Instagram shops, WhatsApp Business)\n•\n•\nExperience with e-commerce marketing (Instagram shops, WhatsApp Business)\nExperience with e-commerce marketing (Instagram shops, WhatsApp Business)\n• Female candidates are given strong preference\n•\n•\nFemale candidates are given strong preference\nFemale candidates are given strong preference\nTechnical Skills Required\nTechnical Skills Required\nTechnical Skills Required\nTechnical Skills Required\n• Facebook/Meta Ads Manager, Google Ads, Google Analytics\n•\n•\nFacebook/Meta Ads Manager, Google Ads, Google Analytics\nFacebook/Meta Ads Manager, Google Ads, Google Analytics\n• Canva, Adobe Express or Photoshop\n•\n•\nCanva, Adobe Express or Photoshop\nCanva, Adobe Express or Photoshop\n• Video editing (CapCut, InShot, or similar)\n•\n•\nVideo editing (CapCut, InShot, or similar)\nVideo editing (CapCut, InShot, or similar)\n• SEO tools (Google Search Console, keyword research)\n•\n•\nSEO tools (Google Search Console, keyword research)\nSEO tools (Google Search Console, keyword research)\n• CRM basics (HubSpot or similar)\n•\n•\nCRM basics (HubSpot or similar)\nCRM basics (HubSpot or similar)\n• AI content tools (ChatGPT, Canva AI, etc.)\n•\n•\nAI content tools (ChatGPT, Canva AI, etc.)\nAI content tools (ChatGPT, Canva AI, etc.)\n\nSubmission Guidelines\nInterested candidates should submit:\nInterested candidates should submit:\nInterested candidates should submit:\n• Updated CV/resume (maximum 3 pages)\n•\n•\nUpdated CV/resume (maximum 3 pages)\nUpdated CV/resume (maximum 3 pages)\n• A brief cover letter (maximum 1 page) explaining your relevant experience and why you are interested in this position\n•\n•\nA brief cover letter (maximum 1 page) explaining your relevant experience and why you are interested in this position\nA brief cover letter (maximum 1 page) explaining your relevant experience and why you are interested in this position\n• Contact details of two professional references\n•\n•\nContact details of two professional references\nContact details of two professional references\nSend applications to: careers@hbcxconsulting.com with the subject line: \"Application – Lead Trainer – Digital Marketing and Content Creation\"\nSend applications to: careers@hbcxconsulting.com with the subject line: \"Application – Lead Trainer – Digital Marketing and Content Creation\"\nSend applications to: careers@hbcxconsulting.com with the subject line: \"Application – Lead Trainer – Digital Marketing and Content Creation\"\n\nSubmission Email\ncareers@hbcxconsulting.com\nApply",
-      "details": {
-        "Location": "Herat, Kabul",
-        "Nationality": "Afghan",
-        "Category": "Information Technology, Marketing, Capacity Building",
-        "Employment Type": "Full Time",
-        "Salary": "Competitive, based on qualifications and experience (market rate)",
-        "Vacancy Number": "HBC-YDS-2026-02",
-        "No. of Jobs": "3",
-        "City": "Herat, Kabul",
-        "Organization": "Horizon Bridge Consulting",
-        "Experience": "3",
-        "Contract Duration": "Fixed-term service contract (Session-based / 5 months)",
-        "Gender": "Female",
-        "Education": "Bachelor's Degree (Required), Master's/PhD (Preferred)",
-        "Closing Date": "2026-06-12",
-        "Post Date": "2026-06-07",
-        "Functional Area": "Information Technology, Marketing, Capacity Building",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Herat, Kabul",
-        "No. Of Jobs": "3",
-        "Years of Experience": "3",
-        "Close date": "2026-06-12"
-      },
-      "scraped_at": "2026-06-07T05:59:39Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/28947/lead-trainer-digital-marketing-and-content-creation"
-        }
-      ]
-    },
-    {
-      "id": "2dee64ed39a9c146",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16099/lead-trainer-web-development-and-coding",
-      "url": "https://www.kaarobar.net/jobs/16099/lead-trainer-web-development-and-coding",
-      "title": "Lead Trainer – Web Development and Coding",
-      "company": "Horizon Bridge Consulting",
-      "location": "Herat, Kabul",
-      "closing_date": "2026-06-12",
-      "closing_date_raw": "2026-06-12",
-      "category": "Information Technology",
-      "job_type": "Full Time",
-      "gender": "Female",
-      "vacancies": "3",
-      "salary": "Competitive, based on qualifications and experience (market rate)",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16099/lead-trainer-web-development-and-coding",
-      "apply_emails": [
-        "careers@hbcxconsulting.com"
-      ],
-      "apply_phones": [],
-      "description": "About Horizon Bridge Consulting\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\nHorizon Bridge Consulting is a global cross-sector consulting firm supporting international development, digital transformation, strategy, climate, infrastructure, and policy planning. We partner with multilateral organizations, bilateral donors, governments, and enterprises to deliver research, advisory, and operational support across 45+ countries. Our multidisciplinary team combines strategic foresight, technological expertise, and rigorous execution to deliver transformative solutions. HBC operates across four divisions with 44+ practice areas, serving clients including the UN agencies, and leading private sector organizations across emerging and frontier markets.\n\nJob Descriptions\nAbout the Programme\nAbout the Programme\nAbout the Programme\nAbout the Programme\nHorizon Bridge Consulting (HBC), in partnership with is implementing an international donor-funded digital skills training programme for 500 Afghan youth (ages 15–24) in Kabul and Herat. The programme trains young people in market-relevant digital skills across six specialisation pathways and links graduates to employment through internships, freelancing, and entrepreneurship support. Training runs from July to October 2026, with employment facilitation through November 2026.\nHorizon Bridge Consulting (HBC), in partnership with is implementing an international donor-funded digital skills training programme for 500 Afghan youth (ages 15–24) in Kabul and Herat. The programme trains young people in market-relevant digital skills across six specialisation pathways and links graduates to employment through internships, freelancing, and entrepreneurship support. Training runs from July to October 2026, with employment facilitation through November 2026.\nHorizon Bridge Consulting (HBC), in partnership with is implementing an international donor-funded digital skills training programme for 500 Afghan youth (ages 15–24) in Kabul and Herat. The programme trains young people in market-relevant digital skills across six specialisation pathways and links graduates to employment through internships, freelancing, and entrepreneurship support. Training runs from July to October 2026, with employment facilitation through November 2026.\nPosition Overview\nPosition Overview\nPosition Overview\nPosition Overview\nYou will lead 5 cohorts of 25 students each through a 4-month intensive web development programme. Students range from basic computer users to those with some coding experience. Your job is to take them from HTML basics to building functional, portfolio-ready websites and web applications. You will teach using a mix of traditional coding (HTML, CSS, JavaScript, React) and no-code tools (WordPress, Shopify, Wix) so graduates can serve clients at different technical levels. AI-assisted development tools (GitHub Copilot, Replit AI, Codex) are integrated throughout.\nYou will lead 5 cohorts of 25 students each through a 4-month intensive web development programme. Students range from basic computer users to those with some coding experience. Your job is to take them from HTML basics to building functional, portfolio-ready websites and web applications. You will teach using a mix of traditional coding (HTML, CSS, JavaScript, React) and no-code tools (WordPress, Shopify, Wix) so graduates can serve clients at different technical levels. AI-assisted development tools (GitHub Copilot, Replit AI, Codex) are integrated throughout.\nYou will lead 5 cohorts of 25 students each through a 4-month intensive web development programme. Students range from basic computer users to those with some coding experience. Your job is to take them from HTML basics to building functional, portfolio-ready websites and web applications. You will teach using a mix of traditional coding (HTML, CSS, JavaScript, React) and no-code tools (WordPress, Shopify, Wix) so graduates can serve clients at different technical levels. AI-assisted development tools (GitHub Copilot, Replit AI, Codex) are integrated throughout.\n\nJob Requirements\nKey Responsibilities\nKey Responsibilities\nKey Responsibilities\nKey Responsibilities\n• Deliver 4 live training sessions per week (2 hours each) at the training hub, broadcast simultaneously to online students\n•\n•\nDeliver 4 live training sessions per week (2 hours each) at the training hub, broadcast simultaneously to online students\nDeliver 4 live training sessions per week (2 hours each) at the training hub, broadcast simultaneously to online students\n• Design and Teach HTML5, CSS3, JavaScript fundamentals, React basics, and responsive web design over a structured 16-week curriculum\n•\n•\nDesign and Teach HTML5, CSS3, JavaScript fundamentals, React basics, and responsive web design over a structured 16-week curriculum\nDesign and Teach HTML5, CSS3, JavaScript fundamentals, React basics, and responsive web design over a structured 16-week curriculum\n• Teach no-code web building tools (WordPress, Shopify themes, Wix) for students pursuing quick-to-market skills\n•\n•\nTeach no-code web building tools (WordPress, Shopify themes, Wix) for students pursuing quick-to-market skills\nTeach no-code web building tools (WordPress, Shopify themes, Wix) for students pursuing quick-to-market skills\n• Integrate AI-assisted coding tools into every session so students learn to use AI as a development accelerator\n•\n•\nIntegrate AI-assisted coding tools into every session so students learn to use AI as a development accelerator\nIntegrate AI-assisted coding tools into every session so students learn to use AI as a development accelerator\n• Guide students through 6 progressive projects building toward a professional portfolio\n•\n•\nGuide students through 6 progressive projects building toward a professional portfolio\nGuide students through 6 progressive projects building toward a professional portfolio\n• Prepare students for freeCodeCamp Responsive Web Design certification\n•\n•\nPrepare students for freeCodeCamp Responsive Web Design certification\nPrepare students for freeCodeCamp Responsive Web Design certification\n• Conduct weekly assessments and provide individual feedback\n•\n•\nConduct weekly assessments and provide individual feedback\nConduct weekly assessments and provide individual feedback\n• Support students in creating GitHub profiles and deploying live projects\n•\n•\nSupport students in creating GitHub profiles and deploying live projects\nSupport students in creating GitHub profiles and deploying live projects\n• Participate in capstone project reviews and graduation panel\n•\n•\nParticipate in capstone project reviews and graduation panel\nParticipate in capstone project reviews and graduation panel\n• Maintain attendance records and flag at-risk students to the MEAL Officer\n•\n•\nMaintain attendance records and flag at-risk students to the MEAL Officer\nMaintain attendance records and flag at-risk students to the MEAL Officer\nRequired Qualifications\nRequired Qualifications\nRequired Qualifications\nRequired Qualifications\n• Minimum 4 years of professional web development experience (freelance or employed)\n•\n•\nMinimum 4 years of professional web development experience (freelance or employed)\nMinimum 4 years of professional web development experience (freelance or employed)\n• Demonstrated proficiency in HTML5, CSS3, JavaScript, and at least one framework (React, Vue, or Angular)\n•\n•\nDemonstrated proficiency in HTML5, CSS3, JavaScript, and at least one framework (React, Vue, or Angular)\nDemonstrated proficiency in HTML5, CSS3, JavaScript, and at least one framework (React, Vue, or Angular)\n• Experience teaching, training, or mentoring in a structured setting (formal or informal)\n•\n•\nExperience teaching, training, or mentoring in a structured setting (formal or informal)\nExperience teaching, training, or mentoring in a structured setting (formal or informal)\n• Fluency in Dari or Pashto (training is delivered in local languages)\n•\n•\nFluency in Dari or Pashto (training is delivered in local languages)\nFluency in Dari or Pashto (training is delivered in local languages)\n• Working English proficiency (technical documentation and some certification materials are in English)\n•\n•\nWorking English proficiency (technical documentation and some certification materials are in English)\nWorking English proficiency (technical documentation and some certification materials are in English)\n• Own laptop and reliable internet connection\n•\n•\nOwn laptop and reliable internet connection\nOwn laptop and reliable internet connection\nPreferred Qualifications\nPreferred Qualifications\nPreferred Qualifications\nPreferred Qualifications\n• Experience with WordPress development and/or Shopify\n•\n•\nExperience with WordPress development and/or Shopify\nExperience with WordPress development and/or Shopify\n• Familiarity with AI coding assistants (GitHub Copilot, Replit AI, ChatGPT for code)\n•\n•\nFamiliarity with AI coding assistants (GitHub Copilot, Replit AI, ChatGPT for code)\nFamiliarity with AI coding assistants (GitHub Copilot, Replit AI, ChatGPT for code)\n• freeCodeCamp certification(s) or equivalent\n•\n•\nfreeCodeCamp certification(s) or equivalent\nfreeCodeCamp certification(s) or equivalent\n• Experience working with female learners or in gender-sensitive training environments\n•\n•\nExperience working with female learners or in gender-sensitive training environments\nExperience working with female learners or in gender-sensitive training environments\n• Previous experience with UN agency or NGO-funded training programmes\n•\n•\nPrevious experience with UN agency or NGO-funded training programmes\nPrevious experience with UN agency or NGO-funded training programmes\n• Female candidates are given strong preference for this position\n•\n•\nFemale candidates are given strong preference for this position\nFemale candidates are given strong preference for this position\nTechnical Skills Required\nTechnical Skills Required\nTechnical Skills Required\nTechnical Skills Required\n• HTML5, CSS3, JavaScript (ES6+), React\n•\n•\nHTML5, CSS3, JavaScript (ES6+), React\nHTML5, CSS3, JavaScript (ES6+), React\n• Responsive design, Flexbox, CSS Grid\n•\n•\nResponsive design, Flexbox, CSS Grid\nResponsive design, Flexbox, CSS Grid\n• WordPress (themes, plugins, customisation)\n•\n•\nWordPress (themes, plugins, customisation)\nWordPress (themes, plugins, customisation)\n• Git and GitHub basics\n•\n•\nGit and GitHub basics\nGit and GitHub basics\n• Web deployment (Netlify, Vercel, or similar)\n•\n•\nWeb deployment (Netlify, Vercel, or similar)\nWeb deployment (Netlify, Vercel, or similar)\n• AI coding tools (ChatGPT (Codex), Copilot, Replit AI)\n•\n•\nAI coding tools (ChatGPT (Codex), Copilot, Replit AI)\nAI coding tools (ChatGPT (Codex), Copilot, Replit AI)\n\nSubmission Guidelines\nInterested candidates should submit:\nInterested candidates should submit:\nInterested candidates should submit:\n• Updated CV/resume (maximum 3 pages)\n•\n•\nUpdated CV/resume (maximum 3 pages)\nUpdated CV/resume (maximum 3 pages)\n• A brief cover letter (maximum 1 page) explaining your relevant experience and why you are interested in this position\n•\n•\nA brief cover letter (maximum 1 page) explaining your relevant experience and why you are interested in this position\nA brief cover letter (maximum 1 page) explaining your relevant experience and why you are interested in this position\n• Contact details of two professional references\n•\n•\nContact details of two professional references\nContact details of two professional references\nSend applications to: careers@hbcxconsulting.com with the subject line: \"Application – Lead Trainer – Web Development and Coding\"\nSend applications to: careers@hbcxconsulting.com with the subject line: \"Application – Lead Trainer – Web Development and Coding\"\nSend applications to: careers@hbcxconsulting.com with the subject line: \"Application – Lead Trainer – Web Development and Coding\"\n\nSubmission Email\ncareers@hbcxconsulting.com\nApply",
-      "details": {
-        "Location": "Herat, Kabul",
-        "Nationality": "Afghan",
-        "Category": "Information Technology",
-        "Employment Type": "Full Time",
-        "Salary": "Competitive, based on qualifications and experience (market rate)",
-        "Vacancy Number": "—",
-        "No. of Jobs": "3",
-        "City": "Herat, Kabul",
-        "Organization": "Horizon Bridge Consulting",
-        "Experience": "4 years",
-        "Contract Duration": "Fixed-term service contract (4 months)",
-        "Gender": "Female",
-        "Education": "Bachelor or master's degree (in progress or completed) in IT, CS and similar",
-        "Closing Date": "2026-06-12",
-        "Post Date": "2026-06-07",
-        "Functional Area": "Information Technology",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Herat, Kabul",
-        "No. Of Jobs": "3",
-        "Years of Experience": "4 years",
-        "Close date": "2026-06-12"
-      },
-      "scraped_at": "2026-06-07T05:59:39Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/28948/lead-trainer-web-development-and-coding"
-        }
-      ]
-    }
-  ],
-  "expiring_soon": [
     {
       "id": "7e6547a00889e750",
       "source": "kaarobar",
@@ -539,7 +244,9 @@
       },
       "scraped_at": "2026-06-05T05:58:24Z",
       "also_found_on": []
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "b591a53845cc82b8",
       "source": "kaarobar",
@@ -590,6 +297,223 @@
         {
           "source": "wazifaha",
           "url": "https://wazifaha.org/jobs/28985/gis-and-environmental-specialist"
+        }
+      ]
+    },
+    {
+      "id": "03db01c95392f80a",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/data-science-trainer",
+      "url": "https://jobs.af/jobs/data-science-trainer",
+      "title": "Data Science Trainer",
+      "company": "NETLINKS",
+      "location": "Multi Location, Afghanistan",
+      "closing_date": "2026-06-16",
+      "closing_date_raw": "2026-06-16 00:00:00+00",
+      "category": "Computer Science, Statistics, Data Science",
+      "job_type": "full_time",
+      "gender": "any",
+      "vacancies": 3,
+      "salary": "Company salary scale",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nNETLINKS is delivering a market-responsive digital skills program for Afghan adolescents and youth (ages 15–24) across Kabul and Herat. We are seeking an experienced Data Science Trainer to deliver Track B, which equips learners with the full \"data-to-decision\" pipeline and prepares them for real employment through the Jobs.af marketplace.\nThis is hands-on, applied teaching. Our model is \"Applied Digital Mastery\" — every concept is reinforced through real-world projects, not just lectures. You will work in small cohorts (low 25:1 student-to-instructor ratio) using a blended delivery format (two in-person sessions plus one online session weekly).\n\nDuties and Responsibilities\nKey Responsibilities\nDeliver the Data Science & Information Management curriculum, covering data cleaning, SQL and database management, and building interactive dashboards using industry-standard visualization tools.\nTeach the complete \"data-to-decision\" pipeline through live demonstrations, guided practice, and project-based assignments.\nDesign and grade practical projects that build a job-ready portfolio for each learner.\nConduct competency-based pre/post assessments and maintain accurate records in the Learning Management System (LMS).\nProvide personalized mentorship to support learners at risk of falling behind, using LMS analytics to flag and intervene early.\nSupport learners' transition into internships, freelance work, and jobs, including CV workshops and onboarding to the Jobs.af Freelancer Marketplace.\nDeliver content in a way that integrates with the program's mandatory life-skills module.\nMaintain a safe, inclusive, and supportive learning environment at all times.\nComply fully with the project's safeguarding (SEA/SH), child protection, and data protection standards.\n\nJob Requirements\nBachelor's degree in Data Science, Computer Science, Statistics, Information Systems, or a related field.\nDemonstrated practical proficiency in: data cleaning and preparation, SQL and relational database management, and data visualization / dashboard tools (e.g., Power BI, Tableau, or similar).\nPrior teaching, training, or facilitation experience, ideally with youth or adult learners.\nStrong communication skills and the ability to explain technical concepts clearly to beginners.\nFluency in Dari and/or Pashto; working knowledge of English is an advantage.\nPreferred / Desirable\nExperience in a project-based or bootcamp-style teaching environment.\nFamiliarity with LMS platforms and blended (in-person + online) delivery.\nExperience preparing learners for freelance or remote work opportunities.\nProgramming exposure (e.g., Python for data analysis) is a plus.\nImportant Notes\nAll staff must sign and adhere to a Code of Conduct, complete SEA/SH and safeguarding training before entering a classroom, and pass background checks.\nEmployment terms comply with Afghan labour law and international standards, including fair wages, reasonable working hours, and occupational health and safety provisions.\n\nSubmission Guidelines\nInterested and qualified candidates are invited to submit through the Jobs.af ATS system under the designated vacancy section for this position.\nEqual Opportunity and Safeguarding Statement\nNETLINKS Ltd. is an equal opportunity employer committed to diversity, inclusion, and merit-based recruitment. Qualified candidates of both genders are encouraged to apply, and female candidates are highly encouraged to submit their applications.\nNETLINKS maintains a zero-tolerance policy for sexual exploitation, abuse, and harassment (SEA/SH), child abuse, and any form of discrimination. The successful candidate will be required to sign and uphold the NETLINKS Code of Conduct, complete mandatory PSEA/SH and safeguarding training, and consent to background and reference checks.\nOnly shortlisted candidates will be contacted. Applications will be reviewed on a rolling basis until the position is filled.",
+      "details": {
+        "Reference": "DST-2026-001",
+        "Post Date": "2026-06-06 06:04:40.973+00",
+        "Closing Date": "2026-06-16 00:00:00+00",
+        "Functional Area": "Computer Science, Statistics, Data Science",
+        "Countries": "Afghanistan",
+        "Provinces": "Multi Location",
+        "Job Type": "full_time",
+        "Contract Type": "fixed_term",
+        "Gender": "any",
+        "Education": "bachelor",
+        "Experience": "1 - 2",
+        "Salary": "Company salary scale",
+        "Vacancies": 3,
+        "Submission Through": "platform"
+      },
+      "scraped_at": "2026-06-07T05:59:22Z",
+      "also_found_on": []
+    },
+    {
+      "id": "e2cfc46f950d279d",
+      "source": "acbar",
+      "source_url": "https://www.acbar.org/jobs/142572/field-verification-officer.jsp",
+      "url": "https://www.acbar.org/jobs/142572/field-verification-officer.jsp",
+      "title": "Field Verification Officer",
+      "company": "Verfied Digital Solutions",
+      "location": "Badakhshan Badghis Baghlan Balkh Bamian Daikondi Farah Faryab Ghazni Ghowr Helmand Herat Jawzjan Kabul Kandahar Kapisa Khost Kunar Kunduz Laghman Logar Nangarhar Nimruz Nuristan Oruzgan Paktia Panjshir Parwan Samangan Sar-e Pol Takhar Maidan Wardak Zabul Paktika",
+      "closing_date": "2026-06-16",
+      "closing_date_raw": "2026-06-16",
+      "category": "Monitoring and Evaluation",
+      "job_type": "Part Time",
+      "gender": "Male/Female",
+      "vacancies": "1",
+      "salary": "Compensation is assignment-based and will be discussed with shortlisted candidates.",
+      "apply_url": "mailto:careers@verifieddigital.solutions",
+      "apply_emails": [
+        "careers@verifieddigital.solutions"
+      ],
+      "apply_phones": [],
+      "description": "About Verfied Digital Solutions\nVerified Digital Solutions is a Canadian company specializing in accountability, transparency, and digital monitoring solutions for humanitarian and development programs. Verify is a program of Verified Digital Solutions, operating as an independent monitoring and verification platform that supports NGOs, donors, and implementing partners across Afghanistan and other complex environments. Through a combination of digital technology and trained field professionals, Verify confirms that reported activities, services, and aid distributions are delivered as planned and reach intended beneficiaries, strengthening accountability, improving data quality, and reducing the risk of misreporting, fraud, and aid diversion.\nWebsite: verifieddigital.solutions\n\nJob Description\nVerify – a Canadian independent monitoring, verification, and transparency platform – is seeking qualified Field Verification Officers to conduct independent field monitoring of donor-funded and NGO-implemented projects across Afghanistan. Verification Officers will travel to project sites, engage with communities, collect evidence, and submit structured reports through Verify's secure digital system. This is a project-based consultancy; officers are assigned to missions based on geographic coverage and project needs.\nKey Responsibilities:\nConduct field visits to project sites, including clinics, schools, food distribution points, infrastructure works, and community programs\nVerify that reported activities, services, and distributions have taken place as planned\nInterview beneficiaries, project staff, and community representatives using structured questionnaires\nCollect geo-tagged photographs, GPS data, and monitoring forms using a smartphone\nSubmit accurate and timely reports through Verify's digital platform\nIdentify and report discrepancies, risks, or irregularities in project implementation\nMaintain strict confidentiality, neutrality, and professional ethics at all times\nReporting and Supervision: Field Verification Officers work under the supervision of the Verify Monitoring Team. Assignments, tools, and reporting templates are provided through the Verify digital platform.\nCompensation: Officers are compensated per completed and approved assignment. Payments are made via bank transfer following verification of submitted work.\nEthics and Compliance: All officers must comply with Verify's Code of Conduct, confidentiality policies, and data protection standards. Any falsification, misrepresentation, or conflict of interest will result in immediate contract termination.\n\nJob Requirements\nJob Requirements: All of the following requirements must be met:\nMinimum three (3) years of professional experience in Monitoring and Evaluation, third-party monitoring, field verification, or humanitarian project monitoring\nFluency in English, Pashto, and Dari — spoken and written\nStrong computer skills, including use of email, online forms, and digital reporting systems\nAbility to use a smartphone for data collection, GPS tracking, and photo documentation\nAbility to travel within assigned provinces and districts\nHigh level of integrity, accuracy, and attention to detail\nPreferred: Experience working with NGOs, international organizations, or donor-funded programs is strongly preferred.\n\nSubmission Guideline\nInterested candidates should submit the following to the email address below:\nFull name\nCurrent province and district\nPhone number\nLanguages spoken\nSummary of Monitoring and Evaluation experience\nUpdated CV / Resume\nTwo professional references (name, organization, and contact number)\nOnly shortlisted candidates will be contacted.\n\nSubmission Email\ncareers@verifieddigital.solutions",
+      "details": {
+        "Job Location": "Badakhshan Badghis Baghlan Balkh Bamian Daikondi Farah Faryab Ghazni Ghowr Helmand Herat Jawzjan Kabul Kandahar Kapisa Khost Kunar Kunduz Laghman Logar Nangarhar Nimruz Nuristan Oruzgan Paktia Panjshir Parwan Samangan Sar-e Pol Takhar Maidan Wardak Zabul Paktika",
+        "Nationality": "National",
+        "Category": "Monitoring and Evaluation",
+        "Employment Type": "Part Time",
+        "Salary": "Compensation is assignment-based and will be discussed with shortlisted candidates.",
+        "Vacancy Number": "VDS-FVO-2026-01",
+        "No. Of Jobs": "1",
+        "City": "Main cities",
+        "Organization": "Verfied Digital Solutions",
+        "Years of Experience": "3",
+        "Contract Duration": "1 year",
+        "Gender": "Male/Female",
+        "Education": "Bachelor's degree or equivalent field experience in a relevant discipline",
+        "Close date": "2026-06-16",
+        "Closing Date": "2026-06-16",
+        "Functional Area": "Monitoring and Evaluation",
+        "Job Type": "Part Time",
+        "Source": "ACBAR",
+        "Location": "Badakhshan, Badghis, Baghlan, Balkh, Bamian, Daikondi, Farah, Faryab, Ghazni, Ghowr, Helmand, Herat, Jawzjan, Kabul, Kandahar, Kapisa, Khost, Kunar, Kunduz, Laghman, Logar, Nangarhar, Nimruz, Nuristan, Oruzgan, Paktia, Panjshir, Parwan, Samangan, Sar-e Pol, Takhar, Maidan Wardak, Zabul, Paktika",
+        "No. of Jobs": "1",
+        "Experience": "3",
+        "Post Date": "2026-05-17"
+      },
+      "scraped_at": "2026-05-17T05:44:59Z",
+      "also_found_on": [
+        {
+          "source": "kaarobar",
+          "url": "https://www.kaarobar.net/jobs/15784/position-title-field-verification-officer"
+        },
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/28559/position-title-field-verification-officer"
+        }
+      ]
+    },
+    {
+      "id": "d84040dd3320d194",
+      "source": "kaarobar",
+      "source_url": "https://www.kaarobar.net/jobs/16055/it-officer",
+      "url": "https://www.kaarobar.net/jobs/16055/it-officer",
+      "title": "IT Officer",
+      "company": "ACBAR",
+      "location": "Kabul",
+      "closing_date": "2026-06-16",
+      "closing_date_raw": "2026-06-16",
+      "category": "Information Technology",
+      "job_type": "Full Time",
+      "gender": "Male/Female",
+      "vacancies": "1",
+      "salary": "Salary and conditions are according to ACBAR’s salary scale.",
+      "apply_url": "https://www.kaarobar.net/jobs/apply/16055/it-officer",
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "About ACBAR\nThe Agency Coordinating Body for Afghan Relief and Development, ACBAR, is an independent forum founded in 1988 in response to the demand from NGOs working with Afghan refugees in Pakistan and across the border in Afghanistan to more efficiently coordinate assistance and delivery of services. With its main office in Kabul since 2002, ACBAR brings together 230 National and International NGOs working in in all sectors of humanitarian assistance and development in Afghanistan. Its activities focus heavily on information to its members and the aid community in general, coordination of activities at the national and regional levels, and advocacy on issues affecting the work of its members in Afghanistan. ACBAR has a mission to provide an efficient platform for members to carry out effective humanitarian, development, and peace building activities in Afghanistan. The members are the drive behind ACBAR, and their active participation is essential to ACBAR’s continued dynamism.\nThe Agency Coordinating Body for Afghan Relief and Development, ACBAR, is an independent forum founded in 1988 in response to the demand from NGOs working with Afghan refugees in Pakistan and across the border in Afghanistan to more efficiently coordinate assistance and delivery of services. With its main office in Kabul since 2002, ACBAR brings together 230 National and International NGOs working in in all sectors of humanitarian assistance and development in Afghanistan. Its activities focus heavily on information to its members and the aid community in general, coordination of activities at the national and regional levels, and advocacy on issues affecting the work of its members in Afghanistan. ACBAR has a mission\nto provide an efficient platform for members to carry out effective humanitarian, development, and peace building activities in Afghanistan.\nto provide an efficient platform for members to carry out effective humanitarian, development, and peace building activities in Afghanistan.\nThe members are the drive behind ACBAR, and their active participation is essential to ACBAR’s continued dynamism.\n\nJob Descriptions\nThe IT Communication Officer is responsible for managing and delivering clear, effective communication between the IT department and internal/external stakeholders while supporting the organization’s IT systems. The role ensures efficient operation of hardware, software, and networks, translates technical information into user-friendly content, and supports users while safeguarding data and maintaining system reliability.\nThe IT Communication Officer is responsible for managing and delivering clear, effective communication between the IT department and internal/external stakeholders while supporting the organization’s IT systems. The role ensures efficient operation of hardware, software, and networks, translates technical information into user-friendly content, and supports users while safeguarding data and maintaining system reliability.\nESSENTIAL TASKS\nESSENTIAL TASKS\nESSENTIAL TASKS\nEssential tasks include the following:\nEssential tasks include the following:\nEssential tasks include the following:\nIT responsibilities:\nIT responsibilities:\nIT responsibilities:\nResponsible for all ACBAR IT management and requirements.\nNegotiate contracts and liaise with internet providers and web hosting companies\nTo set up and maintain the network, email, and server configuration.\nEnsure that all the IT equipment in ACBAR offices is maintained and functioning properly (hardware and software).\nEnsure that all computers are backed up to the cloud server.\nSupport all necessary security and virus protection aspects for standalone and network IT equipment.\nKeep a record of all IT Equipment and update the inventory list with the IT Manager.\nProvide technical training (IT) support to staff with the IT Manager\nProvide advice for purchasing new IT equipment.\nKeeping up to date with the latest technologies.\nSupport IT problems for ACBAR members if asked\nTo carry out any other related tasks requested by management\nProvide Technical support for AID (ACBAR Information database).\nProvide support to database users, troubleshoot, and prepare manuals and guidelines\nResponsible for all ACBAR IT management and requirements.\nResponsible for all ACBAR IT management and requirements.\nNegotiate contracts and liaise with internet providers and web hosting companies\nNegotiate contracts and liaise with internet providers and web hosting companies\nTo set up and maintain the network, email, and server configuration.\nTo set up and maintain the network, email, and server configuration.\nEnsure that all the IT equipment in ACBAR offices is maintained and functioning properly (hardware and software).\nEnsure that all the IT equipment in ACBAR offices is maintained and functioning properly (hardware and software).\nEnsure that all computers are backed up to the cloud server.\nEnsure that all computers are backed up to the cloud server.\nSupport all necessary security and virus protection aspects for standalone and network IT equipment.\nSupport all necessary security and virus protection aspects for standalone and network IT equipment.\nKeep a record of all IT Equipment and update the inventory list with the IT Manager.\nKeep a record of all IT Equipment and update the inventory list with the IT Manager.\nProvide technical training (IT) support to staff with the IT Manager\nProvide technical training (IT) support to staff with the IT Manager\nProvide advice for purchasing new IT equipment.\nProvide advice for purchasing new IT equipment.\nKeeping up to date with the latest technologies.\nKeeping up to date with the latest technologies.\nSupport IT problems for ACBAR members if asked\nSupport IT problems for ACBAR members if asked\nTo carry out any other related tasks requested by management\nTo carry out any other related tasks requested by management\nProvide Technical support for AID (ACBAR Information database).\nProvide Technical support for AID (ACBAR Information database).\nProvide support to database users, troubleshoot, and prepare manuals and guidelines\nProvide support to database users, troubleshoot, and prepare manuals and guidelines\nWebsite responsibilities:\nWebsite responsibilities:\nWebsite responsibilities:\nTo upload and update the ACBAR Website contents daily.\nTo approve job announcements, resumes & organizations\nTo update online News text\nTo post RFPs/ RFQs and EOIs in the website.\nTo post notices on the website.\nUploading necessary files on website.\nTo identify and promote the site to others on the web (search engines and Afghan and international institutions)\nTo archive outdated contents.\nCreating new queries & new users for the database (directory of addresses)\nUpdating printable directory\nProviding support to website users via email/phone\nSolve the problem of all employers and jobseeker\nTo upload and update the ACBAR Website contents daily.\nTo upload and update the ACBAR Website contents daily.\nTo approve job announcements, resumes & organizations\nTo approve job announcements, resumes & organizations\nTo update online News text\nTo update online News text\nTo post RFPs/ RFQs and EOIs in the website.\nTo post RFPs/ RFQs and EOIs in the website.\nTo post notices on the website.\nTo post notices on the website.\nUploading necessary files on website.\nUploading necessary files on website.\nTo identify and promote the site to others on the web (search engines and Afghan and international institutions)\nTo identify and promote the site to others on the web (search engines and Afghan and international institutions)\nTo archive outdated contents.\nTo archive outdated contents.\nCreating new queries & new users for the database (directory of addresses)\nCreating new queries & new users for the database (directory of addresses)\nUpdating printable directory\nUpdating printable directory\nProviding support to website users via email/phone\nProviding support to website users via email/phone\nSolve the problem of all employers and jobseeker\nSolve the problem of all employers and jobseeker\n\nJob Requirements\nThe requirements listed below are representative of the knowledge, skill, and/or attribute required.\nThe requirements listed below are representative of the knowledge, skill, and/or attribute required.\nBachelor’s degree in Information Technology, Communications, or Computer Science\nFamiliarity with Windows, macOS, Android, and iOS operating systems\nKnowledge of virtualization, cloud services, and enterprise applications\nUnderstanding of TCP/IP and networking implementation\nExperience in designing, maintaining, and troubleshooting networks\nProficient in establishing LAN and WAN environments\nCertifications such as CCNA, MCSA, or ITIL are an advantage\nBachelor’s degree in Information Technology, Communications, or Computer Science\nBachelor’s degree in Information Technology, Communications, or Computer Science\nFamiliarity with Windows, macOS, Android, and iOS operating systems\nFamiliarity with Windows, macOS, Android, and iOS operating systems\nKnowledge of virtualization, cloud services, and enterprise applications\nKnowledge of virtualization, cloud services, and enterprise applications\nUnderstanding of TCP/IP and networking implementation\nUnderstanding of TCP/IP and networking implementation\nExperience in designing, maintaining, and troubleshooting networks\nExperience in designing, maintaining, and troubleshooting networks\nProficient in establishing LAN and WAN environments\nProficient in establishing LAN and WAN environments\nCertifications such as CCNA, MCSA, or ITIL are an advantage\nCertifications such as CCNA, MCSA, or ITIL are an advantage\nProfessional Experience\nProfessional Experience\nProfessional Experience\n3–5 years of experience in IT communication and IT support with National NGOs and International NGOs\nExperience working with both technical teams and end-users\n3–5 years of experience in IT communication and IT support with National NGOs and International NGOs\n3–5 years of experience in IT communication and IT support with National NGOs and International NGOs\nExperience working with both technical teams and end-users\nExperience working with both technical teams and end-users\nCore Skills\nCore Skills\nCore Skills\nStrong communication skills in Dari, Pashto, and English\nAbility to simplify complex technical concepts for non-technical users\nKnowledge of IT systems, infrastructure, and digital tools. Officer JD.docOfficer JD\nBasic understanding of IT service management (ITSM) frameworks (e.g., ITIL)\nStrong organizational, analytical, and problem-solving abilities\nStrong communication skills in Dari, Pashto, and English\nStrong communication skills in Dari, Pashto, and English\nAbility to simplify complex technical concepts for non-technical users\nAbility to simplify complex technical concepts for non-technical users\nKnowledge of IT systems, infrastructure, and digital tools. Officer JD.docOfficer JD\nKnowledge of IT systems, infrastructure, and digital tools. Officer JD.docOfficer JD\nBasic understanding of IT service management (ITSM) frameworks (e.g., ITIL)\nBasic understanding of IT service management (ITSM) frameworks (e.g., ITIL)\nStrong organizational, analytical, and problem-solving abilities\nStrong organizational, analytical, and problem-solving abilities\nTechnical Competencies\nTechnical Competencies\nTechnical Competencies\nProficiency in Microsoft Office and Microsoft 365 tools\nBasic graphic design skills\nExperience with communication platforms and helpdesk systems\nFundamental knowledge of cybersecurity principles\nProficiency in Microsoft Office and Microsoft 365 tools\nProficiency in Microsoft Office and Microsoft 365 tools\nBasic graphic design skills\nBasic graphic design skills\nExperience with communication platforms and helpdesk systems\nExperience with communication platforms and helpdesk systems\nFundamental knowledge of cybersecurity principles\nFundamental knowledge of cybersecurity principles\nPersonal Attributes\nPersonal Attributes\nPersonal Attributes\nStrong interpersonal and stakeholder management skills\nable to work under pressure\nProactive and self-motivated\nTeam-oriented mindset\nStrong interpersonal and stakeholder management skills\nStrong interpersonal and stakeholder management skills\nable to work under pressure\nable to work under pressure\nProactive and self-motivated\nProactive and self-motivated\nTeam-oriented mindset\nTeam-oriented mindset\n\nSubmission Guidelines\nIf you meet the required qualifications and experience, please complete the application form using the link below. The deadline for submission is 16 June, 2026. Before applying, ensure that your CV and cover letter are combined into a single file, as you will be required to upload them during the application process.\nIf you meet the required qualifications and experience, please complete the application form using the link below. The deadline for submission is 16 June, 2026. Before applying, ensure that your CV and cover letter are combined into a single file, as you will be required to upload them during the application process.\nONLY INTERNATIONALS ARE ELIGIBLE FOR THIS POSITION\nONLY INTERNATIONALS ARE ELIGIBLE FOR THIS POSITION\nONLY INTERNATIONALS ARE ELIGIBLE FOR THIS POSITION\nJob application form link: https://form.acbar.org/app/form?id=x0.JYA\nJob application form link:\nhttps://form.acbar.org/app/form?id=x0.JYA\nhttps://form.acbar.org/app/form?id=x0.JYA\n\nSubmission Email\nN/A\nApply",
+      "details": {
+        "Location": "Kabul",
+        "Nationality": "National",
+        "Category": "Information Technology",
+        "Employment Type": "Full Time",
+        "Salary": "Salary and conditions are according to ACBAR’s salary scale.",
+        "Vacancy Number": "IT-2026",
+        "No. of Jobs": "1",
+        "City": "Kabul",
+        "Organization": "ACBAR",
+        "Experience": "3–5 years of experience in IT communication and IT support with National NGOs and International NGOs",
+        "Contract Duration": "-",
+        "Gender": "Male/Female",
+        "Education": "Not specified | Refer to Job Requirements",
+        "Closing Date": "2026-06-16",
+        "Post Date": "2026-06-03",
+        "Functional Area": "Information Technology",
+        "Job Type": "Full Time",
+        "Source": "Kaarobar",
+        "Job Location": "Kabul",
+        "No. Of Jobs": "1",
+        "Years of Experience": "3–5 years of experience in IT communication and IT support with National NGOs and International NGOs",
+        "Close date": "2026-06-16"
+      },
+      "scraped_at": "2026-06-04T06:07:25Z",
+      "also_found_on": [
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/28899/it-officer"
+        }
+      ]
+    },
+    {
+      "id": "79b6aab519c8a122",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/sharia-audit-officer-31",
+      "url": "https://jobs.af/jobs/sharia-audit-officer-31",
+      "title": "Sharia Audit Officer",
+      "company": "Ghazanfar Bank",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-06-16",
+      "closing_date_raw": "2026-06-16 00:00:00+00",
+      "category": "Banking",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "mailto:sr.recruitment-officer@ghazanfarbank.com",
+      "apply_emails": [
+        "sr.recruitment-officer@ghazanfarbank.com"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary\nThe Sharia Audit Officer is responsible for conducting periodic Sharia audits across the bank to ensure all products, services, contracts, transactions, and operational processes fully comply with Islamic Sharia principles and the rulings of the Sharia Supervisory Board. The role helps preserve the bank’s Islamic integrity and strengthens governance.\n\nDuties and Responsibilities\n1. Sharia Audit Planning & Execution\nParticipate in preparing the annual Sharia Audit Plan based on risk assessment.\nConduct field audits in branches and departments to verify adherence to Sharia guidelines.\nExamine financing files, contracts, documentation, and transaction flows for Sharia compliance.\nTest samples of Murabaha, Ijara, Musharaka, Mudaraba, and deposit transactions against Sharia standards.\n2. Review of Contracts, Policies & Procedures\nAudit the implementation of Sharia-approved product structures and documentation.\nEnsure operational procedures match the product manuals approved by the Sharia Supervisory Board (SSB).\nCheck whether staff are following required Sharia workflows (e.g., asset ownership, agency structures, disclosures, penalties handling).\n3. Identification of Sharia Non-Compliance\nIdentify Sharia violations, deviations, or gaps during audits.\nDiscuss findings with relevant departments and agree on corrective actions.\nEnsure non-compliance events are recorded, reported, and resolved within the required timeframe.\n4. Reporting & Documentation\nPrepare clear Sharia audit reports with observations, recommendations, and compliance ratings.\nSubmit audit results to the Head of Sharia Audit and contribute to reports for the Sharia Supervisory Board.\nMaintain proper documentation of all audit working papers and evidence.\n5. Follow-Up & Corrective Actions\nFollow up on previously reported Sharia findings to verify whether corrective actions were implemented.\nWork with business units, risk management, operations, and compliance teams to close audit issues.\n6. Coordination & Support\nCoordinate with Internal Audit and Compliance Department for combined risk reviews.\nProvide Sharia guidance to departments during audits to improve their understanding and performance.\n7. Capacity Building & Awareness\nSupport the development of Sharia audit tools, checklists, and audit methodologies.\nAssist in internal awareness sessions on Sharia compliance requirements for staff.\n8. Continuous Improvement\nStay updated on AAOIFI Sharia standards, new fatwas, and industry best practices.\n. Recommend improvements to Sharia audit processes and internal controls\n\nJob Requirements\nQualifications & Experience\nBachelor’s degree in Islamic Studies, Sharia, Islamic Finance, Accounting, or Business Administration.\nProfessional certification in Islamic finance or Sharia audit (preferred).\n1–3 years of experience in Islamic banking, Sharia audit, internal audit, or compliance roles.\nFamiliarity with AAOIFI standards and Islamic banking products.\nSkills & Competencies\nStrong understanding of Islamic banking and Sharia principles.\nAbility to analyze financial transactions and documentation.\nGood report writing skills with clarity and accuracy.\nStrong attention to detail and analytical mindset.\nExcellent communication and coordination abilities.\nHigh integrity, objectivity, and professionalism.\n\nSubmission Guidelines\nApplicants who meet the above requirements should submit their updated Curriculum vitae (CV)/Resume to (sr.recruitment-officer@ghazanfarbank.com)\nPlease Mention specific Job Title in subject of your E-mail otherwise your Email will not be considered.\nNote: only shortlisted candidates will be contacted for further recruitment process.",
+      "details": {
+        "Reference": "GB/EAD/42",
+        "Post Date": "2026-05-16 12:00:32.574+00",
+        "Closing Date": "2026-06-16 00:00:00+00",
+        "Functional Area": "Banking",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "1 - 3",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "email",
+        "Location": "Kabul",
+        "Nationality": "Afghan",
+        "Category": "Banking",
+        "Employment Type": "Full Time",
+        "Vacancy Number": "GB/EAD/42",
+        "No. of Jobs": "1",
+        "City": "kabul",
+        "Organization": "Ghazanfar Bank",
+        "Contract Duration": "permanent",
+        "Source": "ACBAR",
+        "Job Location": "Kabul",
+        "No. Of Jobs": "1",
+        "Years of Experience": "1 - 3 years",
+        "Close date": "2026-06-16"
+      },
+      "scraped_at": "2026-05-17T05:44:46Z",
+      "also_found_on": [
+        {
+          "source": "acbar",
+          "url": "https://www.acbar.org/jobs/142579/sharia-audit-officer-re-announced.jsp"
+        },
+        {
+          "source": "kaarobar",
+          "url": "https://www.kaarobar.net/jobs/15785/position-title-sharia-audit-officer-re-announced"
+        },
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/28561/position-title-sharia-audit-officer-re-announced"
+        },
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/28855/sharia-audit-officer-re-announced"
         }
       ]
     }
