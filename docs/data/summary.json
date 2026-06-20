@@ -1,205 +1,56 @@
 {
-  "generated_at": "2026-06-19T06:15:03.563Z",
-  "today": "2026-06-19",
-  "total_jobs": 56,
+  "generated_at": "2026-06-20T05:58:14.450Z",
+  "today": "2026-06-20",
+  "total_jobs": 54,
   "new_count": 1,
-  "expiring_today_count": 3,
-  "expiring_soon_count": 8,
+  "expiring_today_count": 7,
+  "expiring_soon_count": 3,
   "tech_banking_count": 9,
   "new_jobs": [
     {
-      "id": "ccdd02a50e6dcdf6",
+      "id": "c53483b41ad519a2",
       "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/microwave-technician-16",
-      "url": "https://jobs.af/jobs/microwave-technician-16",
-      "title": "System/ Customer Support Officer",
-      "company": "UA Telecom",
+      "source_url": "https://jobs.af/jobs/digital-marketing-and-graphic-designer-32",
+      "url": "https://jobs.af/jobs/digital-marketing-and-graphic-designer-32",
+      "title": "Digital Marketing & Graphic Designer",
+      "company": "NaqdPay",
       "location": "Kabul, Afghanistan",
-      "closing_date": "2026-06-30",
-      "closing_date_raw": "2026-06-30 00:00:00+00",
-      "category": "Information Technology, Customer Service",
-      "job_type": "full_time",
-      "gender": "male",
-      "vacancies": 2,
-      "salary": "Company salary scale",
-      "apply_url": "mailto:vacancies@uatelecom.af",
-      "apply_emails": [
-        "vacancies@uatelecom.af"
-      ],
-      "apply_phones": [],
-      "description": "Role Summary\nThe System/Customer Support Officer is responsible for 24/7 monitoring of UA Telecom’s wireless network devices, recording and resolving customer complaints and technical incidents through the support lifecycle, and performing multi-level troubleshooting across network and customer systems to ensure service continuity, SLA compliance, and uninterrupted service delivery.\n\nDuties and Responsibilities\n1. Record and manage customer complaint history in the designated system, ensuring continuous follow-up until full resolution.\n2. Log and maintain records of site failures, power issues, and network downtime for SLA tracking and reconciliation.\n3. Monitor network performance tools (Red EMCO) for microwave and InfiNet devices, including ping latency and interference analysis, and support corrective actions to ensure timely issue resolution.\n4. Monitor Air Control Alerting systems for network devices including device online/offline status, pole movement alerts, interference issues, hotspot connectivity failures, CCQ degradation, and bitrate issues, and take corrective or escalated action as required.\n5. Maintain overall health monitoring of network devices in accordance with standard points.\n6. Provide second-line and limited third-line technical support for customer and network-related issues.\n7. Troubleshoot and resolve issues related to BTS sites, PTP links, wireless sectors, switches, routers, and other network infrastructure.\n8. Perform troubleshooting and configuration support for network switches, including implementation of advanced features when required.\n9. Resolve customer-side issues related to CPE (Customer Premises Equipment) and LAN networks using remote access tools.\n10. Support firmware and IOS/software upgrades for wireless and network devices based on vendor updates and operational requirements.\n11. Identify, analyze, and resolve customer connectivity issues remotely using diagnostic and remote support tools.\n12. Generate and share weekly reports of inactive/non-usage customers with Sales, CRM, and Collections teams for further action.\n13. Escalate bandwidth and capacity-related issues to CRM and Sales teams for review and adjustment of customer packages.\n14. Maintain accurate records of customer installations in the designated database, including customer name, connected base station details, router model, bandwidth allocation (day/night), contact details (POC), and technical configuration information.\n15. Record and manage demo customers’ complaints and ensure follow-up until resolution in the designated system.\n16. Maintain hotspot user records in centralized databases, including credentials, package details, validity, and access point information.\n17. Update internal communication groups (e.g., WhatsApp groups) for new installations, link termination, and network incident notifications, and inform customers of urgent technical issues when required.\n18. Coordinate and arrange field teams for on-site visits when remote troubleshooting is not sufficient.\n19. Maintain complete documentation of system monitoring events, incidents, and customer complaints in designated databases.\n20. Respond to all customer inquiries, calls, emails, and complaints in a professional and timely manner.\n21. Communicate planned and unplanned maintenance activities, outages, and service issues to customers via email, phone, or messaging platforms, ensuring confirmation and status updates.\n22. Schedule and communicate maintenance activities for base stations, ensuring customers are notified at least 48 hours in advance.\n23. Prepare shift-wise reports detailing completed tasks, ongoing incidents, and pending issues.\n24. Ensure proper handover of all active tickets, incidents, and operational tasks to the next shift for continuity of service.\n\nJob Requirements\nBachelor’s degree in Computer Science (BCS).\nMinimum 3 years of hands-on experience in IT/network operations, preferably in ISP or telecom environments.\nStrong communication skills with ability to interact effectively with customers and internal teams.\nFluency in Dari, Pashto, and English (spoken and written).\nWorking knowledge of Linux operating systems and programming/scripting fundamentals.\nWork Conditions\nThis role operates in a 24/7 shift-based NOC environment at UA Telecom. With full accountability for continuous system monitoring and customer service operations. It requires real-time incident detection, immediate response, and strict escalation management to ensure service continuity and rapid resolution of network and customer issues.\nThe position requires rotational shifts, including nights, weekends, and public holidays, and demands high responsiveness in a fast-paced, time-critical environment.\nDesirable Qualifications/Plus Points:\n· Certifications such as Cisco Certified Network Associate (CCNA), Cisco Certified Network Associate – Wireless (CCNA Wireless), Cisco Certified Network Professional (CCNP), and Microsoft Certified IT Professional (MCITP) are highly advantageous for this role.\n\nSubmission Guidelines\nInterested candidates are encouraged to submit their applications by June 30, 2026 . To apply, please send your updated CV to vacancies@uatelecom.af\nIn the subject line of your email, please ensure to include the Vacancy Number and Desired Province.\nOnly shortlisted candidates will be contacted for the written test or interview process.",
-      "details": {
-        "Reference": "#UAT-VA-SO-2156-J",
-        "Post Date": "2026-03-31 10:22:57.148+00",
-        "Closing Date": "2026-06-30 00:00:00+00",
-        "Functional Area": "Information Technology, Customer Service",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "male",
-        "Education": "bachelor",
-        "Experience": "3 - 5",
-        "Salary": "Company salary scale",
-        "Vacancies": 2,
-        "Submission Through": "email"
-      },
-      "scraped_at": "2026-06-19T06:14:38Z",
-      "also_found_on": [
-        {
-          "source": "jobs.af",
-          "url": "https://jobs.af/jobs/social-media-manager-31"
-        }
-      ]
-    }
-  ],
-  "expiring_today": [
-    {
-      "id": "6328c3894a4c5c17",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16268/231-senior-full-stack-developer-re-announced",
-      "url": "https://www.kaarobar.net/jobs/16268/231-senior-full-stack-developer-re-announced",
-      "title": "231-Senior Full Stack Developer (Re Announced)",
-      "company": "Ministry of Finance",
-      "location": "Kabul",
-      "closing_date": "2026-06-19",
-      "closing_date_raw": "2026-06-19",
-      "category": "Information Technology",
-      "job_type": "Full Time",
-      "gender": "Male",
-      "vacancies": "1",
-      "salary": "NTA",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16268/231-senior-full-stack-developer-re-announced",
-      "apply_emails": [
-        "nta@mof.gov.af"
-      ],
-      "apply_phones": [],
-      "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nThe Senior Full Stack Developer will play a key role in leading and contributing to the design, development, and implementation of complex software systems and applications for the Directorate of ICT at the Ministry of Finance. The job requires strong skills in both front-end and back-end development, plus the ability to turn business needs into reliable, secure, and easy-to-use systems. The role also includes guiding the team and helping improve overall development practices.\n\nJob Requirements\nKey Responsibilities\nThe authorities concerned will carry out the following tasks and activities but not necessarily restricted to those:\nSoftware Design & Development\nDesign, develop, test, and maintain enterprise-grade web applications using ASP.NET Core, C#, EF Core, and modern front-end frameworks (e.g., React).\nBuild and maintain RESTful APIs using .NET Core, applying CQRS and Microservices Architecture where appropriate.\nAnalyze, refactor, and enhance existing systems developed in C# .NET or PHP Laravel.\nApply Clean Architecture / Multi-layer Architecture, SOLID principles, and repository patterns.\nSecurity, Quality & Performance\nImplement secure coding practices in line with OWASP Top 10 and government ICT security standards.\nEnsure unit test coverage of at least 80% And participate in integration and automated functional testing.\nConduct code reviews to ensure quality, maintainability, and compliance with international standards.\nIdentify performance bottlenecks and ensure high availability and reliability of applications and databases.\nDevOps & Deployment\nCreate and maintain Docker configurations for containerized application deployment.\nSupport CI/CD pipelines and participate in release and change management processes.\nProvide Swagger /OpenAPI documentation for all REST APIs.\nWork with PostgreSQL and/or Microsoft SQL Server, ensuring data integrity and performance.\nAgile & Collaboration\nActively participate in Agile/SCRUM ceremonies including sprint planning, reviews, and retrospectives.\nUse tools such as Git, GitHub, Jira, and collaboration platforms to support efficient delivery.\nCollaborate with cross-functional teams, stakeholders, and other departments to achieve ICT objectives.\nLeadership & Continuous Improvement\nMentor junior developers and promote best practices in software engineering.\nRecommend and implement solutions to automate and simplify business processes.\nPerform risk assessments, identify mitigation strategies, and ensure compliance with ICT governance policies.\nPrepare and maintain technical documentation, operational manuals, and user guides.\nReporting & Administration\nPerform any other ICT-related duties as assigned by management.\nProvide regular progress updates, reports, and risk assessments to management as per SLA.\nEligibility and Skill Sets:\nThe candidate qualification is:\nBachelor’s or master degree in computer science, information technology and other related fields.\n5 years for master and 7 years for bachelor of computer since graduates, information technology and other related fields with experience in the enterprise level software development.\nFull understanding and proven experience of coding regarding enterprise application projects using object-oriented paradigm with the help of Microsoft .net core and Entity framework (EF) Core. The design pattern for code management will be used either multi-layer architecture or clean architecture/ clean coding.\nUnderstanding of implementing API gateways and microservices.\nUnderstanding and proven experience in design patterns specifically repository patterns and clean architecture implementation in C#.\nPreferred experience in implementation complex application development concepts such as distributed cashing, dependency induction, retry and scheduling mechanism, background/log running processes.\nCoding review, SOLID principles and OWASP top 10 Web Application Security knowledge would be considered as plus point.\nASP.NET, Java and React, RabbitMQ, Quartz.Net, JWT and OAuth knowledge will consider as plus points.\nKnowledge of business processing simplification in enterprise environment, with open-source platforms, and enterprise software applications.\nExperience in the development and implementation of standards, procedures and guidelines to support operational processes.\nSelf-motivated with the ability to prioritize, meet deadlines, and manage changing priorities;\nStrong interpersonal, communication skills and Experience in technical writing such as functional specification, technical specification, etc.\nExperience in quality assurance & mitigation/ control, risk analysis and data analysis.\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 19-Jun-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
-      "details": {
-        "Location": "Kabul",
-        "Nationality": "Afghan",
-        "Category": "Information Technology",
-        "Employment Type": "Full Time",
-        "Salary": "NTA",
-        "Vacancy Number": "231/MoF/ICT",
-        "No. of Jobs": "1",
-        "City": "Kabul",
-        "Organization": "Ministry of Finance",
-        "Experience": "5 years for master and 7 years for Bachelor of Computer since graduates, information technology and other related fields with experience in the enterprise level software development.",
-        "Contract Duration": "Till the of Fiscal Year 1405 (Extendable)",
-        "Gender": "Male",
-        "Education": "Bachelor or Master degree in computer science, information technology and other related fields.",
-        "Closing Date": "2026-06-19",
-        "Post Date": "2026-06-10",
-        "Functional Area": "Information Technology",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Kabul",
-        "No. Of Jobs": "1",
-        "Years of Experience": "5 years for master and 7 years for Bachelor of Computer since graduates, information technology and other related fields with experience in the enterprise level software development.",
-        "Close date": "2026-06-19"
-      },
-      "scraped_at": "2026-06-11T06:05:50Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29129/231-senior-full-stack-developer-re-announced"
-        }
-      ]
-    },
-    {
-      "id": "4092e9a40b7c36e3",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/network-engineer-kabul",
-      "url": "https://jobs.af/jobs/network-engineer-kabul",
-      "title": "Network Engineer (Kabul)",
-      "company": "Afghan Wireless Communication Company",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-06-19",
-      "closing_date_raw": "2026-06-19 00:00:00+00",
-      "category": "Computer Science, Information Technology",
+      "closing_date": "2026-07-04",
+      "closing_date_raw": "2026-07-04 00:00:00+00",
+      "category": "Computer Science, Digital Marketing",
       "job_type": "full_time",
       "gender": "any",
-      "vacancies": 2,
+      "vacancies": 1,
       "salary": "Company salary scale",
-      "apply_url": "https://forms.gle/VpWNPaMGW3Q1ti3JA",
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "Role Summary\nThe Network Engineer is responsible for the LAN/WLAN plan, documentation, configuration, maintenance, monitoring, and all hierarchical tasks that are coming through Manager-Network Infrastructures & Security.\nThe Network Engineer is under the direct guidance and supervision of the NIS - Manager/NIS - Supervisor to provide daily technical help to the Network Team Leader regarding the plan, implementation, and maintaining the AWCC upcoming/ongoing projects of LAN/WLAN to ensure the availability of the network/networking environment in AWCC offices and projects.\n\nDuties and Responsibilities\nEnsures effective functioning of the WLAN/LAN, Communication Support, Network Administration, and use of documenting tools focusing on the achievement of the following results:\nCompliance with corporate WLAN/LAN maintenance and technology standards/policies, guidelines, and procedures for the AWCC office's information technology environment.\nIdentification and implementation of innovative uses of the WLAN and LAN which would enhance the AWCC project's effectiveness.\nAWCC Project's plan deployment, configurations, and maintenance of the WLAN and LAN communications on ongoing/upcoming projects.\nReport network operational status by gathering and prioritizing information and management projects.\nReconfiguration of new equipment and systems in WLAN and LAN and take corrective actions in case of failure.\nConfigure routing and switching equipment, hosted IP, and voice services.\nProvide remote support to on-site engineers and end users/customers during installation.\nProvide remote troubleshooting and fault find if the issues occur upon initial installation.\nLiaise with project management teams, third-line engineers, and service desk engineers regularly.\nSpeak to customers via email and phone for initial requirement capture.\nTroubleshooting and monitoring network problems: traffic, usage, and performance.\nImplementation of backup and restoration procedures for all Juniper, Cisco, and other brand devices in the customer network's Core, AGG, and Access Layers.\nMaintain the network access policies and controlling systems to ensure that all the corporate Access Layers and types of equipment are properly repaired and working to maintain satisfactory communications.\nMaximize network performance by monitoring performance, troubleshooting network problems and outages, scheduling upgrades, and collaborating with network architects on network optimization.\nMaintenance of logs of reported problems and corrective measures taken.\nAdminister the AWCC Projects corporate network to provide a stable and responsive environment.\nMaintain up-to-date parameters of information for the network devices including network mapping, configuration backup, and so on.\nMonitor the network availability 24/7 and report the stability to the Supervisor – NIS or Team Leader.\nTroubleshoot WAN connection with any kind of point-to-point links to ensure stable connectivity between ISP and customer offices, remote sites, and AWCC regional offices.\nThe Network Engineer is a technology professional who is highly skilled in maintaining the connectivity of networks in terms of data, voice, calls, videos, and wire/wireless network service.\nExperts with voice-over-internet protocol (VoIP) skills, which is a mix of voice, video, and knowledge on one network. A Network Engineer designs, tests, installs, and maintains both local VoIP systems in projects.\n\nJob Requirements\nQualifications and Industrial Level Certification Requirements:\nA Bachelor's degree in computer science/information technology or related fields is required.\nMust have completed the JNCIA, JNCIS/CCNA, CCNA Wireless, and CCNP training.\nPreferred certification holders (JNCIA, CCNA, CCNA wireless Network, and so on).\nWork Experience Requirements:\n3 to 4 years of experience in the Information Technology field.\nExperience in PC support, remote communications, LAN/WLAN/WAN.\nExcellent Technical skills and knowledge of Information technology Networks particularly Juniper, Cisco, Ubiquiti, and MikroTik switches, routers, and access points.\nKnowledge of wireless LAN infrastructure - Wireless APs (802.11x) and experience managing wireless end-user devices.\nAbility to meet deadlines, work under pressure, good negotiation and organizational skills.\nAbility to provide 24/7 network services for AWCC Projects.\n\nSubmission Guidelines\nThe interested candidates should fill out and submit the APPLICATION FORM with complete and correct information. To have access to the APPLICATION FORM, please copy and paste the link into your Web Browser.\nhttps://forms.gle/VpWNPaMGW3Q1ti3JA",
+      "apply_url": "mailto:hr@naqdpay.af",
+      "apply_emails": [
+        "hr@naqdpay.af"
+      ],
+      "apply_phones": [
+        "+93728979703"
+      ],
+      "description": "Role Summary\nThe Graphic Designer will work under the direction of the Department Head and will be responsible for the following:\n\nDuties and Responsibilities\nLeading the design process for visual communication, including web and mobile applications, digital marketing materials, and other graphic design projects.\nCreating visually compelling designs that ensure seamless user experiences (UX) and engaging user interfaces (UI).\nDeveloping wireframes, prototypes, and design specifications for digital and print-based projects.\nDesigning marketing materials such as social media creatives, banners, flyers, brochures, and promotional graphics.\nCollaborating with cross-functional teams (marketing, product management, and developers) to ensure design solutions meet both user needs and business goals.\nEnsuring brand consistency across all visuals and user interface elements across digital touchpoints and marketing materials.\nConducting user research and usability testing to improve design decisions and optimize user experiences.\nStaying updated with industry trends related to UX/UI design best practices, emerging technologies, and graphic design tools.\nImpact of Results\nStrengthening PARSA Technologies’ digital presence through user-centric designs and high-quality graphic content.\nImproving user satisfaction and engagement by providing intuitive, functional, and aesthetically pleasing digital experiences.\nContributing to the company's ongoing success by driving design innovation in digital products and visual communication.\n\nJob Requirements\nRequirements:\nBachelor’s degree in Computer Science, Software Engineering or Equivalent Subject\n3+ years of experience in field operations, fintech, telecom\nStrong communication and negotiation skills\nAbility to work in field and travel frequently\nResult-oriented with strong execution capability\nKey Skills:\nAdvanced proficiency in design tools such as Figma, Adobe XD, Sketch, Adobe Photoshop, Illustrator, and other graphic design tools.\nA strong understanding of UX/UI design principles, usability, accessibility best practices, and graphic design fundamentals.\nExpertise in creating wireframes, prototypes, and detailed design documentation.\nStrong creative skills in graphic design for various digital media, including marketing and promotional materials.\nExcellent communication and collaboration skills, with the ability to work effectively in cross-functional teams.\n\nSubmission Guidelines\nInterested candidates who meet the above requirements are invited to submit the following documents:\nUpdated CV\nCover Letter • Applications must be sent to: hr@naqdpay.af\nPlease clearly mention the Position Title and Vacancy Number (e.g., Digital Marketing & Graphic Designer – NP#0006) in the subject line of the email. Applications without a proper subject line may not be considered.\nApplication Deadline: two weeks after announcement\nOnly shortlisted candidates will be contacted for further assessment.\nThe Company reserves the right to accept or reject any application without prior notice.\nFor any further information, you can contact +93728979703",
       "details": {
-        "Reference": "AWCC/HR/26/VA/043",
-        "Post Date": "2026-06-09 08:49:46.696+00",
-        "Closing Date": "2026-06-19 00:00:00+00",
-        "Functional Area": "Computer Science, Information Technology",
+        "Reference": "NP#0008",
+        "Post Date": "2026-06-20 04:15:32.921+00",
+        "Closing Date": "2026-07-04 00:00:00+00",
+        "Functional Area": "Computer Science, Digital Marketing",
         "Countries": "Afghanistan",
         "Provinces": "Kabul",
         "Job Type": "full_time",
         "Contract Type": "permanent",
         "Gender": "any",
         "Education": "bachelor",
-        "Experience": "3 - 4",
+        "Experience": "3",
         "Salary": "Company salary scale",
-        "Vacancies": 2,
-        "Submission Through": "link"
+        "Vacancies": 1,
+        "Submission Through": "email"
       },
-      "scraped_at": "2026-06-10T05:58:49Z",
+      "scraped_at": "2026-06-20T05:57:36Z",
       "also_found_on": []
-    },
-    {
-      "id": "5e5b31260e0603b0",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16327/senior-full-stack-developer-re-announced",
-      "url": "https://www.kaarobar.net/jobs/16327/senior-full-stack-developer-re-announced",
-      "title": "Senior Full Stack Developer (Re Announced)",
-      "company": "Ministry of Finance",
-      "location": "Kabul",
-      "closing_date": "2026-06-19",
-      "closing_date_raw": "2026-06-19",
-      "category": "Information Technology",
-      "job_type": "Full Time",
-      "gender": "Male",
-      "vacancies": "1",
-      "salary": "NTA Higher grades as per experience relevancy!",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16327/senior-full-stack-developer-re-announced",
-      "apply_emails": [
-        "nta@mof.gov.af"
-      ],
-      "apply_phones": [],
-      "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nThe Senior Full Stack Developer will play a key role in leading and contributing to the design, development, and implementation of complex software systems and applications for the Directorate of ICT at the Ministry of Finance. The job requires strong skills in both front-end and back-end development, plus the ability to turn business needs into reliable, secure, and easy-to-use systems. The role also includes guiding the team and helping improve overall development practices.\n\nJob Requirements\nKey Responsibilities\nThe authorities concerned will carry out the following tasks and activities but not necessarily restricted to those:\nSoftware Design & Development\nDesign, develop, test, and maintain enterprise-grade web applications using ASP.NET Core, C#, EF Core, and modern front-end frameworks (e.g., React).\nBuild and maintain RESTful APIs using .NET Core, applying CQRS and Microservices Architecture where appropriate.\nAnalyze, refactor, and enhance existing systems developed in C# .NET or PHP Laravel.\nApply Clean Architecture / Multi-layer Architecture, SOLID principles, and repository patterns.\nSecurity, Quality & Performance\nImplement secure coding practices in line with OWASP Top 10 and government ICT security standards.\nEnsure unit test coverage of at least 80% And participate in integration and automated functional testing.\nConduct code reviews to ensure quality, maintainability, and compliance with international standards.\nIdentify performance bottlenecks and ensure high availability and reliability of applications and databases.\nDevOps & Deployment\nCreate and maintain Docker configurations for containerized application deployment.\nSupport CI/CD pipelines and participate in release and change management processes.\nProvide Swagger /OpenAPI documentation for all REST APIs.\nWork with PostgreSQL and/or Microsoft SQL Server, ensuring data integrity and performance.\nAgile & Collaboration\nActively participate in Agile/SCRUM ceremonies including sprint planning, reviews, and retrospectives.\nUse tools such as Git, GitHub, Jira, and collaboration platforms to support efficient delivery.\nCollaborate with cross-functional teams, stakeholders, and other departments to achieve ICT objectives.\nLeadership & Continuous Improvement\nMentor junior developers and promote best practices in software engineering.\nRecommend and implement solutions to automate and simplify business processes.\nPerform risk assessments, identify mitigation strategies, and ensure compliance with ICT governance policies.\nPrepare and maintain technical documentation, operational manuals, and user guides.\nReporting & Administration\nPerform any other ICT-related duties as assigned by management.\nProvide regular progress updates, reports, and risk assessments to management as per SLA.\nEligibility and Skill Sets:\nThe candidate qualification is:\nBachelor’s or master degree in computer science, information technology and other related fields.\n5 years for master and 7 years for bachelor of computer since graduates, information technology and other related fields with experience in the enterprise level software development.\nFull understanding and proven experience of coding regarding enterprise application projects using object-oriented paradigm with the help of Microsoft .net core and Entity framework (EF) Core. The design pattern for code management will be used either multi-layer architecture or clean architecture/ clean coding.\nUnderstanding of implementing API gateways and microservices.\nUnderstanding and proven experience in design patterns specifically repository patterns and clean architecture implementation in C#.\nPreferred experience in implementation complex application development concepts such as distributed cashing, dependency induction, retry and scheduling mechanism, background/log running processes.\nCoding review, SOLID principles and OWASP top 10 Web Application Security knowledge would be considered as plus point.\nASP.NET, Java and React, RabbitMQ, Quartz.Net, JWT and OAuth knowledge will consider as plus points.\nKnowledge of business processing simplification in enterprise environment, with open-source platforms, and enterprise software applications.\nExperience in the development and implementation of standards, procedures and guidelines to support operational processes.\nSelf-motivated with the ability to prioritize, meet deadlines, and manage changing priorities;\nStrong interpersonal, communication skills and Experience in technical writing such as functional specification, technical specification, etc.\nExperience in quality assurance & mitigation/ control, risk analysis and data analysis.\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 19-Jun-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
-      "details": {
-        "Location": "Kabul",
-        "Nationality": "Afghan",
-        "Category": "Information Technology",
-        "Employment Type": "Full Time",
-        "Salary": "NTA Higher grades as per experience relevancy!",
-        "Vacancy Number": "231/MoF/ICT",
-        "No. of Jobs": "1",
-        "City": "Kabul",
-        "Organization": "Ministry of Finance",
-        "Experience": "5 years for master and 7 years for Bachelor of Computer since graduates, information technology and other related fields with experience in the enterprise level software development.",
-        "Contract Duration": "Till the of Fiscal Year 1405 (Extendable)",
-        "Gender": "Male",
-        "Education": "Bachelor or Master degree in computer science, information technology and other related fields.",
-        "Closing Date": "2026-06-19",
-        "Post Date": "2026-06-15",
-        "Functional Area": "Information Technology",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Kabul",
-        "No. Of Jobs": "1",
-        "Years of Experience": "5 years for master and 7 years for Bachelor of Computer since graduates, information technology and other related fields with experience in the enterprise level software development.",
-        "Close date": "2026-06-19"
-      },
-      "scraped_at": "2026-06-14T06:05:52Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29239/senior-full-stack-developer-re-announced"
-        }
-      ]
     }
   ],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "id": "30e49337a6300fa2",
       "source": "wazifaha",
@@ -505,7 +356,9 @@
       },
       "scraped_at": "2026-06-07T05:59:22Z",
       "also_found_on": []
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "d656a0c99f6b71c1",
       "source": "jobs.af",
@@ -542,6 +395,86 @@
         "Submission Through": "platform"
       },
       "scraped_at": "2026-06-15T06:15:57Z",
+      "also_found_on": []
+    },
+    {
+      "id": "dfe31fd2b95ffb25",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/it-audit-officer-male-16",
+      "url": "https://jobs.af/jobs/it-audit-officer-male-16",
+      "title": "IT Audit Officer (Male)",
+      "company": "Afghanistan Internatinal Bank (AIB)",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-06-23",
+      "closing_date_raw": "2026-06-23 00:00:00+00",
+      "category": "Banking",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": "https://aib.zohorecruit.com/jobs/Careers/584743000007692001/IT-Audit-Officer-Male?source=CareerSite",
+      "apply_emails": [],
+      "apply_phones": [
+        "584743000007692001"
+      ],
+      "description": "Role Summary\nTo assist CIA in achieving the objective of Internal Audit Department according to the approved Internal Audit Manual and Charter.\n\nDuties and Responsibilities\nEvaluate the IT compliance with applicable law, regulations, best practice and standards.\nReview the enterprise IT policies, procedures and controls.\nReview the IT plans including the enterprise Business Continuity Plan.\nConduct the IT risk assessment and analysis of data for the IT audit engagements.\nEvaluate the effectiveness and efficacy of IT projects.\nEvaluate the effectiveness and efficacy of IT governance.\nEvaluate the effectiveness and efficacy of internal controls to safeguard information assets.\nProvide assurance on the effectiveness of the information technology internal controls.\nEvaluate the information technology risks and relevant controls.\nEvaluate the systems /applications utilization to attain the intended objectives.\nConducts or assists in conducting any investigation as instructed by Head of Internal Audit\nAssists in implementing/ maintaining the audit tools and software, as and when required\nConduct the IT audit fieldworks.\nCommunicate the IT audit results with auditees.\nOther duties related to Internal Audit Department.\n\nJob Requirements\nEducational Qualifications:\nCandidate must possess a Bachelor's Degree in Information Technology or related field from an accredited university.\nMust be familiar with the Banking System.\nCISA and any other certifications in Information Technology will be an added advantage.\nExperience:\nMinimum 2 years’ experience in Banking or Audit fields or 5 years’ experience in General IT roles.\nSkills:\nComputer literate and fluent in both written and spoken English and one of the languages (i.e. Dari or Pashto),\nResearch and investigative skills are required to understand the information technology currently being used by AIB and risks associated with such technology\nThe applicant should also have ability to identify potential problem areas in information technology and appropriately assist the audit team as needed,\nAbility to review and understand IT standards as prescribed by ISACA,\nStrong organizational, prioritization, analytical, written and verbal communication skills are required,\nAbility to meet stringent deadlines and adapt to changing priorities, operating in a fast-paced and dynamic environment.\nExcellence in drafting; ability to present information in written and oral form clearly and effectively,\nAbility to define problems and collect relevant information and apply relevant audit principles to relevant factual situations.\n\nSubmission Guidelines\nAIB is committed to a diverse workforce and encourage all eligible local applicants, irrespective of gender, disability, culture, religious and ethnic backgrounds to apply.\nInterested individuals can apply using the below link:\nhttps://aib.zohorecruit.com/jobs/Careers/584743000007692001/IT-Audit-Officer-Male?source=CareerSite\nShort-listed candidates whose applications respond to the above criteria will be contacted for written test and interview. If you did not receive a response within two-four weeks after closing date, it means you are not shortlisted\nWe are highly encouraging qualified and eligible disable candidates to apply.",
+      "details": {
+        "Reference": "2026-44-AIB",
+        "Post Date": "2026-06-16 10:10:06.516+00",
+        "Closing Date": "2026-06-23 00:00:00+00",
+        "Functional Area": "Banking",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "2 - 5",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "link"
+      },
+      "scraped_at": "2026-06-17T06:13:52Z",
+      "also_found_on": []
+    },
+    {
+      "id": "9679303a045174bb",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/sourcing-and-quotation-analyst-16",
+      "url": "https://jobs.af/jobs/sourcing-and-quotation-analyst-16",
+      "title": "Sourcing & Quotation Analyst",
+      "company": "VASTGLOBE LOGISTICS LLC",
+      "location": "Multi Location, Afghanistan",
+      "closing_date": "2026-06-23",
+      "closing_date_raw": "2026-06-23 00:00:00+00",
+      "category": "Procurement and logistics, Information Technology, Business Development, Sales, Supply Chain Management",
+      "job_type": "full_time",
+      "gender": "any",
+      "vacancies": 5,
+      "salary": "Company salary scale",
+      "apply_url": "mailto:procurement@vastglobelogistics.com",
+      "apply_emails": [
+        "procurement@vastglobelogistics.com"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary We are hiring a Sourcing & Quotation Analyst to join our remote team. This is a night shift role. Your shift starts at 5:00 PM Kabul time and runs for 8 hours, aligned with international business hours. Your day will revolve around three things: finding the right opportunities, sourcing the right items from the right vendors, and building clean quotations that win. You will spend most of your shift on calls and emails with international vendors, so strong English and confidence on the phone are non-negotiable. This role is for someone serious. Someone who wants to grow, works hard without being chased, and takes pride in getting the details right. If you are looking for a relaxed 9 to 5, this is not for you. If you want to build a real career and you are willing to put in the work, we want to talk to you. Duties and Responsibilities Opportunity Research Search online portals and platforms for new tenders, RFQs, and product opportunities. Read the requirements carefully and understand exactly what is being asked for. Shortlist the opportunities that fit and flag them to management. Item Sourcing Identify the correct manufacturers and authorized distributors for each item. Verify part numbers, specifications, and compliance requirements before reaching out. Find backup vendors for every key item so we are never stuck with a single source. Vendor Communication Call and email vendors during your shift to request quotes, confirm stock, lead times, and shipping terms. Ask sharp follow-up questions when a quote is incomplete or unclear. Follow up consistently until you have everything you need. No half-finished work. Quotation Preparation Organize vendor pricing in Excel or Google Sheets and compare properly. Build professional quotations using company templates. Triple check every number, SKU, quantity, and date before anything goes out. Coordination and Records Keep clean records of all vendor communication, quotes, and follow-ups. Update internal trackers and CRM tools daily. Work closely with management on final pricing and submission strategy. Never miss a deadline. Discipline and Work Ethic Log in on time. Every shift. Respond quickly on email, WhatsApp, and internal tools during your hours. Keep a professional tone in every vendor interaction. Own your work. No excuses, no shortcuts. Job Requirements Must-Have Fluent English. Spoken and written. You must be able to hold a clear, confident conversation on the phone with international vendors. This is not negotiable. Strong IT background. Comfortable with advanced Google search, Excel or Google Sheets (formulas, filters, sorting), email tools, cloud storage, and basic CRM systems. Sharp critical thinking. You can read a requirement, understand what is being asked, and spot gaps or risks in a vendor's quote. Night shift availability. Ready to work 5:00 PM to 1:00 AM Kabul time, Monday to Friday, without exception. Serious attention to detail. Numbers, SKUs, quantities, and dates must always be right. Discipline and work ethic. Self-driven, reliable, consistent. You do not need someone standing over you to get the work done. Confident on calls. Polite, professional, clear. No slang, no shortcuts. Hungry. You want to build something real and you are willing to put in the work to get there. Nice-to-Have Previous experience in procurement, sourcing, or supply chain. Exposure to international tenders or B2B quotation work. Experience with tender portals or sourcing platforms. Familiarity with Notion, ClickUp, Trello, or similar project management tools. Basic knowledge of IT hardware, industrial equipment, or logistics. Do Not Apply If You are looking for a 9 to 5. You cannot commit to the night shift. You need to be chased to finish work. Your English is weak and you plan to fake it on vendor calls. You cannot. Submission Guidelines Interested candidates should submit their updated CV along with a short introduction (2 to 3 paragraphs) explaining why they are a good fit for this role and confirming their availability for the night shift (5:00 PM to 1:00 AM Kabul time). Send applications to: procurement@vastglobelogistics.com Please write \"Sourcing & Quotation Analyst Application\" in the email subject line. Only shortlisted candidates will be contacted. Applications without a proper introduction will not be considered.",
+      "details": {
+        "Reference": "021010N",
+        "Post Date": "2026-04-23 08:56:23.5+00",
+        "Closing Date": "2026-06-23 00:00:00+00",
+        "Functional Area": "Procurement and logistics, Information Technology, Business Development, Sales, Supply Chain Management",
+        "Countries": "Afghanistan",
+        "Provinces": "Multi Location",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "any",
+        "Education": "bachelor",
+        "Experience": "0",
+        "Salary": "Company salary scale",
+        "Vacancies": 5,
+        "Submission Through": "email"
+      },
+      "scraped_at": "2026-04-24T09:10:05Z",
       "also_found_on": []
     }
   ],
