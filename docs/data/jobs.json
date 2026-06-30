@@ -1716,6 +1716,218 @@
     "also_found_on": []
   },
   {
+    "id": "0a593a41b9f01423",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16756/it-help-desk-representative",
+    "url": "https://www.kaarobar.net/jobs/16756/it-help-desk-representative",
+    "title": "IT Help-desk Representative",
+    "company": "New Kabul Bank",
+    "location": "Kabul",
+    "closing_date": "2026-07-08",
+    "closing_date_raw": "2026-07-08",
+    "category": "Banking",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "As per organization salary policy per month",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16756/it-help-desk-representative",
+    "apply_emails": [
+      "hrd.cv@newkabulbank.af"
+    ],
+    "apply_phones": [],
+    "description": "About New Kabul Bank\nNew Kabul Bank started its banking activities on 18 April 2011 by having received its license as a commercial bank under banking system of the country. Ministry of Finance is the shareholder of New Kabul Bank.\nNew Kabul Bank is operating by CBS system and providing services for valued citizens by covering a wide network with professional and experienced cadre.\n\nJob Descriptions\nJob Description: (شرح وظیفه)\nProvide end user support for all Information Technology products and services. Support includes software and hardware installation at end user level, providing network connectivity, OS and software update, answering questions, troubleshooting problems, teaching or instructing end users at HQ or branches regarding software or hardware functionality.\nEnforce IT Department policies and procedures and ensures compliance with IT Department policy.\nDetermines the most effective manner to resolve client's technical issue. Engages in research and in-depth troubleshooting to resolve technical issues.\nProvides remote support to end-users computers to troubleshoot, diagnose and resolve complex issues. While providing remote support, the Helpdesk Technician should record the session through screen recording application and store the recording in safe place for compliance and investigation related issue.\nRecords Issues / problems details in Helpdesk Ticketing System. Updates tickets with appropriate journal entries of activities, and closes tickets with resolution entered upon completion of the job.\nProper maintenance of documentation for the technical tasks performed for end users.\nVisits NKB branches at Kabul Zone to ensure the computing devices are operational as per need.\nKnowledge sharing and training of fellow team members.\nSubmits weekly work reports to immediate supervisor.\nCan be officially assigned to Monthly Procurement team and control as per need.\nAny other task assigned by direct supervisor.\n\nJob Requirements\nEDUCATION ( تحصیلات) : Bachelor Degree in Information Technology/ Computer Science / Information System.\nEXPERIENCE ( تجارب): work of experience in related field is preferred.\nSKILLS ( مهارت): Troubleshooting and problem solving skills. Good interpersonal and communication skills and the ability to work with frontline and senior staff.\nWORKING RELATIONSHIPS: Works with other team members, including system administrators, network engineers, and core banking team.\nADDITIONAL REQUIREMENTS: On call availability\n\nSubmission Guidelines\nInterested candidates are requested to send their applications along with copies of their CV and educational and work certificates to the hrd.cv@newkabulbank.af All candidates short-listed for interviews will be directly contacted.\nKindly copy the vacancy number and past it in your e-mail subject line with the position title, otherwise you won’t be short listed.\n\nSubmission Email\nhrd.cv@newkabulbank.af\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "National",
+      "Category": "Banking",
+      "Employment Type": "Full Time",
+      "Salary": "As per organization salary policy per month",
+      "Vacancy Number": "NKB -026-HRVN-54",
+      "No. of Jobs": "1",
+      "City": "Kabul Main Branch",
+      "Organization": "New Kabul Bank",
+      "Experience": "با داشتن تجربه کاری در بخش مرتبط ترجیح داده میشود .",
+      "Contract Duration": "One year - Ext.",
+      "Gender": "Male",
+      "Education": "Bachelors in Computer Science or IT",
+      "Closing Date": "2026-07-08",
+      "Post Date": "2026-06-30",
+      "Functional Area": "Banking",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "با داشتن تجربه کاری در بخش مرتبط ترجیح داده میشود .",
+      "Close date": "2026-07-08"
+    },
+    "scraped_at": "2026-06-30T05:53:38Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/29614/it-help-desk-representative"
+      }
+    ]
+  },
+  {
+    "id": "3bf60ae5f615498d",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16745/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter",
+    "url": "https://www.kaarobar.net/jobs/16745/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter",
+    "title": "275-System Administrator (Specialized in Linux, Windows Servers, VMware ESXi, and vCenter)",
+    "company": "Ministry of Finance",
+    "location": "Kabul",
+    "closing_date": "2026-07-09",
+    "closing_date_raw": "2026-07-09",
+    "category": "Information Technology",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "NTA",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16745/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter",
+    "apply_emails": [
+      "nta@mof.gov.af"
+    ],
+    "apply_phones": [],
+    "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nThe primary objective of the System Administrator is to design, implement, maintain, and monitor the organization's server and virtualization infrastructure. The role focuses on delivering high availability, security, and efficiency in systems management while supporting business operations.\n\nJob Requirements\nDepartment: ICT Directorate\nLocation: Ministry of finance\nReports to: Director of ICT / Head of Network Administration\nBackground\nThe organization operates a multi-branch enterprise network with centralized data center services. The infrastructure includes Cisco routing and switching, DMVPN WAN architecture, Sophos Next-Generation Firewalls, and VMware virtualization platform. A CCIE-level architect is required to design, secure, and optimize this environment following international best practices.\nKey Responsibilities\nServer Administration\n• Install, configure, and maintain Linux and Windows Server operating systems.\n• Manage Active Directory (AD) and Group Policy Objects (GPOs) in Windows environments.\n• Ensure regular patch management and updates for Linux and Windows systems.\n• Implement and monitor system security measures, including firewalls, intrusion detection, and encryption technologies.\nVirtualization Management\n• Deploy, configure, and manage VMware ESXi hosts and vCenter infrastructure.\n• Monitor and optimize the performance of virtual machines (VMs) and physical hosts.\n• Manage VMware-related components such as vSAN, DRS, and HA.\n• Handle VM backup, restoration, and disaster recovery procedures.\nSystems Maintenance and Monitoring\n• Implement monitoring solutions to track the health and performance of systems.\n• Conduct root-cause analysis for server and infrastructure-related issues.\n• Ensure adherence to best practices in system performance tuning and capacity planning.\nAutomation and Scripting\n• Automate routine administrative tasks using scripting languages like PowerShell, Bash, or Python.\n• Develop scripts for backups, monitoring, and system health checks.\nDocumentation and Reporting\n• Create and maintain comprehensive documentation for systems configurations, processes, and procedures.\n• Prepare and present regular reports on system performance, incidents, and planned maintenance.\nSupport and Collaboration\n• Provide Level 2/3 technical support for server and virtualization-related issues.\n• Collaborate with the network, application, and database teams to ensure seamless IT operations.\n• Train junior staff and provide guidance on system-related tasks.\nRequired Qualifications and Experience\nEducation:\n• Bachelor’s degree in Computer Science, Information Technology, or related field.\n• Certifications such as RHCSA/RHCE, MCSA/MCSE, VMware VCP-DCV are preferred.\nExperience:\n• Minimum 3-5 years of experience in Linux and Windows server administration.\n• Proven expertise in VMware ESXi and vCenter environments.\n• Experience in managing high-availability systems and disaster recovery planning.\nTechnical Skills:\n• Proficiency in Linux (e.g., CentOS, RHEL, Ubuntu) and Windows Server (2016/2019/2022) environments.\n• Hands-on experience with VMware vSphere, including vCenter, vSAN, DRS, and HA.\n• Strong understanding of TCP/IP, DNS, DHCP, and other networking protocols.\n• Knowledge of backup and recovery tools (e.g., Veeam, NetBackup).\n• Scripting proficiency in Bash, PowerShell, or Python.\nKey Competencies\n• Strong problem-solving and analytical skills.\n• Excellent communication and documentation skills.\n• Ability to work under pressure and meet deadlines.\n• Attention to detail and commitment to maintaining high standards.\n• Team player with a proactive approach to work.\nDeliverables\n• A secure and high-performing server and virtualization environment.\n• Detailed and updated system documentation.\n• Reports on incidents, system performance, and maintenance activities.\n• Training sessions and knowledge transfer for ICT staff.\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 9-Jul-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "Afghan",
+      "Category": "Information Technology",
+      "Employment Type": "Full Time",
+      "Salary": "NTA",
+      "Vacancy Number": "275/MoF/ICT",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "Ministry of Finance",
+      "Experience": "Minimum 3-5 years of experience in Linux and Windows server administration",
+      "Contract Duration": "End of Fiscal Year 1405 (Extendable)",
+      "Gender": "Male",
+      "Education": "• Bachelor’s degree in Computer Science, Information Technology, or related field. Certifications such as RHCSA/RHCE, MCSA/MCSE, VMware VCP-DCV are preferred",
+      "Closing Date": "2026-07-09",
+      "Post Date": "2026-06-29",
+      "Functional Area": "Information Technology",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "Minimum 3-5 years of experience in Linux and Windows server administration",
+      "Close date": "2026-07-09"
+    },
+    "scraped_at": "2026-06-30T05:53:38Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/29594/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter"
+      }
+    ]
+  },
+  {
+    "id": "1e0eab7bef0286f4",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16748/276-senior-network-data-center-architect-ccie-level",
+    "url": "https://www.kaarobar.net/jobs/16748/276-senior-network-data-center-architect-ccie-level",
+    "title": "276-Senior Network & Data Center Architect (CCIE Level)",
+    "company": "Ministry of Finance",
+    "location": "Kabul",
+    "closing_date": "2026-07-09",
+    "closing_date_raw": "2026-07-09",
+    "category": "IT",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "NTA",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16748/276-senior-network-data-center-architect-ccie-level",
+    "apply_emails": [
+      "nta@mof.gov.af"
+    ],
+    "apply_phones": [],
+    "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nThe organization operates a multi-branch enterprise network with centralized data center services. The infrastructure includes Cisco routing and switching, DMVPN WAN architecture, Sophos Next-Generation Firewalls, and VMware virtualization platform. A CCIE-level architect is required to design, secure, and optimize this environment following international best practices.\n\nJob Requirements\n. Objectives\n• Design scalable and resilient enterprise network architecture.\n• Implement secure Cisco DMVPN WAN connectivity.\n• Architect Sophos Firewall multi-zone security framework.\n• Design Tier-2/Tier-3 Data Center architecture.\n• Implement VMware vSphere high-availability clusters.\n• Ensure Zero Trust segmentation and high availability.\nCisco Enterprise Network\n• Hierarchical Core / Distribution / Access design.\n• OSPF multi-area and BGP WAN edge routing.\n• HSRP/VRRP gateway redundancy.\n• VLAN design and segmentation.\n• QoS for ERP and VoIP.\n• NetFlow, SNMPv3, and monitoring integration.\nDMVPN WAN Architecture\n• Dual Hub DMVPN Phase 3 architecture.\n• mGRE tunnels with NHRP configuration.\n• IPsec IKEv2 with AES-256 encryption.\n• Routing over DMVPN (OSPF/EIGRP/BGP).\n• IP SLA tracking and automatic failover.\n• QoS pre-classify and bandwidth control.\nSophos Firewall\n• Multi-zone segmentation (WAN, LAN, DMZ, Server, VPN, Guest).\n• IPS, ATP, SSL inspection, Application Control.\n• Web Application Firewall for public services.\n• Active-Passive High Availability design.\n• Firewall rule matrix and Zero Trust policy implementation.\nData Center Design\n• Dual core switch design.\n• Redundant ISP and firewall connectivity.\n• Rack elevation and power redundancy planning.\n• Storage network segmentation.\n• Disaster Recovery architecture.\nVMware Virtualization\n• vSphere cluster with HA and DRS.\n• Distributed Virtual Switch (VDS).\n• Resource sizing and capacity planning.\n• Backup and snapshot governance policy.\n• Secure management and segmentation.\nSecurity & Compliance\n• Micro-segmentation strategy.\n• Control Plane Policing (CoPP).\n• Certificate-based authentication.\n• Logging, SIEM integration, and monitoring.\n• Failover testing documentation.\nDeliverables\n• High-Level Design (HLD).\n• Low-Level Design (LLD).\n• IP Addressing & VLAN Matrix.\n• DMVPN Tunnel Plan.\n• Firewall Security Matrix.\n• Data Center Physical & Logical Diagrams.\n• Disaster Recovery Plan.\n• Knowledge Transfer & Documentation.\nRequired Qualifications\n• Cisco CCIE (Enterprise Infrastructure preferred).\n• Minimum 10 years enterprise networking experience.\n• Proven Sophos Firewall architecture experience.\n• Data Center design expertise.\n• VMware VCP/VCAP certification preferred.\nPerformance Indicators (KPIs)\n• Network uptime ≥ 99.9%.\n• Zero critical misconfiguration findings.\n• Successful failover test validation.\n• Documented and approved architecture design.\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 9-JUL-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "Afghan",
+      "Category": "IT",
+      "Employment Type": "Full Time",
+      "Salary": "NTA",
+      "Vacancy Number": "276/MoF/ICT",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "Ministry of Finance",
+      "Experience": "• Cisco CCIE (Enterprise Infrastructure preferred). • Minimum 10 years enterprise networking experience. • Proven Sophos Firewall architecture experience. • Data Center design expertise. • VMware VCP/VCAP certification preferred.",
+      "Contract Duration": "End of Fiscal Year 1405 (Extendable)",
+      "Gender": "Male",
+      "Education": "• Bachelor’s degree in Computer Science, Information Technology, or related field.",
+      "Closing Date": "2026-07-09",
+      "Post Date": "2026-06-29",
+      "Functional Area": "IT",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "• Cisco CCIE (Enterprise Infrastructure preferred). • Minimum 10 years enterprise networking experience. • Proven Sophos Firewall architecture experience. • Data Center design expertise. • VMware VCP/VCAP certification preferred.",
+      "Close date": "2026-07-09"
+    },
+    "scraped_at": "2026-06-30T05:53:38Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/29598/276-senior-network-data-center-architect-ccie-level"
+      }
+    ]
+  },
+  {
+    "id": "2ffcd2d8ad382cf6",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16749/277-senior-cyber-security-specialist",
+    "url": "https://www.kaarobar.net/jobs/16749/277-senior-cyber-security-specialist",
+    "title": "277-Senior Cyber Security Specialist",
+    "company": "Ministry of Finance",
+    "location": "Kabul",
+    "closing_date": "2026-07-09",
+    "closing_date_raw": "2026-07-09",
+    "category": "IT",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "NTA",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16749/277-senior-cyber-security-specialist",
+    "apply_emails": [
+      "nta@mof.gov.af"
+    ],
+    "apply_phones": [],
+    "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nAs the sole dedicated cybersecurity specialist, the primary objective is to act as the MoF’s internal \"ethical hacker\" and security architect. The role aims to:\nProactively identify and exploit vulnerabilities in the MoF’s networks, applications, and financial systems through rigorous, hands-on penetration testing.\nEstablish foundational security monitoring and incident response capabilities in the absence of a traditional SOC.\nProvide expert technical guidance to the broader ICT team to remediate identified vulnerabilities.\nBuild a resilient security posture from the ground up, balancing deep technical execution with strategic risk management.\n\nJob Requirements\nScope of Work and Key Responsibilities\nGiven the standalone nature of this role, the Specialist must be highly self-motivated, capable of deep technical execution, and skilled at prioritizing high-risk areas.\nHeavy Penetration Testing & Offensive Security (Core Focus)\nConduct regular, in-depth, hands-on penetration testing on the MoF’s internal/external networks, web applications, APIs, mobile applications, and critical financial systems.\nPerform advanced manual testing to identify complex vulnerabilities (e.g., business logic flaws, authentication bypasses, injection attacks) that automated scanners miss.\nConduct social engineering and phishing campaigns to test the human element of the MoF’s security posture.\nVendor Management: While executing continuous internal pen-testing, design the scope for and manage external third-party vendors for comprehensive, enterprise-wide annual penetration tests.\nVulnerability Management & Remediation\nDeploy, configure, and manage automated vulnerability scanning tools across the MoF’s infrastructure.\nAnalyze scan results, filter out false positives, and prioritize vulnerabilities based on the specific threat landscape of the financial sector.\nWork directly with system administrators, network engineers, and application developers to verify and validate the remediation of identified flaws.\nFoundational Security Monitoring & Incident Response\ndesign, implement, and manage a centralized log management and basic SIEM (Security Information and Event Management) solution.\nAct as the primary (Tier 1, 2, and 3) Incident Responder. Investigate security alerts, contain breaches, eradicate threats, and recover systems during a cyber incident.\nDevelop and maintain automated alerting rules to notify the Specialist and ICT management of critical security events.\nSecurity Architecture & Automation\nAdvise the ICT Directorate on secure architecture for new financial systems, , and network expansions (Security by Design).\nDevelop scripts and automate repetitive security tasks (e.g., using Python, Bash, or PowerShell) to maximize efficiency and scale security efforts without additional headcount.\nKey Deliverables\nPenetration Testing Reports: Comprehensive, technical, and executive-level reports following every internal penetration test, including proof-of-concept exploits and step-by-step remediation guides.\nVulnerability Dashboard: A continuously updated, automated dashboard showing the MoF’s vulnerability posture, aging of critical vulnerabilities, and remediation SLA compliance.\nIncident Response Plan (IRP): A documented and tested IRP tailored for a standalone responder, including clear escalation matrices to external law enforcement or emergency IT support.\nSecurity Monitoring Baseline: Successful deployment and tuning of a centralized logging/SIEM solution with active alerts for critical financial systems within the first [6 months].\nQuarterly Security Posture Report: An executive summary for the Director of ICT detailing the threat landscape, tests conducted, critical risks discovered, and remediation progress.\nReporting and Coordination\nDirect Reporting: Reports directly to the Director of ICT.\nInternal Coordination: Works closely with Network Administrators, Database Administrators, and Software Developers to ensure vulnerabilities are patched without disrupting critical treasury operations.\nExternal Coordination: Acts as the technical point of contact for external penetration testing firms, managed security service providers.\nQualifications and Experience\nEducation:\nBachelor’s degree in Computer Science, Cybersecurity, Information Technology, or a closely related field.\nExperience:\nExactly/At least Seven (7) years of progressive, hands-on professional experience in Cybersecurity, with a heavy emphasis on technical execution rather than pure management.\nMinimum of three (3) to four (4) years of dedicated, hands-on experience specifically in Penetration Testing and Offensive Security.\nProven experience conducting pen tests on complex environments, specifically web applications, APIs, and network infrastructure.\nExperience operating as a standalone security practitioner or building security programs from scratch is highly desirable.\nCertifications:\nMandatory (Offensive Security): Must hold a highly respected, practical penetration testing certification such as:\nOSCP (Offensive Security Certified Professional) - Highly Preferred\nOSEP, OSWE, or PEN-300.\nAlternatives: CEH (Certified Ethical Hacker) or CompTIA PenTest+ (only if accompanied by strong proven practical experience).\nDesirable (General/Defensive): CISSP, CISM, or BTL1 (Blue Team Level 1) to complement the offensive skills with governance and defensive knowledge.\nRequired Skills and Competencies\nTechnical Skills (Heavy Offensive Focus):\nExpert-level proficiency with penetration testing frameworks and tools (e.g., Burp Suite Professional, Metasploit, Cobalt Strike, Nmap, Nessus, SQLmap).\nDeep understanding of the OWASP Top 10, SANS Top 25, and advanced exploitation techniques.\nStrong scripting and automation skills (Python, Bash, PowerShell) to write custom exploits, automate scanning, and parse logs.\nSolid understanding of defensive security, network protocols, and how to configure log aggregation tools (e.g., Splunk, ELK, Wazuh) for a solo analyst.\nSoft Skills:\nSelf-Starter & Time Management: Ability to work independently, prioritize tasks ruthlessly, and manage time effectively without direct supervision.\nTechnical Translation: Ability to explain complex, highly technical exploitation chains to non-technical financial executives and translate them into business risks.\nHigh Integrity: Unquestionable ethical standards\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 9-Jul-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "Afghan",
+      "Category": "IT",
+      "Employment Type": "Full Time",
+      "Salary": "NTA",
+      "Vacancy Number": "277/MoF/ICT",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "Ministry of Finance",
+      "Experience": "Exactly/At least Seven (7) years of progressive, hands-on professional experience in Cybersecurity, with a heavy emphasis on technical execution rather than pure management",
+      "Contract Duration": "End of Fiscal Year 1405 (Extendable)",
+      "Gender": "Male",
+      "Education": "Bachelor’s degree in Computer Science, Cybersecurity, Information Technology, or a closely related field.",
+      "Closing Date": "2026-07-09",
+      "Post Date": "2026-06-29",
+      "Functional Area": "IT",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "Exactly/At least Seven (7) years of progressive, hands-on professional experience in Cybersecurity, with a heavy emphasis on technical execution rather than pure management",
+      "Close date": "2026-07-09"
+    },
+    "scraped_at": "2026-06-30T05:53:38Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/29599/277-senior-cyber-security-specialist"
+      }
+    ]
+  },
+  {
     "id": "995f538674a2e5eb",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/backend-java-developer-16",
@@ -1753,6 +1965,46 @@
       "Submission Through": "email"
     },
     "scraped_at": "2026-06-14T06:05:37Z",
+    "also_found_on": []
+  },
+  {
+    "id": "65fa9174ff286c3f",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/mdyr-tknalwzhy-malwmaty-hlmnd-brna-16",
+    "url": "https://jobs.af/jobs/mdyr-tknalwzhy-malwmaty-hlmnd-brna-16",
+    "title": "مدیر تکنالوژی معلوماتی - هلمند برښنا",
+    "company": "DABS (Da Afghanistan Breshna Sherkat)",
+    "location": "Helmand, Afghanistan",
+    "closing_date": "2026-07-13",
+    "closing_date_raw": "2026-07-13 00:00:00+00",
+    "category": "Computer Science",
+    "job_type": "full_time",
+    "gender": "male",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "http://hris.dabs.af/Recruit/Applicant/ApplicantApply/8503C8F9-A3B0-4A25-BC9E-04F5D8BEFF96",
+    "apply_emails": [],
+    "apply_phones": [
+      "0202513694"
+    ],
+    "description": "Role Summary\nکارمند بست متذکره مسوول پیشبرد وظایف ذیل میباشد\n\nDuties and Responsibilities\nنصب سرور/ نرم افزار ها و نظارت بر عملکرد ها و رفع مشکلات بخش های مربوطه\nتشخیص منبع مشکلات عملیاتی، بشمول جنبه های نرم افزاری و سخت افزاری برای سیستم ها و سرور کمپیوتر\nتهیه نسخه های کاپی سیستم ها و اسناد، ایجاد حسابات کمپیوتری برای کارمندان\nرفع مشکلات عملکرد های شبکه های LAN/WAN اتصالات و مشکلات مربوط به شبکه ها\nهمکاری در اداره و نظارت منابع بشمول VPN فایروال سرور پراکسی و مسیرها\nهماهنگی و تجدید نرم افزار و سخت افزار شبکه ها\nهمکاری در تحلیل و ارزیابی قراردادی های محصولات نرم افزاری و سخت افزاری با مطابقت به ضروریات\nهمکاری و هماهنگی فراگیری حصول اجرای محصولات قراردادی\nانجام وظایف متخصص شبکه مدیریت روزمره اطلاعات عملکرد های شبکه\nهمکاری در ترتیب و توصیه استندرد های برای استفاده از منابع سیستم کمپیوتری\nاجرای سایر وظایف محول شده\n\nJob Requirements\nلیسانس در رشته کمپیوتر ساینس\nدو سال تجربه کاری در بخش مربوطه\nدانستن پروسیجرها، میتود ها و وسایل مدرن اداری\nبلدیت کامل با زبان های ملی کشور و آشنایی با زبان انګلیسی\nمشاهده و رفع نواقص تخنیکی و عملیاتی\nتحلیل و ارزیابی تجدید محصولات نرم افزاری و سخت افزاری\nهمکاری در ایجاد استندرد های برای منابع سیستم های کمپیوتری\n\nSubmission Guidelines\nDear Applicant,\nThank you for your interest in applying for the job, The qualified and interested applicants can fill the online application form through the following link:\nLink for online Apply\nhttp://hris.dabs.af/Recruit/Applicant/ApplicantApply/94CDE0C3-63DB-4BA7-892B-8A2874C10741\nTo ensure that your application is considered, please follow these submission guidelines:\n1. Submit your application by the deadline specified as late applications will not be considered.\n2. Fill out the application form completely and accordingly as incomplete form will not be considered. Make sure to provide all the necessary information, including your personal details, work experience, education and skills.\n3. Provide accurate contact information as this will be used for all communications regarding your application.\n4. Double-check your applications before submitting it to ensure that these are no errors or omissions.\n5. Shortlisted candidates will be directly contacted for a written test or interview. If you’re not contacted within two or four weeks after the closing date, please know that your application has not been considered for the post.\nNote: The internal employees of DABS are required to get the approval of their respective head of division and submit it along with application form, otherwise the application will be rejected.\nWe appreciate your interest in DABS and look forward to reviewing your application, if you have any questions contact us on this phone number:\nTEL0202513694",
+    "details": {
+      "Reference": "VA-DABS-HQs/1405-047",
+      "Post Date": "2026-06-29 09:59:02.127+00",
+      "Closing Date": "2026-07-13 00:00:00+00",
+      "Functional Area": "Computer Science",
+      "Countries": "Afghanistan",
+      "Provinces": "Helmand",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "male",
+      "Education": "bachelor",
+      "Experience": "2 - 3",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "link"
+    },
+    "scraped_at": "2026-06-30T05:53:20Z",
     "also_found_on": []
   },
   {
@@ -1990,6 +2242,46 @@
       "Submission Through": "email"
     },
     "scraped_at": "2026-05-10T05:42:42Z",
+    "also_found_on": []
+  },
+  {
+    "id": "8ce5a97e22dfdb4b",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/social-media-manager-31",
+    "url": "https://jobs.af/jobs/social-media-manager-31",
+    "title": "System/ Customer Support Officer (Night Shift)",
+    "company": "UA Telecom",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-07-31",
+    "closing_date_raw": "2026-07-31 00:00:00+00",
+    "category": "Information Technology, Customer Service",
+    "job_type": "full_time",
+    "gender": "male",
+    "vacancies": 2,
+    "salary": "Company salary scale",
+    "apply_url": "mailto:vacancies@uatelecom.af",
+    "apply_emails": [
+      "vacancies@uatelecom.af"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nThe System/Customer Support Officer is responsible for 24/7 monitoring of UA Telecom’s wireless network devices, recording and resolving customer complaints and technical incidents through the support lifecycle, and performing multi-level troubleshooting across network and customer systems to ensure service continuity, SLA compliance, and uninterrupted service delivery.\n\nDuties and Responsibilities\n1. Record and manage customer complaint history in the designated system, ensuring continuous follow-up until full resolution.\n2. Log and maintain records of site failures, power issues, and network downtime for SLA tracking and reconciliation.\n3. Monitor network performance tools (Red EMCO) for microwave and InfiNet devices, including ping latency and interference analysis, and support corrective actions to ensure timely issue resolution.\n4. Monitor Air Control Alerting systems for network devices including device online/offline status, pole movement alerts, interference issues, hotspot connectivity failures, CCQ degradation, and bitrate issues, and take corrective or escalated action as required.\n5. Maintain overall health monitoring of network devices in accordance with standard points.\n6. Provide second-line and limited third-line technical support for customer and network-related issues.\n7. Troubleshoot and resolve issues related to BTS sites, PTP links, wireless sectors, switches, routers, and other network infrastructure.\n8. Perform troubleshooting and configuration support for network switches, including implementation of advanced features when required.\n9. Resolve customer-side issues related to CPE (Customer Premises Equipment) and LAN networks using remote access tools.\n10. Support firmware and IOS/software upgrades for wireless and network devices based on vendor updates and operational requirements.\n11. Identify, analyze, and resolve customer connectivity issues remotely using diagnostic and remote support tools.\n12. Generate and share weekly reports of inactive/non-usage customers with Sales, CRM, and Collections teams for further action.\n13. Escalate bandwidth and capacity-related issues to CRM and Sales teams for review and adjustment of customer packages.\n14. Maintain accurate records of customer installations in the designated database, including customer name, connected base station details, router model, bandwidth allocation (day/night), contact details (POC), and technical configuration information.\n15. Record and manage demo customers’ complaints and ensure follow-up until resolution in the designated system.\n16. Maintain hotspot user records in centralized databases, including credentials, package details, validity, and access point information.\n17. Update internal communication groups (e.g., WhatsApp groups) for new installations, link termination, and network incident notifications, and inform customers of urgent technical issues when required.\n18. Coordinate and arrange field teams for on-site visits when remote troubleshooting is not sufficient.\n19. Maintain complete documentation of system monitoring events, incidents, and customer complaints in designated databases.\n20. Respond to all customer inquiries, calls, emails, and complaints in a professional and timely manner.\n21. Communicate planned and unplanned maintenance activities, outages, and service issues to customers via email, phone, or messaging platforms, ensuring confirmation and status updates.\n22. Schedule and communicate maintenance activities for base stations, ensuring customers are notified at least 48 hours in advance.\n23. Prepare shift-wise reports detailing completed tasks, ongoing incidents, and pending issues.\n24. Ensure proper handover of all active tickets, incidents, and operational tasks to the next shift for continuity of service.\n\nJob Requirements\nBachelor’s degree in Computer Science (BCS).\nMinimum 3 years of hands-on experience in IT/network operations, preferably in ISP or telecom environments.\nStrong communication skills with ability to interact effectively with customers and internal teams.\nFluency in Dari, Pashto, and English (spoken and written).\nWorking knowledge of Linux operating systems and programming/scripting fundamentals.\nWork Conditions\nThis role operates in a 24/7 shift-based NOC environment at UA Telecom. With full accountability for continuous system monitoring and customer service operations. It requires real-time incident detection, immediate response, and strict escalation management to ensure service continuity and rapid resolution of network and customer issues.\nThe position requires rotational shifts, including nights, weekends, and public holidays, and demands high responsiveness in a fast-paced, time-critical environment.\nDesirable Qualifications/Plus Points:\n· Certifications such as Cisco Certified Network Associate (CCNA), Cisco Certified Network Associate – Wireless (CCNA Wireless), Cisco Certified Network Professional (CCNP), and Microsoft Certified IT Professional (MCITP) are highly advantageous for this role.\n\nSubmission Guidelines\nInterested candidates are encouraged to submit their applications by July 31, 2026 . To apply, please send your updated CV to vacancies@uatelecom.af\nIn the subject line of your email, please ensure to include the Vacancy Number and Desired Province. e.g: (UAT-VA-CSO-2149-J - Kabul) .\nOnly shortlisted candidates will be contacted for the written test or interview process.",
+    "details": {
+      "Reference": "UAT-VA-CSO-#2149-J",
+      "Post Date": "2026-02-26 09:23:03.681+00",
+      "Closing Date": "2026-07-31 00:00:00+00",
+      "Functional Area": "Information Technology, Customer Service",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "male",
+      "Education": "bachelor",
+      "Experience": "3 - 5",
+      "Salary": "Company salary scale",
+      "Vacancies": 2,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-06-30T05:53:20Z",
     "also_found_on": []
   },
   {
