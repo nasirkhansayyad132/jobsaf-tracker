@@ -1,87 +1,5 @@
 [
   {
-    "id": "1aca01009c850716",
-    "source": "jobs.af",
-    "source_url": "https://jobs.af/jobs/generative-ai-training-intern-paid-16",
-    "url": "https://jobs.af/jobs/generative-ai-training-intern-paid-16",
-    "title": "Generative AI Training Intern (Paid)",
-    "company": "Sahar AI",
-    "location": "Multi Location, Afghanistan",
-    "closing_date": "2026-07-01",
-    "closing_date_raw": "2026-07-01 00:00:00+00",
-    "category": "Information Technology",
-    "job_type": "full_time",
-    "gender": "any",
-    "vacancies": 5,
-    "salary": "150 USD",
-    "apply_url": "mailto:SaharAI.company@gmail.com",
-    "apply_emails": [
-      "SaharAI.company@gmail.com",
-      "hr@saharai.io",
-      "info@saharai.io"
-    ],
-    "apply_phones": [],
-    "description": "Role Summary\nAs a Generative AI Training Intern, you will learn how modern AI tools and models work and help us prepare, test, and improve AI-generated content. This is a hands-on, beginner-friendly role designed to teach you real, in-demand skills while you contribute to live projects. You do not need to be an expert today — you need to be reliable, curious, a fast learner, and able to communicate clearly in English.\n\nDuties and Responsibilities\nWhat You Will Do\nUse leading generative AI tools to create, edit, and refine high-quality content in English — for our own products, marketing, and client work.\nWrite, test, and improve prompts so our AI consistently produces clear, accurate, and useful results.\nReview AI output for quality, checking facts, tone, grammar, and clarity before it is published or shipped.\nHelp build and organize the data, examples, and guidelines used to train, fine-tune, and guide our AI models.\nSupport the testing and improvement of our new mobile apps and products as we build them, sharing feedback from a real user’s point of view.\nCollaborate closely across teams — including social media, marketing, and communications — to turn AI work into posts, campaigns, and content that reach our audience.\nTake on a variety of tasks as priorities shift; in a lean, fast-moving startup, everyone wears several hats and contributes wherever they are needed most.\nKeep clear records of your work and report your progress regularly so the whole team stays aligned.\nStay curious, proactive, and creative — bring ideas, learn continuously, and apply feedback to make our work better.\n\nJob Requirements\nWho We Are Looking For\nComputer science background or software engineering and programming.\nAge 20 or older.\nGood written and spoken English (this is essential — all work is in English).\nComfortable using a computer and the internet; able to learn new tools quickly.\nInterest in artificial intelligence and a willingness to learn by doing.\nReliable, honest, well-organized, and able to meet deadlines without close supervision.\nA stable personal computer or laptop and a reliable internet connection.\nBonus (not required): any prior experience with AI tools such as ChatGPT, Claude, or similar.\nWhat We Offer\nPaid internship — a monthly stipend of $150.\nRemote work within a hybrid (on-site + remote) team, on a flexible schedule of around 8 hours per day.\nReal, practical experience with the latest generative AI tools and large language models.\nMentorship and direct feedback from the Sahar AI team.\nA certificate of completion and a strong reference for top performers.\nThe opportunity for a longer-term role for outstanding interns.\n\nSubmission Guidelines\nThere is no separate interview for this role. Your video presentation is your interview. To apply, please send the following together in one email:\n1. Your CV / résumé — in English (PDF preferred), attached to your email.\n2. A link to your video presentation (5–10 minutes, recorded in English). Upload your video to Google Drive or WeTransfer and paste the shareable link in your email. Please do not attach the video file directly, and make sure the link is set so that anyone with the link can view it. 3. Important: The video presentation is required. It is your interview — there will be no further interviews. Applications without a video will not be considered.\nSend both to: SaharAI.company@gmail.com also keep hr@saharai.io in CC.\nEmail subject line: “Generative AI Training Intern — Application”\nIf you have any questions about this role, contact us at info@saharai.io .\nYour Video Presentation (5–10 minutes)\nPlease record one continuous video of yourself speaking in English. You may use a phone or a computer — a quiet room, no mask and clear sound are more important than a fancy camera. Speak naturally and answer all five questions in order, then upload the video to Google Drive or WeTransfer and send us the link (see “How to Apply” above). We use this video to understand your English, your communication, and how you would handle real work.\nAnswer these five questions in your video:\n1. Introduction and motivation. Introduce yourself — your background and education — and explain why you want to join Sahar AI as a Generative AI Training Intern and what you hope to gain over the six months.\n2. Self-directed learning. Tell us about a time you taught yourself a new tool, software, or skill. How did you approach it, and what was the result?\n3. Understanding the work. In simple words, explain what a generative AI model is and describe one realistic way it could help a business, an executive, or a public figure.\n4. Practical thinking. Imagine you are asked to use an AI tool to write a short, professional message for a client. Describe the instructions (the prompt) you would give the AI to get a good result, and how you would check that the answer is accurate before sending it.\n5. Reliability and work style. Describe your computer and internet setup, your weekly availability, and how you stay organized and meet deadlines when you work remotely and handle more than one task at a time.\nHow We Will Choose\nWe review every complete application fairly. Shortlisted candidates will be contacted by email. We evaluate each applicant on:\nYour CV and relevant background or experience.\nThe quality and clarity of your video presentation.\nYour English proficiency — both spoken and written.\nYour communication skills and professionalism.\nYour practical, real-work ability and problem-solving.\nWe look forward to meeting you. Good luck!",
-    "details": {
-      "Reference": "001",
-      "Post Date": "2026-06-15 09:58:15.342+00",
-      "Closing Date": "2026-07-01 00:00:00+00",
-      "Functional Area": "Information Technology",
-      "Countries": "Afghanistan",
-      "Provinces": "Multi Location",
-      "Job Type": "full_time",
-      "Contract Type": "internship",
-      "Gender": "any",
-      "Education": "high_school",
-      "Experience": "1",
-      "Salary": "150 USD",
-      "Vacancies": 5,
-      "Submission Through": "email"
-    },
-    "scraped_at": "2026-06-16T06:17:54Z",
-    "also_found_on": []
-  },
-  {
-    "id": "329ada81f2922896",
-    "source": "jobs.af",
-    "source_url": "https://jobs.af/jobs/programme-monitoring-extender-16",
-    "url": "https://jobs.af/jobs/programme-monitoring-extender-16",
-    "title": "Programme Monitoring Extender",
-    "company": "OXUS Consulting Group",
-    "location": "Kabul, Afghanistan",
-    "closing_date": "2026-07-01",
-    "closing_date_raw": "2026-07-01 00:00:00+00",
-    "category": "Management, Planning, Business Economics, Statistics, Management Information System, Data Science, Social Science",
-    "job_type": "full_time",
-    "gender": "any",
-    "vacancies": 1,
-    "salary": "Company salary scale",
-    "apply_url": "mailto:mahmadzai@oxuscorp.com",
-    "apply_emails": [
-      "mahmadzai@oxuscorp.com"
-    ],
-    "apply_phones": [],
-    "description": "Role Summary\nThe Programme Monitoring Extender coordinates and oversees mid-year data collection activities for the Minimum Service Package (MSP) programme integration. This field-based role focuses on ensuring data integrity, tracking collection progress, and providing technical support to field teams to guarantee accurate and timely reporting.\n\nDuties and Responsibilities\nTASK TO BE PERFORMED:\n· Support the planning and coordination of programme integration of MSP mid-year data collection activities.\n· Conduct field visits to oversee and support data collection processes in sampled sites.\n· Perform data quality checks and verification to ensure accuracy, completeness, and consistency of collected data.\n· Provide on-site support to Extenders and data collectors during the process of data collection.\n· Monitor progress of data collection activities and promptly report challenges, risks, and bottlenecks.\n· Compile, clean, and submit monitoring data and field findings in a timely manner.\n· Prepare brief progress updates and contribute to monitoring reports and presentations.\n· Support analysis and reporting of programme integration minimum service package progress .\nDELIVERABLE(s):\n· Programme Integration Mid-Year data collection plan finalized and implemented for assigned locations/sites.\n· Field monitoring visits conducted in all assigned sampled sites, with completed field monitoring reports and visit summaries submitted.\n· Data quality assurance and verification completed for all collected datasets, with identified discrepancies documented and addressed.\n· Technical on-site support provided to Extenders and data collectors, with issues resolved and data collection standards maintained.\n· Regular progress updates submitted, including documentation of challenges, risks, bottlenecks, and recommended corrective actions.\n· Cleaned, validated, and consolidated monitoring datasets submitted in accordance with agreed timelines and reporting requirements.\nAnalysis of programme integration minimum service package (MSP) monitoring data completed, with key findings, trends, and recommendations documented and shared with relevant stakeholders\n\nJob Requirements\nMinimum Qualification and Experience:\n· Advanced university degree in statistics, data science, economics, social sciences, planning development, planning, Management or Information Systems or another subject area.\n· Experience demonstrating very strong information management skills in a professional context is essential for this post.\n· Experience in information management technologies i.e. Excel, PowerBI, Activity Information.\n· Strong interpersonal and communication skills.\n· Ability to work effectively with diverse groups and individuals.\nFluencyin locallanguagesPashtoandDariis mandatory\n\nSubmission Guidelines\nTo apply: Please send your CV & Covering letter to below email address and include position title in the subject line of the application. Applications without specific subject line will not be given consideration.\nApplication Submission Email: mahmadzai@oxuscorp.com",
-    "details": {
-      "Reference": "HR-2026",
-      "Post Date": "2026-06-24 08:24:47.325+00",
-      "Closing Date": "2026-07-01 00:00:00+00",
-      "Functional Area": "Management, Planning, Business Economics, Statistics, Management Information System, Data Science, Social Science",
-      "Countries": "Afghanistan",
-      "Provinces": "Kabul",
-      "Job Type": "full_time",
-      "Contract Type": "long_term",
-      "Gender": "any",
-      "Education": "masters",
-      "Experience": "5 - 7",
-      "Salary": "Company salary scale",
-      "Vacancies": 1,
-      "Submission Through": "email"
-    },
-    "scraped_at": "2026-06-25T05:50:58Z",
-    "also_found_on": []
-  },
-  {
     "id": "e084579635b17ebd",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/digital-banking-general-manager-31",
@@ -338,6 +256,59 @@
       {
         "source": "wazifaha",
         "url": "https://wazifaha.org/jobs/29538/it-western-union-assistant-for-sar-e-pol-re-announced"
+      }
+    ]
+  },
+  {
+    "id": "4734f64fab844516",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16785/junior-web-developer",
+    "url": "https://www.kaarobar.net/jobs/16785/junior-web-developer",
+    "title": "Junior Web Developer",
+    "company": "ARYAN ICT Solutions",
+    "location": "Kabul",
+    "closing_date": "2026-07-05",
+    "closing_date_raw": "2026-07-05",
+    "category": "IT",
+    "job_type": "Full Time",
+    "gender": "Male/Female",
+    "vacancies": "1",
+    "salary": "As per AICT salary scale (negotiable based on qualifications, skills, and relevant experience).",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16785/junior-web-developer",
+    "apply_emails": [
+      "hr@aryanict.com"
+    ],
+    "apply_phones": [],
+    "description": "About ARYAN ICT Solutions\nARYAN ICT Solutions (AICT) is a leading Information and Communication Technology (ICT) company in Afghanistan, providing innovative technology solutions to businesses, organizations, and government institutions. Our services include software development, web and mobile applications, ERP and management information systems, web hosting, domain registration, cloud solutions, email services, and ICT consulting. At AICT, we are committed to delivering reliable, secure, and high-quality digital solutions while fostering innovation and professional growth within our team.\n\nJob Descriptions\nARYAN ICT Solutions is seeking a passionate and motivated Junior Web Developer to join our team. This role is ideal for recent graduates or early-career developers who want to gain practical experience in designing, developing, and maintaining modern websites and web applications.\nResponsibilities\nDevelop and maintain responsive websites and web applications.\nBuild and implement new features based on project requirements.\nFix bugs and optimize website performance.\nCollaborate with designers and senior developers to deliver high-quality solutions.\nWrite clean, maintainable, and documented code.\nTest applications across different browsers and devices.\nAssist in website deployment and ongoing maintenance.\n\nJob Requirements\nBachelor's degree in Computer Science, Information Technology, Software Engineering, or a related field (or final-year student).\nGood knowledge of PHP and the Laravel Framework .\nExperience with HTML5, CSS3, JavaScript, and responsive web design .\nFamiliarity with MySQL/MariaDB databases and writing SQL queries.\nUnderstanding of MVC architecture and RESTful APIs.\nKnowledge of Git and version control workflows.\nBasic understanding of Linux server environments , web hosting, and deployment processes.\nStrong problem-solving and debugging skills.\nAbility to work independently and collaborate effectively within a team.\nEagerness to learn new technologies and continuously improve development skills.\nPreferred Skills\nExperience with Tailwind CSS , React , or Next.js .\nFamiliarity with Composer , npm , and modern development tools.\nPortfolio, GitHub projects, or previous internship experience in web development.\n\nSubmission Guidelines\nInterested candidates are invited to submit the following documents:\nUpdated Curriculum Vitae (CV)\nCover Letter\nPortfolio, GitHub profile, or samples of previous work (if available)\nApplications should be sent via email to hr@aryanict.com with the subject line:\nApplication for Junior Web Developer\nOnly shortlisted candidates will be contacted for further assessment and interviews.\n\nSubmission Email\nhr@aryanict.com\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "Afghan",
+      "Category": "IT",
+      "Employment Type": "Full Time",
+      "Salary": "As per AICT salary scale (negotiable based on qualifications, skills, and relevant experience).",
+      "Vacancy Number": "AICT-KBL-293",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "ARYAN ICT Solutions",
+      "Experience": "Fresh graduates are encouraged to apply. Previous internship or up to 2 years of experience in web development is an advantage.",
+      "Contract Duration": "One year, extendable based on performance",
+      "Gender": "Male/Female",
+      "Education": "Bachelor's degree in Computer Science, Information Technology, Software Engineering, or a related field (final-year students may also apply)",
+      "Closing Date": "2026-07-05",
+      "Post Date": "2026-07-01",
+      "Functional Area": "IT",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "Fresh graduates are encouraged to apply. Previous internship or up to 2 years of experience in web development is an advantage.",
+      "Close date": "2026-07-05"
+    },
+    "scraped_at": "2026-07-02T05:46:15Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/29651/junior-web-developer"
       }
     ]
   },
@@ -761,6 +732,47 @@
     ]
   },
   {
+    "id": "0606543e6e1cbd8c",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-16",
+    "url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-16",
+    "title": "کارمند تکنالوژی کمره های امنیتی، ریاست حیرتان",
+    "company": "Afghanistan Oil and Gas Company (AOGC)",
+    "location": "Balkh, Afghanistan",
+    "closing_date": "2026-07-10",
+    "closing_date_raw": "2026-07-10 00:00:00+00",
+    "category": "Computer Science, Information Technology",
+    "job_type": "full_time",
+    "gender": "male",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "http://178.18.249.112:8080/Recruit/Applicant/ApplicantApply/494C8352-89E1-487E-A721-DA8BB7350821",
+    "apply_emails": [],
+    "apply_phones": [
+      "178.18.249.112",
+      "0202930023"
+    ],
+    "description": "Role Summary\nتأمین، حفظ و مراقبت سیستم‌های تکنالوژی معلوماتی، شبکه‌های کمپیوتری و کمره‌های امنیتی اداره به‌منظور تضمین امنیت اطلاعات، تداوم فعالیت سیستم‌ها، نظارت مؤثر بر ساحات تحت پوشش و فراهم‌سازی خدمات تخنیکی مورد نیاز برای بخش‌های مختلف اداره.\n\nDuties and Responsibilities\n· ترتیب پلان کاری ماهوار، ربعوار و سالانه در مطابقت با پلان مدیریت مربوطه جهت رسیدن به اهداف تعیین‌شده اداره.\n· نصب، تنظیم و راه‌اندازی کمپیوترها، پرنترها، اسکنرها، تجهیزات شبکه و سایر وسایل تکنالوژی معلوماتی مطابق نیازمندی اداره.\n· نصب، تنظیم، عیب‌یابی و حفظ و مراقبت کمره‌های امنیتی، دستگاه‌های ثبت تصاویر و تجهیزات جانبی آن.\n· نظارت دوامدار از فعالیت سیستم کمره‌های امنیتی و اتخاذ اقدامات لازم جهت رفع مشکلات تخنیکی و جلوگیری از وقفه در فعالیت آن‌ها.\n· ثبت، نگهداری و آرشیف تصاویر و ویدیوهای ثبت‌شده مطابق اصول، طرزالعمل‌ها و رهنمودهای نافذۀ اداره.\n· بررسی و تشخیص عیوب شبکه‌های کمپیوتری، تجهیزات مخابراتی و سیستم‌های نظارتی و انجام اقدامات لازم جهت رفع آن‌ها.\n· همکاری در نصب، توسعه و حفظ و مراقبت شبکۀ داخلی، اینترنت و سایر سیستم‌های ارتباطی اداره.\n· انجام سرویس‌های وقایوی و ترمیمی تجهیزات تکنالوژی معلوماتی و کمره‌های امنیتی به منظور جلوگیری از خرابی‌های احتمالی.\n· مدیریت حساب‌های کاربری، دسترسی‌های سیستم و رعایت تدابیر امنیت سایبری در هماهنگی با مسئولین مربوطه.\n· تهیه راپورهای تخنیکی در مورد وضعیت تجهیزات، سیستم‌ها، مشکلات موجود و اقدامات انجام‌شده جهت ارائه به مدیر مربوط.\n· ارائه همکاری‌های تخنیکی به کارکنان اداره در زمینه استفاده از سیستم‌های کمپیوتری، نرم‌افزارها و تجهیزات تکنالوژی معلوماتی.\n· اشتراک در بررسی نیازمندی‌های تخنیکی اداره و ارائه پیشنهادات لازم جهت بهبود سیستم‌های تکنالوژی معلوماتی و امنیتی.\n· کنترول و نظارت از ذخیره‌گاه‌های معلوماتی، سرورها و تجهیزات مربوطه جهت تأمین مصئونیت و دسترسی به اطلاعات.\n· حفظ و مراقبت اسناد، تجهیزات و وسایل تخنیکی سپرده‌شده مطابق اصول و مقررات اداره.\n· ترتیب و ارائه گزارشات ماهوار، ربعوار، سالانه از فعالیت ها و دست آورد ها مدیر مربوطه.\n· اجرای سایر وظایف مرتبط که از سوی آمرین ذیصلاح مطابق قوانین، مقررات و اهداف اداره سپرده می‌شود.\n\nJob Requirements\n· داشتن سند تحصیلی حداقل فوق بکلوریا در رشته‌های تکنالوژی معلوماتی، کمپیوتر ساینس یا سایر رشته‌های مرتبط به وظیفه.\n· داشتن حداقل ۲ سال تجریه کاری مرتبط به وظیفه- حایز سند تحصیلی لیسانس از این حکم مستثنی می باشد.\n\nSubmission Guidelines\nرهنمایی ثبت نام متقاضیان:\nمتقاضیان محترم برای ثبت نام روی لینک زیر کلیک نموده معلومات خویش را ارسال بدارند.\nhttp://178.18.249.112:8080/Recruit/Applicant/ApplicantApply/494C8352-89E1-487E-A721-DA8BB7350821\nدرجریان ثبت نام موارد ذیل را در نظر داشته باشند:\n１. تمام معلومات خویش را دقیق برویت اسناد درج نمایند در صورت نادرست بودن معلومات درج شده متقاضی از پروسه\nحذف میگردد.\n2. یک فرد صرف یکبار ثبت نام کرده میتواند.\n3. در قسمت درج عنوان بست و کود بست دقت لازم نمائید.\nآدرس: ریاست عمومی شرکت امارتی نفت و گاز افغانستان واقع کوتل خیرخانه جوار ناحیه هفدهم، کابل- افغانستان درصورت ضرورت به شماره ذیل تماس گرفته میتوانید: 0202930023\nنوت: تنها برای کاندیدانی تماس گرفته میشود که در بست متذکره شارت لست گردند.\nامتحان بست متذکره در ریاست شرکت امارتی نفت و گاز بندر حیرتان واقع ولایت بلخ اخذ میگردد.",
+    "details": {
+      "Reference": "1164",
+      "Post Date": "2026-07-01 06:15:44.566+00",
+      "Closing Date": "2026-07-10 00:00:00+00",
+      "Functional Area": "Computer Science, Information Technology",
+      "Countries": "Afghanistan",
+      "Provinces": "Balkh",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "male",
+      "Education": "diploma",
+      "Experience": "2",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "link"
+    },
+    "scraped_at": "2026-07-02T05:45:57Z",
+    "also_found_on": []
+  },
+  {
     "id": "995f538674a2e5eb",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/backend-java-developer-16",
@@ -945,6 +957,94 @@
     ]
   },
   {
+    "id": "bdde859828448db1",
+    "source": "wazifaha",
+    "source_url": "https://wazifaha.org/jobs/29634/it-technician-isp",
+    "url": "https://wazifaha.org/jobs/29634/it-technician-isp",
+    "title": "IT Technician (ISP)",
+    "company": "City Connect ICT Services",
+    "location": "Kabul",
+    "closing_date": "2026-07-16",
+    "closing_date_raw": "2026-07-16",
+    "category": "Information Technology",
+    "job_type": "Full Time",
+    "gender": "Male",
+    "vacancies": "1",
+    "salary": "AFN 10000 Net salary",
+    "apply_url": "https://wazifaha.org/jobs/apply/29634/it-technician-isp",
+    "apply_emails": [
+      "hr@cityconnect.af"
+    ],
+    "apply_phones": [],
+    "description": "About City Connect ICT Services\nCity Connect ICT Services was established on 08 May\n2025 with the objective of providing high-quality Internet and ICT services\nthroughout Afghanistan. The company aims to contribute to the digital\ntransformation of Afghanistan by delivering reliable, secure, and affordable\nconnectivity solutions to residential, commercial, governmental, and\ninstitutional customers.\nThe company is seeking renewal of its ICT License to\ncontinue its operations and expand its services across additional provinces.\nThrough strategic partnerships with international connectivity providers such\nas OmanTel and PTCL, City Connect ICT Services intends to deliver low-latency\nand highly reliable Internet services to its customers.\n\nJob Description\nJob Summary\nWe are looking for a skilled and motivated IT Technician to join our team. The successful candidate will be responsible for installing new internet connections, troubleshooting customer technical issues, maintaining network equipment, and providing timely technical support to ensure high-quality internet service.\nKey Responsibilities\nInstall new internet connections at customer locations.\nTroubleshoot and resolve internet connectivity and network issues.\nConfigure, test, and maintain customer networking equipment.\nvisit Tower side for t.shoot/ installing a new access point.\nInstall, replace, collect, and manage network devices and accessories.\nPerform preventive maintenance and ensure network reliability.\nReport completed installations, maintenance, and collected devices.\nFollow company technical standards and safety procedures.\nCoordinate with the technical support team to resolve complex issues.\n\nJob Requirements\nRequirements\nDiploma or Bachelor's degree in Information Technology, Computer Science, Networking, or a related field (preferred).\nPractical experience in internet service installation and troubleshooting is an advantage.\nGood understanding of networking fundamentals, including routers, switches, wireless devices, and wireless internet technologies.\nAbility to diagnose and solve technical problems efficiently.\nGood communication and customer service skills.\nAbility to work in the field and travel to customer locations.\nHonest, responsible, punctual, and able to work independently and as part of a team.\nPreferred Skills\nKnowledge of TCP/IP networking and router configuration.\nExperience with wireless internet installations.\nFamiliarity with networking tools and testing equipment.\n\nSubmission Guidelines\nApplicants meeting the above\nrequirements are requested to apply for this vacancy through email stated above\nonly.\nImportant Notes:\n1. Please attach your Supporting documents, e.g. Certificates, HR letters, CV and Tazkira, etc. for further screening\npurpose.\n2. Only short-listed candidates will be contacted for\nfurther assessment.",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "National/International",
+      "Category": "Information Technology",
+      "Employment Type": "Full Time",
+      "Salary": "AFN 10000 Net salary",
+      "Vacancy Number": "CC- FIN/2026-01",
+      "No. of Jobs": "1",
+      "City": "Kabul, Afghanistan",
+      "Organization": "City Connect ICT Services",
+      "Experience": "2 years",
+      "Contract Duration": "Long term but after trial period",
+      "Gender": "Male",
+      "Education": "12th Gradudate with IT Certifications",
+      "Closing Date": "2026-07-16",
+      "Post Date": "2026-07-01",
+      "Functional Area": "Information Technology",
+      "Job Type": "Full Time",
+      "Source": "Wazifaha"
+    },
+    "scraped_at": "2026-07-02T05:46:26Z",
+    "also_found_on": []
+  },
+  {
+    "id": "c085c41264f8f1ce",
+    "source": "wazifaha",
+    "source_url": "https://wazifaha.org/jobs/29635/payment-collection-officer-female",
+    "url": "https://wazifaha.org/jobs/29635/payment-collection-officer-female",
+    "title": "Payment Collection Officer (Female)",
+    "company": "City Connect ICT Services",
+    "location": "Kabul",
+    "closing_date": "2026-07-16",
+    "closing_date_raw": "2026-07-16",
+    "category": "Finance",
+    "job_type": "Full Time",
+    "gender": "Female",
+    "vacancies": "1",
+    "salary": "Negotiable",
+    "apply_url": "https://wazifaha.org/jobs/apply/29635/payment-collection-officer-female",
+    "apply_emails": [
+      "hr@cityconnect.af"
+    ],
+    "apply_phones": [],
+    "description": "About City Connect ICT Services\nCity Connect ICT Services was established on 08 May\n2025 with the objective of providing high-quality Internet and ICT services\nthroughout Afghanistan. The company aims to contribute to the digital\ntransformation of Afghanistan by delivering reliable, secure, and affordable\nconnectivity solutions to residential, commercial, governmental, and\ninstitutional customers.\nThe company is seeking renewal of its ICT License to\ncontinue its operations and expand its services across additional provinces.\nThrough strategic partnerships with international connectivity providers such\nas OmanTel and PTCL, City Connect ICT Services intends to deliver low-latency\nand highly reliable Internet services to its customers.\n\nJob Description\n1.\nPayment Collection\n& Follow-ups:\nContact\ncustomers and visits to remind them of overdue payments.\nFollow\nup on unpaid invoices and ensure timely collection of outstanding amounts.\nMaintain\nproper records of collections and pending payments/ invoices.\n2.\nCustomer Interaction\n& Support:\nAddress\ncustomer inquiries regarding their bills, payment methods, and outstanding\nbalances.\nNegotiate\npayment plans with customers who face financial difficulties.\nProvide\nreceipts and ensure smooth transactions.\n3.\nBilling & Account\nManagement:\nVerify\ncustomer account details and ensure billing accuracy.\nCoordinate\nwith the relevant authority to resolve any discrepancies.\nKeep\nrecords of defaulters and escalate cases as needed.\n4.\nLegal & Recovery\nProcess:\nWork\nwith legal teams for the recovery of long-overdue payments.\nIssue\nwarnings and final notices to non-paying customers.\nRecommend\ndisconnection of services for defaulters.\n5.\nFeedback & Coordination:\nWork\nclosely with the finance and sales teams to improve collection efficiency.\nProvide\nfeedback on customer behavior and potential risks.\n\nJob Requirements\n1. High school is required\n2. Ability to handle difficult customers professionally.\n3. Self-motivated with an ability to achieve 100%\ntargets/ collections.\n4. Must be quite enough familiar in Kabul\nCity.\n5. Strong negotiation and communication skills.\n6. Attention to detail and problem-solving abilities.\n7. Basic understanding of legal procedures related to debt\ncollection\n8. Fluency in local languages i.e. Pashto / Dari is\nrequired. knowledge of English language is an Asset.\n9. at least one year of experience in payment collections\nor accounts receivable (preferably in an ISP or telecom company)\n\nSubmission Guidelines\nApplicants meeting the above\nrequirements are requested to apply for this vacancy through email stated above\nonly.\nImportant Notes:\n1. Please attach your Supporting documents, e.g. Certificates, HR letters, CV and Tazkira. for further screening\npurpose.\n2. Only short-listed candidates will be contacted for\nfurther assessment.",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "National/International",
+      "Category": "Finance",
+      "Employment Type": "Full Time",
+      "Salary": "Negotiable",
+      "Vacancy Number": "NZSP-Fin-2026/02",
+      "No. of Jobs": "1",
+      "City": "Kabul, Afghanistan",
+      "Organization": "City Connect ICT Services",
+      "Experience": "2 years",
+      "Contract Duration": "Long Term based on performance",
+      "Gender": "Female",
+      "Education": "12th Gradudate",
+      "Closing Date": "2026-07-16",
+      "Post Date": "2026-07-01",
+      "Functional Area": "Finance",
+      "Job Type": "Full Time",
+      "Source": "Wazifaha"
+    },
+    "scraped_at": "2026-07-02T05:46:26Z",
+    "also_found_on": []
+  },
+  {
     "id": "db7901f3c057ab99",
     "source": "kaarobar",
     "source_url": "https://www.kaarobar.net/jobs/16777/tech-lead-full-stack-architect",
@@ -1104,6 +1204,57 @@
     ]
   },
   {
+    "id": "cd20a5c5d8936bd4",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/16791/full-stack-web-developer-night-shift",
+    "url": "https://www.kaarobar.net/jobs/16791/full-stack-web-developer-night-shift",
+    "title": "Full-Stack Web Developer (Night Shift)",
+    "company": "HPL Afghanistan",
+    "location": "Kabul",
+    "closing_date": "2026-07-20",
+    "closing_date_raw": "2026-07-20",
+    "category": "Information Technology",
+    "job_type": "Full Time",
+    "gender": "Male/Female",
+    "vacancies": "2",
+    "salary": "As per HPL salary scale (negotiable based on experience)",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/16791/full-stack-web-developer-night-shift",
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "About HPL Afghanistan\nHPL is an Afghan company providing services and operational support to international organizations and private clients. Our technology team builds and maintains modern web applications and data platforms that support our operations across the organization.\n\nJob Descriptions\nHPL is hiring experienced Full-Stack Web Developers to design, build, and maintain modern web applications and data platforms that support our international operations. This is a night shift position, scheduled to overlap with US time zone business hours. We are looking for engineers with more than 5 years of professional experience who take ownership of features from start to finish, write clean and tested code, and collaborate well within a small, fast moving team.\nKey Responsibilities:\nBuild and maintain web applications with React, Next.js, and TypeScript\nDevelop backend services and REST APIs with Node.js and Python\nDesign, query, and optimize PostgreSQL databases\nIntegrate third party APIs and build data pipelines\nDeploy and maintain applications on cloud platforms such as Vercel or AWS\nWrite clean, well documented, and tested code, and take part in code reviews\nUse Git for version control and collaborate within the team\n\nJob Requirements\nRequired Qualifications:\nMore than 5 years of professional full stack web development experience\nBachelor degree in Computer Science, Software Engineering, or a related field\nStrong proficiency in JavaScript and TypeScript\nExperience with React, Node.js, and Python\nWorking knowledge of SQL and PostgreSQL\nProficiency with Git and collaborative workflows\nGood written and spoken English\nAvailable to work the night shift\nPreferred Skills:\nNext.js (App Router) and server side rendering\nCloud experience with Vercel or AWS\nSearch engines such as Typesense or Elasticsearch\nDocker, CI/CD, and automated testing\n\nSubmission Guidelines\nTo apply, please complete the HPL Job Application Form: HPL JOB APPLICATION FORM\nImportant Notes:\nClearly state your current address and the job location you are applying for in both your CV and the application form. Applications missing this information will not be accepted.\nApplications received after the closing date will not be considered.\nOnly shortlisted candidates will be contacted.\nHPL does not charge any fee at any stage of the recruitment process. Applying is completely free.\nOnly the HR department will contact applicants. HPL is not responsible for announcements on other websites or social media; only information shared through official HPL channels is valid.\nFor any issues during the application process, please contact us at www.hpl.af/contacts.\n\nSubmission Email\nsee above\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "Afghan",
+      "Category": "Information Technology",
+      "Employment Type": "Full Time",
+      "Salary": "As per HPL salary scale (negotiable based on experience)",
+      "Vacancy Number": "—",
+      "No. of Jobs": "2",
+      "City": "Kabul",
+      "Organization": "HPL Afghanistan",
+      "Experience": "More than 5 years",
+      "Contract Duration": "One year, extendable based on performance",
+      "Gender": "Male/Female",
+      "Education": "Bachelor degree in Computer Science, Software Engineering, or a related field",
+      "Closing Date": "2026-07-20",
+      "Post Date": "2026-07-01",
+      "Functional Area": "Information Technology",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "2",
+      "Years of Experience": "More than 5 years",
+      "Close date": "2026-07-20"
+    },
+    "scraped_at": "2026-07-02T05:46:15Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/29639/full-stack-web-developer-night-shift"
+      }
+    ]
+  },
+  {
     "id": "482c0b13816c30db",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/digital-banking-technical-officer-atm-and-pos-16",
@@ -1237,6 +1388,46 @@
     "also_found_on": []
   },
   {
+    "id": "26b71d693dbed35e",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/sales-officer-isp-solutions",
+    "url": "https://jobs.af/jobs/sales-officer-isp-solutions",
+    "title": "IT Technician",
+    "company": "UA Telecom",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-07-31",
+    "closing_date_raw": "2026-07-31 00:00:00+00",
+    "category": "Information Technology, Networking",
+    "job_type": "full_time",
+    "gender": "male",
+    "vacancies": 3,
+    "salary": "Negotiable",
+    "apply_url": "mailto:vacancies@uatelecom.af",
+    "apply_emails": [
+      "vacancies@uatelecom.af"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nThe IT Technician is responsible for managing the installation and troubleshooting of Wireless, Microwave, and VSAT links. The role includes resolving issues related to LAN network devices and addressing computer-related problems for customers through in-person support, phone consultations, or remote assistance. Additionally, the IT Technician provides technical support regarding computer operating systems, software applications, email configuration, installation processes, printing solutions, and the maintenance of customer LAN networks.\n\nDuties and Responsibilities\nPerform installation, activation, and troubleshooting of wireless links in accordance with company guidelines.\nExecute the installation, activation, and troubleshooting of microwave links following established protocols.\nConduct installation, activation, and troubleshooting of VSAT links while adhering to company policies.\nInstall and configure LAN network devices to meet customer requirements effectively.\nTroubleshoot LAN network devices and provide the best solution in case of second option availability.\nConduct surveys for network projects, arrange requirements, and implement solutions as needed.\nDVR camera wiring, installation, and configuring based on the requirement.\nUAT wireless base stations maintenance and resolving 1st level base station issues (in cooperation with Head Office)\nInstalling Wire and Wireless equipment at UA wireless base stations and ensuring 100% functionality upon completion.\nIntegrating technical solutions successfully done on-site and sharing it with other team members for future use.\nDetailed daily and weekly reports to under-assigned manager.\n\nJob Requirements\nBachelor’s degree/Diploma in Computer Science and/ or relevant field.\nA minimum of 3 years of experience in network installation and troubleshooting or a relevant field.\nRelevant certifications (e.g., Cisco CCNA, MCITP, or equivalent) will be considered an advantage.\nStrong problem-solving skills and the ability to communicate technical information effectively.\nFull understanding and speaking of Dari, Pashto, and English.\nAbility to ride a motorcycle and be comfortable using it when required for work-related tasks\nCompetencies (in order of importance)\nDependability — The job requires being reliable, responsible, dependable, and fulfilling obligations.\nAttention to Detail — The job requires being careful about detail and thorough in completing work tasks.\nCooperation — The job requires being pleasant with others on the job and displaying a good-natured, cooperative attitude.\nAnalytical Thinking — The job requires analyzing information and using logic to address work-related issues and problems.\nIntegrity — The job requires being honest and ethical.\n\nSubmission Guidelines\nInterested candidates are encouraged to submit their applications by July 31, 2026 . To apply, please send your cover letter along with an updated CV to vacancies@uatelecom.af . Please ensure the position title and vacancy number are included in the subject line of your email.\nPosition Title: IT Technician\nVacancy Number: UAT-VA-IT#2150-J",
+    "details": {
+      "Reference": "UAT-VA-IT-2150-J",
+      "Post Date": "2026-02-12 10:31:33.775+00",
+      "Closing Date": "2026-07-31 00:00:00+00",
+      "Functional Area": "Information Technology, Networking",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "male",
+      "Education": "bachelor",
+      "Experience": "2 - 5",
+      "Salary": "Negotiable",
+      "Vacancies": 3,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-07-02T05:45:57Z",
+    "also_found_on": []
+  },
+  {
     "id": "8ce5a97e22dfdb4b",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/social-media-manager-31",
@@ -1274,7 +1465,12 @@
       "Submission Through": "email"
     },
     "scraped_at": "2026-06-30T05:53:20Z",
-    "also_found_on": []
+    "also_found_on": [
+      {
+        "source": "jobs.af",
+        "url": "https://jobs.af/jobs/microwave-technician-16"
+      }
+    ]
   },
   {
     "id": "86267e10a07881ef",
