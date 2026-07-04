@@ -1,107 +1,13 @@
 {
-  "generated_at": "2026-07-03T07:44:08.339Z",
-  "today": "2026-07-03",
-  "total_jobs": 37,
-  "new_count": 1,
-  "expiring_today_count": 1,
-  "expiring_soon_count": 7,
+  "generated_at": "2026-07-04T07:20:19.693Z",
+  "today": "2026-07-04",
+  "total_jobs": 36,
+  "new_count": 0,
+  "expiring_today_count": 3,
+  "expiring_soon_count": 6,
   "tech_banking_count": 6,
-  "new_jobs": [
-    {
-      "id": "bf8a0d8d31d7e1b4",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/system-admin-officer-31",
-      "url": "https://jobs.af/jobs/system-admin-officer-31",
-      "title": "System Admin Officer",
-      "company": "Setaragan Mutahed (SM)",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-07-30",
-      "closing_date_raw": "2026-07-30 00:00:00+00",
-      "category": "IT - Software, Information Technology, Linux Administration",
-      "job_type": "full_time",
-      "gender": "male",
-      "vacancies": 1,
-      "salary": "Company salary scale",
-      "apply_url": null,
-      "apply_emails": [],
-      "apply_phones": [],
-      "description": "Role Summary\nThe System Admin Officer is critically responsible for the end-to-end administration, security, optimization, and absolute continuous availability of Setaragan Mutahed’s – Star Pay core server architecture, Microsoft Hyper-V virtualization fabrics, and database systems. This high accountability role ensures zero-downtime operations for our nationwide transactional platforms, B2C mobile applications, and multi-operator network integrations.\n\nDuties and Responsibilities\nØ Administer servers and core services (AD/DNS/DHCP where applicable), ensuring availability and secure configuration.\nØ Implement patch management, vulnerability remediation, and baseline hardening in line with security standards.\nØ Manage backups (daily/weekly/monthly), verify backup success, and perform periodic restore testing.\nØ Monitor system performance and capacity (CPU, RAM, storage), plan upgrades, and prevent outages.\nØ Support network and firewall teams with required system-side configurations for services, ports, and integrations.\nØ Manage privileged access, service accounts, and secrets handling using approved processes.\nØ Maintain system documentation: architecture diagrams, build documents, runbooks, and change records.\nØ Support DR/BCP readiness, including replication, standby systems, and recovery procedures.\nØ Perform monthly backup restore drills to verify recoverability of critical systems and databases, document results, and report any gaps for corrective action.\nØ Create, configure, and manage Virtual Machines (VMs) on Microsoft Hyper-V, including VM provisioning, resource allocation (CPU/RAM/storage), templates, snapshots/checkpoints (as per policy), and performance monitoring.\nØ Maintain Hyper-V host health and capacity, including storage management, patching coordination, and ensuring VM availability.\nØ Implement and maintain VM backup and recovery for Hyper-V workloads, aligned with the backup policy and monthly restore drills.\n\nJob Requirements\nØ Bachelor’s degree in Computer Science/IT or equivalent practical experience.\nØ 3+ years of hands-on system administration experience (Windows Server and/or Linux).\nØ Experience in backup/restore, patching, and server security hardening.\nØ Technical Skills\nØ Windows Server administration (AD/GPO, IIS) and/or Linux administration.\nØ Virtualization (VMware/Hyper-V) and storage concepts; backup solutions.\nØ Log review and troubleshooting; scripting basics (PowerShell/Bash) is an advantage.\nØ Understanding of security controls (least privilege, MFA, audit logs).\nØ Microsoft Hyper-V administration, VM lifecycle management, virtual networking (vSwitch/VLAN), and basic troubleshooting.\nØ Soft Skills & Behavioral Competencies\nØ Strong troubleshooting and analytical skills.\nØ Process-driven mindset; careful change execution with rollback planning.\nØ Good communication and documentation skills.\nØ Key Deliverables / KPIs\nØ Patch compliance and vulnerability closure within agreed timelines.\nØ Backup success rate and restore-test success rate.\nØ Server uptime and reduction of unplanned downtime.\nØ Quality of documentation and change records.\nØ Working Relationships\nØ Internal: IT Manager, NOC, Helpdesk, Development team, Compliance/Audit.\nØ External: Hosting/data center, backup/security vendors, software vendors (as needed).\nØ Confidentiality & Compliance\nØ The role holder must protect confidential information, follow approved access controls, and comply with the Company’s Information Security policies, audit requirements, and applicable regulations. Any exceptions must be approved through the formal change and risk-acceptance process.\n\nSubmission Guidelines\nInterested and qualified candidates are invited to click Apply Now and fill in the form completely. submit their applications, including a cover letter and an updated CV , no later than 30 July 2026\nPlease note that only shortlisted candidates will be contacted for an interview.",
-      "details": {
-        "Reference": "SM/2026-0064",
-        "Post Date": "2026-07-02 07:55:12.156+00",
-        "Closing Date": "2026-07-30 00:00:00+00",
-        "Functional Area": "IT - Software, Information Technology, Linux Administration",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "male",
-        "Education": "bachelor",
-        "Experience": "3 - 7",
-        "Salary": "Company salary scale",
-        "Vacancies": 1,
-        "Submission Through": "platform"
-      },
-      "scraped_at": "2026-07-03T07:43:43Z",
-      "also_found_on": []
-    }
-  ],
+  "new_jobs": [],
   "expiring_today": [
-    {
-      "id": "bab14b3a0673984e",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16620/digital-marketing-manager-graphic-designer",
-      "url": "https://www.kaarobar.net/jobs/16620/digital-marketing-manager-graphic-designer",
-      "title": "Digital Marketing Manager & Graphic Designer",
-      "company": "Kabul Gate Group",
-      "location": "Kabul",
-      "closing_date": "2026-07-03",
-      "closing_date_raw": "2026-07-03",
-      "category": "Design, Marketing",
-      "job_type": "Full Time",
-      "gender": "Male/Female",
-      "vacancies": "1",
-      "salary": "Based on organization salary scale",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16620/digital-marketing-manager-graphic-designer",
-      "apply_emails": [
-        "info@kabulgategroup.com"
-      ],
-      "apply_phones": [],
-      "description": "About Kabul Gate Group\nKabul Gate Group is a dynamic and diversified business group operating across multiple industries, including Real Estate & Property Development, Umrah & Travel Services, and Technology Solutions. With a strong commitment to quality, innovation, and customer satisfaction, we deliver trusted services that meet the evolving needs of our clients.\nOur group brings together expertise from different sectors under one unified brand, enabling us to create value, drive growth, and build lasting relationships with our customers and partners. As we continue to expand our businesses and strengthen our market presence, we are committed to investing in talented professionals who can contribute to our vision and help elevate our brands across the digital and traditional landscape.\n\nJob Descriptions\nAbout the Role\nWe are looking for a creative and proactive Marketing & Brand Executive to manage and grow our online presence across multiple business sectors. This role combines marketing strategy, content creation, and graphic design to ensure consistent and engaging brand communication.\nDuties and Responsibilities\nDevelop and execute marketing campaigns to increase brand awareness and engagement.\nCreate and manage content for social media, websites, and digital platforms.\nDesign graphics, promotional materials, and marketing assets.\nPlan and schedule content calendars and campaign activities.\nMaintain a consistent brand image across all channels.\nMonitor campaign performance and provide improvement recommendations.\nStay updated on marketing trends and competitor activities.\nRespond to online inquiries and engage with customers professionally.\nCollaborate with internal teams to support business growth and marketing objectives.\nAssist with copywriting, content creation, and promotional activities.\nRequirements\nExperience in digital marketing, social media management, and branding.\nStrong graphic design skills using Canva, Adobe Creative Suite, or similar tools.\nExcellent communication and content creation abilities.\nStrong organizational skills and ability to manage multiple projects.\nCreative, self-motivated, and results-driven.\nA professional portfolio\n\nJob Requirements\nEducation & Experience:\nBachelor's degree in Graphic Design, Marketing, Communications, Media, or a related field is preferred.\nMinimum 3-4 years of experience in graphic design, social media management, and digital marketing.\nComputer Skills:\nProficiency in Adobe Photoshop, Illustrator, InDesign, Canva, and other design tools.\nGood knowledge of MS Word, Excel, PowerPoint, and internet applications.\nLanguage:\nExcellent writing and speaking skills in Dari, and English are required.\nSkills:\nCreative design and visual communication skills.\nSelf-motivated with the ability to manage multiple projects and deadlines.\nStrong analytical and problem-solving skills.\nAttention to detail and branding consistency.\nStrong communication and reporting skills.\nSocial media content planning and management.\nAbility:\nAbility to work closely, professionally, and constructively with all others.\nStrong understanding of social media platforms, digital marketing trends, and audience engagement.\nMust possess a positive attitude, excellent interpersonal skills, and a creative mindset.\nAbility to work under pressure and deliver high-quality designs within deadlines.\nAbility to create engaging visual content for marketing campaigns and social media platforms.\nAbility to analyze social media performance and provide recommendations for improvement.\nAbility to create creative concepts, marketing campaigns, and visual storytelling strategies that strengthen brand awareness and customer engagement.\nAbility to coordinate with different departments and understand business objectives.\n\nSubmission Guidelines\nPlease send your CV along with your portfolio to info@kabulgategroup.com with the subject line:\nGraphic Designer & Social Media Manager – Vacancy #KGG-2026-001\nOnly shortlisted candidates will be contacted for an interview.\nPlease rename your CV file with your full name before submitting.\nEmail / Application Form: info@kabulgategroup.com\n\nSubmission Email\ninfo@kabulgategroup.com\nApply",
-      "details": {
-        "Location": "Kabul",
-        "Nationality": "National",
-        "Category": "Design, Marketing",
-        "Employment Type": "Full Time",
-        "Salary": "Based on organization salary scale",
-        "Vacancy Number": "KGG-2026-001",
-        "No. of Jobs": "1",
-        "City": "Kabul",
-        "Organization": "Kabul Gate Group",
-        "Experience": "3-4 years",
-        "Contract Duration": "1 year with the possibility of extension",
-        "Gender": "Male/Female",
-        "Education": "Bachelor Degree",
-        "Closing Date": "2026-07-03",
-        "Post Date": "2026-06-23",
-        "Functional Area": "Design, Marketing",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Kabul",
-        "No. Of Jobs": "1",
-        "Years of Experience": "3-4 years",
-        "Close date": "2026-07-03"
-      },
-      "scraped_at": "2026-06-24T05:50:50Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29466/digital-marketing-manager-graphic-designer"
-        }
-      ]
-    }
-  ],
-  "expiring_soon": [
     {
       "id": "c53483b41ad519a2",
       "source": "jobs.af",
@@ -247,7 +153,9 @@
           "url": "https://wazifaha.org/jobs/29538/it-western-union-assistant-for-sar-e-pol-re-announced"
         }
       ]
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "4734f64fab844516",
       "source": "kaarobar",
@@ -431,6 +339,82 @@
           "url": "https://wazifaha.org/jobs/29476/photographer-and-video-editor"
         }
       ]
+    },
+    {
+      "id": "cab822963da47532",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/mdyr-twsah-bk-aen-16",
+      "url": "https://jobs.af/jobs/mdyr-twsah-bk-aen-16",
+      "title": "مدیر توسعه بک اِنډ",
+      "company": "Da Afghanistan Bank",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-07-07",
+      "closing_date_raw": "2026-07-07 00:00:00+00",
+      "category": "Computer Science, Information Technology",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nعنوان وظیفه : مدیر توسعه بک اِند\nآمریت: آمریت عمومی تکنالوژی معلوماتی\nگرید : هشتم (۸)\nتعداد بست : یک (۱)\nتاریخ آغاز : ۰۲/۰۴/۱۴۰۵\nتاریخ ختم : ۱۶/۰۴/۱۴۰۵\nنوع اعلان : داخلی و خارجی\nنوع استخدام: دائمی\n\nDuties and Responsibilities\nوظایف و مسئولیت ها\n· مدیریت، رهبری، نظارت، کنترول و ارزیابی اجراآت جهت ایجاد انگیزه برای بهبود اجراآت، افزایش مؤثریت و بازدهی کار، تعیین نیاز های آموزشی و بالا بردن ارتقای ظرفیت\n· طرح و ترتیب پلان هفته وار، نظارت و روی دست گرفتن اقدامات لازم بمنظور تطبیق آن\n· همکاری با مدیر مستقیم در طرح، تسوید، تعدیل و طی مراحل اسناد تقنینی و اداری مانند مقررات، پلان ها و استراتیژی ها، پالیسی ها، لوایح و ظایف کارمندان، طرزالعمل های کاری و فورمه های معیاری\n· تأمین ارتباط و هماهنگی با بخش های ذیربط جهت تسهیل روند کاری در خصوص توسعۀ نرم افزار\n· پیشبرد امور در حصه تطبیق سیستم های جدید که توسط منابع داخلی و خارجی برای بانک توسعه گردیده است از قبیل انتیگریشن ها و غیره\n· حل مشکلات به میان آمده در آپلیکیشن ها و نرم افزار های توسعه شده موجود\n· ایجاد نرم افزار و جمع آوری ضروریات و نیازمندی ها برای ایجاد سیستم و برنامه های مورد نیاز با شتندرد های مروج و مصؤنیت بالا\n· توسعۀ نرم افزار های موجوده، تحلیل و بررسی معلومات جمع آوری شده، حل مشکلات به میان آمده در برنامه ها و نرم افزار های موجود\n· ایجاد و پیشرفت نرم افزار های مبایل، اداره، کنترول و حل مشکلات نرم افزار های موجوده و جدید\n· تجدید و نوآوری در سیستم های توسعۀ شده داخلی بانک\n· شناسایی خدماتی که قابلیت ارائه بصورت الکترونیکی را دارند و الکتورنیکی نمودن آنها\n· اشتراک در جلسات با آمریت ها جهت دریافت موارد که قابلیت الکترونیک شدن را دارند\n· جمع آوری و توحید گزارش های هفته وار، ماهوار، ربعوار و سالانه و عندالضرورت از پیشرفت فعالیتها و دست آورد های مدیریت مربوط\n· ترتیب پلان های کاری و ارایۀ گزارش کاری به مدیر مستقیم و آمر ذیصلاح\n· انجام سایر وظایف و مسئولیت های که بتأسی از طرزالعمل ها، دستورالعمل و هدایات مقام مافوق طبق لایحه و مقررات ارجاع میگردد\n\nJob Requirements\nدرجه تحصیلی\n· لیسانس در کمپیوتر ساینس، تکنالوژی معلوماتی اسناد تخصیصی مرتبط به وظیفه و به داشتن سند ماستری در بخش های فوق ترجیح داده میشود\nتجربه\n· سه (3) سال تجربۀ کاری مرتبط به وظیفه\nمهارت ها و توانائی ها\n· بلدیت به زبان های رسمی کشور و انگلیسی\n· داشتن مهارت های مدیریتی\n· فصاحت و بلاغت در گفتار\n· آشنائی با برنامه های کمپیوتری و سیستم های بانکی\n· توانائی در ترتیب پروپوزل ها و مدیریت پروژه ها\n· آشنائی به قوانین و مقررات بانکی\n· توانائی در تحریر مکاتیب، پیشنهادات و گزارشات کاری\n· فهم و درک مسئولیت کاری و تشخیص مشکلات در ساحۀ کاری\n· حفظ محرمیت و ظیفوی\n· اگاهی از وظایف و اهداف د افغانستان بانک\n· آشنائی کامل با پروگرام های\n· Front-end Framework = (Angular or Next.js/React.js)\n· Library UI = (Tailwind CSS, jQuery or Bootstrap)\n· Back-end Framework = (.NET Core, Java Spring , FastApi, Django or Laravel)\n· #Programming Language = Java, python, PHP or C\n· Architectures = Monolithic and Micro – services\n· Technologies = Docker, RESTful API\n· Database = MySQL, Server, SQLite or Oracle\nصفات و ارزش های شخصی\nصادق، دارای برخورد نیک، حامی احترام متقابل، مبتکر، با دسپلین، پابند به وظیفه و وقت، علاقمند به کار گروپی، همکار، مسئولیت پذیر، تصمیمگیر و مسلکی در بخش کاری\n\nSubmission Guidelines\nنکات :\n· علاقه مندان میتوانند نخست در ویب سایت jobs.dab.gov.af برای خود یوزر ایجاد نموده و بعدا بست مورد نظر را انتخاب نموده و اسناد خواسته شده را به فارمت PDF آپلود نمایید .\n· جهت اخذ امتحان فقط با متقاضیان منتخب تماس گرفته میشود .\n· تاریخ امتحان بعداً به اطلاع رسانیده میشود.",
+      "details": {
+        "Reference": "11",
+        "Post Date": "2026-06-23 10:20:15.124+00",
+        "Closing Date": "2026-07-07 00:00:00+00",
+        "Functional Area": "Computer Science, Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "3",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "platform"
+      },
+      "scraped_at": "2026-06-24T05:50:21Z",
+      "also_found_on": []
+    },
+    {
+      "id": "ee31b95b444944ba",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/front-end-development-manager-16",
+      "url": "https://jobs.af/jobs/front-end-development-manager-16",
+      "title": "مدیر توسعۀ فرانټ اِنډ",
+      "company": "Da Afghanistan Bank",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-07-07",
+      "closing_date_raw": "2026-07-07 00:00:00+00",
+      "category": "Computer Science, Information Technology",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Company salary scale",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nعنوان وظیفه : مدیر توسعۀ فرانت ایند\nآمریت: آمریت عمومی تکنالوژی معلوماتی\nگرید : هشتم (۸)\nتعداد بست : یک (۱)\nتاریخ آغاز : ۱۴۰۵/۰۴/۰۲\nتاریخ ختم : ۱۴۰۵/۰۲/۱۶\nنوع اعلان : داخلی و خارجی\nنوع استخدام: دائمی\n\nDuties and Responsibilities\nوظایف و مسئولیت ها\n· مدیریت، رهبری، نظارت، کنترول و ارزیابی اجراآت جهت ایجاد انگیزه برای بهبود اجراآت، افزایش مؤثریت و بازدهی کار، تعیین نیاز های آموزشی و بالا بردن ارتقای ظرفیت\n· مدیریت تیم نرم افزار و توسعه نرم افزار برای ارزیابی نتایج ارایۀ شده\n· همکاری با مدیر مستقیم در طرح، تسوید، تعدیل و طی مراحل اسناد تقنینی و اداری مانند مقررات، پلان ها و استراتیژی ها، پالیسی ها، لوایح و ظایف کارمندان، طرزالعمل های کاری و فورمه های معیاری\n· مدیریت چگونگی خدمات، بهتر سازی و رسیدگی به نیازمندی های کارمندان بانک به تسریع وقت و جلب رضایت تماماً کارمندان د افغانستان بانک\n· اعمال از روش ها و برنامه ها جهت بهتر شدن امنیت سیستم ها\n· رهنمایی همکاران و هدایات لازم جهت پیشبرد فعالیتها حسب لایحه وظایف\n· پیشبرد امور در حصه تطبیق سیستم های جدید که توسط منابع داخلی و خارجی برای بانک توسعه گردیده است از قبیل انتیگریشن ها و غیره\n· حل مشکلات به میان آمده در آپلیکیشن ها و نرم افزار های توسعه شده موجود\n· ایجاد نرم افزار و جمع آوری ضروریات و نیازمندی ها برای ایجاد سیستم و برنامه های مورد نیاز با ستندرد های مروج و مصؤنیت بالا\n· توسعۀ نرم افزار های موجوده، تحلیل و بررسی معلومات جمع آوری شده و حل مشکلات به میان آمده در برنامه ها و نرم افزار های موجود\n· ایجاد و پیشرفت نرم افزار های مبایل، اداره، کنترول و حل مشکلات نرم افزار های موجوده و جدید\n· تجدید و نوآوری در سیستم های توسعۀ شده داخلی بانک\n· شناسایی خدماتی که قابلیت ارائه بصورت الکترونیکی را دارند و الکتورنیکی نمودن آنها\n· طرح و ترتیب پلان هفته وار، نظارت و روی دست گرفتن اقدامات لازم بمنظور تطبیق آن\n· تأمین ارتباط و هماهنگی با بخش های ذیربط جهت تسهیل روند کاری در خصوص توسعۀ نرم افزار\n· جمع آوری و توحید گزارش های هفته وار، ماهوار، ربعوار و سالانه و عندالضرورت از پیشرفت فعالیتها و دست آورد های مدیریت مربوط\n· ترتیب پلان های کاری و ارایۀ گزارش کاری به مدیر مستقیم و آمر ذیصلاح\n· انجام سایر وظایف و مسئولیت های که بتأسی از طرزالعمل ها، دستورالعمل و هدایات مقام مافوق طبق لایحه و مقررات ارجاع میگردد\n\nJob Requirements\nدرجه تحصیلی\n· لیسانس در کمپیوتر ساینس، تکنالوژی معلوماتی اسناد تخصیصی مرتبط به وظیفه و به داشتن سند ماستری در بخش های فوق ترجیح داده میشود\nتجربه\n· سه (3) سال تجربۀ کاری مرتبط به وظیفه\nمهارت ها و توانائی ها\n· بلدیت به زبان های رسمی کشور و انگلیسی\n· داشتن مهارت های مدیریتی\n· فصاحت و بلاغت در گفتار\n· آشنائی با برنامه های کمپیوتری و سیستم های بانکی\n· توانائی در ترتیب پروپوزل ها و مدیریت پروژه ها\n· آشنائی به قوانین و مقررات بانکی\n· توانائی در تحریر مکاتیب، پیشنهادات و گزارشات کاری\n· فهم و درک مسئولیت کاری و تشخیص مشکلات در ساحۀ کاری\n· حفظ محرمیت و ظیفوی\n· اگاهی از وظایف و اهداف د افغانستان بانک\n· آشنائی کامل با پروگرام های\n· Front-end Framework = (Angular or Next.js/React.js)\n· Library UI = (Tailwind CSS, jQuery or Bootstrap)\n· Back-end Framework = (.NET Core, Java Spring, FastApi, Django or Laravel)\n· #Programming Language = Java, python, PHP or C\n· Architectures = Monolithic and Micro – services\n· Technologies = Docker, RESTful API\n· Database = MySQL, Server, SQLite or Oracle\nصفات و ارزش های شخصی\nصادق، دارای برخورد نیک، حامی احترام متقابل، مبتکر، با دسپلین، پابند به وظیفه و وقت، علاقمند به کار گروپی، همکار، مسئولیت پذیر، تصمیمگیر و مسلکی در بخش کاری\n\nSubmission Guidelines\nنکات :\n· علاقه مندان میتوانند نخست در ویب سایت jobs.dab.gov.af برای خود یوزر ایجاد نموده و بعدا بست مورد نظر را انتخاب نموده و اسناد خواسته شده را به فارمت PDF آپلود نمایید .\n· جهت اخذ امتحان فقط با متقاضیان منتخب تماس گرفته میشود .\n· تاریخ امتحان بعداً به اطلاع رسانیده میشود.",
+      "details": {
+        "Reference": "10",
+        "Post Date": "2026-06-23 10:07:23.554+00",
+        "Closing Date": "2026-07-07 00:00:00+00",
+        "Functional Area": "Computer Science, Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "permanent",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "3",
+        "Salary": "Company salary scale",
+        "Vacancies": 1,
+        "Submission Through": "platform"
+      },
+      "scraped_at": "2026-06-24T05:50:21Z",
+      "also_found_on": []
     }
   ],
   "tech_banking_jobs": [
