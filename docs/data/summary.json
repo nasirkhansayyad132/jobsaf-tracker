@@ -1,161 +1,58 @@
 {
-  "generated_at": "2026-07-04T07:20:19.693Z",
-  "today": "2026-07-04",
-  "total_jobs": 36,
-  "new_count": 0,
+  "generated_at": "2026-07-05T07:42:19.253Z",
+  "today": "2026-07-05",
+  "total_jobs": 34,
+  "new_count": 1,
   "expiring_today_count": 3,
-  "expiring_soon_count": 6,
-  "tech_banking_count": 6,
-  "new_jobs": [],
-  "expiring_today": [
+  "expiring_soon_count": 4,
+  "tech_banking_count": 5,
+  "new_jobs": [
     {
-      "id": "c53483b41ad519a2",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/digital-marketing-and-graphic-designer-32",
-      "url": "https://jobs.af/jobs/digital-marketing-and-graphic-designer-32",
-      "title": "Digital Marketing & Graphic Designer",
-      "company": "NaqdPay",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-07-04",
-      "closing_date_raw": "2026-07-04 00:00:00+00",
-      "category": "Computer Science, Digital Marketing",
-      "job_type": "full_time",
-      "gender": "any",
-      "vacancies": 1,
-      "salary": "Company salary scale",
-      "apply_url": "mailto:hr@naqdpay.af",
-      "apply_emails": [
-        "hr@naqdpay.af"
-      ],
-      "apply_phones": [
-        "+93728979703"
-      ],
-      "description": "Role Summary\nThe Graphic Designer will work under the direction of the Department Head and will be responsible for the following:\n\nDuties and Responsibilities\nLeading the design process for visual communication, including web and mobile applications, digital marketing materials, and other graphic design projects.\nCreating visually compelling designs that ensure seamless user experiences (UX) and engaging user interfaces (UI).\nDeveloping wireframes, prototypes, and design specifications for digital and print-based projects.\nDesigning marketing materials such as social media creatives, banners, flyers, brochures, and promotional graphics.\nCollaborating with cross-functional teams (marketing, product management, and developers) to ensure design solutions meet both user needs and business goals.\nEnsuring brand consistency across all visuals and user interface elements across digital touchpoints and marketing materials.\nConducting user research and usability testing to improve design decisions and optimize user experiences.\nStaying updated with industry trends related to UX/UI design best practices, emerging technologies, and graphic design tools.\nImpact of Results\nStrengthening PARSA Technologies’ digital presence through user-centric designs and high-quality graphic content.\nImproving user satisfaction and engagement by providing intuitive, functional, and aesthetically pleasing digital experiences.\nContributing to the company's ongoing success by driving design innovation in digital products and visual communication.\n\nJob Requirements\nRequirements:\nBachelor’s degree in Computer Science, Software Engineering or Equivalent Subject\n3+ years of experience in field operations, fintech, telecom\nStrong communication and negotiation skills\nAbility to work in field and travel frequently\nResult-oriented with strong execution capability\nKey Skills:\nAdvanced proficiency in design tools such as Figma, Adobe XD, Sketch, Adobe Photoshop, Illustrator, and other graphic design tools.\nA strong understanding of UX/UI design principles, usability, accessibility best practices, and graphic design fundamentals.\nExpertise in creating wireframes, prototypes, and detailed design documentation.\nStrong creative skills in graphic design for various digital media, including marketing and promotional materials.\nExcellent communication and collaboration skills, with the ability to work effectively in cross-functional teams.\n\nSubmission Guidelines\nInterested candidates who meet the above requirements are invited to submit the following documents:\nUpdated CV\nCover Letter • Applications must be sent to: hr@naqdpay.af\nPlease clearly mention the Position Title and Vacancy Number (e.g., Digital Marketing & Graphic Designer – NP#0006) in the subject line of the email. Applications without a proper subject line may not be considered.\nApplication Deadline: two weeks after announcement\nOnly shortlisted candidates will be contacted for further assessment.\nThe Company reserves the right to accept or reject any application without prior notice.\nFor any further information, you can contact +93728979703",
-      "details": {
-        "Reference": "NP#0008",
-        "Post Date": "2026-06-20 04:15:32.921+00",
-        "Closing Date": "2026-07-04 00:00:00+00",
-        "Functional Area": "Computer Science, Digital Marketing",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "any",
-        "Education": "bachelor",
-        "Experience": "3",
-        "Salary": "Company salary scale",
-        "Vacancies": 1,
-        "Submission Through": "email"
-      },
-      "scraped_at": "2026-06-20T05:57:36Z",
-      "also_found_on": []
-    },
-    {
-      "id": "b5b9491352e50513",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16703/hmisdata-management-officer",
-      "url": "https://www.kaarobar.net/jobs/16703/hmisdata-management-officer",
-      "title": "HMIS/Data Management officer",
-      "company": "AADA",
-      "location": "Nangarhar",
-      "closing_date": "2026-07-04",
-      "closing_date_raw": "2026-07-04",
-      "category": "Health Care",
+      "id": "d851fbfaf756f331",
+      "source": "wazifaha",
+      "source_url": "https://wazifaha.org/jobs/29727/senior-full-stack-developer-net-react",
+      "url": "https://wazifaha.org/jobs/29727/senior-full-stack-developer-net-react",
+      "title": "Senior Full-Stack Developer (.NET / React)",
+      "company": "Nasry Tech LLC",
+      "location": "Kabul",
+      "closing_date": "2026-07-20",
+      "closing_date_raw": "2026-07-20",
+      "category": "Information Technology",
       "job_type": "Full Time",
-      "gender": "Male",
-      "vacancies": "2",
-      "salary": "As per AADA salary scale",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16703/hmisdata-management-officer",
-      "apply_emails": [],
-      "apply_phones": [
-        "0785969600"
-      ],
-      "description": "About AADA\nThe Agency for Assistance and Development of Afghanistan (AADA) is an Afghan non-profit, non-governmental organization dedicated to the development of Afghanistan. Our core activities include (1) provision of quality health services; (2) community development; (3) training and capacity building at professional and community levels; and (4) research in public health and social sciences.\nAgency for Assistance and Development of Afghanistan (AADA) has a Zero-tolerance Policy against sexual exploitation and abuse; therefore, all project staff will be subjected to background and security checks. AADA is also against all forms of gender-based violence, exploitation, and abuse of children in the context of our operation in the country. AADA is committed to the “Do No Harm” principle in our workplace and throughout our operation in the country therefore, our staff must also respect the organizational Safeguarding, PSEA and Code of Conduct Policy. Agency for Assistance and Development of Afghanistan (AADA) provides equal employment opportunities and does not ask for money or gifts at any stage of the recruitment process.\n\nJob Descriptions\nThe HMIS / Data Management Officer will ensure the quality, completeness, timeliness, and use of health and program data by strengthening HMIS processes, supporting health facilities and outreach teams, and contributing to evidence-based decision-making.\nKey Responsibilities:\nSupport implementation of the national HMIS in supported health facilities and community programs.\nEnsure proper use of HMIS tools, registers, reporting formats, and databases.\nProvide on-the-job support and guidance to health facility staff and outreach teams on HMIS procedures.\nCollect, compile, and verify routine health and program data from health facilities and outreach activities.\nConduct regular data quality checks to ensure accuracy, completeness, consistency, and timeliness.\nEnter data into electronic databases (e.g., DHIS2, Excel, or organizational systems) accurately and on time.\nMaintain organized and secure data files, both electronic and hard copy.\nAnalyze data to identify trends, gaps, and performance issues.\nEnsure confidentiality, data protection, and ethical use of health information.\n\nJob Requirements\nAfghan National\nMD degree, preferably with post graduate degree (MPH) certified by relevant higher education authority in Afghanistan or other country;\nAt least 2 years’ full-time experience in managing of health projects; and robust knowledge of BPHS.\nStrong communication skills, with reasonable written and spoken English;\nHaving ability in project designing and developing proposal;\nFluency in written and spoken local languages;\nKnowledge of local environment;\nStrong leadership skills and a supportive management style.\n\nSubmission Guidelines\nInterested eligible individuals are invited to fill out our applications form through the link below:\nhttps://ims.aada.af/public-position-view/MTYw\nNot: Only short-listed candidates will be invited for tests and interviews. for more details communicate with us via below contact number: 0785969600\n\nSubmission Email\nhttps://ims.aada.af/public-position-view/MTYw\nApply",
-      "details": {
-        "Location": "Nangarhar",
-        "Nationality": "Afghan",
-        "Category": "Health Care",
-        "Employment Type": "Full Time",
-        "Salary": "As per AADA salary scale",
-        "Vacancy Number": "N/A",
-        "No. of Jobs": "2",
-        "City": "Behsoud and Sherzad",
-        "Organization": "AADA",
-        "Experience": "At least 2 years’ full-time experience in managing of health projects; and robust knowledge of BPHS",
-        "Contract Duration": "6 Months",
-        "Gender": "Male",
-        "Education": "MD degree, preferably with post graduate degree (MPH) certified by relevant higher education authority in Afghanistan or other country",
-        "Closing Date": "2026-07-04",
-        "Post Date": "2026-06-28",
-        "Functional Area": "Health Care",
-        "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Nangarhar",
-        "No. Of Jobs": "2",
-        "Years of Experience": "At least 2 years’ full-time experience in managing of health projects; and robust knowledge of BPHS",
-        "Close date": "2026-07-04"
-      },
-      "scraped_at": "2026-06-29T06:05:44Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29546/hmisdata-management-officer"
-        }
-      ]
-    },
-    {
-      "id": "98a9c01b016e7dcc",
-      "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16697/it-western-union-assistant-for-sar-e-pol-re-announced",
-      "url": "https://www.kaarobar.net/jobs/16697/it-western-union-assistant-for-sar-e-pol-re-announced",
-      "title": "IT & Western Union Assistant for Sar-e-Pol (Re Announced)",
-      "company": "Bank-e-Millie Afghan (BMA)",
-      "location": "Sar-e Pol",
-      "closing_date": "2026-07-04",
-      "closing_date_raw": "2026-07-04",
-      "category": "Banking",
-      "job_type": "Full Time",
-      "gender": "Male",
+      "gender": "Male/Female",
       "vacancies": "1",
-      "salary": "As per Bank salary scale",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16697/it-western-union-assistant-for-sar-e-pol-re-announced",
-      "apply_emails": [],
+      "salary": "Negotiable",
+      "apply_url": "https://wazifaha.org/jobs/apply/29727/senior-full-stack-developer-net-react",
+      "apply_emails": [
+        "careers@nasrytech.com"
+      ],
       "apply_phones": [],
-      "description": "About Bank-e-Millie Afghan (BMA)\nBank-e-Millie Afghan (BMA) is the foremost first financial institution of Afghanistan established in 1933. Similarly, it was the first financial institution established in a public-private partnership set up with a 72% share held by the private sector. As the first bank in the country, BMA introduced formal banking services to the people and government of Afghanistan. Since then, the bank’s competitive strength and ongoing market leadership philosophy lays in its strong capital base and proven trustworthiness. In 1976, it was fully nationalized by the government of Afghanistan. Since its establishment, BMA has been a leading bank in providing modern and secure banking services. Securing depositors' funds is the top priority of the bank. At the same time, the bank is contributing considerably to the development of manufacturing, agriculture, services, and international trade in the country. BMA is operating based on strong corporate governance principles, financial risk management, and strict compliance to keep its credibility and trust. At present, BMA has 17 City Branches including the HQ and 4 Counters in Kabul, 22 Provincial Branches and 3 Counters accompanied by a broader outlook and prospect for growth and expansion in near future, and equity investments in the USA and England.\n\nJob Descriptions\nThe Branch IT + Western Union (WU) Assistant is responsible for providing technical support and assistance with IT systems in the branch, ensuring the efficient operation of banking technology. Additionally, this role encompasses managing Western Union transactions and services, providing exceptional customer service, and ensuring compliance with relevant policies and procedures.\nKey Duties and Responsibilities:\nIT Support\nTechnical Assistance\nProvide day-to-day technical support for all banking software and hardware used within the branch.\nTroubleshoot and resolve hardware and software issues, ensuring minimal disruption to branch operations.\nBranch IT related Items Maintenance\nAssist in the maintenance and updating of branch IT systems, including computers, networks, and hardware’s.\nEnsure that all IT equipment is functioning properly and coordinate with external vendors for repairs as needed.\nProvide services to branch all IT items at least twice in a month\nUser Training\nTrain branch staff on the use of banking software, equipment, and IT best practices to enhance their operational efficiency.\nDevelop user guides and training materials for specific IT processes as required.\nData Security\nAssist in monitoring and implementing security measures to protect branch IT systems and customer data.\nEnsure compliance with data protection policies and procedures.\nReporting\nMaintain accurate records of service requests and IT incidents, providing reports to the Branch Manager and IT Department as needed.\nWU (Western Union) Operations\nTransaction Processing\nManage and process Western Union transactions including Send and receive, ensuring that all transactions comply with WU policy and procedure.\nAssist customers with inquiries related to Western Union services, providing accurate information and resolving any issues that arise.\nCustomer Service\nProvide exceptional customer service to clients utilizing Western Union services, ensuring a positive customer experience.\nCompliance and Reconciliations\nProcess all WU transactions as per AML/CFT policy.\nConduct daily basis reconciliation during end of the day.\nPrepare and submit reports related to Western Union activities to the Branch Manager.\nCompliance\nAdhere to all regulatory and compliance requirements related to customer service and banking operations.\nAssist with CSO of the branch in daily branch activities.\nPunctuality. (Follow official working time schedule properly).\nBehave in a professional way with all the colleagues and customers of the branch.\nAny other task assigned by Line Manager or will be assigned other duties and responsibilities as may be required to meet the goals and objectives of the bank.\n\nJob Requirements\nEducation: Bachelor’s degree in BCS and master’s degree is preferred.\nExperience: 2 years of experience and previous experience in IT support within a banking or financial services environment is a plus.\nSkills and Competencies:\nStrong technical skills with proficiency in computer systems, networking, and common software applications.\nExcellent problem-solving skills and the ability to troubleshoot technical issues effectively.\nGood communication and interpersonal skills, with a strong focus on customer service.\nAbility to work collaboratively within a team and manage multiple tasks effectively.\nAttention to detail and strong organizational skills.\nFluency in Dari, Pashto, and English is required.\n\nSubmission Guidelines\nQualified and interested applicants are encouraged to apply online through the BMA Job Portal at https://jobs.bma.com.af before the closing date.\nOnly shortlisted candidates will be contacted for further process.\n\nSubmission Email\nhttps://jobs.bma.com.af\nApply",
+      "description": "About Nasry Tech LLC\nNasryTech is a US-based software company (registered in Washington State) building a modern construction\nmanagement platform that helps contractors manage leads, estimates, projects, communications, documents,\ninvoicing, and payments — all from one platform. We are an early-stage, founder-led startup building scalable,\nuser-friendly software for contractors and construction businesses.\nWebsite: www.nasrytech.com\n\nJob Description\nEngagement Type: Independent Contractor · Fully Remote · Long-term\nAbout the Role\nWe are seeking a Senior Full-Stack Developer to join our remote engineering team as an early technical hire.\nYou will build features end-to-end — from database to user interface — help shape the architecture of our\nplatform, and guide a small team of developers as we grow. This is a long-term, fully remote, independent\ncontractor engagement with real ownership of your work and the stability of an ongoing role.\nThe position is home-based and open to applicants worldwide.\nWhat We Offer\n• Competitive pay and a stable, long-term engagement.\n• Fully remote work.\n• Direct collaboration with the founder and genuine ownership of your work.\n• The chance to grow with an early-stage product and shape its architecture.\n\nJob Requirements\nDuties & Responsibilities\n• Design, build, and maintain features across the full stack, from database to UI.\n• Develop secure, scalable backend APIs and services in C# / .NET, following Clean Architecture principles\n(CQRS, dependency injection, domain-driven design).\n• Build responsive, high-quality web applications using React and TypeScript.\n• Apply engineering best practices: clean code, testing, and sustainable system design.\n• Work closely with the founder and team to plan, prioritize, and deliver features.\n• Lead and mentor a small team of developers — providing technical guidance, reviewing code, and helping\nthe team deliver high-quality software.\nRequired Qualifications (Must Have)\n• 5+ years of professional full-stack development, building and deploying production applications.\n• Strong expertise in C# and the .NET ecosystem, including Clean Architecture patterns (CQRS, dependency\ninjection, DDD).\n• Strong experience with React and TypeScript, and a willingness to work across other technologies as\nneeded.\n• Skilled with AI coding tools (e.g., GitHub Copilot, Cursor, Claude) to work efficiently — while reviewing,\ntesting, and taking full responsibility for all code.\n• Strong written and spoken English for clear, proactive remote communication.\n• Able to work independently, manage priorities, and deliver reliably in a remote setup.\nPreferred (Nice to Have)\n• Experience leading or mentoring a small development team.\n• Experience integrating AI features into products (LLM APIs such as OpenAI or Anthropic, smart search,\nchat assistants, automation).\n• React Native / mobile development.\n• Cloud and Infrastructure as Code (AWS, Terraform, serverless).\n• SQL databases, payments integration (e.g., Stripe), and CI/CD.\n• Previous SaaS or startup experience with America base companies.\n\nSubmission Guidelines\nQualified applicants are encouraged to send their CV with a short cover note, a link to their GitHub or portfolio,\nand a link to one C# / React project they have worked on (with one or two sentences describing their role).\nPlease also include in your email:\n• Your country and time zone\n•Your expected pay rate in USD\nPlease clearly indicate the position name and vacancy number — “Senior Full-Stack Developer / NT-ENG-001”\n— in the email subject line. Only shortlisted candidates will be contacted. Applications are reviewed on a\nrolling basis.\nApplications should be sent by email to: careers@nasrytech.com",
       "details": {
-        "Location": "Sar-e Pol",
-        "Nationality": "Afghan",
-        "Category": "Banking",
+        "Location": "Kabul",
+        "Nationality": "National/International (any)",
+        "Category": "Information Technology",
         "Employment Type": "Full Time",
-        "Salary": "As per Bank salary scale",
-        "Vacancy Number": "BMA//2026//38",
+        "Salary": "Negotiable",
+        "Vacancy Number": "NT-ENG-001",
         "No. of Jobs": "1",
-        "City": "Sar-e-Pol",
-        "Organization": "Bank-e-Millie Afghan (BMA)",
-        "Experience": "2 years of experience and previous experience in IT support within a banking or financial services environment is a plus.",
-        "Contract Duration": "Permanent",
-        "Gender": "Male",
-        "Education": "Bachelor’s degree in BCS and master’s degree is preferred.",
-        "Closing Date": "2026-07-04",
-        "Post Date": "2026-06-28",
-        "Functional Area": "Banking",
+        "City": "Remote / Home-based",
+        "Organization": "Nasry Tech LLC",
+        "Experience": "5+ years of professional full-stack software development (C# / .NET, React, TypeScript)",
+        "Contract Duration": "Long-term / Ongoing (extendable based on performance)",
+        "Gender": "Male/Female",
+        "Education": "Bachelor’s degree in Computer Science or a related field, or equivalent practical experience",
+        "Closing Date": "2026-07-20",
+        "Post Date": "2026-07-05",
+        "Functional Area": "Information Technology",
         "Job Type": "Full Time",
-        "Source": "Kaarobar",
-        "Job Location": "Sar-e Pol",
-        "No. Of Jobs": "1",
-        "Years of Experience": "2 years of experience and previous experience in IT support within a banking or financial services environment is a plus.",
-        "Close date": "2026-07-04"
+        "Source": "Wazifaha"
       },
-      "scraped_at": "2026-06-28T05:57:40Z",
-      "also_found_on": [
-        {
-          "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29538/it-western-union-assistant-for-sar-e-pol-re-announced"
-        }
-      ]
+      "scraped_at": "2026-07-05T07:42:14Z",
+      "also_found_on": []
     }
   ],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "id": "4734f64fab844516",
       "source": "kaarobar",
@@ -286,7 +183,9 @@
       },
       "scraped_at": "2026-06-22T06:16:14Z",
       "also_found_on": []
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "750825214d1be936",
       "source": "kaarobar",
@@ -415,60 +314,62 @@
       },
       "scraped_at": "2026-06-24T05:50:21Z",
       "also_found_on": []
-    }
-  ],
-  "tech_banking_jobs": [
+    },
     {
-      "id": "98a9c01b016e7dcc",
+      "id": "0a593a41b9f01423",
       "source": "kaarobar",
-      "source_url": "https://www.kaarobar.net/jobs/16697/it-western-union-assistant-for-sar-e-pol-re-announced",
-      "url": "https://www.kaarobar.net/jobs/16697/it-western-union-assistant-for-sar-e-pol-re-announced",
-      "title": "IT & Western Union Assistant for Sar-e-Pol (Re Announced)",
-      "company": "Bank-e-Millie Afghan (BMA)",
-      "location": "Sar-e Pol",
-      "closing_date": "2026-07-04",
-      "closing_date_raw": "2026-07-04",
+      "source_url": "https://www.kaarobar.net/jobs/16756/it-help-desk-representative",
+      "url": "https://www.kaarobar.net/jobs/16756/it-help-desk-representative",
+      "title": "IT Help-desk Representative",
+      "company": "New Kabul Bank",
+      "location": "Kabul",
+      "closing_date": "2026-07-08",
+      "closing_date_raw": "2026-07-08",
       "category": "Banking",
       "job_type": "Full Time",
       "gender": "Male",
       "vacancies": "1",
-      "salary": "As per Bank salary scale",
-      "apply_url": "https://www.kaarobar.net/jobs/apply/16697/it-western-union-assistant-for-sar-e-pol-re-announced",
-      "apply_emails": [],
+      "salary": "As per organization salary policy per month",
+      "apply_url": "https://www.kaarobar.net/jobs/apply/16756/it-help-desk-representative",
+      "apply_emails": [
+        "hrd.cv@newkabulbank.af"
+      ],
       "apply_phones": [],
-      "description": "About Bank-e-Millie Afghan (BMA)\nBank-e-Millie Afghan (BMA) is the foremost first financial institution of Afghanistan established in 1933. Similarly, it was the first financial institution established in a public-private partnership set up with a 72% share held by the private sector. As the first bank in the country, BMA introduced formal banking services to the people and government of Afghanistan. Since then, the bank’s competitive strength and ongoing market leadership philosophy lays in its strong capital base and proven trustworthiness. In 1976, it was fully nationalized by the government of Afghanistan. Since its establishment, BMA has been a leading bank in providing modern and secure banking services. Securing depositors' funds is the top priority of the bank. At the same time, the bank is contributing considerably to the development of manufacturing, agriculture, services, and international trade in the country. BMA is operating based on strong corporate governance principles, financial risk management, and strict compliance to keep its credibility and trust. At present, BMA has 17 City Branches including the HQ and 4 Counters in Kabul, 22 Provincial Branches and 3 Counters accompanied by a broader outlook and prospect for growth and expansion in near future, and equity investments in the USA and England.\n\nJob Descriptions\nThe Branch IT + Western Union (WU) Assistant is responsible for providing technical support and assistance with IT systems in the branch, ensuring the efficient operation of banking technology. Additionally, this role encompasses managing Western Union transactions and services, providing exceptional customer service, and ensuring compliance with relevant policies and procedures.\nKey Duties and Responsibilities:\nIT Support\nTechnical Assistance\nProvide day-to-day technical support for all banking software and hardware used within the branch.\nTroubleshoot and resolve hardware and software issues, ensuring minimal disruption to branch operations.\nBranch IT related Items Maintenance\nAssist in the maintenance and updating of branch IT systems, including computers, networks, and hardware’s.\nEnsure that all IT equipment is functioning properly and coordinate with external vendors for repairs as needed.\nProvide services to branch all IT items at least twice in a month\nUser Training\nTrain branch staff on the use of banking software, equipment, and IT best practices to enhance their operational efficiency.\nDevelop user guides and training materials for specific IT processes as required.\nData Security\nAssist in monitoring and implementing security measures to protect branch IT systems and customer data.\nEnsure compliance with data protection policies and procedures.\nReporting\nMaintain accurate records of service requests and IT incidents, providing reports to the Branch Manager and IT Department as needed.\nWU (Western Union) Operations\nTransaction Processing\nManage and process Western Union transactions including Send and receive, ensuring that all transactions comply with WU policy and procedure.\nAssist customers with inquiries related to Western Union services, providing accurate information and resolving any issues that arise.\nCustomer Service\nProvide exceptional customer service to clients utilizing Western Union services, ensuring a positive customer experience.\nCompliance and Reconciliations\nProcess all WU transactions as per AML/CFT policy.\nConduct daily basis reconciliation during end of the day.\nPrepare and submit reports related to Western Union activities to the Branch Manager.\nCompliance\nAdhere to all regulatory and compliance requirements related to customer service and banking operations.\nAssist with CSO of the branch in daily branch activities.\nPunctuality. (Follow official working time schedule properly).\nBehave in a professional way with all the colleagues and customers of the branch.\nAny other task assigned by Line Manager or will be assigned other duties and responsibilities as may be required to meet the goals and objectives of the bank.\n\nJob Requirements\nEducation: Bachelor’s degree in BCS and master’s degree is preferred.\nExperience: 2 years of experience and previous experience in IT support within a banking or financial services environment is a plus.\nSkills and Competencies:\nStrong technical skills with proficiency in computer systems, networking, and common software applications.\nExcellent problem-solving skills and the ability to troubleshoot technical issues effectively.\nGood communication and interpersonal skills, with a strong focus on customer service.\nAbility to work collaboratively within a team and manage multiple tasks effectively.\nAttention to detail and strong organizational skills.\nFluency in Dari, Pashto, and English is required.\n\nSubmission Guidelines\nQualified and interested applicants are encouraged to apply online through the BMA Job Portal at https://jobs.bma.com.af before the closing date.\nOnly shortlisted candidates will be contacted for further process.\n\nSubmission Email\nhttps://jobs.bma.com.af\nApply",
+      "description": "About New Kabul Bank\nNew Kabul Bank started its banking activities on 18 April 2011 by having received its license as a commercial bank under banking system of the country. Ministry of Finance is the shareholder of New Kabul Bank.\nNew Kabul Bank is operating by CBS system and providing services for valued citizens by covering a wide network with professional and experienced cadre.\n\nJob Descriptions\nJob Description: (شرح وظیفه)\nProvide end user support for all Information Technology products and services. Support includes software and hardware installation at end user level, providing network connectivity, OS and software update, answering questions, troubleshooting problems, teaching or instructing end users at HQ or branches regarding software or hardware functionality.\nEnforce IT Department policies and procedures and ensures compliance with IT Department policy.\nDetermines the most effective manner to resolve client's technical issue. Engages in research and in-depth troubleshooting to resolve technical issues.\nProvides remote support to end-users computers to troubleshoot, diagnose and resolve complex issues. While providing remote support, the Helpdesk Technician should record the session through screen recording application and store the recording in safe place for compliance and investigation related issue.\nRecords Issues / problems details in Helpdesk Ticketing System. Updates tickets with appropriate journal entries of activities, and closes tickets with resolution entered upon completion of the job.\nProper maintenance of documentation for the technical tasks performed for end users.\nVisits NKB branches at Kabul Zone to ensure the computing devices are operational as per need.\nKnowledge sharing and training of fellow team members.\nSubmits weekly work reports to immediate supervisor.\nCan be officially assigned to Monthly Procurement team and control as per need.\nAny other task assigned by direct supervisor.\n\nJob Requirements\nEDUCATION ( تحصیلات) : Bachelor Degree in Information Technology/ Computer Science / Information System.\nEXPERIENCE ( تجارب): work of experience in related field is preferred.\nSKILLS ( مهارت): Troubleshooting and problem solving skills. Good interpersonal and communication skills and the ability to work with frontline and senior staff.\nWORKING RELATIONSHIPS: Works with other team members, including system administrators, network engineers, and core banking team.\nADDITIONAL REQUIREMENTS: On call availability\n\nSubmission Guidelines\nInterested candidates are requested to send their applications along with copies of their CV and educational and work certificates to the hrd.cv@newkabulbank.af All candidates short-listed for interviews will be directly contacted.\nKindly copy the vacancy number and past it in your e-mail subject line with the position title, otherwise you won’t be short listed.\n\nSubmission Email\nhrd.cv@newkabulbank.af\nApply",
       "details": {
-        "Location": "Sar-e Pol",
-        "Nationality": "Afghan",
+        "Location": "Kabul",
+        "Nationality": "National",
         "Category": "Banking",
         "Employment Type": "Full Time",
-        "Salary": "As per Bank salary scale",
-        "Vacancy Number": "BMA//2026//38",
+        "Salary": "As per organization salary policy per month",
+        "Vacancy Number": "NKB -026-HRVN-54",
         "No. of Jobs": "1",
-        "City": "Sar-e-Pol",
-        "Organization": "Bank-e-Millie Afghan (BMA)",
-        "Experience": "2 years of experience and previous experience in IT support within a banking or financial services environment is a plus.",
-        "Contract Duration": "Permanent",
+        "City": "Kabul Main Branch",
+        "Organization": "New Kabul Bank",
+        "Experience": "با داشتن تجربه کاری در بخش مرتبط ترجیح داده میشود .",
+        "Contract Duration": "One year - Ext.",
         "Gender": "Male",
-        "Education": "Bachelor’s degree in BCS and master’s degree is preferred.",
-        "Closing Date": "2026-07-04",
-        "Post Date": "2026-06-28",
+        "Education": "Bachelors in Computer Science or IT",
+        "Closing Date": "2026-07-08",
+        "Post Date": "2026-06-30",
         "Functional Area": "Banking",
         "Job Type": "Full Time",
         "Source": "Kaarobar",
-        "Job Location": "Sar-e Pol",
+        "Job Location": "Kabul",
         "No. Of Jobs": "1",
-        "Years of Experience": "2 years of experience and previous experience in IT support within a banking or financial services environment is a plus.",
-        "Close date": "2026-07-04"
+        "Years of Experience": "با داشتن تجربه کاری در بخش مرتبط ترجیح داده میشود .",
+        "Close date": "2026-07-08"
       },
-      "scraped_at": "2026-06-28T05:57:40Z",
+      "scraped_at": "2026-06-30T05:53:38Z",
       "also_found_on": [
         {
           "source": "wazifaha",
-          "url": "https://wazifaha.org/jobs/29538/it-western-union-assistant-for-sar-e-pol-re-announced"
+          "url": "https://wazifaha.org/jobs/29614/it-help-desk-representative"
         }
       ]
-    },
+    }
+  ],
+  "tech_banking_jobs": [
     {
       "id": "82bd7d1ef8227465",
       "source": "jobs.af",
