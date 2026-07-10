@@ -1,164 +1,5 @@
 [
   {
-    "id": "3bf60ae5f615498d",
-    "source": "kaarobar",
-    "source_url": "https://www.kaarobar.net/jobs/16745/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter",
-    "url": "https://www.kaarobar.net/jobs/16745/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter",
-    "title": "275-System Administrator (Specialized in Linux, Windows Servers, VMware ESXi, and vCenter)",
-    "company": "Ministry of Finance",
-    "location": "Kabul",
-    "closing_date": "2026-07-09",
-    "closing_date_raw": "2026-07-09",
-    "category": "Information Technology",
-    "job_type": "Full Time",
-    "gender": "Male",
-    "vacancies": "1",
-    "salary": "NTA",
-    "apply_url": "https://www.kaarobar.net/jobs/apply/16745/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter",
-    "apply_emails": [
-      "nta@mof.gov.af"
-    ],
-    "apply_phones": [],
-    "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nThe primary objective of the System Administrator is to design, implement, maintain, and monitor the organization's server and virtualization infrastructure. The role focuses on delivering high availability, security, and efficiency in systems management while supporting business operations.\n\nJob Requirements\nDepartment: ICT Directorate\nLocation: Ministry of finance\nReports to: Director of ICT / Head of Network Administration\nBackground\nThe organization operates a multi-branch enterprise network with centralized data center services. The infrastructure includes Cisco routing and switching, DMVPN WAN architecture, Sophos Next-Generation Firewalls, and VMware virtualization platform. A CCIE-level architect is required to design, secure, and optimize this environment following international best practices.\nKey Responsibilities\nServer Administration\n• Install, configure, and maintain Linux and Windows Server operating systems.\n• Manage Active Directory (AD) and Group Policy Objects (GPOs) in Windows environments.\n• Ensure regular patch management and updates for Linux and Windows systems.\n• Implement and monitor system security measures, including firewalls, intrusion detection, and encryption technologies.\nVirtualization Management\n• Deploy, configure, and manage VMware ESXi hosts and vCenter infrastructure.\n• Monitor and optimize the performance of virtual machines (VMs) and physical hosts.\n• Manage VMware-related components such as vSAN, DRS, and HA.\n• Handle VM backup, restoration, and disaster recovery procedures.\nSystems Maintenance and Monitoring\n• Implement monitoring solutions to track the health and performance of systems.\n• Conduct root-cause analysis for server and infrastructure-related issues.\n• Ensure adherence to best practices in system performance tuning and capacity planning.\nAutomation and Scripting\n• Automate routine administrative tasks using scripting languages like PowerShell, Bash, or Python.\n• Develop scripts for backups, monitoring, and system health checks.\nDocumentation and Reporting\n• Create and maintain comprehensive documentation for systems configurations, processes, and procedures.\n• Prepare and present regular reports on system performance, incidents, and planned maintenance.\nSupport and Collaboration\n• Provide Level 2/3 technical support for server and virtualization-related issues.\n• Collaborate with the network, application, and database teams to ensure seamless IT operations.\n• Train junior staff and provide guidance on system-related tasks.\nRequired Qualifications and Experience\nEducation:\n• Bachelor’s degree in Computer Science, Information Technology, or related field.\n• Certifications such as RHCSA/RHCE, MCSA/MCSE, VMware VCP-DCV are preferred.\nExperience:\n• Minimum 3-5 years of experience in Linux and Windows server administration.\n• Proven expertise in VMware ESXi and vCenter environments.\n• Experience in managing high-availability systems and disaster recovery planning.\nTechnical Skills:\n• Proficiency in Linux (e.g., CentOS, RHEL, Ubuntu) and Windows Server (2016/2019/2022) environments.\n• Hands-on experience with VMware vSphere, including vCenter, vSAN, DRS, and HA.\n• Strong understanding of TCP/IP, DNS, DHCP, and other networking protocols.\n• Knowledge of backup and recovery tools (e.g., Veeam, NetBackup).\n• Scripting proficiency in Bash, PowerShell, or Python.\nKey Competencies\n• Strong problem-solving and analytical skills.\n• Excellent communication and documentation skills.\n• Ability to work under pressure and meet deadlines.\n• Attention to detail and commitment to maintaining high standards.\n• Team player with a proactive approach to work.\nDeliverables\n• A secure and high-performing server and virtualization environment.\n• Detailed and updated system documentation.\n• Reports on incidents, system performance, and maintenance activities.\n• Training sessions and knowledge transfer for ICT staff.\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 9-Jul-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
-    "details": {
-      "Location": "Kabul",
-      "Nationality": "Afghan",
-      "Category": "Information Technology",
-      "Employment Type": "Full Time",
-      "Salary": "NTA",
-      "Vacancy Number": "275/MoF/ICT",
-      "No. of Jobs": "1",
-      "City": "Kabul",
-      "Organization": "Ministry of Finance",
-      "Experience": "Minimum 3-5 years of experience in Linux and Windows server administration",
-      "Contract Duration": "End of Fiscal Year 1405 (Extendable)",
-      "Gender": "Male",
-      "Education": "• Bachelor’s degree in Computer Science, Information Technology, or related field. Certifications such as RHCSA/RHCE, MCSA/MCSE, VMware VCP-DCV are preferred",
-      "Closing Date": "2026-07-09",
-      "Post Date": "2026-06-29",
-      "Functional Area": "Information Technology",
-      "Job Type": "Full Time",
-      "Source": "Kaarobar",
-      "Job Location": "Kabul",
-      "No. Of Jobs": "1",
-      "Years of Experience": "Minimum 3-5 years of experience in Linux and Windows server administration",
-      "Close date": "2026-07-09"
-    },
-    "scraped_at": "2026-06-30T05:53:38Z",
-    "also_found_on": [
-      {
-        "source": "wazifaha",
-        "url": "https://wazifaha.org/jobs/29594/275-system-administrator-specialized-in-linux-windows-servers-vmware-esxi-and-vcenter"
-      }
-    ]
-  },
-  {
-    "id": "1e0eab7bef0286f4",
-    "source": "kaarobar",
-    "source_url": "https://www.kaarobar.net/jobs/16748/276-senior-network-data-center-architect-ccie-level",
-    "url": "https://www.kaarobar.net/jobs/16748/276-senior-network-data-center-architect-ccie-level",
-    "title": "276-Senior Network & Data Center Architect (CCIE Level)",
-    "company": "Ministry of Finance",
-    "location": "Kabul",
-    "closing_date": "2026-07-09",
-    "closing_date_raw": "2026-07-09",
-    "category": "IT",
-    "job_type": "Full Time",
-    "gender": "Male",
-    "vacancies": "1",
-    "salary": "NTA",
-    "apply_url": "https://www.kaarobar.net/jobs/apply/16748/276-senior-network-data-center-architect-ccie-level",
-    "apply_emails": [
-      "nta@mof.gov.af"
-    ],
-    "apply_phones": [],
-    "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nThe organization operates a multi-branch enterprise network with centralized data center services. The infrastructure includes Cisco routing and switching, DMVPN WAN architecture, Sophos Next-Generation Firewalls, and VMware virtualization platform. A CCIE-level architect is required to design, secure, and optimize this environment following international best practices.\n\nJob Requirements\n. Objectives\n• Design scalable and resilient enterprise network architecture.\n• Implement secure Cisco DMVPN WAN connectivity.\n• Architect Sophos Firewall multi-zone security framework.\n• Design Tier-2/Tier-3 Data Center architecture.\n• Implement VMware vSphere high-availability clusters.\n• Ensure Zero Trust segmentation and high availability.\nCisco Enterprise Network\n• Hierarchical Core / Distribution / Access design.\n• OSPF multi-area and BGP WAN edge routing.\n• HSRP/VRRP gateway redundancy.\n• VLAN design and segmentation.\n• QoS for ERP and VoIP.\n• NetFlow, SNMPv3, and monitoring integration.\nDMVPN WAN Architecture\n• Dual Hub DMVPN Phase 3 architecture.\n• mGRE tunnels with NHRP configuration.\n• IPsec IKEv2 with AES-256 encryption.\n• Routing over DMVPN (OSPF/EIGRP/BGP).\n• IP SLA tracking and automatic failover.\n• QoS pre-classify and bandwidth control.\nSophos Firewall\n• Multi-zone segmentation (WAN, LAN, DMZ, Server, VPN, Guest).\n• IPS, ATP, SSL inspection, Application Control.\n• Web Application Firewall for public services.\n• Active-Passive High Availability design.\n• Firewall rule matrix and Zero Trust policy implementation.\nData Center Design\n• Dual core switch design.\n• Redundant ISP and firewall connectivity.\n• Rack elevation and power redundancy planning.\n• Storage network segmentation.\n• Disaster Recovery architecture.\nVMware Virtualization\n• vSphere cluster with HA and DRS.\n• Distributed Virtual Switch (VDS).\n• Resource sizing and capacity planning.\n• Backup and snapshot governance policy.\n• Secure management and segmentation.\nSecurity & Compliance\n• Micro-segmentation strategy.\n• Control Plane Policing (CoPP).\n• Certificate-based authentication.\n• Logging, SIEM integration, and monitoring.\n• Failover testing documentation.\nDeliverables\n• High-Level Design (HLD).\n• Low-Level Design (LLD).\n• IP Addressing & VLAN Matrix.\n• DMVPN Tunnel Plan.\n• Firewall Security Matrix.\n• Data Center Physical & Logical Diagrams.\n• Disaster Recovery Plan.\n• Knowledge Transfer & Documentation.\nRequired Qualifications\n• Cisco CCIE (Enterprise Infrastructure preferred).\n• Minimum 10 years enterprise networking experience.\n• Proven Sophos Firewall architecture experience.\n• Data Center design expertise.\n• VMware VCP/VCAP certification preferred.\nPerformance Indicators (KPIs)\n• Network uptime ≥ 99.9%.\n• Zero critical misconfiguration findings.\n• Successful failover test validation.\n• Documented and approved architecture design.\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 9-JUL-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
-    "details": {
-      "Location": "Kabul",
-      "Nationality": "Afghan",
-      "Category": "IT",
-      "Employment Type": "Full Time",
-      "Salary": "NTA",
-      "Vacancy Number": "276/MoF/ICT",
-      "No. of Jobs": "1",
-      "City": "Kabul",
-      "Organization": "Ministry of Finance",
-      "Experience": "• Cisco CCIE (Enterprise Infrastructure preferred). • Minimum 10 years enterprise networking experience. • Proven Sophos Firewall architecture experience. • Data Center design expertise. • VMware VCP/VCAP certification preferred.",
-      "Contract Duration": "End of Fiscal Year 1405 (Extendable)",
-      "Gender": "Male",
-      "Education": "• Bachelor’s degree in Computer Science, Information Technology, or related field.",
-      "Closing Date": "2026-07-09",
-      "Post Date": "2026-06-29",
-      "Functional Area": "IT",
-      "Job Type": "Full Time",
-      "Source": "Kaarobar",
-      "Job Location": "Kabul",
-      "No. Of Jobs": "1",
-      "Years of Experience": "• Cisco CCIE (Enterprise Infrastructure preferred). • Minimum 10 years enterprise networking experience. • Proven Sophos Firewall architecture experience. • Data Center design expertise. • VMware VCP/VCAP certification preferred.",
-      "Close date": "2026-07-09"
-    },
-    "scraped_at": "2026-06-30T05:53:38Z",
-    "also_found_on": [
-      {
-        "source": "wazifaha",
-        "url": "https://wazifaha.org/jobs/29598/276-senior-network-data-center-architect-ccie-level"
-      }
-    ]
-  },
-  {
-    "id": "2ffcd2d8ad382cf6",
-    "source": "kaarobar",
-    "source_url": "https://www.kaarobar.net/jobs/16749/277-senior-cyber-security-specialist",
-    "url": "https://www.kaarobar.net/jobs/16749/277-senior-cyber-security-specialist",
-    "title": "277-Senior Cyber Security Specialist",
-    "company": "Ministry of Finance",
-    "location": "Kabul",
-    "closing_date": "2026-07-09",
-    "closing_date_raw": "2026-07-09",
-    "category": "IT",
-    "job_type": "Full Time",
-    "gender": "Male",
-    "vacancies": "1",
-    "salary": "NTA",
-    "apply_url": "https://www.kaarobar.net/jobs/apply/16749/277-senior-cyber-security-specialist",
-    "apply_emails": [
-      "nta@mof.gov.af"
-    ],
-    "apply_phones": [],
-    "description": "About Ministry of Finance\nDirectorate of Information Communication Technology at Ministry of Finance mainly focusing in the area providing data and voice services for MoF operations using highly-equipped data center, unified transmission system, and interconnected links via fiber and microwaves.\nDirectorate of ICT is providing reliable and secure platform for overall data and voice connectivity and access to MoF core application services in MoF HQs and sites.\n\nJob Descriptions\nAs the sole dedicated cybersecurity specialist, the primary objective is to act as the MoF’s internal \"ethical hacker\" and security architect. The role aims to:\nProactively identify and exploit vulnerabilities in the MoF’s networks, applications, and financial systems through rigorous, hands-on penetration testing.\nEstablish foundational security monitoring and incident response capabilities in the absence of a traditional SOC.\nProvide expert technical guidance to the broader ICT team to remediate identified vulnerabilities.\nBuild a resilient security posture from the ground up, balancing deep technical execution with strategic risk management.\n\nJob Requirements\nScope of Work and Key Responsibilities\nGiven the standalone nature of this role, the Specialist must be highly self-motivated, capable of deep technical execution, and skilled at prioritizing high-risk areas.\nHeavy Penetration Testing & Offensive Security (Core Focus)\nConduct regular, in-depth, hands-on penetration testing on the MoF’s internal/external networks, web applications, APIs, mobile applications, and critical financial systems.\nPerform advanced manual testing to identify complex vulnerabilities (e.g., business logic flaws, authentication bypasses, injection attacks) that automated scanners miss.\nConduct social engineering and phishing campaigns to test the human element of the MoF’s security posture.\nVendor Management: While executing continuous internal pen-testing, design the scope for and manage external third-party vendors for comprehensive, enterprise-wide annual penetration tests.\nVulnerability Management & Remediation\nDeploy, configure, and manage automated vulnerability scanning tools across the MoF’s infrastructure.\nAnalyze scan results, filter out false positives, and prioritize vulnerabilities based on the specific threat landscape of the financial sector.\nWork directly with system administrators, network engineers, and application developers to verify and validate the remediation of identified flaws.\nFoundational Security Monitoring & Incident Response\ndesign, implement, and manage a centralized log management and basic SIEM (Security Information and Event Management) solution.\nAct as the primary (Tier 1, 2, and 3) Incident Responder. Investigate security alerts, contain breaches, eradicate threats, and recover systems during a cyber incident.\nDevelop and maintain automated alerting rules to notify the Specialist and ICT management of critical security events.\nSecurity Architecture & Automation\nAdvise the ICT Directorate on secure architecture for new financial systems, , and network expansions (Security by Design).\nDevelop scripts and automate repetitive security tasks (e.g., using Python, Bash, or PowerShell) to maximize efficiency and scale security efforts without additional headcount.\nKey Deliverables\nPenetration Testing Reports: Comprehensive, technical, and executive-level reports following every internal penetration test, including proof-of-concept exploits and step-by-step remediation guides.\nVulnerability Dashboard: A continuously updated, automated dashboard showing the MoF’s vulnerability posture, aging of critical vulnerabilities, and remediation SLA compliance.\nIncident Response Plan (IRP): A documented and tested IRP tailored for a standalone responder, including clear escalation matrices to external law enforcement or emergency IT support.\nSecurity Monitoring Baseline: Successful deployment and tuning of a centralized logging/SIEM solution with active alerts for critical financial systems within the first [6 months].\nQuarterly Security Posture Report: An executive summary for the Director of ICT detailing the threat landscape, tests conducted, critical risks discovered, and remediation progress.\nReporting and Coordination\nDirect Reporting: Reports directly to the Director of ICT.\nInternal Coordination: Works closely with Network Administrators, Database Administrators, and Software Developers to ensure vulnerabilities are patched without disrupting critical treasury operations.\nExternal Coordination: Acts as the technical point of contact for external penetration testing firms, managed security service providers.\nQualifications and Experience\nEducation:\nBachelor’s degree in Computer Science, Cybersecurity, Information Technology, or a closely related field.\nExperience:\nExactly/At least Seven (7) years of progressive, hands-on professional experience in Cybersecurity, with a heavy emphasis on technical execution rather than pure management.\nMinimum of three (3) to four (4) years of dedicated, hands-on experience specifically in Penetration Testing and Offensive Security.\nProven experience conducting pen tests on complex environments, specifically web applications, APIs, and network infrastructure.\nExperience operating as a standalone security practitioner or building security programs from scratch is highly desirable.\nCertifications:\nMandatory (Offensive Security): Must hold a highly respected, practical penetration testing certification such as:\nOSCP (Offensive Security Certified Professional) - Highly Preferred\nOSEP, OSWE, or PEN-300.\nAlternatives: CEH (Certified Ethical Hacker) or CompTIA PenTest+ (only if accompanied by strong proven practical experience).\nDesirable (General/Defensive): CISSP, CISM, or BTL1 (Blue Team Level 1) to complement the offensive skills with governance and defensive knowledge.\nRequired Skills and Competencies\nTechnical Skills (Heavy Offensive Focus):\nExpert-level proficiency with penetration testing frameworks and tools (e.g., Burp Suite Professional, Metasploit, Cobalt Strike, Nmap, Nessus, SQLmap).\nDeep understanding of the OWASP Top 10, SANS Top 25, and advanced exploitation techniques.\nStrong scripting and automation skills (Python, Bash, PowerShell) to write custom exploits, automate scanning, and parse logs.\nSolid understanding of defensive security, network protocols, and how to configure log aggregation tools (e.g., Splunk, ELK, Wazuh) for a solo analyst.\nSoft Skills:\nSelf-Starter & Time Management: Ability to work independently, prioritize tasks ruthlessly, and manage time effectively without direct supervision.\nTechnical Translation: Ability to explain complex, highly technical exploitation chains to non-technical financial executives and translate them into business risks.\nHigh Integrity: Unquestionable ethical standards\n\nSubmission Guidelines\nQualified applicants are encouraged to submit their CVs with a detailed application letter and contact details, no later than 9-Jul-2026 to below e-mail:\nPlease clearly indicate “position name/vacancy number in the subject line.\nPlease do not attach your education and working experience documents.\n\nSubmission Email\nnta@mof.gov.af\nApply",
-    "details": {
-      "Location": "Kabul",
-      "Nationality": "Afghan",
-      "Category": "IT",
-      "Employment Type": "Full Time",
-      "Salary": "NTA",
-      "Vacancy Number": "277/MoF/ICT",
-      "No. of Jobs": "1",
-      "City": "Kabul",
-      "Organization": "Ministry of Finance",
-      "Experience": "Exactly/At least Seven (7) years of progressive, hands-on professional experience in Cybersecurity, with a heavy emphasis on technical execution rather than pure management",
-      "Contract Duration": "End of Fiscal Year 1405 (Extendable)",
-      "Gender": "Male",
-      "Education": "Bachelor’s degree in Computer Science, Cybersecurity, Information Technology, or a closely related field.",
-      "Closing Date": "2026-07-09",
-      "Post Date": "2026-06-29",
-      "Functional Area": "IT",
-      "Job Type": "Full Time",
-      "Source": "Kaarobar",
-      "Job Location": "Kabul",
-      "No. Of Jobs": "1",
-      "Years of Experience": "Exactly/At least Seven (7) years of progressive, hands-on professional experience in Cybersecurity, with a heavy emphasis on technical execution rather than pure management",
-      "Close date": "2026-07-09"
-    },
-    "scraped_at": "2026-06-30T05:53:38Z",
-    "also_found_on": [
-      {
-        "source": "wazifaha",
-        "url": "https://wazifaha.org/jobs/29599/277-senior-cyber-security-specialist"
-      }
-    ]
-  },
-  {
     "id": "0606543e6e1cbd8c",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-16",
@@ -576,6 +417,47 @@
         "url": "https://wazifaha.org/jobs/29628/tech-lead-full-stack-architect"
       }
     ]
+  },
+  {
+    "id": "b8ef7a0612826b7d",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/app-developer-31",
+    "url": "https://jobs.af/jobs/app-developer-31",
+    "title": "App Developer",
+    "company": "OXUS Afghanistan",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-07-17",
+    "closing_date_raw": "2026-07-17 00:00:00+00",
+    "category": "Computer Science, Information Technology, Software Engineering, Software Development",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 2,
+    "salary": "Company salary scale",
+    "apply_url": "mailto:jobs@oxusaf.org",
+    "apply_emails": [
+      "jobs@oxusaf.org",
+      "Jobs@oxusaf.org"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nThe Mobile Application Developer will be responsible for designing, developing, testing, deploying, and maintaining secure Android and iOS mobile applications for customers and internal staff. The successful candidate will work closely with backend developers, UI/UX designers, business teams, and external vendors to build high-quality digital financial solutions integrated with the institution's Core Banking System (CBS).\nThis role requires a motivated and innovative software developer with strong expertise in cross-platform mobile development, secure application design, and enterprise system integration.\n\nDuties and Responsibilities\nKey Responsibilities\nMobile Application Development\nDesign, develop, test, and maintain Android and iOS mobile applications using Flutter (preferred) or React Native .\nDevelop clean, maintainable, scalable, and well-documented code following industry best practices.\nBuild reusable components and modern user interfaces for multiple mobile devices.\nDigital Financial Services\nDevelop mobile applications supporting:\nDigital Customer Onboarding\nMobile Banking\nLoan Applications\nSavings and Deposit Services\nLoan Repayments\nAccount Balance Inquiry\nMini Statements\nCustomer Profile Management\nPush Notifications\nDigital KYC\nBiometric Authentication\nQR Code Services\nStaff Mobile Applications\nDevelop applications for field and branch operations, including:\nClient Registration\nLoan Origination\nLoan Collection\nGroup Lending\nGPS Location Capture\nDigital Document Upload\nOffline Data Collection\nSynchronization with Core Banking System\nSystem Integration\nIntegrate mobile applications with enterprise backend services using secure RESTful APIs.\nWork closely with backend developers to integrate Django REST APIs and Core Banking System services.\nIntegrate SMS gateways, OTP services, push notifications, payment gateways, and third-party financial services.\nSecurity\nImplement secure mobile application practices including:\nBiometric Authentication\nMulti-Factor Authentication (MFA)\nSecure Session Management\nData Encryption (At Rest and In Transit)\nCertificate Pinning\nSecure Local Storage\nOWASP Mobile Security Best Practices\nOffline Capability\nDevelop offline-first mobile applications capable of operating in low-connectivity environments.\nDesign efficient synchronization mechanisms between mobile devices and backend systems.\nUI/UX\nConvert Figma or Adobe XD designs into responsive, intuitive, and accessible mobile interfaces.\nEnsure excellent user experience across Android and iOS platforms.\nQuality Assurance\nWrite unit, integration, and functional tests.\nParticipate in User Acceptance Testing (UAT).\nTroubleshoot and resolve software defects.\nDeployment & Maintenance\nPublish and maintain applications on Google Play Store and Apple App Store.\nManage application versioning and release cycles.\nMonitor application performance and resolve production issues.\nDocumentation\nPrepare and maintain:\nTechnical Documentation\nSource Code Documentation\nAPI Documentation\nDeployment Guides\nUser Manuals\nAdministrator Guides\nCollaboration\nWork closely with Product Owners, Business Units, Operations, Information Security, and Infrastructure teams.\nParticipate in Agile ceremonies including sprint planning, stand-ups, code reviews, and retrospectives.\nContinuous Improvement\nStay informed about emerging technologies and recommend innovative solutions to improve digital financial services.\n\nJob Requirements\nRequired Qualifications\nBachelor's degree in Computer Science, Software Engineering, Information Technology, or a related discipline.\nMaster's degree is an advantage.\nProfessional certifications in Mobile Development or Cloud Technologies will be considered an asset.\nTechnical Requirements\nApplicants should have strong experience with:\nMobile Development\nFlutter (Preferred)\nDart\nReact Native\nAndroid (Kotlin/Java)\niOS (Swift)\nBackend Integration\nRESTful APIs\nJSON\nWebSockets\nJWT Authentication\nOAuth2\nDatabases\nSQLite\nHive\nSQL Server (preferred)\nCloud Services\nFirebase Authentication\nFirebase Cloud Messaging\nCrash Reporting\nAnalytics\nVersion Control\nGit\nGitHub\nGitLab\nDevelopment Tools\nVisual Studio Code\nAndroid Studio\nXcode\nPostman\nUI/UX Tools\nFigma\nAdobe XD\nTesting Tools\nFlutter Test\nMockito\nFirebase Test Lab\nProject Management\nJira\nTrello\nConfluence\nPreferred Qualifications\nPreference will be given to candidates with experience in:\nFinTech applications\nMobile Banking\nDigital Wallets\nCore Banking System integrations\nMicrofinance Institutions\nLoan Origination Systems\nPayment Gateway Integration\nBiometric Authentication\nDigital Identity Verification\nMicroservices Architecture\nOWASP Mobile Top 10\nPCI-DSS security standards\nExperience\nMinimum 3–5 years of professional experience in mobile application development.\nProven experience developing production-grade Android and iOS applications.\nAt least 2–3 published applications available on Google Play Store and/or Apple App Store.\nExperience integrating mobile applications with enterprise backend systems.\nCore Competencies\nExcellent analytical and problem-solving skills.\nStrong communication and interpersonal skills.\nHigh attention to detail and commitment to quality.\nAbility to work independently and collaboratively.\nStrong time management and organizational skills.\nAbility to work effectively in a multicultural environment.\nCommitment to continuous learning and innovation.\n\nSubmission Guidelines\nThe application, consist of a one-page cover letter explaining your interest and suitability for the post along with up-to-date CV, should be sent via email (clearly indicating on the subject line the title of the position and Vacancy Announcement Number) before closing date to the given email address:\njobs@oxusaf.org\nOr submit hardcopy to Oxus Afghanistan HR Department, House # 600, Street # 6, Qala-e-Fatullah, District 10, Kabul , OXUS, Afghanistan.\nOnly shortlisted candidates will be notified.\nNo phone calls will be entertained.\nSubmission Email:\nJobs@oxusaf.org",
+    "details": {
+      "Reference": "App-D-HQ-9-July-2026",
+      "Post Date": "2026-07-09 10:03:51.719+00",
+      "Closing Date": "2026-07-17 00:00:00+00",
+      "Functional Area": "Computer Science, Information Technology, Software Engineering, Software Development",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "any",
+      "Education": "bachelor",
+      "Experience": "3 - 5",
+      "Salary": "Company salary scale",
+      "Vacancies": 2,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-07-10T07:56:56Z",
+    "also_found_on": []
   },
   {
     "id": "d7524f7b6b96494e",
