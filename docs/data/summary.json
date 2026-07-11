@@ -1,65 +1,22 @@
 {
-  "generated_at": "2026-07-10T07:57:19.464Z",
-  "today": "2026-07-10",
+  "generated_at": "2026-07-11T06:31:53.009Z",
+  "today": "2026-07-11",
   "total_jobs": 35,
   "new_count": 1,
   "expiring_today_count": 1,
-  "expiring_soon_count": 3,
+  "expiring_soon_count": 2,
   "tech_banking_count": 3,
   "new_jobs": [
     {
-      "id": "b8ef7a0612826b7d",
+      "id": "2f861da2c292a884",
       "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/app-developer-31",
-      "url": "https://jobs.af/jobs/app-developer-31",
-      "title": "App Developer",
-      "company": "OXUS Afghanistan",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-07-17",
-      "closing_date_raw": "2026-07-17 00:00:00+00",
-      "category": "Computer Science, Information Technology, Software Engineering, Software Development",
-      "job_type": "full_time",
-      "gender": "any",
-      "vacancies": 2,
-      "salary": "Company salary scale",
-      "apply_url": "mailto:jobs@oxusaf.org",
-      "apply_emails": [
-        "jobs@oxusaf.org",
-        "Jobs@oxusaf.org"
-      ],
-      "apply_phones": [],
-      "description": "Role Summary\nThe Mobile Application Developer will be responsible for designing, developing, testing, deploying, and maintaining secure Android and iOS mobile applications for customers and internal staff. The successful candidate will work closely with backend developers, UI/UX designers, business teams, and external vendors to build high-quality digital financial solutions integrated with the institution's Core Banking System (CBS).\nThis role requires a motivated and innovative software developer with strong expertise in cross-platform mobile development, secure application design, and enterprise system integration.\n\nDuties and Responsibilities\nKey Responsibilities\nMobile Application Development\nDesign, develop, test, and maintain Android and iOS mobile applications using Flutter (preferred) or React Native .\nDevelop clean, maintainable, scalable, and well-documented code following industry best practices.\nBuild reusable components and modern user interfaces for multiple mobile devices.\nDigital Financial Services\nDevelop mobile applications supporting:\nDigital Customer Onboarding\nMobile Banking\nLoan Applications\nSavings and Deposit Services\nLoan Repayments\nAccount Balance Inquiry\nMini Statements\nCustomer Profile Management\nPush Notifications\nDigital KYC\nBiometric Authentication\nQR Code Services\nStaff Mobile Applications\nDevelop applications for field and branch operations, including:\nClient Registration\nLoan Origination\nLoan Collection\nGroup Lending\nGPS Location Capture\nDigital Document Upload\nOffline Data Collection\nSynchronization with Core Banking System\nSystem Integration\nIntegrate mobile applications with enterprise backend services using secure RESTful APIs.\nWork closely with backend developers to integrate Django REST APIs and Core Banking System services.\nIntegrate SMS gateways, OTP services, push notifications, payment gateways, and third-party financial services.\nSecurity\nImplement secure mobile application practices including:\nBiometric Authentication\nMulti-Factor Authentication (MFA)\nSecure Session Management\nData Encryption (At Rest and In Transit)\nCertificate Pinning\nSecure Local Storage\nOWASP Mobile Security Best Practices\nOffline Capability\nDevelop offline-first mobile applications capable of operating in low-connectivity environments.\nDesign efficient synchronization mechanisms between mobile devices and backend systems.\nUI/UX\nConvert Figma or Adobe XD designs into responsive, intuitive, and accessible mobile interfaces.\nEnsure excellent user experience across Android and iOS platforms.\nQuality Assurance\nWrite unit, integration, and functional tests.\nParticipate in User Acceptance Testing (UAT).\nTroubleshoot and resolve software defects.\nDeployment & Maintenance\nPublish and maintain applications on Google Play Store and Apple App Store.\nManage application versioning and release cycles.\nMonitor application performance and resolve production issues.\nDocumentation\nPrepare and maintain:\nTechnical Documentation\nSource Code Documentation\nAPI Documentation\nDeployment Guides\nUser Manuals\nAdministrator Guides\nCollaboration\nWork closely with Product Owners, Business Units, Operations, Information Security, and Infrastructure teams.\nParticipate in Agile ceremonies including sprint planning, stand-ups, code reviews, and retrospectives.\nContinuous Improvement\nStay informed about emerging technologies and recommend innovative solutions to improve digital financial services.\n\nJob Requirements\nRequired Qualifications\nBachelor's degree in Computer Science, Software Engineering, Information Technology, or a related discipline.\nMaster's degree is an advantage.\nProfessional certifications in Mobile Development or Cloud Technologies will be considered an asset.\nTechnical Requirements\nApplicants should have strong experience with:\nMobile Development\nFlutter (Preferred)\nDart\nReact Native\nAndroid (Kotlin/Java)\niOS (Swift)\nBackend Integration\nRESTful APIs\nJSON\nWebSockets\nJWT Authentication\nOAuth2\nDatabases\nSQLite\nHive\nSQL Server (preferred)\nCloud Services\nFirebase Authentication\nFirebase Cloud Messaging\nCrash Reporting\nAnalytics\nVersion Control\nGit\nGitHub\nGitLab\nDevelopment Tools\nVisual Studio Code\nAndroid Studio\nXcode\nPostman\nUI/UX Tools\nFigma\nAdobe XD\nTesting Tools\nFlutter Test\nMockito\nFirebase Test Lab\nProject Management\nJira\nTrello\nConfluence\nPreferred Qualifications\nPreference will be given to candidates with experience in:\nFinTech applications\nMobile Banking\nDigital Wallets\nCore Banking System integrations\nMicrofinance Institutions\nLoan Origination Systems\nPayment Gateway Integration\nBiometric Authentication\nDigital Identity Verification\nMicroservices Architecture\nOWASP Mobile Top 10\nPCI-DSS security standards\nExperience\nMinimum 3–5 years of professional experience in mobile application development.\nProven experience developing production-grade Android and iOS applications.\nAt least 2–3 published applications available on Google Play Store and/or Apple App Store.\nExperience integrating mobile applications with enterprise backend systems.\nCore Competencies\nExcellent analytical and problem-solving skills.\nStrong communication and interpersonal skills.\nHigh attention to detail and commitment to quality.\nAbility to work independently and collaboratively.\nStrong time management and organizational skills.\nAbility to work effectively in a multicultural environment.\nCommitment to continuous learning and innovation.\n\nSubmission Guidelines\nThe application, consist of a one-page cover letter explaining your interest and suitability for the post along with up-to-date CV, should be sent via email (clearly indicating on the subject line the title of the position and Vacancy Announcement Number) before closing date to the given email address:\njobs@oxusaf.org\nOr submit hardcopy to Oxus Afghanistan HR Department, House # 600, Street # 6, Qala-e-Fatullah, District 10, Kabul , OXUS, Afghanistan.\nOnly shortlisted candidates will be notified.\nNo phone calls will be entertained.\nSubmission Email:\nJobs@oxusaf.org",
-      "details": {
-        "Reference": "App-D-HQ-9-July-2026",
-        "Post Date": "2026-07-09 10:03:51.719+00",
-        "Closing Date": "2026-07-17 00:00:00+00",
-        "Functional Area": "Computer Science, Information Technology, Software Engineering, Software Development",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "any",
-        "Education": "bachelor",
-        "Experience": "3 - 5",
-        "Salary": "Company salary scale",
-        "Vacancies": 2,
-        "Submission Through": "email"
-      },
-      "scraped_at": "2026-07-10T07:56:56Z",
-      "also_found_on": []
-    }
-  ],
-  "expiring_today": [
-    {
-      "id": "0606543e6e1cbd8c",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-16",
-      "url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-16",
+      "source_url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-31",
+      "url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-31",
       "title": "کارمند تکنالوژی کمره های امنیتی، ریاست حیرتان",
       "company": "Afghanistan Oil and Gas Company (AOGC)",
       "location": "Balkh, Afghanistan",
-      "closing_date": "2026-07-10",
-      "closing_date_raw": "2026-07-10 00:00:00+00",
+      "closing_date": "2026-07-18",
+      "closing_date_raw": "2026-07-18 00:00:00+00",
       "category": "Computer Science, Information Technology",
       "job_type": "full_time",
       "gender": "male",
@@ -74,8 +31,8 @@
       "description": "Role Summary\nتأمین، حفظ و مراقبت سیستم‌های تکنالوژی معلوماتی، شبکه‌های کمپیوتری و کمره‌های امنیتی اداره به‌منظور تضمین امنیت اطلاعات، تداوم فعالیت سیستم‌ها، نظارت مؤثر بر ساحات تحت پوشش و فراهم‌سازی خدمات تخنیکی مورد نیاز برای بخش‌های مختلف اداره.\n\nDuties and Responsibilities\n· ترتیب پلان کاری ماهوار، ربعوار و سالانه در مطابقت با پلان مدیریت مربوطه جهت رسیدن به اهداف تعیین‌شده اداره.\n· نصب، تنظیم و راه‌اندازی کمپیوترها، پرنترها، اسکنرها، تجهیزات شبکه و سایر وسایل تکنالوژی معلوماتی مطابق نیازمندی اداره.\n· نصب، تنظیم، عیب‌یابی و حفظ و مراقبت کمره‌های امنیتی، دستگاه‌های ثبت تصاویر و تجهیزات جانبی آن.\n· نظارت دوامدار از فعالیت سیستم کمره‌های امنیتی و اتخاذ اقدامات لازم جهت رفع مشکلات تخنیکی و جلوگیری از وقفه در فعالیت آن‌ها.\n· ثبت، نگهداری و آرشیف تصاویر و ویدیوهای ثبت‌شده مطابق اصول، طرزالعمل‌ها و رهنمودهای نافذۀ اداره.\n· بررسی و تشخیص عیوب شبکه‌های کمپیوتری، تجهیزات مخابراتی و سیستم‌های نظارتی و انجام اقدامات لازم جهت رفع آن‌ها.\n· همکاری در نصب، توسعه و حفظ و مراقبت شبکۀ داخلی، اینترنت و سایر سیستم‌های ارتباطی اداره.\n· انجام سرویس‌های وقایوی و ترمیمی تجهیزات تکنالوژی معلوماتی و کمره‌های امنیتی به منظور جلوگیری از خرابی‌های احتمالی.\n· مدیریت حساب‌های کاربری، دسترسی‌های سیستم و رعایت تدابیر امنیت سایبری در هماهنگی با مسئولین مربوطه.\n· تهیه راپورهای تخنیکی در مورد وضعیت تجهیزات، سیستم‌ها، مشکلات موجود و اقدامات انجام‌شده جهت ارائه به مدیر مربوط.\n· ارائه همکاری‌های تخنیکی به کارکنان اداره در زمینه استفاده از سیستم‌های کمپیوتری، نرم‌افزارها و تجهیزات تکنالوژی معلوماتی.\n· اشتراک در بررسی نیازمندی‌های تخنیکی اداره و ارائه پیشنهادات لازم جهت بهبود سیستم‌های تکنالوژی معلوماتی و امنیتی.\n· کنترول و نظارت از ذخیره‌گاه‌های معلوماتی، سرورها و تجهیزات مربوطه جهت تأمین مصئونیت و دسترسی به اطلاعات.\n· حفظ و مراقبت اسناد، تجهیزات و وسایل تخنیکی سپرده‌شده مطابق اصول و مقررات اداره.\n· ترتیب و ارائه گزارشات ماهوار، ربعوار، سالانه از فعالیت ها و دست آورد ها مدیر مربوطه.\n· اجرای سایر وظایف مرتبط که از سوی آمرین ذیصلاح مطابق قوانین، مقررات و اهداف اداره سپرده می‌شود.\n\nJob Requirements\n· داشتن سند تحصیلی حداقل فوق بکلوریا در رشته‌های تکنالوژی معلوماتی، کمپیوتر ساینس یا سایر رشته‌های مرتبط به وظیفه.\n· داشتن حداقل ۲ سال تجریه کاری مرتبط به وظیفه- حایز سند تحصیلی لیسانس از این حکم مستثنی می باشد.\n\nSubmission Guidelines\nرهنمایی ثبت نام متقاضیان:\nمتقاضیان محترم برای ثبت نام روی لینک زیر کلیک نموده معلومات خویش را ارسال بدارند.\nhttp://178.18.249.112:8080/Recruit/Applicant/ApplicantApply/494C8352-89E1-487E-A721-DA8BB7350821\nدرجریان ثبت نام موارد ذیل را در نظر داشته باشند:\n１. تمام معلومات خویش را دقیق برویت اسناد درج نمایند در صورت نادرست بودن معلومات درج شده متقاضی از پروسه\nحذف میگردد.\n2. یک فرد صرف یکبار ثبت نام کرده میتواند.\n3. در قسمت درج عنوان بست و کود بست دقت لازم نمائید.\nآدرس: ریاست عمومی شرکت امارتی نفت و گاز افغانستان واقع کوتل خیرخانه جوار ناحیه هفدهم، کابل- افغانستان درصورت ضرورت به شماره ذیل تماس گرفته میتوانید: 0202930023\nنوت: تنها برای کاندیدانی تماس گرفته میشود که در بست متذکره شارت لست گردند.\nامتحان بست متذکره در ریاست شرکت امارتی نفت و گاز بندر حیرتان واقع ولایت بلخ اخذ میگردد.",
       "details": {
         "Reference": "1164",
-        "Post Date": "2026-07-01 06:15:44.566+00",
-        "Closing Date": "2026-07-10 00:00:00+00",
+        "Post Date": "2026-07-11 05:58:28.465+00",
+        "Closing Date": "2026-07-18 00:00:00+00",
         "Functional Area": "Computer Science, Information Technology",
         "Countries": "Afghanistan",
         "Provinces": "Balkh",
@@ -88,11 +45,11 @@
         "Vacancies": 1,
         "Submission Through": "link"
       },
-      "scraped_at": "2026-07-02T05:45:57Z",
+      "scraped_at": "2026-07-11T06:31:27Z",
       "also_found_on": []
     }
   ],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "id": "f082fcd2596a45b1",
       "source": "kaarobar",
@@ -145,7 +102,9 @@
           "url": "https://wazifaha.org/jobs/29759/graphic-designer"
         }
       ]
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "995f538674a2e5eb",
       "source": "jobs.af",
