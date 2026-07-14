@@ -1,85 +1,5 @@
 [
   {
-    "id": "995f538674a2e5eb",
-    "source": "jobs.af",
-    "source_url": "https://jobs.af/jobs/backend-java-developer-16",
-    "url": "https://jobs.af/jobs/backend-java-developer-16",
-    "title": "Senior Backend Java Developer",
-    "company": "Aurum Afghanistan Financial Company",
-    "location": "Kabul, Afghanistan",
-    "closing_date": "2026-07-13",
-    "closing_date_raw": "2026-07-13 00:00:00+00",
-    "category": "Information Technology",
-    "job_type": "full_time",
-    "gender": "male",
-    "vacancies": 1,
-    "salary": "50000 - 70000 AFN",
-    "apply_url": "mailto:jobs@aurumaf.com",
-    "apply_emails": [
-      "jobs@aurumaf.com"
-    ],
-    "apply_phones": [],
-    "description": "Role Summary\nThe Senior Backend Java Developer at AurumPay is responsible for designing, building, and launching scalable backend services, FinTech solutions, and API integrations. This role connects AurumPay’s core systems with third-party services such as mobile operators, e-money providers, and digital wallets, focusing on secure, high-performance server-side logic.Key Responsibilities:\n\nDuties and Responsibilities\n1. Backend Development & Innovation\n• Lead backend development for FinTech projects including digital wallets, payment engines, and automation tools.\n• Propose and prototype new features to improve system performance and reliability.\n• Ensure continuous development and enhancement of the existing AurumPay Mobile Money system backend.\n2. Software Quality & Database Management\n• Oversee backend development using Java, Spring Boot, and related libraries (Hibernate, Spring Security).\n• Ensure all services meet security, performance, and compliance standards.\n• Design and optimize Oracle databases; write complex SQL queries and manage database migrations.\n3. API & Third-Party Integrations\n• Build and support integrations using REST, SOAP, ISO 8583, and other industry-standard protocols.\n• Integrate with mobile operators, digital wallets, EMIs, payment switches, and gateways.\n4. System Design & Team Leadership\n• Design scalable backend architectures and integration plans based on business needs.\n• Collaborate with cross-functional teams to build resilient solutions.\n• Provide technical guidance, code reviews, and mentorship to junior developers.\n• Promote agile methodologies and CI/CD practices.\n\nJob Requirements\nMandatory:\n• Strong expertise in Java and Spring Boot (Spring MVC, Spring Data, Spring Security).\n• Proven experience building REST/SOAP APIs and integrations using ISO 8583 and other industry protocols.\n• Deep understanding of microservices architecture and full SDLC.\n• Hands-on experience integrating with wallets, telecom operators, EMIs, or financial switches.\n• Strong proficiency with Oracle databases (complex queries, indexing, performance tuning).\n• Experience deploying applications on Oracle WebLogic Server or similar Java EE containers.\n• Proficient with GitHub/GitLab and CI/CD pipelines.\n• 5+ years of backend Java development experience in FinTech, payments, or technical integrations.\n• Bachelor’s degree in Computer Science, IT, or related field (Master’s is a plus).\n\nSubmission Guidelines\nInterested candidates should submit their CV to following Email Address.\n( jobs@aurumaf.com)",
-    "details": {
-      "Reference": "Aurum56",
-      "Post Date": "2026-06-13 08:34:42.79+00",
-      "Closing Date": "2026-07-13 00:00:00+00",
-      "Functional Area": "Information Technology",
-      "Countries": "Afghanistan",
-      "Provinces": "Kabul",
-      "Job Type": "full_time",
-      "Contract Type": "permanent",
-      "Gender": "male",
-      "Education": "bachelor",
-      "Experience": "5 - 15",
-      "Salary": "50000 - 70000 AFN",
-      "Vacancies": 1,
-      "Submission Through": "email"
-    },
-    "scraped_at": "2026-06-14T06:05:37Z",
-    "also_found_on": []
-  },
-  {
-    "id": "65fa9174ff286c3f",
-    "source": "jobs.af",
-    "source_url": "https://jobs.af/jobs/mdyr-tknalwzhy-malwmaty-hlmnd-brna-16",
-    "url": "https://jobs.af/jobs/mdyr-tknalwzhy-malwmaty-hlmnd-brna-16",
-    "title": "مدیر تکنالوژی معلوماتی - هلمند برښنا",
-    "company": "DABS (Da Afghanistan Breshna Sherkat)",
-    "location": "Helmand, Afghanistan",
-    "closing_date": "2026-07-13",
-    "closing_date_raw": "2026-07-13 00:00:00+00",
-    "category": "Computer Science",
-    "job_type": "full_time",
-    "gender": "male",
-    "vacancies": 1,
-    "salary": "Company salary scale",
-    "apply_url": "http://hris.dabs.af/Recruit/Applicant/ApplicantApply/8503C8F9-A3B0-4A25-BC9E-04F5D8BEFF96",
-    "apply_emails": [],
-    "apply_phones": [
-      "0202513694"
-    ],
-    "description": "Role Summary\nکارمند بست متذکره مسوول پیشبرد وظایف ذیل میباشد\n\nDuties and Responsibilities\nنصب سرور/ نرم افزار ها و نظارت بر عملکرد ها و رفع مشکلات بخش های مربوطه\nتشخیص منبع مشکلات عملیاتی، بشمول جنبه های نرم افزاری و سخت افزاری برای سیستم ها و سرور کمپیوتر\nتهیه نسخه های کاپی سیستم ها و اسناد، ایجاد حسابات کمپیوتری برای کارمندان\nرفع مشکلات عملکرد های شبکه های LAN/WAN اتصالات و مشکلات مربوط به شبکه ها\nهمکاری در اداره و نظارت منابع بشمول VPN فایروال سرور پراکسی و مسیرها\nهماهنگی و تجدید نرم افزار و سخت افزار شبکه ها\nهمکاری در تحلیل و ارزیابی قراردادی های محصولات نرم افزاری و سخت افزاری با مطابقت به ضروریات\nهمکاری و هماهنگی فراگیری حصول اجرای محصولات قراردادی\nانجام وظایف متخصص شبکه مدیریت روزمره اطلاعات عملکرد های شبکه\nهمکاری در ترتیب و توصیه استندرد های برای استفاده از منابع سیستم کمپیوتری\nاجرای سایر وظایف محول شده\n\nJob Requirements\nلیسانس در رشته کمپیوتر ساینس\nدو سال تجربه کاری در بخش مربوطه\nدانستن پروسیجرها، میتود ها و وسایل مدرن اداری\nبلدیت کامل با زبان های ملی کشور و آشنایی با زبان انګلیسی\nمشاهده و رفع نواقص تخنیکی و عملیاتی\nتحلیل و ارزیابی تجدید محصولات نرم افزاری و سخت افزاری\nهمکاری در ایجاد استندرد های برای منابع سیستم های کمپیوتری\n\nSubmission Guidelines\nDear Applicant,\nThank you for your interest in applying for the job, The qualified and interested applicants can fill the online application form through the following link:\nLink for online Apply\nhttp://hris.dabs.af/Recruit/Applicant/ApplicantApply/94CDE0C3-63DB-4BA7-892B-8A2874C10741\nTo ensure that your application is considered, please follow these submission guidelines:\n1. Submit your application by the deadline specified as late applications will not be considered.\n2. Fill out the application form completely and accordingly as incomplete form will not be considered. Make sure to provide all the necessary information, including your personal details, work experience, education and skills.\n3. Provide accurate contact information as this will be used for all communications regarding your application.\n4. Double-check your applications before submitting it to ensure that these are no errors or omissions.\n5. Shortlisted candidates will be directly contacted for a written test or interview. If you’re not contacted within two or four weeks after the closing date, please know that your application has not been considered for the post.\nNote: The internal employees of DABS are required to get the approval of their respective head of division and submit it along with application form, otherwise the application will be rejected.\nWe appreciate your interest in DABS and look forward to reviewing your application, if you have any questions contact us on this phone number:\nTEL0202513694",
-    "details": {
-      "Reference": "VA-DABS-HQs/1405-047",
-      "Post Date": "2026-06-29 09:59:02.127+00",
-      "Closing Date": "2026-07-13 00:00:00+00",
-      "Functional Area": "Computer Science",
-      "Countries": "Afghanistan",
-      "Provinces": "Helmand",
-      "Job Type": "full_time",
-      "Contract Type": "permanent",
-      "Gender": "male",
-      "Education": "bachelor",
-      "Experience": "2 - 3",
-      "Salary": "Company salary scale",
-      "Vacancies": 1,
-      "Submission Through": "link"
-    },
-    "scraped_at": "2026-06-30T05:53:20Z",
-    "also_found_on": []
-  },
-  {
     "id": "9533597959b79a53",
     "source": "kaarobar",
     "source_url": "https://www.kaarobar.net/jobs/16691/2-female-trainer-digital-marketing-social-media-photography-and-branding",
@@ -929,6 +849,44 @@
     ]
   },
   {
+    "id": "2979188f39c14084",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/unixlinux-system-administrator",
+    "url": "https://jobs.af/jobs/unixlinux-system-administrator",
+    "title": "Unix/Linux System Administrator",
+    "company": "Afghan Wireless Communication Company",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-07-20",
+    "closing_date_raw": "2026-07-20 00:00:00+00",
+    "category": "IT - Software",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "https://forms.gle/ujCZmsD6SAuPgETA9",
+    "apply_emails": [],
+    "apply_phones": [],
+    "description": "Role Summary\nThe Unix/Linux System Administrator is responsible for the installation, configuration, administration, maintenance, security, and performance of Unix/Linux operating systems and supporting infrastructure. The role ensures the availability, reliability, and security of enterprise systems that host critical business applications and databases. The administrator also provides technical support, automates routine tasks, monitors system health, and participates in disaster recovery and capacity planning.\n\nDuties and Responsibilities\nInstall, configure, upgrade, and maintain Unix/Linux operating systems (Red Hat Enterprise Linux, CentOS, Oracle Linux, Ubuntu etc.).\nAdminister physical and virtual Linux servers.\nPerform regular system patching and OS upgrades.\nManage system start-up, shutdown, and service configuration.\nConfigure and maintain kernel parameters and system tuning.\nDeploy, configure, and maintain enterprise server infrastructure.\nManage file systems, storage allocation, and disk management.\nMonitor server health and ensure optimal performance.\nMaintain hardware inventory and server documentation.\nCreate, modify, and manage user accounts and groups.\nImplement security hardening based on organizational standards.\nManage SSH access, Sudo privileges, and password policies.\nPerform vulnerability remediation and security updates.\nMonitor security logs and investigate suspicious activities.\nMonitor CPU, memory, disk, and network utilization.\nPerform capacity planning and resource forecasting.\nTune operating system parameters for optimal performance.\nBackup & Disaster Recovery\nConfigure and monitor backup processes.\nVerify backup integrity through regular restoration testing.\nParticipate in disaster recovery planning and execution.\nMaintain business continuity procedures.\nAutomation & Scripting\nDevelop automation scripts using Shell, Python, or Perl.\nAutomate routine administrative tasks.\nMaintain scheduled jobs using Cron and system timers.\nImprove operational efficiency through scripting.\nNetwork Administration Support\nConfigure network interfaces, routing, DNS, and firewall settings.\nTroubleshoot network connectivity issues.\nSupport load balancing and high availability environments.\nAssist with VPN and secure remote access configuration.\n\nJob Requirements\nBachelor's degree in computer science, Information Technology, Information Systems, Software Engineering, or a related field.\nMinimum 3–5 years of hands-on experience in Unix/Linux system administration within an enterprise environment.\nProven experience installing, configuring, upgrading, and maintaining Linux operating systems (Oracle Linux, Ubuntu).\nExperience administering physical, virtual, and cloud-based Linux servers.\nStrong experience with shell scripting (Bash) and automation of routine administrative tasks.\nWell, understanding of Red Hat System Administrator.\nWell, understanding Red Hat Engineer.\nOracle Linux Implementation Specialist (preferred)\nVMware Professional (VCP) (preferred)\nConfiguration and communication between two servers (any OS)\nGreat knowledge of operating system.\nExperience managing users, groups, permissions, authentication services (LDAP/Active Directory), and security policies.\nHands-on experience with system monitoring, performance tuning, troubleshooting, and capacity planning.\nFamiliarity with cloud platforms (AWS, Microsoft Azure, or Google Cloud Platform) is an advantage.\nExperience supporting enterprise applications and databases on Linux platforms.\nStrong understanding of TCP/IP networking, DNS, SSH, NFS, firewalls, and storage management (LVM, SAN/NAS).\n\nSubmission Guidelines\nThe interested candidates should fill and submit the APPLICATION FORM with complete and correct information. To have access to the APPLICATION FORM, please copy and paste the link into your Web Browser.\nhttps://forms.gle/ujCZmsD6SAuPgETA9",
+    "details": {
+      "Reference": "AWCC/HR/26/VA/053",
+      "Post Date": "2026-07-13 10:31:27.656+00",
+      "Closing Date": "2026-07-20 00:00:00+00",
+      "Functional Area": "IT - Software",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "any",
+      "Education": "bachelor",
+      "Experience": "3 - 5",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "link"
+    },
+    "scraped_at": "2026-07-14T06:31:16Z",
+    "also_found_on": []
+  },
+  {
     "id": "09b61c2442dc432e",
     "source": "jobs.af",
     "source_url": "https://jobs.af/jobs/datacom-ip-engineer-16",
@@ -1408,7 +1366,12 @@
       "Submission Through": "email"
     },
     "scraped_at": "2026-07-09T07:57:27Z",
-    "also_found_on": []
+    "also_found_on": [
+      {
+        "source": "jobs.af",
+        "url": "https://jobs.af/jobs/security-guardcleaner-mzr-gardsfakar-shhr-mzarshryf-16"
+      }
+    ]
   },
   {
     "id": "8ce5a97e22dfdb4b",
@@ -1591,6 +1554,46 @@
     ]
   },
   {
+    "id": "579e97b3f85c33f7",
+    "source": "jobs.af",
+    "source_url": "https://jobs.af/jobs/deputy-network-manager-31",
+    "url": "https://jobs.af/jobs/deputy-network-manager-31",
+    "title": "Deputy Network Manager",
+    "company": "Afghan United Bank",
+    "location": "Kabul, Afghanistan",
+    "closing_date": "2026-08-13",
+    "closing_date_raw": "2026-08-13 00:00:00+00",
+    "category": "Banking",
+    "job_type": "full_time",
+    "gender": "any",
+    "vacancies": 1,
+    "salary": "Company salary scale",
+    "apply_url": "mailto:jobs@afghanunitedbank.com",
+    "apply_emails": [
+      "jobs@afghanunitedbank.com"
+    ],
+    "apply_phones": [],
+    "description": "Role Summary\nThe Deputy Network Manager supports the Network Manager in planning, implementing, securing, and maintaining the organization’s network infrastructure. The role involves assisting in day-to-day operations, monitoring network performance, ensuring security, and providing technical support to branches. The Deputy Network Manager also acts as a backup to the Network Manager during absences and plays a key role in supervising and coordinating network-related activities across the organization.\n\nDuties and Responsibilities\nSupport in Network Design & Specification – Assist the Network Manager in establishing network specifications by gathering user requirements, analyzing workflows, and reviewing access, information, and security needs.\nAssist in Network Implementation – Support the evaluation of network performance (availability, utilization, throughput, and latency) and participate in equipment selection, installation, configuration, and testing under the guidance of the Network Manager.\nNetwork Security Support – Help in monitoring and enforcing security policies, access controls, and firewall configurations while ensuring proper documentation is maintained.\nUser Support & Training – Provide user support, resolve technical issues, and assist in conducting training programs to improve user knowledge and efficiency.\nSystem Upgrades & Vendor Coordination – Assist in coordinating with vendors, testing new solutions, and implementing system upgrades and enhancements.\nDocumentation & Standards – Maintain accurate records of network equipment, configurations, and procedures while supporting the development of IT and network standards.\nBranch Network Support – Visit branches as required to assist with network monitoring, troubleshooting, and surveys under the direction of the Network Manager.\nCritical Support – Provide backup support for critical incidents, ensuring 24/7 availability when required.\nInventory Management – Assist in managing network inventory, spare parts, and related documentation.\nConfidentiality & Compliance – Ensure that sensitive information is protected and that policies and procedures are followed.\nDeputy Role – Act as the Network Manager’s delegate during absences, ensuring smooth continuity of network operations.\nContinuous Learning – Stay updated with the latest networking technologies and best practices to provide effective support.\n\nJob Requirements\nMinimum Education: Associated degree in an information technology related field.\nPreferred Education: Master degree in an information technology related filed.\nPreferred Certifications: CCNA, CCNP and CCIE (will be mostly preferred).\nAt least 4-5 years of experience of managing networks (preferably in banking industry).\nStrong interpersonal and professional communication skills.\nAbility to understand data and it's usage.\nPossess good process management and problem solving skills.\nAbility to work in a team with a hands-on approach for tasks and should also be able to work independently.\n\nSubmission Guidelines\nInterested candidates who deem themselves suitable for this vacancy can share their complete profile including (application letter, updated CV, and recent photo) electronically to mentioned email and please indicate the vacancy number AUB/EA/VA/026-032 in the subject line of your email otherwise your application will not be considered.",
+    "details": {
+      "Reference": "AUB/EA/VA/026-032",
+      "Post Date": "2026-07-13 10:40:32.104+00",
+      "Closing Date": "2026-08-13 00:00:00+00",
+      "Functional Area": "Banking",
+      "Countries": "Afghanistan",
+      "Provinces": "Kabul",
+      "Job Type": "full_time",
+      "Contract Type": "permanent",
+      "Gender": "any",
+      "Education": "bachelor",
+      "Experience": "4",
+      "Salary": "Company salary scale",
+      "Vacancies": 1,
+      "Submission Through": "email"
+    },
+    "scraped_at": "2026-07-14T06:31:16Z",
+    "also_found_on": []
+  },
+  {
     "id": "c6883db9c407be71",
     "source": "acbar",
     "source_url": "https://www.acbar.org/jobs/142538/astad-dr-rshth-hay-kmbyotr-saynsaktsad-shraayat-ryadyat-o-fzyk-re-announced.jsp",
@@ -1675,6 +1678,59 @@
     },
     "scraped_at": "2026-05-31T05:57:29Z",
     "also_found_on": []
+  },
+  {
+    "id": "cc98fdbe3cace649",
+    "source": "kaarobar",
+    "source_url": "https://www.kaarobar.net/jobs/17101/senior-frontend-developer",
+    "url": "https://www.kaarobar.net/jobs/17101/senior-frontend-developer",
+    "title": "Senior FrontEnd Developer",
+    "company": "Afgano LLC",
+    "location": "Kabul",
+    "closing_date": "2026-08-30",
+    "closing_date_raw": "2026-08-30",
+    "category": "Information Technology, IT",
+    "job_type": "Full Time",
+    "gender": "Male/Female",
+    "vacancies": "1",
+    "salary": "Negotiable (in Afghanis) – based on experience and qualifications.",
+    "apply_url": "https://www.kaarobar.net/jobs/apply/17101/senior-frontend-developer",
+    "apply_emails": [
+      "admin@timedelivery.af"
+    ],
+    "apply_phones": [],
+    "description": "About Afgano LLC\nAFGANO LLC is a fast-growing, technology-driven organization dedicated to building scalable, secure, and high-performance digital solutions. We foster a culture of innovation, collaboration, and continuous learning, empowering our teams to solve complex problems and deliver real-world impact through modern technologies.\n\nJob Descriptions\nWe are looking for a talented Senior FrontEnd Developer to join our dynamic engineering team. In this role, you will be responsible for:\nDesigning, developing, and maintaining responsive, user-friendly interfaces using NextJS and modern frontend frameworks.\nIntegrating seamlessly with backend services built on the NestJS framework.\nCollaborating with cross-functional teams to implement and optimize delivery-related algorithms , including route optimization and GPS tracking functionalities.\nWriting clean, maintainable, and efficient code following industry best practices.\nTroubleshooting, debugging, and upgrading existing systems to ensure high performance and scalability.\nParticipating in code reviews, technical discussions, and agile development processes.\nEnsuring the technical feasibility of UI/UX designs and optimizing applications for maximum speed and scalability.\n\nJob Requirements\nExperience: Senior level (3+ years of professional experience in frontend/software development).\nEducation: Degree is not mandatory; practical experience and proven skills are valued.\nTechnical Skills:\nStrong proficiency in JavaScript/TypeScript and the Node.js ecosystem.\nHands-on experience with NextJS and React for frontend development.\nExperience working with NestJS for API integration and backend communication.\nSolid understanding of algorithms , particularly in delivery/logistics domains such as:\nRoute optimization\nGPS tracking\nETA (Estimated Time of Arrival) calculations\nGeospatial data handling\nFamiliarity with state management libraries (e.g., Redux, Zustand).\nExperience with RESTful APIs and WebSocket integration.\nKnowledge of version control systems (Git).\nStrong problem-solving skills and attention to detail.\nAbility to work independently and as part of a collaborative team.\nExcellent communication skills in English (written and spoken).\n\nSubmission Guidelines\nInterested and qualified candidates are invited to submit their CV/Resume via email to:\nadmin@timedelivery.af\nPlease mention the Vacancy Number (AF-09) in the subject line of your email.\nNote: Only shortlisted candidates will be contacted for further recruitment steps.\n\nSubmission Email\nadmin@timedelivery.af\nApply",
+    "details": {
+      "Location": "Kabul",
+      "Nationality": "Afghan",
+      "Category": "Information Technology, IT",
+      "Employment Type": "Full Time",
+      "Salary": "Negotiable (in Afghanis) – based on experience and qualifications.",
+      "Vacancy Number": "AF-09",
+      "No. of Jobs": "1",
+      "City": "Kabul",
+      "Organization": "Afgano LLC",
+      "Experience": "3+ years of professional experience in frontend/software development",
+      "Contract Duration": "3-month probation period, then 1-year contract (renewable based on performance)",
+      "Gender": "Male/Female",
+      "Education": "Not mandatory",
+      "Closing Date": "2026-08-30",
+      "Post Date": "2026-07-13",
+      "Functional Area": "Information Technology, IT",
+      "Job Type": "Full Time",
+      "Source": "Kaarobar",
+      "Job Location": "Kabul",
+      "No. Of Jobs": "1",
+      "Years of Experience": "3+ years of professional experience in frontend/software development",
+      "Close date": "2026-08-30"
+    },
+    "scraped_at": "2026-07-14T06:31:33Z",
+    "also_found_on": [
+      {
+        "source": "wazifaha",
+        "url": "https://wazifaha.org/jobs/29969/senior-frontend-developer"
+      }
+    ]
   },
   {
     "id": "3f19ff9e388c4bf4",
