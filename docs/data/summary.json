@@ -1,98 +1,105 @@
 {
-  "generated_at": "2026-07-18T06:26:13.719Z",
-  "today": "2026-07-18",
+  "generated_at": "2026-07-19T07:02:37.337Z",
+  "today": "2026-07-19",
   "total_jobs": 37,
-  "new_count": 0,
-  "expiring_today_count": 2,
-  "expiring_soon_count": 8,
+  "new_count": 2,
+  "expiring_today_count": 3,
+  "expiring_soon_count": 5,
   "tech_banking_count": 5,
-  "new_jobs": [],
-  "expiring_today": [
+  "new_jobs": [
     {
-      "id": "944829ec3f928ef4",
+      "id": "380e348aa1b93388",
+      "source": "kaarobar",
+      "source_url": "https://www.kaarobar.net/jobs/17246/it-network-technician-kabul",
+      "url": "https://www.kaarobar.net/jobs/17246/it-network-technician-kabul",
+      "title": "IT & Network Technician - Kabul",
+      "company": "Ariyabod ISP",
+      "location": "Kabul",
+      "closing_date": "2026-07-30",
+      "closing_date_raw": "2026-07-30",
+      "category": "IT",
+      "job_type": "Full Time",
+      "gender": "Male",
+      "vacancies": "1",
+      "salary": "Based on organization salary scale",
+      "apply_url": "https://www.kaarobar.net/jobs/apply/17246/it-network-technician-kabul",
+      "apply_emails": [
+        "jobs@ariyabod.af"
+      ],
+      "apply_phones": [],
+      "description": "About Ariyabod ISP\nAriyabod is a leading and experienced Internet Service Provider (ISP) based in Afghanistan, with nationwide operational experience since 2020. Over the years, the company has successfully delivered reliable internet connectivity and IT solutions across the country, serving government institutions, private enterprises, non-governmental organizations (NGOs), educational institutions, and residential customers.\nThe company is supported by a team of highly qualified technical and administrative professionals who are committed to delivering innovative, reliable, and customer-focused solutions. Ariyabod's success is built on the quality of its services, operational excellence, and a strong commitment to customer satisfaction.\nAriyabod provides a comprehensive range of services for homes, businesses, and organizations of all sizes. These services include high-speed internet connectivity, enterprise networking solutions, IT infrastructure deployment, managed network services, wireless communications, and technical support designed to meet the evolving needs of its customers.\nThe company's vision is to remain one of Afghanistan's most trusted technology partners while becoming one of the country's leading providers of internet and IT infrastructure solutions. Ariyabod is committed to continuous innovation, adopting modern technologies, and maintaining the highest standards of service quality.\nIn today's rapidly evolving telecommunications industry, Ariyabod consistently strives to do the right thing by providing secure, reliable, and high-performance internet services backed by responsive customer support and expert technical assistance. Through professionalism, integrity, and continuous improvement, the company aims to contribute to Afghanistan's digital transformation and economic development.\n\nJob Descriptions\nJob Summary\nAriyabod ISP is looking for a reliable and experienced IT Technician and Network Engineer to join our team. The successful candidate is responsible for providing technical support to customers regarding Internet services, troubleshooting and resolving customer complaints, and installing and supporting internet services. This position requires excellent technical skills, customer service skills, as well as the ability to work independently and with a team.\nAriyabod ISP is seeking a reliable, experienced, and highly motivated IT Technician & Network Engineer to join our growing team. The successful candidate will be responsible for providing technical support to customers, installing and maintaining internet services, troubleshooting network and connectivity issues, and ensuring the delivery of high-quality technical services.\nThis role requires strong technical expertise in networking and IT systems, excellent problem-solving abilities, outstanding customer service skills, and the ability to work both independently and collaboratively within a team environment.\nKey Responsibilities\nProvide technical support and assistance to customers regarding internet and network services.\nInstall, configure, and maintain internet connectivity for residential and business customers.\nDiagnose, troubleshoot, and resolve network, hardware, and software issues.\nRespond promptly to customer complaints and technical incidents, ensuring timely resolution.\nConfigure and maintain routers, switches, wireless access points, and other networking equipment.\nMonitor network performance and identify potential issues before they impact customers.\nPerform preventive maintenance and routine inspections of network infrastructure.\nDocument technical issues, service requests, and solutions accurately.\nCollaborate with the Network Operations Center (NOC) and other technical teams to resolve complex problems.\nEnsure compliance with company policies, technical standards, and safety procedures.\nProvide on-site technical support and maintenance when required.\nParticipate in network upgrades, expansions, and infrastructure improvement projects.\nRequired Qualifications\nBachelor's degree or diploma in Information Technology, Computer Science, Telecommunications, or a related field.\nMinimum of 2 years of experience in networking, ISP operations, or technical support (preferred).\nStrong knowledge of TCP/IP, LAN/WAN, Wireless Networks, Routing, and Switching.\nExperience with MikroTik, Cisco, Ubiquiti, or similar networking equipment.\nFamiliarity with fiber optic and wireless internet technologies is an advantage.\nKnowledge of Windows and Linux operating systems is desirable.\nExcellent troubleshooting and analytical skills.\nStrong communication and customer service abilities.\nAbility to work under pressure and manage multiple tasks effectively.\nWillingness to travel to customer sites when necessary.\n\nJob Requirements\nJob Requirement\nBachelor's degree in Computer Science, Information Technology, Information and Communication Technology (ICT), Network Engineering, or a related field from a recognized university.\nDemonstrated technical expertise in the installation, configuration, maintenance, and troubleshooting of internet services and network infrastructure.\nHolder of a MikroTik Certified Network Associate (MTCNA) certification or possessing equivalent practical skills.\nSolid understanding of CompTIA Network+ concepts and networking fundamentals.\nKnowledge of Cisco Certified Network Associate (CCNA) technologies is considered a strong advantage.\nStrong understanding of TCP/IP, LAN/WAN, routing, switching, wireless networking, and network security principles.\nExcellent troubleshooting, analytical, and problem-solving skills.\nOutstanding customer service and interpersonal communication skills.\nAbility to work independently as well as collaboratively within a team environment.\nAbility to prioritize tasks, work under pressure, and meet deadlines.\nWillingness to travel to customer locations and provide on-site technical support when required.\n\nSubmission Guidelines\nInterested and qualified candidates are invited to submit their CV along with a cover letter (letter of interest) to jobs@ariyabod.af .\nEmail Subject: IT & Network Technician #47-Kabul- Technician\nOnly shortlisted candidates will be contacted and invited for an interview.\n\nSubmission Email\njobs@ariyabod.af.\nApply",
+      "details": {
+        "Location": "Kabul",
+        "Nationality": "National",
+        "Category": "IT",
+        "Employment Type": "Full Time",
+        "Salary": "Based on organization salary scale",
+        "Vacancy Number": "#47-Kabul- Technician",
+        "No. of Jobs": "1",
+        "City": "Kabul",
+        "Organization": "Ariyabod ISP",
+        "Experience": "2 Years",
+        "Contract Duration": "1 year with the possibility of extension",
+        "Gender": "Male",
+        "Education": "Bachelor or Master degree",
+        "Closing Date": "2026-07-30",
+        "Post Date": "2026-07-19",
+        "Functional Area": "IT",
+        "Job Type": "Full Time",
+        "Source": "Kaarobar",
+        "Job Location": "Kabul",
+        "No. Of Jobs": "1",
+        "Years of Experience": "2 Years",
+        "Close date": "2026-07-30"
+      },
+      "scraped_at": "2026-07-19T07:02:28Z",
+      "also_found_on": [
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/30104/it-network-technician-kabul"
+        }
+      ]
+    },
+    {
+      "id": "bcdc10b983abec2e",
       "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/aamr-tknalwzhy-malwmaty-bst-swm-16",
-      "url": "https://jobs.af/jobs/aamr-tknalwzhy-malwmaty-bst-swm-16",
-      "title": "آمر تکنالوژی معلوماتی (بست سوم)",
-      "company": "Ministry of Economy",
+      "source_url": "https://jobs.af/jobs/call-for-cvs-multiple-tcn-positions-16",
+      "url": "https://jobs.af/jobs/call-for-cvs-multiple-tcn-positions-16",
+      "title": "Call for CVs – Multiple TCN Positions",
+      "company": "Global Star Security Service (GSS)",
       "location": "Kabul, Afghanistan",
-      "closing_date": "2026-07-18",
-      "closing_date_raw": "2026-07-18 00:00:00+00",
-      "category": "Computer Engineering, Information Technology",
+      "closing_date": "2026-07-31",
+      "closing_date_raw": "2026-07-31 00:00:00+00",
+      "category": "OPERATIONS, Operations, Security, Operation, Information Technology, Procurement and logistics",
       "job_type": "full_time",
       "gender": "male",
-      "vacancies": 1,
+      "vacancies": 5,
       "salary": "Company salary scale",
-      "apply_url": "mailto:recruitment.arcsa@aop.gov.af",
-      "apply_emails": [
-        "recruitment.arcsa@aop.gov.af"
-      ],
-      "apply_phones": [
-        "117260732927013994098"
-      ],
-      "description": "Role Summary\nهدف وظيفه:\nمدیریت، نظارت و فراهم آوری تسهیلات فنی و تخنیکی جهت عرضه خدمات بهتر تکنالوژی معلوماتی و مخابراتی .\n\nDuties and Responsibilities\nوظایف و مسئولیت ها\nوظایف اساسی\nﮐﻧﺗرول از راﺟﺳﺗرﯾﺷن دوﻣﯾن ھﺎی ﻣرﺑوطﮫ وزارت ﺑﮫ ﻣﻧظور ﻓﻌﺎل ﻧﮕﮭداﺷﺗن ﺳﯾﺳﺗم ھﺎی آﻧﻠﯾن وزارت.\nﻧظﺎرت از اﻣور ﺗﺧﻧﯾﮑﯽ ﺳرورھﺎ ﺑﮫ ﻣﻧظور ﻓﻌﺎل ﺑودن آﻧﮭﺎ ﺟﮭت اﺳﺗﻔﺎده ﻣﻌﻘول دراﻣوررﺳﻣﯽ وزارت.\nﻧظﺎرت ازﭘروﺳﮫ ﻧﺻب ﺳرورھﺎ، ﺳوﭼﮭﺎ، ﺗﻠﯾﻔون داﺧﻠﯽ ﯾﺎ (PABX) و ﮐﻣره ھﺎی اﻣﻧﯾﺗﯽ ﺑﮫ ﻣﻧظور اﺳﺗﻔﺎده ﻣوﺛردرﺳطﺢ وزارت ·\nرﻓﻊ ﻣﺷﮑﻼت ﺗﺧﻧﯾﮑﯽ وﻓﻧﯽ ﺳﯾﺳﺗم ﻓﺎﯾروال ﺑﻣﻧظورﺟﻠوﮔﯾری ازآﺳﯾب ھﺎی داﺧﻠﯽ و ﺑﯾروﻧﯽ ﺷﺑﮑﮫ ﻧﺗورک وزارت.\nﻧظﺎرت ازروﻧد اﯾﺟﺎد دﯾﺗﺎﺑﯾس ھﺎ دررﯾﺎﺳت ھﺎ ﺑﮫ ﺷﮑل ﻓﻧﯽ ﺑﺎ اﺳﺗﻔﺎده از ﻣﯾﺗود ﻣوﺟود ﺑﻣﻧظورﻋرﺿﮫ ﺧدﻣﺎت ﺑﮭﺗرﺗﮑﻧﺎﻟوژی ﻣﻌﻠوﻣﺎﺗﯽ.\nﮐﻧﺗرول و ﻧظﺎرت ازﭼﮕوﻧﮕﯽ اﺳﺗﻔﺎده ازاﻧﺗرﻧت درﺷﻌﺑﺎت وزارت ﺟﮭت ﺟﻠوﮔﯾری ازﺳوء اﺳﺗﻔﺎده.\nﻧظﺎرت وﮐﻧﺗرول ازاﻣورﺗﺧﻧﯾﮑﯽ ﮐﻣره ھﺎی اﻣﻧﯾﺗﯽ وزارت ودﺳﺗﮕﺎه ﻣرﺑوطﮫ آن ﻏرض ﺣﺻول اطﻣﯾﻧﺎن ازﻓﻌﺎل ﺑودن ﺑﻣﻧظورﺗﺎﻣﯾن ھرﭼﮫ ﺑﮭﺗر اﻣﻧﯾت.\nاﯾﺟﺎد و ﻧﺻب ﺳﯾﺳﺗم ھﺎی اﻣﻧﯾﺗﯽ از ﻗﺑﯾل ﻓﺎﯾروال ھﺎ و اﻧﺗﯽ وﯾروس ﺑﮫ ﮐﻣﭘﯾوﺗر ھﺎی ﺳرورﻏرض ﺟﻠوﮔﯾری از ﺗﺄﺧﯾر در ﻓﻌﺎﻟﯾت ﺳﯾﺳﺗم ﺗﮑﻧﺎﻟوژی ﻣﻌﻠوﻣﺎﺗﯽ.\nﻧظﺎرت و ﮐﻧﺗرول از روﻧد آﭘدﯾت ﻧﻣودن ﻣﻌﻠوﻣﺎت ﻻزم در ﺳرورھﺎی وزارت اﻗﺗﺻﺎد ﺟﮭت ﺣﺻول اطﻣﯾﻧﺎن از ﻓﻌﺎل ﺑودن ﺳﯾﺳﺗم ھﺎی ﺗﮑﻧﺎﻟوژی ﻣﻌﻠوﻣﺎﺗﯽ و وﯾب ﺳﺎﯾت رﺳﻣﯽ وزارت ﺟﮭت اﺳﺗﻔﺎده ﮐﺎرﮐﻧﺎن، ﻣﺷﺗرﯾﺎن و ﻣردم ﻋﺎم .\nاﻧﮑﺷﺎف طرزاﻟﻌﻣل ھﺎ ورھﻧﻣود ھﺎ و اراﺋﮫ ﺧدﻣﺎت ﻻزم Network IT ﯾﺎ ﺗﮑﻧﺎﻟوژی ﻣﻌﻠوﻣﺎﺗﯽ.\nﮐﻧﺗرول وﺑررﺳﯽ ازدﯾزاﯾن واﯾﺟﺎد ﺷﺑﮑﮫ داﺧﻠﯽ وﻣﺳﺗﻘلNetwork) Area (Local آﻣرﯾت ﺗﮑﻧﺎﻟوژی ﻣﻌﻠوﻣﺎﺗﯽ وزارت .\nﺑررﺳﯽ ﻧﯾﺎزﻣﻧدی ھﺎی ﺷﻌﺑﺎت ﭘﯾراﻣون ﺗﺟﮭﯾزھرﭼﮫ ﺑﮭﺗرﺳﯾﺳﺗم ﺗﮑﻧﺎﻟوژی ﻣﻌﻠوﻣﺎﺗﯽ .\n\nJob Requirements\nوظﺎﯾف ھﻣﺎھﻧﮕﯽ\nاﯾﺟﺎد ھﻣﺎھﻧﮕﯽ و ﺗﺎﻣﯾن ارﺗﺑﺎط ﮐﺎری ﻣوﺛر ﺑﺎ ادارات ﻣرﮐزی و وﻻﯾﺗﯽ وزارت ﺟﮭت ﺗﺳﮭﯾل اﺟرای ﻓﻌﺎﻟﯾت ھﺎی ﭘﻼن ﺷده.\nاﯾﺟﺎد ھﻣﺎھﻧﮕﯽ و ﺗﺎﻣﯾن ارﺗﺑﺎطﺎت ﺑﺎ ادارات ﻣرﺗﺑط ﺟﮭت ﺣﺻول اطﻣﯾﻧﺎن ﭘﯾﺷﺑرد ﺑﮭﺗر اﻣور ﻣرﺑوطﮫ.\nﺷراﯾط اﺳﺗﺧدام\nﺗﺎﺑﻌﯾت اﻓﻐﺎﻧﺳﺗﺎن را داﺷﺗﮫ ﺑﺎﺷد.\nﺳن وی از (18)ﺳﺎل ﮐﻣﺗر واز (64)ﺳﺎل ﺑﯾﺷﺗر ﻧﺑﺎﺷد.\nﺳوﯾﮫ ﺗﺣﺻﯾﻠﯽ\nداﺷﺗن ﺳﻧد ﺗﺣﺻﯾﻠﯽ ﻟﯾﺳﺎﻧس در ﯾﮑﯽ از رﺷﺗﮫ ھﺎی ﮐﻣﭘﯾوﺗرﺳﺎﻧﯾس، ﺗﮑﻧﺎﻟوژی ﻣﻌﻠوﻣﺎﺗﯽ، اﻧﺟﻧﯾری ﻧرم اﻓزارﺷﺑﮑﮫ (communication IT) ﺑﮫ ﺗﺎﺋﯾد وزارت ﺗﺣﺻﯾﻼت ﻋﺎﻟﯽ رﺳﯾده ﺑﺎﺷد ﺑﮫ دارﻧده ﮔﺎن درﺟﮫ ﺗﺣﺻﯾﻠﯽ ﺑﺎﻻﺗر در رﺷﺗﮫ ھﺎی ﻓوق اﻟذﮐر ارﺟﺣﯾت داده ﻣﯾﺷود.\nﺗﺟرﺑﮫ ﮐﺎری\nﺣد اﻗل ﯾﮏ ﺳﺎل .\nﻣﮭﺎرﺗﮭﺎی ﻻزم\nﺗواﻧﺎﺋﯽ رھﻧﻣﺎﺋﯽ وﮐﻧﺗرول ﺑﺧش ﻣرﺑوطﮫ.\nﻗﺎﺑﻠﯾت طرح وﺗﻌﯾن ﺧط ﻣﺷﯽ )ﭘﺎﻟﯾﺳﯽ اداره /وزارت ﻣرﺑوطﮫ.\nﺗﺳﻠط ﺑﮫ ﯾﮑﯽ از زﺑﺎن ھﺎی رﺳﻣﯽ ﻣﻠﯽ (دری ﯾﺎ ﭘﺷﺗو)\nﻣﮭﺎرت ھﺎی ﮐﻣﭘﯾوﺗری در ﺑرﻧﺎﻣﮫ ھﺎی ﻣرﺗﺑط ﺑﮫ وظﯾﻔﮫ ﻣرﺑوطﮫ.\n\nSubmission Guidelines\nآگهی\nوزارت اقتصاد به همکاری ریاست فرآهم آوری تسهیلات تعیینات و هماهنګی امور ولایات، ریاست اصلاحات اداری و خدمات ملکی ریاست عمومی اداره امور به منظور سپردن کار به اهل آن و ایجاد اداره سالم و مسلکی بست رتبه سوم آمریت تکنالوژی معلوماتی کمبود خویش را از تاریخ ۱۴۰۵/۴/۱۶ الی ۱۴۰۵/۴/۲۷ مطابق تاریخ ۱۴۴۸/۱/۲۱ الی ۱۴۴۸/۲/۳ به اعلان می‌سپارد.\nداوطلبان واجد شرایط می توانند فورم درخواستی را از لینک ذیل به دست آورده، بعد از خانه پری به شکل PDF که حجم آن بیشتر از MB ۵ نباشد به ایمیل آدرس ( recruitment.arcsa@aop.gov.af ) ارسال نمایند.\nداوطلبان واجد شرایط می‌توانند فورم کاریابی را بشکل حضوری از ریاست فرآهم آوری تسهیلات تعیینات و هماهنگی امور ولایات، ریاست اصلاحات اداری و خدمات ملکی واقع ناحیه پنجم، سرک قرغه، بین چهار راهی پوهنتون تعلیم و تربیه و چهار راهی قمبر، ایستګاه سه راهی دیوان بیګی، انستیتوت خدمات ملکی - کابل اخذ نموده و پس از خانه پری دوباره تسلیم نمایند.\nقابل ذکر است از ارسال فورم درخواستی همزمان به صورت آنلاین و حضوری خوداری نموده تا از تکرار فورم درخواستی جلوگیری صورت گیرد.\nنوت: ضم نمودن کاپی اسناد تحصیلی، تجربه کاری و تذکرۀ تابعیت با فورم درخواستی حتمی میباشد.\nشماره تماس: ۰۲۰۲۱۴۳۰۵۸\nلینک لایحه وظایف بست اعلان شده:\nhttps://drive.google.com/file/d/1Y_N2KwQUdme6U24oE05SIpT5APq7PB0w/view?usp=sharing\nلینک فورم درخواست به شکل پی دی اف:\nhttps://drive.google.com/file/d/10kSjtThd1EI_wX1pW_nY2fQQOVTiWU5S/view?usp=sharing\nلینک فورم درخواستی به شکل ورد:\nhttps://docs.google.com/document/d/1I7WAeIgl29IY5fLg2I3357kZyfnXEKOi/edit?usp=sharing&ouid=117260732927013994098&rtpof=true&sd=true",
+      "apply_url": null,
+      "apply_emails": [],
+      "apply_phones": [],
+      "description": "Role Summary\nGlobal Star Security Services Company (GSS) is inviting applications from qualified Third-Country National (TCN)\nprofessionals to join our team in Afghanistan.\nAvailable\nPositions:\n· Armourer\n· Explosive Detection Dog\n(EDD) K9 Handler\n· EDD K9 Supervisor\n· IT Specialist\n· Logistics Manager\nJob\nSummary: Successful candidates will support GSS operations by ensuring\nthe highest standards of safety, compliance, and professionalism. Roles include\nmaintaining and repairing firearms, conducting explosives detection with\ntrained dogs, supervising K9 operations, managing IT infrastructure and\ncybersecurity, and overseeing logistics, procurement, and fleet management.\nEach position requires proven expertise, discipline, and the ability to work\neffectively in a multinational environment under challenging conditions.\n\nDuties and Responsibilities\n01) Armourer\nDuties & Responsibilities\nInspect, clean, service, and repair firearms and weapon systems.\nDiagnose faults, conduct authorised repairs, and test weapons for safety.\nWithdraw defective firearms from service and ensure secure storage.\nSupport training on safe handling and maintenance of weapons.\nAdvise management on procurement and suitability of firearms.\nMaintain accurate records of inspections, repairs, and weapon movements.\nReport losses, discrepancies, or safety concerns immediately.\nQualifications & Experience\nMinimum 5 years of firearm maintenance/repair experience.\nRecognised qualification as Weapon Artificer/Armourer (Grade 3 or equivalent).\nDiploma or technical certification in small arms maintenance (advantage).\nStrong knowledge of firearms safety, accountability, and secure storage.\nAbility to diagnose faults and perform authorised repairs.\nCompetence in recordkeeping and computer-based tracking systems.\nWillingness to travel to project sites.\nRequired Documentation\nUpdated CV\nNational ID/Passport\nArmourer/Weapon Artificer qualifications\nRelevant training certificates\nTwo professional references\n02) EDD K9 Handler\nDuties & Responsibilities\nDeploy with trained dogs to detect explosives at entry points and security sites.\nConduct searches of vehicles, baggage, parcels, compounds, and facilities.\nEnsure dog welfare through daily checks, feeding, grooming, and exercise.\nParticipate in refresher and continuation training.\nMaintain kennels, posts, and K9 equipment hygienically.\nRecord daily operational activities and prepare reports.\nReport positive indications, suspicious items, or incidents promptly.\nQualifications & Experience\nRecognised EDD K9 Handler certification (preferred).\nMinimum 1 year of security industry experience.\nPrior EDD handling experience with military/police/security organisations (advantage).\nExperience working with dogs or animals (preferred).\nGood understanding of explosives-detection procedures.\nGood English communication and reporting skills.\nBasic computer knowledge (advantage).\nValid passport and physical fitness.\nRequired Documentation\nUpdated CV\nValid passport\nEDD K9 Handler certification (if available)\nSecurity/K9 training certificates\nEmployment/experience certificates\nRecent passport-size photo\nTwo professional references\n03) EDD K9 Supervisor\nDuties & Responsibilities\nSupervise K9 handlers and daily operations.\nMonitor dog health, welfare, feeding, grooming, and housing.\nCoordinate veterinary support and logistical needs.\nOversee kennel hygiene and operational readiness.\nProvide refresher and remedial training for handlers and dogs.\nConduct site visits, inspections, and performance assessments.\nPrepare operational reports and attend management/client meetings.\nEnsure compliance with SOPs, contracts, and legal requirements.\nQualifications & Experience\nMinimum 5 years of experience with Explosive Detection Dogs.\nRecognised qualification in EDD handling, K9 training, or kennel management.\nSupervisory experience managing K9 handlers and operational teams.\nStrong knowledge of welfare, training, and operational requirements.\nExperience in kennel management and hygiene standards.\nExcellent English communication and reporting skills.\nProficiency in computer systems for reporting.\nWillingness to travel to project sites.\nRequired Documentation\nUpdated CV\nValid passport\nEDD/K9 training and kennel-management qualifications\nEmployment/training certificates\nTwo professional references\n04) IT Specialist\nDuties & Responsibilities\nMonitor and maintain IT infrastructure (computers, servers, networks).\nInstall, configure, and update hardware/software.\nDiagnose and resolve technical issues.\nManage user accounts, permissions, and databases.\nImplement backups, disaster recovery, and cybersecurity measures.\nProtect company data against breaches and malware.\nMaintain IT asset inventory and coordinate with vendors.\nTrain employees on secure IT practices and provide technical support.\nQualifications & Experience\nBachelor’s degree/diploma in IT, Computer Science, Cybersecurity, or related field.\nMinimum 5 years of professional IT experience.\nExperience supporting hardware, software, networks, and users.\nProficiency in Microsoft Windows, Office, and business applications.\nKnowledge of network administration, routers, switches, wireless systems.\nUnderstanding of cybersecurity practices (antivirus, firewalls, access controls).\nPreferred certifications: CompTIA A+/Network+/Security+, Microsoft, Cisco CCNA, ITIL.\nStrong troubleshooting and problem-solving skills.\nGood English communication skills.\nValid passport for deployment.\nRequired Documentation\nUpdated CV\nValid passport\nAcademic/professional IT qualifications\nTechnical certifications\nEmployment/experience certificates\nRecent passport-size photo\nTwo professional references\n05) Logistics Manager\nDuties & Responsibilities\nManage logistics for HQ and project sites (equipment, transport, facilities).\nDevelop and improve logistics policies, procedures, and systems.\nOversee procurement, supplier evaluation, and subcontractor management.\nManage accommodation, catering, hygiene, and facility maintenance.\nControl uniforms, PPE, and operational equipment inventory.\nSupport armoury and controlled equipment management.\nOversee vehicle fleet operations (allocation, maintenance, fuel control).\nSupervise drivers and ensure operational readiness.\nEnsure compliance with Afghan law, GSS policies, and contracts.\nQualifications & Experience\nExtensive experience in logistics management within multinational/security organisations.\nProven ability in procurement, supplier/subcontractor management, and fleet operations.\nKnowledge of Afghan laws, regulations, and compliance requirements.\nExperience managing accommodation, catering, hygiene, and facilities.\nStrong organisational, supervisory, and record-keeping skills.\nExcellent English communication skills.\nValid passport and willingness to live/work in Afghanistan.\nRequired Documentation\nUpdated CV\nValid passport\nRelevant logistics/management qualifications\nEmployment/experience certificates\n\nJob Requirements\nCollective Qualifications (General Requirements Across All Roles)\nRelevant professional qualifications or certifications in the respective field.\nProven work experience (minimum 1–5 years depending on the role).\nStrong technical knowledge and practical skills related to the position.\nGood understanding of safety, compliance, and operational procedures.\nStrong integrity, discipline, and accountability.\nGood written and spoken English communication skills.\nAbility to work effectively in a multinational environment.\nPhysical fitness and willingness to live and work in Afghanistan.\nValid passport with sufficient validity for deployment and visa processing.\nComputer literacy and record‑keeping skills (advantage for all roles).\nCollective Required Documentation (For All Applicants)\nUpdated Curriculum Vitae (CV).\nCopy of valid passport or national ID.\nCopies of relevant academic, professional, and technical qualifications.\nCopies of training certificates (where applicable).\nCopies of employment/experience certificates.\nRecent passport‑size photograph.\nContact details of at least two professional references.\n\nSubmission Guidelines\nInternational interested and qualified candidates are strongly encouraged to apply before the stated deadline.\nGiven the urgency of ensuring the regular progress of company missions, Global Star Security Services (GSS) has decided to conduct this recruitment on a rolling basis. Accordingly, GSS reserves the right to conclude the recruitment process once suitable qualified candidates have been identified.\nIf you believe you are among the most qualified applicants for this role, we kindly urge you not to delay and to submit your application at the earliest opportunity.",
       "details": {
-        "Reference": "001",
-        "Post Date": "2026-07-07 10:41:04.282+00",
-        "Closing Date": "2026-07-18 00:00:00+00",
-        "Functional Area": "Computer Engineering, Information Technology",
+        "Reference": "GSS/013/2026",
+        "Post Date": "2026-07-18 11:42:49.113+00",
+        "Closing Date": "2026-07-31 00:00:00+00",
+        "Functional Area": "OPERATIONS, Operations, Security, Operation, Information Technology, Procurement and logistics",
         "Countries": "Afghanistan",
         "Provinces": "Kabul",
         "Job Type": "full_time",
-        "Contract Type": "permanent",
+        "Contract Type": "fixed_term",
         "Gender": "male",
         "Education": "bachelor",
-        "Experience": "1",
+        "Experience": "3 - 6",
         "Salary": "Company salary scale",
-        "Vacancies": 1,
-        "Submission Through": "email"
+        "Vacancies": 5,
+        "Submission Through": "platform"
       },
-      "scraped_at": "2026-07-08T06:43:51Z",
-      "also_found_on": []
-    },
-    {
-      "id": "2f861da2c292a884",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-31",
-      "url": "https://jobs.af/jobs/karmnd-tknalwzhy-kmrh-hay-amnyty-ryast-hyrtan-31",
-      "title": "کارمند تکنالوژی کمره های امنیتی، ریاست حیرتان",
-      "company": "Afghanistan Oil and Gas Company (AOGC)",
-      "location": "Balkh, Afghanistan",
-      "closing_date": "2026-07-18",
-      "closing_date_raw": "2026-07-18 00:00:00+00",
-      "category": "Computer Science, Information Technology",
-      "job_type": "full_time",
-      "gender": "male",
-      "vacancies": 1,
-      "salary": "Company salary scale",
-      "apply_url": "http://178.18.249.112:8080/Recruit/Applicant/ApplicantApply/494C8352-89E1-487E-A721-DA8BB7350821",
-      "apply_emails": [],
-      "apply_phones": [
-        "178.18.249.112",
-        "0202930023"
-      ],
-      "description": "Role Summary\nتأمین، حفظ و مراقبت سیستم‌های تکنالوژی معلوماتی، شبکه‌های کمپیوتری و کمره‌های امنیتی اداره به‌منظور تضمین امنیت اطلاعات، تداوم فعالیت سیستم‌ها، نظارت مؤثر بر ساحات تحت پوشش و فراهم‌سازی خدمات تخنیکی مورد نیاز برای بخش‌های مختلف اداره.\n\nDuties and Responsibilities\n· ترتیب پلان کاری ماهوار، ربعوار و سالانه در مطابقت با پلان مدیریت مربوطه جهت رسیدن به اهداف تعیین‌شده اداره.\n· نصب، تنظیم و راه‌اندازی کمپیوترها، پرنترها، اسکنرها، تجهیزات شبکه و سایر وسایل تکنالوژی معلوماتی مطابق نیازمندی اداره.\n· نصب، تنظیم، عیب‌یابی و حفظ و مراقبت کمره‌های امنیتی، دستگاه‌های ثبت تصاویر و تجهیزات جانبی آن.\n· نظارت دوامدار از فعالیت سیستم کمره‌های امنیتی و اتخاذ اقدامات لازم جهت رفع مشکلات تخنیکی و جلوگیری از وقفه در فعالیت آن‌ها.\n· ثبت، نگهداری و آرشیف تصاویر و ویدیوهای ثبت‌شده مطابق اصول، طرزالعمل‌ها و رهنمودهای نافذۀ اداره.\n· بررسی و تشخیص عیوب شبکه‌های کمپیوتری، تجهیزات مخابراتی و سیستم‌های نظارتی و انجام اقدامات لازم جهت رفع آن‌ها.\n· همکاری در نصب، توسعه و حفظ و مراقبت شبکۀ داخلی، اینترنت و سایر سیستم‌های ارتباطی اداره.\n· انجام سرویس‌های وقایوی و ترمیمی تجهیزات تکنالوژی معلوماتی و کمره‌های امنیتی به منظور جلوگیری از خرابی‌های احتمالی.\n· مدیریت حساب‌های کاربری، دسترسی‌های سیستم و رعایت تدابیر امنیت سایبری در هماهنگی با مسئولین مربوطه.\n· تهیه راپورهای تخنیکی در مورد وضعیت تجهیزات، سیستم‌ها، مشکلات موجود و اقدامات انجام‌شده جهت ارائه به مدیر مربوط.\n· ارائه همکاری‌های تخنیکی به کارکنان اداره در زمینه استفاده از سیستم‌های کمپیوتری، نرم‌افزارها و تجهیزات تکنالوژی معلوماتی.\n· اشتراک در بررسی نیازمندی‌های تخنیکی اداره و ارائه پیشنهادات لازم جهت بهبود سیستم‌های تکنالوژی معلوماتی و امنیتی.\n· کنترول و نظارت از ذخیره‌گاه‌های معلوماتی، سرورها و تجهیزات مربوطه جهت تأمین مصئونیت و دسترسی به اطلاعات.\n· حفظ و مراقبت اسناد، تجهیزات و وسایل تخنیکی سپرده‌شده مطابق اصول و مقررات اداره.\n· ترتیب و ارائه گزارشات ماهوار، ربعوار، سالانه از فعالیت ها و دست آورد ها مدیر مربوطه.\n· اجرای سایر وظایف مرتبط که از سوی آمرین ذیصلاح مطابق قوانین، مقررات و اهداف اداره سپرده می‌شود.\n\nJob Requirements\n· داشتن سند تحصیلی حداقل فوق بکلوریا در رشته‌های تکنالوژی معلوماتی، کمپیوتر ساینس یا سایر رشته‌های مرتبط به وظیفه.\n· داشتن حداقل ۲ سال تجریه کاری مرتبط به وظیفه- حایز سند تحصیلی لیسانس از این حکم مستثنی می باشد.\n\nSubmission Guidelines\nرهنمایی ثبت نام متقاضیان:\nمتقاضیان محترم برای ثبت نام روی لینک زیر کلیک نموده معلومات خویش را ارسال بدارند.\nhttp://178.18.249.112:8080/Recruit/Applicant/ApplicantApply/494C8352-89E1-487E-A721-DA8BB7350821\nدرجریان ثبت نام موارد ذیل را در نظر داشته باشند:\n１. تمام معلومات خویش را دقیق برویت اسناد درج نمایند در صورت نادرست بودن معلومات درج شده متقاضی از پروسه\nحذف میگردد.\n2. یک فرد صرف یکبار ثبت نام کرده میتواند.\n3. در قسمت درج عنوان بست و کود بست دقت لازم نمائید.\nآدرس: ریاست عمومی شرکت امارتی نفت و گاز افغانستان واقع کوتل خیرخانه جوار ناحیه هفدهم، کابل- افغانستان درصورت ضرورت به شماره ذیل تماس گرفته میتوانید: 0202930023\nنوت: تنها برای کاندیدانی تماس گرفته میشود که در بست متذکره شارت لست گردند.\nامتحان بست متذکره در ریاست شرکت امارتی نفت و گاز بندر حیرتان واقع ولایت بلخ اخذ میگردد.",
-      "details": {
-        "Reference": "1164",
-        "Post Date": "2026-07-11 05:58:28.465+00",
-        "Closing Date": "2026-07-18 00:00:00+00",
-        "Functional Area": "Computer Science, Information Technology",
-        "Countries": "Afghanistan",
-        "Provinces": "Balkh",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "male",
-        "Education": "diploma",
-        "Experience": "2",
-        "Salary": "Company salary scale",
-        "Vacancies": 1,
-        "Submission Through": "link"
-      },
-      "scraped_at": "2026-07-11T06:31:27Z",
+      "scraped_at": "2026-07-19T07:02:08Z",
       "also_found_on": []
     }
   ],
-  "expiring_soon": [
+  "expiring_today": [
     {
       "id": "525d1a881110b98d",
       "source": "jobs.af",
@@ -212,7 +219,9 @@
       },
       "scraped_at": "2026-07-06T08:44:25Z",
       "also_found_on": []
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "cd20a5c5d8936bd4",
       "source": "kaarobar",
