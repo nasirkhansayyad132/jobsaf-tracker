@@ -1,45 +1,5 @@
 [
   {
-    "id": "09b61c2442dc432e",
-    "source": "jobs.af",
-    "source_url": "https://jobs.af/jobs/datacom-ip-engineer-16",
-    "url": "https://jobs.af/jobs/datacom-ip-engineer-16",
-    "title": "Datacom IP Engineer",
-    "company": "افغان تیلی کام",
-    "location": "Kabul, Afghanistan",
-    "closing_date": "2026-07-21",
-    "closing_date_raw": "2026-07-21 00:00:00+00",
-    "category": "Computer Science, Information Technology",
-    "job_type": "full_time",
-    "gender": "any",
-    "vacancies": 1,
-    "salary": "Company salary scale",
-    "apply_url": "mailto:hr@afghantelecom.af",
-    "apply_emails": [
-      "hr@afghantelecom.af"
-    ],
-    "apply_phones": [],
-    "description": "Role Summary\nInstalling, configuring, operating and troubleshooting LAN, WAN\n\nDuties and Responsibilities\n· Installing, configuring, operating and troubleshooting LAN, WAN.\n· Configuring routing protocols, like: RIP, EIGRP, OSPF, IS-IS, BGP.\n· Knowledge of static/ default routing.\n· Configuring MPLS, VRF, VPLS, VSI.\n· Knowledge of VLAN, VLAN types and VLAN usage.\n· Familiarity with STP, VTP, VTP Pruning, CDP, LLDP, PPP.\n· Having familiarity with PPPOE and Hotspot setups.\n· Having knowledge and experience of ISP and DPLC/lease networks.\n· Having knowledge of DSL, FTTB and P2MP setups.\n· Knowledge of Load balancing protocols, like: VRRP, HSRP, GLBP.\n· Configuring Prefix-lists, Route-maps.\n· Configuring NAT, PAT.\n· Configuring QoS (Quality of Service) for traffic prioritization.\n· Configuring and managing different series Switches/Routers of Cisco, Mikrotik, ZTE and Huawei.\n· Prepare procedures and technical documentations for network troubleshooting and design.\n· Upgrading IOS of different vendor nodes such as, Cisco, Huawei and ZTE routers and switches.\n· Taking and restoring backup of nodes.\n· Use monitoring tools (PRTG, Zabbix, Cacti, LibreNMS, Pingplotter, The Dude, Nagios, SolarWinds).\n· Troubleshooting and fixing customers’ issues.\n· Installing and configuring server for different purposes.\n· Integrating all Backbone uplinks with the required capacity.\n· Troubleshooting the network and network elements with a proper report.\n· Security aspect, implement IPSec VPN configuration, GRE, DMVPN, port security.\n· In-depth knowledge of Linux/Unix network platform and Firewall.\n· Create runbooks and SOPs (Standard Operating Procedures).\n· Document network diagrams and configurations.\n· Apply security measures (ACLs, anti-spoofing, DDoS mitigation).\n· Use tools like Wireshark , Ping , Traceroute , NetFlow , SNMP.\n· Manage core and edge network devices.\n· Design and deploy system architecture (servers, storage, OS).\n· Install and configure operating systems (Linux, Windows Server).\n· Apply updates, patches, and configuration changes.\n· Implement and manage system-level security (firewalls, antivirus, access controls).\n· Set up and manage virtual machines (VMware, Hyper-V, VMware ESXi).\n· Install and configure server for different purposes/setups using Linux based OS, Like Linux,\n· Support hybrid environments (on-prem + cloud)\n· Automate tasks using scripts (Bash, PowerShell, Python).\n· Set up server roles: DNS, DHCP, Active Directory, File/Print Services, Web Servers (IIS/Apache).\n· Implement and test backup strategies (e.g. Veeam, Acronis, Windows Backup).\n· Having knowledge of virtualization, RAID, SAN/NAS.\nDesirable Attributes:\n· Daily operation activities.\n· Desirable Attributes:\n· Daily operation activities.\n· Daily health check of router/switches.\n· Monitor latency, throughput, and IP availability.\n· Configure and maintain Mikrotik, Cisco, ZTE and Huawei Routers/Switches.\n· Maintain network management i.e. backup / restore.\n· Daily monitor and troubleshoot of various routing protocols i.e. Interior Gateway (IGP) and Exterior Gateway (EGP) etc.\n· Syslog analysis and alarm management.\n· Monitor NMS syslog and troubleshoot the network entities according to syslog alarms.\n· Generate various traffic and performance related reports.\n· Troubleshooting the network and network elements.\nMonitor IOS for critical networks and analysis for further isolation\n\nJob Requirements\nداشتن سند تحصیلی حد اقل لیسانس در یکی از رشته های ( کمپیوترساینس یا IT )\nتجارب : داشتن ( ۱ ) سال تجربه کاری مرتبط به بست برای لیسانس، ( ۱ ) سال برای ماستر و ( ۱ ) سال برای دوکتورا\nمهارت های دیگر :\n· داشتن تسلط کامل به یکی از زبانهای رسمی ( پشتو یا دری ) واشنائی ( تحریر وتکلم ) با زبان انگلیسی\n· داشتن مهارت در پروگرام های کمپیوتر (Ms. Office)\n\nSubmission Guidelines\nمتقاضیان میتوانند cv یا خلص صوانح شانرا به ایمیل آدرس های hr@afghantelecom.af با ذکر نمبر بست (Data IP-W-001) و عنوان بست درموضوع ایمیل ارسال نمایند. متقاضیانیکه درخواستی خویش را بعد از تاریخ اعلان بست ارسال مینمایند و یا هم شرایط مندرج این بست را تکمیل ننمایند شامل پروسه امتحان تحریری و مصاحبه نمیگردند.",
-    "details": {
-      "Reference": "Data IP-W-001",
-      "Post Date": "2026-07-13 06:00:43.3+00",
-      "Closing Date": "2026-07-21 00:00:00+00",
-      "Functional Area": "Computer Science, Information Technology",
-      "Countries": "Afghanistan",
-      "Provinces": "Kabul",
-      "Job Type": "full_time",
-      "Contract Type": "permanent",
-      "Gender": "any",
-      "Education": "bachelor",
-      "Experience": "1 - 3",
-      "Salary": "Company salary scale",
-      "Vacancies": 1,
-      "Submission Through": "email"
-    },
-    "scraped_at": "2026-07-13T07:45:46Z",
-    "also_found_on": []
-  },
-  {
     "id": "4306267e61efadab",
     "source": "kaarobar",
     "source_url": "https://www.kaarobar.net/jobs/16987/general-manager-of-information-technology-gm-it",
