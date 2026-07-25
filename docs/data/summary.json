@@ -1,55 +1,13 @@
 {
-  "generated_at": "2026-07-24T06:43:56.320Z",
-  "today": "2026-07-24",
+  "generated_at": "2026-07-25T06:35:04.664Z",
+  "today": "2026-07-25",
   "total_jobs": 37,
-  "new_count": 1,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 7,
+  "new_count": 0,
+  "expiring_today_count": 2,
+  "expiring_soon_count": 8,
   "tech_banking_count": 9,
-  "new_jobs": [
-    {
-      "id": "945a2e3bcbf4eb89",
-      "source": "jobs.af",
-      "source_url": "https://jobs.af/jobs/it-solaris-system-administrator-31",
-      "url": "https://jobs.af/jobs/it-solaris-system-administrator-31",
-      "title": "IT Solaris System Administrator",
-      "company": "The First MicroFinanceBank - Afghanistan",
-      "location": "Kabul, Afghanistan",
-      "closing_date": "2026-08-06",
-      "closing_date_raw": "2026-08-06 00:00:00+00",
-      "category": "IT - Software, Computer Science",
-      "job_type": "full_time",
-      "gender": "any",
-      "vacancies": 1,
-      "salary": "Company salary scale",
-      "apply_url": "mailto:vacancies@fmfb.com.af",
-      "apply_emails": [
-        "vacancies@fmfb.com.af"
-      ],
-      "apply_phones": [],
-      "description": "Role Summary\nThe Oracle Solaris System Administrator will be responsible for setting up servers, installing servers, creating and implementing Linux configurations, networking servers, and troubleshooting.\nThe Oracle Solaris System Administrator looks after design, installation, maintenance, and retirement of the systems, application server, WebLogic Server, data, security of the systems that are at the core of the organization, This role is responsible for the Technical and server Administration for infrastructure: Designing, building and implementing IT infrastructure; Proving timely and high-quality completion of projects (Tasks and request and ensuring the IT infrastructure environment is up to data through proactive auditing and Patch management.\n\nDuties and Responsibilities\nInstall, configure, upgrade, maintain, and troubleshoot Solaris, Linux, and Windows servers, operating systems, applications, and related infrastructure.\nManage Production (PR) and Disaster Recovery (DR) environments, including load balancing, server migration, resource sharing, high availability, redundancy, backups, and business continuity solutions.\nAdminister user accounts, Active Directory, storage systems (SAN, NAS, Oracle ZFS), virtual machines, and data center infrastructure.\nMonitor system performance, availability, security, backups, patches, upgrades, and disaster recovery readiness to ensure maximum uptime and operational efficiency.\nProvide technical support, automate routine administration tasks, maintain documentation, and manage incident and outage reporting.\nAdminister Oracle FCCM, Oracle OBDX, Oracle WebLogic Servers, Smart Banking systems, and other enterprise applications.\nCollaborate with IT Security, Network, and vendor teams to maintain infrastructure integrity, security, compliance, and performance.\nMonitor data center operations, maintain standards and procedures, and recommend infrastructure improvements and technology upgrades.\nData Center Responsibilities:\nOversee daily health monitoring and reporting of core data center infrastructure.\nMaintain documentation and event logs for processes and activities.\nProvide recommendations for procuring new data center equipment as needed.\nKeeping track of developing trends in data center technologies.\nCollaborating with IT Security and network teams on cybersecurity and network efficiency.\nMake sure the Data Center standard procedure followed by the team, units and vendor\nefficiently.\n\nJob Requirements\nBachelor’s degree in Computer Science, Information Technology, or a related field.\nMinimum 5 years of experience in Solaris, Linux, Unix, and Windows system administration within enterprise or data center environments.\nStrong knowledge of Active Directory, PowerShell scripting, virtualization, storage technologies, server hardware, operating systems, networking, security, and disaster recovery.\nExcellent communication, documentation, reporting, and problem-solving skills.\n\nSubmission Guidelines\nIf you meet the above requirements, we are encouraging you to apply for this position. Please send us your CV along with a cover letter via email ( vacancies@fmfb.com.af ).\nPlease make sure that your email includes the vacancy ID as the subject line.\nFor more information, please visit the FMFB-A website: https://www.fmfb.com.af/jobs/it-solaris-system-administrator/ .",
-      "details": {
-        "Reference": "FMFB-SA-0073-2026",
-        "Post Date": "2026-07-23 08:26:40.9+00",
-        "Closing Date": "2026-08-06 00:00:00+00",
-        "Functional Area": "IT - Software, Computer Science",
-        "Countries": "Afghanistan",
-        "Provinces": "Kabul",
-        "Job Type": "full_time",
-        "Contract Type": "permanent",
-        "Gender": "any",
-        "Education": "bachelor",
-        "Experience": "5 - 7",
-        "Salary": "Company salary scale",
-        "Vacancies": 1,
-        "Submission Through": "email"
-      },
-      "scraped_at": "2026-07-24T06:43:27Z",
-      "also_found_on": []
-    }
-  ],
-  "expiring_today": [],
-  "expiring_soon": [
+  "new_jobs": [],
+  "expiring_today": [
     {
       "id": "482c0b13816c30db",
       "source": "jobs.af",
@@ -130,7 +88,9 @@
       },
       "scraped_at": "2026-07-09T07:57:27Z",
       "also_found_on": []
-    },
+    }
+  ],
+  "expiring_soon": [
     {
       "id": "b5894620298c8ec6",
       "source": "jobs.af",
@@ -327,6 +287,139 @@
         "Submission Through": "email"
       },
       "scraped_at": "2026-07-20T07:38:35Z",
+      "also_found_on": []
+    },
+    {
+      "id": "6dcc6684712c73e7",
+      "source": "kaarobar",
+      "source_url": "https://www.kaarobar.net/jobs/16782/motion-graphic-designer",
+      "url": "https://www.kaarobar.net/jobs/16782/motion-graphic-designer",
+      "title": "Motion Graphic Designer",
+      "company": "Yama Ramin Media Production & Technology (YRMPT)",
+      "location": "Kabul",
+      "closing_date": "2026-07-28",
+      "closing_date_raw": "2026-07-28",
+      "category": "Media-Journalism",
+      "job_type": "Full Time",
+      "gender": "Male",
+      "vacancies": "1",
+      "salary": "As per company salary scale",
+      "apply_url": "https://www.kaarobar.net/jobs/apply/16782/motion-graphic-designer",
+      "apply_emails": [
+        "hr@yrmpt.com"
+      ],
+      "apply_phones": [],
+      "description": "About Yama Ramin Media Production & Technology (YRMPT)\nYama Ramin Media Production and Technology Company (YRMPT) is a well-established media production and technology company, officially registered with the Ministry of Commerce and Industries of Afghanistan. With a strong presence across the country, YRMPT delivers innovative media and technology solutions in collaboration with a diverse range of national and international organizations.\nWe work closely with leading telecom operators, as well as international NGOs, development partners, and humanitarian organizations, and various United Nations agencies. Our projects span media production, digital solutions, communication campaigns, and technology-driven services, contributing to impactful and sustainable initiatives nationwide.\nAt YRMPT, we value professionalism, creativity, innovation, and teamwork. We provide a dynamic working environment that encourages learning, skill development, and growth, while offering opportunities to work on high-impact projects with reputable local and international partners.\nFor more information about our company, services, and portfolio, please visit www.yrmpt.com .\n\nJob Descriptions\nPosition Summary:\nThe Motion Graphic Designer will be responsible for designing and producing high-quality motion graphics, animations, video edits, and visual content for digital and broadcast platforms. The successful candidate will collaborate with the creative and production teams to transform concepts into compelling visual stories while maintaining high creative and technical standards.\nKey Responsibilities\nMotion Graphics & Animation\nDesign and produce high-quality motion graphics, 2D animations, and visual effects for commercials, social media, corporate videos, documentaries, promotional films, and awareness campaigns.\nCreate engaging animated content for digital marketing campaigns, presentations, websites, and multimedia projects.\nDevelop storyboards, style frames, and animation concepts based on project requirements.\nAnimate logos, titles, infographics, typography, and other visual elements.\nVideo Editing & Post-Production\nEdit video content using industry-standard software.\nApply motion graphics, transitions, visual effects, color correction, and sound synchronization.\nCollaborate with videographers, producers, and editors throughout post-production.\nEnsure all deliverables meet quality standards and project deadlines.\nGraphic Design\nDesign static visual assets, including social media graphics, branding materials, brochures, presentations, banners, and marketing collateral.\nEnsure designs are consistent with client branding and project objectives.\nPrepare artwork for digital and print production.\nCollaboration & Project Coordination\nWork closely with the creative, marketing, and production teams to understand client requirements.\nManage multiple design and animation projects simultaneously while meeting deadlines.\nIncorporate feedback from clients and internal stakeholders into final deliverables.\nStay up to date with industry trends, animation techniques, and emerging creative technologies.\n\nJob Requirements\nQualifications & Experience\nBachelor's degree in Graphic Design, Multimedia, Animation, Visual Communication, Fine Arts, or a related field.\nMinimum 3–5 years of professional experience in motion graphics, animation, graphic design, or multimedia production.\nStrong portfolio demonstrating expertise in motion graphics, animation, video editing, and graphic design.\nAdvanced proficiency in Adobe After Effects, Blender, Cinema 4D, Premiere Pro, Photoshop, Illustrator.\nStrong understanding of animation principles, typography, composition, color theory, and visual storytelling.\nAbility to manage multiple projects in a fast-paced production environment.\nPreferred Qualifications\nExperience working in a media production company, advertising agency, or creative studio.\nKnowledge of 3D animation software such as Blender or Cinema 4D.\nExperience with character animation, visual effects (VFX), or UI animation is an advantage.\nFamiliarity with social media content creation and digital marketing trends.\nExcellent communication, teamwork, and time management skills.\n\nSubmission Guidelines\nInterested Afghan candidates with the required qualification and experience should submit their applications electronically through hr@yrmpt.com email. To avoid confusions, disagreement and conflicts during recruitment process all applicants are required to clearly mention position title (Motion Graphic Designer) and vacancy announcement number (YRMPT-HR-072) in the subject lines of their emails otherwise, your CV's will not be considered for this post.\nPlease do not submit any other supporting documentation or educational certificates with your application unless you are requested.\nOnly short listed candidates will be contacted for interview/written test.\n\nSubmission Email\nhr@yrmpt.com\nApply",
+      "details": {
+        "Location": "Kabul",
+        "Nationality": "National",
+        "Category": "Media-Journalism",
+        "Employment Type": "Full Time",
+        "Salary": "As per company salary scale",
+        "Vacancy Number": "YRMPT-HR-072",
+        "No. of Jobs": "1",
+        "City": "Kabul",
+        "Organization": "Yama Ramin Media Production & Technology (YRMPT)",
+        "Experience": "3-5 Years",
+        "Contract Duration": "Permanent",
+        "Gender": "Male",
+        "Education": "Bachelor's degree in Graphic Design, Multimedia, Animation, Visual Communication, Fine Arts, or a related field.",
+        "Closing Date": "2026-07-28",
+        "Post Date": "2026-06-30",
+        "Functional Area": "Media-Journalism",
+        "Job Type": "Full Time",
+        "Source": "Kaarobar",
+        "Job Location": "Kabul",
+        "No. Of Jobs": "1",
+        "Years of Experience": "3-5 Years",
+        "Close date": "2026-07-28"
+      },
+      "scraped_at": "2026-07-01T06:00:11Z",
+      "also_found_on": [
+        {
+          "source": "wazifaha",
+          "url": "https://wazifaha.org/jobs/29624/motion-graphic-designer"
+        }
+      ]
+    },
+    {
+      "id": "a4960e2cbcd2b43c",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/mtkhss-systm-sazy-brnamh-nwys-16",
+      "url": "https://jobs.af/jobs/mtkhss-systm-sazy-brnamh-nwys-16",
+      "title": "متخصص سیستم سازی (برنامه نویس)",
+      "company": "اداره تعليمات تخنيکی و مسلکی",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-07-28",
+      "closing_date_raw": "2026-07-28 00:00:00+00",
+      "category": "Computer Science, Information Technology",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Negotiable",
+      "apply_url": "mailto:tveta933@gmail.com",
+      "apply_emails": [
+        "tveta933@gmail.com"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary\nهدف وظیفه : ساخت سیستم های ERP و یکپارچه سازی سیستم های موجود در چارچوب ERP موردنظر اداره، همچنان ارائه راپور و گزارش به وقت و زمان معین .\n\nDuties and Responsibilities\nوظایف و مسئولیت ها:\nالف) وظایف اساسی:\n1. طراحی، توسعه، پیاده سازی و بهبود سیستم های ERP مطابق نیازمندی های اداره تعلیمات تخنیکی و مسلکی.\n2. تحلیل نیازمندی های واحد های مختلف و تبدیل آنها به راه حل های نرم افزاری قابل اجرا در سیستم .ERP\n3. نگهداری( Maintenance )و به روز رسانی سیستم های موجود به منظور اطمینان پایداری، کارایی و امنیت سیستم ها .\n4. اجرای تست ها و عیب یابی سیستم ها به منظور اطمینان از عملکرد صحیح .\n5. یکپارچه سازی ( Integration ) سیستم های مختلف اداره در چارچوب ERP جهت تبادل مؤثر معلومات و جلوگیری از تکرار داده ها.\n6. ارتقاء و بهبود دسترسی پذیری، سرعت بارگذاری و امنیت و بسایت ها .\n7. تهیه و مدیریت منظم نسخه های پشتیبان ( Backup )از دیتابیس ها و سیستم های اطلاعاتی مطابق پالیسی های امنیتی .\n8. تشخیص، تحلیل و رفع مشکلات تخنیکی سیستم ها و ارائه راه حل های پایدار، معیاری و قابل توسعه .\n9. تهیه مستندات تخنیکی شامل تغییرات سیستم، معماری نرم افزار و راهنمای استفاده .\n10. ارائه آموزش و پشتیبانی تخنیکی به کاربران سیستم های ERP در سطح اداره تعلیمات تخنیکی و مسلکی.\n11. جلوگیری از تکرار و بینظمی در ساخت دیتابیس سیستم مربوطه.\nب) وظایف مدیریتی:\n1 . تهیه و تنظیم پلان‌های کاری ماهانه، ربع‌وار و سالانه با جزئیات دقیق، اولویت‌ها و زمان‌بندی مشخص، در راستای پلان منظور شده اداره تعلیمات تخنیکی و مسلکی به‌ منظور دستیابی به اهداف تعیین‌شده.\n2 . ارائه گزارش‌های ماهانه، ربع‌وار، سالانه و حسب ضرورت از فعالیت‌ها و دستاوردهای بخش، همراه با تحلیل نتایج و پیشنهادات جهت بهبود عملکرد به ریاست مربوط در هماهنگی کمیته متخصصین پروزه ها\n3 . اجرای سایر وظایف مرتبط با مسئولیت‌های کاری که به‌صورت مشخص از طرف ریاست مربوط در هماهنگی کمیته متخصصین پروزه ها مطابق با مقررات و اهداف اداره تعیین و به وی سپرده می‌شود.\nج) وظایف همآهنگی:\n1. هماهنگی و همکاری با تیم سرور در نصب، کانفیگ، نگهداری و بهبود زیرساخت های سروری مرتبط با سیستم های .ERP\n2. هماهنکی و تامین ارتباط با سایر بخش های مربوط و سایر بخش های ذیربط جهت انسجام بهتر امور.\n\nJob Requirements\nشرایط استخدام:\n1. کاندیدا یا متصدی بست متخصص سیستم سازی(برنامه نویس)می­بایست که تابعیت افغانستان را داشته باشد؛\n2. سن کاندیدا یا متصدی بست متخصص سیستم سازی(برنامه نویس)باید از (18) سال کم تر و از (64) سال بیشتر نباشد؛\nرشته تحصیلی: کاندیدا یا متصدی بست متخصص سیستم سازی حداقل دارای سند تحصیلی (کارشناسی ارشد) یا مقاطع تحصیلی بلندتر در یکی از رشته­های (کمپیوتر ساینس – انجینری نرم فزار ) از موسسات تحصیلی داخل یا خارج کشور و به درجات بالاتر اسناد تحصیلی که به تایید وزارت تحصیلات عالی رسیده باشد ارجحیت داده میشود.\nتجربه کاری: کاندیدا یا متصدی بست متخصص سیستم سازی(برنامه نویس)می­بایست حداقل 3 سال تجربه کاری مرتبط برای کارشناسی ارشد مد نظر گرفته شده است، به درجات بلندتر تجربه کاری مد نظر گرفته نشده است\nمهارت های لازم:\nReact-Native و React یا, پایتون در Full Stack Devoloper ·\n· بلدیت کامل با نرم افزار Git.\n· تسلط کامل به توسعه Frontend با JS React\n· تجربه عملی در طراحی و توسعه سیستم های ERP\n· تسلط بر طراحی و مدیریت دیتابیس ها از جمله PostgreSQL: و MySQL\n· توانایی در مدیریت پروژه و همکاری در تیم های چندنفره .\n· مهارت در طراحی و توسعه( RESTful API ) APIs و انجام Integration بین سیستم ها\n· آشنایی کامل با مدیریت و نگهداری سرور های لینوکسی Administration Server Linux\n· توانایی تحلیل، طراحی و پیاده سازی سیستم های مقیاس پذیر Systems Scalable\n· آشنایی با روش های تحلیل سیستم و تولید مستندات نرما زار UML و SRS\nPython (Django & Django REST Framework - DRF) با Backend توسعه به کامل تسلط ·\n\nSubmission Guidelines\nعلاقمندان واجد شرایط می‌توانند فورم‌های درخواستی بست‌ متذکره را دانلود و بعد از خانه پری دقیق ضم اسناد تحصیلی و تجارب کاری خویش الی تاریخ ۱۴۰۵/۵/۶ به شکل آنلاین از طریق ایمیل آدرس tveta933@gmail.com و یا به شکل حضوری به آمریت استخدام، ریاست امور کارکنان اداره تعلیمات تخنیکی و مسلکی تسلیم نمایند.",
+      "details": {
+        "Reference": "NTA",
+        "Post Date": "2026-07-14 10:42:28+00",
+        "Closing Date": "2026-07-28 00:00:00+00",
+        "Functional Area": "Computer Science, Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "fixed_term",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "3",
+        "Salary": "Negotiable",
+        "Vacancies": 1,
+        "Submission Through": "email"
+      },
+      "scraped_at": "2026-07-15T06:33:41Z",
+      "also_found_on": []
+    },
+    {
+      "id": "be2ad3e3dbf7771a",
+      "source": "jobs.af",
+      "source_url": "https://jobs.af/jobs/mtkhss-systm-sazy-w-ankshaf-wrkshap-mly-16",
+      "url": "https://jobs.af/jobs/mtkhss-systm-sazy-w-ankshaf-wrkshap-mly-16",
+      "title": "متخصص سیستم سازی و انکشاف ورکشاپ ملی",
+      "company": "اداره تعليمات تخنيکی و مسلکی",
+      "location": "Kabul, Afghanistan",
+      "closing_date": "2026-07-28",
+      "closing_date_raw": "2026-07-28 00:00:00+00",
+      "category": "Computer Science, Information Technology",
+      "job_type": "full_time",
+      "gender": "male",
+      "vacancies": 1,
+      "salary": "Negotiable",
+      "apply_url": "mailto:tveta933@gmail.com",
+      "apply_emails": [
+        "tveta933@gmail.com"
+      ],
+      "apply_phones": [],
+      "description": "Role Summary\nهدف وظیفه: طرح، انکشاف، معیاری سازی و بهبود سیستم ‌های کاری ورکشاپ ملی به ‌منظور ارتقای کیفیت خدمات ترمیم و مدیریت تجهیزات تکنالوژی معلوماتی.\n\nDuties and Responsibilities\nالف) وظایف و مسئولیت ‌ها :\nالف) وظایف اساسی:\n1. طرح و انکشاف سیستم ‌های مدیریتی، تخنیکی و عملیاتی ورکشاپ ملی .\n2. مطالعه و تحلیل روند های موجود ورکشاپ و ارائه طرح ‌های اصلاحی جهت افزایش مؤثریت و کاهش زمان ترمیم تجهیزات .\n3. تدوین، بازنگری و معیاری ‌سازی طرزالعمل‌ ها، رهنمود ها، لوایح، فورم‌ های مربوطه و پروسه‌ های کاری ورکشاپ .\n4. ایجاد سیستم ثبت، تعقیب و گزارش ‌دهی تجهیزات وارده، در حال ترمیم و تحویل ‌شده .\n5. طراحی و انکشاف سیستم مدیریت دارایی ‌ها، پرزه‌ جات، ابزار و تجهیزات ورکشاپ .\n6. تهیه نیازمندی ‌های تخنیکی سیستم‌ های نرم‌افزاری مربوط به ورکشاپ و نظارت بر تطبیق آن .\n7. ایجاد سیستم‌ های کنترول کیفیت خدمات ترمیم و ارزیابی عملکرد تخنیکی ورکشاپ .\n8. تحلیل آمار خرابی تجهیزات و ارائه راهکار های کاهش هزینه ‌ها و افزایش عمر تجهیزات .\n9. تهیه پلان‌ های انکشافی کوتاه ‌مدت، میان ‌مدت و دراز مدت برای ورکشاپ ملی .\n10. بررسی و ابراز نظر پیرامون تکنالوژی‌های جدید مرتبط با تعمیرات تجهیزات ICT و ارائه پیشنهاد جهت تطبیق آن‌ ها .\n11. ایجاد سیستم مدیریت دانش جهت ثبت تجارب، راهکار های تخنیکی و مستند سازی تعمیرات .\n12. اشتراک در کمیته‌ های تخنیکی، پروژه ‌های انکشافی و برنامه‌ های اصلاحات اداری مرتبط با ورکشاپ .\n13. ارائه مشوره ‌های تخصصی به رئیس تکنالوژی معلوماتی و آمر ورکشاپ در زمینه رشد ورکشاپ .\nب) وظایف مدیریتی:\n1. تهیه و تنظیم پلان‌های کاری ماهانه، ربع‌وار و سالانه با جزئیات دقیق، اولویت‌ها و زمان‌بندی مشخص، در راستای پلان منظور شده اداره تعلیمات تخنیکی و مسلکی به‌ منظور دستیابی به اهداف تعیین‌شده.\n2. ارائه گزارش‌های ماهانه، ربع‌وار، سالانه و حسب ضرورت از فعالیت‌ها و دستاوردهای بخش، همراه با تحلیل نتایج و پیشنهادات جهت بهبود عملکرد به آمر مربوط در هماهنگی کمیته متخصصین پروزه ها\n3. اجرای سایر وظایف مرتبط با مسئولیت‌های کاری که به‌صورت مشخص از طرف آمر مربوط در هماهنگی کمیته متخصصین پروزه ها مطابق با مقررات و اهداف اداره تعیین و به وی سپرده می‌شود.\nج) وظایف همآهنگی:\n1. هماهنگی با آمریت آی ‌تی در زمینه توسعه سیستم ‌های نرم ‌افزاری .\n2. هماهنگی با متخصصین، انجنیران و کارمندان ورکشاپ برای تطبیق سیستم‌ های جدید .\n3. هماهنگی با ادارات استفاده‌کننده خدمات ورکشاپ جهت دریافت نظریات، نیاز های تخنیکی و بهبود کیفیت خدمات .\n4. همکاری با سایر ریاست‌ها و نهادهای ذیربط در پروژه‌ های انکشافی مرتبط با تکنالوژی معلوماتی.\n\nJob Requirements\nشرایط استخدام:\n1.تابعیت افغانستان را داشته باشد.\n2.سن وی از (18) سال کمتر و از (64) سال بیشتر نباشد.\nسویه تحصیلی: داشتن سند تحصیلی حد اقل لیسانس در یکی از رشته های: (کمپیوترساینس، تکنالوژی معلوماتی، انجنیری کمپیوتر) از موسسات تحصیلی ملی و بین المللی داخل یا خارج کشور و به درجات بالاتر اسناد تحصیلی در رشته های فوق الذکر که به تایید نهاد های تعلیمی و تحصیلی را رسیده باشد ارجحیت داده میشود .\nتجربه کاری : حداقل یکسال.\nمهارت های لازم:\n· توانائی رهنمائی و کنترول بخش مربوطه.\n· قابلیت طرح و تعین خط مشی(پالیسی) اداره مربوطه.\n· تسلط به یکی از لسان های رسمی( پشتو ویا دری).\n· مهارت های کمپیوتری در برنامه های مرتبط به وظیفه.\n\nSubmission Guidelines\nعلاقمندان واجد شرایط می‌توانند فورم‌های درخواستی بست‌ متذکره را دانلود و بعد از خانه پری دقیق ضم اسناد تحصیلی و تجارب کاری خویش الی تاریخ ۱۴۰۵/۵/۶ به شکل آنلاین از طریق ایمیل آدرس tveta933@gmail.com و یا به شکل حضوری به آمریت استخدام، ریاست امور کارکنان اداره تعلیمات تخنیکی و مسلکی تسلیم نمایند.",
+      "details": {
+        "Reference": "NTA",
+        "Post Date": "2026-07-14 10:38:10.301+00",
+        "Closing Date": "2026-07-28 00:00:00+00",
+        "Functional Area": "Computer Science, Information Technology",
+        "Countries": "Afghanistan",
+        "Provinces": "Kabul",
+        "Job Type": "full_time",
+        "Contract Type": "fixed_term",
+        "Gender": "male",
+        "Education": "bachelor",
+        "Experience": "3",
+        "Salary": "Negotiable",
+        "Vacancies": 1,
+        "Submission Through": "email"
+      },
+      "scraped_at": "2026-07-15T06:33:41Z",
       "also_found_on": []
     }
   ],
