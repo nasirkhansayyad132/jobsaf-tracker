@@ -1,45 +1,5 @@
 [
   {
-    "id": "85649716794f70a1",
-    "source": "jobs.af",
-    "source_url": "https://jobs.af/jobs/developer-bi-31",
-    "url": "https://jobs.af/jobs/developer-bi-31",
-    "title": "Developer- BI",
-    "company": "ATOMA",
-    "location": "Kabul, Afghanistan",
-    "closing_date": "2026-07-27",
-    "closing_date_raw": "2026-07-27 00:00:00+00",
-    "category": "Business Development, Data Analysis",
-    "job_type": "full_time",
-    "gender": "any",
-    "vacancies": 1,
-    "salary": "Company salary scale",
-    "apply_url": "mailto:careers@atoma.com.af",
-    "apply_emails": [
-      "careers@atoma.com.af"
-    ],
-    "apply_phones": [],
-    "description": "Role Summary\n• Plan, design and analyze user request and requirements for the implementation and development of data processing systems.\n• Coordinate the activities of lower level developers and programmers working within the department, or coordinate/lead a project team in the design, development and analysis of data processing systems.\n\nDuties and Responsibilities\n• Maintain all the SQL servers, CDRs, business intelligence reports etc. as per requirement of stakeholders, arrange and manage database for the said process, prepare dashboards and IT portals to manage the current and the required run rate of the business intelligence processes.\n• Co-ordinate with various function teams for collecting data and analyze the various requirement to automate them requirements for generating reports and supporting data.\n• Responsible for proper availability and management of CDRs based on log generation on the Network/Server, ensure IT processes supporting the CDR availability are up and running, oversee loading the file data in source tables (related to SCAP, GPRS etc).\n• Coordinate with internal stakeholders(Marketing, Finance, Sales etc)to explore new functionality areas and get support for specific issues, analytical software/tools to create databases for specific business problems to provide insight to the business teams\n• Entertain the requests of internal stakeholders (Marketing, Finance, Sales etc) related to reports/data availability for analyzing the trends of RGS (revenue generated subscribers) on daily basis to support them in formulating and deciding the way forward for churn management.\n• Supervise the automation of the report generation mechanism. Check the frequency (weekly/monthly) of reports required by the internal stakeholders. Ensure that the frequently required reports are automated and are available on BI portal as per the agreed timelines.\n• Understand advance analytics requirements; Allocate and supervise work among team members to carry out R&D work for testing of probability models for segmentation and prediction\n\nJob Requirements\nEducation:\n• Bachelor’s degree in Computer science or related field 3 years of systems/programming experience\nExperience :\n• 3 – 5 years of systems/programming experience; or, Vocational degree in Computer Science or related field and 4 years of systems/programming experience\n• SQL Plus and SQL procedure experience is required\nTraining :\n• Application development methodology\n• Project management\n• Joint application development\n• Power BI or OBIEE\n• Specific ERP training (one or more packages e.g. IFS, SAP, People soft, Oracle, etc)\nCompetencies:\nKnowledge :\n• Knowledge of the theory, principles and practices of system specification standards and applications programming.\n• Knowledge of the functions and capabilities of data computing.\n• Skill in the use of the programming and job control languages specific to the assignment.\n• Skill in coordinating and directing the work of project team members.\n• Able to communicate effectively\nTechnical competencies:\n• Specific ERP training (one or more packages e.g. IFS, SAP, People soft, Oracle, etc)\n\nSubmission Guidelines\nInterested applicants can send their applications and resumes (with three valid references) by July 27, 2026.\nPlease mention the name of the position you are applying for in your email subject line.\nApplications received after the deadline and those that do not meet the requirements mentioned above will not be considered.\nOnly shortlisted candidates will be contacted for the interview(s)",
-    "details": {
-      "Reference": "ATOMA-IT-July-2026",
-      "Post Date": "2026-07-19 12:28:53.27+00",
-      "Closing Date": "2026-07-27 00:00:00+00",
-      "Functional Area": "Business Development, Data Analysis",
-      "Countries": "Afghanistan",
-      "Provinces": "Kabul",
-      "Job Type": "full_time",
-      "Contract Type": "permanent",
-      "Gender": "any",
-      "Education": "bachelor",
-      "Experience": "3",
-      "Salary": "Company salary scale",
-      "Vacancies": 1,
-      "Submission Through": "email"
-    },
-    "scraped_at": "2026-07-20T07:38:35Z",
-    "also_found_on": []
-  },
-  {
     "id": "6dcc6684712c73e7",
     "source": "kaarobar",
     "source_url": "https://www.kaarobar.net/jobs/16782/motion-graphic-designer",
