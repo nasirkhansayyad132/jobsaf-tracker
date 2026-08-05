@@ -4,20 +4,17 @@
   "description": "",
   "main": "jobsaf_scrape.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test test/*.test.js",
+    "validate": "node ../scripts/validate-data.mjs ../docs/data/jobs.json ../docs/data/summary.json --min-jobs 10 --min-sources 3 --max-expired 0 --require-relevance"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.15.2",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "express": "^5.2.1",
-    "p-limit": "^3.1.0",
-    "puppeteer": "^24.1.1",
-    "puppeteer-core": "^24.1.1",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "p-limit": "^3.1.0"
   }
 }

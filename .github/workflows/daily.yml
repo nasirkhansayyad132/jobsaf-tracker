@@ -1,129 +1,221 @@
-name: Daily Afghanistan Jobs Scrape & Notify
+name: Daily Afghanistan Tech Jobs
 
 on:
   schedule:
-    # Run daily at 9:00 AM Kabul time (4:30 AM UTC)
+    # GitHub cron is UTC: 04:30 UTC is 09:00 Asia/Kabul.
     - cron: '30 4 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: daily-jobs-scrape
+  group: jobs-data-publish
   cancel-in-progress: false
 
 jobs:
-  scrape-and-notify:
+  scrape:
+    name: Scrape and validate
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 35
+    permissions:
+      contents: read
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
+      - name: Checkout repository without write credentials
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
-          fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '24'
-          package-manager-cache: false
+          cache: npm
+          cache-dependency-path: scraper/package-lock.json
 
-      - name: Install Scraper dependencies
-        env:
-          PUPPETEER_SKIP_DOWNLOAD: 'true'
-        run: |
-          cd scraper
-          npm ci
+      - name: Install scraper dependencies
+        working-directory: scraper
+        run: npm ci --ignore-scripts
 
-      - name: Create data directories
+      - name: Audit scraper dependencies
+        working-directory: scraper
+        run: npm audit --audit-level=high
+
+      - name: Preserve previous data as the safety baseline
         run: |
           mkdir -p data docs/data scraper/debug
-
-      - name: Backup previous jobs for comparison
-        run: |
           if [ -f docs/data/jobs.json ]; then
             cp docs/data/jobs.json data/last_jobs.json
-            echo "Backed up previous jobs.json to data/last_jobs.json"
           else
-            echo "No previous jobs.json found"
-            echo "[]" > data/last_jobs.json
+            echo '[]' > data/last_jobs.json
           fi
 
-      - name: Run scraper
+      - name: Run all source scrapers
+        working-directory: scraper
         run: |
-          cd scraper
           node scrape_all.js \
             --json ../docs/data/jobs.json \
             --csv ../data/jobs.csv \
             --max-pages 10 \
             --debug-dir debug
 
-      - name: Generate Summary
-        run: |
-          cd scraper
-          node generate_summary.js ../docs/data/jobs.json ../docs/data/summary.json ../data/last_jobs.json
+      - name: Generate compact public summary
+        working-directory: scraper
+        run: node generate_summary.js ../docs/data/jobs.json ../docs/data/summary.json ../data/last_jobs.json
 
-      - name: Set up Python for Email
-        uses: actions/setup-python@v6
+      - name: Validate schema, relevance, freshness, and data-loss limits
+        run: |
+          node scripts/validate-data.mjs \
+            docs/data/jobs.json \
+            docs/data/summary.json \
+            --baseline data/last_jobs.json \
+            --max-drop-percent 35 \
+            --min-jobs 10 \
+            --min-sources 3 \
+            --max-expired 0 \
+            --require-relevance
+
+      - name: Stage validated publication files
+        run: |
+          mkdir -p publish/docs/data publish/data
+          cp docs/data/jobs.json publish/docs/data/jobs.json
+          cp docs/data/summary.json publish/docs/data/summary.json
+          cp data/jobs.csv publish/data/jobs.csv
+
+      - name: Upload validated publication data
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: validated-job-data-${{ github.run_id }}
+          path: publish/
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: scraper-diagnostics-${{ github.run_id }}
+          path: |
+            scraper/debug/
+            docs/data/summary.json
+            data/jobs.csv
+          if-no-files-found: ignore
+          retention-days: 7
+
+  publish:
+    name: Publish validated data
+    needs: scrape
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout the exact scrape revision with write credentials
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Download validated data
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: validated-job-data-${{ github.run_id }}
+          path: generated
+
+      - name: Revalidate downloaded artifact
+        run: |
+          node scripts/validate-data.mjs \
+            generated/docs/data/jobs.json \
+            generated/docs/data/summary.json \
+            --min-jobs 10 \
+            --min-sources 3 \
+            --max-expired 0 \
+            --require-relevance
+
+      - name: Commit and push data update
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo '::error::main advanced after this scrape started; refusing to apply an older artifact over newer repository state.'
+            exit 1
+          fi
+
+          mkdir -p docs/data data
+          cp generated/docs/data/jobs.json docs/data/jobs.json
+          cp generated/docs/data/summary.json docs/data/summary.json
+          cp generated/data/jobs.csv data/jobs.csv
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/jobs.json docs/data/summary.json data/jobs.csv
+
+          if git diff --staged --quiet; then
+            echo 'No data changes to publish.'
+            exit 0
+          fi
+
+          git diff --staged --check
+          git commit -m "Update jobs data: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push origin HEAD:main
+
+  deploy-site:
+    name: Deploy validated site
+    needs: publish
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
+    with:
+      data_artifact: validated-job-data-${{ github.run_id }}
+
+  notify:
+    name: Send digest
+    needs: publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout notification script
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Download validated data
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: validated-job-data-${{ github.run_id }}
+          path: generated
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.11'
 
+      - name: Check notification configuration
+        id: notification
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: |
+          if [ -n "$SMTP_USER" ] && [ -n "$SMTP_PASS" ] && [ -n "$EMAIL_TO" ]; then
+            echo 'enabled=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'enabled=false' >> "$GITHUB_OUTPUT"
+            echo '::warning::Email notification skipped because SMTP_USER, SMTP_PASS, or EMAIL_TO is not configured.'
+          fi
+
       - name: Send email notification
+        if: steps.notification.outputs.enabled == 'true'
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: |
-          python scripts/notify_email.py docs/data/summary.json
-        continue-on-error: true
-
-      - name: Upload scraper debug files
-        if: always()
-        uses: actions/upload-artifact@v6
-        with:
-          name: scraper-debug
-          path: |
-            scraper/debug/
-            docs/data/summary.json
-            data/jobs.csv
-
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          echo "Saving generated files outside repo..."
-          mkdir -p /tmp/job-data
-          cp docs/data/jobs.json /tmp/job-data/jobs.json || true
-          cp docs/data/summary.json /tmp/job-data/summary.json || true
-          cp data/jobs.csv /tmp/job-data/jobs.csv || true
-
-          echo "Fetching latest main..."
-          git fetch origin main
-
-          echo "Resetting local checkout to latest origin/main..."
-          git reset --hard origin/main
-          git clean -fd
-
-          echo "Restoring generated files..."
-          mkdir -p docs/data data
-          cp /tmp/job-data/jobs.json docs/data/jobs.json || true
-          cp /tmp/job-data/summary.json docs/data/summary.json || true
-          cp /tmp/job-data/jobs.csv data/jobs.csv || true
-
-          git add docs/data/jobs.json docs/data/summary.json data/jobs.csv || true
-
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-          git commit -m "📊 Update jobs data: ${TIMESTAMP}"
-
-          git push origin HEAD:main
-          echo "Changes committed and pushed"
+        run: python scripts/notify_email.py generated/docs/data/summary.json generated/docs/data/jobs.json

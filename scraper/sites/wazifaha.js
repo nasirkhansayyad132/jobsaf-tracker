@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
 const cheerio = require("cheerio");
-const pLimit = require("p-limit");
+const { requestText } = require("../lib/http");
+const { enrichCandidates, requireDiscoveredJobs } = require("../lib/html_adapter");
 const {
   extractEmails,
   extractPhones,
@@ -11,7 +11,6 @@ const {
   normSpace,
   parseClosingDate,
 } = require("../lib/normalize");
-const { isRelatedJob } = require("../lib/keywords");
 
 const BASE_URL = "https://wazifaha.org";
 
@@ -28,21 +27,9 @@ function absUrl(href) {
 }
 
 async function getHtml(url) {
-  return getHtmlWithRetry(url);
-}
-
-async function getHtmlWithRetry(url, attempt = 1) {
-  try {
-    const res = await axios.get(url, {
-      timeout: 30000,
-      headers: { "User-Agent": "jobsaf-tracker/1.0" },
-    });
-    return res.data;
-  } catch (error) {
-    if (attempt >= 3) throw error;
-    await new Promise(resolve => setTimeout(resolve, attempt * 1500));
-    return getHtmlWithRetry(url, attempt + 1);
-  }
+  return requestText(url, {
+    onRetry: ({ attempt, delay }) => console.log(`[wazifaha] retry ${attempt} in ${delay}ms: ${url}`),
+  });
 }
 
 function writeDebug(debugDir, file, content) {
@@ -121,6 +108,11 @@ async function enrich(summary) {
   const details = gridDetails($);
   const sections = contentSections($);
   const description = sections.join("\n\n") || htmlToText(ld.description);
+  const recognizedDetail = $(".wz-hero-title").length > 0
+    && ($(".wz-content-section").length > 0 || Object.keys(details).length > 0 || ld["@type"] === "JobPosting");
+  if (!recognizedDetail || !description) {
+    throw new Error("detail page DOM was missing the expected job content");
+  }
   const applyEmail = normSpace($(".wz-apply-email").first().text());
   const emails = extractEmails([description, applyEmail].join("\n"));
   const applyHref = $(".wz-apply-btn").first().attr("href");
@@ -139,7 +131,7 @@ async function enrich(summary) {
     category: details.Category,
     job_type: details["Employment Type"] || summary.job_type,
     gender: details.Gender || summary.gender,
-    vacancies: details["No. of Jobs"] || details["Vacancy Number"],
+    vacancies: details["No of Job"] || details["No of Jobs"] || details["No. of Jobs"] || details["No. Of Jobs"],
     salary: details.Salary,
     apply_url: applyHref ? absUrl(applyHref) : (emails[0] ? `mailto:${emails[0]}` : summary.url),
     apply_emails: emails,
@@ -171,17 +163,21 @@ async function scrape(options = {}) {
   }
 
   const seen = new Map(summaries.map(job => [job.source_url, normalizeJob(job)]));
-  const candidates = Array.from(seen.values()).filter(isRelatedJob);
-  console.log(`[wazifaha] detail candidates: ${candidates.length}/${seen.size}`);
-  const limit = pLimit(concurrency);
-  const records = await Promise.all(candidates.map(job => (
-    limit(() => enrich(job).catch(error => {
+  const candidates = requireDiscoveredJobs("wazifaha", Array.from(seen.values()));
+  console.log(`[wazifaha] enriching ${candidates.length} unique summaries before relevance filtering`);
+  const { records } = await enrichCandidates({
+    siteName: "wazifaha",
+    candidates,
+    // This source starts returning 503/ECONNREFUSED under higher detail-page
+    // pressure. Two concurrent requests keeps the crawl bounded and polite.
+    concurrency: Math.min(2, concurrency),
+    enrich,
+    onFailure: (job, error) => {
       console.log(`[wazifaha] detail failed ${job.url}: ${error.message}`);
-      return normalizeJob(job);
-    }))
-  )));
+    },
+  });
 
-  return records.filter(Boolean);
+  return records;
 }
 
 module.exports = {

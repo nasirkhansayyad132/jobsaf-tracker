@@ -6,12 +6,15 @@ const acbar = require("./sites/acbar");
 const jobsaf = require("./sites/jobsaf");
 const kaarobar = require("./sites/kaarobar");
 const wazifaha = require("./sites/wazifaha");
-const { dedupeJobs } = require("./lib/dedupe");
-const { isRelatedJob } = require("./lib/keywords");
-const { normalizeJob, todayKabulISO } = require("./lib/normalize");
-const { writeCSV } = require("./lib/csv");
+const { canonicalUrl, dedupeJobs, referenceKey } = require("./lib/dedupe");
+const { assessJobRelevance } = require("./lib/keywords");
+const { normalizeJob, normalizeTimestamp, todayKabulISO } = require("./lib/normalize");
+const { toCSV } = require("./lib/csv");
 
 const SITES = [jobsaf, acbar, kaarobar, wazifaha];
+const DEFAULT_MISSED_RUN_GRACE = 2;
+const DEFAULT_MAJOR_SOURCE_SIZE = 8;
+const DEFAULT_MAJOR_DROP_RATIO = 0.2;
 
 function arg(name, def = null) {
   const idx = process.argv.indexOf(name);
@@ -29,30 +32,75 @@ function ensureDir(filePath) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
 
-function loadExisting(filePath) {
+function loadExisting(filePath, options = {}) {
   if (!fs.existsSync(filePath)) return [];
+  let data;
   try {
-    const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-    return Array.isArray(data) ? data.map(normalizeJob) : [];
+    data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
   } catch (error) {
-    console.log(`[load] could not read existing jobs: ${error.message}`);
-    return [];
+    throw new Error(`[load] Refusing to replace unreadable existing data at ${filePath}: ${error.message}`);
   }
+  if (!Array.isArray(data)) {
+    throw new Error(`[load] Refusing to replace ${filePath}: expected a JSON array`);
+  }
+  return data.map((record, index) => {
+    if (!record || typeof record !== "object" || Array.isArray(record)) {
+      throw new Error(`[load] Invalid record at index ${index} in ${filePath}`);
+    }
+    return normalizeJob(record, { now: options.now });
+  });
 }
 
 function pageLimitFor(siteName, options) {
   const flag = `--${siteName.replace(/[^a-z0-9]/gi, "").toLowerCase()}-pages`;
-  return parseInt(arg(flag, String(options.maxPages)), 10);
+  const parsed = Number.parseInt(arg(flag, String(options.maxPages || 10)), 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 10;
+}
+
+function safeSiteName(siteName) {
+  const safe = String(siteName || "unknown").replace(/[^a-z0-9.-]/gi, "_");
+  return safe || "unknown";
+}
+
+function siteErrorPath(debugDir, siteName) {
+  return path.join(debugDir, `${safeSiteName(siteName)}.txt`);
 }
 
 function writeSiteError(debugDir, siteName, error) {
   if (!debugDir) return;
   fs.mkdirSync(debugDir, { recursive: true });
   fs.writeFileSync(
-    path.join(debugDir, `${siteName.replace(/[^a-z0-9.-]/gi, "_")}.txt`),
+    siteErrorPath(debugDir, siteName),
     `${error.stack || error.message || error}\n`,
     "utf-8"
   );
+}
+
+function clearSiteError(debugDir, siteName) {
+  if (!debugDir) return;
+  const errorFile = siteErrorPath(debugDir, siteName);
+  try {
+    fs.unlinkSync(errorFile);
+  } catch (error) {
+    if (error.code !== "ENOENT") {
+      console.log(`[debug] could not clear stale diagnostic ${errorFile}: ${error.message}`);
+    }
+  }
+}
+
+function annotateRelevance(record, now) {
+  const job = normalizeJob(record, { now });
+  job.relevance = assessJobRelevance(job);
+  return job;
+}
+
+function prepareRecords(records, options = {}) {
+  const normalized = records
+    .filter(Boolean)
+    .map(record => annotateRelevance(record, options.now))
+    .filter(job => job.title && job.url && job.relevance.decision === "include");
+  if (options.skipDedupe) return normalized;
+  return dedupeJobs(normalized).jobs.map(job => annotateRelevance(job, options.now));
 }
 
 async function runSite(site, options) {
@@ -63,12 +111,131 @@ async function runSite(site, options) {
     maxPages: pageLimitFor(site.name, options),
   };
   const records = await site.scrape(siteOptions);
-  console.log(`[${site.name}] found ${records.length} jobs`);
-  return records;
+  if (!Array.isArray(records)) throw new Error(`${site.name} adapter returned a non-array result`);
+  if (records.length === 0) {
+    throw new Error(`${site.name} discovered zero jobs; refusing to treat a possibly changed source as healthy`);
+  }
+  const related = prepareRecords(records, options);
+  console.log(`[${site.name}] discovered ${records.length}; kept ${related.length} technical jobs`);
+  return { name: site.name, rawCount: records.length, records: related, error: null };
 }
 
-function filterOpenJobs(jobs) {
-  const today = todayKabulISO();
+async function collectSiteResults(sites, options) {
+  return Promise.all(sites.map(async site => {
+    try {
+      const result = await runSite(site, options);
+      clearSiteError(options.debugDir, site.name);
+      return result;
+    } catch (error) {
+      console.log(`[${site.name}] failed: ${error.message}`);
+      writeSiteError(options.debugDir, site.name, error);
+      return { name: site.name, rawCount: 0, records: [], error };
+    }
+  }));
+}
+
+function countBySource(records) {
+  const counts = new Map();
+  for (const record of records) counts.set(record.source, (counts.get(record.source) || 0) + 1);
+  return counts;
+}
+
+function evaluateSourceHealth(results, existing, options = {}) {
+  const existingCounts = countBySource(existing);
+  const minimumSize = options.majorSourceSize ?? DEFAULT_MAJOR_SOURCE_SIZE;
+  const dropRatio = options.majorDropRatio ?? DEFAULT_MAJOR_DROP_RATIO;
+  const health = [];
+
+  for (const result of results) {
+    const previous = existingCounts.get(result.name) || 0;
+    const current = result.records.length;
+    let status = result.error ? "failed" : "healthy";
+    let reason = result.error?.message || null;
+    if (!result.error && previous >= minimumSize && current < Math.max(1, Math.ceil(previous * dropRatio))) {
+      status = "major_drop";
+      reason = `technical job count fell from ${previous} to ${current}`;
+    }
+    health.push({
+      source: result.name,
+      status,
+      previous_count: previous,
+      current_count: current,
+      raw_count: result.rawCount,
+      reason,
+    });
+  }
+  return health;
+}
+
+function assertHealthyRun(results, health, existing, options = {}) {
+  const succeeded = health.filter(item => item.status === "healthy");
+  const majorDrops = health.filter(item => item.status === "major_drop");
+  const freshCount = results.reduce((total, result) => total + result.records.length, 0);
+  const rawCount = results.reduce((total, result) => total + result.rawCount, 0);
+
+  if (!succeeded.length && !(options.allowMajorDrop && majorDrops.length)) {
+    throw new Error("[health] All sources failed or returned an unsafe major drop; existing output was preserved");
+  }
+  if (majorDrops.length && !options.allowMajorDrop) {
+    const detail = majorDrops.map(item => `${item.source} ${item.previous_count}->${item.current_count}`).join(", ");
+    throw new Error(`[health] Refusing major source drop (${detail}); existing output was preserved`);
+  }
+  if (freshCount === 0 && (existing.length > 0 || rawCount === 0)) {
+    throw new Error("[health] No technical jobs were produced; existing output was preserved");
+  }
+}
+
+function lifecycleKeys(record) {
+  return [canonicalUrl(record), referenceKey(record)].filter(Boolean).map(key => `${record.source}|${key}`);
+}
+
+function reconcileLifecycle(existing, fresh, health, options = {}) {
+  const now = normalizeTimestamp(options.now || new Date());
+  const grace = Math.max(0, Number.parseInt(options.missedRunGrace ?? DEFAULT_MISSED_RUN_GRACE, 10));
+  const statusBySource = new Map(health.map(item => [item.source, item.status]));
+  const seen = new Set(fresh.flatMap(lifecycleKeys));
+  const combined = fresh.map(record => ({
+    ...record,
+    active: true,
+    lifecycle_status: "active",
+    missed_runs: 0,
+    last_seen_at: now,
+  }));
+
+  for (const oldRecord of existing) {
+    const sourceStatus = statusBySource.get(oldRecord.source);
+    const wasSeen = lifecycleKeys(oldRecord).some(key => seen.has(key));
+    if (wasSeen) {
+      combined.push(oldRecord);
+      continue;
+    }
+
+    if (sourceStatus === "healthy") {
+      const missedRuns = (oldRecord.missed_runs || 0) + 1;
+      if (missedRuns > grace) continue;
+      combined.push({
+        ...oldRecord,
+        active: true,
+        lifecycle_status: "unconfirmed",
+        missed_runs: missedRuns,
+      });
+      continue;
+    }
+
+    if (sourceStatus === "failed") {
+      combined.push({ ...oldRecord, active: true, lifecycle_status: "source_unavailable" });
+      continue;
+    }
+
+    // Unknown/unmanaged historical sources are preserved and can be reviewed
+    // explicitly instead of disappearing because no adapter ran for them.
+    combined.push({ ...oldRecord, lifecycle_status: oldRecord.lifecycle_status || "unmanaged" });
+  }
+  return combined;
+}
+
+function filterOpenJobs(jobs, now) {
+  const today = todayKabulISO(now);
   return jobs.filter(job => !job.closing_date || job.closing_date >= today);
 }
 
@@ -76,60 +243,105 @@ function sortJobs(jobs) {
   jobs.sort((a, b) => {
     const closeCompare = (a.closing_date || "9999-12-31").localeCompare(b.closing_date || "9999-12-31");
     if (closeCompare !== 0) return closeCompare;
+    const postCompare = (b.post_date || "0000-00-00").localeCompare(a.post_date || "0000-00-00");
+    if (postCompare !== 0) return postCompare;
     return (a.title || "").localeCompare(b.title || "");
   });
+}
+
+function reprocessJobs(records, options = {}) {
+  const prepared = prepareRecords(records, { ...options, skipDedupe: true });
+  const deduped = dedupeJobs(prepared);
+  let jobs = deduped.jobs
+    .map(job => annotateRelevance(job, options.now))
+    .filter(job => job.active !== false && job.relevance.decision === "include");
+  if (options.onlyOpen) jobs = filterOpenJobs(jobs, options.now);
+  sortJobs(jobs);
+  return { jobs, dedupe: deduped };
+}
+
+function validateOutput(jobs, hadInput = false) {
+  if (!Array.isArray(jobs)) throw new Error("[validate] Output is not an array");
+  if (hadInput && jobs.length === 0) throw new Error("[validate] Refusing to replace non-empty input with empty output");
+  const urls = new Set();
+  for (const [index, job] of jobs.entries()) {
+    if (!job.title || !job.source || !job.url) throw new Error(`[validate] Job ${index} is missing title/source/url`);
+    if (job.relevance?.decision !== "include" || job.relevance.score < job.relevance.threshold) {
+      throw new Error(`[validate] Job ${index} has invalid relevance metadata`);
+    }
+    const url = canonicalUrl(job);
+    if (urls.has(url)) throw new Error(`[validate] Duplicate canonical URL: ${url}`);
+    urls.add(url);
+    for (const field of ["post_date", "closing_date"]) {
+      if (job[field] && !/^20\d{2}-\d{2}-\d{2}$/.test(job[field])) {
+        throw new Error(`[validate] Job ${index} has invalid ${field}: ${job[field]}`);
+      }
+    }
+  }
+}
+
+function writeOutputsAtomic(outJson, outCsv, jobs) {
+  ensureDir(outJson);
+  ensureDir(outCsv);
+  const suffix = `.tmp-${process.pid}-${Date.now()}`;
+  const jsonTemp = `${outJson}${suffix}`;
+  const csvTemp = `${outCsv}${suffix}`;
+  try {
+    fs.writeFileSync(jsonTemp, JSON.stringify(jobs, null, 2), "utf-8");
+    fs.writeFileSync(csvTemp, `${toCSV(jobs)}\n`, "utf-8");
+    const check = JSON.parse(fs.readFileSync(jsonTemp, "utf-8"));
+    if (!Array.isArray(check) || check.length !== jobs.length) throw new Error("temporary JSON verification failed");
+    // JSON is the canonical dataset, so replace it last.
+    fs.renameSync(csvTemp, outCsv);
+    fs.renameSync(jsonTemp, outJson);
+  } catch (error) {
+    if (fs.existsSync(jsonTemp)) fs.unlinkSync(jsonTemp);
+    if (fs.existsSync(csvTemp)) fs.unlinkSync(csvTemp);
+    throw error;
+  }
 }
 
 async function scrapeAll(options = {}) {
   const outJson = options.outJson;
   const outCsv = options.outCsv;
-  const debugDir = options.debugDir;
-  ensureDir(outJson);
-  ensureDir(outCsv);
-  fs.mkdirSync(debugDir, { recursive: true });
+  if (!outJson || !outCsv) throw new Error("outJson and outCsv are required");
+  if (options.debugDir) fs.mkdirSync(options.debugDir, { recursive: true });
 
-  const existing = loadExisting(outJson);
+  const existing = loadExisting(outJson, options);
   console.log(`[load] existing ${existing.length} jobs`);
 
-  const scraped = [];
-  for (const site of SITES) {
-    try {
-      const records = await runSite(site, options);
-      scraped.push(...records.map(normalizeJob));
-    } catch (error) {
-      console.log(`[${site.name}] failed: ${error.message}`);
-      writeSiteError(debugDir, site.name, error);
-    }
+  if (options.reprocessOnly) {
+    const processed = reprocessJobs(existing, options);
+    validateOutput(processed.jobs, existing.length > 0);
+    writeOutputsAtomic(outJson, outCsv, processed.jobs);
+    console.log(`[reprocess] kept ${processed.jobs.length}/${existing.length} normalized technical jobs`);
+    return { jobs: processed.jobs, reprocessOnly: true, duplicatesRemoved: processed.dedupe.removed };
   }
 
-  const combined = [...existing, ...scraped];
-  const related = combined.filter(isRelatedJob);
-  console.log(`[filter] kept ${related.length} related jobs`);
-
-  const deduped = dedupeJobs(related);
-  let finalJobs = deduped.jobs;
-  console.log(`[dedupe] removed ${deduped.removed} duplicates`);
-
-  if (options.onlyOpen) {
-    const before = finalJobs.length;
-    finalJobs = filterOpenJobs(finalJobs);
-    console.log(`[filter] kept ${finalJobs.length}/${before} open jobs`);
+  const existingRelated = prepareRecords(existing, options);
+  const results = await collectSiteResults(options.sites || SITES, options);
+  const sourceHealth = evaluateSourceHealth(results, existingRelated, options);
+  for (const item of sourceHealth) {
+    console.log(`[health] ${item.source}: ${item.status} (${item.previous_count} -> ${item.current_count})${item.reason ? `: ${item.reason}` : ""}`);
   }
+  assertHealthyRun(results, sourceHealth, existingRelated, options);
 
-  sortJobs(finalJobs);
+  const fresh = results.flatMap(result => result.records);
+  const reconciled = reconcileLifecycle(existingRelated, fresh, sourceHealth, options);
+  const processed = reprocessJobs(reconciled, options);
+  validateOutput(processed.jobs, existing.length > 0);
+  writeOutputsAtomic(outJson, outCsv, processed.jobs);
 
-  fs.writeFileSync(outJson, JSON.stringify(finalJobs, null, 2), "utf-8");
-  writeCSV(outCsv, finalJobs);
-
-  console.log(`[save] total ${finalJobs.length} jobs saved`);
+  console.log(`[dedupe] removed ${processed.dedupe.removed} duplicates`);
+  console.log(`[save] total ${processed.jobs.length} jobs saved`);
   console.log(`[save] json ${outJson}`);
   console.log(`[save] csv ${outCsv}`);
 
   return {
-    jobs: finalJobs,
-    scrapedCount: scraped.length,
-    relatedCount: related.length,
-    duplicatesRemoved: deduped.removed,
+    jobs: processed.jobs,
+    scrapedCount: results.reduce((sum, result) => sum + result.records.length, 0),
+    duplicatesRemoved: processed.dedupe.removed,
+    sourceHealth,
   };
 }
 
@@ -137,8 +349,8 @@ async function main() {
   const outJson = arg("--json", path.join(process.cwd(), "..", "docs", "data", "jobs.json"));
   const outCsv = arg("--csv", path.join(process.cwd(), "..", "data", "jobs.csv"));
   const debugDir = arg("--debug-dir", path.join(process.cwd(), "debug"));
-  const maxPages = parseInt(arg("--max-pages", "10"), 10);
-  const concurrency = parseInt(arg("--concurrency", "3"), 10);
+  const maxPages = Number.parseInt(arg("--max-pages", "10"), 10);
+  const concurrency = Number.parseInt(arg("--concurrency", "4"), 10);
   const jobsafRawUrl = arg("--raw-url");
 
   await scrapeAll({
@@ -149,6 +361,9 @@ async function main() {
     concurrency,
     jobsafRawUrl,
     onlyOpen: !hasFlag("--include-expired"),
+    reprocessOnly: hasFlag("--reprocess-only"),
+    allowMajorDrop: hasFlag("--allow-major-drop"),
+    missedRunGrace: Number.parseInt(arg("--missed-run-grace", String(DEFAULT_MISSED_RUN_GRACE)), 10),
   });
 }
 
@@ -160,5 +375,16 @@ if (require.main === module) {
 }
 
 module.exports = {
+  assertHealthyRun,
+  clearSiteError,
+  collectSiteResults,
+  evaluateSourceHealth,
+  loadExisting,
+  prepareRecords,
+  reconcileLifecycle,
+  reprocessJobs,
   scrapeAll,
+  validateOutput,
+  writeOutputsAtomic,
+  writeSiteError,
 };

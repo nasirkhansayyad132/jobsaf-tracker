@@ -1,0 +1,107 @@
+name: Quality Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scraper:
+    name: Scraper tests and data validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: scraper/package-lock.json
+
+      - name: Install scraper dependencies
+        working-directory: scraper
+        run: npm ci --ignore-scripts
+
+      - name: Run scraper unit tests
+        working-directory: scraper
+        run: npm test
+
+      - name: Run validator unit tests
+        run: node --test scripts/tests/*.test.mjs
+
+      - name: Validate committed public data
+        run: node scripts/validate-data.mjs docs/data/jobs.json docs/data/summary.json --min-jobs 10 --min-sources 3 --max-expired 0 --require-relevance
+
+      - name: Audit scraper dependencies
+        working-directory: scraper
+        run: npm audit --audit-level=high
+
+  frontend:
+    name: Frontend lint and production artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci --ignore-scripts
+
+      - name: Lint frontend
+        working-directory: frontend
+        run: npm run lint
+
+      - name: Run frontend unit tests
+        working-directory: frontend
+        run: npm test
+
+      - name: Build validated Pages artifact
+        working-directory: frontend
+        run: npm run build:pages
+
+      - name: Audit all frontend dependencies
+        working-directory: frontend
+        run: npm audit --audit-level=high
+
+  python:
+    name: Python syntax
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.11'
+
+      - name: Compile Python utilities
+        run: python -m py_compile scripts/*.py

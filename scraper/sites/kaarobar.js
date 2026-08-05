@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
 const cheerio = require("cheerio");
-const pLimit = require("p-limit");
+const { requestText } = require("../lib/http");
+const { enrichCandidates, requireDiscoveredJobs } = require("../lib/html_adapter");
 const {
   extractEmails,
   extractPhones,
@@ -11,7 +11,6 @@ const {
   normSpace,
   parseClosingDate,
 } = require("../lib/normalize");
-const { isRelatedJob } = require("../lib/keywords");
 
 const BASE_URL = "https://www.kaarobar.net";
 
@@ -28,21 +27,9 @@ function absUrl(href) {
 }
 
 async function getHtml(url) {
-  return getHtmlWithRetry(url);
-}
-
-async function getHtmlWithRetry(url, attempt = 1) {
-  try {
-    const res = await axios.get(url, {
-      timeout: 30000,
-      headers: { "User-Agent": "jobsaf-tracker/1.0" },
-    });
-    return res.data;
-  } catch (error) {
-    if (attempt >= 3) throw error;
-    await new Promise(resolve => setTimeout(resolve, attempt * 1500));
-    return getHtmlWithRetry(url, attempt + 1);
-  }
+  return requestText(url, {
+    onRetry: ({ attempt, delay }) => console.log(`[kaarobar] retry ${attempt} in ${delay}ms: ${url}`),
+  });
 }
 
 function writeDebug(debugDir, file, content) {
@@ -112,10 +99,14 @@ function sections($, root) {
 async function enrich(summary) {
   const html = await getHtml(summary.url);
   const $ = cheerio.load(html);
-  const root = $(".widget.bg-white").first().length ? $(".widget.bg-white").first() : $("body");
+  const detailRoot = $(".widget.bg-white").first();
+  const root = detailRoot.length ? detailRoot : $("body");
   const details = tableDetails($, root);
   const textSections = sections($, root);
   const description = textSections.join("\n\n");
+  if (!detailRoot.length || !description || Object.keys(details).length === 0) {
+    throw new Error("detail page DOM was missing the expected job content");
+  }
   const title = normSpace(root.find("h5").first().text()).replace(/^Position Title:\s*/i, "") || summary.title;
   const applyHref = root.find('a[title="apply"], a[href*="/jobs/apply/"]').first().attr("href");
   const emails = extractEmails(description);
@@ -130,7 +121,7 @@ async function enrich(summary) {
     category: details.Category,
     job_type: details["Employment Type"] || summary.job_type,
     gender: details.Gender || summary.gender,
-    vacancies: details["No. Of Jobs"] || details["Vacancy Number"],
+    vacancies: details["No of Job"] || details["No of Jobs"] || details["No. of Jobs"] || details["No. Of Jobs"],
     salary: details.Salary,
     apply_url: applyHref ? absUrl(applyHref) : (emails[0] ? `mailto:${emails[0]}` : summary.url),
     apply_emails: emails,
@@ -162,17 +153,19 @@ async function scrape(options = {}) {
   }
 
   const seen = new Map(summaries.map(job => [job.source_url, normalizeJob(job)]));
-  const candidates = Array.from(seen.values()).filter(isRelatedJob);
-  console.log(`[kaarobar] detail candidates: ${candidates.length}/${seen.size}`);
-  const limit = pLimit(concurrency);
-  const records = await Promise.all(candidates.map(job => (
-    limit(() => enrich(job).catch(error => {
+  const candidates = requireDiscoveredJobs("kaarobar", Array.from(seen.values()));
+  console.log(`[kaarobar] enriching ${candidates.length} unique summaries before relevance filtering`);
+  const { records } = await enrichCandidates({
+    siteName: "kaarobar",
+    candidates,
+    concurrency,
+    enrich,
+    onFailure: (job, error) => {
       console.log(`[kaarobar] detail failed ${job.url}: ${error.message}`);
-      return normalizeJob(job);
-    }))
-  )));
+    },
+  });
 
-  return records.filter(Boolean);
+  return records;
 }
 
 module.exports = {

@@ -1,294 +1,332 @@
-# Jobs.af Tracker 💼
+# Afghanistan Tech Jobs
 
-A fully free, fully-online job tracker for IT/Tech jobs in Afghanistan.
+A public, multi-source tracker for software, IT, data, networking, cybersecurity,
+telecom, and computer-science opportunities in Afghanistan.
 
-- **PWA Mobile App** - Hosted on GitHub Pages, installable on Android
-- **Daily Email Notifications** - New jobs & expiring jobs via Gmail
-- **Automated Scraping** - GitHub Actions runs daily at 9:00 AM Kabul time
+The project combines a deterministic Node.js scraper, a validated JSON feed,
+an accessible React PWA, optional email digests, and GitHub Actions automation.
 
-## Features
+## How it works
 
-✅ Tracks IT, Software, Data, and Computer Science jobs from jobs.af  
-✅ Mobile-first Progressive Web App (works offline)  
-✅ Search by title, company, location  
-✅ Filter: All, New, Expiring Today, Expiring Soon  
-✅ Shows apply links and emails extracted from job descriptions  
-✅ Daily email digest with new and expiring jobs  
-✅ 100% free using GitHub Actions + GitHub Pages  
-
-## Tech Stack
-
-- Frontend: React + Vite + Tailwind CSS + Framer Motion
-- PWA: vite-plugin-pwa + service worker
-- Scraper: Node.js + Puppeteer + puppeteer-extra stealth
-- Automation: GitHub Actions + GitHub Pages
-- Email: Python SMTP (Gmail)
-
-## How It Works
-
-1. GitHub Actions runs the Node scraper daily to update `docs/data/jobs.json`.
-2. `scraper/generate_summary.js` builds `docs/data/summary.json`.
-3. `scripts/notify_email.py` sends a daily digest via Gmail SMTP.
-4. GitHub Pages serves the static PWA from `docs/`.
-
----
-
-## 📱 Setup Instructions (Android-Friendly)
-
-### Step 1: Fork or Clone This Repository
-
-Click **"Use this template"** or fork this repo to your GitHub account.
-
-### Step 2: Enable GitHub Pages
-
-1. Go to **Settings** → **Pages**
-2. Source: **Deploy from a branch**
-3. Branch: **main**
-4. Folder: **/docs**
-5. Click **Save**
-
-Your site will be available at: `https://YOUR-USERNAME.github.io/REPO-NAME/`
-
-### Step 3: Add GitHub Secrets for Email Notifications
-
-Go to **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
-
-Add these secrets:
-
-| Secret Name | Value |
-|-------------|-------|
-| `SMTP_HOST` | `smtp.gmail.com` |
-| `SMTP_PORT` | `465` |
-| `SMTP_USER` | Your Gmail address (e.g., `you@gmail.com`) |
-| `SMTP_PASS` | Your Gmail App Password (see below) |
-| `EMAIL_TO` | Recipient email address |
-
-### Step 4: Create Gmail App Password
-
-1. Go to [Google Account Security](https://myaccount.google.com/security)
-2. Enable **2-Step Verification** if not already enabled
-3. Go to [App Passwords](https://myaccount.google.com/apppasswords)
-4. Select app: **Mail**, Select device: **Other** (type "Jobs.af")
-5. Click **Generate**
-6. Copy the 16-character password (e.g., `abcd efgh ijkl mnop`)
-7. Use this as your `SMTP_PASS` secret (without spaces)
-
-### Step 5: Run the Workflow Manually
-
-1. Go to **Actions** tab
-2. Click **Daily Jobs.af Scrape & Notify**
-3. Click **Run workflow** → **Run workflow**
-4. Wait for it to complete (5-10 minutes)
-
-### Step 6: Install on Android
-
-1. Open your GitHub Pages URL in Chrome on Android
-2. Tap the **⋮** menu → **Add to Home screen**
-3. Name it "Jobs.af" and tap **Add**
-4. Now you have a native app-like experience!
-
----
-
-## 📁 Repository Structure
-
-```
-/
-├── frontend/                # React + Vite source
-│   ├── src/                 # UI components
-│   ├── public/
-│   │   └── data/jobs.json   # Local dev data source
-│   └── vite.config.js       # Builds into /docs
-│
-├── docs/                    # Built PWA (GitHub Pages output)
-│   ├── index.html
-│   ├── assets/
-│   ├── sw.js
-│   ├── manifest.webmanifest
-│   └── data/
-│       ├── jobs.json
-│       └── summary.json
-│
-├── scraper/
-│   ├── jobsaf_scrape.js     # Puppeteer scraper (primary)
-│   ├── generate_summary.js  # Builds summary.json
-│   ├── server.js            # Local API to trigger a scrape
-│   └── package.json
-│
-├── scripts/
-│   ├── notify_email.py      # Send email notifications
-│   └── postprocess.py       # Optional processing utilities
-│
-├── data/
-│   ├── raw_jobs.json        # Raw scraper output
-│   ├── raw_jobs.csv         # CSV export
-│   └── last_jobs.json       # Previous snapshot for diff
-│
-├── .github/workflows/
-│   ├── daily.yml            # Daily scrape + email + commit
-│   └── scrape.yml           # Manual scrape run
-│
-├── jobsaf_url.txt           # Category URL reference
-└── scraper.py               # Legacy Playwright scraper (unused by workflows)
+```text
+Jobs.af · ACBAR · Kaarobar · Wazifaha
+                  │
+                  ▼
+     fetch → enrich → normalize → score relevance
+                  │
+                  ▼
+       deduplicate → reconcile lifecycle → validate
+                  │
+                  ▼
+        docs/data/jobs.json + summary.json
+               ┌──┴──┐
+               ▼     ▼
+          React PWA  email digest
 ```
 
-Note: `docs/` is generated by `npm run build` in `frontend/`. Avoid editing it by hand.
+The production site is intentionally public. GitHub Pages and the published
+JSON feed are public, so a client-side password cannot provide private access.
+A genuinely private deployment would require an authenticated backend and a
+private data store.
 
----
+## What the tracker does well
 
-## ⚙️ Customization
+- Collects full job details from four job boards instead of trusting list-page
+  titles alone.
+- Uses timeout-aware, status-aware retries with exponential backoff, jitter,
+  and `Retry-After` support.
+- Scores relevance from title, category, functional area, technical duties,
+  and explicit computing-degree requirements. Employer names never affect the
+  score.
+- Excludes medical, finance, audit, cashier, generic administration, customer
+  service, and pure design/social/content roles even when their employer has a
+  technical-sounding name.
+- Stores an explanation with every inclusion under `relevance.reasons`.
+- Lets fresh source data update deadlines and descriptions while retaining
+  `first_seen_at` and advancing `last_seen_at`.
+- Merges same-URL jobs, stable vacancy references, and confident cross-source
+  duplicates while preserving alternate source links.
+- Preserves last-known-good data during source outages and refuses corrupt,
+  empty, or suspiciously collapsed output.
+- Writes JSON and CSV through validated temporary files.
+- Normalizes posting/closing dates, Afghan phone numbers, application channels,
+  and subject-line confidence.
+- Provides search, open/recent/expiring views, normalized technology categories,
+  collapsed-on-demand company/location/salary/vacancy filters, useful sorting,
+  deep-linked job details, safely structured descriptions, reliable application
+  guidance, offline cached data, and keyboard-accessible dialogs.
 
-### Change Job Categories
+## Relevance policy
 
-Update the jobs.af URL used by the scraper:
-- `.github/workflows/daily.yml` (Run scraper step)
-- `scraper/server.js` (local refresh API)
-- `jobsaf_url.txt` (reference for manual runs)
+The tracker targets technical work, not every vacancy at a technology company.
 
-### Change Pages Scanned
+Strong examples include:
 
-Adjust `--max-pages` in:
-- `.github/workflows/daily.yml`
-- `scraper/server.js`
-- Your local `node jobsaf_scrape.js` command
+- software, web, mobile, and API development;
+- data engineering, analytics, databases, AI, and machine learning;
+- systems, networks, cloud, DevOps, IT support, and cybersecurity;
+- technical ICT/telecom roles; and
+- computer-science or software-engineering teaching roles.
 
-### Change Schedule
+Pure graphic design, video/content creation, social media, digital marketing,
+data entry, and non-technical business roles are outside the default scope.
+An explicit Computer Science, Software Engineering, IT, Information Systems,
+cybersecurity, data-science, or related computing degree adds supporting
+evidence to an ambiguous technical title/category. A degree mention cannot
+qualify a generic role by itself or override a clearly non-technical title.
+Rules and regression fixtures live in `scraper/lib/keywords.js` and
+`scraper/test/fixtures/relevance.json`.
 
-Edit `.github/workflows/daily.yml`:
-
-```yaml
-schedule:
-  # Cron format: minute hour day month weekday
-  - cron: '30 4 * * *'  # 4:30 AM UTC = 9:00 AM Kabul
-```
-
-### Change Email Frequency
-
-The workflow runs once daily. To run more frequently, add more cron schedules:
-
-```yaml
-schedule:
-  - cron: '30 4 * * *'   # 9:00 AM Kabul
-  - cron: '30 10 * * *'  # 3:00 PM Kabul
-```
-
----
-
-## 🔧 Local Development
-
-```bash
-# Frontend (Vite)
-cd frontend
-npm install
-npm run dev
-# Open http://localhost:5173
-
-# Build for GitHub Pages (writes to /docs)
-npm run build
-```
-
-```bash
-# Scraper (Node/Puppeteer)
-cd ../scraper
-npm install
-
-# For local UI dev (writes to frontend/public/data/jobs.json)
-node jobsaf_scrape.js --raw-url "<URL>" --max-pages 20 \
-  --json ../frontend/public/data/jobs.json --csv ../data/jobs.csv
-
-# For workflow-compatible output (writes to docs/data)
-node jobsaf_scrape.js --raw-url "<URL>" --max-pages 20 \
-  --json ../docs/data/jobs.json --csv ../data/jobs.csv
-
-# Summary for email notifications
-node generate_summary.js ../docs/data/jobs.json ../docs/data/summary.json ../data/last_jobs.json
-
-# Optional: API server for the Refresh button
-node server.js
-```
-
----
-
-## 📊 Data Format
-
-### jobs.json
+Each published job has:
 
 ```json
-[
-  {
-    "url": "https://jobs.af/jobs/example-job",
-    "source": "jobs.af",
-    "title": "Software Engineer",
-    "company": "Tech Company",
-    "location": "Kabul",
-    "closing_date": "2026-01-25",
-    "closing_date_raw": "Jan 25, 2026",
-    "apply_url": "https://example.com/apply",
-    "apply_emails": ["hr@example.com"],
-    "apply_phones": ["+93 700 000 000"],
-    "description": "Job description...",
-    "details": {
-      "Post Date": "Jan 15, 2026",
-      "Salary Range": "Negotiable"
-    },
-    "scraped_at": "2026-01-17T12:00:00Z"
-  }
-]
-```
-
-### summary.json
-
-```json
-{
-  "generated_at": "2026-01-17T13:30:00",
-  "today": "2026-01-17",
-  "total_jobs": 45,
-  "new_count": 5,
-  "expiring_today_count": 2,
-  "expiring_soon_count": 8,
-  "new_jobs": [...],
-  "expiring_today": [...],
-  "expiring_soon": [...]
+"relevance": {
+  "version": 2,
+  "score": 80,
+  "threshold": 55,
+  "decision": "include",
+  "reasons": ["title: “software developer” (+80)"]
 }
 ```
 
----
+## Recent jobs
 
-## 🐛 Troubleshooting
+“Recent” means posted during the current seven-calendar-day Kabul window. When
+a source does not publish a posting date, the UI clearly falls back to the day
+the tracker first discovered the job. Supported legacy date formats are
+normalized upstream and parsed defensively in the frontend.
 
-### Workflow fails with "No jobs found"
+## Job discovery and pay data
 
-- jobs.af might be temporarily down
-- The scraper might need updating if the site changed
-- Check the debug screenshots in the workflow artifacts
+Publisher categories are preserved in the detail view, but browsing uses a
+small role-based technology taxonomy so a bank's software developer is not
+misleadingly presented as a banking job. Users can refine by technology focus,
+province, company, salary disclosure, and number of openings, then sort by
+posting date, deadline, company, or vacancy count. The detailed refinement
+controls stay hidden until the user opens them with the **Show filters** button.
 
-### Email not sending
+Salary wording is shown exactly as published. Values such as “company scale,”
+“negotiable,” and “not disclosed” stay distinct. Numeric salary ranking is only
+enabled when both currency and pay period are explicit and comparable; the UI
+does not invent amounts or compare unlike units.
 
-- Verify all SMTP secrets are set correctly
-- Make sure you're using an App Password, not your regular password
-- Check that 2-Step Verification is enabled on your Google account
+## Application guidance
 
-### Refresh button does nothing (local dev)
+The scraper distinguishes `email`, `web`, `phone`, and unknown application
+methods. The details screen separates the application link from the original
+listing and never labels a `mailto:` link as a website.
 
-- Start the API server: `node scraper/server.js`
-- Make sure the frontend is running on `http://localhost:5173`
+Subject confidence is explicit:
 
-### PWA not installing
+- `exact`: the publisher supplied the full subject;
+- `reference`: the publisher requires a vacancy/reference value; and
+- `title_template`: the publisher requires a title and/or reference, but the
+  stored value is guidance rather than a guaranteed exact subject.
 
-- Make sure you're using HTTPS (GitHub Pages provides this)
-- Clear browser cache and try again
-- Check that `manifest.webmanifest` is loading correctly
+When no verified instruction exists, the UI tells the user to check the source
+instead of inventing a subject that could cause rejection.
 
----
+## Repository structure
 
-## 📄 License
+```text
+.
+├── frontend/
+│   ├── src/                    React UI, components, and frontend tests
+│   ├── public/                 PWA icons only; no copied jobs dataset
+│   ├── dist/                   local build output, ignored by Git
+│   └── vite.config.js          PWA caching and canonical dev-data middleware
+├── scraper/
+│   ├── sites/                  source adapters
+│   ├── lib/                    HTTP, normalization, relevance, dedupe, CSV
+│   ├── test/                   deterministic scraper and pipeline tests
+│   ├── scrape_all.js           primary multi-source pipeline
+│   ├── generate_summary.js     compact public summary generator
+│   └── server.js               optional loopback-only local control API
+├── docs/
+│   ├── data/                   canonical public jobs and summary datasets
+│   └── ...                     generated fallback Pages shell
+├── scripts/
+│   ├── build-pages.mjs         validated Pages artifact builder
+│   ├── sync-docs-snapshot.mjs  data-preserving fallback-shell updater
+│   ├── validate-data.mjs       schema and quality gates
+│   └── notify_email.py         optional private-recipient email digest
+└── .github/workflows/
+    ├── ci.yml                  tests, lint, build, validation, audits
+    ├── daily.yml               scrape → validate → publish → deploy/notify
+    ├── pages.yml               artifact-based Pages deployment
+    └── scrape.yml              isolated manual scraper check
+```
 
-MIT License - feel free to use, modify, and share!
+`docs/data/jobs.json` is the single canonical public dataset. A normal frontend
+build writes only to `frontend/dist`; it cannot clear or replace production
+data. During `npm run dev`, Vite serves the canonical data directly through a
+development-only middleware.
 
----
+## Local development
 
-## 🙏 Credits
+Node.js 24 is used in CI. Start with clean, lockfile-based installs.
 
-- Data source: [jobs.af](https://jobs.af)
-- Hosting: GitHub Pages (free)
-- Automation: GitHub Actions (free)
-- Icons: Emoji 😊
+### Frontend
+
+```bash
+cd frontend
+npm ci
+npm test
+npm run lint
+npm run dev
+```
+
+Open `http://localhost:5173`. To build the exact validated Pages artifact:
+
+```bash
+npm run build:pages
+npm run preview
+```
+
+### Scraper
+
+```bash
+cd scraper
+npm ci
+npm test
+node scrape_all.js \
+  --json ../docs/data/jobs.json \
+  --csv ../data/jobs.csv \
+  --debug-dir debug \
+  --max-pages 10
+```
+
+Re-normalize, re-score, and deduplicate the current dataset without network
+requests:
+
+```bash
+node scrape_all.js \
+  --json ../docs/data/jobs.json \
+  --csv ../data/jobs.csv \
+  --reprocess-only
+```
+
+Regenerate and validate the compact summary:
+
+```bash
+node generate_summary.js \
+  ../docs/data/jobs.json \
+  ../docs/data/summary.json
+
+cd ..
+node scripts/validate-data.mjs \
+  docs/data/jobs.json \
+  docs/data/summary.json \
+  --min-jobs 10 \
+  --min-sources 3 \
+  --max-expired 0 \
+  --require-relevance
+```
+
+### Optional local scraper API
+
+```bash
+cd scraper
+node server.js
+```
+
+It binds to `127.0.0.1:3001` by default. Exposing another interface requires
+both `SCRAPER_HOST` and `SCRAPER_API_TOKEN`. The public frontend does not depend
+on this server.
+
+## GitHub Pages deployment
+
+In repository **Settings → Pages**, select **GitHub Actions** as the publishing
+source. `.github/workflows/pages.yml` then lints, tests, validates, builds, and
+deploys an isolated artifact. No generated build needs to overwrite canonical
+data.
+
+The repository also keeps a clean fallback shell under `docs/`. Update it only
+with the guarded command below; the script verifies that both canonical data
+files remain byte-for-byte unchanged:
+
+```bash
+cd frontend
+npm run build:docs-snapshot
+```
+
+## Daily automation and email
+
+The daily workflow is scheduled for 04:30 UTC (09:00 Kabul). GitHub controls the
+actual start time, so the schedule is a target rather than a real-time promise.
+
+The scrape job has read-only repository access. Only a separate publish job can
+write the three validated publication files, and it aborts if `main` advanced
+after the scrape began. The same workflow then calls the Pages workflow with
+the exact validated artifact, so deployment does not depend on a bot commit
+triggering a second workflow. Notification failure is visible without undoing
+already validated data publication.
+
+Optional repository secrets:
+
+| Secret | Purpose |
+| --- | --- |
+| `SMTP_HOST` | SMTP host; defaults to `smtp.gmail.com` |
+| `SMTP_PORT` | SMTP SSL port; defaults to `465` |
+| `SMTP_USER` | SMTP login and sender |
+| `SMTP_PASS` | SMTP password or app password |
+| `EMAIL_TO` | One address or a comma-separated recipient list |
+
+Multiple recipients are sent through an undisclosed-recipient header so the
+subscriber list is not exposed to other recipients.
+
+## Data contract
+
+The complete feed is an array of normalized job objects. Important fields are:
+
+```json
+{
+  "id": "stable-id",
+  "source": "jobs.af",
+  "source_url": "https://source.example/job",
+  "url": "https://source.example/job",
+  "title": "Software Engineer",
+  "company": "Example",
+  "location": "Kabul",
+  "post_date": "2026-08-04",
+  "closing_date": "2026-08-20",
+  "category": "Information Technology",
+  "application_method": "email",
+  "application_subject": "REF-42",
+  "application_subject_type": "reference",
+  "apply_url": "mailto:jobs@example.org",
+  "apply_emails": ["jobs@example.org"],
+  "apply_phones": ["+93700123456"],
+  "first_seen_at": "2026-08-04T04:30:00Z",
+  "last_seen_at": "2026-08-05T04:30:00Z",
+  "lifecycle_status": "active",
+  "missed_runs": 0,
+  "relevance": {
+    "version": 2,
+    "score": 80,
+    "threshold": 55,
+    "decision": "include",
+    "reasons": ["title: “software engineer” (+80)"]
+  },
+  "also_found_on": []
+}
+```
+
+`summary.json` contains counts, source freshness, and job IDs only. Email
+rendering hydrates those IDs from `jobs.json` in memory, avoiding a second copy
+of every public job description and contact in the repository.
+
+## Safety and limitations
+
+- Scraped information can be incomplete or changed by the publisher. Always
+  confirm eligibility, deadline, documents, and application instructions on
+  the original listing.
+- Source HTML and APIs change. Adapter failures and unusual count drops are
+  blocked and surfaced, but selectors still require maintenance.
+- Public job descriptions and publisher-provided application contacts are
+  republished in the public feed. Do not add private applicant information.
+- Never commit SMTP credentials or `.env` files.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

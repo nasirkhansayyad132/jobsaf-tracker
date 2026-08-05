@@ -1,6 +1,37 @@
-scraper/debug/*.html
-scraper/debug/*.txt
-scraper/debug/*.json
-scraper/node_modules/
-scraper/node_modules/
-scraper/node_modules/
+# Dependencies and build output
+node_modules/
+frontend/dist/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Runtime/debug output
+*.log
+*.pid
+npm-debug.log*
+scraper/debug/
+data/debug/
+debug/
+data/last_jobs.json
+jobsaf_node/
+publish/
+generated/
+/jobs.json
+/jobs.csv
+/scraper/jobs.json
+/scraper/jobs.csv
+/data/raw_jobs.*
+/data/test_raw_jobs.json
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/

@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
 const cheerio = require("cheerio");
-const pLimit = require("p-limit");
+const { requestText } = require("../lib/http");
+const { enrichCandidates, requireDiscoveredJobs } = require("../lib/html_adapter");
 const {
   extractEmails,
   extractPhones,
@@ -12,12 +12,11 @@ const {
   parseClosingDate,
   unique,
 } = require("../lib/normalize");
-const { isRelatedJob } = require("../lib/keywords");
 
 const BASE_URL = "https://www.acbar.org";
 
 function pageUrl(page) {
-  return page <= 1 ? `${BASE_URL}/jobs` : `${BASE_URL}/jobs?page=${page}`;
+  return page <= 1 ? `${BASE_URL}/en/jobs` : `${BASE_URL}/en/jobs?page=${page}`;
 }
 
 function absUrl(href) {
@@ -29,21 +28,9 @@ function absUrl(href) {
 }
 
 async function getHtml(url) {
-  return getHtmlWithRetry(url);
-}
-
-async function getHtmlWithRetry(url, attempt = 1) {
-  try {
-    const res = await axios.get(url, {
-      timeout: 30000,
-      headers: { "User-Agent": "jobsaf-tracker/1.0" },
-    });
-    return res.data;
-  } catch (error) {
-    if (attempt >= 3) throw error;
-    await new Promise(resolve => setTimeout(resolve, attempt * 1500));
-    return getHtmlWithRetry(url, attempt + 1);
-  }
+  return requestText(url, {
+    onRetry: ({ attempt, delay }) => console.log(`[acbar] retry ${attempt} in ${delay}ms: ${url}`),
+  });
 }
 
 function writeDebug(debugDir, file, content) {
@@ -56,6 +43,40 @@ function parseList(html) {
   const $ = cheerio.load(html);
   const jobs = [];
 
+  // Current ACBAR listing (August 2026). The former /jobs table now redirects
+  // to the homepage, so use the localized route and card markup explicitly.
+  $(".job-card").each((_, item) => {
+    const root = $(item);
+    const link = root.find('a.job-card__title[href*="/en/jobs/details/"]').first();
+    const href = link.attr("href");
+    if (!href) return;
+
+    const companyRoot = root.find(".job-card__company").first().clone();
+    const jobType = normSpace(companyRoot.find(".job-pill").first().text());
+    companyRoot.children().remove();
+    const locationPill = root.find(".job-card__meta .job-pill").filter((__, pill) => (
+      $(pill).find(".fa-map-marker").length > 0
+    )).first();
+    const deadlinePill = root.find(".job-card__meta .job-pill").filter((__, pill) => (
+      $(pill).find(".fa-calendar").length > 0
+    )).first();
+
+    jobs.push({
+      source: "acbar",
+      url: absUrl(href),
+      source_url: absUrl(href),
+      title: normSpace(link.text()),
+      company: normSpace(companyRoot.text()).replace(/[•·]+\s*$/, ""),
+      location: normSpace(locationPill.text()),
+      closing_date_raw: normSpace(deadlinePill.text()),
+      closing_date: parseClosingDate(deadlinePill.text()),
+      job_type: jobType,
+    });
+  });
+
+  if (jobs.length) return jobs;
+
+  // Retain compatibility with the previous table markup if ACBAR rolls back.
   $("table tr").each((_, row) => {
     const cells = $(row).find("td");
     if (cells.length < 5) return;
@@ -92,6 +113,21 @@ function detailsFromListItems($, root) {
   return details;
 }
 
+function detailsFromDefinitionList($, root) {
+  const details = {};
+  root.find(".acbar-jd__info-row").each((_, row) => {
+    const key = normSpace($(row).find(".acbar-jd__info-term").first().text()).replace(/:$/, "");
+    const value = normSpace($(row).find(".acbar-jd__info-desc").first().text());
+    if (key && value) details[key] = value;
+  });
+  root.find(".acbar-jd__info-text").each((_, item) => {
+    const key = normSpace($(item).find(".acbar-jd__info-text-title").first().text()).replace(/:$/, "");
+    const value = normSpace($(item).find(".acbar-jd__info-text-value").first().text());
+    if (key && value) details[key] = value;
+  });
+  return details;
+}
+
 function sectionsFromHeadings($, root) {
   const parts = [];
   root.find("h3").each((_, heading) => {
@@ -104,45 +140,78 @@ function sectionsFromHeadings($, root) {
   return parts;
 }
 
-async function enrich(summary) {
-  const html = await getHtml(summary.url);
+function sectionsFromCards($, root) {
+  const parts = [];
+  root.find(".acbar-jd__card").each((_, card) => {
+    const title = normSpace($(card).find(".acbar-jd__card-title").first().text()).replace(/:$/, "");
+    if (!title || /^about the (company|organization)$/i.test(title)) return;
+    const body = htmlToText($(card).find(".acbar-jd__rich").first().html());
+    if (body) parts.push(`${title}\n${body}`);
+  });
+  return parts;
+}
+
+function parseDetail(html, summary) {
   const $ = cheerio.load(html);
-  const root = $(".job-detail-box").parent().length ? $(".job-detail-box").parent() : $("body");
-  const details = detailsFromListItems($, root);
-  const sections = sectionsFromHeadings($, root);
+  const currentRoot = $(".acbar-jd").first();
+  const legacyRoot = $(".job-detail-box").parent();
+  const root = currentRoot.length ? currentRoot : (legacyRoot.length ? legacyRoot : $("body"));
+  const currentDetails = detailsFromDefinitionList($, root);
+  const details = Object.keys(currentDetails).length ? currentDetails : detailsFromListItems($, root);
+  const currentSections = sectionsFromCards($, root);
+  const sections = currentSections.length ? currentSections : sectionsFromHeadings($, root);
   const description = sections.join("\n\n");
-  const title = normSpace($("h2.job-title").first().text()).replace(/^Position Title:\s*/i, "") || summary.title;
+  const recognizedDetail = currentRoot.length
+    ? root.find(".acbar-jd__title").length > 0 && root.find(".acbar-jd__card").length > 0
+    : legacyRoot.length > 0 && root.find("h2.job-title").length > 0;
+  if (!recognizedDetail || !description || Object.keys(details).length === 0) {
+    throw new Error("detail page DOM was missing the expected job content");
+  }
+  const title = normSpace(root.find(".acbar-jd__title").first().text())
+    || normSpace($("h2.job-title").first().text()).replace(/^Position Title:\s*/i, "")
+    || summary.title;
+  const company = normSpace(root.find(".acbar-jd__org").first().text()) || details.Organization || summary.company;
+  const deadline = normSpace(root.find(".acbar-jd__deadline-value").first().text());
   const posted = normSpace($(".date_posted").first().text());
   const activation = posted.match(/Activation Date:\s*([^&]+?)(?:Announced Date:|Expire Date:|$)/i);
-  const emails = extractEmails(description);
+  const emailText = normSpace(root.find(".acbar-jd__email").first().text());
+  const emails = extractEmails(`${description}\n${emailText}`);
+  const applyHref = root.find('a[href^="mailto:"], a[href*="/applicationform"]').first().attr("href");
 
-  if (activation) details["Post Date"] = parseClosingDate(activation[1]) || normSpace(activation[1]);
+  if (details.Published) details["Post Date"] = details.Published;
+  else if (activation) details["Post Date"] = parseClosingDate(activation[1]) || normSpace(activation[1]);
+  details.Organization = company;
 
   return normalizeJob({
     ...summary,
     title,
-    company: details.Organization || summary.company,
-    location: details["Job Location"] || summary.location,
+    company,
+    location: details.Location || details["Job Location"] || summary.location,
     category: details.Category,
-    job_type: details["Employment Type"],
+    job_type: details.Type || details["Employment Type"] || summary.job_type,
     gender: details.Gender,
-    vacancies: details["No. Of Jobs"] || details["Vacancy Number"],
+    vacancies: details["No of Job"] || details["No of Jobs"] || details["No. of Jobs"] || details["No. Of Jobs"],
     salary: details.Salary,
-    closing_date_raw: details["Close date"] || summary.closing_date_raw,
-    closing_date: parseClosingDate(details["Close date"]) || summary.closing_date,
-    apply_url: emails[0] ? `mailto:${emails[0]}` : summary.url,
+    closing_date_raw: deadline || details["Close date"] || summary.closing_date_raw,
+    closing_date: parseClosingDate(deadline) || parseClosingDate(details["Close date"]) || summary.closing_date,
+    apply_url: applyHref ? absUrl(applyHref) : (emails[0] ? `mailto:${emails[0]}` : summary.url),
     apply_emails: emails,
     apply_phones: extractPhones(description),
     description,
     details: {
       ...details,
       "Post Date": details["Post Date"],
-      "Closing Date": details["Close date"] || summary.closing_date_raw,
+      "Closing Date": deadline || details["Close date"] || summary.closing_date_raw,
       "Functional Area": details.Category,
-      "Job Type": details["Employment Type"],
+      "Job Type": details.Type || details["Employment Type"] || summary.job_type,
       Source: "ACBAR",
     },
   });
+}
+
+async function enrich(summary) {
+  const html = await getHtml(summary.url);
+  return parseDetail(html, summary);
 }
 
 async function scrape(options = {}) {
@@ -161,20 +230,27 @@ async function scrape(options = {}) {
   }
 
   const seen = new Map(summaries.map(job => [job.source_url, normalizeJob(job)]));
-  const candidates = Array.from(seen.values()).filter(isRelatedJob);
-  console.log(`[acbar] detail candidates: ${candidates.length}/${seen.size}`);
-  const limit = pLimit(concurrency);
-  const records = await Promise.all(candidates.map(job => (
-    limit(() => enrich(job).catch(error => {
+  // List pages rarely expose category/functional area. Enrich first so a
+  // generic title such as "Officer" is not discarded before we see IT details.
+  const candidates = requireDiscoveredJobs("acbar", Array.from(seen.values()));
+  console.log(`[acbar] enriching ${candidates.length} unique summaries before relevance filtering`);
+  const { records } = await enrichCandidates({
+    siteName: "acbar",
+    candidates,
+    concurrency,
+    enrich,
+    onFailure: (job, error) => {
       console.log(`[acbar] detail failed ${job.url}: ${error.message}`);
-      return normalizeJob(job);
-    }))
-  )));
+    },
+  });
 
-  return records.filter(Boolean);
+  return records;
 }
 
 module.exports = {
   name: "acbar",
+  pageUrl,
+  parseDetail,
+  parseList,
   scrape,
 };

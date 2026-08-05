@@ -15,40 +15,30 @@ import os
 import smtplib
 import ssl
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from html import escape
 from pathlib import Path
 from typing import Dict, Any, List
+from zoneinfo import ZoneInfo
 
-# Kabul is UTC+4:30
-KABUL_UTC_OFFSET = timedelta(hours=4, minutes=30)
+KABUL_TIMEZONE = ZoneInfo("Asia/Kabul")
 
 
 def get_kabul_today() -> str:
     """Get today's date in Asia/Kabul timezone."""
-    utc_now = datetime.utcnow()
-    kabul_now = utc_now + KABUL_UTC_OFFSET
-    return kabul_now.strftime("%Y-%m-%d")
+    return datetime.now(KABUL_TIMEZONE).strftime("%Y-%m-%d")
 
 
 def get_kabul_date_formatted() -> str:
     """Get formatted date string."""
-    utc_now = datetime.utcnow()
-    kabul_now = utc_now + KABUL_UTC_OFFSET
-    return kabul_now.strftime("%B %d, %Y")
+    return datetime.now(KABUL_TIMEZONE).strftime("%B %d, %Y")
 
 
 def escape_html(text: str) -> str:
     """Escape HTML special characters."""
-    if not text:
-        return ""
-    return (
-        text.replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
+    return escape(str(text), quote=True) if text is not None else ""
 
 
 def job_to_html_row(job: Dict[str, Any]) -> str:
@@ -56,7 +46,7 @@ def job_to_html_row(job: Dict[str, Any]) -> str:
     title = escape_html(job.get("title") or "Untitled")
     company = escape_html(job.get("company") or "Unknown")
     location = escape_html(job.get("location") or "Afghanistan")
-    closing = job.get("closing_date") or "N/A"
+    closing = escape_html(job.get("closing_date") or "N/A")
     url = job.get("url", "#")
     apply_url = job.get("apply_url")
     apply_emails = job.get("apply_emails") or []
@@ -150,10 +140,10 @@ def build_email_html(summary: Dict[str, Any]) -> str:
             max_items=5
         ))
     
-    # Tech Banking Jobs
+    # Technology roles in banking and financial services
     if summary.get("tech_banking_jobs"):
         sections.append(build_section(
-            "Banking & Finance IT Jobs",
+            "Technology Jobs in Banking & Finance",
             "🏛️",
             summary["tech_banking_jobs"],
             max_items=5
@@ -225,7 +215,7 @@ def build_email_html(summary: Dict[str, Any]) -> str:
             <!-- Footer -->
             <div style="background: #f3f4f6; padding: 16px 24px; text-align: center; font-size: 13px; color: #6b7280;">
                 <p style="margin: 0;">
-                    View all jobs: <a href="https://jobs.af/jobs" style="color: #1e40af;">jobs.af</a>
+                    View all jobs: <a href="https://nasirkhansayyad132.github.io/jobsaf-tracker/" style="color: #1e40af;">Afghanistan Tech Jobs</a>
                 </p>
                 <p style="margin: 8px 0 0; font-size: 12px;">
                     You're receiving this because you subscribed to Jobs.af Tracker notifications.
@@ -239,8 +229,8 @@ def build_email_html(summary: Dict[str, Any]) -> str:
 
 def send_email(subject: str, html_body: str) -> bool:
     """Send email via SMTP."""
-    smtp_host = os.environ.get("SMTP_HOST", "smtp.gmail.com")
-    smtp_port = int(os.environ.get("SMTP_PORT", "465"))
+    smtp_host = os.environ.get("SMTP_HOST") or "smtp.gmail.com"
+    smtp_port = int(os.environ.get("SMTP_PORT") or "465")
     smtp_user = os.environ.get("SMTP_USER")
     smtp_pass = os.environ.get("SMTP_PASS")
     email_to = os.environ.get("EMAIL_TO")
@@ -255,7 +245,8 @@ def send_email(subject: str, html_body: str) -> bool:
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = smtp_user
-    msg["To"] = email_to
+    # Keep a multi-recipient subscription list out of the visible message headers.
+    msg["To"] = "Undisclosed recipients:;"
     
     # Plain text fallback
     text_body = "Please view this email in an HTML-capable email client."
@@ -267,12 +258,12 @@ def send_email(subject: str, html_body: str) -> bool:
         context = ssl.create_default_context()
         
         with smtplib.SMTP_SSL(smtp_host, smtp_port, context=context) as server:
-            print(f"[notify] Logging in as {smtp_user}...")
+            print("[notify] Logging in to SMTP...")
             server.login(smtp_user, smtp_pass)
             
             # Support multiple recipients
             recipients = [r.strip() for r in email_to.split(",") if r.strip()]
-            print(f"[notify] Sending email to {', '.join(recipients)}...")
+            print(f"[notify] Sending email to {len(recipients)} recipient(s)...")
             server.sendmail(smtp_user, recipients, msg.as_string())
         
         print("[notify] Email sent successfully!")
@@ -283,10 +274,34 @@ def send_email(subject: str, html_body: str) -> bool:
         return False
 
 
+def hydrate_summary(summary: Dict[str, Any], jobs: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Resolve compact summary ID lists to job objects only in memory for email rendering."""
+    hydrated = dict(summary)
+    jobs_by_id = {job.get("id"): job for job in jobs if job.get("id")}
+    fields = {
+        "new_jobs": "new_job_ids",
+        "expiring_today": "expiring_today_ids",
+        "expiring_soon": "expiring_soon_ids",
+        "tech_banking_jobs": "tech_banking_job_ids",
+    }
+
+    for hydrated_field, id_field in fields.items():
+        if id_field not in summary:
+            # Backward compatibility for a locally generated v1 summary.
+            hydrated.setdefault(hydrated_field, [])
+            continue
+        missing = [job_id for job_id in summary[id_field] if job_id not in jobs_by_id]
+        if missing:
+            raise ValueError(f"Summary references {len(missing)} job ID(s) missing from jobs.json")
+        hydrated[hydrated_field] = [jobs_by_id[job_id] for job_id in summary[id_field]]
+
+    return hydrated
+
+
 def main():
     """Main entry point."""
     if len(sys.argv) < 2:
-        print("Usage: notify_email.py <summary.json>")
+        print("Usage: notify_email.py <summary.json> [jobs.json]")
         sys.exit(1)
     
     summary_path = Path(sys.argv[1])
@@ -294,13 +309,22 @@ def main():
     print(f"[notify] Loading summary from: {summary_path}")
     with open(summary_path, "r", encoding="utf-8") as f:
         summary = json.load(f)
+
+    jobs_path = Path(sys.argv[2]) if len(sys.argv) > 2 else summary_path.with_name("jobs.json")
+    if summary.get("schema_version") == 2:
+        print(f"[notify] Loading jobs from: {jobs_path}")
+        with open(jobs_path, "r", encoding="utf-8") as f:
+            jobs = json.load(f)
+        if not isinstance(jobs, list):
+            raise ValueError("jobs.json must contain a JSON array")
+        summary = hydrate_summary(summary, jobs)
     
     today = get_kabul_today()
     new_count = summary.get("new_count", 0)
     expiring_today = summary.get("expiring_today_count", 0)
     
     # Build subject line
-    subject = f"Jobs.af Daily – NEW: {new_count} | Expiring today: {expiring_today} | {today} (Kabul)"
+    subject = f"Afghanistan Tech Jobs – NEW: {new_count} | Expiring today: {expiring_today} | {today}"
     
     print(f"[notify] Subject: {subject}")
     print(f"[notify] Total jobs: {summary.get('total_jobs', 0)}")

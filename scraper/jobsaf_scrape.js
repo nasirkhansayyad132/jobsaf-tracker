@@ -10,7 +10,10 @@
 
 const fs = require("fs");
 const path = require("path");
-const { normalizeJob } = require("./lib/normalize");
+const pLimit = require("p-limit");
+const { toCSV } = require("./lib/csv");
+const { requestJson } = require("./lib/http");
+const { extractPhones, normalizeJob } = require("./lib/normalize");
 
 const API_BASE = "https://api.jobs.af/public";
 const SITE_BASE = "https://jobs.af";
@@ -126,25 +129,6 @@ function extractEmails(text) {
   return unique(text.match(re) || []).slice(0, 10);
 }
 
-function extractPhones(text) {
-  const re = /(\+?\d[\d\s().-]{7,}\d)/g;
-  return unique((text.match(re) || []).map(normSpace))
-    .filter(x => x.length >= 9 && x.length <= 25)
-    .slice(0, 10);
-}
-
-function toCSV(rows, fields) {
-  const esc = (v) => {
-    const s = (v === null || v === undefined) ? "" : String(v);
-    if (/[",\n]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
-    return s;
-  };
-  return [
-    fields.join(","),
-    ...rows.map(r => fields.map(f => esc(r[f])).join(","))
-  ].join("\n");
-}
-
 async function fetchJson(endpoint, params = {}) {
   const url = new URL(`${API_BASE}/${endpoint.replace(/^\/+/, "")}`);
   for (const [key, value] of Object.entries(params)) {
@@ -153,19 +137,11 @@ async function fetchJson(endpoint, params = {}) {
     }
   }
 
-  const res = await fetch(url, {
-    headers: {
-      "Accept": "application/json",
-      "User-Agent": "jobsaf-tracker/1.0 (+https://github.com/nasirkhansayyad132/jobsaf-tracker)",
+  return requestJson(url.toString(), {
+    onRetry: ({ attempt, delay }) => {
+      console.log(`[jobs.af] retry ${attempt} in ${delay}ms: ${url.pathname}`);
     },
   });
-
-  if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`${res.status} ${res.statusText} for ${url}: ${body.slice(0, 200)}`);
-  }
-
-  return res.json();
 }
 
 async function loadFunctionalAreas() {
@@ -236,29 +212,6 @@ function salaryText(job) {
   if (job.salaryType === "negotiable") return "Negotiable";
   if (job.salaryType === "as_per_company_scale") return "Company salary scale";
   return job.salaryType || null;
-}
-
-const TECHNICAL_KEYWORDS = [
-  "software", "developer", "engineer", "data", "security", "it officer",
-  "compute", "database", "network", "system", "programming", "analyst",
-  "web", "devops", "cloud", "information technology", "programmer",
-  "information security", "technology", "ict", "tech", "digit", "help desk",
-  "motion", "graphic", "graphics", "production", "producer", "media",
-  "animation", "موشن", "گرافیک", "پرودکشن", "تولید", "انیمیشن"
-];
-
-function isTechnical(job) {
-  const haystack = [
-    job.title,
-    ...(areaNames(job)),
-  ].join(" ").toLowerCase();
-  return TECHNICAL_KEYWORDS.some(kw => haystack.includes(kw));
-}
-
-function shouldKeep(job) {
-  const areas = areaNames(job).join(" ").toLowerCase();
-  const restricted = areas.includes("banking") || areas.includes("finance");
-  return !restricted || isTechnical(job);
 }
 
 function buildDescription(job) {
@@ -342,6 +295,7 @@ async function collectJobSummaries(areaIds, maxPages) {
 async function scrapeJobsAf(options = {}) {
   const rawUrl = options.rawUrl || DEFAULT_RAW_URL;
   const maxPages = parseInt(options.maxPages || "80", 10);
+  const concurrency = Math.max(1, parseInt(options.concurrency || "4", 10));
   const skipExistingUrls = options.skipExistingUrls || new Set();
 
   const requestedCategories = parseCategories(rawUrl);
@@ -357,42 +311,41 @@ async function scrapeJobsAf(options = {}) {
   console.log("[i] Candidate jobs:", uniqueSummaries.length);
 
   const nowISO = new Date().toISOString().replace(/\.\d+Z$/, "Z");
-  const records = [];
-
-  let i = 0;
-  for (const summary of uniqueSummaries) {
+  const limit = pLimit(concurrency);
+  let completed = 0;
+  let attempted = 0;
+  let detailFailures = 0;
+  const results = await Promise.all(uniqueSummaries.map(summary => limit(async () => {
     const slug = summary.slug;
-    if (!slug) continue;
+    if (!slug) return null;
 
     const url = `${SITE_BASE}/jobs/${slug}`;
-    if (skipExistingUrls.has(url)) continue;
+    if (skipExistingUrls.has(url)) return null;
+    attempted += 1;
 
-    i++;
     try {
       const detail = await fetchJson(`jobs/${encodeURIComponent(slug)}`);
       const job = detail.data || detail;
-      if (!shouldKeep(job)) {
-        console.log(`[i] Skipped non-target finance/banking job: ${job.title || slug}`);
-        continue;
-      }
       const record = buildRecord(job, nowISO);
-      records.push(record);
-      console.log(`[job] ${i}/${uniqueSummaries.length} ${record.title || slug}`);
-    } catch (e) {
-      console.log(`[!] failed ${url}: ${String(e).slice(0, 160)}`);
+      completed += 1;
+      console.log(`[job] ${completed}/${uniqueSummaries.length} ${record.title || slug}`);
+      return record;
+    } catch (error) {
+      detailFailures += 1;
+      console.log(`[!] failed ${url}: ${String(error).slice(0, 160)}`);
+      return null;
     }
+  })));
+
+  if (attempted && (detailFailures === attempted || (detailFailures >= 5 && detailFailures / attempted >= 0.5))) {
+    throw new Error(`jobs.af detail failure rate was ${detailFailures}/${attempted}`);
   }
 
-  return records;
+  return results.filter(Boolean);
 }
 
 async function main() {
-  const rawUrl = arg("--raw-url");
-  if (!rawUrl) {
-    console.log("Usage:");
-    console.log("  node jobsaf_scrape.js --raw-url \"https://jobs.af/jobs?...\" --max-pages 80 --only-open --json out.json --csv out.csv");
-    process.exit(1);
-  }
+  const rawUrl = arg("--raw-url", DEFAULT_RAW_URL);
 
   const maxPages = parseInt(arg("--max-pages", "80"), 10);
   const onlyOpen = hasFlag("--only-open");

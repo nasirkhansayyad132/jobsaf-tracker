@@ -1,50 +1,67 @@
-name: Multi-Site Jobs Scraper
+name: Manual Multi-Site Scraper Check
 
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: manual-scraper-check
+  cancel-in-progress: true
+
 jobs:
   scrape-jobs:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v6
+      - name: Checkout repository without write credentials
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '24'
-          package-manager-cache: false
+          cache: npm
+          cache-dependency-path: scraper/package-lock.json
 
-      - name: Install Scraper dependencies
-        env:
-          PUPPETEER_SKIP_DOWNLOAD: 'true'
-        run: |
-          cd scraper
-          npm install
+      - name: Install scraper dependencies
+        working-directory: scraper
+        run: npm ci --ignore-scripts
 
-      - name: Create URL File
-        run: |
-          cat > jobsaf_url.txt <<'EOF'
-          https://jobs.af/jobs?search=&category=IT%20-%20Hardware&category=IT%20-%20Software&category=IT%20Billing&category=Data%20Security%2FProtection&category=Software%20Development%20and%20Data%20Management&category=Software%20developer&category=Software%20engineering&category=software%20development%20&category=software%20development&category=software%20analysis&category=Database%20Developing&category=Data%20Management&category=Data%20Collection%20&category=Data%20Entry&category=Data%20analysis&category=Data%20Science&category=Computer%20Science&category=Computer%20Operator&category=Telecommunication%20&category=Computing&category=Database%20Development&category=Data%20Management,%20IT,%20Administration,%20GIS,%20Warehouse,%20Network&category=Data%20analysis%20
-          EOF
+      - name: Audit scraper dependencies
+        working-directory: scraper
+        run: npm audit --audit-level=high
 
-      - name: Run Scraper
+      - name: Run scraper into an isolated artifact directory
+        working-directory: scraper
         run: |
-          mkdir -p jobsaf_node/pages
-          cd scraper
+          mkdir -p ../jobsaf_node/pages
           node scrape_all.js \
-            --raw-url "$(tr -d '\r\n' < ../jobsaf_url.txt)" \
             --max-pages 10 \
-            --json ../jobsaf_node/pages/page_1.json \
-            --csv ../jobsaf_node/pages/page_1.csv
+            --json ../jobsaf_node/pages/jobs.json \
+            --csv ../jobsaf_node/pages/jobs.csv \
+            --debug-dir debug
 
-      - name: Upload Artifacts
+      - name: Validate scraper output
+        run: |
+          node scripts/validate-data.mjs \
+            jobsaf_node/pages/jobs.json \
+            --min-jobs 1 \
+            --min-sources 1 \
+            --max-expired 0 \
+            --require-relevance
+
+      - name: Upload results and diagnostics
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
-          name: scraper-results
+          name: scraper-check-${{ github.run_id }}
           path: |
             jobsaf_node/pages/
             scraper/debug/
+          if-no-files-found: ignore
+          retention-days: 7

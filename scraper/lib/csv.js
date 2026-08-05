@@ -8,6 +8,8 @@ const DEFAULT_FIELDS = [
   "title",
   "company",
   "location",
+  "post_date",
+  "post_date_raw",
   "closing_date",
   "closing_date_raw",
   "category",
@@ -15,10 +17,18 @@ const DEFAULT_FIELDS = [
   "gender",
   "vacancies",
   "salary",
+  "application_method",
+  "application_subject",
+  "application_subject_type",
   "apply_url",
   "apply_emails",
   "apply_phones",
   "scraped_at",
+  "first_seen_at",
+  "last_seen_at",
+  "lifecycle_status",
+  "missed_runs",
+  "relevance",
   "also_found_on",
 ];
 
@@ -28,6 +38,9 @@ function csvValue(value) {
   else if (value && typeof value === "object") text = JSON.stringify(value);
   else text = value === null || value === undefined ? "" : String(value);
 
+  // Spreadsheet programs interpret these leading characters as formulas even
+  // in downloaded CSV files. Prefix user-controlled values with an apostrophe.
+  if (/^[=+\-@\t\r]/.test(text)) text = `'${text}`;
   if (/[",\n]/.test(text)) return `"${text.replace(/"/g, '""')}"`;
   return text;
 }

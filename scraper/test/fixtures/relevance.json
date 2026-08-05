@@ -1,0 +1,311 @@
+[
+  {
+    "name": "software title",
+    "expected": "include",
+    "job": { "title": "Senior Software Engineer", "category": "Engineering", "company": "Example" }
+  },
+  {
+    "name": "language-specific developer",
+    "expected": "include",
+    "job": { "title": "WordPress and PHP Developer", "category": "Private Sector", "company": "Example" }
+  },
+  {
+    "name": "guarded platform developer",
+    "expected": "include",
+    "job": { "title": "Salesforce Developer", "category": "Private Sector", "company": "Example" }
+  },
+  {
+    "name": "generic enriched ICT role",
+    "expected": "include",
+    "job": {
+      "title": "Officer",
+      "category": "ICT",
+      "description": "Developing software and API development using Python and PostgreSQL."
+    }
+  },
+  {
+    "name": "computer science teaching",
+    "expected": "include",
+    "job": { "title": "Computer Science Lecturer", "category": "Education" }
+  },
+  {
+    "name": "ICT communication officer",
+    "expected": "include",
+    "job": { "title": "ICT & Communication Officer", "category": "Telecommunications" }
+  },
+  {
+    "name": "bank technical role",
+    "expected": "include",
+    "job": { "title": "IT Solaris System Administrator", "category": "Banking" }
+  },
+  {
+    "name": "medical role at network-named NGO",
+    "expected": "exclude",
+    "job": { "title": "Pediatrician", "category": "Health Care", "company": "Bakhter Development Network" }
+  },
+  {
+    "name": "cashier at ICT employer",
+    "expected": "exclude",
+    "job": { "title": "Cashier", "category": "Finance", "company": "Afghan ICT Services" }
+  },
+  {
+    "name": "finance role mentioning tools",
+    "expected": "exclude",
+    "job": {
+      "title": "Finance Officer",
+      "category": "Finance",
+      "description": "Enter data in the financial information system and use database reports and software."
+    }
+  },
+  {
+    "name": "pure graphic design",
+    "expected": "exclude",
+    "job": { "title": "Graphic Designer", "category": "Media", "description": "Use Adobe software and digital tools." }
+  },
+  {
+    "name": "pure digital marketing",
+    "expected": "exclude",
+    "job": { "title": "Digital Marketing Officer", "category": "Marketing", "description": "Run social media analytics." }
+  },
+  {
+    "name": "Google Ads is not rescued by a broad IT category",
+    "expected": "exclude",
+    "job": {
+      "title": "Google Ads Specialist - Lead Generation Pay-Per-Call",
+      "category": "Business Development, Information Technology, Marketing",
+      "details": { "Functional Area": "Information Technology, Marketing" },
+      "description": "Own paid search campaigns, optimise advertising spend, and report marketing analytics."
+    }
+  },
+  {
+    "name": "data entry administration",
+    "expected": "exclude",
+    "job": { "title": "Data Entry Clerk", "category": "Administration", "description": "Enter records in the database." }
+  },
+  {
+    "name": "customer service at software company",
+    "expected": "exclude",
+    "job": { "title": "Customer Service Agent", "category": "Operations", "company": "Best Software Company" }
+  },
+  {
+    "name": "generic project role in IT category",
+    "expected": "exclude",
+    "job": { "title": "Project Coordinator", "category": "IT", "description": "Coordinate the software development team." }
+  },
+  {
+    "name": "nontechnical MIS reporting assistant",
+    "expected": "exclude",
+    "job": {
+      "title": "MIS and Reporting Assistant",
+      "category": "Program",
+      "details": { "Functional Area": "Program" },
+      "description": "Support monitoring and evaluation reporting, data entry, database maintenance, statistics, and donor reports for education programs. A social sciences degree is accepted."
+    }
+  },
+  {
+    "name": "generic ISP general manager",
+    "expected": "exclude",
+    "job": {
+      "title": "General Manager (ISP)",
+      "category": "Information Technology, Telecommunication",
+      "details": { "Functional Area": "Information Technology, Telecommunication" },
+      "description": "Lead company operations, business growth, budgets, sales, customer support, and administrative teams. Knowledge of networking, Cisco, and MikroTik is preferred."
+    }
+  },
+  {
+    "name": "technical MIS manager remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "MIS Manager",
+      "category": "Information Systems",
+      "description": "Administer the MIS platform, SQL database, access controls, integrations, backups, and technical support."
+    }
+  },
+  {
+    "name": "explicit IT general manager remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "General Manager (IT)",
+      "category": "Information Technology",
+      "description": "Own systems administration, network architecture, cybersecurity operations, cloud infrastructure, and the technical engineering team."
+    }
+  },
+  {
+    "name": "network operations manager remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Network Operations Manager",
+      "category": "Networking",
+      "description": "Manage routing, switching, firewalls, network monitoring, incident response, and NOC engineers."
+    }
+  },
+  {
+    "name": "systems administrator remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Systems Administrator",
+      "category": "Administration",
+      "description": "Administer Linux servers, identity, virtualization, backups, and endpoint security."
+    }
+  },
+  {
+    "name": "business developer is not a software developer",
+    "expected": "exclude",
+    "job": { "title": "Business Developer", "category": "Sales", "description": "Build customer partnerships." }
+  },
+  {
+    "name": "UA Telecom mixed technical revenue and administrative careers bundle",
+    "expected": "exclude",
+    "job": {
+      "title": "IT, Technical, Revenue & Administrative Careers | UA Telecom",
+      "category": "Information Technology",
+      "details": { "Functional Area": "Information Technology, Telecommunications" },
+      "description": "The bundle includes network administration, technical support, revenue, and administrative careers."
+    }
+  },
+  {
+    "name": "mixed computer science economics and Sharia faculty bundle",
+    "expected": "exclude",
+    "job": {
+      "title": "استاد در رشته های کمپیوتر ساینس،اقتصاد، شرعیات، ریاضیات و فزیک (Re Announced)",
+      "category": "Education",
+      "description": "برای رشته های مختلف استاد استخدام می شود."
+    }
+  },
+  {
+    "name": "ambiguous technology title confirmed by Computer Science degree",
+    "expected": "include",
+    "job": {
+      "title": "Technology Officer",
+      "category": "Private Sector",
+      "description": "Minimum bachelor's degree in Computer Science or a closely related computing field is required."
+    }
+  },
+  {
+    "name": "ambiguous ICT category confirmed by Software Engineering education field",
+    "expected": "include",
+    "job": {
+      "title": "Officer",
+      "category": "ICT",
+      "details": { "Education": "BSc in Software Engineering or related field" }
+    }
+  },
+  {
+    "name": "CS and IT degree acronyms confirm ambiguous category",
+    "expected": "include",
+    "job": {
+      "title": "Technical Officer",
+      "category": "IT",
+      "description": "Applicants must hold a bachelor's degree in CS/IT or a related discipline."
+    }
+  },
+  {
+    "name": "compact BSIT degree confirms ambiguous category",
+    "expected": "include",
+    "job": {
+      "title": "Systems Focal Point",
+      "category": "Technology",
+      "details": { "Academic Qualification": "BSIT required" }
+    }
+  },
+  {
+    "name": "mixed-case BScIT compact degree confirms ambiguous category",
+    "expected": "include",
+    "job": {
+      "title": "Technology Focal Point",
+      "category": "Private Sector",
+      "details": { "Education": "BScIT or equivalent" }
+    }
+  },
+  {
+    "name": "lowercase bit word is not a BIT degree acronym",
+    "expected": "exclude",
+    "job": {
+      "title": "Technology Associate",
+      "category": "Private Sector",
+      "details": { "Education": "A bit of university coursework is preferred" }
+    }
+  },
+  {
+    "name": "Information Systems degree confirms ambiguous category",
+    "expected": "include",
+    "job": {
+      "title": "Platform Associate",
+      "category": "Computing",
+      "description": "A bachelor's degree in Information Systems, MIS, or a related computing discipline is required."
+    }
+  },
+  {
+    "name": "computing degree alone cannot include a generic role",
+    "expected": "exclude",
+    "job": {
+      "title": "Officer",
+      "category": "Private Sector",
+      "description": "Bachelor's degree in Computer Science is required."
+    }
+  },
+  {
+    "name": "accountant cannot be rescued by BSCS requirement or IT category",
+    "expected": "exclude",
+    "job": {
+      "title": "Accountant",
+      "category": "IT",
+      "details": { "Education": "BSCS" },
+      "description": "Prepare ledgers, reconcile accounts, and issue financial reports."
+    }
+  },
+  {
+    "name": "administrative assistant cannot be rescued by IT degree",
+    "expected": "exclude",
+    "job": {
+      "title": "Administrative Assistant",
+      "category": "Information Technology",
+      "description": "A degree in IT is required. Manage filing, meetings, travel, and office supplies."
+    }
+  },
+  {
+    "name": "lowercase it pronoun is not an IT degree acronym",
+    "expected": "exclude",
+    "job": {
+      "title": "Technology Associate",
+      "category": "Private Sector",
+      "description": "A bachelor's degree in business is required, and it must be accredited."
+    }
+  },
+  {
+    "name": "MIS acronym does not match misconduct substring",
+    "expected": "exclude",
+    "job": {
+      "title": "Associate",
+      "category": "Information Systems",
+      "description": "A bachelor's degree in misconduct studies is required."
+    }
+  },
+  {
+    "name": "SW acronym does not match newswriting substring",
+    "expected": "exclude",
+    "job": {
+      "title": "Technology Associate",
+      "category": "Private Sector",
+      "description": "A bachelor's degree in newswriting is required."
+    }
+  },
+  {
+    "name": "IT experience after unrelated degree is not a computing degree",
+    "expected": "exclude",
+    "job": {
+      "title": "Officer",
+      "category": "IT",
+      "description": "A bachelor's degree in Finance with experience using IT systems is required."
+    }
+  },
+  {
+    "name": "cybersecurity degree supports an ambiguous computing role",
+    "expected": "include",
+    "job": {
+      "title": "Technology Associate",
+      "category": "Private Sector",
+      "description": "Minimum master's degree in Cybersecurity or Information Security."
+    }
+  }
+]
