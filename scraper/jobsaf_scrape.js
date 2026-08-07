@@ -12,13 +12,20 @@ const fs = require("fs");
 const path = require("path");
 const pLimit = require("p-limit");
 const { toCSV } = require("./lib/csv");
+const {
+  attachCoverage,
+  boundedConcurrency,
+  strongTitleSummaryFallback,
+} = require("./lib/html_adapter");
 const { requestJson } = require("./lib/http");
 const { extractPhones, normalizeJob } = require("./lib/normalize");
 
 const API_BASE = "https://api.jobs.af/public";
 const SITE_BASE = "https://jobs.af";
-const ITEMS_PER_PAGE = 10;
-const DEFAULT_RAW_URL = "https://jobs.af/jobs?search&category=IT%20-%20Hardware&category=IT%20-%20Software&category=IT%20Billing&category=Data%20Security%2FProtection&category=Software%20Development%20and%20Data%20Management&category=Software%20developer&category=Software%20engineering&category=software%20development%20&category=software%20development&category=software%20analysis&category=Database%20Developing&category=Data%20Management&category=Data%20Collection%20&category=Data%20Entry&category=Data%20analysis&category=Data%20Science&category=Computer%20Science&category=Computer%20Operator&category=Telecommunication%20&category=Computing&category=Database%20Development&category=Data%20Management,%20IT,%20Administration,%20GIS,%20Warehouse,%20Network&category=Data%20analysis%20&category=Banking&category=Finance%20and%20Banking";
+const ITEMS_PER_PAGE = 100;
+const UNFILTERED_RAW_URL = "https://jobs.af/jobs?search";
+const DEFAULT_RAW_URL = UNFILTERED_RAW_URL;
+const LEGACY_FILTERED_RAW_URL = "https://jobs.af/jobs?search&category=IT%20-%20Hardware&category=IT%20-%20Software&category=IT%20Billing&category=Data%20Security%2FProtection&category=Software%20Development%20and%20Data%20Management&category=Software%20developer&category=Software%20engineering&category=software%20development%20&category=software%20development&category=software%20analysis&category=Database%20Developing&category=Data%20Management&category=Data%20Collection%20&category=Data%20Entry&category=Data%20analysis&category=Data%20Science&category=Computer%20Science&category=Computer%20Operator&category=Telecommunication%20&category=Computing&category=Database%20Development&category=Data%20Management,%20IT,%20Administration,%20GIS,%20Warehouse,%20Network&category=Data%20analysis%20&category=Banking&category=Finance%20and%20Banking";
 
 function arg(name, def = null) {
   const idx = process.argv.indexOf(name);
@@ -52,6 +59,14 @@ function normalizeLabel(s) {
 
 function unique(values) {
   return Array.from(new Set(values.filter(Boolean)));
+}
+
+function stableSummaryKey(job) {
+  const slug = normSpace(String(job?.slug ?? ""));
+  if (slug) return `slug:${slug}`;
+
+  const id = normSpace(String(job?.id ?? ""));
+  return id ? `id:${id}` : null;
 }
 
 function parseCategories(rawUrl) {
@@ -269,11 +284,16 @@ function buildRecord(job, nowISO) {
   });
 }
 
-async function collectJobSummaries(areaIds, maxPages) {
+async function collectJobSummaries(areaIds, maxPages, options = {}) {
+  const fetchPage = options.fetchPage || fetchJson;
+  const pageLimit = Math.max(1, Number.parseInt(maxPages, 10) || 1);
   const summaries = [];
-  let totalPages = 1;
+  const seenStableKeys = new Set();
+  const pageByFingerprint = new Map();
+  let totalPages = null;
+  let pagesFetched = 0;
 
-  for (let page = 1; page <= Math.min(maxPages, totalPages); page++) {
+  for (let page = 1; page <= (totalPages || 1); page++) {
     const params = {
       itemsPerPage: ITEMS_PER_PAGE,
       page,
@@ -282,31 +302,74 @@ async function collectJobSummaries(areaIds, maxPages) {
       params["filter[functionalAreas.area.id]"] = `$in:${areaIds.join(",")}`;
     }
 
-    const res = await fetchJson("jobs", params);
-    const jobs = res.data || [];
-    totalPages = res.meta?.totalPages || totalPages;
+    const res = await fetchPage("jobs", params);
+    if (!Array.isArray(res?.data)) throw new Error(`jobs.af page ${page} returned malformed job data`);
+    const jobs = res.data;
+    pagesFetched = page;
+    const reportedPages = Number.parseInt(res.meta?.totalPages, 10);
+    if (Number.isFinite(reportedPages) && reportedPages >= 1) {
+      totalPages = Math.max(page, reportedPages);
+    } else if (jobs.length >= ITEMS_PER_PAGE) {
+      throw new Error(`jobs.af page ${page} omitted pagination metadata for a full page`);
+    } else {
+      totalPages = page;
+    }
+    if (totalPages > pageLimit) {
+      throw new Error(`jobs.af pagination requires ${totalPages} pages but max-pages is ${pageLimit}`);
+    }
+    if (page < totalPages && jobs.length === 0) {
+      throw new Error(`jobs.af pagination returned an empty page ${page} of ${totalPages}`);
+    }
+
+    // Some APIs acknowledge the requested page number while repeatedly
+    // returning an earlier page. Page counts alone would make that truncated
+    // crawl look complete, so verify forward progress using identifiers that
+    // remain stable when ordering or titles change.
+    const stableKeys = unique(jobs.map(stableSummaryKey));
+    const fingerprint = [...stableKeys].sort().join("\n");
+    if (page > 1 && stableKeys.length > 0) {
+      const repeatedPage = pageByFingerprint.get(fingerprint);
+      if (repeatedPage !== undefined) {
+        throw new Error(
+          `jobs.af pagination stalled at page ${page}: repeated stable slug/ID keys from page ${repeatedPage}`
+        );
+      }
+      if (stableKeys.every(key => seenStableKeys.has(key))) {
+        throw new Error(
+          `jobs.af pagination stalled at page ${page}: no new stable slug/ID keys`
+        );
+      }
+    }
+    if (fingerprint) pageByFingerprint.set(fingerprint, page);
+    stableKeys.forEach(key => seenStableKeys.add(key));
+
     summaries.push(...jobs);
     console.log(`    Page ${page}: Found ${jobs.length} jobs.`);
   }
 
-  return summaries;
+  return { summaries, pagesFetched, totalPages: totalPages || 1 };
 }
 
 async function scrapeJobsAf(options = {}) {
   const rawUrl = options.rawUrl || DEFAULT_RAW_URL;
   const maxPages = parseInt(options.maxPages || "80", 10);
-  const concurrency = Math.max(1, parseInt(options.concurrency || "4", 10));
+  const concurrency = boundedConcurrency(options.concurrency, 4);
   const skipExistingUrls = options.skipExistingUrls || new Set();
 
   const requestedCategories = parseCategories(rawUrl);
   console.log("[i] Source: Jobs.af public API");
   console.log("[i] Categories requested:", requestedCategories.length || "none");
 
-  const functionalAreas = await loadFunctionalAreas();
-  const areaIds = areaIdsForCategories(requestedCategories, functionalAreas);
+  const loadAreas = options.loadFunctionalAreas || loadFunctionalAreas;
+  const collectSummaries = options.collectJobSummaries || collectJobSummaries;
+  const functionalAreas = requestedCategories.length ? await loadAreas() : [];
+  const areaIds = requestedCategories.length
+    ? areaIdsForCategories(requestedCategories, functionalAreas)
+    : [];
   console.log("[i] Matched functional areas:", areaIds.length || "none; scanning all active jobs");
 
-  const summaries = await collectJobSummaries(areaIds, maxPages);
+  const pagination = await collectSummaries(areaIds, maxPages);
+  const summaries = pagination.summaries;
   const uniqueSummaries = Array.from(new Map(summaries.map(job => [job.slug || job.id, job])).values());
   console.log("[i] Candidate jobs:", uniqueSummaries.length);
 
@@ -315,6 +378,7 @@ async function scrapeJobsAf(options = {}) {
   let completed = 0;
   let attempted = 0;
   let detailFailures = 0;
+  let fallbackCount = 0;
   const results = await Promise.all(uniqueSummaries.map(summary => limit(async () => {
     const slug = summary.slug;
     if (!slug) return null;
@@ -333,15 +397,31 @@ async function scrapeJobsAf(options = {}) {
     } catch (error) {
       detailFailures += 1;
       console.log(`[!] failed ${url}: ${String(error).slice(0, 160)}`);
-      return null;
+      const fallback = strongTitleSummaryFallback(buildRecord(summary, nowISO));
+      if (fallback) fallbackCount += 1;
+      return fallback;
     }
   })));
 
-  if (attempted && (detailFailures === attempted || (detailFailures >= 5 && detailFailures / attempted >= 0.5))) {
+  const records = results.filter(Boolean);
+  if (attempted && detailFailures === attempted && records.length === 0) {
     throw new Error(`jobs.af detail failure rate was ${detailFailures}/${attempted}`);
   }
 
-  return results.filter(Boolean);
+  return attachCoverage(records, {
+    auditRecords: results.map((record, index) => (
+      record || buildRecord(uniqueSummaries[index], nowISO)
+    )),
+    discoveredCount: uniqueSummaries.length,
+    detailFailures,
+    enrichedCount: completed,
+    fallbackCount,
+    unsafeCoverage: attempted > 0 && (
+      detailFailures === attempted || (detailFailures >= 5 && detailFailures / attempted >= 0.5)
+    ),
+    pagesFetched: pagination.pagesFetched,
+    reportedPages: pagination.totalPages,
+  });
 }
 
 async function main() {
@@ -418,5 +498,9 @@ if (require.main === module) {
 
 module.exports = {
   DEFAULT_RAW_URL,
+  ITEMS_PER_PAGE,
+  LEGACY_FILTERED_RAW_URL,
+  UNFILTERED_RAW_URL,
+  collectJobSummaries,
   scrapeJobsAf,
 };

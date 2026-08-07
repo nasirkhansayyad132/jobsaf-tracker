@@ -1,4 +1,11 @@
-const { extractVacancyReference, makeId, normalizeUrl, normSpace, unique } = require("./normalize");
+const {
+  extractMailtoEmails,
+  extractVacancyReference,
+  makeId,
+  normalizeUrl,
+  normSpace,
+  unique,
+} = require("./normalize");
 
 // Use a fixed representative order so request timing cannot change the public
 // URL, source, title, or logical ID of a cross-source vacancy. Legacy ACBAR
@@ -55,6 +62,63 @@ function canonicalUrl(job) {
   } catch {
     return raw.replace(/\/+$/, "");
   }
+}
+
+function listingUrlSet(...jobs) {
+  return new Set(jobs.flatMap(job => [
+    job?.source_url,
+    job?.url,
+    ...(Array.isArray(job?.also_found_on) ? job.also_found_on.map(item => item?.url) : []),
+  ]).map(url => canonicalUrl({ url })).filter(Boolean));
+}
+
+function isUsableApplicationUrl(applyUrl, listingUrls) {
+  if (applyUrl?.startsWith("mailto:")) return extractMailtoEmails(applyUrl).length > 0;
+  if (!/^https?:/i.test(applyUrl || "")) return false;
+  return !listingUrls.has(canonicalUrl({ url: applyUrl }));
+}
+
+// Dedupe merges application fields from different source records. Resolve the
+// method only from channels that remain usable after that merge. A backed
+// existing method stays preferred when multiple channels are available.
+function applicationChannelEvidence(job) {
+  const applyUrl = normalizeUrl(job?.apply_url);
+  const listingUrls = listingUrlSet(job);
+  const emails = Array.isArray(job?.apply_emails) ? job.apply_emails : [];
+  const phones = Array.isArray(job?.apply_phones) ? job.apply_phones : [];
+  const hasMailtoRecipient = extractMailtoEmails(applyUrl).length > 0;
+  return {
+    email: hasMailtoRecipient || emails.some(Boolean),
+    web: /^https?:/i.test(applyUrl || "") && isUsableApplicationUrl(applyUrl, listingUrls),
+    phone: phones.some(Boolean),
+    mailto: hasMailtoRecipient,
+  };
+}
+
+function preferredApplicationUrl(primary, fallback) {
+  const primaryUrl = normalizeUrl(primary?.apply_url);
+  const fallbackUrl = normalizeUrl(fallback?.apply_url);
+  const listingUrls = listingUrlSet(primary, fallback);
+  if (isUsableApplicationUrl(primaryUrl, listingUrls)) return primaryUrl;
+  if (isUsableApplicationUrl(fallbackUrl, listingUrls)) return fallbackUrl;
+  return primaryUrl || fallbackUrl || null;
+}
+
+function resolveApplicationMethod(job) {
+  const evidence = applicationChannelEvidence(job);
+  const current = normSpace(job?.application_method).toLowerCase();
+  if (["email", "web", "phone"].includes(current) && evidence[current]) return current;
+  if (evidence.mailto) return "email";
+  if (evidence.web) return "web";
+  if (evidence.email) return "email";
+  if (evidence.phone) return "phone";
+  return "unknown";
+}
+
+function enforceApplicationInvariant(job) {
+  const resolvedMethod = resolveApplicationMethod(job);
+  if (normSpace(job.application_method).toLowerCase() === resolvedMethod) return job;
+  return { ...job, application_method: resolvedMethod };
 }
 
 function normalizedReference(job) {
@@ -255,6 +319,7 @@ function ensureStableLogicalRecord(record) {
 function mergeDuplicate(a, b, options = {}) {
   const logicalMerge = options.logicalMerge === true;
   const [preferred, fallback] = logicalMerge ? canonicalRecords(a, b) : preferredRecord(a, b);
+  const applyUrl = preferredApplicationUrl(preferred, fallback);
   const merged = {
     ...preferred,
     apply_emails: [...(preferred.apply_emails || [])],
@@ -263,6 +328,9 @@ function mergeDuplicate(a, b, options = {}) {
     also_found_on: [...(preferred.also_found_on || [])],
   };
   fillMissing(merged, fallback);
+  // A listing-page navigation fallback is non-empty but is not an application
+  // channel. Do not let it hide a genuine form or mailto URL from a duplicate.
+  merged.apply_url = applyUrl;
   if (logicalMerge) {
     // Extensions should retain the longest valid application window, while the
     // original posting date remains the earliest date reported by any source.
@@ -282,7 +350,7 @@ function mergeDuplicate(a, b, options = {}) {
     const identityKey = options.identityKey || logicalIdentityKey(a, b, merged);
     merged.id = stableLogicalId(identityKey) || merged.id;
   }
-  return merged;
+  return enforceApplicationInvariant(merged);
 }
 
 function dedupeJobs(records) {
@@ -292,6 +360,7 @@ function dedupeJobs(records) {
   const orderedRecords = records
     .filter(Boolean)
     .map(ensureStableLogicalRecord)
+    .map(enforceApplicationInvariant)
     .sort(compareCanonicalRecords);
   for (const record of orderedRecords) {
     const key = canonicalUrl(record);
@@ -383,13 +452,16 @@ module.exports = {
   canonicalUrl,
   compareCanonicalRecords,
   dedupeJobs,
+  enforceApplicationInvariant,
   ensureStableLogicalRecord,
+  applicationChannelEvidence,
   fingerprint,
   logicalIdentityKey,
   mergeDuplicate,
   normalizeComparableText,
   normalizedReference,
   referenceKey,
+  resolveApplicationMethod,
   roleKey,
   stableLogicalId,
 };

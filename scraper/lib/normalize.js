@@ -51,6 +51,29 @@ function extractEmails(text) {
   return unique((String(text || "").match(re) || []).map(email => email.toLowerCase())).slice(0, 20);
 }
 
+function extractMailtoEmails(value) {
+  const raw = emptyToNull(value);
+  if (!raw) return [];
+  try {
+    const url = new URL(raw);
+    if (url.protocol !== "mailto:") return [];
+    let recipientText;
+    try {
+      recipientText = decodeURIComponent(url.pathname);
+    } catch {
+      return [];
+    }
+    const recipients = recipientText.split(",").map(recipient => normSpace(recipient).toLowerCase());
+    if (!recipients.length || recipients.some(recipient => {
+      const matches = extractEmails(recipient);
+      return matches.length !== 1 || matches[0] !== recipient;
+    })) return [];
+    return unique(recipients).slice(0, 20);
+  } catch {
+    return [];
+  }
+}
+
 /** Normalize Afghanistan national numbers to E.164 and reject ranges, IPs and IDs. */
 function normalizePhone(value) {
   const original = String(value || "");
@@ -128,7 +151,9 @@ function parseClosingDate(raw) {
   const mdy = text.match(/\b([A-Za-z]{3,})\s+(\d{1,2}),?\s*(20\d{2})\b/);
   if (mdy) return dateFromParts(mdy[3], mdy[1], mdy[2]);
 
-  const numeric = text.match(/\b(\d{1,2})[\/.](\d{1,2})[\/.](20\d{2})\b/);
+  // Several partner boards publish day-month-year dates with hyphens. ISO is
+  // handled above, so a leading one/two-digit component is unambiguously DMY.
+  const numeric = text.match(/\b(\d{1,2})[\/.-](\d{1,2})[\/.-](20\d{2})\b/);
   if (numeric) return validDateParts(numeric[3], numeric[2], numeric[1]);
   return null;
 }
@@ -217,22 +242,40 @@ function normalizeUrl(value) {
       url.search = "";
       url.hash = "";
     }
-    return ["http:", "https:", "mailto:"].includes(url.protocol) ? url.toString() : null;
+    if (url.protocol === "mailto:") {
+      return extractMailtoEmails(url.toString()).length ? url.toString() : null;
+    }
+    return ["http:", "https:"].includes(url.protocol) ? url.toString() : null;
   } catch {
     return null;
   }
 }
 
-function detectApplicationMethod(input, details, applyUrl, emails, phones) {
+function detectApplicationMethod(input, details, applyUrl, sourceUrl, emails, phones) {
   const explicit = normSpace(input.application_method).toLowerCase();
-  if (["email", "web", "phone", "unknown"].includes(explicit)) return explicit;
-
   const submission = normSpace(detailValue(details, /^submission\s+(?:through|method)$/i)).toLowerCase();
-  if (/e-?mail/.test(submission)) return "email";
-  if (/link|online|website|portal|form/.test(submission)) return "web";
-  if (applyUrl?.startsWith("mailto:")) return "email";
-  if (applyUrl && applyUrl !== normalizeUrl(input.source_url || input.url)) return "web";
-  if (emails.length) return "email";
+
+  const hasEmail = emails.length > 0;
+  // Adapters sometimes retain the listing URL as a navigation fallback. It is
+  // not evidence of a separate web application channel.
+  const hasWeb = /^https?:\/\//i.test(applyUrl || "") && applyUrl !== sourceUrl;
+  const hasPhone = phones.length > 0;
+  const isBacked = method => (
+    (method === "email" && hasEmail)
+    || (method === "web" && hasWeb)
+    || (method === "phone" && hasPhone)
+  );
+
+  if (isBacked(explicit)) return explicit;
+
+  let submittedMethod = null;
+  if (/e-?mail/.test(submission)) submittedMethod = "email";
+  else if (/link|online|website|portal|form/.test(submission)) submittedMethod = "web";
+  else if (/phone|telephone|mobile|call|whats?app/.test(submission)) submittedMethod = "phone";
+  if (isBacked(submittedMethod)) return submittedMethod;
+
+  if (hasWeb) return "web";
+  if (hasEmail) return "email";
   if (phones.length) return "phone";
   return "unknown";
 }
@@ -277,13 +320,11 @@ function normalizeJob(input, options = {}) {
     description,
     ...Object.entries(details).map(([key, value]) => `${key}: ${String(value || "")}`),
   ].join("\n");
-  const mailtoEmail = url?.startsWith("mailto:") ? url.slice("mailto:".length).split("?")[0] : null;
   const applyUrl = normalizeUrl(input.apply_url);
-  const applyMail = applyUrl?.startsWith("mailto:") ? applyUrl.slice("mailto:".length).split("?")[0] : null;
   const applyEmails = unique([
     ...(Array.isArray(input.apply_emails) ? input.apply_emails.map(email => normSpace(email).toLowerCase()) : []),
-    mailtoEmail,
-    applyMail,
+    ...extractMailtoEmails(url),
+    ...extractMailtoEmails(applyUrl),
     ...extractEmails(textForContacts),
   ].map(email => normSpace(email).toLowerCase())).filter(email => extractEmails(email).length === 1).slice(0, 20);
   const applyPhones = unique([
@@ -326,7 +367,7 @@ function normalizeJob(input, options = {}) {
     gender: emptyToNull(input.gender),
     vacancies: input.vacancies === undefined || input.vacancies === "" ? null : input.vacancies,
     salary: emptyToNull(input.salary),
-    application_method: detectApplicationMethod(input, details, applyUrl, applyEmails, applyPhones),
+    application_method: detectApplicationMethod(input, details, applyUrl, sourceUrl, applyEmails, applyPhones),
     application_subject: applicationSubject,
     application_subject_type: applicationSubjectType,
     apply_url: applyUrl,
@@ -361,6 +402,7 @@ module.exports = {
   emptyToNull,
   extractApplicationSubject,
   extractEmails,
+  extractMailtoEmails,
   extractPhones,
   extractVacancyReference,
   htmlToText,

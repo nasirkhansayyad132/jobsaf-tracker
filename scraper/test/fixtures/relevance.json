@@ -103,8 +103,32 @@
     }
   },
   {
-    "name": "generic ISP general manager",
+    "name": "live cross-source MIS reporting assistant is confirmed by enriched data duties and education",
+    "expected": "include",
+    "job": {
+      "title": "MIS and Reporting Assistant",
+      "category": "Program",
+      "source_url": "https://www.kaarobar.net/jobs/17659/mis-and-reporting-assistant",
+      "details": {
+        "Functional Area": "Program",
+        "Education": "Bachelor’s degree in Statistics, Monitoring & Evaluation, Education, Social Sciences, Information Management, or a related field."
+      },
+      "description": "Maintain program databases and support database maintenance. Develop digital data collection tools and templates. Prepare dashboards and verify data quality. Use KoboToolbox, ODK, and MIS systems. Perform basic data analysis."
+    }
+  },
+  {
+    "name": "generic reporting assistant is not rescued by MIS duties and information management education",
     "expected": "exclude",
+    "job": {
+      "title": "Reporting Assistant",
+      "category": "Program",
+      "details": { "Education": "Bachelor’s degree in Information Management" },
+      "description": "Maintain databases, prepare dashboards, verify data quality, use KoboToolbox and ODK, support MIS systems, and perform data analysis."
+    }
+  },
+  {
+    "name": "ISP general manager remains in scope under maximum recall",
+    "expected": "include",
     "job": {
       "title": "General Manager (ISP)",
       "category": "Information Technology, Telecommunication",
@@ -119,6 +143,115 @@
       "title": "MIS Manager",
       "category": "Information Systems",
       "description": "Administer the MIS platform, SQL database, access controls, integrations, backups, and technical support."
+    }
+  },
+  {
+    "name": "live university quality enhancement administration is not software QA",
+    "expected": "exclude",
+    "job": {
+      "title": "آمریت ارتقای کیفیت (Re Announced)",
+      "category": "QA-Quality Control",
+      "details": {
+        "Functional Area": "QA-Quality Control",
+        "Education": "Master Degree in Management, Public Administration, Computer Science, or a field related to university quality enhancement"
+      },
+      "description": "Manage the university quality-enhancement committee, review teaching standards, prepare institutional reports for the Ministry of Higher Education, and maintain academic administrative records. Use SPSS, Stata, and Microsoft Office."
+    }
+  },
+  {
+    "name": "live humanitarian Base MEAL Officer is not a computing vacancy",
+    "expected": "exclude",
+    "job": {
+      "title": "Base MEAL Officer (Local Recruitment)",
+      "category": "Admin-Clerical, Monitoring and Evaluation",
+      "details": {
+        "Functional Area": "Monitoring and Evaluation",
+        "Education": "Bachelor degree in Management, Social Science, Business Administration, or Economics"
+      },
+      "description": "Conduct field monitoring visits, manage accountability and complaints mechanisms, prepare donor reports, and train program teams. Provide technical support and systems support, maintain a database, use MIS software, SPSS and Kobo, and coordinate networking with stakeholders."
+    }
+  },
+  {
+    "name": "live civil Quality Control Engineer is not software QA",
+    "expected": "exclude",
+    "job": {
+      "title": "Quality Control Engineer",
+      "category": "Engineering, QA-Quality Control",
+      "details": {
+        "Functional Area": "Engineering, QA-Quality Control",
+        "Education": "Bachelor's degree in Civil Engineering, Architecture or a closely related field"
+      },
+      "description": "The organization promotes research and evidence-based programming. Provide full-time site supervision at assigned construction sites. Review structural drawings and BoQs, then inspect excavation, foundations, masonry, and reinforced concrete."
+    }
+  },
+  {
+    "name": "live household Inventory Enumerator is not a computing data role",
+    "expected": "exclude",
+    "job": {
+      "title": "Inventory Enumerator / Listing Officer",
+      "category": "Data Management",
+      "details": {
+        "Functional Area": "Data Management",
+        "Education": "High School, higher educations preferred"
+      },
+      "description": "The authority publishes statistics, coordinates GIS activities, and provides technical support to agencies. Identify residential and non-residential units, enumerate households in the assigned field area, complete questionnaires, number entrances, and carry forms, maps, and tablets."
+    }
+  },
+  {
+    "name": "software QA engineer remains in scope after academic quality guard",
+    "expected": "include",
+    "job": {
+      "title": "Software QA Engineer",
+      "category": "QA-Quality Control",
+      "details": { "Education": "Bachelor's degree in Computer Science" },
+      "description": "Design automated software tests, maintain Cypress test suites, verify APIs, and report application defects to software engineers."
+    }
+  },
+  {
+    "name": "software quality control engineer remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Software Quality Control Engineer",
+      "category": "QA-Quality Control",
+      "details": { "Education": "Bachelor's degree in Software Engineering" },
+      "description": "Run application testing, maintain automated test suites, verify API behavior, and trace application defects to source code."
+    }
+  },
+  {
+    "name": "data engineer for a humanitarian MEAL platform remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Data Engineer - MEAL Platform",
+      "category": "Monitoring and Evaluation",
+      "details": { "Education": "Bachelor's degree in Data Science or Computer Science" },
+      "description": "Build ETL pipelines, administer the cloud data warehouse, automate ingestion from Kobo, and maintain production data quality monitoring."
+    }
+  },
+  {
+    "name": "GIS data engineer remains in scope despite a data-management category",
+    "expected": "include",
+    "job": {
+      "title": "GIS Data Engineer",
+      "category": "Data Management",
+      "description": "Build geospatial ETL pipelines, administer PostGIS databases, and automate GIS data validation."
+    }
+  },
+  {
+    "name": "database engineer remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Database Engineer",
+      "category": "Data Management",
+      "description": "Design PostgreSQL schemas, optimize SQL queries, and operate production database backups."
+    }
+  },
+  {
+    "name": "data scientist remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Data Scientist",
+      "category": "Data Management",
+      "description": "Develop Python machine-learning models and statistical data pipelines."
     }
   },
   {
@@ -152,6 +285,128 @@
     "name": "business developer is not a software developer",
     "expected": "exclude",
     "job": { "title": "Business Developer", "category": "Sales", "description": "Build customer partnerships." }
+  },
+  {
+    "name": "generic role is not included by Information Technology category alone",
+    "expected": "exclude",
+    "job": {
+      "title": "Officer",
+      "category": "Information Technology"
+    }
+  },
+  {
+    "name": "generic role is not included by technical functional area alone",
+    "expected": "exclude",
+    "job": {
+      "title": "Coordinator",
+      "category": "Private Sector",
+      "details": { "Functional Area": "Software Development" }
+    }
+  },
+  {
+    "name": "technical category plus explicit technical duties is included",
+    "expected": "include",
+    "job": {
+      "title": "Officer",
+      "category": "Information Technology",
+      "description": "Perform system administration, server administration, and technical support."
+    }
+  },
+  {
+    "name": "technical title corroborates a technical category",
+    "expected": "include",
+    "job": {
+      "title": "Technology Officer",
+      "category": "Information Technology"
+    }
+  },
+  {
+    "name": "Procurement Bidding Specialist is not rescued by IT category and CS degree",
+    "expected": "exclude",
+    "job": {
+      "title": "Procurement Bidding Specialist",
+      "category": "Information Technology",
+      "details": { "Education": "Bachelor's degree in Computer Science" },
+      "description": "Prepare solicitation documents, evaluate bids, and manage supplier contracts."
+    }
+  },
+  {
+    "name": "tender specialist is not rescued by ICT category and software degree",
+    "expected": "exclude",
+    "job": {
+      "title": "Tender Specialist",
+      "category": "ICT",
+      "details": { "Education": "BSc in Software Engineering" },
+      "description": "Coordinate tender documents and commercial submissions."
+    }
+  },
+  {
+    "name": "supply chain specialist is not rescued by information systems category and IT degree",
+    "expected": "exclude",
+    "job": {
+      "title": "Supply Chain Specialist",
+      "category": "Information Systems",
+      "details": { "Education": "BSIT" },
+      "description": "Manage purchasing, inventory, transport, and supplier performance."
+    }
+  },
+  {
+    "name": "purchasing and sourcing role is not rescued by technical context",
+    "expected": "exclude",
+    "job": {
+      "title": "Purchasing and Sourcing Officer",
+      "category": "Technology",
+      "description": "Bachelor's degree in CS required. Source vendors and issue purchase orders."
+    }
+  },
+  {
+    "name": "procurement platform software engineer remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Software Engineer - Procurement Platform",
+      "category": "Procurement",
+      "details": { "Education": "Bachelor's degree in Computer Science" },
+      "description": "Design APIs, write code, and maintain the procurement platform."
+    }
+  },
+  {
+    "name": "supply infrastructure network engineer remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "Network Engineer - Supply Infrastructure",
+      "category": "Supply Chain",
+      "description": "Configure routing, switching, firewalls, and network monitoring."
+    }
+  },
+  {
+    "name": "IT engineer for e-procurement systems remains in scope",
+    "expected": "include",
+    "job": {
+      "title": "IT Engineer - E-Procurement Systems",
+      "category": "Procurement",
+      "details": { "Education": "Degree in IT" },
+      "description": "Administer servers, integrations, access controls, and application infrastructure."
+    }
+  },
+  {
+    "name": "smart contract specialist remains in scope despite contract wording",
+    "expected": "include",
+    "job": {
+      "title": "Smart Contract Specialist",
+      "category": "Software Development",
+      "details": { "Education": "Bachelor's degree in Computer Science" },
+      "description": "Develop, test, and audit Solidity smart contracts and blockchain application code."
+    }
+  },
+  {
+    "name": "data center power supply engineer is not mistaken for a supply chain role",
+    "expected": "include",
+    "job": {
+      "title": "Data Center Power Supply Engineer",
+      "category": "Information Technology",
+      "details": { "Education": "Bachelor's degree in Computer Engineering" },
+      "description": "Monitor UPS capacity and redundant power for server racks and data-center infrastructure."
+    }
   },
   {
     "name": "UA Telecom mixed technical revenue and administrative careers bundle",
@@ -297,6 +552,339 @@
       "title": "Officer",
       "category": "IT",
       "description": "A bachelor's degree in Finance with experience using IT systems is required."
+    }
+  },
+  {
+    "name": "IT business analyst is an explicit computing role",
+    "expected": "include",
+    "job": { "title": "IT Business Analyst", "category": "Business", "description": "Translate requirements for application teams." }
+  },
+  {
+    "name": "application support specialist is an explicit computing role",
+    "expected": "include",
+    "job": { "title": "Application Support Specialist", "category": "Operations", "description": "Troubleshoot production applications and APIs." }
+  },
+  {
+    "name": "service desk analyst is an explicit computing role",
+    "expected": "include",
+    "job": { "title": "Service Desk Analyst", "category": "Support", "description": "Resolve endpoint, account, and software incidents." }
+  },
+  {
+    "name": "IT audit officer overrides only the generic audit guard",
+    "expected": "include",
+    "job": { "title": "IT Audit Officer", "category": "Audit", "description": "Review access controls, systems security, and technology risks." }
+  },
+  {
+    "name": "IT project coordinator overrides only the generic project guard",
+    "expected": "include",
+    "job": { "title": "IT Project Coordinator", "category": "Project Management", "description": "Coordinate software releases and infrastructure delivery." }
+  },
+  {
+    "name": "information security officer is an explicit computing role",
+    "expected": "include",
+    "job": { "title": "Information Security Officer", "category": "Security", "description": "Operate the SIEM and coordinate incident response." }
+  },
+  {
+    "name": "NOC officer is an explicit network role",
+    "expected": "include",
+    "job": { "title": "NOC Officer", "category": "Telecommunications", "description": "Monitor IP links, routers, and network incidents." }
+  },
+  {
+    "name": "digital transformation specialist is an explicit technology role",
+    "expected": "include",
+    "job": { "title": "Digital Transformation Specialist", "category": "Strategy", "description": "Modernize applications, workflows, integrations, and data platforms." }
+  },
+  {
+    "name": "UI UX designer remains in the software product scope",
+    "expected": "include",
+    "job": { "title": "UI/UX Designer", "category": "Software Product Design", "description": "Design interfaces and prototypes for web and mobile applications." }
+  },
+  {
+    "name": "GIS technician is an explicit geospatial technology role",
+    "expected": "include",
+    "job": { "title": "GIS Technician", "category": "Geospatial", "description": "Maintain spatial databases and produce GIS maps." }
+  },
+  {
+    "name": "computer instructor is an explicit computing education role",
+    "expected": "include",
+    "job": { "title": "Computer Instructor", "category": "Education", "description": "Teach programming, databases, networking, and operating systems." }
+  },
+  {
+    "name": "software QA officer is an explicit software testing role",
+    "expected": "include",
+    "job": { "title": "Software QA Officer", "category": "Quality Assurance", "description": "Create test cases and automate application testing." }
+  },
+  {
+    "name": "firmware engineer is an explicit computing role",
+    "expected": "include",
+    "job": { "title": "Firmware Engineer", "category": "Engineering", "description": "Develop embedded C++ software for connected devices." }
+  },
+  {
+    "name": "ambiguous systems officer is confirmed by compact information systems degree",
+    "expected": "include",
+    "job": { "title": "Systems Officer", "category": "Private Sector", "details": { "Education": "BSCIS" } }
+  },
+  {
+    "name": "generic title is rescued by computing degree and two explicit technical duties",
+    "expected": "include",
+    "job": {
+      "title": "Officer",
+      "category": "Private Sector",
+      "details": { "Education": "Bachelor's degree in Computer Systems Engineering" },
+      "description": "Provide application support and perform server administration."
+    }
+  },
+  {
+    "name": "Persian website design and development teacher is in scope",
+    "expected": "include",
+    "job": {
+      "title": "آموزگار طراحی و توسعه وبسایت",
+      "category": "General",
+      "description": "آموزش طراحی و توسعه وبسایت با HTML، CSS، Javascript، React، Node.js، MongoDB و API. فارغ شده از تکنالوژی معلوماتی."
+    }
+  },
+  {
+    "name": "OFC back office engineer title is in scope without relying on board category",
+    "expected": "include",
+    "job": { "title": "OFC Back Office Engineer", "category": "Engineering" }
+  },
+  {
+    "name": "IT technician intern retains the technical title signal",
+    "expected": "include",
+    "job": { "title": "IT Technician Intern", "category": "Internship" }
+  },
+  {
+    "name": "IT product and service delivery engineer title is in scope",
+    "expected": "include",
+    "job": { "title": "Engineer - IT Product & Service Delivery ATOMA-Pay", "category": "Financial Services" }
+  },
+  {
+    "name": "generic technical engineer with civil degree remains outside computing scope",
+    "expected": "exclude",
+    "job": {
+      "title": "Technical Engineer",
+      "category": "Engineering",
+      "details": { "Education": "Bachelor's degree in Civil Engineering or Construction Engineering" }
+    }
+  },
+  {
+    "name": "live technical facilities manager remains outside computing scope",
+    "expected": "exclude",
+    "job": {
+      "title": "Technical Facilities Manager",
+      "category": "Technical Operations",
+      "details": { "Education": "bachelor" },
+      "description": "Daily operation and maintenance of generators, steam, compressed air, refrigeration, plumbing, and facility equipment."
+    }
+  },
+  {
+    "name": "live senior civil infrastructure engineer remains outside computing scope",
+    "expected": "exclude",
+    "job": {
+      "title": "Senior Infrastructure Engineer – (PCIO)",
+      "category": "Engineering, Engineering Management",
+      "details": { "Education": "Bachelor's degree in civil engineering" },
+      "description": "Lead engineering surveys, construction design, cost estimation, site inspection, and QA/QC for community infrastructure projects."
+    }
+  },
+  {
+    "name": "live unsplittable call for CV bundle is not published as one IT job",
+    "expected": "exclude",
+    "job": {
+      "title": "Call For CV THIRD-COUNTRY NATIONAL POSITIONS",
+      "category": "Operations, Office Management",
+      "description": "Combined vacancies: operations supervisor, security trainer, chef, project reserve, and IT specialist responsible for network administration and incident response."
+    }
+  },
+  {
+    "name": "WASH technical lead is not a computing technical lead",
+    "expected": "exclude",
+    "job": {
+      "title": "WASH Technical Lead",
+      "category": "WASH",
+      "details": { "Education": "Bachelor's degree in Civil or Environmental Engineering" },
+      "description": "Lead water, sanitation, hygiene, borehole, and latrine programming."
+    }
+  },
+  {
+    "name": "civil engineering lead is not a software engineering lead",
+    "expected": "exclude",
+    "job": {
+      "title": "Civil Engineering Lead",
+      "category": "Civil Engineering",
+      "details": { "Education": "Bachelor's degree in Civil Engineering" },
+      "description": "Lead structural surveys, construction design, and site supervision."
+    }
+  },
+  {
+    "name": "agricultural technology advisor is not a computing technology advisor",
+    "expected": "exclude",
+    "job": {
+      "title": "Agricultural Technology Advisor",
+      "category": "Agriculture",
+      "details": { "Education": "Master's degree in Agriculture" },
+      "description": "Advise farmers on irrigation, seeds, soil, and crop technology."
+    }
+  },
+  {
+    "name": "construction technical project manager is not a computing project manager",
+    "expected": "exclude",
+    "job": {
+      "title": "Technical Project Manager - Construction",
+      "category": "Construction Engineering",
+      "description": "Manage construction schedules, contractors, quantities, and site safety."
+    }
+  },
+  {
+    "name": "marketing digital project manager is not a software project manager",
+    "expected": "exclude",
+    "job": {
+      "title": "Digital Project Manager - Marketing",
+      "category": "Digital Marketing",
+      "description": "Plan advertising campaigns, content calendars, and paid media delivery."
+    }
+  },
+  {
+    "name": "medical application specialist is not a software application specialist",
+    "expected": "exclude",
+    "job": {
+      "title": "Medical Application Specialist",
+      "category": "Medical",
+      "details": { "Education": "Medical degree" },
+      "description": "Train clinicians in the safe application of medical devices and treatment protocols."
+    }
+  },
+  {
+    "name": "nutrition technical support officer is not IT support",
+    "expected": "exclude",
+    "job": {
+      "title": "Technical Support Officer - Nutrition Program",
+      "category": "Health Care, Nutrition",
+      "details": { "Education": "Bachelor's degree in Nutrition" },
+      "description": "Provide technical support on nutrition protocols, screening, and community health."
+    }
+  },
+  {
+    "name": "guard force security operations manager is not cybersecurity operations",
+    "expected": "exclude",
+    "job": {
+      "title": "Security Operations Manager - Guard Force",
+      "category": "Security",
+      "description": "Manage guards, access posts, patrol schedules, and physical site protection."
+    }
+  },
+  {
+    "name": "humanitarian incident response officer is not a cyber responder",
+    "expected": "exclude",
+    "job": {
+      "title": "Incident Response Officer - Humanitarian Emergencies",
+      "category": "Emergency Response",
+      "description": "Coordinate rapid humanitarian assistance after displacement and natural disasters."
+    }
+  },
+  {
+    "name": "dairy technical operations manager is not an IT operations manager",
+    "expected": "exclude",
+    "job": {
+      "title": "Technical Operations Manager - Dairy Factory",
+      "category": "Manufacturing",
+      "description": "Oversee milk processing, pasteurization, production equipment, and food safety."
+    }
+  },
+  {
+    "name": "electrical integration engineer is not a software integration engineer",
+    "expected": "exclude",
+    "job": {
+      "title": "Integration Engineer - Electrical Systems",
+      "category": "Electrical Engineering",
+      "description": "Integrate switchgear, electrical panels, power controls, and distribution equipment."
+    }
+  },
+  {
+    "name": "HVAC systems engineer is not an IT systems engineer",
+    "expected": "exclude",
+    "job": {
+      "title": "Systems Engineer - HVAC",
+      "category": "Mechanical Engineering",
+      "description": "Design heating, ventilation, air-conditioning, ducting, and refrigeration systems."
+    }
+  },
+  {
+    "name": "medical-device application engineer is not a software application engineer",
+    "expected": "exclude",
+    "job": {
+      "title": "Application Engineer - Medical Devices",
+      "category": "Medical",
+      "description": "Demonstrate clinical equipment and advise hospitals on safe device application."
+    }
+  },
+  {
+    "name": "physical security analyst is not a cybersecurity analyst",
+    "expected": "exclude",
+    "job": {
+      "title": "Security Analyst - Physical Security",
+      "category": "Security",
+      "description": "Assess guard coverage, facility access, patrol routes, and physical threats."
+    }
+  },
+  {
+    "name": "cybersecurity operations manager remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "Cybersecurity Operations Manager", "category": "Operations" }
+  },
+  {
+    "name": "cyber incident response officer remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "Cyber Incident Response Officer", "category": "Security" }
+  },
+  {
+    "name": "IT technical operations manager remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "IT Technical Operations Manager", "category": "Operations" }
+  },
+  {
+    "name": "software integration engineer remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "Software Integration Engineer", "category": "Engineering" }
+  },
+  {
+    "name": "IT systems engineer remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "IT Systems Engineer", "category": "Engineering" }
+  },
+  {
+    "name": "software application engineer remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "Software Application Engineer", "category": "Engineering" }
+  },
+  {
+    "name": "cybersecurity analyst remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "Cybersecurity Analyst", "category": "Security" }
+  },
+  {
+    "name": "software technical lead remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "Software Technical Lead", "category": "Engineering" }
+  },
+  {
+    "name": "IT application specialist remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "IT Application Specialist", "category": "Operations" }
+  },
+  {
+    "name": "IT technical support officer remains explicitly in scope",
+    "expected": "include",
+    "job": { "title": "IT Technical Support Officer", "category": "Support" }
+  },
+  {
+    "name": "digital media content role is not rescued by IT category and CS degree",
+    "expected": "exclude",
+    "job": {
+      "title": "Digital Media & Content Officer",
+      "category": "Information Technology, Marketing",
+      "details": { "Education": "Bachelor's degree in Computer Science" },
+      "description": "Create posts, videos, campaign copy, and social media calendars."
     }
   },
   {

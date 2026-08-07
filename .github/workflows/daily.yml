@@ -57,7 +57,7 @@ jobs:
           node scrape_all.js \
             --json ../docs/data/jobs.json \
             --csv ../data/jobs.csv \
-            --max-pages 10 \
+            --max-pages 50 \
             --debug-dir debug
 
       - name: Generate compact public summary

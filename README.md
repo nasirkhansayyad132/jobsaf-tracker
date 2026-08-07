@@ -193,7 +193,7 @@ node scrape_all.js \
   --json ../docs/data/jobs.json \
   --csv ../data/jobs.csv \
   --debug-dir debug \
-  --max-pages 10
+  --max-pages 50
 ```
 
 Re-normalize, re-score, and deduplicate the current dataset without network
@@ -232,7 +232,8 @@ node server.js
 
 It binds to `127.0.0.1:3001` by default. Exposing another interface requires
 both `SCRAPER_HOST` and `SCRAPER_API_TOKEN`. The public frontend does not depend
-on this server.
+on this server. Local API runs scan up to 50 listing pages by default; set
+`SCRAPER_MAX_PAGES` only when intentionally testing a different guarded cap.
 
 ## GitHub Pages deployment
 

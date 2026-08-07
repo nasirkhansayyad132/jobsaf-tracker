@@ -6,7 +6,13 @@ const acbar = require("./sites/acbar");
 const jobsaf = require("./sites/jobsaf");
 const kaarobar = require("./sites/kaarobar");
 const wazifaha = require("./sites/wazifaha");
-const { canonicalUrl, dedupeJobs, referenceKey } = require("./lib/dedupe");
+const {
+  canonicalUrl,
+  dedupeJobs,
+  referenceKey,
+  resolveApplicationMethod,
+} = require("./lib/dedupe");
+const { expandBundledJob } = require("./lib/bundles");
 const { assessJobRelevance } = require("./lib/keywords");
 const { normalizeJob, normalizeTimestamp, todayKabulISO } = require("./lib/normalize");
 const { toCSV } = require("./lib/csv");
@@ -15,6 +21,7 @@ const SITES = [jobsaf, acbar, kaarobar, wazifaha];
 const DEFAULT_MISSED_RUN_GRACE = 2;
 const DEFAULT_MAJOR_SOURCE_SIZE = 8;
 const DEFAULT_MAJOR_DROP_RATIO = 0.2;
+const DEFAULT_MAX_PAGES = 50;
 
 function arg(name, def = null) {
   const idx = process.argv.indexOf(name);
@@ -53,8 +60,8 @@ function loadExisting(filePath, options = {}) {
 
 function pageLimitFor(siteName, options) {
   const flag = `--${siteName.replace(/[^a-z0-9]/gi, "").toLowerCase()}-pages`;
-  const parsed = Number.parseInt(arg(flag, String(options.maxPages || 10)), 10);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : 10;
+  const parsed = Number.parseInt(arg(flag, String(options.maxPages || DEFAULT_MAX_PAGES)), 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : DEFAULT_MAX_PAGES;
 }
 
 function safeSiteName(siteName) {
@@ -64,6 +71,10 @@ function safeSiteName(siteName) {
 
 function siteErrorPath(debugDir, siteName) {
   return path.join(debugDir, `${safeSiteName(siteName)}.txt`);
+}
+
+function relevanceAuditPath(debugDir, siteName) {
+  return path.join(debugDir, `${safeSiteName(siteName)}.relevance.json`);
 }
 
 function writeSiteError(debugDir, siteName, error) {
@@ -88,6 +99,39 @@ function clearSiteError(debugDir, siteName) {
   }
 }
 
+function clearRelevanceAudit(debugDir, siteName) {
+  if (!debugDir) return;
+  try {
+    fs.unlinkSync(relevanceAuditPath(debugDir, siteName));
+  } catch (error) {
+    if (error.code !== "ENOENT") {
+      console.log(`[debug] could not clear stale relevance audit for ${siteName}: ${error.message}`);
+    }
+  }
+}
+
+function writeRelevanceAudit(debugDir, siteName, records, now) {
+  if (!debugDir) return;
+  fs.mkdirSync(debugDir, { recursive: true });
+  const audit = (Array.isArray(records) ? records : [])
+    .filter(record => record?.title && record?.url)
+    .flatMap(record => expandBundledJob(record, { now }))
+    .map(record => annotateRelevance(record, now))
+    .map(job => ({
+      source: job.source,
+      title: job.title,
+      url: job.url,
+      category: job.category,
+      score: job.relevance.score,
+      threshold: job.relevance.threshold,
+      decision: job.relevance.decision,
+      reasons: job.relevance.reasons,
+      enrichment_status: job.details?.["Enrichment Status"] || "complete",
+    }))
+    .sort((a, b) => `${a.decision}|${a.title}|${a.url}`.localeCompare(`${b.decision}|${b.title}|${b.url}`));
+  fs.writeFileSync(relevanceAuditPath(debugDir, siteName), `${JSON.stringify(audit, null, 2)}\n`, "utf-8");
+}
+
 function annotateRelevance(record, now) {
   const job = normalizeJob(record, { now });
   job.relevance = assessJobRelevance(job);
@@ -97,6 +141,7 @@ function annotateRelevance(record, now) {
 function prepareRecords(records, options = {}) {
   const normalized = records
     .filter(Boolean)
+    .flatMap(record => expandBundledJob(record, { now: options.now }))
     .map(record => annotateRelevance(record, options.now))
     .filter(job => job.title && job.url && job.relevance.decision === "include");
   if (options.skipDedupe) return normalized;
@@ -115,19 +160,42 @@ async function runSite(site, options) {
   if (records.length === 0) {
     throw new Error(`${site.name} discovered zero jobs; refusing to treat a possibly changed source as healthy`);
   }
+  const coverage = records.coverage || {};
+  writeRelevanceAudit(options.debugDir, site.name, coverage.auditRecords || records, options.now);
   const related = prepareRecords(records, options);
-  console.log(`[${site.name}] discovered ${records.length}; kept ${related.length} technical jobs`);
-  return { name: site.name, rawCount: records.length, records: related, error: null };
+  const rawCount = coverage.discoveredCount || records.length;
+  const detailFailures = Number.parseInt(coverage.detailFailures || 0, 10) || 0;
+  const listingFailures = Number.parseInt(coverage.listingFailures || 0, 10) || 0;
+  console.log(
+    `[${site.name}] discovered ${rawCount}; kept ${related.length} technical jobs`
+    + (detailFailures ? `; ${detailFailures} detail failures, ${coverage.fallbackCount || 0} title fallbacks` : "")
+    + (listingFailures ? `; partial pagination (${coverage.listingFailureReason || "listing page failed"})` : "")
+  );
+  return { name: site.name, rawCount, records: related, coverage, error: null };
 }
 
 async function collectSiteResults(sites, options) {
   return Promise.all(sites.map(async site => {
     try {
       const result = await runSite(site, options);
-      clearSiteError(options.debugDir, site.name);
+      if (result.coverage.detailFailures || result.coverage.listingFailures) {
+        writeSiteError(
+          options.debugDir,
+          site.name,
+          new Error(
+            `${site.name} partial coverage: ${result.coverage.detailFailures || 0}/${result.coverage.discoveredCount} `
+            + `detail failures (${result.coverage.fallbackCount || 0} strong-title fallbacks); `
+            + `${result.coverage.listingFailures || 0} listing failures`
+            + (result.coverage.listingFailureReason ? ` (${result.coverage.listingFailureReason})` : "")
+          )
+        );
+      } else {
+        clearSiteError(options.debugDir, site.name);
+      }
       return result;
     } catch (error) {
       console.log(`[${site.name}] failed: ${error.message}`);
+      clearRelevanceAudit(options.debugDir, site.name);
       writeSiteError(options.debugDir, site.name, error);
       return { name: site.name, rawCount: 0, records: [], error };
     }
@@ -149,9 +217,18 @@ function evaluateSourceHealth(results, existing, options = {}) {
   for (const result of results) {
     const previous = existingCounts.get(result.name) || 0;
     const current = result.records.length;
-    let status = result.error ? "failed" : "healthy";
-    let reason = result.error?.message || null;
-    if (!result.error && previous >= minimumSize && current < Math.max(1, Math.ceil(previous * dropRatio))) {
+    const detailFailures = Number.parseInt(result.coverage?.detailFailures || 0, 10) || 0;
+    const listingFailures = Number.parseInt(result.coverage?.listingFailures || 0, 10) || 0;
+    let status = result.error ? "failed" : detailFailures || listingFailures ? "partial" : "healthy";
+    let reason = result.error?.message
+      || [
+        detailFailures
+          ? `${detailFailures}/${result.coverage.discoveredCount || result.rawCount} detail enrichments failed`
+          : null,
+        listingFailures ? result.coverage.listingFailureReason || `${listingFailures} listing pages failed` : null,
+      ].filter(Boolean).join("; ")
+      || null;
+    if (status === "healthy" && previous >= minimumSize && current < Math.max(1, Math.ceil(previous * dropRatio))) {
       status = "major_drop";
       reason = `technical job count fell from ${previous} to ${current}`;
     }
@@ -161,6 +238,9 @@ function evaluateSourceHealth(results, existing, options = {}) {
       previous_count: previous,
       current_count: current,
       raw_count: result.rawCount,
+      detail_failures: detailFailures,
+      listing_failures: listingFailures,
+      fallback_count: result.coverage?.fallbackCount || 0,
       reason,
     });
   }
@@ -168,7 +248,7 @@ function evaluateSourceHealth(results, existing, options = {}) {
 }
 
 function assertHealthyRun(results, health, existing, options = {}) {
-  const succeeded = health.filter(item => item.status === "healthy");
+  const succeeded = health.filter(item => item.status === "healthy" || item.status === "partial");
   const majorDrops = health.filter(item => item.status === "major_drop");
   const freshCount = results.reduce((total, result) => total + result.records.length, 0);
   const rawCount = results.reduce((total, result) => total + result.rawCount, 0);
@@ -197,7 +277,7 @@ function reconcileLifecycle(existing, fresh, health, options = {}) {
   const combined = fresh.map(record => ({
     ...record,
     active: true,
-    lifecycle_status: "active",
+    lifecycle_status: record.details?.["Enrichment Status"] ? "source_unavailable" : "active",
     missed_runs: 0,
     last_seen_at: now,
   }));
@@ -222,7 +302,7 @@ function reconcileLifecycle(existing, fresh, health, options = {}) {
       continue;
     }
 
-    if (sourceStatus === "failed") {
+    if (sourceStatus === "failed" || sourceStatus === "partial") {
       combined.push({ ...oldRecord, active: true, lifecycle_status: "source_unavailable" });
       continue;
     }
@@ -265,13 +345,22 @@ function validateOutput(jobs, hadInput = false) {
   if (hadInput && jobs.length === 0) throw new Error("[validate] Refusing to replace non-empty input with empty output");
   const urls = new Set();
   for (const [index, job] of jobs.entries()) {
-    if (!job.title || !job.source || !job.url) throw new Error(`[validate] Job ${index} is missing title/source/url`);
+    if (!job.title || !job.company || !job.source || !job.url) {
+      throw new Error(`[validate] Job ${index} is missing title/company/source/url`);
+    }
     if (job.relevance?.decision !== "include" || job.relevance.score < job.relevance.threshold) {
       throw new Error(`[validate] Job ${index} has invalid relevance metadata`);
     }
     const url = canonicalUrl(job);
     if (urls.has(url)) throw new Error(`[validate] Duplicate canonical URL: ${url}`);
     urls.add(url);
+    const resolvedApplicationMethod = resolveApplicationMethod(job);
+    if (job.application_method !== resolvedApplicationMethod) {
+      throw new Error(
+        `[validate] Job ${index} has unbacked application_method ${job.application_method || "missing"}; `
+        + `expected ${resolvedApplicationMethod} from its application fields`
+      );
+    }
     for (const field of ["post_date", "closing_date"]) {
       if (job[field] && !/^20\d{2}-\d{2}-\d{2}$/.test(job[field])) {
         throw new Error(`[validate] Job ${index} has invalid ${field}: ${job[field]}`);
@@ -349,7 +438,7 @@ async function main() {
   const outJson = arg("--json", path.join(process.cwd(), "..", "docs", "data", "jobs.json"));
   const outCsv = arg("--csv", path.join(process.cwd(), "..", "data", "jobs.csv"));
   const debugDir = arg("--debug-dir", path.join(process.cwd(), "debug"));
-  const maxPages = Number.parseInt(arg("--max-pages", "10"), 10);
+  const maxPages = Number.parseInt(arg("--max-pages", String(DEFAULT_MAX_PAGES)), 10);
   const concurrency = Number.parseInt(arg("--concurrency", "4"), 10);
   const jobsafRawUrl = arg("--raw-url");
 

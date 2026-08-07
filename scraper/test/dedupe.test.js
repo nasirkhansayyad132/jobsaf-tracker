@@ -163,3 +163,141 @@ test("distinct stable references prevent role or fingerprint false merges", () =
   });
   assert.equal(dedupeJobs([first, second]).jobs.length, 2);
 });
+
+test("merge preserves a backed email preference when both email and web channels remain", () => {
+  const emailOnly = job({
+    application_method: "email",
+    apply_emails: ["jobs@example.com"],
+  });
+  const webApplication = job({
+    source: "kaarobar",
+    url: "https://www.kaarobar.net/jobs/dev-1",
+    source_url: "https://www.kaarobar.net/jobs/dev-1",
+    application_method: "web",
+    apply_url: "https://www.kaarobar.net/jobs/apply/dev-1",
+  });
+
+  assert.equal(emailOnly.application_method, "email");
+  assert.equal(emailOnly.apply_url, null);
+  const merged = dedupeJobs([emailOnly, webApplication]).jobs[0];
+
+  assert.equal(merged.apply_url, "https://www.kaarobar.net/jobs/apply/dev-1");
+  assert.equal(merged.application_method, "email");
+  assert.deepEqual(merged.apply_emails, ["jobs@example.com"]);
+});
+
+test("merge re-derives web method when another source supplies the only application channel", () => {
+  const noChannel = job({ application_method: "unknown" });
+  const webApplication = job({
+    source: "kaarobar",
+    url: "https://www.kaarobar.net/jobs/dev-1",
+    source_url: "https://www.kaarobar.net/jobs/dev-1",
+    application_method: "web",
+    apply_url: "https://www.kaarobar.net/jobs/apply/dev-1",
+  });
+
+  const merged = dedupeJobs([noChannel, webApplication]).jobs[0];
+  assert.equal(merged.apply_url, "https://www.kaarobar.net/jobs/apply/dev-1");
+  assert.equal(merged.application_method, "web");
+});
+
+test("merge re-derives email method when another source supplies a mailto application URL", () => {
+  const noChannel = job({ application_method: "unknown" });
+  const emailApplication = job({
+    source: "kaarobar",
+    url: "https://www.kaarobar.net/jobs/dev-1",
+    source_url: "https://www.kaarobar.net/jobs/dev-1",
+    application_method: "email",
+    apply_url: "mailto:apply@example.com",
+  });
+
+  assert.equal(noChannel.application_method, "unknown");
+  assert.equal(noChannel.apply_url, null);
+  const merged = dedupeJobs([noChannel, emailApplication]).jobs[0];
+
+  assert.equal(merged.apply_url, "mailto:apply@example.com");
+  assert.equal(merged.application_method, "email");
+  assert.deepEqual(merged.apply_emails, ["apply@example.com"]);
+});
+
+test("dedupe repairs a stale method even when it arrives after normalization", () => {
+  const normalized = job({
+    application_method: "unknown",
+    apply_url: "https://jobs.af/jobs/dev-1/apply",
+  });
+  assert.equal(normalized.application_method, "web");
+  const stale = { ...normalized, application_method: "unknown" };
+
+  const repaired = dedupeJobs([stale]).jobs[0];
+  assert.equal(repaired.application_method, "web");
+  assert.equal(repaired.apply_url, "https://jobs.af/jobs/dev-1/apply");
+});
+
+test("dedupe replaces an unbacked web method with unknown", () => {
+  const normalized = job();
+  const stale = {
+    ...normalized,
+    application_method: "web",
+    apply_url: null,
+    apply_emails: [],
+    apply_phones: [],
+  };
+
+  assert.equal(dedupeJobs([stale]).jobs[0].application_method, "unknown");
+});
+
+test("dedupe does not treat a stale malformed mailto URL as email evidence", () => {
+  const stale = {
+    ...job(),
+    application_method: "email",
+    apply_url: "mailto:not-an-email",
+    apply_emails: [],
+  };
+
+  const repaired = dedupeJobs([stale]).jobs[0];
+  assert.equal(repaired.application_method, "unknown");
+});
+
+test("an alternate-source listing fallback does not become a web application channel", () => {
+  const kaarobarUrl = "https://www.kaarobar.net/jobs/dev-1";
+  const record = job({
+    source: "kaarobar",
+    url: kaarobarUrl,
+    source_url: kaarobarUrl,
+    application_method: "unknown",
+    apply_url: kaarobarUrl,
+    also_found_on: [
+      { source: "jobs.af", url: "https://jobs.af/jobs/dev-1" },
+    ],
+  });
+
+  const stabilized = dedupeJobs([record]).jobs[0];
+  assert.equal(stabilized.source, "jobs.af");
+  assert.equal(stabilized.apply_url, kaarobarUrl);
+  assert.equal(stabilized.application_method, "unknown");
+  assert.deepEqual(stabilized.also_found_on, [
+    { source: "kaarobar", url: kaarobarUrl },
+  ]);
+});
+
+test("a listing fallback cannot hide a duplicate source's real application form", () => {
+  const listingOnly = job({
+    application_method: "web",
+    apply_url: "https://jobs.af/jobs/dev-1",
+  });
+  const webApplication = job({
+    source: "kaarobar",
+    url: "https://www.kaarobar.net/jobs/dev-1",
+    source_url: "https://www.kaarobar.net/jobs/dev-1",
+    application_method: "web",
+    apply_url: "https://www.kaarobar.net/jobs/apply/dev-1",
+  });
+
+  assert.equal(listingOnly.application_method, "unknown");
+  for (const records of [[listingOnly, webApplication], [webApplication, listingOnly]]) {
+    const merged = dedupeJobs(records).jobs[0];
+    assert.equal(merged.source, "jobs.af");
+    assert.equal(merged.apply_url, "https://www.kaarobar.net/jobs/apply/dev-1");
+    assert.equal(merged.application_method, "web");
+  }
+});

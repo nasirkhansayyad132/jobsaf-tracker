@@ -2,6 +2,7 @@ const assert = require("node:assert/strict");
 const test = require("node:test");
 const {
   extractApplicationSubject,
+  extractMailtoEmails,
   extractPhones,
   normalizeJob,
   normalizePhone,
@@ -12,6 +13,7 @@ test("normalizes real calendar dates and rejects impossible dates", () => {
   assert.equal(parseClosingDate("2026-07-23 08:26:40.9+00"), "2026-07-23");
   assert.equal(parseClosingDate("5 August, 2026"), "2026-08-05");
   assert.equal(parseClosingDate("August 5, 2026"), "2026-08-05");
+  assert.equal(parseClosingDate("30-12-2025"), "2025-12-30");
   assert.equal(parseClosingDate("31/02/2026"), null);
 });
 
@@ -112,6 +114,125 @@ test("normalizes application method from the real application channel", () => {
     apply_url: "https://acbar.org/jobs/3",
   }, { now: "2026-08-05T00:00:00Z" });
   assert.equal(unknown.application_method, "unknown");
+});
+
+test("requires real recipients in mailto application URLs", () => {
+  for (const applyUrl of ["mailto:", "mailto:not-an-email", "mailto:?subject=Application"]) {
+    const job = normalizeJob({
+      source: "jobs.af",
+      url: "https://jobs.af/jobs/invalid-mailto",
+      title: "Software Engineer",
+      application_method: "email",
+      apply_url: applyUrl,
+    }, { now: "2026-08-07T00:00:00Z" });
+    assert.equal(job.apply_url, null, applyUrl);
+    assert.deepEqual(job.apply_emails, [], applyUrl);
+    assert.equal(job.application_method, "unknown", applyUrl);
+  }
+});
+
+test("preserves valid encoded and multi-recipient mailto application URLs", () => {
+  const applyUrl = "mailto:Jobs%40Example.com,HR%40Example.org?subject=Application";
+  const job = normalizeJob({
+    source: "jobs.af",
+    url: "https://jobs.af/jobs/valid-mailto",
+    title: "Software Engineer",
+    apply_url: applyUrl,
+  }, { now: "2026-08-07T00:00:00Z" });
+
+  assert.deepEqual(extractMailtoEmails(applyUrl), ["jobs@example.com", "hr@example.org"]);
+  assert.equal(job.apply_url, applyUrl);
+  assert.deepEqual(job.apply_emails, ["jobs@example.com", "hr@example.org"]);
+  assert.equal(job.application_method, "email");
+});
+
+test("does not turn an unbacked Jobs.af link label into a web application", () => {
+  const job = normalizeJob({
+    source: "jobs.af",
+    url: "https://jobs.af/jobs/procurement-bidding-specialist",
+    source_url: "https://jobs.af/jobs/procurement-bidding-specialist",
+    title: "Procurement Bidding Specialist",
+    apply_url: null,
+    details: { "Submission Through": "link" },
+  }, { now: "2026-08-07T00:00:00Z" });
+
+  assert.equal(job.apply_url, null);
+  assert.equal(job.application_method, "unknown");
+  assert.equal(job.source_url, "https://jobs.af/jobs/procurement-bidding-specialist");
+});
+
+test("falls through inconsistent declared application methods to backed channels", () => {
+  const cases = [
+    {
+      name: "unbacked web declaration with an email",
+      input: { application_method: "web", apply_emails: ["jobs@example.com"] },
+      expected: "email",
+    },
+    {
+      name: "unbacked email declaration with a web form",
+      input: { application_method: "email", apply_url: "https://apply.example.com/jobs/1" },
+      expected: "web",
+    },
+    {
+      name: "unbacked phone declaration without another channel",
+      input: { application_method: "phone" },
+      expected: "unknown",
+    },
+    {
+      name: "unknown declaration with a normalized phone",
+      input: { application_method: "unknown", apply_phones: ["070 123 4567"] },
+      expected: "phone",
+    },
+    {
+      name: "web declaration backed only by the listing URL",
+      input: {
+        application_method: "web",
+        apply_url: "https://jobs.af/jobs/1",
+      },
+      expected: "unknown",
+    },
+  ];
+
+  for (const { name, input, expected } of cases) {
+    const job = normalizeJob({
+      source: "jobs.af",
+      url: "https://jobs.af/jobs/1",
+      source_url: "https://jobs.af/jobs/1",
+      title: "Software Engineer",
+      ...input,
+    }, { now: "2026-08-07T00:00:00Z" });
+    assert.equal(job.application_method, expected, name);
+  }
+});
+
+test("preserves declared application methods when normalized evidence backs them", () => {
+  const cases = [
+    {
+      application_method: "web",
+      apply_url: "https://apply.example.com/jobs/2",
+      expected: "web",
+    },
+    {
+      application_method: "email",
+      apply_emails: ["Recruitment@Example.com"],
+      expected: "email",
+    },
+    {
+      application_method: "phone",
+      apply_phones: ["0093 (79) 123-4567"],
+      expected: "phone",
+    },
+  ];
+
+  for (const input of cases) {
+    const job = normalizeJob({
+      source: "jobs.af",
+      url: "https://jobs.af/jobs/2",
+      title: "Software Engineer",
+      ...input,
+    }, { now: "2026-08-07T00:00:00Z" });
+    assert.equal(job.application_method, input.expected);
+  }
 });
 
 test("migrates legacy ACBAR job aliases to the current reachable route", () => {

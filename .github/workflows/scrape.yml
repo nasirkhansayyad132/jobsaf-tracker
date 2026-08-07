@@ -41,7 +41,7 @@ jobs:
         run: |
           mkdir -p ../jobsaf_node/pages
           node scrape_all.js \
-            --max-pages 10 \
+            --max-pages 50 \
             --json ../jobsaf_node/pages/jobs.json \
             --csv ../jobsaf_node/pages/jobs.csv \
             --debug-dir debug

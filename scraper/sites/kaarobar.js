@@ -2,7 +2,13 @@ const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
 const { requestText } = require("../lib/http");
-const { enrichCandidates, requireDiscoveredJobs } = require("../lib/html_adapter");
+const {
+  attachCoverage,
+  DEFAULT_MAX_PAGES,
+  enrichCandidates,
+  reportedPageCount,
+  requireDiscoveredJobs,
+} = require("../lib/html_adapter");
 const {
   extractEmails,
   extractPhones,
@@ -44,13 +50,15 @@ function parseList(html) {
 
   $("ul.post-job-bx > li._li, li._li").each((_, item) => {
     const root = $(item);
-    const link = root.find('a[href^="/jobs/"]').first();
+    const link = root.find('.job-post-info h6 a[href*="/jobs/"], a[href^="/jobs/"]')
+      .filter((__, anchor) => !/\/jobs\/apply\//i.test($(anchor).attr("href") || ""))
+      .first();
     const href = link.attr("href");
     if (!href) return;
 
     const text = normSpace(root.text());
     const date = text.match(/\b20\d{2}-\d{2}-\d{2}\b/)?.[0] || null;
-    const company = normSpace(root.find('.job-post-info a[href^="/companies/"]').first().text());
+    const company = normSpace(root.find('.job-post-info a[href*="/companies/"]').first().text());
     const location = normSpace(root.find('[title="Location"]').last().text())
       || normSpace(root.find(".fa-globe").parent().text()).replace(/\|.*$/, "");
     const jobType = normSpace(root.find(".job-time span").first().text());
@@ -138,37 +146,104 @@ async function enrich(summary) {
 }
 
 async function scrape(options = {}) {
-  const maxPages = parseInt(options.maxPages || "10", 10);
+  const maxPages = parseInt(options.maxPages || String(DEFAULT_MAX_PAGES), 10);
   const debugDir = options.debugDir;
   const concurrency = parseInt(options.concurrency || "4", 10);
+  const fetchHtml = options.getHtml || getHtml;
+  const enrichDetail = options.enrich || enrich;
   const summaries = [];
+  const seenUrls = new Set();
+  let pagesFetched = 0;
+  let reportedPages = null;
+  let listingFailures = 0;
+  let listingFailureReason = null;
+  let listingComplete = false;
 
   for (let page = 1; page <= maxPages; page++) {
-    const html = await getHtml(pageUrl(page));
+    let html;
+    try {
+      html = await fetchHtml(pageUrl(page));
+    } catch (error) {
+      if (!summaries.length) throw error;
+      listingFailures += 1;
+      listingFailureReason = `page ${page} failed after ${summaries.length} jobs: ${error.message}`;
+      console.log(`[kaarobar] partial listing coverage: ${listingFailureReason}`);
+      break;
+    }
+    pagesFetched = page;
+    const detectedPages = reportedPageCount(html, page);
+    // A link to only the current page does not prove it is the last page.
+    // Establish a total only from a future-page link, then keep updating it.
+    if (detectedPages !== null && (reportedPages !== null || detectedPages > page)) {
+      reportedPages = Math.max(reportedPages || 1, detectedPages);
+    }
     if (page === 1) writeDebug(debugDir, "kaarobar.html", html);
     const pageJobs = parseList(html);
-    summaries.push(...pageJobs);
-    console.log(`[kaarobar] page ${page}: ${pageJobs.length} jobs`);
-    if (!pageJobs.length) break;
+    const newJobs = pageJobs.filter(job => job.source_url && !seenUrls.has(job.source_url));
+    newJobs.forEach(job => seenUrls.add(job.source_url));
+    summaries.push(...newJobs);
+    console.log(`[kaarobar] page ${page}: ${pageJobs.length} jobs (${newJobs.length} new)`);
+    if (reportedPages !== null && reportedPages > maxPages) {
+      throw new Error(`kaarobar pagination requires ${reportedPages} pages but max-pages is ${maxPages}`);
+    }
+    if (!pageJobs.length) {
+      if (reportedPages !== null && page < reportedPages) {
+        listingFailures += 1;
+        listingFailureReason = `page ${page} was empty before reported page ${reportedPages}`;
+      } else {
+        listingComplete = true;
+      }
+      break;
+    }
+    if (!newJobs.length) {
+      listingFailures += 1;
+      listingFailureReason = `pagination stalled at page ${page}`
+        + (reportedPages !== null ? ` of ${reportedPages}` : " with no reported total");
+      break;
+    }
+    if (reportedPages !== null && page >= reportedPages) {
+      listingComplete = true;
+      break;
+    }
+  }
+
+  if (!listingComplete && listingFailures === 0 && pagesFetched >= maxPages) {
+    throw new Error(`kaarobar reached max-pages ${maxPages} without a verified pagination end`);
   }
 
   const seen = new Map(summaries.map(job => [job.source_url, normalizeJob(job)]));
   const candidates = requireDiscoveredJobs("kaarobar", Array.from(seen.values()));
   console.log(`[kaarobar] enriching ${candidates.length} unique summaries before relevance filtering`);
-  const { records } = await enrichCandidates({
+  const enrichment = await enrichCandidates({
     siteName: "kaarobar",
     candidates,
-    concurrency,
-    enrich,
+    concurrency: Math.min(2, concurrency),
+    requestGapMs: 250,
+    enrich: enrichDetail,
+    allowStrongTitleFallback: true,
+    allowUnsafeResults: true,
     onFailure: (job, error) => {
       console.log(`[kaarobar] detail failed ${job.url}: ${error.message}`);
     },
   });
 
-  return records;
+  return attachCoverage(enrichment.records, {
+    discoveredCount: enrichment.discoveredCount,
+    detailFailures: enrichment.detailFailures,
+    enrichedCount: enrichment.enrichedCount,
+    fallbackCount: enrichment.fallbackCount,
+    auditRecords: enrichment.auditRecords,
+    unsafeCoverage: enrichment.unsafeCoverage,
+    listingFailures,
+    listingFailureReason,
+    pagesFetched,
+    reportedPages,
+  });
 }
 
 module.exports = {
   name: "kaarobar",
+  pageUrl,
+  parseList,
   scrape,
 };
