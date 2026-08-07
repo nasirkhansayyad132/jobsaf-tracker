@@ -67,14 +67,13 @@ function getJobKeyFromUrl() {
 }
 
 function formatUpdatedAt(value) {
-  if (!value || Number.isNaN(value.getTime())) return 'Feed generation time unavailable';
-  return `Feed generated ${new Intl.DateTimeFormat(undefined, {
+  if (!value || Number.isNaN(value.getTime())) return 'Update time unavailable';
+  return `Updated ${new Intl.DateTimeFormat(undefined, {
     timeZone: 'Asia/Kabul',
     month: 'short',
     day: 'numeric',
     hour: 'numeric',
     minute: '2-digit',
-    timeZoneName: 'short',
   }).format(value)}`;
 }
 
@@ -220,10 +219,23 @@ function App() {
     () => jobs.find(job => getJobKey(job) === selectedJobKey) || null,
     [jobs, selectedJobKey],
   );
-  const sourceCount = useMemo(
-    () => new Set(jobs.map(job => job.source).filter(Boolean)).size,
-    [jobs],
-  );
+  const jobBoardCount = useMemo(() => {
+    const sources = new Set();
+    const addSource = source => {
+      if (typeof source === 'string' && source.trim()) {
+        sources.add(source.trim().toLowerCase());
+      }
+    };
+
+    jobs.forEach(job => {
+      addSource(job.source);
+      (job.also_found_on || []).forEach(item => {
+        addSource(typeof item === 'string' ? item : item?.source);
+      });
+    });
+
+    return sources.size;
+  }, [jobs]);
   const updatedAt = generatedAt || getLastUpdated(jobs);
   const activeFilter = FILTERS.find(item => item.id === filter) || FILTERS[0];
 
@@ -333,21 +345,15 @@ function App() {
       </header>
 
       <main className="relative z-10">
-        <section className="pt-24 pb-8 sm:pt-32 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center animate-in" aria-labelledby="page-title">
-          <p className="mb-3 text-sm font-semibold tracking-[0.18em] uppercase text-blue-300 light:text-blue-700">
-            Technology opportunities across Afghanistan
-          </p>
-          <h1 id="page-title" className="text-4xl sm:text-6xl font-bold tracking-tight mb-4 text-white light:text-slate-950">
-            Find work that moves your career forward
+        <section className="pt-24 pb-7 sm:pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center animate-in" aria-labelledby="page-title">
+          <h1 id="page-title" className="mx-auto max-w-3xl text-3xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] font-bold tracking-tight text-white light:text-slate-950">
+            Find your next tech job
           </h1>
-          <p className="text-base sm:text-lg text-slate-300 light:text-slate-700 max-w-2xl mx-auto mb-5">
-            Browse software, IT, data, networking, security, and other technology roles collected from trusted job boards.
-          </p>
-          <p className="text-xs sm:text-sm text-slate-400 light:text-slate-600 mb-8" aria-live="polite">
-            {formatUpdatedAt(updatedAt)}{sourceCount ? ` · ${sourceCount} sources` : ''} · Always confirm details on the original listing
+          <p className="mx-auto mt-3 max-w-xl text-sm sm:text-base leading-6 text-slate-300 light:text-slate-700">
+            Software, IT, data, networking, and security jobs across Afghanistan.
           </p>
 
-          <div className="max-w-2xl mx-auto relative group">
+          <div className="max-w-2xl mx-auto mt-6 relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl blur opacity-20 group-focus-within:opacity-50 transition-opacity" aria-hidden="true" />
             <div className="relative bg-dark/90 light:bg-white border border-white/15 light:border-slate-300 rounded-xl p-2 flex items-center shadow-2xl">
               <Search className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 ml-2 sm:ml-3 shrink-0" aria-hidden="true" />
@@ -356,7 +362,7 @@ function App() {
                 id="job-search"
                 type="search"
                 autoComplete="off"
-                placeholder="Search title, company, skill, or location"
+                placeholder="Search jobs, skills, or companies"
                 value={search}
                 onChange={event => setSearch(event.target.value)}
                 className="w-full bg-transparent border-none text-white light:text-slate-950 px-3 sm:px-4 py-2 sm:py-3 focus:outline-none placeholder:text-slate-500 text-base sm:text-lg"
@@ -372,6 +378,19 @@ function App() {
                 </button>
               )}
             </div>
+          </div>
+
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-slate-400 light:text-slate-600">
+            <span className="inline-flex items-center gap-1.5" aria-live="polite" title="Shown in Afghanistan time">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 light:bg-emerald-600" aria-hidden="true" />
+              {formatUpdatedAt(updatedAt)}
+            </span>
+            {jobBoardCount > 0 && (
+              <>
+                <span className="text-slate-600 light:text-slate-400" aria-hidden="true">•</span>
+                <span>{jobBoardCount} job boards</span>
+              </>
+            )}
           </div>
         </section>
 
