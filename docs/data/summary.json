@@ -1,50 +1,56 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-09T05:40:19.155Z",
-  "today": "2026-08-09",
-  "total_jobs": 38,
+  "generated_at": "2026-08-10T06:05:09.766Z",
+  "today": "2026-08-10",
+  "total_jobs": 41,
   "source_count": 3,
   "sources": [
     {
       "name": "acbar",
-      "count": 16,
-      "oldest_seen_at": "2026-08-09T05:40:17Z",
-      "latest_seen_at": "2026-08-09T05:40:17Z"
+      "count": 21,
+      "oldest_seen_at": "2026-08-10T06:05:07Z",
+      "latest_seen_at": "2026-08-10T06:05:07Z"
     },
     {
       "name": "jobs.af",
       "count": 18,
       "oldest_seen_at": "2026-08-08T05:25:53Z",
-      "latest_seen_at": "2026-08-09T05:40:17Z"
+      "latest_seen_at": "2026-08-10T06:05:07Z"
     },
     {
       "name": "wazifaha",
-      "count": 4,
-      "oldest_seen_at": "2026-08-09T05:40:17Z",
-      "latest_seen_at": "2026-08-09T05:40:17Z"
+      "count": 2,
+      "oldest_seen_at": "2026-08-10T06:05:07Z",
+      "latest_seen_at": "2026-08-10T06:05:07Z"
     }
   ],
-  "new_count": 4,
+  "new_count": 6,
   "expiring_today_count": 1,
-  "expiring_soon_count": 7,
-  "tech_banking_count": 7,
+  "expiring_soon_count": 11,
+  "tech_banking_count": 8,
   "new_job_ids": [
-    "797db6da3e209e0c",
-    "7e3584158ec415a1",
-    "35fbdd9ed19c361b",
-    "058c59a4f9a20791"
+    "ba62b8651c003bb6",
+    "e5daa10f5b892ede",
+    "74d09b575b19234f",
+    "0328a62cfabb2188",
+    "6d34a34e9e4e1435",
+    "1623c5e640ebbb58"
   ],
   "expiring_today_ids": [
-    "1bd5a54866a9c1f8"
+    "b4be7f9c13f7e2a5"
   ],
   "expiring_soon_ids": [
-    "b4be7f9c13f7e2a5",
+    "ba62b8651c003bb6",
     "c438331c64f8330d",
     "07cd4448e9d7ddf0",
+    "e5daa10f5b892ede",
     "446ae82085f0c403",
     "797db6da3e209e0c",
     "5627111b227c199b",
-    "a545bb17ca90ba13"
+    "a545bb17ca90ba13",
+    "1e8b734f43994f6c",
+    "58f87d4922a37eba",
+    "579e97b3f85c33f7"
   ],
   "tech_banking_job_ids": [
     "07cd4448e9d7ddf0",
@@ -53,6 +59,7 @@
     "3bbb9f6a2a0f2819",
     "b345aa36646a6ce4",
     "bd4c47b33322a193",
-    "058c59a4f9a20791"
+    "058c59a4f9a20791",
+    "1623c5e640ebbb58"
   ]
 }
