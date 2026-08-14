@@ -1,41 +1,37 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-13T06:07:38.299Z",
-  "today": "2026-08-13",
-  "total_jobs": 40,
+  "generated_at": "2026-08-14T06:05:38.651Z",
+  "today": "2026-08-14",
+  "total_jobs": 39,
   "source_count": 3,
   "sources": [
     {
       "name": "acbar",
-      "count": 23,
-      "oldest_seen_at": "2026-08-13T06:07:35Z",
-      "latest_seen_at": "2026-08-13T06:07:35Z"
+      "count": 22,
+      "oldest_seen_at": "2026-08-14T06:05:35Z",
+      "latest_seen_at": "2026-08-14T06:05:35Z"
     },
     {
       "name": "jobs.af",
       "count": 15,
-      "oldest_seen_at": "2026-08-13T06:07:35Z",
-      "latest_seen_at": "2026-08-13T06:07:35Z"
+      "oldest_seen_at": "2026-08-14T06:05:35Z",
+      "latest_seen_at": "2026-08-14T06:05:35Z"
     },
     {
       "name": "wazifaha",
       "count": 2,
-      "oldest_seen_at": "2026-08-13T06:07:35Z",
-      "latest_seen_at": "2026-08-13T06:07:35Z"
+      "oldest_seen_at": "2026-08-14T06:05:35Z",
+      "latest_seen_at": "2026-08-14T06:05:35Z"
     }
   ],
-  "new_count": 2,
-  "expiring_today_count": 2,
-  "expiring_soon_count": 13,
-  "tech_banking_count": 7,
+  "new_count": 1,
+  "expiring_today_count": 0,
+  "expiring_soon_count": 14,
+  "tech_banking_count": 6,
   "new_job_ids": [
-    "fb25b9b3969a14f9",
-    "669e9fdff5c50cd0"
+    "1791bee35021bba2"
   ],
-  "expiring_today_ids": [
-    "1e8b734f43994f6c",
-    "579e97b3f85c33f7"
-  ],
+  "expiring_today_ids": [],
   "expiring_soon_ids": [
     "d52c25475f6cc2ab",
     "7e3584158ec415a1",
@@ -49,10 +45,10 @@
     "54a5fe08861a10fa",
     "489e50d14decd73d",
     "74d09b575b19234f",
-    "ee653e74eda64ce2"
+    "ee653e74eda64ce2",
+    "f399b1eef6233cb2"
   ],
   "tech_banking_job_ids": [
-    "579e97b3f85c33f7",
     "7b9b844f554ec282",
     "3bbb9f6a2a0f2819",
     "b345aa36646a6ce4",
