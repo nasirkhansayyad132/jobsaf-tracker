@@ -1,60 +1,53 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-30T10:14:55.381Z",
-  "today": "2026-08-30",
-  "total_jobs": 45,
+  "generated_at": "2026-08-31T11:13:59.183Z",
+  "today": "2026-08-31",
+  "total_jobs": 43,
   "source_count": 3,
   "sources": [
     {
       "name": "acbar",
-      "count": 23,
+      "count": 20,
       "oldest_seen_at": "2026-08-29T11:16:35Z",
-      "latest_seen_at": "2026-08-30T10:14:53Z"
+      "latest_seen_at": "2026-08-31T11:13:57Z"
     },
     {
       "name": "jobs.af",
-      "count": 21,
-      "oldest_seen_at": "2026-08-30T10:14:53Z",
-      "latest_seen_at": "2026-08-30T10:14:53Z"
+      "count": 22,
+      "oldest_seen_at": "2026-08-31T11:13:57Z",
+      "latest_seen_at": "2026-08-31T11:13:57Z"
     },
     {
       "name": "wazifaha",
       "count": 1,
-      "oldest_seen_at": "2026-08-30T10:14:53Z",
-      "latest_seen_at": "2026-08-30T10:14:53Z"
+      "oldest_seen_at": "2026-08-31T11:13:57Z",
+      "latest_seen_at": "2026-08-31T11:13:57Z"
     }
   ],
-  "new_count": 7,
-  "expiring_today_count": 3,
-  "expiring_soon_count": 12,
+  "new_count": 1,
+  "expiring_today_count": 7,
+  "expiring_soon_count": 7,
   "tech_banking_count": 8,
   "new_job_ids": [
-    "73d2a8fed948a3de",
-    "31b72a4348cbcb5c",
-    "c0b507aad1ec3d5d",
-    "015116e273ef90b6",
-    "2d38cff977c9bfd3",
-    "32e82c867defba0f",
-    "c17ddc7abee018e5"
+    "85b723d8497cfa2b"
   ],
   "expiring_today_ids": [
-    "083762264d1d875d",
-    "feb8098269241a7c",
-    "986a12d5d5d6bcf5"
-  ],
-  "expiring_soon_ids": [
     "f22cd27df16ab7e4",
     "0fe771919f537e56",
     "a246fe76713c0f17",
     "c421a35fe52cbe06",
     "7b9b844f554ec282",
     "0c3dd27e2f71cc4c",
-    "489e50d14decd73d",
+    "489e50d14decd73d"
+  ],
+  "expiring_soon_ids": [
     "d3fbb3c0920a90d2",
     "c7e32b7a5d93da01",
     "3bbb9f6a2a0f2819",
     "b345aa36646a6ce4",
-    "55cb2c06ab5ce70e"
+    "55cb2c06ab5ce70e",
+    "eb23e72d36254673",
+    "bf283d2be50c39d8"
   ],
   "tech_banking_job_ids": [
     "7b9b844f554ec282",
