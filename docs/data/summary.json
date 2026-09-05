@@ -1,48 +1,47 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-03T09:15:08.031Z",
-  "today": "2026-09-03",
-  "total_jobs": 43,
+  "generated_at": "2026-09-05T08:30:44.035Z",
+  "today": "2026-09-05",
+  "total_jobs": 44,
   "source_count": 3,
   "sources": [
     {
       "name": "acbar",
-      "count": 21,
-      "oldest_seen_at": "2026-09-03T09:15:06Z",
-      "latest_seen_at": "2026-09-03T09:15:06Z"
+      "count": 20,
+      "oldest_seen_at": "2026-09-05T08:30:41Z",
+      "latest_seen_at": "2026-09-05T08:30:41Z"
     },
     {
       "name": "jobs.af",
-      "count": 21,
-      "oldest_seen_at": "2026-09-03T09:15:06Z",
-      "latest_seen_at": "2026-09-03T09:15:06Z"
+      "count": 23,
+      "oldest_seen_at": "2026-09-05T08:30:41Z",
+      "latest_seen_at": "2026-09-05T08:30:41Z"
     },
     {
       "name": "wazifaha",
       "count": 1,
-      "oldest_seen_at": "2026-09-03T09:15:06Z",
-      "latest_seen_at": "2026-09-03T09:15:06Z"
+      "oldest_seen_at": "2026-09-05T08:30:41Z",
+      "latest_seen_at": "2026-09-05T08:30:41Z"
     }
   ],
-  "new_count": 4,
-  "expiring_today_count": 4,
+  "new_count": 5,
+  "expiring_today_count": 2,
   "expiring_soon_count": 2,
-  "tech_banking_count": 6,
+  "tech_banking_count": 8,
   "new_job_ids": [
-    "8bdfd48fcaf0ecdb",
-    "9eb32aed91c9e160",
-    "a861aaee7de30299",
-    "3e39e0fb1795acc8"
+    "6bb9d230d353b3a9",
+    "8d01aafaea7a2cb2",
+    "a77eee1603e5c20e",
+    "0e7e1ac6eee2092e",
+    "ea69d7513873c04c"
   ],
   "expiring_today_ids": [
-    "65e94584f1f576b2",
-    "8bd50da592e38ec3",
-    "eb23e72d36254673",
-    "bf283d2be50c39d8"
-  ],
-  "expiring_soon_ids": [
     "0008b9939a25a5fe",
     "bd4c47b33322a193"
+  ],
+  "expiring_soon_ids": [
+    "8f609c6c137d1a0d",
+    "058c59a4f9a20791"
   ],
   "tech_banking_job_ids": [
     "bd4c47b33322a193",
@@ -50,6 +49,8 @@
     "1623c5e640ebbb58",
     "7cff5025ec5d365a",
     "70fa6a53afcd54e8",
-    "ff9a4cc8d62dfb1c"
+    "ff9a4cc8d62dfb1c",
+    "0e7e1ac6eee2092e",
+    "ea69d7513873c04c"
   ]
 }
