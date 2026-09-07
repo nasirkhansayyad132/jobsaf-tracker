@@ -1,46 +1,59 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-06T08:58:11.328Z",
-  "today": "2026-09-06",
-  "total_jobs": 46,
-  "source_count": 3,
+  "generated_at": "2026-09-07T09:43:39.339Z",
+  "today": "2026-09-07",
+  "total_jobs": 53,
+  "source_count": 4,
   "sources": [
     {
       "name": "acbar",
       "count": 21,
       "oldest_seen_at": "2026-09-06T08:58:09Z",
-      "latest_seen_at": "2026-09-06T08:58:09Z"
+      "latest_seen_at": "2026-09-07T09:43:37Z"
     },
     {
       "name": "jobs.af",
-      "count": 24,
-      "oldest_seen_at": "2026-09-06T08:58:09Z",
-      "latest_seen_at": "2026-09-06T08:58:09Z"
+      "count": 30,
+      "oldest_seen_at": "2026-09-07T09:43:37Z",
+      "latest_seen_at": "2026-09-07T09:43:37Z"
+    },
+    {
+      "name": "kaarobar",
+      "count": 1,
+      "oldest_seen_at": "2026-09-07T09:43:37Z",
+      "latest_seen_at": "2026-09-07T09:43:37Z"
     },
     {
       "name": "wazifaha",
       "count": 1,
-      "oldest_seen_at": "2026-09-06T08:58:09Z",
-      "latest_seen_at": "2026-09-06T08:58:09Z"
+      "oldest_seen_at": "2026-09-07T09:43:37Z",
+      "latest_seen_at": "2026-09-07T09:43:37Z"
     }
   ],
-  "new_count": 4,
-  "expiring_today_count": 0,
-  "expiring_soon_count": 5,
+  "new_count": 7,
+  "expiring_today_count": 1,
+  "expiring_soon_count": 7,
   "tech_banking_count": 7,
   "new_job_ids": [
-    "6b81b15cbfa6503b",
-    "bc95b454111bc225",
-    "9062ec6205d9ef81",
-    "ea136d70e13f4cec"
+    "6eaeba75c24a8bcf",
+    "5b9e9dd44f0dc777",
+    "9479e3e1e7e38025",
+    "2d6198b3708a0632",
+    "3bc83334f77af888",
+    "e8b96e144a8ece24",
+    "878f06ebadd369bd"
   ],
-  "expiring_today_ids": [],
+  "expiring_today_ids": [
+    "8f609c6c137d1a0d"
+  ],
   "expiring_soon_ids": [
-    "8f609c6c137d1a0d",
     "058c59a4f9a20791",
     "6bb9d230d353b3a9",
     "73d2a8fed948a3de",
-    "1623c5e640ebbb58"
+    "1623c5e640ebbb58",
+    "6b81b15cbfa6503b",
+    "7cff5025ec5d365a",
+    "56def54fbd03c8f4"
   ],
   "tech_banking_job_ids": [
     "058c59a4f9a20791",
