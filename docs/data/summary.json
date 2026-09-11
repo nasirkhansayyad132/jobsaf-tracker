@@ -1,57 +1,54 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-10T09:15:14.382Z",
-  "today": "2026-09-10",
-  "total_jobs": 63,
+  "generated_at": "2026-09-11T09:12:53.035Z",
+  "today": "2026-09-11",
+  "total_jobs": 59,
   "source_count": 3,
   "sources": [
     {
       "name": "acbar",
-      "count": 27,
-      "oldest_seen_at": "2026-09-10T09:15:11Z",
-      "latest_seen_at": "2026-09-10T09:15:11Z"
+      "count": 26,
+      "oldest_seen_at": "2026-09-11T09:12:49Z",
+      "latest_seen_at": "2026-09-11T09:12:49Z"
     },
     {
       "name": "jobs.af",
-      "count": 33,
-      "oldest_seen_at": "2026-09-10T09:15:11Z",
-      "latest_seen_at": "2026-09-10T09:15:11Z"
+      "count": 31,
+      "oldest_seen_at": "2026-09-11T09:12:49Z",
+      "latest_seen_at": "2026-09-11T09:12:49Z"
     },
     {
       "name": "wazifaha",
-      "count": 3,
-      "oldest_seen_at": "2026-09-10T09:15:11Z",
-      "latest_seen_at": "2026-09-10T09:15:11Z"
+      "count": 2,
+      "oldest_seen_at": "2026-09-11T09:12:49Z",
+      "latest_seen_at": "2026-09-11T09:12:49Z"
     }
   ],
-  "new_count": 5,
-  "expiring_today_count": 3,
-  "expiring_soon_count": 8,
-  "tech_banking_count": 5,
-  "new_job_ids": [
-    "5426c9ea55601efa",
-    "d888598d2db4c8d5",
-    "1c13415eb6600c29",
-    "2c7e05f0c28cc2ca",
-    "1a38957e1cafc2b2"
-  ],
+  "new_count": 0,
+  "expiring_today_count": 2,
+  "expiring_soon_count": 13,
+  "tech_banking_count": 4,
+  "new_job_ids": [],
   "expiring_today_ids": [
-    "6b81b15cbfa6503b",
-    "7cff5025ec5d365a",
-    "56def54fbd03c8f4"
+    "c1f0cb4b5137e27a",
+    "8bdfd48fcaf0ecdb"
   ],
   "expiring_soon_ids": [
-    "c1f0cb4b5137e27a",
-    "8bdfd48fcaf0ecdb",
     "8d01aafaea7a2cb2",
     "9eb32aed91c9e160",
     "a861aaee7de30299",
     "1791bee35021bba2",
     "a30e11bc6abaa9ea",
-    "8ba73a907727611a"
+    "8ba73a907727611a",
+    "59171de1a4657d87",
+    "916b8bbbd9c31018",
+    "6eaeba75c24a8bcf",
+    "3be9c42be1f6825c",
+    "5426c9ea55601efa",
+    "5b9e9dd44f0dc777",
+    "2bb0e5bedf850181"
   ],
   "tech_banking_job_ids": [
-    "7cff5025ec5d365a",
     "70fa6a53afcd54e8",
     "ff9a4cc8d62dfb1c",
     "627baead8a1c27d1",
