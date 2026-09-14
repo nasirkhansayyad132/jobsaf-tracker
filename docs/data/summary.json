@@ -1,55 +1,58 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-13T09:51:06.972Z",
-  "today": "2026-09-13",
-  "total_jobs": 55,
+  "generated_at": "2026-09-14T10:13:11.075Z",
+  "today": "2026-09-14",
+  "total_jobs": 57,
   "source_count": 3,
   "sources": [
     {
       "name": "acbar",
-      "count": 26,
-      "oldest_seen_at": "2026-09-13T09:51:03Z",
-      "latest_seen_at": "2026-09-13T09:51:03Z"
+      "count": 25,
+      "oldest_seen_at": "2026-09-14T10:13:07Z",
+      "latest_seen_at": "2026-09-14T10:13:07Z"
     },
     {
       "name": "jobs.af",
-      "count": 27,
-      "oldest_seen_at": "2026-09-13T09:51:03Z",
-      "latest_seen_at": "2026-09-13T09:51:03Z"
+      "count": 30,
+      "oldest_seen_at": "2026-09-14T10:13:07Z",
+      "latest_seen_at": "2026-09-14T10:13:07Z"
     },
     {
       "name": "wazifaha",
       "count": 2,
-      "oldest_seen_at": "2026-09-13T09:51:03Z",
-      "latest_seen_at": "2026-09-13T09:51:03Z"
+      "oldest_seen_at": "2026-09-14T10:13:07Z",
+      "latest_seen_at": "2026-09-14T10:13:07Z"
     }
   ],
-  "new_count": 2,
-  "expiring_today_count": 2,
-  "expiring_soon_count": 13,
+  "new_count": 4,
+  "expiring_today_count": 7,
+  "expiring_soon_count": 9,
   "tech_banking_count": 4,
   "new_job_ids": [
-    "c46382ba613effb1",
-    "d506bbbd7cb2a032"
+    "5ee304f37dcb47d1",
+    "23bb646f12c2e8a8",
+    "1ad775f900acd279",
+    "ae58cd891c6c2581"
   ],
   "expiring_today_ids": [
-    "a30e11bc6abaa9ea",
-    "8ba73a907727611a"
-  ],
-  "expiring_soon_ids": [
     "59171de1a4657d87",
     "916b8bbbd9c31018",
     "6eaeba75c24a8bcf",
     "3be9c42be1f6825c",
     "5426c9ea55601efa",
     "5b9e9dd44f0dc777",
-    "2bb0e5bedf850181",
+    "2bb0e5bedf850181"
+  ],
+  "expiring_soon_ids": [
     "a77eee1603e5c20e",
     "85b723d8497cfa2b",
     "8d333f0edf756c12",
     "bdc8f46953c628d3",
     "cd8166178a47c9af",
-    "29962c189c4bb722"
+    "29962c189c4bb722",
+    "d888598d2db4c8d5",
+    "bc95b454111bc225",
+    "9062ec6205d9ef81"
   ],
   "tech_banking_job_ids": [
     "70fa6a53afcd54e8",
