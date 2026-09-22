@@ -1,43 +1,43 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-21T10:19:46.837Z",
-  "today": "2026-09-21",
-  "total_jobs": 50,
+  "generated_at": "2026-09-22T09:38:04.625Z",
+  "today": "2026-09-22",
+  "total_jobs": 48,
   "source_count": 4,
   "sources": [
     {
       "name": "acbar",
-      "count": 23,
-      "oldest_seen_at": "2026-09-21T10:19:43Z",
-      "latest_seen_at": "2026-09-21T10:19:43Z"
+      "count": 22,
+      "oldest_seen_at": "2026-09-22T09:38:01Z",
+      "latest_seen_at": "2026-09-22T09:38:01Z"
     },
     {
       "name": "jobs.af",
-      "count": 21,
-      "oldest_seen_at": "2026-09-21T10:19:43Z",
-      "latest_seen_at": "2026-09-21T10:19:43Z"
+      "count": 22,
+      "oldest_seen_at": "2026-09-22T09:38:01Z",
+      "latest_seen_at": "2026-09-22T09:38:01Z"
     },
     {
       "name": "kaarobar",
       "count": 2,
-      "oldest_seen_at": "2026-09-21T10:19:43Z",
-      "latest_seen_at": "2026-09-21T10:19:43Z"
+      "oldest_seen_at": "2026-09-22T09:38:01Z",
+      "latest_seen_at": "2026-09-22T09:38:01Z"
     },
     {
       "name": "wazifaha",
-      "count": 4,
-      "oldest_seen_at": "2026-09-21T10:19:43Z",
-      "latest_seen_at": "2026-09-21T10:19:43Z"
+      "count": 2,
+      "oldest_seen_at": "2026-09-22T09:38:01Z",
+      "latest_seen_at": "2026-09-22T09:38:01Z"
     }
   ],
-  "new_count": 0,
-  "expiring_today_count": 1,
-  "expiring_soon_count": 8,
+  "new_count": 1,
+  "expiring_today_count": 0,
+  "expiring_soon_count": 11,
   "tech_banking_count": 4,
-  "new_job_ids": [],
-  "expiring_today_ids": [
-    "bc5b1875dddb402b"
+  "new_job_ids": [
+    "66bdf8bac0772d31"
   ],
+  "expiring_today_ids": [],
   "expiring_soon_ids": [
     "50a5f3c612936a43",
     "5ee304f37dcb47d1",
@@ -46,7 +46,10 @@
     "5d0025026edb0bdf",
     "a45c99e95ec2987a",
     "643b223c12b3ad6f",
-    "23bb646f12c2e8a8"
+    "23bb646f12c2e8a8",
+    "455d5eb4350faa27",
+    "1ad775f900acd279",
+    "73d2a8fed948a3de"
   ],
   "tech_banking_job_ids": [
     "643b223c12b3ad6f",
