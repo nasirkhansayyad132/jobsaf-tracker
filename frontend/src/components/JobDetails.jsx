@@ -2,13 +2,18 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import {
     ArrowUpRight,
     Banknote,
+    Bookmark,
+    BookmarkCheck,
     BriefcaseBusiness,
     Building2,
     CalendarDays,
     Check,
     Clipboard,
     Clock3,
+    Globe2,
     Info,
+    Languages,
+    Layers,
     Link2,
     Mail,
     MapPin,
@@ -29,13 +34,18 @@ import {
     getCategoryFacet,
     getClosingDate,
     getJobCategory,
+    getJobKey,
     getJobReference,
+    getLanguages,
     getLastSeenDate,
     getPostDate,
     getPostDateLabel,
     getReadableMatchReasons,
+    getRemoteEligibility,
     getSalaryText,
+    getSkills,
     getVacancyCount,
+    isRemoteJob,
     needsFreshnessCheck,
 } from '../lib/jobs';
 
@@ -160,8 +170,19 @@ function applicationMessage(application) {
 
 const PLAINTEXT_DIRECTION = { unicodeBidi: 'plaintext' };
 
-function FormattedDescription({ description }) {
+function FormattedDescription({ description, loading = false }) {
     const blocks = useMemo(() => parseDescription(description), [description]);
+
+    if (loading) {
+        return (
+            <div className="space-y-3" role="status" aria-label="Loading the full description">
+                <div className="skeleton-line w-3/4" />
+                <div className="skeleton-line w-full" />
+                <div className="skeleton-line w-5/6" />
+                <span className="sr-only">Loading the full description…</span>
+            </div>
+        );
+    }
 
     if (!blocks.length) {
         return (
@@ -237,7 +258,7 @@ function FormattedDescription({ description }) {
     );
 }
 
-export function JobDetails({ job, onClose }) {
+export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved = false }) {
     const dialogRef = useRef(null);
     const closeButtonRef = useRef(null);
     const feedbackTimerRef = useRef(null);
@@ -257,6 +278,13 @@ export function JobDetails({ job, onClose }) {
     const lastSeenDate = getLastSeenDate(job);
     const recheck = needsFreshnessCheck(job);
     const originalListingIsApplication = application.sourceUrl === application.applicationUrl;
+    const remote = isRemoteJob(job);
+    const eligibility = getRemoteEligibility(job);
+    const languages = getLanguages(job);
+    const skills = getSkills(job);
+    const variants = job.variants?.length > 1 ? job.variants : [];
+    const descriptionLoading = job.description === undefined && Boolean(job.has_description);
+    const alsoFoundOn = (job.also_found_on || []).filter(item => item?.url);
 
     useEffect(() => {
         const previouslyFocused = document.activeElement;
@@ -355,7 +383,7 @@ export function JobDetails({ job, onClose }) {
                 className="relative w-full sm:w-[95%] max-w-5xl h-[92dvh] sm:h-auto sm:max-h-[92dvh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-dark light:bg-white border-t sm:border border-white/15 light:border-slate-200 shadow-2xl scrollbar-hide modal-panel"
             >
                 <header className="sticky top-0 z-10 flex items-start justify-between p-5 sm:p-7 bg-dark/95 light:bg-white/95 backdrop-blur-xl border-b border-white/10 light:border-slate-200">
-                    <div className="pr-24 min-w-0">
+                    <div className="pr-32 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                             <span className="px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-500/10 light:bg-blue-50 text-blue-200 light:text-blue-800 border border-blue-400/20 light:border-blue-200">
                                 {formatSource(job.source)}
@@ -378,8 +406,12 @@ export function JobDetails({ job, onClose }) {
                                 <span dir="auto">{job.company || 'Employer not specified'}</span>
                             </span>
                             <span className="flex items-start gap-1.5">
-                                <MapPin className="w-4 h-4 mt-0.5 text-violet-300 light:text-violet-700 shrink-0" aria-hidden="true" />
-                                <span dir="auto">{job.location || 'Location not specified'}</span>
+                                {remote
+                                    ? <Globe2 className="w-4 h-4 mt-0.5 text-teal-300 light:text-teal-700 shrink-0" aria-hidden="true" />
+                                    : <MapPin className="w-4 h-4 mt-0.5 text-violet-300 light:text-violet-700 shrink-0" aria-hidden="true" />}
+                                <span dir="auto">
+                                    {variants.length > 1 ? `${variants.length} locations` : job.location || 'Location not specified'}
+                                </span>
                             </span>
                             {closingDate && (
                                 <span className="flex items-center gap-1.5">
@@ -397,6 +429,18 @@ export function JobDetails({ job, onClose }) {
                     </div>
 
                     <div className="absolute top-4 right-4 flex items-center gap-1">
+                        {onToggleSaved && (
+                            <button
+                                type="button"
+                                onClick={() => onToggleSaved(job)}
+                                className={cn('icon-button', saved && 'text-amber-300 light:text-amber-700')}
+                                aria-pressed={saved}
+                                aria-label={saved ? 'Remove from saved jobs' : 'Save this job'}
+                                title={saved ? 'Saved' : 'Save this job'}
+                            >
+                                {saved ? <BookmarkCheck className="w-5 h-5" aria-hidden="true" /> : <Bookmark className="w-5 h-5" aria-hidden="true" />}
+                            </button>
+                        )}
                         <button type="button" onClick={shareJob} className="icon-button" aria-label="Share this job" title="Share this job">
                             <Share2 className="w-5 h-5" aria-hidden="true" />
                         </button>
@@ -413,6 +457,22 @@ export function JobDetails({ job, onClose }) {
                             At a glance
                         </h3>
                         <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            {remote && (
+                                <div className="rounded-xl border border-teal-400/20 light:border-teal-200 bg-teal-500/[0.07] light:bg-teal-50 p-4 sm:col-span-2 lg:col-span-1">
+                                    <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
+                                        <Globe2 className="w-4 h-4 text-teal-300 light:text-teal-700" aria-hidden="true" /> Who can apply
+                                    </dt>
+                                    <dd className="mt-2 text-sm font-semibold text-slate-100 light:text-slate-900">{eligibility}</dd>
+                                    {job.remote_regions && (
+                                        <dd dir="auto" className="mt-1 text-xs text-slate-400 light:text-slate-600 break-words">Listing says: {job.remote_regions}</dd>
+                                    )}
+                                    {languages.length > 0 && (
+                                        <dd className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-200 light:text-amber-900">
+                                            <Languages className="w-3.5 h-3.5" aria-hidden="true" /> Mentions {languages.join(', ')}
+                                        </dd>
+                                    )}
+                                </div>
+                            )}
                             <div className="rounded-xl border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 p-4">
                                 <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
                                     <Building2 className="w-4 h-4 text-blue-300 light:text-blue-700" aria-hidden="true" /> Employer
@@ -477,6 +537,11 @@ export function JobDetails({ job, onClose }) {
                                 <span dir="auto" className="px-3 py-1.5 rounded-lg bg-blue-500/10 light:bg-blue-50 border border-blue-400/20 light:border-blue-200 text-sm font-medium text-blue-100 light:text-blue-900">
                                     {technologyCategory}
                                 </span>
+                                {skills.map(name => (
+                                    <span key={name} className="px-3 py-1.5 rounded-lg border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 text-sm font-medium text-slate-200 light:text-slate-800">
+                                        {name}
+                                    </span>
+                                ))}
                             </div>
                             {matchReasons.length > 0 && (
                                 <ul className="mt-3 space-y-1 text-sm text-slate-300 light:text-slate-700" aria-label="Why this role was matched">
@@ -554,6 +619,48 @@ export function JobDetails({ job, onClose }) {
                         </div>
                     </section>
 
+                    {variants.length > 1 && (
+                        <section aria-labelledby="variants-heading">
+                            <h3 id="variants-heading" className="section-heading">
+                                <Layers className="w-5 h-5 text-violet-300 light:text-violet-700" aria-hidden="true" />
+                                Posted for {variants.length} locations
+                            </h3>
+                            <p className="-mt-2 mb-3 text-sm text-slate-400 light:text-slate-600">
+                                The employer published one listing per location. Each has its own openings, deadline, and application.
+                            </p>
+                            <ul className="grid gap-2 sm:grid-cols-2">
+                                {variants.map(variant => {
+                                    const current = getJobKey(variant) === getJobKey(job);
+                                    const closes = getClosingDate(variant);
+                                    const count = getVacancyCount(variant);
+                                    return (
+                                        <li key={getJobKey(variant)}>
+                                            <button
+                                                type="button"
+                                                onClick={() => onSelectVariant?.(variant)}
+                                                disabled={current}
+                                                aria-current={current ? 'true' : undefined}
+                                                className={cn(
+                                                    'w-full rounded-xl border p-3 text-left text-sm transition-colors',
+                                                    current
+                                                        ? 'border-blue-400/50 light:border-blue-600/40 bg-blue-500/10 light:bg-blue-50 cursor-default'
+                                                        : 'border-white/10 light:border-slate-200 bg-white/[0.03] light:bg-white hover:border-blue-400/40 hover:bg-white/[0.06] light:hover:bg-slate-50',
+                                                )}
+                                            >
+                                                <span dir="auto" className="block font-semibold text-slate-100 light:text-slate-900">{variant.location || 'Location not specified'}</span>
+                                                <span className="mt-0.5 block text-xs text-slate-400 light:text-slate-600">
+                                                    {count !== null ? `${count} ${count === 1 ? 'opening' : 'openings'} · ` : ''}
+                                                    {closes ? `closes ${formatJobDate(closes, { short: true })}` : 'no deadline listed'}
+                                                    {current ? ' · showing' : ''}
+                                                </span>
+                                            </button>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </section>
+                    )}
+
                     {details.length > 0 && (
                         <section aria-labelledby="facts-heading">
                             <h3 id="facts-heading" className="section-heading">
@@ -576,12 +683,25 @@ export function JobDetails({ job, onClose }) {
                             <BriefcaseBusiness className="w-5 h-5 text-blue-300 light:text-blue-700" aria-hidden="true" />
                             Full description
                         </h3>
-                        <FormattedDescription description={job.description} />
+                        <FormattedDescription description={job.description} loading={descriptionLoading} />
                     </section>
 
                     <footer className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-5 border-t border-white/10 light:border-slate-200 text-xs text-slate-400 light:text-slate-600">
                         <div className="space-y-1">
                             <p>Details are collected automatically. Confirm eligibility, deadline, and instructions with the publisher.</p>
+                            {alsoFoundOn.length > 0 && (
+                                <p>
+                                    Also listed on{' '}
+                                    {alsoFoundOn.map((item, index) => (
+                                        <span key={`${item.source}-${item.url}`}>
+                                            {index > 0 && ', '}
+                                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-300 light:text-blue-700 hover:underline underline-offset-4">
+                                                {formatSource(item.source)}
+                                            </a>
+                                        </span>
+                                    ))}
+                                </p>
+                            )}
                             {lastSeenDate && (
                                 <p className={recheck ? 'text-amber-200 light:text-amber-800 font-semibold' : ''}>
                                     Last captured from this source {formatJobDate(lastSeenDate)}{recheck ? ' — recheck the original listing before applying.' : '.'}

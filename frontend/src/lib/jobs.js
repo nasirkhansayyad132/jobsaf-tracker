@@ -64,10 +64,20 @@ const SALARY_KEYS = ['salary', 'salary range', 'compensation', 'pay range'];
 
 const CATEGORY_FACETS = {
     software: 'Software development',
+    data: 'Data, AI & analytics',
+    cloud: 'Cloud & DevOps',
     network: 'Networking, telecom & security',
     operations: 'IT operations & support',
     leadership: 'IT leadership & delivery',
     other: 'Other technology',
+};
+
+const REMOTE_SCOPE_LABELS = {
+    worldwide: 'Open worldwide',
+    afghanistan: 'Open to Afghanistan',
+    asia: 'Open in Asia',
+    timezone: 'Time zones include Afghanistan',
+    language: 'Needs Dari/Pashto',
 };
 
 const NUMBER_WORDS = {
@@ -303,7 +313,23 @@ export function getJobFacets(jobs, now = getAfghanistanToday()) {
     }
     salary.canSort = salary.comparable > 0 && salaryUnits.size === 1;
 
+    const skillCounts = new Map();
+    for (const job of openJobs) {
+        for (const skill of getSkills(job)) skillCounts.set(skill, (skillCounts.get(skill) || 0) + 1);
+    }
+    const eligibility = {};
+    for (const job of openJobs.filter(isRemoteJob)) {
+        if (job.remote_scope) eligibility[job.remote_scope] = (eligibility[job.remote_scope] || 0) + 1;
+    }
+
     return {
+        skills: [...skillCounts.entries()]
+            .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+            .slice(0, 40)
+            .map(([name, count]) => ({ name, count })),
+        eligibility: Object.entries(eligibility)
+            .sort((left, right) => right[1] - left[1])
+            .map(([value, count]) => ({ value, label: REMOTE_SCOPE_LABELS[value] || value, count })),
         companies: sortFacetValues(openJobs.map(getCompanyFacet)),
         locations: sortFacetValues(openJobs.flatMap(getLocationFacet)),
         categories: sortFacetValues(openJobs.map(getCategoryFacet)),
@@ -451,7 +477,13 @@ export function getCategoryFacet(job) {
         && /\b(?:developer|development|engineer|intern|specialist|programmer)\b/.test(title)) {
         return CATEGORY_FACETS.software;
     }
-    if (/\b(?:network|telecom|telecommunication|microwave|fiber|fibre|ofc|cyber\s*security)\b/.test(title)
+    if (/\b(?:data\s+(?:engineer|scientist|analyst|architect)|machine\s+learning|ml|ai|llm|analytics|business\s+intelligence|bi\s+developer)\b/.test(title)) {
+        return CATEGORY_FACETS.data;
+    }
+    if (/\b(?:devops|devsecops|sre|site\s+reliability|cloud|platform\s+engineer|kubernetes|infrastructure\s+engineer)\b/.test(title)) {
+        return CATEGORY_FACETS.cloud;
+    }
+    if (/\b(?:network|telecom|telecommunication|microwave|fiber|fibre|ofc|cyber\s*security|security\s+engineer)\b/.test(title)
         || /\bict\s*(?:&|and)\s*communication\b/.test(title)) {
         return CATEGORY_FACETS.network;
     }
@@ -535,6 +567,9 @@ function searchableText(job) {
         job?.category,
         job?.job_type,
         job?.description,
+        job?.remote_regions,
+        ...(Array.isArray(job?.skills) ? job.skills : []),
+        ...(Array.isArray(job?.languages) ? job.languages : []),
         ...detailValues,
     ]
         .filter(value => value !== null && value !== undefined)
@@ -592,9 +627,95 @@ function compareDeadlines(left, right) {
         || compareTitles(left, right);
 }
 
+export function isRemoteJob(job) {
+    return String(job?.work_mode || '').toLowerCase() === 'remote';
+}
+
+/**
+ * "afghanistan" covers every job based in or open to Afghanistan, including
+ * remote roles posted on Afghan boards; "remote" covers every remote role.
+ */
+export function matchesScope(job, scope = 'all') {
+    if (scope === 'remote') return isRemoteJob(job);
+    if (scope === 'afghanistan') return !isRemoteJob(job) || job?.remote_scope === 'afghanistan';
+    return true;
+}
+
+export function getRemoteEligibility(job) {
+    if (!isRemoteJob(job)) return null;
+    return REMOTE_SCOPE_LABELS[job?.remote_scope]
+        || cleanFacetValue(findDetail(job, ['remote eligibility']))
+        || 'Remote';
+}
+
+export function getSkills(job) {
+    return Array.isArray(job?.skills) ? job.skills.filter(skill => typeof skill === 'string' && skill.trim()) : [];
+}
+
+export function getLanguages(job) {
+    return Array.isArray(job?.languages) ? job.languages.filter(Boolean) : [];
+}
+
+/** Whether the tracker first discovered this job after the given instant. */
+export function isNewSince(job, since) {
+    if (!since) return false;
+    const seen = Date.parse(job?.first_seen_at || '');
+    return Number.isFinite(seen) && seen > since;
+}
+
+/**
+ * Collapse postings that share a group_id (province variants, re-posts) into
+ * the first one in the current order. The representative lists every
+ * variant, including itself, in `variants`.
+ */
+export function groupJobs(jobs) {
+    const output = [];
+    const groups = new Map();
+    for (const job of Array.isArray(jobs) ? jobs : []) {
+        const groupId = job?.group_id;
+        if (!groupId) {
+            output.push(job);
+            continue;
+        }
+        const existing = groups.get(groupId);
+        if (existing) {
+            existing.variants.push(job);
+            continue;
+        }
+        const representative = { ...job, variants: [job] };
+        groups.set(groupId, representative);
+        output.push(representative);
+    }
+    return output.map(job => (job.variants?.length > 1 ? job : stripVariants(job)));
+}
+
+function stripVariants(job) {
+    if (!job?.variants) return job;
+    const { variants: _variants, ...rest } = job;
+    return rest;
+}
+
+/** Total openings across a grouped job's variants, when every count is known. */
+export function getGroupVacancyCount(job) {
+    const variants = job?.variants?.length ? job.variants : [job];
+    const counts = variants.map(getVacancyCount);
+    if (counts.some(count => count === null)) return null;
+    return counts.reduce((total, count) => total + count, 0);
+}
+
+export function getVariantLocations(job) {
+    const variants = job?.variants?.length ? job.variants : [job];
+    return [...new Set(variants.flatMap(getLocationFacet))];
+}
+
 export function selectJobs(jobs, {
     query = '',
     filter = 'all',
+    scope = 'all',
+    skill = 'all',
+    eligibility = 'all',
+    savedKeys = null,
+    newSince = null,
     now = getAfghanistanToday(),
     company = 'all',
     location = 'all',
@@ -605,7 +726,18 @@ export function selectJobs(jobs, {
     sort,
 } = {}) {
     const normalizedQuery = query.trim().toLocaleLowerCase();
-    let result = (Array.isArray(jobs) ? jobs : []).filter(job => isOpenJob(job, now));
+    let result = (Array.isArray(jobs) ? jobs : [])
+        .filter(job => isOpenJob(job, now))
+        .filter(job => matchesScope(job, scope));
+    if (savedKeys) result = result.filter(job => savedKeys.has(getJobKey(job)));
+    if (filter === 'new') result = result.filter(job => isNewSince(job, newSince));
+    if (!isAllFacet(skill)) {
+        const wanted = normalizedFacet(skill);
+        result = result.filter(job => getSkills(job).some(value => normalizedFacet(value) === wanted));
+    }
+    if (!isAllFacet(eligibility)) {
+        result = result.filter(job => job?.remote_scope === eligibility);
+    }
 
     if (normalizedQuery) {
         const terms = normalizedQuery.split(/\s+/).filter(Boolean);
@@ -636,7 +768,8 @@ export function selectJobs(jobs, {
     result = result.filter(job => matchesSalaryFilter(job, salary));
     result = result.filter(job => matchesVacancyFilter(job, vacancy === 'all' && vacancies !== undefined ? vacancies : vacancy));
 
-    const sortMode = sort || (filter === 'recent' ? 'newest' : 'deadline');
+    // Remote roles rarely publish deadlines, so newest-first is the useful default.
+    const sortMode = sort || (filter === 'recent' || filter === 'new' || scope === 'remote' ? 'newest' : 'deadline');
     if (sortMode === 'newest') {
         result.sort((left, right) => (
             compareDates(getPostDate(left), getPostDate(right), -1)
@@ -676,12 +809,24 @@ export function selectJobs(jobs, {
     return result;
 }
 
-export function getJobStats(jobs, now = getAfghanistanToday()) {
-    const openJobs = (Array.isArray(jobs) ? jobs : []).filter(job => isOpenJob(job, now));
+export function getJobStats(jobs, now = getAfghanistanToday(), { scope = 'all', newSince = null } = {}) {
+    const openJobs = groupJobs((Array.isArray(jobs) ? jobs : [])
+        .filter(job => isOpenJob(job, now))
+        .filter(job => matchesScope(job, scope)));
+    const anyVariant = (job, predicate) => (job.variants || [job]).some(predicate);
     return {
         total: openJobs.length,
-        expiring: openJobs.filter(job => isExpiringSoon(job, now)).length,
-        recent: openJobs.filter(job => isRecentJob(job, now)).length,
+        expiring: openJobs.filter(job => anyVariant(job, item => isExpiringSoon(item, now))).length,
+        recent: openJobs.filter(job => anyVariant(job, item => isRecentJob(item, now))).length,
+        ...(newSince ? { new: openJobs.filter(job => anyVariant(job, item => isNewSince(item, newSince))).length } : {}),
+    };
+}
+
+export function getScopeCounts(jobs, now = getAfghanistanToday()) {
+    const openJobs = (Array.isArray(jobs) ? jobs : []).filter(job => isOpenJob(job, now));
+    return {
+        afghanistan: groupJobs(openJobs.filter(job => matchesScope(job, 'afghanistan'))).length,
+        remote: groupJobs(openJobs.filter(job => matchesScope(job, 'remote'))).length,
     };
 }
 
@@ -754,6 +899,14 @@ export function formatSource(source) {
         'jobs.af': 'Jobs.af',
         kaarobar: 'Kaarobar',
         wazifaha: 'Wazifaha',
+        reliefweb: 'ReliefWeb',
+        impactpool: 'Impactpool',
+        remoteok: 'Remote OK',
+        remotive: 'Remotive',
+        weworkremotely: 'We Work Remotely',
+        himalayas: 'Himalayas',
+        jobicy: 'Jobicy',
+        workingnomads: 'Working Nomads',
     };
     return known[value.toLowerCase()] || value;
 }

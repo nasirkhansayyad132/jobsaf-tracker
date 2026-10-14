@@ -1,10 +1,16 @@
+import { memo } from 'react';
 import {
     ArrowRight,
     Banknote,
+    Bell,
+    Bookmark,
+    BookmarkCheck,
     BriefcaseBusiness,
     Building2,
     CalendarDays,
     Clock3,
+    Globe2,
+    Languages,
     MapPin,
     Sparkles,
     UsersRound,
@@ -19,13 +25,20 @@ import {
     getAfghanistanToday,
     getCategoryFacet,
     getClosingDate,
+    getGroupVacancyCount,
     getJobKey,
+    getLanguages,
     getLastSeenDate,
     getPostDate,
     getPostDateLabel,
+    getRemoteEligibility,
     getSalaryText,
+    getSkills,
+    getVariantLocations,
     getVacancyCount,
+    isNewSince,
     isRecentJob,
+    isRemoteJob,
     needsFreshnessCheck,
 } from '../lib/jobs';
 
@@ -53,18 +66,42 @@ function getDeadlineText(job, now) {
     return `Closes ${formatJobDate(getClosingDate(job), { short: true })}`;
 }
 
-export function JobCard({ job, onSelect, now = getAfghanistanToday() }) {
+function getLocationText(job) {
+    const variants = job?.variants?.length || 1;
+    if (variants < 2) return job.location || 'Location not specified';
+    const places = getVariantLocations(job);
+    if (!places.length) return `${variants} postings`;
+    const shown = places.slice(0, 3).join(', ');
+    return places.length > 3 ? `${shown} +${places.length - 3} more` : shown;
+}
+
+function getVacancyText(job) {
+    if (job?.variants?.length > 1) {
+        const total = getGroupVacancyCount(job);
+        return total === null ? null : `${total.toLocaleString()} ${total === 1 ? 'opening' : 'openings'}`;
+    }
+    return getVacancyCount(job) === null ? null : formatVacancyCount(job);
+}
+
+function JobCardComponent({ job, onSelect, onToggleSaved, saved = false, newSince = null, now = getAfghanistanToday() }) {
+    const variants = job?.variants?.length ? job.variants : [job];
     const daysLeft = daysUntilClosing(job, now);
     const expiring = daysLeft !== null && daysLeft >= 0 && daysLeft <= 3;
-    const recent = isRecentJob(job, now);
+    const recent = variants.some(item => isRecentJob(item, now));
+    const fresh = variants.some(item => isNewSince(item, newSince));
     const recheck = needsFreshnessCheck(job, now);
     const postDate = getPostDate(job);
     const category = getCategoryFacet(job);
+    const remote = isRemoteJob(job);
+    const eligibility = getRemoteEligibility(job);
+    const languages = getLanguages(job);
+    const skills = getSkills(job).slice(0, 4);
     const salary = getSalaryText(job);
     const salaryDisplay = salary || 'Not disclosed';
-    const vacancies = getVacancyCount(job) === null ? null : formatVacancyCount(job);
+    const vacancies = getVacancyText(job);
     const jobType = getJobTypeText(job);
     const titleId = `job-title-${getJobKey(job).replace(/[^a-zA-Z0-9_-]/g, '-')}`;
+    const HeaderIcon = remote ? Globe2 : Building2;
 
     return (
         <article
@@ -86,9 +123,14 @@ export function JobCard({ job, onSelect, now = getAfghanistanToday() }) {
                 <span className="relative flex h-full flex-col pointer-events-none">
                     <span className="flex justify-between items-start gap-3 mb-4">
                         <span className="p-3 bg-white/[0.06] light:bg-slate-100 rounded-xl border border-white/10 light:border-slate-200 group-hover:border-blue-400/30 transition-colors" aria-hidden="true">
-                            <Building2 className="w-6 h-6 text-blue-300 light:text-blue-700" />
+                            <HeaderIcon className="w-6 h-6 text-blue-300 light:text-blue-700" />
                         </span>
                         <span className="flex flex-wrap items-center justify-end gap-2">
+                            {fresh && (
+                                <span className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-violet-100 light:text-violet-800 bg-violet-500/20 light:bg-violet-100 border border-violet-400/30 light:border-violet-300 rounded-full">
+                                    <Bell className="w-3 h-3" aria-hidden="true" /> New
+                                </span>
+                            )}
                             {recent && (
                                 <span className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold text-emerald-100 light:text-emerald-800 bg-emerald-500/15 light:bg-emerald-100 border border-emerald-400/25 light:border-emerald-300 rounded-full">
                                     <Sparkles className="w-3 h-3" aria-hidden="true" /> Recent
@@ -114,11 +156,33 @@ export function JobCard({ job, onSelect, now = getAfghanistanToday() }) {
                         {job.company || 'Employer not specified'}
                     </p>
 
-                    {category && (
-                        <span className="flex flex-wrap gap-1.5 mb-4" aria-label="Technology category">
-                            <span dir="auto" className="max-w-full truncate px-2 py-1 rounded-md bg-blue-500/10 light:bg-blue-50 border border-blue-400/15 light:border-blue-200 text-[11px] font-medium text-blue-200 light:text-blue-800">
-                                {category}
-                            </span>
+                    {(category || remote || languages.length > 0) && (
+                        <span className="flex flex-wrap gap-1.5 mb-3" aria-label="Technology area and eligibility">
+                            {remote && (
+                                <span className="inline-flex max-w-full items-center gap-1 truncate px-2 py-1 rounded-md bg-teal-500/10 light:bg-teal-50 border border-teal-400/20 light:border-teal-200 text-[11px] font-semibold text-teal-200 light:text-teal-800">
+                                    <Globe2 className="w-3 h-3 shrink-0" aria-hidden="true" /> {eligibility}
+                                </span>
+                            )}
+                            {languages.length > 0 && (
+                                <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-500/10 light:bg-amber-50 border border-amber-400/20 light:border-amber-200 text-[11px] font-semibold text-amber-200 light:text-amber-900">
+                                    <Languages className="w-3 h-3 shrink-0" aria-hidden="true" /> {languages.join(' · ')}
+                                </span>
+                            )}
+                            {category && (
+                                <span dir="auto" className="max-w-full truncate px-2 py-1 rounded-md bg-blue-500/10 light:bg-blue-50 border border-blue-400/15 light:border-blue-200 text-[11px] font-medium text-blue-200 light:text-blue-800">
+                                    {category}
+                                </span>
+                            )}
+                        </span>
+                    )}
+
+                    {skills.length > 0 && (
+                        <span className="flex flex-wrap gap-1.5 mb-4" aria-label="Skills mentioned">
+                            {skills.map(name => (
+                                <span key={name} className="px-2 py-0.5 rounded-full border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 text-[11px] font-medium text-slate-300 light:text-slate-700">
+                                    {name}
+                                </span>
+                            ))}
                         </span>
                     )}
 
@@ -166,7 +230,10 @@ export function JobCard({ job, onSelect, now = getAfghanistanToday() }) {
                     <span className="flex flex-col gap-2.5 text-sm text-slate-400 light:text-slate-600 mb-6">
                         <span className="flex items-start gap-2">
                             <MapPin className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
-                            <span dir="auto">{job.location || 'Location not specified'}</span>
+                            <span dir="auto">
+                                {variants.length > 1 && <strong className="font-semibold text-slate-200 light:text-slate-800">{variants.length} locations: </strong>}
+                                {getLocationText(job)}
+                            </span>
                         </span>
                         {postDate && (
                             <span className="flex items-start gap-2">
@@ -187,14 +254,38 @@ export function JobCard({ job, onSelect, now = getAfghanistanToday() }) {
                     </span>
 
                     <span className="flex items-center justify-between gap-3 mt-auto pt-4 border-t border-white/10 light:border-slate-200">
-                        <span className="text-xs font-semibold text-slate-300 light:text-slate-700 bg-black/20 light:bg-slate-100 border border-white/5 light:border-slate-200 px-2.5 py-1 rounded-md">
+                        <span className="min-w-0 truncate text-xs font-semibold text-slate-300 light:text-slate-700 bg-black/20 light:bg-slate-100 border border-white/5 light:border-slate-200 px-2.5 py-1 rounded-md">
                             {formatSource(job.source)}
+                            {job.also_found_on?.length > 0 && ` +${new Set(job.also_found_on.map(item => item.source)).size}`}
                         </span>
-                        <span className="text-xs font-semibold text-blue-300 light:text-blue-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                            Full details <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                        <span className="flex shrink-0 items-center gap-3">
+                            {onToggleSaved && (
+                                <button
+                                    type="button"
+                                    onClick={() => onToggleSaved(job)}
+                                    className={cn(
+                                        'pointer-events-auto relative z-20 rounded-lg p-1.5 transition-colors',
+                                        saved
+                                            ? 'text-amber-300 light:text-amber-700 bg-amber-500/15 light:bg-amber-100'
+                                            : 'text-slate-400 hover:text-white light:hover:text-slate-950 hover:bg-white/10 light:hover:bg-slate-100',
+                                    )}
+                                    aria-pressed={saved}
+                                    aria-label={saved ? `Remove ${job.title || 'this job'} from saved jobs` : `Save ${job.title || 'this job'}`}
+                                    title={saved ? 'Saved' : 'Save job'}
+                                >
+                                    {saved
+                                        ? <BookmarkCheck className="w-4 h-4" aria-hidden="true" />
+                                        : <Bookmark className="w-4 h-4" aria-hidden="true" />}
+                                </button>
+                            )}
+                            <span className="text-xs font-semibold text-blue-300 light:text-blue-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Full details <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                            </span>
                         </span>
                     </span>
                 </span>
         </article>
     );
 }
+
+export const JobCard = memo(JobCardComponent);

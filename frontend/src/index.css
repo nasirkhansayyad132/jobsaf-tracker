@@ -107,6 +107,62 @@ select:focus-visible,
   @apply text-orange-300 light:text-orange-800 bg-orange-500/15 light:bg-orange-100;
 }
 
+.stat-card-violet {
+  @apply border-violet-400 light:border-violet-700 ring-2 ring-violet-400/30 light:ring-violet-700/20 shadow-[0_0_24px_rgba(124,58,237,0.18)];
+}
+
+.stat-icon-violet {
+  @apply text-violet-300 light:text-violet-800 bg-violet-500/15 light:bg-violet-100;
+}
+
+.view-tabs {
+  @apply flex w-full gap-1 rounded-2xl border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-white p-1 sm:w-fit;
+}
+
+.view-tab {
+  @apply inline-flex flex-1 sm:flex-none items-center justify-center gap-2 rounded-xl px-3 sm:px-4 py-2.5 text-sm font-semibold text-slate-300 light:text-slate-700 transition-colors hover:text-white hover:bg-white/[0.06] light:hover:text-slate-950 light:hover:bg-slate-100;
+}
+
+.view-tab-selected {
+  @apply bg-blue-600 text-white shadow-lg shadow-blue-950/20 hover:bg-blue-600 hover:text-white light:bg-blue-700 light:text-white light:hover:bg-blue-700 light:hover:text-white;
+}
+
+.view-tab-count {
+  @apply rounded-full bg-black/20 light:bg-slate-200/70 px-1.5 py-0.5 text-[11px] font-bold leading-none;
+}
+
+.view-tab-selected .view-tab-count {
+  @apply bg-white/20 text-white;
+}
+
+.skeleton-card,
+.skeleton-line {
+  @apply rounded-2xl border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-100;
+  background-image: linear-gradient(90deg, transparent 0, rgba(148, 163, 184, 0.10) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton-card {
+  height: 22rem;
+}
+
+.skeleton-line {
+  @apply h-4 rounded-md border-0;
+}
+
+@keyframes shimmer {
+  from { background-position: 150% 0; }
+  to { background-position: -50% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-card,
+  .skeleton-line {
+    animation: none;
+  }
+}
+
 .status-banner {
   @apply flex items-start gap-3 rounded-xl border border-blue-400/25 light:border-blue-200 bg-blue-500/10 light:bg-blue-50 p-4 text-blue-100 light:text-blue-900;
 }

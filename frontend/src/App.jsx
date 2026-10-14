@@ -1,9 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   AlertTriangle,
+  Bell,
+  Bookmark,
   Briefcase,
   Clock,
   Github,
+  Globe2,
+  MapPin,
   Moon,
   RefreshCw,
   Search,
@@ -15,28 +19,40 @@ import {
 } from 'lucide-react';
 import { JobCard } from './components/JobCard';
 import { JobDetails } from './components/JobDetails';
+import { SourceStatus } from './components/SourceStatus';
 import { cn } from './lib/utils';
+import { loadFeed, loadJobDetail, loadSummary } from './lib/feed';
+import { readSavedJobs, readView, takeLastVisit, writeSavedJobs, writeView } from './lib/storage';
 import {
-  getJobKey,
-  getJobFacets,
-  getJobStats,
   getAfghanistanToday,
+  getJobFacets,
+  getJobKey,
+  getJobStats,
   getLastUpdated,
+  getScopeCounts,
+  groupJobs,
+  matchesScope,
   selectJobs,
 } from './lib/jobs';
+
+const VIEWS = [
+  { id: 'afghanistan', label: 'In Afghanistan', shortLabel: 'Afghanistan', icon: MapPin },
+  { id: 'remote', label: 'Remote', shortLabel: 'Remote', icon: Globe2 },
+  { id: 'saved', label: 'Saved', shortLabel: 'Saved', icon: Bookmark },
+];
 
 const FILTERS = [
   {
     id: 'all',
     label: 'All open jobs',
-    shortLabel: 'All jobs',
+    shortLabel: 'All',
     description: 'Every current technology opportunity',
     icon: Briefcase,
     accent: 'primary',
   },
   {
     id: 'recent',
-    label: 'Recent jobs',
+    label: 'Recent',
     shortLabel: 'Recent',
     description: 'Posted or first discovered in the last 7 days',
     icon: Zap,
@@ -50,7 +66,27 @@ const FILTERS = [
     icon: Clock,
     accent: 'orange',
   },
+  {
+    id: 'new',
+    label: 'New since last visit',
+    shortLabel: 'New',
+    description: 'Discovered since you last opened this site',
+    icon: Bell,
+    accent: 'violet',
+  },
 ];
+
+const VIEW_DESCRIPTIONS = {
+  afghanistan: 'Jobs based in Afghanistan, including remote roles posted by Afghan employers',
+  remote: 'Remote technology roles open to applicants in Afghanistan',
+  saved: 'Jobs you saved on this device',
+};
+
+// The daily refresh runs every morning; older data means a delayed run.
+const STALE_AFTER_HOURS = 36;
+
+// Read once per page load (not per render) so "new" markers stay stable.
+const lastVisit = takeLastVisit();
 
 function getInitialTheme() {
   try {
@@ -66,6 +102,12 @@ function getJobKeyFromUrl() {
   return new URLSearchParams(window.location.search).get('job') || '';
 }
 
+function getInitialView() {
+  const fromUrl = new URLSearchParams(window.location.search).get('view');
+  if (VIEWS.some(view => view.id === fromUrl)) return fromUrl;
+  return readView() || 'afghanistan';
+}
+
 function formatUpdatedAt(value) {
   if (!value || Number.isNaN(value.getTime())) return 'Update time unavailable';
   return `Updated ${new Intl.DateTimeFormat(undefined, {
@@ -75,6 +117,11 @@ function formatUpdatedAt(value) {
     hour: 'numeric',
     minute: '2-digit',
   }).format(value)}`;
+}
+
+function hoursSince(date) {
+  if (!date || Number.isNaN(date.getTime())) return null;
+  return (Date.now() - date.getTime()) / 3_600_000;
 }
 
 function RefinementSelect({ id, label, value, onChange, children }) {
@@ -98,13 +145,17 @@ function RefinementSelect({ id, label, value, onChange, children }) {
 function App() {
   const [jobs, setJobs] = useState([]);
   const jobsRef = useRef([]);
+  const searchRef = useRef(null);
   const [loadState, setLoadState] = useState('loading');
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [loadError, setLoadError] = useState('');
-  const [generatedAt, setGeneratedAt] = useState(null);
+  const [summary, setSummary] = useState(null);
+  const [view, setView] = useState(getInitialView);
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('all');
   const [category, setCategory] = useState('all');
+  const [skill, setSkill] = useState('all');
+  const [eligibility, setEligibility] = useState('all');
   const [company, setCompany] = useState('all');
   const [location, setLocation] = useState('all');
   const [salary, setSalary] = useState('all');
@@ -115,6 +166,8 @@ function App() {
   const [theme, setTheme] = useState(getInitialTheme);
   const [isOnline, setIsOnline] = useState(() => navigator.onLine);
   const [selectedJobKey, setSelectedJobKey] = useState(getJobKeyFromUrl);
+  const [selectedDetail, setSelectedDetail] = useState(null);
+  const [savedKeys, setSavedKeys] = useState(readSavedJobs);
   const [now, setNow] = useState(getAfghanistanToday);
   const openedModalInSessionRef = useRef(false);
 
@@ -124,29 +177,11 @@ function App() {
     setLoadError('');
 
     try {
-      const base = import.meta.env.BASE_URL || './';
-      const jobsResponse = await fetch(`${base}data/jobs.json`, { cache: 'no-cache' });
-      if (!jobsResponse.ok) throw new Error(`The jobs feed returned ${jobsResponse.status}.`);
-
-      const data = await jobsResponse.json();
-      if (!Array.isArray(data)) throw new Error('The jobs feed has an unexpected format.');
-
-      const usableJobs = data.filter(job => job && typeof job === 'object' && job.title);
-      jobsRef.current = usableJobs;
-      setJobs(usableJobs);
+      const [feed, latestSummary] = await Promise.all([loadFeed(), loadSummary()]);
+      jobsRef.current = feed.jobs;
+      setJobs(feed.jobs);
+      setSummary(latestSummary);
       setLoadState('ready');
-      setGeneratedAt(null);
-
-      try {
-        const summaryResponse = await fetch(`${base}data/summary.json`, { cache: 'no-cache' });
-        if (summaryResponse.ok) {
-          const summary = await summaryResponse.json();
-          const summaryDate = new Date(summary?.generated_at || '');
-          if (!Number.isNaN(summaryDate.getTime())) setGeneratedAt(summaryDate);
-        }
-      } catch {
-        // Summary metadata is helpful but must never prevent the jobs from rendering.
-      }
     } catch (error) {
       const message = error instanceof Error ? error.message : 'The jobs feed could not be loaded.';
       setLoadError(message);
@@ -169,6 +204,14 @@ function App() {
       // Theme still works for this session when persistent storage is unavailable.
     }
   }, [theme]);
+
+  useEffect(() => {
+    writeView(view);
+  }, [view]);
+
+  useEffect(() => {
+    writeSavedJobs(savedKeys);
+  }, [savedKeys]);
 
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
@@ -195,49 +238,98 @@ function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // "/" jumps to search, as on most job boards.
+  useEffect(() => {
+    const handleKey = event => {
+      if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement?.isContentEditable) return;
+      event.preventDefault();
+      searchRef.current?.focus();
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, []);
+
   useEffect(() => {
     setVisibleCount(9);
-  }, [search, filter, category, company, location, salary, vacancy, sort]);
+  }, [view, search, filter, category, skill, eligibility, company, location, salary, vacancy, sort]);
 
-  const stats = useMemo(() => getJobStats(jobs, now), [jobs, now]);
-  const facets = useMemo(() => getJobFacets(jobs, now), [jobs, now]);
+  const scope = view === 'saved' ? 'all' : view;
+  const scopedSaved = view === 'saved' ? savedKeys : null;
+  const scopeCounts = useMemo(() => getScopeCounts(jobs, now), [jobs, now]);
+  const stats = useMemo(
+    () => getJobStats(
+      view === 'saved' ? jobs.filter(job => savedKeys.has(getJobKey(job))) : jobs,
+      now,
+      { scope, newSince: lastVisit },
+    ),
+    [jobs, now, scope, view, savedKeys],
+  );
+  const facets = useMemo(
+    () => getJobFacets(jobs.filter(job => matchesScope(job, scope)), now),
+    [jobs, now, scope],
+  );
   const filteredJobs = useMemo(
-    () => selectJobs(jobs, {
+    () => groupJobs(selectJobs(jobs, {
       query: search,
       filter,
+      scope,
+      savedKeys: scopedSaved,
+      newSince: lastVisit,
       now,
       category,
+      skill,
+      eligibility,
       company,
       location,
       salary,
       vacancy,
       sort: sort === 'default' ? undefined : sort,
-    }),
-    [jobs, search, filter, now, category, company, location, salary, vacancy, sort],
+    })),
+    [jobs, search, filter, scope, scopedSaved, now, category, skill, eligibility, company, location, salary, vacancy, sort],
   );
   const selectedJob = useMemo(
-    () => jobs.find(job => getJobKey(job) === selectedJobKey) || null,
+    () => (selectedJobKey ? jobs.find(job => getJobKey(job) === selectedJobKey) || null : null),
     [jobs, selectedJobKey],
   );
-  const jobBoardCount = useMemo(() => {
-    const sources = new Set();
-    const addSource = source => {
-      if (typeof source === 'string' && source.trim()) {
-        sources.add(source.trim().toLowerCase());
-      }
+  const selectedGroup = useMemo(() => {
+    if (!selectedJob?.group_id) return selectedJob;
+    const variants = jobs.filter(job => job.group_id === selectedJob.group_id);
+    return variants.length > 1 ? { ...selectedJob, variants } : selectedJob;
+  }, [jobs, selectedJob]);
+
+  useEffect(() => {
+    let cancelled = false;
+    setSelectedDetail(selectedGroup);
+    if (selectedGroup) {
+      loadJobDetail(selectedGroup)
+        .then(detail => {
+          if (!cancelled) setSelectedDetail(detail);
+        })
+        .catch(() => {
+          // The dialog keeps the summary and links to the original listing.
+        });
+    }
+    return () => {
+      cancelled = true;
     };
+  }, [selectedGroup]);
 
+  const jobBoardCount = useMemo(() => {
+    const sources = new Set((summary?.source_health || []).map(item => item.source));
     jobs.forEach(job => {
-      addSource(job.source);
-      (job.also_found_on || []).forEach(item => {
-        addSource(typeof item === 'string' ? item : item?.source);
-      });
+      if (job.source) sources.add(String(job.source).toLowerCase());
+      (job.also_found_on || []).forEach(item => item?.source && sources.add(String(item.source).toLowerCase()));
     });
-
     return sources.size;
-  }, [jobs]);
-  const updatedAt = generatedAt || getLastUpdated(jobs);
-  const activeFilter = FILTERS.find(item => item.id === filter) || FILTERS[0];
+  }, [jobs, summary]);
+  const generatedAt = summary?.generated_at ? new Date(summary.generated_at) : null;
+  const updatedAt = generatedAt && !Number.isNaN(generatedAt.getTime()) ? generatedAt : getLastUpdated(jobs);
+  const dataAgeHours = hoursSince(updatedAt);
+  const isStale = dataAgeHours !== null && dataAgeHours > STALE_AFTER_HOURS;
+  const visibleFilters = FILTERS.filter(item => item.id !== 'new' || lastVisit);
+  const activeFilter = visibleFilters.find(item => item.id === filter) || visibleFilters[0];
 
   const openJob = useCallback((job) => {
     const key = getJobKey(job);
@@ -261,10 +353,33 @@ function App() {
     setSelectedJobKey('');
   }, []);
 
+  const toggleSaved = useCallback((job) => {
+    const key = getJobKey(job);
+    if (!key) return;
+    setSavedKeys(current => {
+      const next = new Set(current);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  }, []);
+
+  const changeView = useCallback((next) => {
+    setView(next);
+    setEligibility('all');
+    setLocation('all');
+    setCompany('all');
+    const url = new URL(window.location.href);
+    url.searchParams.set('view', next);
+    window.history.replaceState(window.history.state, '', url);
+  }, []);
+
   const clearFilters = useCallback(() => {
     setSearch('');
     setFilter('all');
     setCategory('all');
+    setSkill('all');
+    setEligibility('all');
     setCompany('all');
     setLocation('all');
     setSalary('all');
@@ -276,12 +391,16 @@ function App() {
     filter !== 'all',
     search.trim(),
     category !== 'all',
+    skill !== 'all',
+    eligibility !== 'all',
     company !== 'all',
     location !== 'all',
     salary !== 'all',
     vacancy !== 'all',
     sort !== 'default',
   ].filter(Boolean).length;
+
+  const viewCount = id => (id === 'saved' ? savedKeys.size : scopeCounts[id]);
 
   return (
     <div className="min-h-screen selection:bg-primary/30">
@@ -350,7 +469,7 @@ function App() {
             Find your next tech job
           </h1>
           <p className="mx-auto mt-3 max-w-xl text-sm sm:text-base leading-6 text-slate-300 light:text-slate-700">
-            Software, IT, data, networking, and security jobs across Afghanistan.
+            Software, IT, data, networking, and security jobs across Afghanistan, plus remote roles you can apply for from Afghanistan.
           </p>
 
           <div className="max-w-2xl mx-auto mt-6 relative group">
@@ -359,6 +478,7 @@ function App() {
               <Search className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 ml-2 sm:ml-3 shrink-0" aria-hidden="true" />
               <label htmlFor="job-search" className="sr-only">Search jobs</label>
               <input
+                ref={searchRef}
                 id="job-search"
                 type="search"
                 autoComplete="off"
@@ -367,7 +487,7 @@ function App() {
                 onChange={event => setSearch(event.target.value)}
                 className="w-full bg-transparent border-none text-white light:text-slate-950 px-3 sm:px-4 py-2 sm:py-3 focus:outline-none placeholder:text-slate-500 text-base sm:text-lg"
               />
-              {search && (
+              {search ? (
                 <button
                   type="button"
                   onClick={() => setSearch('')}
@@ -376,29 +496,56 @@ function App() {
                 >
                   <X className="w-5 h-5" aria-hidden="true" />
                 </button>
+              ) : (
+                <kbd className="hidden sm:inline-flex mr-3 rounded-md border border-white/15 light:border-slate-300 px-2 py-0.5 text-xs text-slate-400 light:text-slate-600" title="Press / to search">/</kbd>
               )}
             </div>
           </div>
 
           <div className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-slate-400 light:text-slate-600">
             <span className="inline-flex items-center gap-1.5" aria-live="polite" title="Shown in Afghanistan time">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 light:bg-emerald-600" aria-hidden="true" />
+              <span className={cn('h-1.5 w-1.5 rounded-full', isStale ? 'bg-amber-400 light:bg-amber-600' : 'bg-emerald-400 light:bg-emerald-600')} aria-hidden="true" />
               {formatUpdatedAt(updatedAt)}
             </span>
             {jobBoardCount > 0 && (
               <>
                 <span className="text-slate-600 light:text-slate-400" aria-hidden="true">•</span>
-                <span>{jobBoardCount} job boards</span>
+                <a href="#sources" className="underline-offset-4 hover:underline">{jobBoardCount} job boards checked</a>
               </>
             )}
           </div>
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8" aria-label="Job status filters">
-          <div className="grid grid-cols-3 gap-2 sm:gap-6">
-            {FILTERS.map(item => {
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5" aria-label="Job views">
+          <div className="view-tabs" role="tablist" aria-label="Choose which jobs to show">
+            {VIEWS.map(item => {
               const Icon = item.icon;
-              const count = item.id === 'all' ? stats.total : item.id === 'recent' ? stats.recent : stats.expiring;
+              const selected = view === item.id;
+              const count = viewCount(item.id);
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={selected}
+                  onClick={() => changeView(item.id)}
+                  className={cn('view-tab', selected && 'view-tab-selected')}
+                >
+                  <Icon className="w-4 h-4 shrink-0" aria-hidden="true" />
+                  <span className="sm:hidden">{item.shortLabel}</span>
+                  <span className="hidden sm:inline">{item.label}</span>
+                  {loadState === 'ready' && <span className="view-tab-count">{count}</span>}
+                </button>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8" aria-label="Job status filters">
+          <div className={cn('grid gap-2 sm:gap-4', visibleFilters.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3')}>
+            {visibleFilters.map(item => {
+              const Icon = item.icon;
+              const count = stats[item.id === 'all' ? 'total' : item.id] ?? 0;
               const selected = filter === item.id;
               return (
                 <button
@@ -440,7 +587,7 @@ function App() {
                   )}
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-slate-400 light:text-slate-600">
-                  Filter using details supplied by each original listing.
+                  Filter by skill, technology, location, and details supplied by each original listing.
                 </p>
               </div>
 
@@ -466,19 +613,31 @@ function App() {
             <div
               id="refinement-controls"
               className={cn(
-                'mt-5 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6',
+                'mt-5 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4',
                 showRefinements ? 'grid' : 'hidden',
               )}
             >
-              <RefinementSelect id="category-filter" label="Technology category" value={category} onChange={setCategory}>
-                <option value="all">All categories</option>
+              <RefinementSelect id="skill-filter" label="Skill" value={skill} onChange={setSkill}>
+                <option value="all">Any skill</option>
+                {facets.skills.map(item => <option key={item.name} value={item.name}>{item.name} ({item.count})</option>)}
+              </RefinementSelect>
+
+              <RefinementSelect id="category-filter" label="Technology area" value={category} onChange={setCategory}>
+                <option value="all">All areas</option>
                 {facets.categories.map(value => <option key={value} value={value}>{value}</option>)}
               </RefinementSelect>
 
-              <RefinementSelect id="location-filter" label="Location" value={location} onChange={setLocation}>
-                <option value="all">All locations</option>
-                {facets.locations.map(value => <option key={value} value={value}>{value}</option>)}
-              </RefinementSelect>
+              {view === 'remote' ? (
+                <RefinementSelect id="eligibility-filter" label="Who can apply" value={eligibility} onChange={setEligibility}>
+                  <option value="all">Any eligible location</option>
+                  {facets.eligibility.map(item => <option key={item.value} value={item.value}>{item.label} ({item.count})</option>)}
+                </RefinementSelect>
+              ) : (
+                <RefinementSelect id="location-filter" label="Location" value={location} onChange={setLocation}>
+                  <option value="all">All locations</option>
+                  {facets.locations.map(value => <option key={value} value={value}>{value}</option>)}
+                </RefinementSelect>
+              )}
 
               <RefinementSelect id="company-filter" label="Company" value={company} onChange={setCompany}>
                 <option value="all">All companies</option>
@@ -486,14 +645,14 @@ function App() {
               </RefinementSelect>
 
               <RefinementSelect id="salary-filter" label="Salary details" value={salary} onChange={setSalary}>
-                <option value="all">Any salary ({stats.total})</option>
+                <option value="all">Any salary</option>
                 <option value="scale">Scale or standard ({facets.salary.scale})</option>
                 <option value="negotiable">Negotiable ({facets.salary.negotiable})</option>
                 <option value="undisclosed">Not disclosed ({facets.salary.undisclosed})</option>
               </RefinementSelect>
 
               <RefinementSelect id="vacancy-filter" label="Number of openings" value={vacancy} onChange={setVacancy}>
-                <option value="all">Any openings ({stats.total})</option>
+                <option value="all">Any openings</option>
                 <option value="1">1 opening ({facets.vacancies.one})</option>
                 <option value="2-5">2–5 openings ({facets.vacancies.twoToFive})</option>
                 <option value="6-10">6–10 openings ({facets.vacancies.sixToTen})</option>
@@ -512,11 +671,13 @@ function App() {
           </div>
         </section>
 
-        <section id="jobs" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 scroll-mt-20" aria-labelledby="jobs-heading">
+        <section id="jobs" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 scroll-mt-20" aria-labelledby="jobs-heading">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-6">
             <div>
-              <h2 id="jobs-heading" className="text-2xl font-bold text-white light:text-slate-950">{activeFilter.label}</h2>
-              <p className="text-sm text-slate-400 light:text-slate-600 mt-1">{activeFilter.description}</p>
+              <h2 id="jobs-heading" className="text-2xl font-bold text-white light:text-slate-950">
+                {VIEWS.find(item => item.id === view)?.label} · {activeFilter.label}
+              </h2>
+              <p className="text-sm text-slate-400 light:text-slate-600 mt-1">{VIEW_DESCRIPTIONS[view]}</p>
             </div>
             {loadState === 'ready' && (
               <p className="text-sm text-slate-300 light:text-slate-700" role="status" aria-live="polite">
@@ -525,6 +686,16 @@ function App() {
               </p>
             )}
           </div>
+
+          {isStale && loadState === 'ready' && (
+            <div className="status-banner status-banner-warning mb-6" role="status">
+              <AlertTriangle className="w-5 h-5 shrink-0" aria-hidden="true" />
+              <div>
+                <p className="font-semibold text-white light:text-slate-950">These jobs were last refreshed {Math.floor(dataAgeHours / 24)} days ago</p>
+                <p className="text-sm text-slate-300 light:text-slate-700">The daily update is delayed. Confirm deadlines on the original listing before applying.</p>
+              </div>
+            </div>
+          )}
 
           {!isOnline && (
             <div className="status-banner mb-6" role="status">
@@ -548,9 +719,9 @@ function App() {
           )}
 
           {loadState === 'loading' ? (
-            <div className="flex flex-col items-center justify-center py-24 text-slate-300 light:text-slate-700" role="status">
-              <RefreshCw className="w-9 h-9 animate-spin mb-4 text-blue-400 light:text-blue-700" aria-hidden="true" />
-              <p className="font-medium">Loading the latest jobs…</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="status" aria-label="Loading the latest jobs">
+              {Array.from({ length: 6 }, (_, index) => <div key={index} className="skeleton-card" aria-hidden="true" />)}
+              <span className="sr-only">Loading the latest jobs…</span>
             </div>
           ) : loadState === 'error' ? (
             <div className="empty-state" role="alert">
@@ -563,6 +734,12 @@ function App() {
               </p>
               <button type="button" onClick={() => loadJobs({ initial: true })} className="primary-button">Try again</button>
             </div>
+          ) : view === 'saved' && savedKeys.size === 0 ? (
+            <div className="empty-state">
+              <Bookmark className="w-10 h-10 text-slate-400" aria-hidden="true" />
+              <h3 className="text-xl font-bold text-white light:text-slate-950">No saved jobs yet</h3>
+              <p className="max-w-md text-slate-300 light:text-slate-700">Tap the bookmark on any job to keep it here. Saved jobs stay on this device.</p>
+            </div>
           ) : jobs.length === 0 ? (
             <div className="empty-state">
               <Briefcase className="w-10 h-10 text-slate-400" aria-hidden="true" />
@@ -573,13 +750,21 @@ function App() {
             <div className="empty-state">
               <Search className="w-10 h-10 text-slate-400" aria-hidden="true" />
               <h3 className="text-xl font-bold text-white light:text-slate-950">No jobs match these filters</h3>
-              <p className="text-slate-300 light:text-slate-700">Try a shorter search or view all open technology jobs.</p>
+              <p className="text-slate-300 light:text-slate-700">Try a shorter search, another view, or clear the filters.</p>
               <button type="button" onClick={clearFilters} className="secondary-button">Clear search and filters</button>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in">
               {filteredJobs.slice(0, visibleCount).map(job => (
-                <JobCard key={getJobKey(job)} job={job} onSelect={openJob} now={now} />
+                <JobCard
+                  key={getJobKey(job)}
+                  job={job}
+                  onSelect={openJob}
+                  onToggleSaved={toggleSaved}
+                  saved={savedKeys.has(getJobKey(job))}
+                  newSince={lastVisit}
+                  now={now}
+                />
               ))}
             </div>
           )}
@@ -599,9 +784,19 @@ function App() {
             </div>
           )}
         </section>
+
+        <SourceStatus health={summary?.source_health} />
       </main>
 
-      {selectedJob && <JobDetails job={selectedJob} onClose={closeJob} />}
+      {selectedDetail && (
+        <JobDetails
+          job={selectedDetail}
+          onClose={closeJob}
+          onSelectVariant={openJob}
+          onToggleSaved={toggleSaved}
+          saved={savedKeys.has(getJobKey(selectedDetail))}
+        />
+      )}
     </div>
   );
 }
