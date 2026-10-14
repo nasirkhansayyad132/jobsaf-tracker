@@ -1,38 +1,33 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
     ArrowUpRight,
-    Banknote,
     Bookmark,
     BookmarkCheck,
-    BriefcaseBusiness,
-    Building2,
-    CalendarDays,
     Check,
+    ChevronDown,
     Clipboard,
-    Clock3,
     Globe2,
-    Info,
     Languages,
     Layers,
     Link2,
     Mail,
-    MapPin,
     Share2,
-    Sparkles,
-    Tags,
-    UsersRound,
     X,
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { parseDescription } from './description';
+import { CompanyAvatar } from './CompanyAvatar';
 import {
+    findDetail,
     formatJobDate,
+    formatRelativeDate,
     formatSource,
     formatVacancyCount,
-    findDetail,
     getApplicationInfo,
     getCategoryFacet,
     getClosingDate,
+    getDeadlineInfo,
+    getGroupVacancyCount,
     getJobCategory,
     getJobKey,
     getJobReference,
@@ -69,6 +64,7 @@ const DETAIL_PRIORITY = [
     'no. of jobs',
 ];
 
+// Shown elsewhere in the panel, so not repeated under "More details".
 const REDUNDANT_DETAIL_KEYS = new Set([
     'category',
     'functional area',
@@ -92,6 +88,10 @@ const REDUNDANT_DETAIL_KEYS = new Set([
     'reference',
     'reference number',
     'vacancy number',
+    'remote eligibility',
+    'location restriction',
+    'languages',
+    'tags',
 ]);
 
 function normalizeKey(value) {
@@ -179,6 +179,7 @@ function FormattedDescription({ description, loading = false }) {
                 <div className="skeleton-line w-3/4" />
                 <div className="skeleton-line w-full" />
                 <div className="skeleton-line w-5/6" />
+                <div className="skeleton-line w-2/3" />
                 <span className="sr-only">Loading the full description…</span>
             </div>
         );
@@ -186,75 +187,79 @@ function FormattedDescription({ description, loading = false }) {
 
     if (!blocks.length) {
         return (
-            <p className="text-sm sm:text-base leading-7 text-slate-400 light:text-slate-600">
-                No description was provided in the captured listing. Open the original source for complete requirements.
+            <p className="text-sm leading-7 tone-muted">
+                No description was captured for this listing. Open the original posting for complete requirements.
             </p>
         );
     }
 
     return (
-        <article
-            aria-label="Original job description"
-            className="description-text rounded-2xl border border-white/10 light:border-slate-200 bg-white/[0.025] light:bg-slate-50/70 px-4 py-5 sm:px-6 sm:py-6"
-        >
-            <div className="space-y-4">
-                {blocks.map((block, blockIndex) => {
-                    const key = `${block.type}-${blockIndex}`;
-                    if (block.type === 'heading') {
-                        return (
-                            <h4
-                                key={key}
-                                dir="auto"
-                                style={PLAINTEXT_DIRECTION}
-                                className={cn(
-                                    'text-base sm:text-lg font-bold leading-snug text-white light:text-slate-950 border-b border-white/10 light:border-slate-200 pb-2.5',
-                                    blockIndex > 0 && 'pt-3',
-                                )}
-                            >
-                                {block.text}
-                            </h4>
-                        );
-                    }
-
-                    if (block.type === 'ul' || block.type === 'ol') {
-                        const List = block.type;
-                        return (
-                            <List
-                                key={key}
-                                className={cn(
-                                    'space-y-2.5 ps-6 text-sm sm:text-base leading-7 text-slate-200 light:text-slate-800',
-                                    block.type === 'ol'
-                                        ? 'list-decimal marker:font-semibold marker:text-blue-300 light:marker:text-blue-700'
-                                        : 'list-disc marker:text-blue-300 light:marker:text-blue-700',
-                                )}
-                            >
-                                {block.items.map((item, itemIndex) => (
-                                    <li
-                                        key={`${key}-${itemIndex}`}
-                                        dir="auto"
-                                        style={PLAINTEXT_DIRECTION}
-                                        className="ps-1 break-words"
-                                    >
-                                        {item}
-                                    </li>
-                                ))}
-                            </List>
-                        );
-                    }
-
+        <article aria-label="Job description" className="description-text space-y-4">
+            {blocks.map((block, blockIndex) => {
+                const key = `${block.type}-${blockIndex}`;
+                if (block.type === 'heading') {
                     return (
-                        <p
+                        <h4
                             key={key}
                             dir="auto"
                             style={PLAINTEXT_DIRECTION}
-                            className="text-sm sm:text-base leading-7 text-slate-200 light:text-slate-800 break-words"
+                            className={cn('text-base font-semibold leading-snug tone-strong', blockIndex > 0 && 'pt-2')}
                         >
                             {block.text}
-                        </p>
+                        </h4>
                     );
-                })}
-            </div>
+                }
+
+                if (block.type === 'ul' || block.type === 'ol') {
+                    const List = block.type;
+                    return (
+                        <List
+                            key={key}
+                            className={cn(
+                                'space-y-2 ps-5 text-[15px] leading-7 tone-strong opacity-90',
+                                block.type === 'ol'
+                                    ? 'list-decimal marker:font-semibold marker:text-blue-400 light:marker:text-blue-700'
+                                    : 'list-disc marker:text-blue-400 light:marker:text-blue-700',
+                            )}
+                        >
+                            {block.items.map((item, itemIndex) => (
+                                <li key={`${key}-${itemIndex}`} dir="auto" style={PLAINTEXT_DIRECTION} className="ps-1 break-words">
+                                    {item}
+                                </li>
+                            ))}
+                        </List>
+                    );
+                }
+
+                return (
+                    <p key={key} dir="auto" style={PLAINTEXT_DIRECTION} className="text-[15px] leading-7 tone-strong opacity-90 break-words">
+                        {block.text}
+                    </p>
+                );
+            })}
         </article>
+    );
+}
+
+function Fact({ label, children, wide = false }) {
+    if (!children) return null;
+    return (
+        <div className={cn('min-w-0', wide && 'col-span-2')}>
+            <dt className="fact-label">{label}</dt>
+            <dd dir="auto" className="fact-value">{children}</dd>
+        </div>
+    );
+}
+
+function Section({ id, title, icon: Icon, children, className }) {
+    return (
+        <section aria-labelledby={id} className={cn('border-t line-soft pt-6', className)}>
+            <h3 id={id} className="section-heading">
+                {Icon && <Icon className="h-4 w-4" aria-hidden="true" />}
+                {title}
+            </h3>
+            {children}
+        </section>
     );
 }
 
@@ -266,18 +271,16 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
     const application = useMemo(() => getApplicationInfo(job), [job]);
     const details = useMemo(() => buildDetailEntries(job), [job]);
     const reference = getJobReference(job);
-    const category = getJobCategory(job);
+    const sourceCategory = getJobCategory(job);
     const technologyCategory = getCategoryFacet(job);
     const salary = getSalaryText(job);
-    const salaryDisplay = salary || 'Not disclosed';
-    const vacancies = getVacancyCount(job) === null ? null : formatVacancyCount(job);
     const jobType = getJobTypeText(job);
     const postDate = getPostDate(job);
     const closingDate = getClosingDate(job);
+    const deadline = getDeadlineInfo(job);
     const matchReasons = getReadableMatchReasons(job);
     const lastSeenDate = getLastSeenDate(job);
     const recheck = needsFreshnessCheck(job);
-    const originalListingIsApplication = application.sourceUrl === application.applicationUrl;
     const remote = isRemoteJob(job);
     const eligibility = getRemoteEligibility(job);
     const languages = getLanguages(job);
@@ -285,6 +288,22 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
     const variants = job.variants?.length > 1 ? job.variants : [];
     const descriptionLoading = job.description === undefined && Boolean(job.has_description);
     const alsoFoundOn = (job.also_found_on || []).filter(item => item?.url);
+    const openings = variants.length > 1
+        ? (() => {
+            const total = getGroupVacancyCount(job);
+            return total === null ? null : `${total.toLocaleString()} across ${variants.length} locations`;
+        })()
+        : getVacancyCount(job) === null ? null : formatVacancyCount(job);
+
+    // One clear primary action: the application form, else email, else the listing.
+    const primaryAction = application.applicationUrl
+        ? { href: application.applicationUrl, label: 'Apply online', external: true }
+        : application.emails.length
+            ? { href: null, label: 'Apply by email', scrollTo: 'apply-heading' }
+            : application.sourceUrl
+                ? { href: application.sourceUrl, label: 'Open original listing', external: true }
+                : null;
+    const showListingLink = application.sourceUrl && application.sourceUrl !== primaryAction?.href;
 
     useEffect(() => {
         const previouslyFocused = document.activeElement;
@@ -301,7 +320,7 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
 
             if (event.key !== 'Tab' || !dialogRef.current) return;
             const focusable = [...dialogRef.current.querySelectorAll(
-                'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])',
+                'a[href], button:not([disabled]), input:not([disabled]), summary, [tabindex]:not([tabindex="-1"])',
             )].filter(element => !element.hasAttribute('hidden'));
             if (!focusable.length) {
                 event.preventDefault();
@@ -365,10 +384,14 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
         return `mailto:${email}${subject}`;
     };
 
+    const scrollToApply = () => {
+        dialogRef.current?.querySelector('#apply-heading')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
     return (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6">
+        <div className="fixed inset-0 z-50 flex justify-end">
             <div
-                className="absolute inset-0 bg-slate-950/80 light:bg-slate-950/60 backdrop-blur-sm modal-backdrop"
+                className="absolute inset-0 bg-slate-950/70 light:bg-slate-900/40 backdrop-blur-[2px] modal-backdrop"
                 onMouseDown={onClose}
                 aria-hidden="true"
             />
@@ -380,253 +403,115 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
                 aria-labelledby="job-dialog-title"
                 aria-describedby="job-dialog-context"
                 tabIndex="-1"
-                className="relative w-full sm:w-[95%] max-w-5xl h-[92dvh] sm:h-auto sm:max-h-[92dvh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-dark light:bg-white border-t sm:border border-white/15 light:border-slate-200 shadow-2xl scrollbar-hide modal-panel"
+                className="drawer-panel modal-panel relative flex h-[100dvh] w-full flex-col overflow-y-auto border-l line-soft shadow-2xl sm:max-w-2xl"
             >
-                <header className="sticky top-0 z-10 flex items-start justify-between p-5 sm:p-7 bg-dark/95 light:bg-white/95 backdrop-blur-xl border-b border-white/10 light:border-slate-200">
-                    <div className="pr-32 min-w-0">
-                        <div className="flex flex-wrap items-center gap-2 mb-3">
-                            <span className="px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-500/10 light:bg-blue-50 text-blue-200 light:text-blue-800 border border-blue-400/20 light:border-blue-200">
-                                {formatSource(job.source)}
-                            </span>
-                            {reference && (
-                                <span dir="auto" className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/[0.06] light:bg-slate-100 text-slate-300 light:text-slate-700 border border-white/10 light:border-slate-200">
-                                    Vacancy ID: {reference}
-                                </span>
-                            )}
-                        </div>
-                        <h2 id="job-dialog-title" dir="auto" className="text-xl sm:text-3xl font-bold text-white light:text-slate-950 mb-2 leading-tight">
-                            {job.title || 'Untitled role'}
-                        </h2>
-                        <p id="job-dialog-context" className="sr-only">
-                            Full job details, application options, and original source for {job.title}.
-                        </p>
-                        <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300 light:text-slate-700">
-                            <span className="flex items-start gap-1.5">
-                                <Building2 className="w-4 h-4 mt-0.5 text-blue-300 light:text-blue-700 shrink-0" aria-hidden="true" />
-                                <span dir="auto">{job.company || 'Employer not specified'}</span>
-                            </span>
-                            <span className="flex items-start gap-1.5">
-                                {remote
-                                    ? <Globe2 className="w-4 h-4 mt-0.5 text-teal-300 light:text-teal-700 shrink-0" aria-hidden="true" />
-                                    : <MapPin className="w-4 h-4 mt-0.5 text-violet-300 light:text-violet-700 shrink-0" aria-hidden="true" />}
-                                <span dir="auto">
-                                    {variants.length > 1 ? `${variants.length} locations` : job.location || 'Location not specified'}
-                                </span>
-                            </span>
-                            {closingDate && (
-                                <span className="flex items-center gap-1.5">
-                                    <Clock3 className="w-4 h-4 text-orange-300 light:text-orange-700 shrink-0" aria-hidden="true" />
-                                    Closes {formatJobDate(closingDate)}
-                                </span>
-                            )}
-                            {postDate && (
-                                <span className="flex items-center gap-1.5">
-                                    <CalendarDays className="w-4 h-4 text-emerald-300 light:text-emerald-700 shrink-0" aria-hidden="true" />
-                                    {getPostDateLabel(job)} {formatJobDate(postDate)}
-                                </span>
-                            )}
-                        </div>
-                    </div>
-
-                    <div className="absolute top-4 right-4 flex items-center gap-1">
+                <header className="app-header sticky top-0 z-10 flex items-center justify-between gap-2 px-4 py-2.5 sm:px-6">
+                    <span className="truncate text-xs font-medium tone-muted">
+                        {formatSource(job.source)}
+                        {reference ? ` · Ref ${reference}` : ''}
+                    </span>
+                    <div className="flex shrink-0 items-center gap-1">
                         {onToggleSaved && (
                             <button
                                 type="button"
                                 onClick={() => onToggleSaved(job)}
-                                className={cn('icon-button', saved && 'text-amber-300 light:text-amber-700')}
+                                className={cn('icon-button', saved && 'text-amber-400 hover:text-amber-400')}
                                 aria-pressed={saved}
                                 aria-label={saved ? 'Remove from saved jobs' : 'Save this job'}
-                                title={saved ? 'Saved' : 'Save this job'}
+                                title={saved ? 'Saved' : 'Save'}
                             >
-                                {saved ? <BookmarkCheck className="w-5 h-5" aria-hidden="true" /> : <Bookmark className="w-5 h-5" aria-hidden="true" />}
+                                {saved ? <BookmarkCheck className="h-[18px] w-[18px]" aria-hidden="true" /> : <Bookmark className="h-[18px] w-[18px]" aria-hidden="true" />}
                             </button>
                         )}
-                        <button type="button" onClick={shareJob} className="icon-button" aria-label="Share this job" title="Share this job">
-                            <Share2 className="w-5 h-5" aria-hidden="true" />
+                        <button type="button" onClick={shareJob} className="icon-button" aria-label="Share this job" title="Share">
+                            <Share2 className="h-[18px] w-[18px]" aria-hidden="true" />
                         </button>
-                        <button ref={closeButtonRef} type="button" onClick={onClose} className="icon-button" aria-label="Close job details" title="Close job details">
-                            <X className="w-5 h-5" aria-hidden="true" />
+                        <button ref={closeButtonRef} type="button" onClick={onClose} className="icon-button" aria-label="Close job details" title="Close">
+                            <X className="h-5 w-5" aria-hidden="true" />
                         </button>
                     </div>
                 </header>
 
-                <div className="p-5 sm:p-8 space-y-8">
-                    <section aria-labelledby="overview-heading">
-                        <h3 id="overview-heading" className="section-heading">
-                            <BriefcaseBusiness className="w-5 h-5 text-blue-300 light:text-blue-700" aria-hidden="true" />
-                            At a glance
-                        </h3>
-                        <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                            {remote && (
-                                <div className="rounded-xl border border-teal-400/20 light:border-teal-200 bg-teal-500/[0.07] light:bg-teal-50 p-4 sm:col-span-2 lg:col-span-1">
-                                    <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
-                                        <Globe2 className="w-4 h-4 text-teal-300 light:text-teal-700" aria-hidden="true" /> Who can apply
-                                    </dt>
-                                    <dd className="mt-2 text-sm font-semibold text-slate-100 light:text-slate-900">{eligibility}</dd>
-                                    {job.remote_regions && (
-                                        <dd dir="auto" className="mt-1 text-xs text-slate-400 light:text-slate-600 break-words">Listing says: {job.remote_regions}</dd>
-                                    )}
-                                    {languages.length > 0 && (
-                                        <dd className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-200 light:text-amber-900">
-                                            <Languages className="w-3.5 h-3.5" aria-hidden="true" /> Mentions {languages.join(', ')}
-                                        </dd>
-                                    )}
-                                </div>
-                            )}
-                            <div className="rounded-xl border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 p-4">
-                                <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
-                                    <Building2 className="w-4 h-4 text-blue-300 light:text-blue-700" aria-hidden="true" /> Employer
-                                </dt>
-                                <dd dir="auto" className="mt-2 text-sm font-semibold text-slate-100 light:text-slate-900 break-words">
-                                    {job.company || 'Not provided by the source'}
-                                </dd>
-                            </div>
-                            <div className={cn(
-                                'rounded-xl border p-4',
-                                salary
-                                    ? 'border-emerald-400/20 light:border-emerald-200 bg-emerald-500/[0.07] light:bg-emerald-50'
-                                    : 'border-white/10 light:border-slate-200 bg-white/[0.03] light:bg-slate-50',
-                            )}>
-                                <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
-                                    <Banknote className={cn(
-                                        'w-4 h-4',
-                                        salary ? 'text-emerald-300 light:text-emerald-700' : 'text-slate-500 light:text-slate-500',
-                                    )} aria-hidden="true" /> Salary
-                                </dt>
-                                <dd dir="auto" className={cn(
-                                    'mt-2 text-sm whitespace-pre-wrap break-words',
-                                    salary
-                                        ? 'font-semibold text-slate-100 light:text-slate-900'
-                                        : 'font-medium text-slate-500 light:text-slate-500',
-                                )}>{salaryDisplay}</dd>
-                            </div>
-                            {vacancies && (
-                                <div className="rounded-xl border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 p-4">
-                                    <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
-                                        <UsersRound className="w-4 h-4 text-violet-300 light:text-violet-700" aria-hidden="true" /> Vacancies
-                                    </dt>
-                                    <dd dir="auto" className="mt-2 text-sm font-semibold text-slate-100 light:text-slate-900 break-words">{vacancies}</dd>
-                                </div>
-                            )}
-                            {jobType && (
-                                <div className="rounded-xl border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 p-4">
-                                    <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
-                                        <BriefcaseBusiness className="w-4 h-4 text-blue-300 light:text-blue-700" aria-hidden="true" /> Job type
-                                    </dt>
-                                    <dd dir="auto" className="mt-2 text-sm font-semibold text-slate-100 light:text-slate-900 break-words capitalize">{jobType}</dd>
-                                </div>
-                            )}
-                            {category && (
-                                <div className="rounded-xl border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 p-4">
-                                    <dt className="flex items-center gap-2 text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
-                                        <Tags className="w-4 h-4 text-cyan-300 light:text-cyan-700" aria-hidden="true" /> Source category
-                                    </dt>
-                                    <dd dir="auto" className="mt-2 text-sm font-semibold text-slate-100 light:text-slate-900 break-words">{category}</dd>
-                                </div>
-                            )}
-                        </dl>
-                    </section>
-
-                    {technologyCategory && (
-                        <section aria-labelledby="specialties-heading">
-                            <h3 id="specialties-heading" className="section-heading">
-                                <Sparkles className="w-5 h-5 text-blue-300 light:text-blue-700" aria-hidden="true" />
-                                Technology focus
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                                <span dir="auto" className="px-3 py-1.5 rounded-lg bg-blue-500/10 light:bg-blue-50 border border-blue-400/20 light:border-blue-200 text-sm font-medium text-blue-100 light:text-blue-900">
-                                    {technologyCategory}
-                                </span>
-                                {skills.map(name => (
-                                    <span key={name} className="px-3 py-1.5 rounded-lg border border-white/10 light:border-slate-200 bg-white/[0.04] light:bg-slate-50 text-sm font-medium text-slate-200 light:text-slate-800">
-                                        {name}
-                                    </span>
-                                ))}
-                            </div>
-                            {matchReasons.length > 0 && (
-                                <ul className="mt-3 space-y-1 text-sm text-slate-300 light:text-slate-700" aria-label="Why this role was matched">
-                                    {matchReasons.map(reason => <li key={reason} dir="auto">Matched because {reason}</li>)}
-                                </ul>
-                            )}
-                        </section>
-                    )}
-
-                    <section className="rounded-2xl p-5 sm:p-6 bg-blue-500/[0.07] light:bg-blue-50/70 border border-blue-400/20 light:border-blue-200" aria-labelledby="apply-heading">
-                        <div className="flex items-start gap-3">
-                            <Info className="w-5 h-5 text-blue-300 light:text-blue-700 shrink-0 mt-0.5" aria-hidden="true" />
-                            <div className="flex-1 min-w-0">
-                                <h3 id="apply-heading" className="text-base font-bold text-white light:text-slate-950 mb-1">How to apply</h3>
-                                <p dir="auto" className="text-sm leading-relaxed text-slate-300 light:text-slate-700">
-                                    {applicationMessage(application)}
-                                </p>
-
-                                {application.subject ? (
-                                    <div className="mt-4 rounded-xl bg-slate-950/35 light:bg-white border border-white/10 light:border-blue-200 p-3.5">
-                                        <span className="text-[11px] uppercase tracking-wide font-bold text-slate-400 light:text-slate-600">
-                                            {application.subjectType === 'exact'
-                                                ? 'Exact subject specified by the listing'
-                                                : application.subjectType === 'reference'
-                                                    ? 'Reference or title to include'
-                                                    : 'Suggested subject — verify before sending'}
-                                        </span>
-                                        <div className="mt-1.5 flex items-start justify-between gap-3">
-                                            <code dir="auto" className="text-sm text-white light:text-slate-950 whitespace-pre-wrap break-words">{application.subject}</code>
-                                            <button type="button" onClick={() => copyText(application.subject, 'Subject')} className="copy-button" aria-label="Copy application subject">
-                                                <Clipboard className="w-4 h-4" aria-hidden="true" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                ) : application.emails.length > 0 && (
-                                    <p className="mt-3 text-xs leading-relaxed text-amber-100 light:text-amber-900 bg-amber-500/10 light:bg-amber-50 border border-amber-400/20 light:border-amber-200 rounded-lg px-3 py-2">
-                                        No verified email subject was captured. Check the description and original listing—do not rely on an automatically invented subject.
-                                    </p>
+                <div className="flex-1 space-y-6 px-4 pb-10 pt-5 sm:px-6">
+                    <div className="flex items-start gap-4">
+                        <CompanyAvatar name={job.company || job.title} size="lg" />
+                        <div className="min-w-0">
+                            <h2 id="job-dialog-title" dir="auto" className="text-xl font-bold leading-snug tracking-tight tone-strong sm:text-2xl">
+                                {job.title || 'Untitled role'}
+                            </h2>
+                            <p dir="auto" className="mt-1 text-sm font-medium tone-muted">{job.company || 'Employer not specified'}</p>
+                            <p id="job-dialog-context" className="sr-only">
+                                Job details, how to apply, and the original source for {job.title}.
+                            </p>
+                            <div className="mt-3 flex flex-wrap gap-1.5">
+                                {deadline && (
+                                    <span className={cn('chip', deadline.urgent ? 'chip-amber' : '')}>{deadline.label}</span>
                                 )}
-
-                                {application.emails.length > 0 && (
-                                    <div className="mt-4 grid gap-2">
-                                        {application.emails.map(email => (
-                                            <div key={email} className="flex flex-col sm:flex-row sm:items-center gap-2 rounded-xl bg-slate-950/30 light:bg-white border border-white/10 light:border-blue-200 p-3">
-                                                <span dir="auto" className="min-w-0 flex-1 font-mono text-sm text-white light:text-slate-950 break-all">{email}</span>
-                                                <span className="flex gap-2">
-                                                    <button type="button" onClick={() => copyText(email, 'Email address')} className="copy-button" aria-label={`Copy ${email}`}>
-                                                        <Clipboard className="w-4 h-4" aria-hidden="true" /> Copy
-                                                    </button>
-                                                    <a href={mailtoUrl(email)} className="small-action-button" aria-label={`Start an email to ${email}`}>
-                                                        <Mail className="w-4 h-4" aria-hidden="true" /> Email
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </div>
+                                {remote && (
+                                    <span className="chip chip-teal"><Globe2 className="h-3 w-3" aria-hidden="true" /> {eligibility}</span>
                                 )}
-
-                                <div className="mt-5 flex flex-col sm:flex-row flex-wrap gap-3">
-                                    {application.applicationUrl && (
-                                        <a href={application.applicationUrl} target="_blank" rel="noopener noreferrer" className="primary-button">
-                                            Apply online <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-                                        </a>
-                                    )}
-                                    {application.sourceUrl && !originalListingIsApplication && (
-                                        <a href={application.sourceUrl} target="_blank" rel="noopener noreferrer" className="secondary-button">
-                                            Read original listing <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-                                        </a>
-                                    )}
-                                    {application.sourceUrl && originalListingIsApplication && (
-                                        <p className="text-xs text-slate-400 light:text-slate-600 self-center">The application link is the original listing.</p>
-                                    )}
-                                </div>
+                                {languages.length > 0 && (
+                                    <span className="chip chip-amber"><Languages className="h-3 w-3" aria-hidden="true" /> {languages.join(' · ')}</span>
+                                )}
+                                {jobType && <span className="chip capitalize">{jobType}</span>}
                             </div>
                         </div>
-                    </section>
+                    </div>
+
+                    {primaryAction && (
+                        <div className="flex flex-col gap-2 sm:flex-row">
+                            {primaryAction.href ? (
+                                <a href={primaryAction.href} target="_blank" rel="noopener noreferrer" className="primary-button flex-1 sm:flex-none">
+                                    {primaryAction.label} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                                </a>
+                            ) : (
+                                <button type="button" onClick={scrollToApply} className="primary-button flex-1 sm:flex-none">
+                                    <Mail className="h-4 w-4" aria-hidden="true" /> {primaryAction.label}
+                                </button>
+                            )}
+                            {showListingLink && (
+                                <a href={application.sourceUrl} target="_blank" rel="noopener noreferrer" className="secondary-button flex-1 sm:flex-none">
+                                    Original listing <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                                </a>
+                            )}
+                        </div>
+                    )}
+
+                    <dl className="surface grid grid-cols-2 gap-x-4 gap-y-4 rounded-2xl p-4 sm:grid-cols-3">
+                        <Fact label="Location" wide={variants.length > 1}>
+                            {variants.length > 1 ? `${variants.length} locations (see below)` : remote ? 'Remote' : job.location}
+                        </Fact>
+                        <Fact label="Deadline">{closingDate ? formatJobDate(closingDate) : 'Not listed'}</Fact>
+                        <Fact label={getPostDateLabel(job)}>
+                            {postDate ? `${formatJobDate(postDate, { short: true })} · ${formatRelativeDate(postDate)}` : null}
+                        </Fact>
+                        <Fact label="Openings">{openings}</Fact>
+                        <Fact label="Salary">{salary || 'Not disclosed'}</Fact>
+                        <Fact label="Area">{technologyCategory}</Fact>
+                    </dl>
+
+                    {recheck && lastSeenDate && (
+                        <p className="status-banner status-banner-warning text-sm">
+                            Last confirmed on the source {formatJobDate(lastSeenDate)}. Check the original listing before applying.
+                        </p>
+                    )}
+
+                    {remote && (
+                        <div className="rounded-2xl border border-teal-400/25 light:border-teal-200 bg-teal-500/[0.08] light:bg-teal-50 p-4 text-sm">
+                            <p className="flex items-center gap-2 font-semibold text-teal-200 light:text-teal-900">
+                                <Globe2 className="h-4 w-4" aria-hidden="true" /> {eligibility}
+                            </p>
+                            {job.remote_regions && (
+                                <p dir="auto" className="mt-1 tone-muted">The listing says: {job.remote_regions}</p>
+                            )}
+                            <p className="mt-1 tone-muted">Remote employers can still limit hiring by country. Confirm eligibility before applying.</p>
+                        </div>
+                    )}
 
                     {variants.length > 1 && (
-                        <section aria-labelledby="variants-heading">
-                            <h3 id="variants-heading" className="section-heading">
-                                <Layers className="w-5 h-5 text-violet-300 light:text-violet-700" aria-hidden="true" />
-                                Posted for {variants.length} locations
-                            </h3>
-                            <p className="-mt-2 mb-3 text-sm text-slate-400 light:text-slate-600">
-                                The employer published one listing per location. Each has its own openings, deadline, and application.
+                        <Section id="variants-heading" title={`Posted for ${variants.length} locations`} icon={Layers}>
+                            <p className="-mt-1 mb-3 text-sm tone-muted">
+                                One listing per location. Each has its own openings, deadline and application.
                             </p>
                             <ul className="grid gap-2 sm:grid-cols-2">
                                 {variants.map(variant => {
@@ -643,85 +528,134 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
                                                 className={cn(
                                                     'w-full rounded-xl border p-3 text-left text-sm transition-colors',
                                                     current
-                                                        ? 'border-blue-400/50 light:border-blue-600/40 bg-blue-500/10 light:bg-blue-50 cursor-default'
-                                                        : 'border-white/10 light:border-slate-200 bg-white/[0.03] light:bg-white hover:border-blue-400/40 hover:bg-white/[0.06] light:hover:bg-slate-50',
+                                                        ? 'cursor-default border-blue-500/50 bg-blue-500/10'
+                                                        : 'line-soft hover:border-blue-500/40',
                                                 )}
                                             >
-                                                <span dir="auto" className="block font-semibold text-slate-100 light:text-slate-900">{variant.location || 'Location not specified'}</span>
-                                                <span className="mt-0.5 block text-xs text-slate-400 light:text-slate-600">
+                                                <span dir="auto" className="block font-semibold tone-strong">{variant.location || 'Location not specified'}</span>
+                                                <span className="mt-0.5 block text-xs tone-muted">
                                                     {count !== null ? `${count} ${count === 1 ? 'opening' : 'openings'} · ` : ''}
                                                     {closes ? `closes ${formatJobDate(closes, { short: true })}` : 'no deadline listed'}
-                                                    {current ? ' · showing' : ''}
+                                                    {current ? ' · viewing' : ''}
                                                 </span>
                                             </button>
                                         </li>
                                     );
                                 })}
                             </ul>
-                        </section>
+                        </Section>
                     )}
 
-                    {details.length > 0 && (
-                        <section aria-labelledby="facts-heading">
-                            <h3 id="facts-heading" className="section-heading">
-                                <BriefcaseBusiness className="w-5 h-5 text-blue-300 light:text-blue-700" aria-hidden="true" />
-                                Role details
-                            </h3>
-                            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 light:border-slate-200 bg-white/10 light:bg-slate-200">
+                    {(skills.length > 0 || matchReasons.length > 0) && (
+                        <Section id="skills-heading" title="Skills and focus">
+                            {skills.length > 0 && (
+                                <ul className="flex flex-wrap gap-2" aria-label="Skills mentioned">
+                                    {skills.map(name => (
+                                        <li key={name} className="skill-chip px-2.5 py-1 text-xs">{name}</li>
+                                    ))}
+                                </ul>
+                            )}
+                            {matchReasons.length > 0 && (
+                                <p className="mt-3 text-xs leading-5 tone-faint">
+                                    Listed here because {matchReasons.join('; ')}.
+                                </p>
+                            )}
+                        </Section>
+                    )}
+
+                    <Section id="apply-heading" title="How to apply" className="scroll-mt-16">
+                        <p dir="auto" className="text-sm leading-6 tone-muted">{applicationMessage(application)}</p>
+
+                        {application.subject ? (
+                            <div className="surface mt-4 rounded-xl p-3.5">
+                                <span className="fact-label">
+                                    {application.subjectType === 'exact'
+                                        ? 'Exact email subject from the listing'
+                                        : application.subjectType === 'reference'
+                                            ? 'Reference or title to include'
+                                            : 'Suggested subject — verify before sending'}
+                                </span>
+                                <div className="mt-1.5 flex items-start justify-between gap-3">
+                                    <code dir="auto" className="whitespace-pre-wrap break-words text-sm tone-strong">{application.subject}</code>
+                                    <button type="button" onClick={() => copyText(application.subject, 'Subject')} className="copy-button" aria-label="Copy application subject">
+                                        <Clipboard className="h-4 w-4" aria-hidden="true" />
+                                    </button>
+                                </div>
+                            </div>
+                        ) : application.emails.length > 0 && (
+                            <p className="mt-3 rounded-lg border border-amber-400/25 light:border-amber-200 bg-amber-500/10 light:bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-100 light:text-amber-900">
+                                No exact email subject was captured. Check the listing for the subject it requires.
+                            </p>
+                        )}
+
+                        {application.emails.length > 0 && (
+                            <div className="mt-4 grid gap-2">
+                                {application.emails.map(email => (
+                                    <div key={email} className="surface flex flex-col gap-2 rounded-xl p-3 sm:flex-row sm:items-center">
+                                        <span dir="auto" className="min-w-0 flex-1 break-all font-mono text-sm tone-strong">{email}</span>
+                                        <span className="flex gap-2">
+                                            <button type="button" onClick={() => copyText(email, 'Email address')} className="copy-button" aria-label={`Copy ${email}`}>
+                                                <Clipboard className="h-4 w-4" aria-hidden="true" /> Copy
+                                            </button>
+                                            <a href={mailtoUrl(email)} className="small-action-button" aria-label={`Start an email to ${email}`}>
+                                                <Mail className="h-4 w-4" aria-hidden="true" /> Email
+                                            </a>
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </Section>
+
+                    <Section id="description-heading" title="Description">
+                        <FormattedDescription description={job.description} loading={descriptionLoading} />
+                    </Section>
+
+                    {(details.length > 0 || sourceCategory) && (
+                        <details className="group border-t line-soft pt-6">
+                            <summary className="section-heading mb-0 cursor-pointer list-none justify-between rounded-lg">
+                                More details
+                                <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden="true" />
+                            </summary>
+                            <dl className="mt-4 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
+                                {sourceCategory && (
+                                    <div className="min-w-0 sm:col-span-2">
+                                        <dt className="fact-label">Category on the source</dt>
+                                        <dd dir="auto" className="fact-value">{sourceCategory}</dd>
+                                    </div>
+                                )}
                                 {details.map(([key, value]) => (
-                                    <div key={key} className="bg-slate-900/80 light:bg-white p-4 sm:p-5">
-                                        <dt className="text-[11px] uppercase tracking-wide text-slate-400 light:text-slate-600 font-semibold mb-1.5">{key}</dt>
-                                        <dd dir="auto" className="text-sm sm:text-base text-slate-100 light:text-slate-900 font-medium whitespace-pre-wrap break-words">{value}</dd>
+                                    <div key={key} className="min-w-0">
+                                        <dt className="fact-label">{key}</dt>
+                                        <dd dir="auto" className="fact-value whitespace-pre-wrap">{value}</dd>
                                     </div>
                                 ))}
                             </dl>
-                        </section>
+                        </details>
                     )}
 
-                    <section className="pb-4" aria-labelledby="description-heading">
-                        <h3 id="description-heading" className="section-heading">
-                            <BriefcaseBusiness className="w-5 h-5 text-blue-300 light:text-blue-700" aria-hidden="true" />
-                            Full description
-                        </h3>
-                        <FormattedDescription description={job.description} loading={descriptionLoading} />
-                    </section>
-
-                    <footer className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-5 border-t border-white/10 light:border-slate-200 text-xs text-slate-400 light:text-slate-600">
-                        <div className="space-y-1">
-                            <p>Details are collected automatically. Confirm eligibility, deadline, and instructions with the publisher.</p>
-                            {alsoFoundOn.length > 0 && (
-                                <p>
-                                    Also listed on{' '}
-                                    {alsoFoundOn.map((item, index) => (
-                                        <span key={`${item.source}-${item.url}`}>
-                                            {index > 0 && ', '}
-                                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-300 light:text-blue-700 hover:underline underline-offset-4">
-                                                {formatSource(item.source)}
-                                            </a>
-                                        </span>
-                                    ))}
-                                </p>
+                    <footer className="space-y-1.5 border-t line-soft pt-5 text-xs tone-faint">
+                        <p>Collected automatically. Confirm eligibility, deadline and instructions with the publisher.</p>
+                        {lastSeenDate && <p>Last seen on the source {formatJobDate(lastSeenDate)}.</p>}
+                        <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                            {application.sourceUrl && (
+                                <a href={application.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-blue-400 light:text-blue-700 hover:underline underline-offset-4">
+                                    <Link2 className="h-3.5 w-3.5" aria-hidden="true" /> {formatSource(job.source)}
+                                </a>
                             )}
-                            {lastSeenDate && (
-                                <p className={recheck ? 'text-amber-200 light:text-amber-800 font-semibold' : ''}>
-                                    Last captured from this source {formatJobDate(lastSeenDate)}{recheck ? ' — recheck the original listing before applying.' : '.'}
-                                </p>
-                            )}
-                        </div>
-                        {application.sourceUrl && (
-                            <a href={application.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-blue-300 light:text-blue-700 hover:underline underline-offset-4 shrink-0">
-                                <Link2 className="w-3.5 h-3.5" aria-hidden="true" /> Source: {formatSource(job.source)}
-                            </a>
-                        )}
+                            {alsoFoundOn.map(item => (
+                                <a key={`${item.source}-${item.url}`} href={item.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-blue-400 light:text-blue-700 hover:underline underline-offset-4">
+                                    <Link2 className="h-3.5 w-3.5" aria-hidden="true" /> {formatSource(item.source)}
+                                </a>
+                            ))}
+                        </p>
                     </footer>
                 </div>
 
-                <div className="sr-only" role="status" aria-live="polite">
-                    {feedback}
-                </div>
+                <div className="sr-only" role="status" aria-live="polite">{feedback}</div>
                 {feedback && (
-                    <div className="fixed left-1/2 bottom-5 z-[60] -translate-x-1/2 inline-flex items-center gap-2 rounded-full bg-slate-950 light:bg-white border border-white/15 light:border-slate-300 px-4 py-2 text-sm font-semibold text-white light:text-slate-950 shadow-xl" aria-hidden="true">
-                        <Check className="w-4 h-4 text-emerald-400 light:text-emerald-700" /> {feedback}
+                    <div className="surface fixed bottom-5 left-1/2 z-[60] inline-flex -translate-x-1/2 items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold tone-strong" aria-hidden="true">
+                        <Check className="h-4 w-4 text-emerald-500" /> {feedback}
                     </div>
                 )}
             </section>

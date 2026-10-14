@@ -686,7 +686,24 @@ export function groupJobs(jobs) {
         groups.set(groupId, representative);
         output.push(representative);
     }
-    return output.map(job => (job.variants?.length > 1 ? job : stripVariants(job)));
+    return output.map(job => (job.variants?.length > 1 ? withCommonTitle(job) : stripVariants(job)));
+}
+
+/** Show a group under the spelling most of its copies use, not a one-off typo. */
+function withCommonTitle(group) {
+    const counts = new Map();
+    for (const variant of group.variants) {
+        const key = String(variant.title || '').trim().toLowerCase();
+        counts.set(key, (counts.get(key) || 0) + 1);
+    }
+    const ownCount = counts.get(String(group.title || '').trim().toLowerCase()) || 0;
+    const best = group.variants.reduce((winner, variant) => (
+        (counts.get(String(variant.title || '').trim().toLowerCase()) || 0)
+            > (counts.get(String(winner.title || '').trim().toLowerCase()) || 0) ? variant : winner
+    ), group);
+    return ownCount >= (counts.get(String(best.title || '').trim().toLowerCase()) || 0)
+        ? group
+        : { ...best, variants: group.variants };
 }
 
 function stripVariants(job) {
@@ -964,4 +981,50 @@ export function getReadableMatchReasons(job) {
             return /[A-Za-z\u0600-\u06ff]/.test(reason);
         })
         .slice(0, 3);
+}
+
+const AVATAR_STOP_WORDS = new Set(['the', 'of', 'and', 'for', 'in', 'a', 'an', '&', '-', '–', '|']);
+
+/** Two-letter monogram for an employer without a logo. */
+export function getCompanyInitials(name) {
+    const words = String(name || '')
+        .replace(/\([^)]*\)/g, ' ')
+        .split(/[\s/,.-]+/)
+        .map(word => word.trim())
+        .filter(word => word && !AVATAR_STOP_WORDS.has(word.toLowerCase()));
+    if (!words.length) return '?';
+    const letters = words.length === 1
+        ? [...words[0]].slice(0, 2)
+        : [[...words[0]][0], [...words[1]][0]];
+    return letters.join('').toLocaleUpperCase();
+}
+
+/** Stable colour slot (0–7) so an employer always gets the same avatar. */
+export function getAvatarTone(name) {
+    let hash = 0;
+    for (const character of String(name || '')) hash = (hash * 31 + character.codePointAt(0)) >>> 0;
+    return hash % 8;
+}
+
+/** "Today", "Yesterday", "3 days ago", "2 weeks ago", or a short date. */
+export function formatRelativeDate(date, now = getAfghanistanToday()) {
+    if (!date) return null;
+    const days = calendarDayNumber(now) - calendarDayNumber(date);
+    if (days < 0) return formatJobDate(date, { short: true });
+    if (days === 0) return 'Today';
+    if (days === 1) return 'Yesterday';
+    if (days < 7) return `${days} days ago`;
+    if (days < 28) return `${Math.floor(days / 7)} ${Math.floor(days / 7) === 1 ? 'week' : 'weeks'} ago`;
+    return formatJobDate(date, { short: true });
+}
+
+/** Deadline wording plus whether it needs attention (closing within 3 days). */
+export function getDeadlineInfo(job, now = getAfghanistanToday()) {
+    const days = daysUntilClosing(job, now);
+    if (days === null) return null;
+    if (days < 0) return { label: 'Closed', urgent: false, days };
+    if (days === 0) return { label: 'Closes today', urgent: true, days };
+    if (days === 1) return { label: 'Closes tomorrow', urgent: true, days };
+    if (days <= 3) return { label: `Closes in ${days} days`, urgent: true, days };
+    return { label: `Closes ${formatJobDate(getClosingDate(job), { short: true })}`, urgent: false, days };
 }

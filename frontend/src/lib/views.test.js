@@ -80,3 +80,33 @@ test('facets report the most common skills and remote eligibility groups', () =>
     assert.deepEqual(facets.skills[0], { name: 'Python', count: 2 });
     assert.deepEqual(facets.eligibility, [{ value: 'language', label: 'Needs Dari/Pashto', count: 1 }]);
 });
+
+test('cards get stable monograms, colours, relative dates and deadline labels', async () => {
+    const { formatRelativeDate, getAvatarTone, getCompanyInitials, getDeadlineInfo } = await import('./jobs.js');
+    assert.equal(getCompanyInitials('Unique Atlantic Telecommunication'), 'UA');
+    assert.equal(getCompanyInitials('UNICEF - United Nations Children’s Fund'), 'UU');
+    assert.equal(getCompanyInitials('Azizi Bank'), 'AB');
+    assert.equal(getCompanyInitials('Phantom'), 'PH');
+    assert.equal(getCompanyInitials(''), '?');
+    assert.equal(getAvatarTone('Azizi Bank'), getAvatarTone('Azizi Bank'));
+    assert.ok(getAvatarTone('Azizi Bank') >= 0 && getAvatarTone('Azizi Bank') < 8);
+
+    assert.equal(formatRelativeDate(new Date(2026, 9, 14, 12), now), 'Today');
+    assert.equal(formatRelativeDate(new Date(2026, 9, 13, 12), now), 'Yesterday');
+    assert.equal(formatRelativeDate(new Date(2026, 9, 10, 12), now), '4 days ago');
+    assert.equal(formatRelativeDate(new Date(2026, 9, 1, 12), now), '1 week ago');
+
+    assert.deepEqual(getDeadlineInfo(job('t', { closing_date: '2026-10-15' }), now), { label: 'Closes tomorrow', urgent: true, days: 1 });
+    assert.equal(getDeadlineInfo(job('t', { closing_date: '2026-10-30' }), now).urgent, false);
+    assert.equal(getDeadlineInfo(job('t', { closing_date: null }), now), null);
+});
+
+test('a grouped card uses the spelling most of its copies share', () => {
+    const [group] = groupJobs([
+        job('typo', { group_id: 'g', title: 'Agency Baking Support Staff' }),
+        job('a', { group_id: 'g', title: 'Agency Banking Support Staff' }),
+        job('b', { group_id: 'g', title: 'Agency Banking Support Staff' }),
+    ]);
+    assert.equal(group.title, 'Agency Banking Support Staff');
+    assert.equal(group.variants.length, 3);
+});
