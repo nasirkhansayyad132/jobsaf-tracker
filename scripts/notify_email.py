@@ -116,6 +116,24 @@ def build_section(title: str, emoji: str, jobs: List[Dict[str, Any]], max_items:
     """
 
 
+def collapse_groups(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Keep one row per group of province variants or re-posts of a role."""
+    seen = set()
+    collapsed = []
+    for job in jobs:
+        group_id = job.get("group_id")
+        if group_id:
+            if group_id in seen:
+                continue
+            seen.add(group_id)
+        collapsed.append(job)
+    return collapsed
+
+
+def is_remote(job: Dict[str, Any]) -> bool:
+    return job.get("work_mode") == "remote"
+
+
 def build_email_html(summary: Dict[str, Any]) -> str:
     """Build the full HTML email body."""
     today_formatted = get_kabul_date_formatted()
@@ -127,7 +145,7 @@ def build_email_html(summary: Dict[str, Any]) -> str:
         sections.append(build_section(
             "⚠️ Expiring TODAY",
             "🔴",
-            summary["expiring_today"],
+            collapse_groups(summary["expiring_today"]),
             max_items=5
         ))
     
@@ -136,7 +154,7 @@ def build_email_html(summary: Dict[str, Any]) -> str:
         sections.append(build_section(
             "Expiring in Next 3 Days",
             "🟡",
-            summary["expiring_soon"],
+            collapse_groups(summary["expiring_soon"]),
             max_items=5
         ))
     
@@ -145,17 +163,27 @@ def build_email_html(summary: Dict[str, Any]) -> str:
         sections.append(build_section(
             "Technology Jobs in Banking & Finance",
             "🏛️",
-            summary["tech_banking_jobs"],
+            collapse_groups(summary["tech_banking_jobs"]),
             max_items=5
         ))
     
-    # New Jobs
-    if summary.get("new_jobs"):
+    # New jobs: Afghanistan first, then remote roles open to Afghan applicants.
+    new_jobs = collapse_groups(summary.get("new_jobs") or [])
+    new_local = [job for job in new_jobs if not is_remote(job) or job.get("remote_scope") == "afghanistan"]
+    new_remote = [job for job in new_jobs if is_remote(job) and job.get("remote_scope") != "afghanistan"]
+    if new_local:
         sections.append(build_section(
-            "New Jobs Since Yesterday",
+            "New Jobs in Afghanistan",
             "🆕",
-            summary["new_jobs"],
-            max_items=5
+            new_local,
+            max_items=10
+        ))
+    if new_remote:
+        sections.append(build_section(
+            "New Remote Jobs Open to Afghanistan",
+            "🌍",
+            new_remote,
+            max_items=10
         ))
     
     if not sections:

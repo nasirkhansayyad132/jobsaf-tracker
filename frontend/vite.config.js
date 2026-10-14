@@ -53,15 +53,31 @@ export default defineConfig({
         skipWaiting: true,
         runtimeCaching: [
           {
-            urlPattern: ({ url }) => /\/data\/(jobs|summary)\.json$/.test(url.pathname),
+            // The list feed: prefer fresh data, but fall back to the cached
+            // copy quickly on slow connections.
+            urlPattern: ({ url }) => /\/data\/(jobs-index|jobs|summary)\.json$/.test(url.pathname),
             handler: 'NetworkFirst',
             options: {
               cacheName: 'jobs-data-v1',
-              networkTimeoutSeconds: 8,
+              networkTimeoutSeconds: 4,
               cacheableResponse: { statuses: [0, 200] },
               expiration: {
-                maxEntries: 4,
+                maxEntries: 6,
                 maxAgeSeconds: 7 * 24 * 60 * 60,
+              },
+            },
+          },
+          {
+            // Opened job details: show the cached text instantly (and offline),
+            // refreshing it in the background.
+            urlPattern: ({ url }) => /\/data\/jobs\/[A-Za-z0-9_-]+\.json$/.test(url.pathname),
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'job-details-v1',
+              cacheableResponse: { statuses: [0, 200] },
+              expiration: {
+                maxEntries: 200,
+                maxAgeSeconds: 14 * 24 * 60 * 60,
               },
             },
           },
@@ -70,7 +86,7 @@ export default defineConfig({
       manifest: {
         name: 'Afghanistan Tech Jobs',
         short_name: 'Tech Jobs',
-        description: 'Find current software, data, IT, and technology jobs in Afghanistan.',
+        description: 'Software, data, IT and security jobs in Afghanistan, plus remote roles open to Afghan applicants.',
         theme_color: '#0f172a',
         background_color: '#0f172a',
         display: 'standalone',
