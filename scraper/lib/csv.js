@@ -30,6 +30,11 @@ const DEFAULT_FIELDS = [
   "missed_runs",
   "relevance",
   "also_found_on",
+  "work_mode",
+  "remote_scope",
+  "languages",
+  "skills",
+  "group_id",
 ];
 
 function csvValue(value) {

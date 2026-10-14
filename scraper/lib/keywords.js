@@ -112,6 +112,17 @@ const STRONG_TECH_PHRASES = [
   "ict teacher", "computer lecturer", "computer instructor", "computer teacher", "computer trainer",
   "programming lecturer", "programming instructor", "programming teacher", "programming trainer",
   "coding instructor", "coding trainer", "networking instructor", "cybersecurity instructor",
+  // Engineering titles used by international remote boards.
+  "backend engineer", "back end engineer", "frontend engineer", "front end engineer",
+  "mobile engineer", "android engineer", "ios engineer", "react native", "flutter engineer",
+  "security engineer", "product engineer", "software development engineer",
+  "sdet", "golang", "go developer", "go engineer", "rust developer", "rust engineer",
+  "ruby developer", "ruby engineer", "rails developer", "rails engineer", "ruby on rails",
+  "python engineer", "java engineer", "javascript engineer", "typescript engineer", "node js engineer",
+  "react engineer", "c plus plus developer", "c plus plus engineer", "c sharp developer",
+  "dotnet developer", "dotnet engineer", "salesforce developer", "shopify developer",
+  "data platform engineer", "ai developer", "ai researcher", "developer advocate", "developer relations",
+  "observability engineer", "kubernetes engineer", "web3 developer", "solidity developer",
   "برنامه نویس", "برنامه نویسی", "انکشاف سیستم", "انکشاف نرم افزار", "مهندس نرم افزار",
   "طراحی و توسعه وبسایت", "طراحی و توسعه وب سایت", "توسعه وبسایت", "توسعه وب سایت",
   "طراحی وبسایت", "طراحی وب سایت", "طراح وب", "توسعه دهنده وب", "انکشاف دهنده وب",
@@ -316,6 +327,8 @@ const NON_TECH_TITLE_PHRASES = [
   "inventory enumerator",
   "data entry", "data collector", "surveyor",
   "graphic designer", "motion graphic", "video editor", "videographer", "content creator",
+  "photographer", "photo journalist", "photojournalist", "journalist", "cameraman",
+  "عکاس", "فوتو گرافر", "فوتوگرافر", "فلمبردار", "ژورنالیست", "خبرنگار",
   "digital marketing", "digital media", "social media", "content officer", "content specialist", "web content",
   "communications officer", "communication officer",
   "google ads", "paid media", "ppc", "lead generation", "seo specialist",
@@ -323,6 +336,12 @@ const NON_TECH_TITLE_PHRASES = [
   "sales officer", "marketing officer", "marketing specialist", "marketing manager", "business development officer",
   "reporting assistant", "reporting officer", "m and e assistant",
   "general manager", "operations manager", "business manager", "business operations manager",
+  // Non-technical families common on international remote boards.
+  "talent acquisition", "recruiter", "recruiting", "sourcer", "sales development", "sales representative",
+  "account executive", "account manager", "customer success manager", "copywriter", "content writer",
+  "bookkeeper", "virtual assistant", "executive assistant", "paralegal", "interpreter", "translator",
+  "analyst relations", "public relations", "partnerships manager", "partnership manager", "community manager",
+  "growth marketing",
 ];
 
 const NON_TECH_CATEGORY_PHRASES = [

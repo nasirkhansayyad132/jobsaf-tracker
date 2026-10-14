@@ -95,10 +95,24 @@ function writeJsonAtomically(file, value) {
     }
 }
 
+// The scraper's per-source report: lets the site show which boards were
+// checked, and which are temporarily serving last-known-good data.
+function readSourceHealth(file) {
+    if (!file || !fs.existsSync(file)) return [];
+    try {
+        const value = JSON.parse(fs.readFileSync(file, 'utf8'));
+        return Array.isArray(value) ? value : [];
+    } catch (error) {
+        console.warn(`[summary] ignoring unreadable source health ${file}: ${error.message}`);
+        return [];
+    }
+}
+
 function generateSummary() {
     const jobsFile = process.argv[2] || '../docs/data/jobs.json';
     const summaryFile = process.argv[3] || '../docs/data/summary.json';
     const lastJobsFile = process.argv[4];
+    const healthFile = process.argv[5];
 
     if (!fs.existsSync(jobsFile)) throw new Error(`Jobs file not found: ${jobsFile}`);
     const jobs = readJobs(jobsFile, 'jobs data');
@@ -140,6 +154,8 @@ function generateSummary() {
         expiring_today_count: expiringToday.length,
         expiring_soon_count: expiringSoon.length,
         tech_banking_count: techBankingJobs.length,
+        remote_count: jobs.filter(job => job.work_mode === 'remote').length,
+        source_health: readSourceHealth(healthFile),
         new_job_ids: newJobs.map(job => job.id),
         expiring_today_ids: expiringToday.map(job => job.id),
         expiring_soon_ids: expiringSoon.map(job => job.id),

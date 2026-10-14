@@ -3,10 +3,19 @@
 const fs = require("fs");
 const path = require("path");
 const acbar = require("./sites/acbar");
+const himalayas = require("./sites/himalayas");
+const impactpool = require("./sites/impactpool");
+const jobicy = require("./sites/jobicy");
 const jobsaf = require("./sites/jobsaf");
 const kaarobar = require("./sites/kaarobar");
+const reliefweb = require("./sites/reliefweb");
+const remoteok = require("./sites/remoteok");
+const remotive = require("./sites/remotive");
 const wazifaha = require("./sites/wazifaha");
+const weworkremotely = require("./sites/weworkremotely");
+const workingnomads = require("./sites/workingnomads");
 const {
+  assignGroups,
   canonicalUrl,
   dedupeJobs,
   referenceKey,
@@ -14,14 +23,37 @@ const {
 } = require("./lib/dedupe");
 const { expandBundledJob } = require("./lib/bundles");
 const { assessJobRelevance } = require("./lib/keywords");
+const { extractSkills } = require("./lib/skills");
 const { normalizeJob, normalizeTimestamp, todayKabulISO } = require("./lib/normalize");
 const { toCSV } = require("./lib/csv");
 
-const SITES = [jobsaf, acbar, kaarobar, wazifaha];
+const SITES = [
+  // Afghanistan job boards and UN/NGO portals.
+  jobsaf, acbar, kaarobar, wazifaha, reliefweb, impactpool,
+  // Remote boards; only roles open to applicants in Afghanistan are kept.
+  himalayas, remoteok, remotive, weworkremotely, jobicy, workingnomads,
+];
+
+// Remote roles posted on Afghan boards are always kept; the cap only applies
+// to international remote boards.
+const SITE_KINDS_LOCAL = new Set(SITES.filter(site => site.kind !== "remote").map(site => site.name));
+
+// Sources that need configuration (for example an API key) opt out until set.
+function activeSites() {
+  return SITES.filter(site => typeof site.enabled !== "function" || site.enabled());
+}
 const DEFAULT_MISSED_RUN_GRACE = 2;
 const DEFAULT_MAJOR_SOURCE_SIZE = 8;
 const DEFAULT_MAJOR_DROP_RATIO = 0.2;
 const DEFAULT_MAX_PAGES = 50;
+const DEFAULT_SOURCE_TIMEOUT_MINUTES = 15;
+// Jobs without a published deadline (most remote boards) would otherwise stay
+// listed forever. Retire them once they are this old.
+const MAX_AGE_WITHOUT_DEADLINE_DAYS = { remote: 30, default: 60 };
+const DAY_MS = 24 * 60 * 60 * 1000;
+// Remote boards list thousands of roles; publish the most reachable ones.
+const MAX_REMOTE_JOBS = 300;
+const REMOTE_SCOPE_RANK = { language: 0, afghanistan: 1, asia: 2, timezone: 3, worldwide: 4 };
 
 function arg(name, def = null) {
   const idx = process.argv.indexOf(name);
@@ -135,6 +167,7 @@ function writeRelevanceAudit(debugDir, siteName, records, now) {
 function annotateRelevance(record, now) {
   const job = normalizeJob(record, { now });
   job.relevance = assessJobRelevance(job);
+  job.skills = extractSkills(job);
   return job;
 }
 
@@ -143,7 +176,9 @@ function prepareRecords(records, options = {}) {
     .filter(Boolean)
     .flatMap(record => expandBundledJob(record, { now: options.now }))
     .map(record => annotateRelevance(record, options.now))
-    .filter(job => job.title && job.url && job.relevance.decision === "include");
+    .filter(job => job.title && job.url && job.relevance.decision === "include")
+    // Remote listings are only useful when someone in Afghanistan may apply.
+    .filter(job => job.work_mode !== "remote" || Boolean(job.remote_scope));
   if (options.skipDedupe) return normalized;
   return dedupeJobs(normalized).jobs.map(job => annotateRelevance(job, options.now));
 }
@@ -171,13 +206,27 @@ async function runSite(site, options) {
     + (detailFailures ? `; ${detailFailures} detail failures, ${coverage.fallbackCount || 0} title fallbacks` : "")
     + (listingFailures ? `; partial pagination (${coverage.listingFailureReason || "listing page failed"})` : "")
   );
-  return { name: site.name, rawCount, records: related, coverage, error: null };
+  return { name: site.name, kind: site.kind || "afghanistan", rawCount, records: related, coverage, error: null };
+}
+
+function withTimeout(promise, minutes, label) {
+  const limit = Number(minutes);
+  if (!Number.isFinite(limit) || limit <= 0) return promise;
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(
+      () => reject(new Error(`${label} did not finish within ${limit} minutes`)),
+      limit * 60 * 1000,
+    );
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
 }
 
 async function collectSiteResults(sites, options) {
   return Promise.all(sites.map(async site => {
     try {
-      const result = await runSite(site, options);
+      // One hung board must not hold every other source hostage.
+      const result = await withTimeout(runSite(site, options), options.sourceTimeoutMinutes, site.name);
       if (result.coverage.detailFailures || result.coverage.listingFailures) {
         writeSiteError(
           options.debugDir,
@@ -197,7 +246,7 @@ async function collectSiteResults(sites, options) {
       console.log(`[${site.name}] failed: ${error.message}`);
       clearRelevanceAudit(options.debugDir, site.name);
       writeSiteError(options.debugDir, site.name, error);
-      return { name: site.name, rawCount: 0, records: [], error };
+      return { name: site.name, kind: site.kind || "afghanistan", rawCount: 0, records: [], error };
     }
   }));
 }
@@ -253,12 +302,19 @@ function assertHealthyRun(results, health, existing, options = {}) {
   const freshCount = results.reduce((total, result) => total + result.records.length, 0);
   const rawCount = results.reduce((total, result) => total + result.rawCount, 0);
 
+  // A collapsed source keeps its last-known-good jobs (see reconcileLifecycle)
+  // while healthy sources publish normally. Only a run in which no source is
+  // trustworthy is refused outright.
   if (!succeeded.length && !(options.allowMajorDrop && majorDrops.length)) {
-    throw new Error("[health] All sources failed or returned an unsafe major drop; existing output was preserved");
-  }
-  if (majorDrops.length && !options.allowMajorDrop) {
     const detail = majorDrops.map(item => `${item.source} ${item.previous_count}->${item.current_count}`).join(", ");
-    throw new Error(`[health] Refusing major source drop (${detail}); existing output was preserved`);
+    throw new Error(
+      "[health] All sources failed"
+      + (detail ? ` or returned an unsafe major source drop (${detail})` : "")
+      + "; existing output was preserved"
+    );
+  }
+  for (const item of majorDrops) {
+    console.log(`[health] ${item.source}: keeping last-known-good jobs after a major drop (${item.reason})`);
   }
   if (freshCount === 0 && (existing.length > 0 || rawCount === 0)) {
     throw new Error("[health] No technical jobs were produced; existing output was preserved");
@@ -269,10 +325,19 @@ function lifecycleKeys(record) {
   return [canonicalUrl(record), referenceKey(record)].filter(Boolean).map(key => `${record.source}|${key}`);
 }
 
+function graceFor(source, options) {
+  const perSource = options.sourceGrace?.get?.(source);
+  const value = perSource ?? options.missedRunGrace ?? DEFAULT_MISSED_RUN_GRACE;
+  return Math.max(0, Number.parseInt(value, 10));
+}
+
 function reconcileLifecycle(existing, fresh, health, options = {}) {
   const now = normalizeTimestamp(options.now || new Date());
-  const grace = Math.max(0, Number.parseInt(options.missedRunGrace ?? DEFAULT_MISSED_RUN_GRACE, 10));
-  const statusBySource = new Map(health.map(item => [item.source, item.status]));
+  const statusBySource = new Map(health.map(item => {
+    // An explicitly accepted drop is treated as the source's new truth.
+    const status = item.status === "major_drop" && options.allowMajorDrop ? "healthy" : item.status;
+    return [item.source, status];
+  }));
   const seen = new Set(fresh.flatMap(lifecycleKeys));
   const combined = fresh.map(record => ({
     ...record,
@@ -292,7 +357,7 @@ function reconcileLifecycle(existing, fresh, health, options = {}) {
 
     if (sourceStatus === "healthy") {
       const missedRuns = (oldRecord.missed_runs || 0) + 1;
-      if (missedRuns > grace) continue;
+      if (missedRuns > graceFor(oldRecord.source, options)) continue;
       combined.push({
         ...oldRecord,
         active: true,
@@ -302,7 +367,7 @@ function reconcileLifecycle(existing, fresh, health, options = {}) {
       continue;
     }
 
-    if (sourceStatus === "failed" || sourceStatus === "partial") {
+    if (sourceStatus === "failed" || sourceStatus === "partial" || sourceStatus === "major_drop") {
       combined.push({ ...oldRecord, active: true, lifecycle_status: "source_unavailable" });
       continue;
     }
@@ -314,9 +379,37 @@ function reconcileLifecycle(existing, fresh, health, options = {}) {
   return combined;
 }
 
+function ageInDays(job, now) {
+  const reference = job.post_date ? `${job.post_date}T00:00:00Z` : job.first_seen_at;
+  const started = Date.parse(reference || "");
+  if (Number.isNaN(started)) return 0;
+  return (Date.parse(normalizeTimestamp(now || new Date())) - started) / DAY_MS;
+}
+
 function filterOpenJobs(jobs, now) {
   const today = todayKabulISO(now);
-  return jobs.filter(job => !job.closing_date || job.closing_date >= today);
+  return jobs.filter(job => {
+    if (job.closing_date) return job.closing_date >= today;
+    const limit = job.work_mode === "remote"
+      ? MAX_AGE_WITHOUT_DEADLINE_DAYS.remote
+      : MAX_AGE_WITHOUT_DEADLINE_DAYS.default;
+    return ageInDays(job, now) <= limit;
+  });
+}
+
+function limitRemoteJobs(jobs, limit = MAX_REMOTE_JOBS) {
+  const remote = jobs.filter(job => job.work_mode === "remote" && !SITE_KINDS_LOCAL.has(job.source));
+  if (remote.length <= limit) return jobs;
+  const keep = new Set(remote
+    .slice()
+    .sort((a, b) => (
+      (REMOTE_SCOPE_RANK[a.remote_scope] ?? 9) - (REMOTE_SCOPE_RANK[b.remote_scope] ?? 9)
+      || (b.post_date || b.first_seen_at || "").localeCompare(a.post_date || a.first_seen_at || "")
+      || (a.url || "").localeCompare(b.url || "")
+    ))
+    .slice(0, limit));
+  const capped = new Set(remote);
+  return jobs.filter(job => !capped.has(job) || keep.has(job));
 }
 
 function sortJobs(jobs) {
@@ -336,6 +429,7 @@ function reprocessJobs(records, options = {}) {
     .map(job => annotateRelevance(job, options.now))
     .filter(job => job.active !== false && job.relevance.decision === "include");
   if (options.onlyOpen) jobs = filterOpenJobs(jobs, options.now);
+  jobs = assignGroups(limitRemoteJobs(jobs, options.maxRemoteJobs));
   sortJobs(jobs);
   return { jobs, dedupe: deduped };
 }
@@ -390,6 +484,23 @@ function writeOutputsAtomic(outJson, outCsv, jobs) {
   }
 }
 
+function writeHealthReport(filePath, sourceHealth, results, now) {
+  if (!filePath) return;
+  const checkedAt = normalizeTimestamp(now || new Date());
+  const kindByName = new Map(results.map(result => [result.name, result.kind || "afghanistan"]));
+  const report = sourceHealth.map(item => ({
+    source: item.source,
+    kind: kindByName.get(item.source) || "afghanistan",
+    status: item.status,
+    checked_at: checkedAt,
+    listed: item.raw_count,
+    relevant: item.current_count,
+    reason: item.reason,
+  }));
+  ensureDir(filePath);
+  fs.writeFileSync(filePath, `${JSON.stringify(report, null, 2)}\n`, "utf-8");
+}
+
 async function scrapeAll(options = {}) {
   const outJson = options.outJson;
   const outCsv = options.outCsv;
@@ -408,7 +519,11 @@ async function scrapeAll(options = {}) {
   }
 
   const existingRelated = prepareRecords(existing, options);
-  const results = await collectSiteResults(options.sites || SITES, options);
+  const sites = options.sites || activeSites();
+  const sourceGrace = new Map(
+    sites.filter(site => Number.isFinite(site.missedRunGrace)).map(site => [site.name, site.missedRunGrace])
+  );
+  const results = await collectSiteResults(sites, options);
   const sourceHealth = evaluateSourceHealth(results, existingRelated, options);
   for (const item of sourceHealth) {
     console.log(`[health] ${item.source}: ${item.status} (${item.previous_count} -> ${item.current_count})${item.reason ? `: ${item.reason}` : ""}`);
@@ -416,10 +531,12 @@ async function scrapeAll(options = {}) {
   assertHealthyRun(results, sourceHealth, existingRelated, options);
 
   const fresh = results.flatMap(result => result.records);
-  const reconciled = reconcileLifecycle(existingRelated, fresh, sourceHealth, options);
+  const reconciled = reconcileLifecycle(existingRelated, fresh, sourceHealth, { ...options, sourceGrace });
   const processed = reprocessJobs(reconciled, options);
   validateOutput(processed.jobs, existing.length > 0);
   writeOutputsAtomic(outJson, outCsv, processed.jobs);
+
+  writeHealthReport(options.healthJson, sourceHealth, results, options.now);
 
   console.log(`[dedupe] removed ${processed.dedupe.removed} duplicates`);
   console.log(`[save] total ${processed.jobs.length} jobs saved`);
@@ -441,6 +558,11 @@ async function main() {
   const maxPages = Number.parseInt(arg("--max-pages", String(DEFAULT_MAX_PAGES)), 10);
   const concurrency = Number.parseInt(arg("--concurrency", "4"), 10);
   const jobsafRawUrl = arg("--raw-url");
+  const only = arg("--only");
+  const sites = only
+    ? SITES.filter(site => only.split(",").map(name => name.trim()).includes(site.name))
+    : activeSites();
+  if (!sites.length) throw new Error(`--only matched no sources (${only}); known: ${SITES.map(site => site.name).join(", ")}`);
 
   await scrapeAll({
     outJson,
@@ -449,6 +571,9 @@ async function main() {
     maxPages,
     concurrency,
     jobsafRawUrl,
+    sites,
+    healthJson: arg("--health-json", path.join(debugDir, "source-health.json")),
+    sourceTimeoutMinutes: Number.parseFloat(arg("--source-timeout-minutes", String(DEFAULT_SOURCE_TIMEOUT_MINUTES))),
     onlyOpen: !hasFlag("--include-expired"),
     reprocessOnly: hasFlag("--reprocess-only"),
     allowMajorDrop: hasFlag("--allow-major-drop"),
@@ -457,14 +582,22 @@ async function main() {
 }
 
 if (require.main === module) {
-  main().catch(error => {
-    console.error("[fatal]", error);
-    process.exit(1);
-  });
+  main()
+    .then(() => {
+      // A timed-out source can leave sockets open; the output is already
+      // written, so do not let them keep the process (and the job) alive.
+      setTimeout(() => process.exit(process.exitCode ?? 0), 2000).unref();
+    })
+    .catch(error => {
+      console.error("[fatal]", error);
+      process.exit(1);
+    });
 }
 
 module.exports = {
+  SITES,
   assertHealthyRun,
+  filterOpenJobs,
   clearSiteError,
   collectSiteResults,
   evaluateSourceHealth,

@@ -309,6 +309,25 @@ function normalizeRelevance(relevance) {
   };
 }
 
+const WORK_MODES = new Set(["remote", "hybrid", "onsite"]);
+const REMOTE_SCOPES = new Set(["worldwide", "afghanistan", "asia", "timezone", "language"]);
+const KNOWN_LANGUAGES = new Set(["Dari", "Pashto", "Persian"]);
+
+/** Explicit work mode, or one stated by an Afghan board's job type/location. */
+function detectWorkMode(input, details) {
+  const explicit = normSpace(input.work_mode).toLowerCase();
+  if (WORK_MODES.has(explicit)) return explicit;
+  const text = [
+    input.job_type,
+    input.location,
+    detailValue(details, /^(?:job|work|employment)\s*(?:type|mode|place|arrangement)$|^workplace$/i),
+  ].filter(Boolean).join(" ").toLowerCase();
+  if (/\bhybrid\b/.test(text)) return "hybrid";
+  if (/\b(?:remote|work\s+from\s+home|home[-\s]based|telecommut\w*)\b/.test(text)) return "remote";
+  if (/\b(?:on[-\s]?site|in[-\s]office|office[-\s]based)\b/.test(text)) return "onsite";
+  return null;
+}
+
 function normalizeJob(input, options = {}) {
   const now = normalizeTimestamp(options.now || new Date()) || new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
   const source = emptyToNull(input.source) || "unknown";
@@ -343,6 +362,18 @@ function normalizeJob(input, options = {}) {
   let lastSeenAt = normalizeTimestamp(input.last_seen_at, scrapedAt);
   if (firstSeenAt > lastSeenAt) [firstSeenAt, lastSeenAt] = [lastSeenAt, firstSeenAt];
 
+  const workMode = detectWorkMode(input, details);
+  const requestedScope = normSpace(input.remote_scope).toLowerCase();
+  // Remote-board adapters always state a scope (null means not open to
+  // Afghanistan). A remote role posted on an Afghan board is open locally.
+  const remoteScope = workMode !== "remote"
+    ? null
+    : REMOTE_SCOPES.has(requestedScope)
+      ? requestedScope
+      : input.remote_scope === undefined ? "afghanistan" : null;
+  const languages = unique(Array.isArray(input.languages) ? input.languages : [])
+    .filter(language => KNOWN_LANGUAGES.has(language));
+
   const extractedSubject = extractApplicationSubject(description, details, input.title);
   const applicationSubject = emptyToNull(input.application_subject) || extractedSubject.value;
   const requestedSubjectType = emptyToNull(input.application_subject_type);
@@ -364,6 +395,10 @@ function normalizeJob(input, options = {}) {
     closing_date_raw: closingRaw,
     category: emptyToNull(input.category),
     job_type: emptyToNull(input.job_type),
+    work_mode: workMode,
+    remote_scope: remoteScope,
+    remote_regions: workMode === "remote" ? emptyToNull(input.remote_regions) : null,
+    languages,
     gender: emptyToNull(input.gender),
     vacancies: input.vacancies === undefined || input.vacancies === "" ? null : input.vacancies,
     salary: emptyToNull(input.salary),
@@ -383,6 +418,8 @@ function normalizeJob(input, options = {}) {
     missed_runs: Math.max(0, Number.parseInt(input.missed_runs || 0, 10) || 0),
     relevance: normalizeRelevance(input.relevance),
     also_found_on: normalizeAlsoFound(input.also_found_on),
+    group_id: emptyToNull(input.group_id),
+    skills: unique(Array.isArray(input.skills) ? input.skills : []).slice(0, 8),
   };
 }
 

@@ -107,3 +107,22 @@ test('blocks a job-count drop beyond the configured baseline tolerance', () => {
   assert.equal(validateBaseline(current, baseline, 35).errors.length, 1)
   assert.equal(validateBaseline(current, baseline, 40).errors.length, 0)
 })
+
+test('requires remote jobs to state who may apply', () => {
+  const remote = validJob({ work_mode: 'remote', remote_scope: 'worldwide', languages: ['Dari'], skills: ['Python'] })
+  assert.deepEqual(validateJobs([remote], { today: '2026-08-05' }).errors, [])
+  assert.equal(validateJobs([remote], { today: '2026-08-05' }).metrics.remote, 1)
+
+  const unscoped = validJob({ work_mode: 'remote', remote_scope: null })
+  assert.match(validateJobs([unscoped], { today: '2026-08-05' }).errors.join('\n'), /remote jobs must state who may apply/)
+
+  const misplaced = validJob({ work_mode: 'onsite', remote_scope: 'worldwide' })
+  assert.match(validateJobs([misplaced], { today: '2026-08-05' }).errors.join('\n'), /must be null unless work_mode is remote/)
+})
+
+test('accepts optional per-source health in the summary', () => {
+  const summary = { ...validSummary(), source_health: [{ source: 'jobs.af', status: 'healthy' }] }
+  assert.deepEqual(validateSummary(summary, [validJob()]).errors, [])
+  const broken = { ...validSummary(), source_health: [{ status: 'healthy' }] }
+  assert.match(validateSummary(broken, [validJob()]).errors.join('\n'), /source_health\[0\]\.source/)
+})
