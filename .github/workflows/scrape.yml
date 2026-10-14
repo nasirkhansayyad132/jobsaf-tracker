@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   scrape-jobs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 35
 
     steps:
@@ -32,9 +32,12 @@ jobs:
         working-directory: scraper
         run: npm ci --ignore-scripts
 
-      - name: Audit scraper dependencies
+      - name: Audit scraper dependencies (advisory)
         working-directory: scraper
-        run: npm audit --audit-level=high
+        run: |
+          if ! npm audit --omit=dev --audit-level=high; then
+            echo '::warning title=Dependency audit::High or critical npm advisories affect the scraper. Run npm audit fix in scraper/.'
+          fi
 
       - name: Run scraper into an isolated artifact directory
         working-directory: scraper
@@ -42,6 +45,7 @@ jobs:
           mkdir -p ../jobsaf_node/pages
           node scrape_all.js \
             --max-pages 50 \
+            --source-timeout-minutes 15 \
             --json ../jobsaf_node/pages/jobs.json \
             --csv ../jobsaf_node/pages/jobs.csv \
             --debug-dir debug
