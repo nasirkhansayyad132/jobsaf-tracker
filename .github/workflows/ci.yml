@@ -15,7 +15,7 @@ concurrency:
 jobs:
   scraper:
     name: Scraper tests and data validation
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
 
     steps:
@@ -42,8 +42,14 @@ jobs:
       - name: Run validator unit tests
         run: node --test scripts/tests/*.test.mjs
 
+      # Judge committed data against the day it was generated. Otherwise every
+      # pull request opened a few days after the last refresh would fail on
+      # deadlines that passed since then, which the site already hides.
       - name: Validate committed public data
-        run: node scripts/validate-data.mjs docs/data/jobs.json docs/data/summary.json --min-jobs 10 --min-sources 3 --max-expired 0 --require-relevance
+        run: |
+          generated_on=$(node -p "require('./docs/data/summary.json').today")
+          node scripts/validate-data.mjs docs/data/jobs.json docs/data/summary.json \
+            --today "$generated_on" --min-jobs 10 --min-sources 3 --max-expired 0 --require-relevance
 
       - name: Audit scraper dependencies
         working-directory: scraper
@@ -51,7 +57,7 @@ jobs:
 
   frontend:
     name: Frontend lint and production artifact
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
 
     steps:
@@ -89,7 +95,7 @@ jobs:
 
   python:
     name: Python syntax
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
 
     steps:

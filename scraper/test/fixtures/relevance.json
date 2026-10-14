@@ -895,5 +895,41 @@
       "category": "Private Sector",
       "description": "Minimum master's degree in Cybersecurity or Information Security."
     }
+  },
+  {
+    "name": "live Dari photographer post in a mislabeled Computer Science category",
+    "expected": "exclude",
+    "job": {
+      "title": "آفیسر فوتو گرافر",
+      "company": "Da Afghanistan Bank",
+      "category": "Computer Science, Information Technology, Photography, Journalism",
+      "description": "پیشبرد امور عکاسی برای مجله بانک، سایت و شبکه های اجتماعی بانک. سیستم های تادیاتی. کمپیوتر",
+      "details": { "Education": "Computer Science" }
+    }
+  },
+  {
+    "name": "remote backend engineer title",
+    "expected": "include",
+    "job": { "title": "Senior Backend Engineer", "category": "Software Development", "company": "Example" }
+  },
+  {
+    "name": "remote recruiter for technical roles",
+    "expected": "exclude",
+    "job": {
+      "title": "Associate Talent Acquisition Partner, Tech",
+      "category": "All Other Remote",
+      "company": "Example",
+      "description": "Partner with engineering leaders to hire software engineers who write code in Python and Go."
+    }
+  },
+  {
+    "name": "analyst relations role listed in a DevOps feed",
+    "expected": "exclude",
+    "job": {
+      "title": "Analyst Relations Manager",
+      "category": "DevOps",
+      "company": "Example",
+      "description": "Brief industry analysts about our software for system administration teams."
+    }
   }
 ]

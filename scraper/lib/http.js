@@ -1,8 +1,13 @@
 const axios = require("axios");
+const pLimit = require("p-limit");
 
 const DEFAULT_TIMEOUT_MS = 25_000;
 const DEFAULT_ATTEMPTS = 3;
 const MAX_RETRY_DELAY_MS = 30_000;
+// All sources run at once. Bound the total number of requests in flight so a
+// slow connection is shared fairly instead of timing every source out.
+const GLOBAL_CONCURRENCY = 8;
+const globalLimit = pLimit(GLOBAL_CONCURRENCY);
 
 class HttpRequestError extends Error {
   constructor(message, options = {}) {
@@ -48,7 +53,7 @@ async function request(url, options = {}) {
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
-      const response = await axios.get(url, {
+      const response = await globalLimit(() => axios.get(url, {
         timeout,
         responseType: options.responseType,
         signal: options.signal,
@@ -58,7 +63,7 @@ async function request(url, options = {}) {
           ...(options.headers || {}),
         },
         validateStatus: () => true,
-      });
+      }));
 
       if (response.status >= 200 && response.status < 300) return response.data;
 

@@ -15,6 +15,14 @@ const SOURCE_PRIORITY = new Map([
   ["acbar", 1],
   ["kaarobar", 2],
   ["wazifaha", 3],
+  ["reliefweb", 4],
+  ["impactpool", 5],
+  ["weworkremotely", 6],
+  ["remotive", 7],
+  ["remoteok", 8],
+  ["himalayas", 9],
+  ["jobicy", 10],
+  ["workingnomads", 11],
 ]);
 
 function normalizeComparableText(value) {
@@ -353,6 +361,151 @@ function mergeDuplicate(a, b, options = {}) {
   return enforceApplicationInvariant(merged);
 }
 
+const COMPANY_NOISE = new Set([
+  "the", "inc", "llc", "ltd", "limited", "gmbh", "co", "company", "corp", "corporation", "plc", "pvt",
+  "private", "group", "sa", "bv", "ag", "organization", "organisation", "org",
+]);
+const TITLE_NOISE = new Set(["the", "a", "an", "of", "and", "for", "to", "in", "at", "with", "remote", "position", "title"]);
+
+/**
+ * Comparable spellings of an employer. "UNICEF - United Nations Children's
+ * Fund", "United Nations Children's Fund (UNICEF)" and "UNICEF" share a key.
+ */
+function companyKeys(value) {
+  const raw = normSpace(value);
+  if (!raw) return [];
+  const parts = [
+    raw,
+    ...raw.split(/\s+[-–—|]\s+/),
+    ...(raw.match(/\(([^)]+)\)/g) || []).map(part => part.slice(1, -1)),
+    raw.replace(/\([^)]*\)/g, " "),
+  ];
+  return unique(parts.map(part => normalizeComparableText(part)
+    .split(" ")
+    .filter(token => token && !COMPANY_NOISE.has(token))
+    .join(" ")).filter(key => key.length >= 2));
+}
+
+function titleTokens(value) {
+  return normalizeComparableText(value).split(" ").filter(token => token && !TITLE_NOISE.has(token));
+}
+
+function tokenSimilarity(left, right) {
+  const a = new Set(left);
+  const b = new Set(right);
+  if (!a.size || !b.size) return 0;
+  let shared = 0;
+  for (const token of a) if (b.has(token)) shared += 1;
+  return shared / (a.size + b.size - shared);
+}
+
+function editDistance(left, right, limit = 3) {
+  if (Math.abs(left.length - right.length) > limit) return limit + 1;
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= left.length; i += 1) {
+    const current = [i];
+    let rowMinimum = i;
+    for (let j = 1; j <= right.length; j += 1) {
+      const cost = left[i - 1] === right[j - 1] ? 0 : 1;
+      current[j] = Math.min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + cost);
+      rowMinimum = Math.min(rowMinimum, current[j]);
+    }
+    if (rowMinimum > limit) return limit + 1;
+    previous = current;
+  }
+  return previous[right.length];
+}
+
+/** Same role wording, allowing reordered words and small typos. */
+function similarTitles(left, right) {
+  const a = titleTokens(left);
+  const b = titleTokens(right);
+  if (!a.length || !b.length) return false;
+  if (tokenSimilarity(a, b) >= 0.85) return true;
+  const joinedA = a.join(" ");
+  const joinedB = b.join(" ");
+  return Math.min(joinedA.length, joinedB.length) >= 10 && editDistance(joinedA, joinedB, 2) <= 2;
+}
+
+function compatibleLocations(left, right) {
+  const a = normalizeLocation(left.location);
+  const b = normalizeLocation(right.location);
+  if (!a || !b || a === b) return true;
+  if (left.work_mode === "remote" && right.work_mode === "remote") return true;
+  return a.includes(b) || b.includes(a);
+}
+
+function compatibleDeadlines(left, right) {
+  if (!left.closing_date || !right.closing_date) return true;
+  const gap = Math.abs(Date.parse(left.closing_date) - Date.parse(right.closing_date));
+  return gap <= 10 * 24 * 60 * 60 * 1000;
+}
+
+/**
+ * Last pass for cross-posted vacancies whose employer or title spelling
+ * differs between boards. Only records from different sources merge: two
+ * listings on one board are separate postings unless an exact key matched.
+ */
+function fuzzyCrossSourceMerge(records) {
+  const output = [];
+  const byCompany = new Map();
+  let removed = 0;
+  for (const record of records) {
+    const keys = companyKeys(record.company);
+    const candidates = [...new Set(keys.flatMap(key => byCompany.get(key) || []))];
+    const matchIndex = candidates.find(index => {
+      const candidate = output[index];
+      const sources = new Set([candidate.source, ...(candidate.also_found_on || []).map(item => item.source)]);
+      return !sources.has(record.source)
+        && similarTitles(candidate.title, record.title)
+        && compatibleLocations(candidate, record)
+        && compatibleDeadlines(candidate, record)
+        && !(normalizedReference(candidate) && normalizedReference(record)
+          && normalizedReference(candidate) !== normalizedReference(record));
+    });
+    if (matchIndex !== undefined) {
+      output[matchIndex] = mergeDuplicate(output[matchIndex], record, { logicalMerge: true });
+      removed += 1;
+      continue;
+    }
+    const index = output.length;
+    output.push(record);
+    for (const key of keys) byCompany.set(key, [...(byCompany.get(key) || []), index]);
+  }
+  return { jobs: output, removed };
+}
+
+/**
+ * Give one shared group_id to postings of the same role at the same employer
+ * (province variants, re-posts, typo copies) so the site can show them as a
+ * single card. Records stay separate in the data: each has its own deadline,
+ * vacancies and application link.
+ */
+function assignGroups(jobs) {
+  const parent = jobs.map((_, index) => index);
+  const find = index => (parent[index] === index ? index : (parent[index] = find(parent[index])));
+  const byCompany = new Map();
+  jobs.forEach((job, index) => {
+    for (const key of companyKeys(job.company).slice(0, 1)) {
+      for (const other of byCompany.get(key) || []) {
+        if (similarTitles(jobs[other].title, job.title)) parent[find(index)] = find(other);
+      }
+      byCompany.set(key, [...(byCompany.get(key) || []), index]);
+    }
+  });
+  const members = new Map();
+  jobs.forEach((job, index) => {
+    const root = find(index);
+    members.set(root, [...(members.get(root) || []), job]);
+  });
+  return jobs.map((job, index) => {
+    const group = members.get(find(index));
+    if (group.length < 2) return job.group_id ? { ...job, group_id: null } : job;
+    const anchor = group.map(member => `${member.source}|${canonicalUrl(member)}`).sort()[0];
+    return { ...job, group_id: makeId("group", anchor) };
+  });
+}
+
 function dedupeJobs(records) {
   const byUrl = new Map();
   let exactRemoved = 0;
@@ -437,19 +590,24 @@ function dedupeJobs(records) {
     if (fpKey) fingerprintIndexes.set(fpKey, index);
   }
 
+  const fuzzy = fuzzyCrossSourceMerge(output);
+
   return {
-    jobs: output,
-    removed: exactRemoved + referenceRemoved + roleRemoved + fingerprintRemoved,
+    jobs: fuzzy.jobs,
+    removed: exactRemoved + referenceRemoved + roleRemoved + fingerprintRemoved + fuzzy.removed,
     exactRemoved,
     referenceRemoved,
     roleRemoved,
     fingerprintRemoved,
+    fuzzyRemoved: fuzzy.removed,
   };
 }
 
 module.exports = {
   SOURCE_PRIORITY,
+  assignGroups,
   canonicalUrl,
+  companyKeys,
   compareCanonicalRecords,
   dedupeJobs,
   enforceApplicationInvariant,
@@ -463,5 +621,6 @@ module.exports = {
   referenceKey,
   resolveApplicationMethod,
   roleKey,
+  similarTitles,
   stableLogicalId,
 };

@@ -1,7 +1,8 @@
 # Afghanistan Tech Jobs
 
 A public, multi-source tracker for software, IT, data, networking, cybersecurity,
-telecom, and computer-science opportunities in Afghanistan.
+telecom, and computer-science opportunities in Afghanistan, plus remote
+technology roles that people living in Afghanistan can apply for.
 
 The project combines a deterministic Node.js scraper, a validated JSON feed,
 an accessible React PWA, optional email digests, and GitHub Actions automation.
@@ -9,13 +10,14 @@ an accessible React PWA, optional email digests, and GitHub Actions automation.
 ## How it works
 
 ```text
-Jobs.af · ACBAR · Kaarobar · Wazifaha
+Afghanistan: Jobs.af · ACBAR · Kaarobar · Wazifaha · Impactpool · ReliefWeb*
+Remote:      Himalayas · We Work Remotely · Remote OK · Remotive · Jobicy · Working Nomads
                   │
                   ▼
-     fetch → enrich → normalize → score relevance
+     fetch → enrich → normalize → score relevance → remote eligibility
                   │
                   ▼
-       deduplicate → reconcile lifecycle → validate
+   deduplicate (exact + fuzzy) → group variants → reconcile lifecycle → validate
                   │
                   ▼
         docs/data/jobs.json + summary.json
@@ -24,6 +26,8 @@ Jobs.af · ACBAR · Kaarobar · Wazifaha
           React PWA  email digest
 ```
 
+\* ReliefWeb runs once a free API appname is configured (see below).
+
 The production site is intentionally public. GitHub Pages and the published
 JSON feed are public, so a client-side password cannot provide private access.
 A genuinely private deployment would require an authenticated backend and a
@@ -31,8 +35,16 @@ private data store.
 
 ## What the tracker does well
 
-- Collects full job details from four job boards instead of trusting list-page
-  titles alone.
+- Collects full job details from six Afghan job boards and UN/NGO portals and
+  six remote boards instead of trusting list-page titles alone.
+- Publishes remote roles only when someone in Afghanistan can apply, and
+  highlights roles that ask for Dari or Pashto.
+- Merges the same vacancy across boards even when the employer or title is
+  spelled differently, and shows per-province copies of one posting as a
+  single card.
+- Keeps working when sources fail: each source has a time limit, a collapsed
+  source keeps its last good jobs, a dependency advisory never stops the
+  daily refresh, and a broken run opens a GitHub issue automatically.
 - Uses timeout-aware, status-aware retries with exponential backoff, jitter,
   and `Retry-After` support.
 - Scores relevance from title, category, functional area, technical duties,
@@ -88,6 +100,25 @@ Each published job has:
   "reasons": ["title: “software developer” (+80)"]
 }
 ```
+
+## Remote jobs
+
+Remote boards list thousands of roles, most limited to a few countries. A
+remote role is published only when it passes the same technical relevance
+rules as local jobs and the listing is open to Afghanistan:
+
+| Eligibility | Meaning |
+| --- | --- |
+| Open worldwide | “Worldwide”, “Anywhere”, “Global”, or an exclusion list that does not include Afghanistan |
+| Open to Afghanistan | The listing names Afghanistan or an Afghan city |
+| Open in Asia | Asia, South/Central Asia, or the Middle East (APAC and EMEA are not assumed to include Afghanistan) |
+| Time zones include Afghanistan | A stated UTC window covers Kabul (UTC+4:30) |
+| Needs Dari/Pashto | No location limit, and the listing asks for Dari, Pashto, or Persian |
+
+A title such as “Backend Developer – Remote from EU” overrides a board's
+worldwide label. At most 300 remote roles are published, ordered by
+eligibility (Afghan-language and Afghanistan first) and then recency; roles
+without a deadline retire after 30 days.
 
 ## Recent jobs
 
@@ -147,6 +178,7 @@ instead of inventing a subject that could cause rejection.
 │   └── ...                     generated fallback Pages shell
 ├── scripts/
 │   ├── build-pages.mjs         validated Pages artifact builder
+│   ├── split-feed.mjs          fast list index + per-job detail files
 │   ├── sync-docs-snapshot.mjs  data-preserving fallback-shell updater
 │   ├── validate-data.mjs       schema and quality gates
 │   └── notify_email.py         optional private-recipient email digest
@@ -257,11 +289,26 @@ The daily workflow is scheduled for 04:30 UTC (09:00 Kabul). GitHub controls the
 actual start time, so the schedule is a target rather than a real-time promise.
 
 The scrape job has read-only repository access. Only a separate publish job can
-write the three validated publication files, and it aborts if `main` advanced
-after the scrape began. The same workflow then calls the Pages workflow with
-the exact validated artifact, so deployment does not depend on a bot commit
-triggering a second workflow. Notification failure is visible without undoing
-already validated data publication.
+write the three validated publication files. If code reached `main` during the
+scrape, the data is still published on top of it; if newer *data* reached
+`main`, the older artifact is refused. The same workflow then calls the Pages
+workflow with the exact validated artifact and the newest site code, so
+deployment does not depend on a bot commit triggering a second workflow.
+Notification failure is visible without undoing already validated data
+publication.
+
+Reliability safeguards:
+
+- `npm audit` is advisory in scheduled runs and blocking in CI, and Dependabot
+  opens weekly dependency updates, so a newly published advisory cannot freeze
+  the data again.
+- A failing run opens a **“Daily job refresh is failing”** issue (GitHub
+  notifies the repository owner); the next healthy run closes it.
+- Each source must finish within 15 minutes, all sources share a bounded
+  number of concurrent requests, and a source whose count collapses keeps its
+  last good jobs while the others publish.
+- The site warns visitors when the data is more than 36 hours old and lists
+  every source's status from the last refresh.
 
 Optional repository secrets:
 
@@ -275,6 +322,12 @@ Optional repository secrets:
 
 Multiple recipients are sent through an undisclosed-recipient header so the
 subscriber list is not exposed to other recipients.
+
+Optional ReliefWeb source: ReliefWeb only serves its API to registered
+applications. Request a free appname at
+<https://apidoc.reliefweb.int/parameters#appname> and save it as the
+repository variable (or secret) `RELIEFWEB_APPNAME`; the source is skipped
+until then.
 
 ## Data contract
 
@@ -309,11 +362,26 @@ The complete feed is an array of normalized job objects. Important fields are:
     "decision": "include",
     "reasons": ["title: “software engineer” (+80)"]
   },
-  "also_found_on": []
+  "also_found_on": [],
+  "work_mode": "remote",
+  "remote_scope": "worldwide",
+  "remote_regions": "Anywhere in the World",
+  "languages": ["Dari"],
+  "skills": ["Python", "PostgreSQL"],
+  "group_id": null
 }
 ```
 
-`summary.json` contains counts, source freshness, and job IDs only. Email
+`work_mode` is `remote`, `hybrid`, `onsite`, or `null`; every remote job states
+who may apply in `remote_scope`. Postings that share a `group_id` are copies of
+one role (for example one per province) and are shown as a single card.
+
+The Pages build also derives `data/jobs-index.json` (every job without its
+description, loaded first) and `data/jobs/<id>.json` (one full job, loaded when
+opened), so the list renders from a small download on slow connections.
+
+`summary.json` contains counts, source freshness, per-source health from the
+last run, and job IDs only. Email
 rendering hydrates those IDs from `jobs.json` in memory, avoiding a second copy
 of every public job description and contact in the repository.
 

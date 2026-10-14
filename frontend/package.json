@@ -11,7 +11,7 @@
     "check": "npm run lint && npm test && npm run build:pages",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "node --test src/lib/jobs.test.js src/components/description.test.js"
+    "test": "node --test src/lib/jobs.test.js src/lib/views.test.js src/components/description.test.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

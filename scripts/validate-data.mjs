@@ -8,6 +8,8 @@ const DATE_ONLY = /^\d{4}-\d{2}-\d{2}$/
 const HTTP_PROTOCOLS = new Set(['http:', 'https:'])
 const APPLICATION_METHODS = new Set(['email', 'web', 'phone', 'unknown'])
 const SUBJECT_TYPES = new Set(['exact', 'reference', 'title_template'])
+const WORK_MODES = new Set(['remote', 'hybrid', 'onsite'])
+const REMOTE_SCOPES = new Set(['worldwide', 'afghanistan', 'asia', 'timezone', 'language'])
 const SUMMARY_ID_LISTS = [
   ['new_job_ids', 'new_count'],
   ['expiring_today_ids', 'expiring_today_count'],
@@ -113,6 +115,7 @@ export function validateJobs(jobs, options = {}) {
   const sources = new Map()
   let expiredCount = 0
   let relevanceCount = 0
+  let remoteCount = 0
 
   if (!Array.isArray(jobs)) {
     return {
@@ -235,6 +238,25 @@ export function validateJobs(jobs, options = {}) {
       }
     }
 
+    if (job.work_mode != null && !WORK_MODES.has(job.work_mode)) {
+      push(errors, `${location}.work_mode`, 'must be remote, hybrid, onsite, or null')
+    }
+    if (job.work_mode === 'remote') {
+      // Only roles someone in Afghanistan can apply for are published.
+      if (!REMOTE_SCOPES.has(job.remote_scope)) {
+        push(errors, `${location}.remote_scope`, 'remote jobs must state who may apply')
+      }
+      remoteCount += 1
+    } else if (job.remote_scope != null) {
+      push(errors, `${location}.remote_scope`, 'must be null unless work_mode is remote')
+    }
+    for (const listField of ['languages', 'skills']) {
+      if (job[listField] != null) validateStringArray(errors, job[listField], `${location}.${listField}`)
+    }
+    if (job.group_id != null && !isNonEmptyString(job.group_id)) {
+      push(errors, `${location}.group_id`, 'must be a non-empty string or null')
+    }
+
     if (job.relevance == null) {
       if (requireRelevance) push(errors, `${location}.relevance`, 'is required')
     } else {
@@ -260,6 +282,7 @@ export function validateJobs(jobs, options = {}) {
       total: jobs.length,
       sources: Object.fromEntries([...sources.entries()].sort(([a], [b]) => a.localeCompare(b))),
       expired: expiredCount,
+      remote: remoteCount,
       relevanceCoverage: jobs.length === 0 ? 0 : relevanceCount / jobs.length,
     },
   }
@@ -336,6 +359,21 @@ export function validateSummary(summary, jobs) {
     })
     if (reportedTotal !== jobs.length) push(errors, 'summary.sources', `counts total ${reportedTotal}; expected ${jobs.length}`)
     if (seenSources.size !== sourceCounts.size) push(errors, 'summary.sources', 'does not contain every jobs source')
+  }
+
+  if (summary.source_health != null) {
+    if (!Array.isArray(summary.source_health)) {
+      push(errors, 'summary.source_health', 'must be an array when present')
+    } else {
+      summary.source_health.forEach((item, index) => {
+        const location = `summary.source_health[${index}]`
+        if (!isObject(item)) push(errors, location, 'must be an object')
+        else {
+          if (!isNonEmptyString(item.source)) push(errors, `${location}.source`, 'must be a non-empty string')
+          if (!isNonEmptyString(item.status)) push(errors, `${location}.status`, 'must be a non-empty string')
+        }
+      })
+    }
   }
 
   if (summary.source_count !== sourceCounts.size) {
