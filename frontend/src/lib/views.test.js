@@ -110,3 +110,10 @@ test('a grouped card uses the spelling most of its copies share', () => {
     assert.equal(group.title, 'Agency Banking Support Staff');
     assert.equal(group.variants.length, 3);
 });
+
+test('listings warn only after going unseen for two days or more', async () => {
+    const { getUnconfirmedDays } = await import('./jobs.js');
+    assert.equal(getUnconfirmedDays(job('a', { last_seen_at: '2026-10-14T04:30:00Z' }), now), null);
+    assert.equal(getUnconfirmedDays(job('a', { last_seen_at: '2026-10-13T04:30:00Z' }), now), null);
+    assert.equal(getUnconfirmedDays(job('a', { last_seen_at: '2026-10-10T04:30:00Z' }), now), 4);
+});

@@ -30,7 +30,7 @@ import {
     isNewSince,
     isRecentJob,
     isRemoteJob,
-    needsFreshnessCheck,
+    getUnconfirmedDays,
 } from '../lib/jobs';
 
 function cleanMetadataValue(value) {
@@ -78,7 +78,7 @@ function JobCardComponent({ job, onSelect, onToggleSaved, saved = false, newSinc
     const deadline = getDeadlineInfo(job, now);
     const fresh = variants.some(item => isNewSince(item, newSince));
     const recent = variants.some(item => isRecentJob(item, now));
-    const recheck = needsFreshnessCheck(job, now);
+    const unconfirmedDays = getUnconfirmedDays(job, now);
     const languages = getLanguages(job);
     const skills = getSkills(job).slice(0, 4);
     const salary = getSalaryText(job);
@@ -134,7 +134,7 @@ function JobCardComponent({ job, onSelect, onToggleSaved, saved = false, newSinc
                 {fresh && <Chip tone="violet">New</Chip>}
                 {deadline?.urgent && <Chip tone="amber" icon={Clock3}>{deadline.label}</Chip>}
                 {!fresh && recent && !deadline?.urgent && <Chip tone="green">Recent</Chip>}
-                {recheck && <Chip tone="amber-outline">Recheck listing</Chip>}
+                {unconfirmedDays && <Chip tone="amber-outline">Not seen for {unconfirmedDays} days</Chip>}
                 {languages.length > 0 && <Chip tone="amber" icon={Languages}>{languages.join(' · ')}</Chip>}
                 {jobType && <Chip><span className="capitalize">{jobType}</span></Chip>}
                 {openings && <Chip icon={UsersRound}>{openings}</Chip>}

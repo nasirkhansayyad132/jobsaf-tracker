@@ -24,7 +24,6 @@ import {
     formatSource,
     formatVacancyCount,
     getApplicationInfo,
-    getCategoryFacet,
     getClosingDate,
     getDeadlineInfo,
     getGroupVacancyCount,
@@ -35,13 +34,12 @@ import {
     getLastSeenDate,
     getPostDate,
     getPostDateLabel,
-    getReadableMatchReasons,
     getRemoteEligibility,
     getSalaryText,
     getSkills,
     getVacancyCount,
     isRemoteJob,
-    needsFreshnessCheck,
+    getUnconfirmedDays,
 } from '../lib/jobs';
 
 const DETAIL_PRIORITY = [
@@ -156,16 +154,10 @@ function buildDetailEntries(job) {
 
 function applicationMessage(application) {
     if (application.instructions) return application.instructions;
-    if (application.applicationUrl && application.emails.length) {
-        return 'This listing provides both an online form and email contacts. Review the original instructions before choosing a method.';
-    }
-    if (application.applicationUrl) {
-        return 'Apply through the linked form. Review the original listing first for required documents and eligibility.';
-    }
-    if (application.emails.length) {
-        return 'The listing accepts applications by email. Review the description and original listing for required documents.';
-    }
-    return 'No direct application method was captured. Use the original listing to confirm how to apply.';
+    if (application.applicationUrl && application.emails.length) return 'Apply online or by email.';
+    if (application.applicationUrl) return 'Apply using the online form.';
+    if (application.emails.length) return 'Apply by email.';
+    return 'Check the original listing for how to apply.';
 }
 
 const PLAINTEXT_DIRECTION = { unicodeBidi: 'plaintext' };
@@ -272,15 +264,13 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
     const details = useMemo(() => buildDetailEntries(job), [job]);
     const reference = getJobReference(job);
     const sourceCategory = getJobCategory(job);
-    const technologyCategory = getCategoryFacet(job);
     const salary = getSalaryText(job);
     const jobType = getJobTypeText(job);
     const postDate = getPostDate(job);
     const closingDate = getClosingDate(job);
     const deadline = getDeadlineInfo(job);
-    const matchReasons = getReadableMatchReasons(job);
     const lastSeenDate = getLastSeenDate(job);
-    const recheck = needsFreshnessCheck(job);
+    const unconfirmedDays = getUnconfirmedDays(job);
     const remote = isRemoteJob(job);
     const eligibility = getRemoteEligibility(job);
     const languages = getLanguages(job);
@@ -408,7 +398,7 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
                 <header className="app-header sticky top-0 z-10 flex items-center justify-between gap-2 px-4 py-2.5 sm:px-6">
                     <span className="truncate text-xs font-medium tone-muted">
                         {formatSource(job.source)}
-                        {reference ? ` · Ref ${reference}` : ''}
+                        {/[\p{L}\p{N}]/u.test(reference || '') ? ` · Ref ${reference}` : ''}
                     </span>
                     <div className="flex shrink-0 items-center gap-1">
                         {onToggleSaved && (
@@ -487,25 +477,19 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
                         </Fact>
                         <Fact label="Openings">{openings}</Fact>
                         <Fact label="Salary">{salary || 'Not disclosed'}</Fact>
-                        <Fact label="Area">{technologyCategory}</Fact>
                     </dl>
 
-                    {recheck && lastSeenDate && (
+                    {unconfirmedDays && (
                         <p className="status-banner status-banner-warning text-sm">
-                            Last confirmed on the source {formatJobDate(lastSeenDate)}. Check the original listing before applying.
+                            Not seen on the source for {unconfirmedDays} days. It may have closed early, so check the original listing.
                         </p>
                     )}
 
-                    {remote && (
-                        <div className="rounded-2xl border border-teal-400/25 light:border-teal-200 bg-teal-500/[0.08] light:bg-teal-50 p-4 text-sm">
-                            <p className="flex items-center gap-2 font-semibold text-teal-200 light:text-teal-900">
-                                <Globe2 className="h-4 w-4" aria-hidden="true" /> {eligibility}
-                            </p>
-                            {job.remote_regions && (
-                                <p dir="auto" className="mt-1 tone-muted">The listing says: {job.remote_regions}</p>
-                            )}
-                            <p className="mt-1 tone-muted">Remote employers can still limit hiring by country. Confirm eligibility before applying.</p>
-                        </div>
+                    {remote && job.remote_regions && (
+                        <p dir="auto" className="flex items-start gap-2 text-sm tone-muted">
+                            <Globe2 className="mt-0.5 h-4 w-4 shrink-0 text-teal-400 light:text-teal-700" aria-hidden="true" />
+                            <span>Location requirement in the listing: {job.remote_regions}</span>
+                        </p>
                     )}
 
                     {variants.length > 1 && (
@@ -546,20 +530,13 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
                         </Section>
                     )}
 
-                    {(skills.length > 0 || matchReasons.length > 0) && (
-                        <Section id="skills-heading" title="Skills and focus">
-                            {skills.length > 0 && (
-                                <ul className="flex flex-wrap gap-2" aria-label="Skills mentioned">
-                                    {skills.map(name => (
-                                        <li key={name} className="skill-chip px-2.5 py-1 text-xs">{name}</li>
-                                    ))}
-                                </ul>
-                            )}
-                            {matchReasons.length > 0 && (
-                                <p className="mt-3 text-xs leading-5 tone-faint">
-                                    Listed here because {matchReasons.join('; ')}.
-                                </p>
-                            )}
+                    {skills.length > 0 && (
+                        <Section id="skills-heading" title="Skills">
+                            <ul className="flex flex-wrap gap-2" aria-label="Skills mentioned">
+                                {skills.map(name => (
+                                    <li key={name} className="skill-chip px-2.5 py-1 text-xs">{name}</li>
+                                ))}
+                            </ul>
                         </Section>
                     )}
 
@@ -582,11 +559,7 @@ export function JobDetails({ job, onClose, onSelectVariant, onToggleSaved, saved
                                     </button>
                                 </div>
                             </div>
-                        ) : application.emails.length > 0 && (
-                            <p className="mt-3 rounded-lg border border-amber-400/25 light:border-amber-200 bg-amber-500/10 light:bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-100 light:text-amber-900">
-                                No exact email subject was captured. Check the listing for the subject it requires.
-                            </p>
-                        )}
+                        ) : null}
 
                         {application.emails.length > 0 && (
                             <div className="mt-4 grid gap-2">

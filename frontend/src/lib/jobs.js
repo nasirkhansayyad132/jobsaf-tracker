@@ -547,6 +547,17 @@ export function needsFreshnessCheck(job, now = getAfghanistanToday(), maxAgeDays
     return lastSeen ? calendarDayNumber(now) - calendarDayNumber(lastSeen) > maxAgeDays : true;
 }
 
+/**
+ * Days since the tracker last saw this listing on its source, when that is
+ * long enough to be worth a warning (two days or more); otherwise null.
+ */
+export function getUnconfirmedDays(job, now = getAfghanistanToday()) {
+    const lastSeen = getLastSeenDate(job);
+    if (!lastSeen) return null;
+    const days = calendarDayNumber(now) - calendarDayNumber(lastSeen);
+    return days >= 2 ? days : null;
+}
+
 function compareDates(left, right, direction = 1) {
     if (!left && !right) return 0;
     if (!left) return 1;
