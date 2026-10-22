@@ -1,45 +1,45 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-21T09:42:59.726Z",
-  "today": "2026-10-21",
-  "total_jobs": 346,
+  "generated_at": "2026-10-22T09:45:52.493Z",
+  "today": "2026-10-22",
+  "total_jobs": 355,
   "source_count": 8,
   "sources": [
     {
       "name": "acbar",
-      "count": 17,
-      "oldest_seen_at": "2026-10-21T09:42:32Z",
-      "latest_seen_at": "2026-10-21T09:42:32Z"
+      "count": 24,
+      "oldest_seen_at": "2026-10-22T09:45:32Z",
+      "latest_seen_at": "2026-10-22T09:45:32Z"
     },
     {
       "name": "himalayas",
-      "count": 229,
+      "count": 225,
       "oldest_seen_at": "2026-10-14T19:52:02Z",
-      "latest_seen_at": "2026-10-21T09:42:32Z"
+      "latest_seen_at": "2026-10-22T09:45:32Z"
     },
     {
       "name": "impactpool",
       "count": 11,
       "oldest_seen_at": "2026-10-20T09:46:17Z",
-      "latest_seen_at": "2026-10-21T09:42:32Z"
+      "latest_seen_at": "2026-10-22T09:45:32Z"
     },
     {
       "name": "jobicy",
-      "count": 21,
+      "count": 22,
       "oldest_seen_at": "2026-10-15T09:28:52Z",
-      "latest_seen_at": "2026-10-21T09:42:32Z"
+      "latest_seen_at": "2026-10-22T09:45:32Z"
     },
     {
       "name": "jobs.af",
-      "count": 17,
-      "oldest_seen_at": "2026-10-21T09:42:32Z",
-      "latest_seen_at": "2026-10-21T09:42:32Z"
+      "count": 19,
+      "oldest_seen_at": "2026-10-22T09:45:32Z",
+      "latest_seen_at": "2026-10-22T09:45:32Z"
     },
     {
       "name": "remotive",
       "count": 1,
-      "oldest_seen_at": "2026-10-21T09:42:32Z",
-      "latest_seen_at": "2026-10-21T09:42:32Z"
+      "oldest_seen_at": "2026-10-22T09:45:32Z",
+      "latest_seen_at": "2026-10-22T09:45:32Z"
     },
     {
       "name": "wazifaha",
@@ -49,14 +49,14 @@
     },
     {
       "name": "weworkremotely",
-      "count": 49,
+      "count": 52,
       "oldest_seen_at": "2026-10-14T19:52:02Z",
-      "latest_seen_at": "2026-10-21T09:42:32Z"
+      "latest_seen_at": "2026-10-22T09:45:32Z"
     }
   ],
-  "new_count": 15,
-  "expiring_today_count": 1,
-  "expiring_soon_count": 9,
+  "new_count": 32,
+  "expiring_today_count": 3,
+  "expiring_soon_count": 8,
   "tech_banking_count": 2,
   "remote_count": 300,
   "source_health": [
@@ -64,26 +64,26 @@
       "source": "jobs.af",
       "kind": "afghanistan",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 179,
-      "relevant": 17,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 195,
+      "relevant": 19,
       "reason": null
     },
     {
       "source": "acbar",
       "kind": "afghanistan",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 287,
-      "relevant": 18,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 333,
+      "relevant": 25,
       "reason": null
     },
     {
       "source": "kaarobar",
       "kind": "afghanistan",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 278,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 267,
       "relevant": 18,
       "reason": null
     },
@@ -91,7 +91,7 @@
       "source": "wazifaha",
       "kind": "afghanistan",
       "status": "failed",
-      "checked_at": "2026-10-21T09:42:49Z",
+      "checked_at": "2026-10-22T09:45:50Z",
       "listed": 0,
       "relevant": 0,
       "reason": "wazifaha did not finish within 15 minutes"
@@ -100,8 +100,8 @@
       "source": "impactpool",
       "kind": "afghanistan",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 38,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 40,
       "relevant": 10,
       "reason": null
     },
@@ -109,16 +109,16 @@
       "source": "himalayas",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 603,
-      "relevant": 370,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 598,
+      "relevant": 377,
       "reason": null
     },
     {
       "source": "remoteok",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
+      "checked_at": "2026-10-22T09:45:50Z",
       "listed": 99,
       "relevant": 0,
       "reason": null
@@ -127,7 +127,7 @@
       "source": "remotive",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
+      "checked_at": "2026-10-22T09:45:50Z",
       "listed": 10,
       "relevant": 2,
       "reason": null
@@ -136,17 +136,17 @@
       "source": "weworkremotely",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 169,
-      "relevant": 74,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 173,
+      "relevant": 76,
       "reason": null
     },
     {
       "source": "jobicy",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 142,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 141,
       "relevant": 22,
       "reason": null
     },
@@ -154,42 +154,60 @@
       "source": "workingnomads",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-10-21T09:42:49Z",
-      "listed": 44,
+      "checked_at": "2026-10-22T09:45:50Z",
+      "listed": 43,
       "relevant": 0,
       "reason": null
     }
   ],
   "new_job_ids": [
-    "2d99fcac3af007ab",
-    "54c5f03a80a9a816",
-    "9cc94b0cc6211b44",
-    "89e3fe846b9cdd49",
-    "80aa874d6a290647",
-    "7ff08e816fabacd7",
-    "214e2c90a3d4e57f",
-    "4a1640f15285b90a",
-    "19c1190f39b53472",
-    "69daf9bab58d3b39",
-    "1890fabb624b2c61",
-    "84cbd5f9d0163981",
-    "2bc3cf1dc0e78cb5",
-    "969323a8d4882891",
-    "d7daa0b29d657d93"
+    "14063b1c541febae",
+    "84ecd4a797692202",
+    "bdc28c98b0dbe601",
+    "37ad78ba9e4e9c8c",
+    "d56819c6a951baeb",
+    "b99e37670916e710",
+    "c79c75f1d000523c",
+    "88abdb9933af841a",
+    "3c99d4f937e89dd0",
+    "4c1505e73ff91c97",
+    "540cb84846edb25a",
+    "385d633bdb011d5d",
+    "5a362b8adb5f516b",
+    "d5a9d5083cdd4dc5",
+    "ee1b74993e437b1d",
+    "377e737f0ed62a32",
+    "d4678a54d574e3ef",
+    "44f5e0d859773b10",
+    "4c4ea513b38f380b",
+    "ef466fed3bef4dbb",
+    "6ada7841bef7830f",
+    "3969d2ee5872738a",
+    "901b93e154cdb22c",
+    "d09f11a40fc3b307",
+    "f5f2ef28f5330c4a",
+    "b133bc553591372d",
+    "05504fbe17f41d56",
+    "ece8afde3767c740",
+    "bc66918e80276f17",
+    "07beb43fa43b7e61",
+    "fc25c52d7a41cee4",
+    "2ea0919a832fc147"
   ],
   "expiring_today_ids": [
-    "1368a549226720d5"
-  ],
-  "expiring_soon_ids": [
     "2d99fcac3af007ab",
     "dcb19dea10d11172",
-    "a934d9384f14a4fd",
+    "a934d9384f14a4fd"
+  ],
+  "expiring_soon_ids": [
     "991403a392002f93",
     "f9361c28cb808f2d",
     "2aa739f340edac8f",
     "937fd301e255a75e",
     "638acff2e4d4ae80",
-    "d832ff644de26772"
+    "d832ff644de26772",
+    "3868762706fea1ec",
+    "5259ba402add04d2"
   ],
   "tech_banking_job_ids": [
     "991403a392002f93",
