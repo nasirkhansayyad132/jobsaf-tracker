@@ -297,6 +297,10 @@ def send_email(subject: str, html_body: str) -> bool:
         print("[notify] Email sent successfully!")
         return True
         
+    except (smtplib.SMTPAuthenticationError, smtplib.SMTPServerDisconnected) as e:
+        print(f"[notify] ERROR: the SMTP server rejected the login ({e}).")
+        print("[notify] For Gmail, create a new App Password and update the SMTP_PASS secret.")
+        return False
     except Exception as e:
         print(f"[notify] ERROR sending email: {e}")
         return False
