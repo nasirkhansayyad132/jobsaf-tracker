@@ -154,39 +154,50 @@ function App() {
   const [vacancy, setVacancy] = useState('all');
   const [sort, setSort] = useState('default');
   const [showRefinements, setShowRefinements] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  // How many cards are shown. Stored with the list it belongs to, so any
+  // change of tab, search, filter or sort starts again at the first page.
+  const listKey = [view, search, filter, category, skill, eligibility, company, location, salary, vacancy, sort].join('\u0000');
+  const [paging, setPaging] = useState({ key: listKey, count: PAGE_SIZE });
+  const visibleCount = paging.key === listKey ? paging.count : PAGE_SIZE;
+  const showMore = useCallback(() => {
+    setPaging(current => ({ key: listKey, count: (current.key === listKey ? current.count : PAGE_SIZE) + PAGE_SIZE }));
+  }, [listKey]);
   const [theme, setTheme] = useState(getInitialTheme);
   const [isOnline, setIsOnline] = useState(() => navigator.onLine);
   const [selectedJobKey, setSelectedJobKey] = useState(getJobKeyFromUrl);
-  const [selectedDetail, setSelectedDetail] = useState(null);
+  const [loadedDetail, setLoadedDetail] = useState(null);
   const [savedKeys, setSavedKeys] = useState(readSavedJobs);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [now, setNow] = useState(getAfghanistanToday);
   const openedModalInSessionRef = useRef(false);
 
-  const loadJobs = useCallback(async ({ initial = false } = {}) => {
-    if (initial) setLoadState('loading');
-    else setIsRefreshing(true);
-    setLoadError('');
-
-    try {
-      const [feed, latestSummary] = await Promise.all([loadFeed(), loadSummary()]);
+  // Fetch and apply the feed. Every state update waits for the response, so
+  // the first load can start from an effect without an extra render.
+  const fetchFeed = useCallback(() => Promise.all([loadFeed(), loadSummary()])
+    .then(([feed, latestSummary]) => {
       jobsRef.current = feed.jobs;
       setJobs(feed.jobs);
       setSummary(latestSummary);
+      setLoadError('');
       setLoadState('ready');
-    } catch (error) {
+    })
+    .catch(error => {
       const message = error instanceof Error ? error.message : 'The jobs feed could not be loaded.';
       setLoadError(message);
       setLoadState(jobsRef.current.length ? 'ready' : 'error');
-    } finally {
-      setIsRefreshing(false);
-    }
-  }, []);
+    })
+    .finally(() => setIsRefreshing(false)), []);
+
+  const loadJobs = useCallback(({ initial = false } = {}) => {
+    if (initial) setLoadState('loading');
+    else setIsRefreshing(true);
+    setLoadError('');
+    return fetchFeed();
+  }, [fetchFeed]);
 
   useEffect(() => {
-    loadJobs({ initial: true });
-  }, [loadJobs]);
+    fetchFeed();
+  }, [fetchFeed]);
 
   useEffect(() => {
     document.documentElement.classList.toggle('light', theme === 'light');
@@ -251,10 +262,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setVisibleCount(PAGE_SIZE);
-  }, [view, search, filter, category, skill, eligibility, company, location, salary, vacancy, sort]);
-
   const scope = view === 'saved' ? 'all' : view;
   const scopedSaved = view === 'saved' ? savedKeys : null;
   const scopeCounts = useMemo(() => getScopeCounts(jobs, now), [jobs, now]);
@@ -296,11 +303,11 @@ function App() {
     const sentinel = sentinelRef.current;
     if (!sentinel || !hasMore || typeof IntersectionObserver === 'undefined') return undefined;
     const observer = new IntersectionObserver(entries => {
-      if (entries.some(entry => entry.isIntersecting)) setVisibleCount(current => current + PAGE_SIZE);
+      if (entries.some(entry => entry.isIntersecting)) showMore();
     }, { rootMargin: '600px 0px' });
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, [hasMore, filteredJobs]);
+  }, [hasMore, filteredJobs, showMore]);
 
   const selectedJob = useMemo(
     () => (selectedJobKey ? jobs.find(job => getJobKey(job) === selectedJobKey) || null : null),
@@ -313,21 +320,25 @@ function App() {
   }, [jobs, selectedJob]);
 
   useEffect(() => {
+    if (!selectedGroup) return undefined;
     let cancelled = false;
-    setSelectedDetail(selectedGroup);
-    if (selectedGroup) {
-      loadJobDetail(selectedGroup)
-        .then(detail => {
-          if (!cancelled) setSelectedDetail(detail);
-        })
-        .catch(() => {
-          // The panel keeps the summary and links to the original listing.
-        });
-    }
+    loadJobDetail(selectedGroup)
+      .then(detail => {
+        if (!cancelled) setLoadedDetail({ key: getJobKey(selectedGroup), detail });
+      })
+      .catch(() => {
+        // The panel keeps the summary and links to the original listing.
+      });
     return () => {
       cancelled = true;
     };
   }, [selectedGroup]);
+
+  const selectedDetail = useMemo(() => {
+    if (!selectedGroup) return null;
+    if (loadedDetail?.key !== getJobKey(selectedGroup)) return selectedGroup;
+    return { ...loadedDetail.detail, variants: selectedGroup.variants };
+  }, [selectedGroup, loadedDetail]);
 
   const jobBoardCount = useMemo(() => {
     const sources = new Set((summary?.source_health || []).map(item => item.source));
@@ -755,7 +766,7 @@ function App() {
 
           {hasMore && loadState === 'ready' && (
             <div ref={sentinelRef} className="mt-8 flex flex-col items-center gap-2">
-              <button type="button" onClick={() => setVisibleCount(current => current + PAGE_SIZE)} className="secondary-button">
+              <button type="button" onClick={showMore} className="secondary-button">
                 Show more jobs
               </button>
               <p className="text-xs tone-faint">Showing {visibleCount} of {filteredJobs.length}</p>
