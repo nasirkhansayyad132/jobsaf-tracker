@@ -199,6 +199,10 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: read
+    # The digest is optional. A mail problem is reported on its own (see
+    # report-health) instead of marking the data refresh as failed.
+    outputs:
+      email_status: ${{ steps.send.outcome || 'skipped' }}
 
     steps:
       - name: Checkout notification script
@@ -232,7 +236,9 @@ jobs:
           fi
 
       - name: Send email notification
+        id: send
         if: steps.notification.outputs.enabled == 'true'
+        continue-on-error: true
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -240,6 +246,10 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: python scripts/notify_email.py generated/docs/data/summary.json generated/docs/data/jobs.json
+
+      - name: Flag an unsent digest
+        if: steps.send.outcome == 'failure'
+        run: echo '::warning title=Email digest not sent::The jobs data and website were updated, but the email could not be sent. See the "Daily email digest is failing" issue.'
 
   report-health:
     name: Report run health
@@ -252,33 +262,50 @@ jobs:
 
     steps:
       # A silent failure once froze the public data for two weeks. Keep one
-      # open issue while the pipeline is broken (GitHub notifies the owner),
-      # and close it automatically on the next healthy run.
-      - name: Open, update, or close the failure issue
+      # open issue per problem while it lasts (GitHub notifies the owner) and
+      # close it automatically on the next healthy run. Data/site failures and
+      # email failures are tracked separately: a broken mailbox must not make
+      # a working tracker look stopped.
+      - name: Open, update, or close the failure issues
         env:
           GH_TOKEN: ${{ github.token }}
           RESULTS: ${{ toJSON(needs) }}
+          EMAIL_STATUS: ${{ needs.notify.outputs.email_status }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          title='Daily job refresh is failing'
-          failed=$(echo "$RESULTS" | jq -r 'to_entries[] | select(.value.result == "failure") | .key' | paste -sd ', ' -)
-          issue=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$title\" in:title" --json number,title \
-            --jq "map(select(.title == \"$title\")) | .[0].number // empty")
+          find_issue() {
+            gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$1\" in:title" --json number,title \
+              --jq "map(select(.title == \"$1\")) | .[0].number // empty"
+          }
 
-          if [ -n "$failed" ]; then
-            body="The daily run failed in: **$failed**.
+          # report <title> <failure summary or empty> <body for a new issue>
+          report() {
+            local title="$1" failed="$2" body="$3" issue
+            issue=$(find_issue "$title")
+            if [ -n "$failed" ]; then
+              if [ -n "$issue" ]; then
+                gh issue comment "$issue" --repo "$GITHUB_REPOSITORY" --body "Still failing ($failed): $RUN_URL"
+              else
+                gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+              fi
+            elif [ -n "$issue" ]; then
+              gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --comment "Recovered: $RUN_URL"
+            fi
+          }
+
+          failed=$(echo "$RESULTS" | jq -r 'to_entries[] | select(.key != "notify" and .value.result == "failure") | .key' | paste -sd ', ' -)
+          report 'Daily job refresh is failing' "${failed:+**$failed**}" "The daily run failed in: **$failed**.
 
           Run: $RUN_URL
 
           Until this is fixed the website keeps showing the last good data. This issue closes itself after the next successful run."
-            if [ -n "$issue" ]; then
-              gh issue comment "$issue" --repo "$GITHUB_REPOSITORY" --body "Still failing (**$failed**): $RUN_URL"
-            else
-              gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
-            fi
-            exit 0
-          fi
 
-          if [ -n "$issue" ]; then
-            gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --comment "Recovered: $RUN_URL"
+          email_failed=''
+          if [ "$EMAIL_STATUS" = 'failure' ] || [ "$(echo "$RESULTS" | jq -r '.notify.result')" = 'failure' ]; then
+            email_failed='**email digest**'
           fi
+          report 'Daily email digest is failing' "$email_failed" "The jobs data and website are still updated every day, but the email digest could not be sent.
+
+          Run: $RUN_URL
+
+          Most often the SMTP password stopped working. For Gmail: turn on 2-Step Verification, create a new App Password at https://myaccount.google.com/apppasswords, and save it as the \`SMTP_PASS\` repository secret (Settings → Secrets and variables → Actions). This issue closes itself after the next email is sent."
