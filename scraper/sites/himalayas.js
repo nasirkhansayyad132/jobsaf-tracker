@@ -7,6 +7,10 @@ const API_URL = "https://himalayas.app/jobs/api/search";
 // two-week retention keeps coverage without crawling the whole board.
 const SEARCH_TERMS = ["developer", "engineer", "data", "devops", "security"];
 const DEFAULT_PAGES_PER_TERM = 10;
+// Afghan-language work is searched without the worldwide filter: a role that
+// needs Dari or Pashto speakers is often open wherever they live.
+const LANGUAGE_TERMS = ["pashto", "dari", "farsi", "persian"];
+const LANGUAGE_PAGES_PER_TERM = 2;
 const MAX_AGE_DAYS = 30;
 const REQUEST_GAP_MS = 800;
 
@@ -65,11 +69,16 @@ async function scrape(options = {}) {
   let listingFailures = 0;
   let listingFailureReason = null;
 
-  for (const term of SEARCH_TERMS) {
-    for (let page = 1; page <= pagesPerTerm; page += 1) {
+  const searches = [
+    ...SEARCH_TERMS.map(term => ({ term, pages: pagesPerTerm, worldwide: true })),
+    ...LANGUAGE_TERMS.map(term => ({ term, pages: LANGUAGE_PAGES_PER_TERM, worldwide: false })),
+  ];
+  for (const { term, pages, worldwide } of searches) {
+    for (let page = 1; page <= pages; page += 1) {
       if (requests > 0) await wait(REQUEST_GAP_MS);
       requests += 1;
-      const params = new URLSearchParams({ worldwide: "true", sort: "recent", q: term, page: String(page) });
+      const params = new URLSearchParams({ sort: "recent", q: term, page: String(page) });
+      if (worldwide) params.set("worldwide", "true");
       let data;
       try {
         data = await fetchJson(`${API_URL}?${params}`);
@@ -87,7 +96,7 @@ async function scrape(options = {}) {
     }
   }
   const records = [...byUrl.values()];
-  console.log(`[himalayas] ${records.length} recent worldwide listings from ${requests} requests`);
+  console.log(`[himalayas] ${records.length} recent listings from ${requests} requests`);
   return finish("himalayas", records, { listingFailures, listingFailureReason });
 }
 

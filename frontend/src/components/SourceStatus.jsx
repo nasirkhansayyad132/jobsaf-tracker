@@ -12,6 +12,7 @@ const STATUS = {
 const GROUPS = [
     { kind: 'afghanistan', title: 'Afghanistan job boards & UN/NGO portals' },
     { kind: 'remote', title: 'Remote job boards' },
+    { kind: 'language', title: 'Language & AI-training platforms' },
 ];
 
 /** Which boards the last refresh covered, so gaps are never silent. */
@@ -22,9 +23,9 @@ export function SourceStatus({ health }) {
             <div className="surface rounded-2xl p-5 sm:p-6">
                 <h2 id="sources-heading" className="text-base font-bold tone-strong">Sources checked in the last refresh</h2>
                 <p className="mt-1 text-sm tone-muted">
-                    Every listing is read in full and kept only if it is a technology role. Remote roles are kept only when someone in Afghanistan can apply.
+                    Every listing is read in full and kept only if it is a technology role, or remote work in Pashto, Dari or Persian. Remote roles are kept only when someone in Afghanistan can apply.
                 </p>
-                <div className="mt-5 grid gap-6 md:grid-cols-2">
+                <div className="mt-5 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                     {GROUPS.map(group => {
                         const items = health.filter(item => (item.kind || 'afghanistan') === group.kind);
                         if (!items.length) return null;
@@ -43,7 +44,7 @@ export function SourceStatus({ health }) {
                                                     <span className={cn('truncate text-xs', status.tone)}>{status.label}</span>
                                                 </span>
                                                 <span className="shrink-0 text-xs tabular-nums tone-faint">
-                                                    {Number.isFinite(item.relevant) ? `${item.relevant} tech` : ''}
+                                                    {Number.isFinite(item.relevant) ? `${item.relevant} ${item.kind === 'language' ? 'kept' : 'tech'}` : ''}
                                                     {Number.isFinite(item.listed) && item.listed > 0 ? ` of ${item.listed}` : ''}
                                                 </span>
                                             </li>

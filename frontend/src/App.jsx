@@ -6,6 +6,7 @@ import {
   BriefcaseBusiness,
   Github,
   Globe2,
+  Languages,
   MapPin,
   Moon,
   RefreshCw,
@@ -36,6 +37,7 @@ import {
 const VIEWS = [
   { id: 'afghanistan', label: 'Afghanistan', icon: MapPin },
   { id: 'remote', label: 'Remote', icon: Globe2 },
+  { id: 'language', label: 'Languages', icon: Languages },
   { id: 'saved', label: 'Saved', icon: Bookmark },
 ];
 
@@ -49,12 +51,14 @@ const FILTERS = [
 const VIEW_HEADINGS = {
   afghanistan: 'Tech jobs in Afghanistan',
   remote: 'Remote tech jobs open to Afghanistan',
+  language: 'Online Pashto, Dari & Persian work',
   saved: 'Your saved jobs',
 };
 
 const VIEW_DESCRIPTIONS = {
   afghanistan: 'Based in Afghanistan, including remote roles posted by Afghan employers.',
   remote: 'Only roles that people living in Afghanistan can apply for.',
+  language: 'Translation, interpreting, transcription and AI-training work you can do remotely from Afghanistan.',
   saved: 'Kept on this device only.',
 };
 
@@ -147,6 +151,7 @@ function App() {
   const [filter, setFilter] = useState('all');
   const [category, setCategory] = useState('all');
   const [skill, setSkill] = useState('all');
+  const [language, setLanguage] = useState('all');
   const [eligibility, setEligibility] = useState('all');
   const [company, setCompany] = useState('all');
   const [location, setLocation] = useState('all');
@@ -156,7 +161,7 @@ function App() {
   const [showRefinements, setShowRefinements] = useState(false);
   // How many cards are shown. Stored with the list it belongs to, so any
   // change of tab, search, filter or sort starts again at the first page.
-  const listKey = [view, search, filter, category, skill, eligibility, company, location, salary, vacancy, sort].join('\u0000');
+  const listKey = [view, search, filter, category, skill, language, eligibility, company, location, salary, vacancy, sort].join('\u0000');
   const [paging, setPaging] = useState({ key: listKey, count: PAGE_SIZE });
   const visibleCount = paging.key === listKey ? paging.count : PAGE_SIZE;
   const showMore = useCallback(() => {
@@ -287,6 +292,7 @@ function App() {
       now,
       category,
       skill,
+      language,
       eligibility,
       company,
       location,
@@ -294,7 +300,7 @@ function App() {
       vacancy,
       sort: sort === 'default' ? undefined : sort,
     })),
-    [jobs, search, filter, scope, scopedSaved, now, category, skill, eligibility, company, location, salary, vacancy, sort],
+    [jobs, search, filter, scope, scopedSaved, now, category, skill, language, eligibility, company, location, salary, vacancy, sort],
   );
   const hasMore = filteredJobs.length > visibleCount;
 
@@ -353,7 +359,11 @@ function App() {
   const dataAgeHours = hoursSince(updatedAt);
   const isStale = dataAgeHours !== null && dataAgeHours > STALE_AFTER_HOURS;
   const visibleFilters = FILTERS.filter(item => item.id !== 'new' || lastVisit);
-  const popularSkills = facets.skills.slice(0, 7);
+  // Language work rarely lists skills; offer its kinds of work instead.
+  const isLanguageView = view === 'language';
+  const quickPicks = isLanguageView
+    ? { label: 'Work:', items: facets.categoryCounts, value: category, set: setCategory }
+    : { label: 'Popular:', items: facets.skills.slice(0, 7), value: skill, set: setSkill };
 
   const openJob = useCallback((job) => {
     const key = getJobKey(job);
@@ -390,6 +400,9 @@ function App() {
 
   const changeView = useCallback((next) => {
     setView(next);
+    // Each tab has its own role taxonomy and eligibility choices.
+    setCategory('all');
+    setLanguage('all');
     setEligibility('all');
     setLocation('all');
     setCompany('all');
@@ -403,6 +416,7 @@ function App() {
     setFilter('all');
     setCategory('all');
     setSkill('all');
+    setLanguage('all');
     setEligibility('all');
     setCompany('all');
     setLocation('all');
@@ -415,6 +429,7 @@ function App() {
   const activeFilters = [
     search.trim() && { key: 'search', label: `“${search.trim()}”`, clear: () => setSearch('') },
     skill !== 'all' && { key: 'skill', label: skill, clear: () => setSkill('all') },
+    language !== 'all' && { key: 'language', label: language, clear: () => setLanguage('all') },
     category !== 'all' && { key: 'category', label: category, clear: () => setCategory('all') },
     eligibility !== 'all' && { key: 'eligibility', label: eligibilityLabel, clear: () => setEligibility('all') },
     location !== 'all' && { key: 'location', label: location, clear: () => setLocation('all') },
@@ -489,7 +504,7 @@ function App() {
             Find your next tech job
           </h1>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-6 tone-muted sm:text-base">
-            Software, IT, data, networking and security jobs across Afghanistan, plus remote roles you can apply for from Afghanistan.
+            Software, IT, data, networking and security jobs across Afghanistan, remote roles you can apply for from Afghanistan, and online Pashto, Dari and Persian language work.
           </p>
 
           <div className="search-box mx-auto mt-6 max-w-2xl">
@@ -514,18 +529,19 @@ function App() {
             )}
           </div>
 
-          {popularSkills.length > 0 && (
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-2" aria-label="Popular skills">
-              <span className="text-xs tone-faint">Popular:</span>
-              {popularSkills.map(item => (
+          {quickPicks.items.length > 0 && (
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-2" aria-label={isLanguageView ? 'Kinds of language work' : 'Popular skills'}>
+              <span className="text-xs tone-faint">{quickPicks.label}</span>
+              {quickPicks.items.map(item => (
                 <button
                   key={item.name}
                   type="button"
                   className="quick-chip"
-                  aria-pressed={skill === item.name}
-                  onClick={() => setSkill(current => (current === item.name ? 'all' : item.name))}
+                  aria-pressed={quickPicks.value === item.name}
+                  onClick={() => quickPicks.set(current => (current === item.name ? 'all' : item.name))}
                 >
                   {item.name}
+                  {isLanguageView && <span className="tone-faint"> {item.count}</span>}
                 </button>
               ))}
             </div>
@@ -605,17 +621,24 @@ function App() {
             className={cn('mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8', showRefinements ? 'block' : 'hidden')}
           >
             <div className="filter-panel grid max-h-[calc(100dvh-11rem)] grid-cols-1 gap-4 overflow-y-auto rounded-2xl p-4 min-[420px]:grid-cols-2 lg:grid-cols-4">
-              <RefinementSelect id="skill-filter" label="Skill" value={skill} onChange={setSkill}>
-                <option value="all">Any skill</option>
-                {facets.skills.map(item => <option key={item.name} value={item.name}>{item.name} ({item.count})</option>)}
-              </RefinementSelect>
+              {isLanguageView ? (
+                <RefinementSelect id="language-filter" label="Language" value={language} onChange={setLanguage}>
+                  <option value="all">Any language</option>
+                  {facets.languages.map(item => <option key={item.name} value={item.name}>{item.name} ({item.count})</option>)}
+                </RefinementSelect>
+              ) : (
+                <RefinementSelect id="skill-filter" label="Skill" value={skill} onChange={setSkill}>
+                  <option value="all">Any skill</option>
+                  {facets.skills.map(item => <option key={item.name} value={item.name}>{item.name} ({item.count})</option>)}
+                </RefinementSelect>
+              )}
 
-              <RefinementSelect id="category-filter" label="Technology area" value={category} onChange={setCategory}>
-                <option value="all">All areas</option>
+              <RefinementSelect id="category-filter" label={isLanguageView ? 'Type of work' : 'Technology area'} value={category} onChange={setCategory}>
+                <option value="all">{isLanguageView ? 'All types' : 'All areas'}</option>
                 {facets.categories.map(value => <option key={value} value={value}>{value}</option>)}
               </RefinementSelect>
 
-              {view === 'remote' ? (
+              {view === 'remote' || isLanguageView ? (
                 <RefinementSelect id="eligibility-filter" label="Who can apply" value={eligibility} onChange={setEligibility}>
                   <option value="all">Anyone eligible</option>
                   {facets.eligibility.map(item => <option key={item.value} value={item.value}>{item.label} ({item.count})</option>)}

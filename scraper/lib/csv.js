@@ -35,6 +35,7 @@ const DEFAULT_FIELDS = [
   "languages",
   "skills",
   "group_id",
+  "track",
 ];
 
 function csvValue(value) {
