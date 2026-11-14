@@ -134,6 +134,11 @@ def is_remote(job: Dict[str, Any]) -> bool:
     return job.get("work_mode") == "remote"
 
 
+def is_language_job(job: Dict[str, Any]) -> bool:
+    """Remote Pashto/Dari/Persian work, published whether or not it is technical."""
+    return job.get("track") == "language"
+
+
 def build_email_html(summary: Dict[str, Any]) -> str:
     """Build the full HTML email body."""
     today_formatted = get_kabul_date_formatted()
@@ -167,10 +172,13 @@ def build_email_html(summary: Dict[str, Any]) -> str:
             max_items=5
         ))
     
-    # New jobs: Afghanistan first, then remote roles open to Afghan applicants.
+    # New jobs: Afghanistan first, then remote roles open to Afghan applicants,
+    # then online work in Afghan languages.
     new_jobs = collapse_groups(summary.get("new_jobs") or [])
-    new_local = [job for job in new_jobs if not is_remote(job) or job.get("remote_scope") == "afghanistan"]
-    new_remote = [job for job in new_jobs if is_remote(job) and job.get("remote_scope") != "afghanistan"]
+    new_language = [job for job in new_jobs if is_language_job(job)]
+    new_tech = [job for job in new_jobs if not is_language_job(job)]
+    new_local = [job for job in new_tech if not is_remote(job) or job.get("remote_scope") == "afghanistan"]
+    new_remote = [job for job in new_tech if is_remote(job) and job.get("remote_scope") != "afghanistan"]
     if new_local:
         sections.append(build_section(
             "New Jobs in Afghanistan",
@@ -183,6 +191,13 @@ def build_email_html(summary: Dict[str, Any]) -> str:
             "New Remote Jobs Open to Afghanistan",
             "🌍",
             new_remote,
+            max_items=10
+        ))
+    if new_language:
+        sections.append(build_section(
+            "New Online Pashto, Dari & Persian Work",
+            "🗣️",
+            new_language,
             max_items=10
         ))
     

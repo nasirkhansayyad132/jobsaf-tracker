@@ -120,6 +120,17 @@ test('requires remote jobs to state who may apply', () => {
   assert.match(validateJobs([misplaced], { today: '2026-08-05' }).errors.join('\n'), /must be null unless work_mode is remote/)
 })
 
+test('language-track jobs must be remote', () => {
+  const language = validJob({ work_mode: 'remote', remote_scope: 'language', languages: ['Pashto'], track: 'language' })
+  assert.deepEqual(validateJobs([language], { today: '2026-08-05' }).errors, [])
+  assert.equal(validateJobs([language], { today: '2026-08-05' }).metrics.language, 1)
+
+  const onsite = validJob({ work_mode: 'onsite', track: 'language' })
+  assert.match(validateJobs([onsite], { today: '2026-08-05' }).errors.join('\n'), /language roles must be remote/)
+  const unknown = validJob({ track: 'sales' })
+  assert.match(validateJobs([unknown], { today: '2026-08-05' }).errors.join('\n'), /must be tech, language, or absent/)
+})
+
 test('accepts optional per-source health in the summary', () => {
   const summary = { ...validSummary(), source_health: [{ source: 'jobs.af', status: 'healthy' }] }
   assert.deepEqual(validateSummary(summary, [validJob()]).errors, [])

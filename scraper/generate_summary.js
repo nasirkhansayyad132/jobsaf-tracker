@@ -155,6 +155,7 @@ function generateSummary() {
         expiring_soon_count: expiringSoon.length,
         tech_banking_count: techBankingJobs.length,
         remote_count: jobs.filter(job => job.work_mode === 'remote').length,
+        language_count: jobs.filter(job => job.track === 'language').length,
         source_health: readSourceHealth(healthFile),
         new_job_ids: newJobs.map(job => job.id),
         expiring_today_ids: expiringToday.map(job => job.id),

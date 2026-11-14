@@ -72,6 +72,17 @@ const CATEGORY_FACETS = {
     other: 'Other technology',
 };
 
+// Language roles get their own taxonomy: what kind of language work it is.
+const LANGUAGE_WORK_TYPES = [
+    ['AI training & evaluation', /\b(?:ai\s+trainer|ai\s+training|llm|rater|evaluat\w*|annotat\w*|data\s+label\w*|speech\s+(?:and|&)\s+language|language\s+(?:specialist|expert)|linguistic\s+projects?)\b/],
+    ['Interpreting', /\binterpret\w*\b/],
+    ['Transcription', /\b(?:transcri\w*|caption\w*|subtitl\w*)\b/],
+    ['Translation & localization', /\b(?:translat\w*|locali[sz]\w*|proofread\w*|linguistic\s+qa|editor|reviewer)\b/],
+    ['Teaching & tutoring', /\b(?:teacher|tutor|instructor|teaching)\b/],
+    ['Voice & audio', /\b(?:voice|audio|recording)\b/],
+];
+const OTHER_LANGUAGE_WORK = 'Other language work';
+
 const REMOTE_SCOPE_LABELS = {
     worldwide: 'Open worldwide',
     afghanistan: 'Open to Afghanistan',
@@ -317,6 +328,16 @@ export function getJobFacets(jobs, now = getAfghanistanToday()) {
     for (const job of openJobs) {
         for (const skill of getSkills(job)) skillCounts.set(skill, (skillCounts.get(skill) || 0) + 1);
     }
+    const languageCounts = new Map();
+    const categoryCounts = new Map();
+    for (const job of openJobs) {
+        for (const language of getLanguages(job)) languageCounts.set(language, (languageCounts.get(language) || 0) + 1);
+        const category = getCategoryFacet(job);
+        categoryCounts.set(category, (categoryCounts.get(category) || 0) + 1);
+    }
+    const byCount = counts => [...counts.entries()]
+        .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+        .map(([name, count]) => ({ name, count }));
     const eligibility = {};
     for (const job of openJobs.filter(isRemoteJob)) {
         if (job.remote_scope) eligibility[job.remote_scope] = (eligibility[job.remote_scope] || 0) + 1;
@@ -333,6 +354,8 @@ export function getJobFacets(jobs, now = getAfghanistanToday()) {
         companies: sortFacetValues(openJobs.map(getCompanyFacet)),
         locations: sortFacetValues(openJobs.flatMap(getLocationFacet)),
         categories: sortFacetValues(openJobs.map(getCategoryFacet)),
+        categoryCounts: byCount(categoryCounts),
+        languages: byCount(languageCounts),
         salary,
         vacancies,
     };
@@ -471,6 +494,9 @@ export function getLocationFacet(job) {
 /** Stable role taxonomy derived from the job itself, not publisher categories. */
 export function getCategoryFacet(job) {
     const title = String(job?.title || '').toLocaleLowerCase();
+    if (isLanguageJob(job)) {
+        return LANGUAGE_WORK_TYPES.find(([, pattern]) => pattern.test(title))?.[0] || OTHER_LANGUAGE_WORK;
+    }
     const context = `${title} ${String(job?.description || '').slice(0, 500)}`.toLocaleLowerCase();
 
     if (/\b(?:software|web|frontend|front-end|backend|back-end|full[ -]?stack|mobile|wordpress|php|programmer|application)\b/.test(title)
@@ -642,13 +668,20 @@ export function isRemoteJob(job) {
     return String(job?.work_mode || '').toLowerCase() === 'remote';
 }
 
+/** Remote Pashto/Dari/Persian work (translation, AI training...), tech or not. */
+export function isLanguageJob(job) {
+    return job?.track === 'language';
+}
+
 /**
- * "afghanistan" covers every job based in or open to Afghanistan, including
- * remote roles posted on Afghan boards; "remote" covers every remote role.
+ * "afghanistan" covers every tech job based in or open to Afghanistan,
+ * including remote roles posted on Afghan boards; "remote" covers every remote
+ * tech role; "language" covers remote work in Afghan languages.
  */
 export function matchesScope(job, scope = 'all') {
-    if (scope === 'remote') return isRemoteJob(job);
-    if (scope === 'afghanistan') return !isRemoteJob(job) || job?.remote_scope === 'afghanistan';
+    if (scope === 'language') return isLanguageJob(job);
+    if (scope === 'remote') return isRemoteJob(job) && !isLanguageJob(job);
+    if (scope === 'afghanistan') return !isLanguageJob(job) && (!isRemoteJob(job) || job?.remote_scope === 'afghanistan');
     return true;
 }
 
@@ -741,6 +774,7 @@ export function selectJobs(jobs, {
     filter = 'all',
     scope = 'all',
     skill = 'all',
+    language = 'all',
     eligibility = 'all',
     savedKeys = null,
     newSince = null,
@@ -762,6 +796,9 @@ export function selectJobs(jobs, {
     if (!isAllFacet(skill)) {
         const wanted = normalizedFacet(skill);
         result = result.filter(job => getSkills(job).some(value => normalizedFacet(value) === wanted));
+    }
+    if (!isAllFacet(language)) {
+        result = result.filter(job => getLanguages(job).includes(language));
     }
     if (!isAllFacet(eligibility)) {
         result = result.filter(job => job?.remote_scope === eligibility);
@@ -797,7 +834,7 @@ export function selectJobs(jobs, {
     result = result.filter(job => matchesVacancyFilter(job, vacancy === 'all' && vacancies !== undefined ? vacancies : vacancy));
 
     // Remote roles rarely publish deadlines, so newest-first is the useful default.
-    const sortMode = sort || (filter === 'recent' || filter === 'new' || scope === 'remote' ? 'newest' : 'deadline');
+    const sortMode = sort || (filter === 'recent' || filter === 'new' || scope === 'remote' || scope === 'language' ? 'newest' : 'deadline');
     if (sortMode === 'newest') {
         result.sort((left, right) => (
             compareDates(getPostDate(left), getPostDate(right), -1)
@@ -855,6 +892,7 @@ export function getScopeCounts(jobs, now = getAfghanistanToday()) {
     return {
         afghanistan: groupJobs(openJobs.filter(job => matchesScope(job, 'afghanistan'))).length,
         remote: groupJobs(openJobs.filter(job => matchesScope(job, 'remote'))).length,
+        language: groupJobs(openJobs.filter(job => matchesScope(job, 'language'))).length,
     };
 }
 
@@ -935,6 +973,9 @@ export function formatSource(source) {
         himalayas: 'Himalayas',
         jobicy: 'Jobicy',
         workingnomads: 'Working Nomads',
+        meridial: 'Meridial',
+        sigma: 'Sigma AI',
+        workable: 'Workable',
     };
     return known[value.toLowerCase()] || value;
 }

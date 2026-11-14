@@ -1,8 +1,10 @@
 # Afghanistan Tech Jobs
 
 A public, multi-source tracker for software, IT, data, networking, cybersecurity,
-telecom, and computer-science opportunities in Afghanistan, plus remote
-technology roles that people living in Afghanistan can apply for.
+telecom, and computer-science opportunities in Afghanistan, remote technology
+roles that people living in Afghanistan can apply for, and online work in
+Pashto, Dari and Persian (translation, interpreting, transcription, AI
+training).
 
 The project combines a deterministic Node.js scraper, a validated JSON feed,
 an accessible React PWA, optional email digests, and GitHub Actions automation.
@@ -12,6 +14,7 @@ an accessible React PWA, optional email digests, and GitHub Actions automation.
 ```text
 Afghanistan: Jobs.af · ACBAR · Kaarobar · Wazifaha · Impactpool · ReliefWeb*
 Remote:      Himalayas · We Work Remotely · Remote OK · Remotive · Jobicy · Working Nomads
+Languages:   Meridial (Invisible) · Sigma AI · Workable job search
                   │
                   ▼
      fetch → enrich → normalize → score relevance → remote eligibility
@@ -39,6 +42,8 @@ private data store.
   six remote boards instead of trusting list-page titles alone.
 - Publishes remote roles only when someone in Afghanistan can apply, and
   highlights roles that ask for Dari or Pashto.
+- Finds online Pashto, Dari and Persian work, technical or not, and lists it
+  in its own Languages tab.
 - Merges the same vacancy across boards even when the employer or title is
   spelled differently, and shows per-province copies of one posting as a
   single card.
@@ -116,9 +121,26 @@ rules as local jobs and the listing is open to Afghanistan:
 | Needs Dari/Pashto | No location limit, and the listing asks for Dari, Pashto, or Persian |
 
 A title such as “Backend Developer – Remote from EU” overrides a board's
-worldwide label. At most 300 remote roles are published, ordered by
-eligibility (Afghan-language and Afghanistan first) and then recency; roles
-without a deadline retire after 30 days.
+worldwide label. A board's own country list (“Only: Nepal”) is
+authoritative, even for Dari/Pashto roles. At most 300 remote tech roles from
+remote boards are published, ordered by eligibility (Afghan-language and
+Afghanistan first) and then recency; roles without a deadline retire after 30
+days.
+
+## Language work
+
+A remote listing joins the language track (`"track": "language"`) when its
+title names Pashto, Dari, Persian or Farsi, or when it is language work
+(translator, interpreter, transcriber, linguist, AI trainer, rater, tutor…)
+and its text asks for one of those languages. A title for another language
+(“English – Thai Interpreter”) does not count because of an agency's language
+list. Onsite translator jobs stay out: only online work is in scope.
+
+Meridial, Sigma AI and Workable are employer boards and searches that list only
+open roles, so their evergreen postings are not retired by age and are not
+subject to the 300-role cap; they leave the feed once the employer removes
+them. The site shows language roles in the **Languages** tab, and the email
+digest lists new ones in their own section.
 
 ## Recent jobs
 
