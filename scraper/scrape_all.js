@@ -17,6 +17,10 @@ const workingnomads = require("./sites/workingnomads");
 const meridial = require("./sites/meridial");
 const sigma = require("./sites/sigma");
 const workable = require("./sites/workable");
+const welocalize = require("./sites/welocalize");
+const mercor = require("./sites/mercor");
+const freelancer = require("./sites/freelancer");
+const gotranscript = require("./sites/gotranscript");
 const {
   assignGroups,
   canonicalUrl,
@@ -37,7 +41,7 @@ const SITES = [
   // Remote boards; only roles open to applicants in Afghanistan are kept.
   himalayas, remoteok, remotive, weworkremotely, jobicy, workingnomads,
   // Language and AI-data platforms, searched for Pashto/Dari/Persian work.
-  meridial, sigma, workable,
+  meridial, sigma, welocalize, mercor, freelancer, gotranscript, workable,
 ];
 
 // Remote roles posted on Afghan boards are always kept; the cap only applies
@@ -58,7 +62,8 @@ const DEFAULT_MAX_PAGES = 50;
 const DEFAULT_SOURCE_TIMEOUT_MINUTES = 15;
 // Jobs without a published deadline (most remote boards) would otherwise stay
 // listed forever. Retire them once they are this old.
-const MAX_AGE_WITHOUT_DEADLINE_DAYS = { remote: 30, default: 60 };
+// Language roles are rarer and often stay open for months.
+const MAX_AGE_WITHOUT_DEADLINE_DAYS = { language: 90, remote: 30, default: 60 };
 const DAY_MS = 24 * 60 * 60 * 1000;
 // Remote boards list thousands of roles; publish the most reachable ones.
 const MAX_REMOTE_JOBS = 300;
@@ -402,9 +407,11 @@ function filterOpenJobs(jobs, now) {
   return jobs.filter(job => {
     if (job.closing_date) return job.closing_date >= today;
     if (SOURCES_LISTING_ONLY_OPEN.has(job.source)) return true;
-    const limit = job.work_mode === "remote"
-      ? MAX_AGE_WITHOUT_DEADLINE_DAYS.remote
-      : MAX_AGE_WITHOUT_DEADLINE_DAYS.default;
+    const limit = job.track === "language"
+      ? MAX_AGE_WITHOUT_DEADLINE_DAYS.language
+      : job.work_mode === "remote"
+        ? MAX_AGE_WITHOUT_DEADLINE_DAYS.remote
+        : MAX_AGE_WITHOUT_DEADLINE_DAYS.default;
     return ageInDays(job, now) <= limit;
   });
 }

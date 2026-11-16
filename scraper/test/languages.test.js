@@ -27,10 +27,23 @@ test("remote language work in Afghan languages is its own track", () => {
     title: "Freelance Translator",
     description: "Languages required: Arabic, Dari, Farsi, Pashto, Urdu.",
   })).matched, true);
-  // Mentioning Dari is not enough when the role is not language work.
+  // Any role that requires an Afghan language counts; a passing mention does not.
   assert.equal(assessLanguageRole(remote({
     title: "HR Intern: Support Refugee Application Process",
     description: "Fluency in Dari or Pashto is an asset.",
+  })).matched, true);
+  assert.equal(assessLanguageRole(remote({
+    source: "acbar",
+    title: "Finance Officer (home-based)",
+    description: "Fluency in Dari and Pashto is required.",
+  })).matched, false);
+  assert.equal(assessLanguageRole(remote({
+    title: "Operations Coordinator",
+    description: "We support refugees from Afghanistan and Iran in their own languages, including Dari.",
+  })).matched, false);
+  assert.equal(assessLanguageRole(remote({
+    title: "Customer Support Agent",
+    description: "Kerja dari rumah. Lulusan dari universitas dengan pengalaman, fluent English.",
   })).matched, false);
   // Onsite translators stay out; only online work is in scope.
   assert.equal(assessLanguageRole({ title: "Pashto Translator", work_mode: "onsite" }).matched, false);
@@ -42,6 +55,10 @@ test("remote language work in Afghan languages is its own track", () => {
   const onsite = assessJobRelevance({ title: "Translator", work_mode: "onsite", description: "Dari and Pashto required." });
   assert.equal(onsite.decision, "exclude");
   assert.equal(assessJobRelevance({ title: "Backend Developer" }).track, "tech");
+  // A technical role that needs Pashto stays technical (it is shown in both tabs).
+  const nlp = assessJobRelevance(remote({ title: "NLP Engineer", description: "Native Pashto speaker required." }));
+  assert.equal(nlp.track, "tech");
+  assert.match(nlp.reasons.join(" "), /requires Pashto/);
 });
 
 test("a board's own country whitelist decides eligibility even for language roles", () => {

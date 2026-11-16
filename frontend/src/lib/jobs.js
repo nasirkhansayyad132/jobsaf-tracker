@@ -668,18 +668,25 @@ export function isRemoteJob(job) {
     return String(job?.work_mode || '').toLowerCase() === 'remote';
 }
 
-/** Remote Pashto/Dari/Persian work (translation, AI training...), tech or not. */
+/** Remote Pashto/Dari/Persian work (translation, AI training...) that is not a tech role. */
 export function isLanguageJob(job) {
     return job?.track === 'language';
+}
+
+/** Any remote role that needs Pashto, Dari or Persian, technical or not. */
+export function needsAfghanLanguage(job) {
+    if (isLanguageJob(job)) return true;
+    return isRemoteJob(job) && (job?.relevance?.reasons || []).some(reason => String(reason).startsWith('language role'));
 }
 
 /**
  * "afghanistan" covers every tech job based in or open to Afghanistan,
  * including remote roles posted on Afghan boards; "remote" covers every remote
- * tech role; "language" covers remote work in Afghan languages.
+ * tech role; "language" covers remote work in Afghan languages, including tech
+ * roles that need one (those appear under Remote too).
  */
 export function matchesScope(job, scope = 'all') {
-    if (scope === 'language') return isLanguageJob(job);
+    if (scope === 'language') return needsAfghanLanguage(job);
     if (scope === 'remote') return isRemoteJob(job) && !isLanguageJob(job);
     if (scope === 'afghanistan') return !isLanguageJob(job) && (!isRemoteJob(job) || job?.remote_scope === 'afghanistan');
     return true;
@@ -975,6 +982,10 @@ export function formatSource(source) {
         workingnomads: 'Working Nomads',
         meridial: 'Meridial',
         sigma: 'Sigma AI',
+        welocalize: 'Welocalize',
+        mercor: 'Mercor',
+        freelancer: 'Freelancer.com',
+        gotranscript: 'GoTranscript',
         workable: 'Workable',
     };
     return known[value.toLowerCase()] || value;

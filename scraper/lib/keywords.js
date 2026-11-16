@@ -700,19 +700,22 @@ function assessJobRelevance(job) {
   score = Math.max(0, Math.min(100, score));
   const decision = !hardExcluded && !mixedListing.mixed && score >= RELEVANCE_THRESHOLD ? "include" : "exclude";
 
-  // Remote Pashto/Dari/Persian work is its own track, published whether or
-  // not the role is technical ("Translator" is a non-technical title above).
+  // Remote Pashto/Dari/Persian work is its own track, published even though
+  // the role is not technical ("Translator" is a non-technical title above).
+  // Technical roles that need an Afghan language stay technical; the site
+  // lists them under both Remote and Languages.
   const languageRole = assessLanguageRole(job);
-  if (languageRole.matched) {
+  if (languageRole.matched && decision !== "include") {
     return {
       version: RELEVANCE_VERSION,
       score: 100,
       threshold: RELEVANCE_THRESHOLD,
       decision: "include",
       track: "language",
-      reasons: [...languageRole.reasons, ...(decision === "include" ? reasons : [])],
+      reasons: languageRole.reasons,
     };
   }
+  if (languageRole.matched) reasons.push(...languageRole.reasons);
 
   if (!reasons.length) reasons.push("no technical title, category, functional-area, or supporting signals");
 

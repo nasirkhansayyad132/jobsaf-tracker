@@ -8,8 +8,9 @@ const { REMOTE_MISSED_RUN_GRACE, cleanCompany, finish, jsonFetcher, sleep } = re
 // decides what is kept.
 const API_URL = "https://jobs.workable.com/api/v1/jobs";
 const QUERIES = [
-  "farsi", "pashto", "pashto interpreter", "dari translator", "dari interpreter",
-  "persian translator", "persian interpreter",
+  "farsi", "pashto", "pashto interpreter", "pashto translator", "dari translator", "dari interpreter",
+  "dari linguist", "persian translator", "persian interpreter", "persian linguist", "farsi translator",
+  "farsi interpreter", "farsi transcription", "afghan", "afghanistan",
 ];
 const PAGES_PER_QUERY = 2;
 const REQUEST_GAP_MS = 500;
