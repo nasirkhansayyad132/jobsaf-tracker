@@ -461,8 +461,23 @@ function compatibleDeadlines(left, right) {
 function fuzzyCrossSourceMerge(records) {
   const output = [];
   const byCompany = new Map();
+  // Every URL a kept record is known by, including its alternate sources. A
+  // listing already recorded as another record's alternate is that record,
+  // even though its source is "already present" there.
+  const byKnownUrl = new Map();
+  const knownUrls = record => [record, ...(record.also_found_on || [])].map(canonicalUrl).filter(Boolean);
+  const remember = index => {
+    for (const url of knownUrls(output[index])) byKnownUrl.set(url, index);
+  };
   let removed = 0;
   for (const record of records) {
+    const sameListing = knownUrls(record).map(url => byKnownUrl.get(url)).find(index => index !== undefined);
+    if (sameListing !== undefined) {
+      output[sameListing] = mergeDuplicate(output[sameListing], record, { logicalMerge: true });
+      remember(sameListing);
+      removed += 1;
+      continue;
+    }
     const keys = companyKeys(record.company);
     const candidates = [...new Set(keys.flatMap(key => byCompany.get(key) || []))];
     const matchIndex = candidates.find(index => {
@@ -477,11 +492,13 @@ function fuzzyCrossSourceMerge(records) {
     });
     if (matchIndex !== undefined) {
       output[matchIndex] = mergeDuplicate(output[matchIndex], record, { logicalMerge: true });
+      remember(matchIndex);
       removed += 1;
       continue;
     }
     const index = output.length;
     output.push(record);
+    remember(index);
     for (const key of keys) byCompany.set(key, [...(byCompany.get(key) || []), index]);
   }
   return { jobs: output, removed };
