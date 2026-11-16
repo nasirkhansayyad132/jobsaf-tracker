@@ -17,12 +17,16 @@ const SOURCE_PRIORITY = new Map([
   ["wazifaha", 3],
   ["reliefweb", 4],
   ["impactpool", 5],
-  ["weworkremotely", 6],
-  ["remotive", 7],
-  ["remoteok", 8],
-  ["himalayas", 9],
-  ["jobicy", 10],
-  ["workingnomads", 11],
+  // An employer's own board beats aggregators that copy its postings.
+  ["meridial", 6],
+  ["sigma", 7],
+  ["workable", 8],
+  ["weworkremotely", 9],
+  ["remotive", 10],
+  ["remoteok", 11],
+  ["himalayas", 12],
+  ["jobicy", 13],
+  ["workingnomads", 14],
 ]);
 
 function normalizeComparableText(value) {
@@ -365,7 +369,11 @@ const COMPANY_NOISE = new Set([
   "the", "inc", "llc", "ltd", "limited", "gmbh", "co", "company", "corp", "corporation", "plc", "pvt",
   "private", "group", "sa", "bv", "ag", "organization", "organisation", "org",
 ]);
-const TITLE_NOISE = new Set(["the", "a", "an", "of", "and", "for", "to", "in", "at", "with", "remote", "position", "title"]);
+const TITLE_NOISE = new Set([
+  "the", "a", "an", "of", "and", "for", "to", "in", "at", "with", "remote", "position", "title",
+  // Engagement terms do not change the role: "Freelance Translator" = "Translator".
+  "freelance", "freelancer", "contract", "contractor",
+]);
 
 /**
  * Comparable spellings of an employer. "UNICEF - United Nations Children's

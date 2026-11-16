@@ -1,3 +1,4 @@
+const { assessLanguageRole } = require("./languages");
 const { normSpace } = require("./normalize");
 
 const RELEVANCE_VERSION = 2;
@@ -698,6 +699,21 @@ function assessJobRelevance(job) {
 
   score = Math.max(0, Math.min(100, score));
   const decision = !hardExcluded && !mixedListing.mixed && score >= RELEVANCE_THRESHOLD ? "include" : "exclude";
+
+  // Remote Pashto/Dari/Persian work is its own track, published whether or
+  // not the role is technical ("Translator" is a non-technical title above).
+  const languageRole = assessLanguageRole(job);
+  if (languageRole.matched) {
+    return {
+      version: RELEVANCE_VERSION,
+      score: 100,
+      threshold: RELEVANCE_THRESHOLD,
+      decision: "include",
+      track: "language",
+      reasons: [...languageRole.reasons, ...(decision === "include" ? reasons : [])],
+    };
+  }
+
   if (!reasons.length) reasons.push("no technical title, category, functional-area, or supporting signals");
 
   return {
@@ -705,6 +721,7 @@ function assessJobRelevance(job) {
     score,
     threshold: RELEVANCE_THRESHOLD,
     decision,
+    track: "tech",
     reasons,
   };
 }

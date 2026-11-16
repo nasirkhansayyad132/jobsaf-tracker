@@ -1,3 +1,4 @@
+const { detectAfghanLanguages } = require("./languages");
 const { htmlToText, normalizeJob, normSpace, unique } = require("./normalize");
 
 // Kabul is UTC+4:30 all year (Afghanistan does not observe daylight saving).
@@ -72,23 +73,6 @@ function timezoneWindow(text) {
   return null;
 }
 
-const LANGUAGE_CONTEXT = "speak(?:s|er|ers|ing)?|language|languages|fluent|fluency|native|proficien(?:t|cy)|translat(?:or|ion)|interpret(?:er|ing)|pashto|persian|farsi|english";
-const AFGHAN_LANGUAGE_PATTERNS = [
-  // "dari" is also Indonesian for "from", so require nearby language context.
-  ["Dari", new RegExp(
-    `\\bdari\\b(?=[^.\\n]{0,40}\\b(?:${LANGUAGE_CONTEXT})\\b)|\\b(?:${LANGUAGE_CONTEXT})\\b[^.\\n]{0,40}\\bdari\\b|دری`,
-    "i",
-  )],
-  ["Pashto", /\b(?:pashto|pushto|pakhto|pashtu|pushtu)\b|پښتو|پشتو/i],
-  ["Persian", /\bpersian\s+(?:language|speaker|speaking|translator|interpreter)|\b(?:in|speak|speaks|fluent|native)\s+persian\b|\bfarsi\b|فارسی/i],
-];
-
-/** Afghan languages a listing asks for (Persian/Farsi is close to Dari). */
-function detectAfghanLanguages(...texts) {
-  const text = texts.filter(Boolean).join("\n");
-  return AFGHAN_LANGUAGE_PATTERNS.filter(([, pattern]) => pattern.test(text)).map(([name]) => name);
-}
-
 /**
  * Decide whether a remote listing is open to someone in Afghanistan.
  *
@@ -108,6 +92,12 @@ function classifyRemoteEligibility(restriction, options = {}) {
     return languageFallback;
   }
   if (AFGHANISTAN_PATTERN.test(text)) return { scope: "afghanistan", label: SCOPE_LABELS.afghanistan };
+  // "Only: Nepal, India" is the board's own country whitelist: authoritative
+  // even when the role asks for Dari or Pashto.
+  if (/^only:/i.test(text)) {
+    if (ASIA_PATTERN.test(text.replace(/asia[-\s]*pacific/gi, " "))) return { scope: "asia", label: SCOPE_LABELS.asia };
+    return WORLDWIDE_PATTERN.test(text) ? { scope: "worldwide", label: SCOPE_LABELS.worldwide } : { scope: null, label: null };
+  }
 
   const anywhereIn = text.match(ANYWHERE_IN_PATTERN);
   if (anywhereIn && !ASIA_PATTERN.test(anywhereIn[1])) return languageFallback;

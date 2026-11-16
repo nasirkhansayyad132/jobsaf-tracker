@@ -9,6 +9,11 @@ updates:
       day: monday
       timezone: Asia/Kabul
     open-pull-requests-limit: 5
+    ignore:
+      # p-limit 4+ is ESM-only; the CommonJS scraper's require("p-limit")
+      # then gets a module object instead of the limiter function.
+      - dependency-name: p-limit
+        update-types: [version-update:semver-major]
     groups:
       scraper-dependencies:
         patterns: ['*']

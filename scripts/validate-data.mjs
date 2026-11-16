@@ -9,6 +9,7 @@ const HTTP_PROTOCOLS = new Set(['http:', 'https:'])
 const APPLICATION_METHODS = new Set(['email', 'web', 'phone', 'unknown'])
 const SUBJECT_TYPES = new Set(['exact', 'reference', 'title_template'])
 const WORK_MODES = new Set(['remote', 'hybrid', 'onsite'])
+const TRACKS = new Set(['tech', 'language'])
 const REMOTE_SCOPES = new Set(['worldwide', 'afghanistan', 'asia', 'timezone', 'language'])
 const SUMMARY_ID_LISTS = [
   ['new_job_ids', 'new_count'],
@@ -116,6 +117,7 @@ export function validateJobs(jobs, options = {}) {
   let expiredCount = 0
   let relevanceCount = 0
   let remoteCount = 0
+  let languageCount = 0
 
   if (!Array.isArray(jobs)) {
     return {
@@ -253,6 +255,14 @@ export function validateJobs(jobs, options = {}) {
     for (const listField of ['languages', 'skills']) {
       if (job[listField] != null) validateStringArray(errors, job[listField], `${location}.${listField}`)
     }
+    if (job.track != null && !TRACKS.has(job.track)) {
+      push(errors, `${location}.track`, 'must be tech, language, or absent')
+    }
+    if (job.track === 'language') {
+      // Language roles are published only when they can be done remotely.
+      if (job.work_mode !== 'remote') push(errors, `${location}.track`, 'language roles must be remote')
+      languageCount += 1
+    }
     if (job.group_id != null && !isNonEmptyString(job.group_id)) {
       push(errors, `${location}.group_id`, 'must be a non-empty string or null')
     }
@@ -283,6 +293,7 @@ export function validateJobs(jobs, options = {}) {
       sources: Object.fromEntries([...sources.entries()].sort(([a], [b]) => a.localeCompare(b))),
       expired: expiredCount,
       remote: remoteCount,
+      language: languageCount,
       relevanceCoverage: jobs.length === 0 ? 0 : relevanceCount / jobs.length,
     },
   }

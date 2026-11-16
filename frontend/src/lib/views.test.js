@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
+    getCategoryFacet,
     getGroupVacancyCount,
     getJobFacets,
     getJobStats,
@@ -36,7 +37,7 @@ test('Afghanistan and Remote views split jobs, keeping Afghan-board remote roles
     const afghanRemote = remote('c', { remote_scope: 'afghanistan' });
     assert.deepEqual([local, worldwide, afghanRemote].filter(item => matchesScope(item, 'afghanistan')).map(item => item.id), ['a', 'c']);
     assert.deepEqual([local, worldwide, afghanRemote].filter(item => matchesScope(item, 'remote')).map(item => item.id), ['b', 'c']);
-    assert.deepEqual(getScopeCounts([local, worldwide, afghanRemote], now), { afghanistan: 2, remote: 2 });
+    assert.deepEqual(getScopeCounts([local, worldwide, afghanRemote], now), { afghanistan: 2, remote: 2, language: 0 });
     assert.equal(getRemoteEligibility(worldwide), 'Open worldwide');
     assert.equal(getRemoteEligibility(local), null);
 });
@@ -116,4 +117,30 @@ test('listings warn only after going unseen for two days or more', async () => {
     assert.equal(getUnconfirmedDays(job('a', { last_seen_at: '2026-10-14T04:30:00Z' }), now), null);
     assert.equal(getUnconfirmedDays(job('a', { last_seen_at: '2026-10-13T04:30:00Z' }), now), null);
     assert.equal(getUnconfirmedDays(job('a', { last_seen_at: '2026-10-10T04:30:00Z' }), now), 4);
+});
+
+test('the Languages view holds remote Afghan-language work, apart from the tech views', () => {
+    const language = (id, title, languages, overrides = {}) => remote(id, { title, languages, track: 'language', ...overrides });
+    const interpreter = language('l1', 'English - Farsi Interpreter', ['Persian'], { remote_scope: 'afghanistan' });
+    const trainer = language('l2', 'Pashto Language Specialist - AI Trainer', ['Pashto'], { post_date: '2026-10-13' });
+    const transcriber = language('l3', 'Dari Transcribers (Remote)', ['Dari']);
+    const tech = remote('t1');
+    const all = [interpreter, trainer, transcriber, tech, job('a')];
+
+    assert.deepEqual(all.filter(item => matchesScope(item, 'language')).map(item => item.id), ['l1', 'l2', 'l3']);
+    assert.deepEqual(all.filter(item => matchesScope(item, 'remote')).map(item => item.id), ['t1']);
+    // A language role open to Afghanistan is not an Afghanistan tech job.
+    assert.deepEqual(all.filter(item => matchesScope(item, 'afghanistan')).map(item => item.id), ['a']);
+    assert.equal(getScopeCounts(all, now).language, 3);
+
+    assert.equal(getCategoryFacet(interpreter), 'Interpreting');
+    assert.equal(getCategoryFacet(trainer), 'AI training & evaluation');
+    assert.equal(getCategoryFacet(transcriber), 'Transcription');
+
+    const facets = getJobFacets(all.filter(item => matchesScope(item, 'language')), now);
+    assert.deepEqual(facets.languages.map(item => item.name), ['Dari', 'Pashto', 'Persian']);
+    assert.equal(facets.categoryCounts.length, 3);
+    assert.deepEqual(selectJobs(all, { scope: 'language', language: 'Pashto', now }).map(item => item.id), ['l2']);
+    // Newest first by default, as for remote boards.
+    assert.equal(selectJobs(all, { scope: 'language', now })[0].id, 'l2');
 });

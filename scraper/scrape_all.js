@@ -14,6 +14,9 @@ const remotive = require("./sites/remotive");
 const wazifaha = require("./sites/wazifaha");
 const weworkremotely = require("./sites/weworkremotely");
 const workingnomads = require("./sites/workingnomads");
+const meridial = require("./sites/meridial");
+const sigma = require("./sites/sigma");
+const workable = require("./sites/workable");
 const {
   assignGroups,
   canonicalUrl,
@@ -23,6 +26,7 @@ const {
 } = require("./lib/dedupe");
 const { expandBundledJob } = require("./lib/bundles");
 const { assessJobRelevance } = require("./lib/keywords");
+const { detectAfghanLanguages } = require("./lib/languages");
 const { extractSkills } = require("./lib/skills");
 const { normalizeJob, normalizeTimestamp, todayKabulISO } = require("./lib/normalize");
 const { toCSV } = require("./lib/csv");
@@ -32,11 +36,16 @@ const SITES = [
   jobsaf, acbar, kaarobar, wazifaha, reliefweb, impactpool,
   // Remote boards; only roles open to applicants in Afghanistan are kept.
   himalayas, remoteok, remotive, weworkremotely, jobicy, workingnomads,
+  // Language and AI-data platforms, searched for Pashto/Dari/Persian work.
+  meridial, sigma, workable,
 ];
 
 // Remote roles posted on Afghan boards are always kept; the cap only applies
 // to international remote boards.
-const SITE_KINDS_LOCAL = new Set(SITES.filter(site => site.kind !== "remote").map(site => site.name));
+const SITE_KINDS_LOCAL = new Set(SITES.filter(site => !site.kind || site.kind === "afghanistan").map(site => site.name));
+// Employer job boards list only open roles, so a listing still shown there is
+// still open however old its posting date is.
+const SOURCES_LISTING_ONLY_OPEN = new Set(SITES.filter(site => site.listsOnlyOpenJobs).map(site => site.name));
 
 // Sources that need configuration (for example an API key) opt out until set.
 function activeSites() {
@@ -167,6 +176,8 @@ function writeRelevanceAudit(debugDir, siteName, records, now) {
 function annotateRelevance(record, now) {
   const job = normalizeJob(record, { now });
   job.relevance = assessJobRelevance(job);
+  job.track = job.relevance.track;
+  if (job.track === "language" && !job.languages.length) job.languages = detectAfghanLanguages(job.title, job.description);
   job.skills = extractSkills(job);
   return job;
 }
@@ -202,7 +213,7 @@ async function runSite(site, options) {
   const detailFailures = Number.parseInt(coverage.detailFailures || 0, 10) || 0;
   const listingFailures = Number.parseInt(coverage.listingFailures || 0, 10) || 0;
   console.log(
-    `[${site.name}] discovered ${rawCount}; kept ${related.length} technical jobs`
+    `[${site.name}] discovered ${rawCount}; kept ${related.length} jobs`
     + (detailFailures ? `; ${detailFailures} detail failures, ${coverage.fallbackCount || 0} title fallbacks` : "")
     + (listingFailures ? `; partial pagination (${coverage.listingFailureReason || "listing page failed"})` : "")
   );
@@ -390,6 +401,7 @@ function filterOpenJobs(jobs, now) {
   const today = todayKabulISO(now);
   return jobs.filter(job => {
     if (job.closing_date) return job.closing_date >= today;
+    if (SOURCES_LISTING_ONLY_OPEN.has(job.source)) return true;
     const limit = job.work_mode === "remote"
       ? MAX_AGE_WITHOUT_DEADLINE_DAYS.remote
       : MAX_AGE_WITHOUT_DEADLINE_DAYS.default;
@@ -398,7 +410,15 @@ function filterOpenJobs(jobs, now) {
 }
 
 function limitRemoteJobs(jobs, limit = MAX_REMOTE_JOBS) {
-  const remote = jobs.filter(job => job.work_mode === "remote" && !SITE_KINDS_LOCAL.has(job.source));
+  // Language roles are the point of their own tab, and employer boards are
+  // small and list only open roles (their evergreen postings would otherwise
+  // sort last by date); never cap either.
+  const remote = jobs.filter(job => (
+    job.work_mode === "remote"
+    && job.track !== "language"
+    && !SITE_KINDS_LOCAL.has(job.source)
+    && !SOURCES_LISTING_ONLY_OPEN.has(job.source)
+  ));
   if (remote.length <= limit) return jobs;
   const keep = new Set(remote
     .slice()

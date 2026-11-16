@@ -201,8 +201,10 @@ summary:focus-visible,
   box-shadow: var(--shadow), 0 0 0 1px var(--line);
 }
 
+/* Four tabs fit a phone only without counts; the selected tab's count is
+   also on the "All jobs" pill below. */
 .view-tab-count {
-  @apply rounded-md px-1.5 py-0.5 text-[11px] font-bold leading-none tabular-nums;
+  @apply hidden rounded-md px-1.5 py-0.5 text-[11px] font-bold leading-none tabular-nums sm:inline-block;
   color: var(--muted);
   background-color: var(--surface-2);
 }

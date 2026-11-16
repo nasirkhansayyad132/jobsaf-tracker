@@ -305,6 +305,7 @@ function normalizeRelevance(relevance) {
     score,
     threshold,
     decision: relevance.decision === "exclude" ? "exclude" : "include",
+    track: relevance.track === "language" ? "language" : "tech",
     reasons: unique(relevance.reasons),
   };
 }
@@ -417,6 +418,8 @@ function normalizeJob(input, options = {}) {
     lifecycle_status: emptyToNull(input.lifecycle_status) || "active",
     missed_runs: Math.max(0, Number.parseInt(input.missed_runs || 0, 10) || 0),
     relevance: normalizeRelevance(input.relevance),
+    // "language": remote Pashto/Dari/Persian work; "tech": everything else.
+    track: input.relevance?.track === "language" || input.track === "language" ? "language" : "tech",
     also_found_on: normalizeAlsoFound(input.also_found_on),
     group_id: emptyToNull(input.group_id),
     skills: unique(Array.isArray(input.skills) ? input.skills : []).slice(0, 8),
