@@ -20,13 +20,17 @@ const SOURCE_PRIORITY = new Map([
   // An employer's own board beats aggregators that copy its postings.
   ["meridial", 6],
   ["sigma", 7],
-  ["workable", 8],
-  ["weworkremotely", 9],
-  ["remotive", 10],
-  ["remoteok", 11],
-  ["himalayas", 12],
-  ["jobicy", 13],
-  ["workingnomads", 14],
+  ["welocalize", 8],
+  ["mercor", 9],
+  ["gotranscript", 10],
+  ["workable", 11],
+  ["freelancer", 12],
+  ["weworkremotely", 13],
+  ["remotive", 14],
+  ["remoteok", 15],
+  ["himalayas", 16],
+  ["jobicy", 17],
+  ["workingnomads", 18],
 ]);
 
 function normalizeComparableText(value) {

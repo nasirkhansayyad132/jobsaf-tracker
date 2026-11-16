@@ -14,7 +14,8 @@ an accessible React PWA, optional email digests, and GitHub Actions automation.
 ```text
 Afghanistan: Jobs.af · ACBAR · Kaarobar · Wazifaha · Impactpool · ReliefWeb*
 Remote:      Himalayas · We Work Remotely · Remote OK · Remotive · Jobicy · Working Nomads
-Languages:   Meridial (Invisible) · Sigma AI · Workable job search
+Languages:   Meridial (Invisible) · Sigma AI · Welocalize · Mercor · GoTranscript
+             Freelancer.com · Workable job search (+ language searches on Himalayas)
                   │
                   ▼
      fetch → enrich → normalize → score relevance → remote eligibility
@@ -129,15 +130,26 @@ days.
 
 ## Language work
 
-A remote listing joins the language track (`"track": "language"`) when its
-title names Pashto, Dari, Persian or Farsi, or when it is language work
-(translator, interpreter, transcriber, linguist, AI trainer, rater, tutor…)
-and its text asks for one of those languages. A title for another language
-(“English – Thai Interpreter”) does not count because of an agency's language
-list. Onsite translator jobs stay out: only online work is in scope.
+A remote listing joins the language track (`"track": "language"`) when:
 
-Meridial, Sigma AI and Workable are employer boards and searches that list only
-open roles, so their evergreen postings are not retired by age and are not
+- its title names Pashto, Dari, Persian or Farsi (also Pakhto, Pukhto,
+  Hazaragi); or
+- it is language work (translator, interpreter, transcriber, linguist, AI
+  trainer, rater, tutor…) and its text asks for one of those languages; or
+- its text *requires* one ("native Dari speaker", "fluency in Pashto",
+  "Farsi required"). On Afghan boards, where nearly every listing requires
+  Dari and Pashto, this last rule does not apply.
+
+A title for another language (“English – Thai Interpreter”) does not count
+because of an agency's language list, and Indonesian text (where "dari" means
+"from") only counts unambiguous forms such as "Dari speakers". Onsite
+translator jobs stay out: only online work is in scope. A technical role that
+needs an Afghan language stays on the tech track and is listed under both
+Remote and Languages. Language roles retire after 90 days without a deadline
+instead of 30.
+
+Meridial, Sigma AI, Welocalize, Mercor, GoTranscript, Freelancer.com and
+Workable are employer boards and searches that list only open roles, so their evergreen postings are not retired by age and are not
 subject to the 300-role cap; they leave the feed once the employer removes
 them. The site shows language roles in the **Languages** tab, and the email
 digest lists new ones in their own section.

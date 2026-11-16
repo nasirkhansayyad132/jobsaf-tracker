@@ -12,6 +12,9 @@ const FEEDS = [
   "/categories/remote-front-end-programming-jobs.rss",
   "/categories/remote-programming-jobs.rss",
   "/categories/remote-devops-sysadmin-jobs.rss",
+  // Translation, interpreting and language-support roles are filed here.
+  "/categories/all-other-remote-jobs.rss",
+  "/categories/remote-customer-support-jobs.rss",
 ];
 
 const CATEGORY_NAMES = new Map([

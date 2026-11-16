@@ -144,3 +144,17 @@ test('the Languages view holds remote Afghan-language work, apart from the tech 
     // Newest first by default, as for remote boards.
     assert.equal(selectJobs(all, { scope: 'language', now })[0].id, 'l2');
 });
+
+test('a tech role that needs an Afghan language is listed under Remote and Languages', () => {
+    const nlp = remote('n1', {
+        title: 'NLP Engineer',
+        languages: ['Pashto'],
+        track: 'tech',
+        relevance: { decision: 'include', reasons: ['title: “nlp” (+80)', 'language role: requires Pashto'] },
+    });
+    const plain = remote('n2', { languages: ['Persian'], relevance: { decision: 'include', reasons: ['title: “developer role” (+80)'] } });
+    assert.equal(matchesScope(nlp, 'remote'), true);
+    assert.equal(matchesScope(nlp, 'language'), true);
+    // A passing mention of Persian in a tech listing is not a language requirement.
+    assert.equal(matchesScope(plain, 'language'), false);
+});

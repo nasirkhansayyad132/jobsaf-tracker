@@ -8,8 +8,13 @@ const API_URL = "https://himalayas.app/jobs/api/search";
 const SEARCH_TERMS = ["developer", "engineer", "data", "devops", "security"];
 const DEFAULT_PAGES_PER_TERM = 10;
 // Afghan-language work is searched without the worldwide filter: a role that
-// needs Dari or Pashto speakers is often open wherever they live.
-const LANGUAGE_TERMS = ["pashto", "dari", "farsi", "persian"];
+// needs Dari or Pashto speakers is often open wherever they live. Generic
+// language-work searches catch listings that name the language only in their
+// text ("Interpreter ... Dari, Pashto, Urdu").
+const LANGUAGE_TERMS = [
+  "pashto", "dari", "farsi", "persian", "afghan",
+  "translator", "interpreter", "transcription", "linguist", "language specialist",
+];
 const LANGUAGE_PAGES_PER_TERM = 2;
 const MAX_AGE_DAYS = 30;
 const REQUEST_GAP_MS = 800;
