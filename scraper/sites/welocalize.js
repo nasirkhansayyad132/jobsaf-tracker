@@ -40,7 +40,8 @@ function parsePostings(data, now) {
       url: posting.hostedUrl,
       applyUrl: posting.applyUrl,
       title: posting.text,
-      company: "Welocalize",
+      // Aggregators (Jobicy, Himalayas) list Welocalize's hubs as "Welo Global".
+      company: "Welocalize (Welo Global)",
       restriction: restrictionFor(posting),
       descriptionHtml: descriptionHtml(posting),
       // Lever teams ("Data", "Application") describe Welocalize's business

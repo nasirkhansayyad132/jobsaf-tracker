@@ -301,3 +301,24 @@ test("a listing fallback cannot hide a duplicate source's real application form"
     assert.equal(merged.application_method, "web");
   }
 });
+
+test("a listing already recorded as an alternate source merges even from the same board", () => {
+  const { buildRemoteJob } = require("../lib/remote");
+  const NOW = "2026-11-17T06:00:00Z";
+  const copyUrl = "https://himalayas.app/companies/inv/jobs/pashto-language-specialist-ai-trainer";
+  const meridialJob = {
+    ...buildRemoteJob({
+      source: "meridial", url: "https://job-boards.eu.greenhouse.io/agency/jobs/4655902101",
+      title: "Pashto Language Specialist - AI Trainer", company: "Meridial (Invisible Technologies)", restriction: "Worldwide",
+    }, { now: NOW }),
+    // Carried over from yesterday's merge.
+    also_found_on: [{ source: "himalayas", url: copyUrl }, { source: "himalayas", url: "https://himalayas.app/old-copy" }],
+  };
+  const himalayasCopy = buildRemoteJob({
+    source: "himalayas", url: copyUrl, title: "Pashto Language Specialist - AI Trainer",
+    company: "Invisible Technologies", restriction: "",
+  }, { now: NOW, emptyMeansWorldwide: true });
+  const { jobs } = dedupeJobs([himalayasCopy, meridialJob]);
+  assert.equal(jobs.length, 1);
+  assert.equal(jobs[0].source, "meridial");
+});

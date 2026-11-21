@@ -121,3 +121,23 @@ test("platform labels do not turn other-language hubs into tech jobs", () => {
   }] } }, NOW);
   assert.deepEqual(prepareRecords(gig, { now: NOW }), []);
 });
+
+test("Jobicy's 'Welo Global' copy of a Welocalize hub merges into the employer's posting", () => {
+  const { buildRemoteJob } = require("../lib/remote");
+  const [own] = welocalize.parsePostings([{
+    text: "AI Trainers Network - Persian",
+    hostedUrl: "https://jobs.lever.co/weloglobal/287d2601",
+    workplaceType: "remote",
+    createdAt: Date.parse("2025-08-13T00:00:00Z"),
+    categories: { allLocations: ["Afghanistan", "Remote, Worldwide"] },
+    descriptionPlain: "Native or near-native Persian.",
+  }], NOW);
+  const copy = buildRemoteJob({
+    source: "jobicy", url: "https://jobicy.com/jobs/158791-ai-trainers-network-persian",
+    title: "AI Trainers Network - Persian", company: "Welo Global", restriction: "Anywhere",
+    description: "Native or near-native Persian.", postedAt: "2026-11-04",
+  }, { now: NOW });
+  const kept = prepareRecords([copy, own], { now: NOW });
+  assert.equal(kept.length, 1);
+  assert.equal(kept[0].source, "welocalize");
+});
