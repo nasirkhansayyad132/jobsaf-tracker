@@ -1,5 +1,8 @@
 const {
+  canonicalUrl,
   extractMailtoEmails,
+  isUsableApplicationUrl,
+  listingUrlSet,
   extractVacancyReference,
   makeId,
   normalizeUrl,
@@ -61,37 +64,6 @@ function normalizeLocation(value) {
     .replace(/\bprovince\b/g, " ")
     .replace(/\s+/g, " ")
     .trim();
-}
-
-function canonicalUrl(job) {
-  const raw = normSpace(job.source_url || job.url);
-  if (!raw) return "";
-  try {
-    const url = new URL(normalizeUrl(raw) || raw);
-    url.hash = "";
-    for (const key of [...url.searchParams.keys()]) {
-      if (/^(?:utm_|fbclid$|gclid$|ref$|source$)/i.test(key)) url.searchParams.delete(key);
-    }
-    url.hostname = url.hostname.toLowerCase();
-    url.pathname = url.pathname.replace(/\/+$/, "") || "/";
-    return url.toString();
-  } catch {
-    return raw.replace(/\/+$/, "");
-  }
-}
-
-function listingUrlSet(...jobs) {
-  return new Set(jobs.flatMap(job => [
-    job?.source_url,
-    job?.url,
-    ...(Array.isArray(job?.also_found_on) ? job.also_found_on.map(item => item?.url) : []),
-  ]).map(url => canonicalUrl({ url })).filter(Boolean));
-}
-
-function isUsableApplicationUrl(applyUrl, listingUrls) {
-  if (applyUrl?.startsWith("mailto:")) return extractMailtoEmails(applyUrl).length > 0;
-  if (!/^https?:/i.test(applyUrl || "")) return false;
-  return !listingUrls.has(canonicalUrl({ url: applyUrl }));
 }
 
 // Dedupe merges application fields from different source records. Resolve the
