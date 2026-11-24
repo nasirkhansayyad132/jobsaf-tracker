@@ -251,14 +251,49 @@ function normalizeUrl(value) {
   }
 }
 
-function detectApplicationMethod(input, details, applyUrl, sourceUrl, emails, phones) {
+function canonicalUrl(job) {
+  const raw = normSpace(job.source_url || job.url);
+  if (!raw) return "";
+  try {
+    const url = new URL(normalizeUrl(raw) || raw);
+    url.hash = "";
+    for (const key of [...url.searchParams.keys()]) {
+      if (/^(?:utm_|fbclid$|gclid$|ref$|source$)/i.test(key)) url.searchParams.delete(key);
+    }
+    url.hostname = url.hostname.toLowerCase();
+    url.pathname = url.pathname.replace(/\/+$/, "") || "/";
+    return url.toString();
+  } catch {
+    return raw.replace(/\/+$/, "");
+  }
+}
+
+// Every page on which a vacancy is listed, including duplicates merged in from
+// other sources. None of these is an application channel.
+function listingUrlSet(...jobs) {
+  return new Set(jobs.flatMap(job => [
+    job?.source_url,
+    job?.url,
+    ...(Array.isArray(job?.also_found_on) ? job.also_found_on.map(item => item?.url) : []),
+  ]).map(url => canonicalUrl({ url })).filter(Boolean));
+}
+
+function isUsableApplicationUrl(applyUrl, listingUrls) {
+  if (applyUrl?.startsWith("mailto:")) return extractMailtoEmails(applyUrl).length > 0;
+  if (!/^https?:/i.test(applyUrl || "")) return false;
+  return !listingUrls.has(canonicalUrl({ url: applyUrl }));
+}
+
+function detectApplicationMethod(input, details, applyUrl, listingUrls, emails, phones) {
   const explicit = normSpace(input.application_method).toLowerCase();
   const submission = normSpace(detailValue(details, /^submission\s+(?:through|method)$/i)).toLowerCase();
 
   const hasEmail = emails.length > 0;
-  // Adapters sometimes retain the listing URL as a navigation fallback. It is
-  // not evidence of a separate web application channel.
-  const hasWeb = /^https?:\/\//i.test(applyUrl || "") && applyUrl !== sourceUrl;
+  // Adapters sometimes retain a listing URL (this source's, or another
+  // source's after dedupe) as a navigation fallback. It is not evidence of a
+  // separate web application channel. This must match the rule dedupe and the
+  // output validator use, or a re-normalized record fails validation.
+  const hasWeb = /^https?:\/\//i.test(applyUrl || "") && isUsableApplicationUrl(applyUrl, listingUrls);
   const hasPhone = phones.length > 0;
   const isBacked = method => (
     (method === "email" && hasEmail)
@@ -341,6 +376,7 @@ function normalizeJob(input, options = {}) {
     ...Object.entries(details).map(([key, value]) => `${key}: ${String(value || "")}`),
   ].join("\n");
   const applyUrl = normalizeUrl(input.apply_url);
+  const alsoFoundOn = normalizeAlsoFound(input.also_found_on);
   const applyEmails = unique([
     ...(Array.isArray(input.apply_emails) ? input.apply_emails.map(email => normSpace(email).toLowerCase()) : []),
     ...extractMailtoEmails(url),
@@ -403,7 +439,14 @@ function normalizeJob(input, options = {}) {
     gender: emptyToNull(input.gender),
     vacancies: input.vacancies === undefined || input.vacancies === "" ? null : input.vacancies,
     salary: emptyToNull(input.salary),
-    application_method: detectApplicationMethod(input, details, applyUrl, sourceUrl, applyEmails, applyPhones),
+    application_method: detectApplicationMethod(
+      input,
+      details,
+      applyUrl,
+      listingUrlSet({ url, source_url: sourceUrl, also_found_on: alsoFoundOn }),
+      applyEmails,
+      applyPhones,
+    ),
     application_subject: applicationSubject,
     application_subject_type: applicationSubjectType,
     apply_url: applyUrl,
@@ -420,7 +463,7 @@ function normalizeJob(input, options = {}) {
     relevance: normalizeRelevance(input.relevance),
     // "language": remote Pashto/Dari/Persian work; "tech": everything else.
     track: input.relevance?.track === "language" || input.track === "language" ? "language" : "tech",
-    also_found_on: normalizeAlsoFound(input.also_found_on),
+    also_found_on: alsoFoundOn,
     group_id: emptyToNull(input.group_id),
     skills: unique(Array.isArray(input.skills) ? input.skills : []).slice(0, 8),
   };
@@ -437,6 +480,7 @@ function todayKabulISO(now = new Date()) {
 }
 
 module.exports = {
+  canonicalUrl,
   cleanDescription,
   detailValue,
   emptyToNull,
@@ -446,6 +490,8 @@ module.exports = {
   extractPhones,
   extractVacancyReference,
   htmlToText,
+  isUsableApplicationUrl,
+  listingUrlSet,
   makeId,
   normalizeJob,
   normalizePhone,

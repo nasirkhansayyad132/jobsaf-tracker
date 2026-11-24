@@ -245,3 +245,35 @@ test("migrates legacy ACBAR job aliases to the current reachable route", () => {
   assert.equal(normalized.url, "https://www.acbar.org/en/jobs/details/131005/software-developer");
   assert.equal(normalized.source_url, normalized.url);
 });
+
+test("does not treat any listing page as a web application channel", () => {
+  const { resolveApplicationMethod } = require("../lib/dedupe");
+  const listing = {
+    title: "IT Officer",
+    company: "Example Org",
+    source: "acbar",
+    url: "https://www.acbar.org/en/jobs/details/1/it-officer",
+    application_method: "web",
+  };
+  const cases = [
+    // After dedupe, the apply link can point at another source's copy of the post.
+    {
+      ...listing,
+      apply_url: "https://jobs.af/jobs/it-officer",
+      also_found_on: [{ source: "jobs.af", url: "https://jobs.af/jobs/it-officer" }],
+    },
+    // The same listing page, differing only in a trailing slash or tracking parameter.
+    { ...listing, apply_url: `${listing.url}/` },
+    { ...listing, apply_url: `${listing.url}?utm_source=x` },
+  ];
+  for (const input of cases) {
+    const job = normalizeJob(input);
+    assert.equal(job.application_method, "unknown", input.apply_url);
+    // normalizeJob must agree with the rule the output validator enforces.
+    assert.equal(resolveApplicationMethod(job), job.application_method, input.apply_url);
+    assert.equal(normalizeJob(job).application_method, "unknown", input.apply_url);
+  }
+
+  const genuine = normalizeJob({ ...listing, apply_url: "https://forms.example.org/apply/1" });
+  assert.equal(genuine.application_method, "web");
+});
