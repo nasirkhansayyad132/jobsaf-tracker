@@ -1,63 +1,63 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-25T14:54:59.588Z",
-  "today": "2026-11-25",
-  "total_jobs": 360,
+  "generated_at": "2026-11-26T14:09:29.360Z",
+  "today": "2026-11-26",
+  "total_jobs": 361,
   "source_count": 14,
   "sources": [
     {
       "name": "acbar",
       "count": 16,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "freelancer",
       "count": 4,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "gotranscript",
       "count": 4,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "himalayas",
-      "count": 141,
+      "count": 128,
       "oldest_seen_at": "2026-11-24T15:06:54Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "impactpool",
-      "count": 4,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "count": 3,
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "jobicy",
-      "count": 36,
+      "count": 37,
       "oldest_seen_at": "2026-11-16T20:56:03Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "jobs.af",
-      "count": 13,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "count": 14,
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "kaarobar",
       "count": 1,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "meridial",
       "count": 5,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "remoteok",
@@ -67,31 +67,31 @@
     },
     {
       "name": "wazifaha",
-      "count": 2,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "count": 3,
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "welocalize",
       "count": 2,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "weworkremotely",
-      "count": 128,
-      "oldest_seen_at": "2026-11-18T13:29:32Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "count": 140,
+      "oldest_seen_at": "2026-11-20T13:32:41Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     },
     {
       "name": "workable",
       "count": 3,
-      "oldest_seen_at": "2026-11-25T14:54:49Z",
-      "latest_seen_at": "2026-11-25T14:54:49Z"
+      "oldest_seen_at": "2026-11-26T14:09:16Z",
+      "latest_seen_at": "2026-11-26T14:09:16Z"
     }
   ],
-  "new_count": 61,
-  "expiring_today_count": 3,
+  "new_count": 23,
+  "expiring_today_count": 1,
   "expiring_soon_count": 3,
   "tech_banking_count": 4,
   "remote_count": 324,
@@ -101,71 +101,71 @@
       "source": "jobs.af",
       "kind": "afghanistan",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 195,
-      "relevant": 13,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 187,
+      "relevant": 14,
       "reason": null
     },
     {
       "source": "acbar",
       "kind": "afghanistan",
-      "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 222,
-      "relevant": 17,
-      "reason": null
+      "status": "failed",
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 0,
+      "relevant": 0,
+      "reason": "Network request failed for https://www.acbar.org/en/jobs: certificate has expired"
     },
     {
       "source": "kaarobar",
       "kind": "afghanistan",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 218,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 198,
       "relevant": 18,
       "reason": null
     },
     {
       "source": "wazifaha",
       "kind": "afghanistan",
-      "status": "partial",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 225,
-      "relevant": 19,
-      "reason": "8/225 detail enrichments failed"
+      "status": "healthy",
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 206,
+      "relevant": 21,
+      "reason": null
     },
     {
       "source": "impactpool",
       "kind": "afghanistan",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
+      "checked_at": "2026-11-26T14:09:29Z",
       "listed": 29,
-      "relevant": 4,
+      "relevant": 3,
       "reason": null
     },
     {
       "source": "himalayas",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 567,
-      "relevant": 225,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 561,
+      "relevant": 218,
       "reason": null
     },
     {
       "source": "remoteok",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
+      "checked_at": "2026-11-26T14:09:29Z",
       "listed": 100,
-      "relevant": 2,
+      "relevant": 0,
       "reason": null
     },
     {
       "source": "remotive",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 15,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 16,
       "relevant": 2,
       "reason": null
     },
@@ -173,17 +173,17 @@
       "source": "weworkremotely",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 642,
-      "relevant": 177,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 697,
+      "relevant": 181,
       "reason": null
     },
     {
       "source": "jobicy",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 163,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 183,
       "relevant": 59,
       "reason": null
     },
@@ -191,8 +191,8 @@
       "source": "workingnomads",
       "kind": "remote",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 37,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 38,
       "relevant": 1,
       "reason": null
     },
@@ -200,7 +200,7 @@
       "source": "meridial",
       "kind": "language",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
+      "checked_at": "2026-11-26T14:09:29Z",
       "listed": 827,
       "relevant": 5,
       "reason": null
@@ -209,8 +209,8 @@
       "source": "sigma",
       "kind": "language",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 17,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 22,
       "relevant": 0,
       "reason": null
     },
@@ -218,8 +218,8 @@
       "source": "welocalize",
       "kind": "language",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 455,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 476,
       "relevant": 2,
       "reason": null
     },
@@ -227,16 +227,16 @@
       "source": "mercor",
       "kind": "language",
       "status": "partial",
-      "checked_at": "2026-11-25T14:54:59Z",
-      "listed": 343,
+      "checked_at": "2026-11-26T14:09:29Z",
+      "listed": 364,
       "relevant": 0,
-      "reason": "30/343 detail enrichments failed"
+      "reason": "42/364 detail enrichments failed"
     },
     {
       "source": "freelancer",
       "kind": "language",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
+      "checked_at": "2026-11-26T14:09:29Z",
       "listed": 53,
       "relevant": 4,
       "reason": null
@@ -245,7 +245,7 @@
       "source": "gotranscript",
       "kind": "language",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
+      "checked_at": "2026-11-26T14:09:29Z",
       "listed": 4,
       "relevant": 4,
       "reason": null
@@ -254,84 +254,44 @@
       "source": "workable",
       "kind": "language",
       "status": "healthy",
-      "checked_at": "2026-11-25T14:54:59Z",
+      "checked_at": "2026-11-26T14:09:29Z",
       "listed": 147,
       "relevant": 3,
       "reason": null
     }
   ],
   "new_job_ids": [
-    "17181b3d50e1451a",
-    "323543bf9d3ebc6b",
-    "75497d31033d206b",
-    "53dec65ef4699ada",
-    "9e093a5830e06280",
-    "0124d0fd7db826ef",
-    "6efa023e008df57f",
-    "eba2e71ae44a06c8",
-    "c4f33f16e1db1ed4",
-    "afe34854df5c5415",
-    "dc34d335296e68ad",
-    "29dc988a6bc45a93",
-    "d92e0e9c5def2cdd",
-    "b718e31db30299d7",
-    "9cc1141ff2290afb",
-    "cd9d70a8485ff498",
-    "ccf6609ffecb8111",
-    "1d99c5678cbda488",
-    "1b23b306f8cc78e1",
-    "dc2b542ecc4c5a1b",
-    "1e8b5d04f9b6de95",
-    "9fb85e905d158db6",
-    "403708714905e1b4",
-    "cb49727eed290711",
-    "85125b6173d211c2",
-    "d9b2d408c2befc99",
-    "c3e95ad15e3321b5",
-    "986daea1dc9a1817",
-    "5ec12157e1e05518",
-    "f090163686d57b05",
-    "f5373f6f99039d2a",
-    "cbb493c2f1f1269b",
-    "71a20476a70382ea",
-    "f499a844f41a9e33",
-    "32a44303d40ae793",
-    "50acc7e50f64737a",
-    "d6df904cf01fb9da",
-    "7bf18b3b2865f22f",
-    "d713a5a1819ea029",
-    "1a627d0dbd8fd45e",
-    "0696813e6b5a130b",
-    "22ab607270f614f3",
-    "71284caea9667f55",
-    "13a63bfa6be8b0ab",
-    "e5983492ffeabfe9",
-    "2af785f09a63d427",
-    "cb63288c7b5ec7c6",
-    "f703886ad3cf78e3",
-    "019dd94c9cacc312",
-    "29da9d6f92941b4a",
-    "2d588b18eab36f9e",
-    "55f11420097fd1ef",
-    "0189f18430d82121",
-    "1dbea388007ae6a9",
-    "80ae4a92b30a7d63",
-    "6c0195df56150056",
-    "f24117cb85549785",
-    "f8ae19a62b871754",
-    "bcbd6cc301aa2199",
-    "db97ae128f2c849e",
-    "6cd61bfb0bdc56ad"
+    "30b0d0f8426dffd8",
+    "6a44c968f935f32d",
+    "f92d99e537a07dc0",
+    "53f580a253dc2287",
+    "5569c601be12f4cc",
+    "9a599cbdbc82caed",
+    "6c65818a97ae2141",
+    "12e84454d52901f4",
+    "578a02fa7f689322",
+    "9ffdcee3c2575502",
+    "81db6cb1880a6841",
+    "a8535fa665c84abd",
+    "8a70853cd6f6d5a5",
+    "de4f4e2a8f7bc637",
+    "b6821c690820a108",
+    "21e8eafb91023dad",
+    "3ca17bb37129127c",
+    "7ecf0d2654c5d6b0",
+    "83751b29eca8c3b8",
+    "c8920e29bb71a032",
+    "d3d855e5b9ded02a",
+    "82c80633dece1204",
+    "a4200210b200c3d1"
   ],
   "expiring_today_ids": [
-    "13ff2eb27edbaad3",
-    "3cd990716cc47da2",
-    "a576018d33a27193"
+    "e902f804d6e01b6b"
   ],
   "expiring_soon_ids": [
-    "e902f804d6e01b6b",
     "746f154facea6f36",
-    "2282be9112fea7e5"
+    "2282be9112fea7e5",
+    "17181b3d50e1451a"
   ],
   "tech_banking_job_ids": [
     "2be6e872eac8c84d",
